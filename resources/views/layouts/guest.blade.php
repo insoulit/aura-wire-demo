@@ -8,5 +8,5 @@
         </main>
     </div>
 
-    @include('layouts.shared.footer')
+    @include('layouts.guest.footer')
 </x-layouts::app>

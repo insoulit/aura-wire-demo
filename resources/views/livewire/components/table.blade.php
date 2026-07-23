@@ -12,21 +12,34 @@ title('Table Component — Aura Wire');
         <h1 class="text-3xl font-extrabold text-zinc-900 dark:text-white tracking-tight">Table Component</h1>
         <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-1"><code class="text-indigo-600 dark:text-indigo-400 font-mono">&lt;x-aura::table&gt;</code></p>
     </div>
-    <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 space-y-6 shadow-sm">
-        <x-aura::table>
-            <x-slot:header>
+    <x-aura::code title="Data Table">
+        <x-slot:preview>
+            <x-aura::table>
+                <x-slot:header>
+                    <tr>
+                        <th class="px-4 py-2 text-left">Name</th>
+                        <th class="px-4 py-2 text-left">Role</th>
+                        <th class="px-4 py-2 text-left">Status</th>
+                    </tr>
+                </x-slot:header>
                 <tr>
-                    <th class="px-4 py-2 text-left">Name</th>
-                    <th class="px-4 py-2 text-left">Role</th>
-                    <th class="px-4 py-2 text-left">Status</th>
+                    <td class="px-4 py-2">Alex Morgan</td>
+                    <td class="px-4 py-2">Developer</td>
+                    <td class="px-4 py-2"><x-aura::badge variant="positive">Active</x-aura::badge></td>
                 </tr>
-            </x-slot:header>
-            <tr>
-                <td class="px-4 py-2">Alex Morgan</td>
-                <td class="px-4 py-2">Developer</td>
-                <td class="px-4 py-2"><x-aura::badge variant="positive">Active</x-aura::badge></td>
-            </tr>
-        </x-aura::table>
-        <pre class="text-[11px] font-mono p-3 rounded-xl bg-zinc-100 dark:bg-zinc-950 text-zinc-800 dark:text-zinc-300"><code>&lt;x-aura::table&gt;...&lt;/x-aura::table&gt;</code></pre>
-    </div>
+            </x-aura::table>
+        </x-slot:preview>
+        <x-slot:codeSlot>&lt;x-aura::table&gt;
+    &lt;x-slot:header&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Name&lt;/th&gt;
+            &lt;th&gt;Status&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/x-slot:header&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Alex&lt;/td&gt;
+        &lt;td&gt;&lt;x-aura::badge variant="positive"&gt;Active&lt;/x-aura::badge&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/x-aura::table&gt;</x-slot:codeSlot>
+    </x-aura::code>
 </div>

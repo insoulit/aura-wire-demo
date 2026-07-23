@@ -12,14 +12,18 @@ title('Field Component — Aura Wire');
         <h1 class="text-3xl font-extrabold text-zinc-900 dark:text-white tracking-tight">Field & Label Component</h1>
         <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-1"><code class="text-indigo-600 dark:text-indigo-400 font-mono">&lt;x-aura::field&gt;</code> & <code class="text-indigo-600 dark:text-indigo-400 font-mono">&lt;x-aura::label&gt;</code></p>
     </div>
-    <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 space-y-4 max-w-sm">
-        <x-aura::field>
-            <x-aura::label required>Full Name</x-aura::label>
-            <x-aura::input placeholder="John Doe" />
-        </x-aura::field>
-        <pre class="text-[11px] font-mono p-3 rounded-xl bg-zinc-100 dark:bg-zinc-950 text-zinc-800 dark:text-zinc-300"><code>&lt;x-aura::field&gt;
+    <x-aura::code title="Form Field Wrapper">
+        <x-slot:preview>
+            <div class="w-full max-w-sm">
+                <x-aura::field>
+                    <x-aura::label required>Full Name</x-aura::label>
+                    <x-aura::input placeholder="John Doe" />
+                </x-aura::field>
+            </div>
+        </x-slot:preview>
+        <x-slot:codeSlot>&lt;x-aura::field&gt;
     &lt;x-aura::label required&gt;Full Name&lt;/x-aura::label&gt;
     &lt;x-aura::input placeholder="John Doe" /&gt;
-&lt;/x-aura::field&gt;</code></pre>
-    </div>
+&lt;/x-aura::field&gt;</x-slot:codeSlot>
+    </x-aura::code>
 </div>

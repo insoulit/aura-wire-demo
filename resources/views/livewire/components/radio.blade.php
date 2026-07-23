@@ -12,11 +12,14 @@ title('Radio Component — Aura Wire');
         <h1 class="text-3xl font-extrabold text-zinc-900 dark:text-white tracking-tight">Radio Component</h1>
         <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-1"><code class="text-indigo-600 dark:text-indigo-400 font-mono">&lt;x-aura::radio&gt;</code></p>
     </div>
-    <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 space-y-4 max-w-sm">
-        <div class="space-y-2">
-            <x-aura::radio name="plan" label="Basic Plan" checked />
-            <x-aura::radio name="plan" label="Pro Plan" />
-        </div>
-        <pre class="text-[11px] font-mono p-3 rounded-xl bg-zinc-100 dark:bg-zinc-950 text-zinc-800 dark:text-zinc-300"><code>&lt;x-aura::radio name="plan" label="Pro" /&gt;</code></pre>
-    </div>
+    <x-aura::code title="Radio Options">
+        <x-slot:preview>
+            <div class="space-y-2">
+                <x-aura::radio name="plan" label="Basic Plan" checked />
+                <x-aura::radio name="plan" label="Pro Plan" />
+            </div>
+        </x-slot:preview>
+        <x-slot:codeSlot>&lt;x-aura::radio name="plan" label="Basic Plan" checked /&gt;
+&lt;x-aura::radio name="plan" label="Pro Plan" /&gt;</x-slot:codeSlot>
+    </x-aura::code>
 </div>

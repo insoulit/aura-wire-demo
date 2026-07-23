@@ -21,8 +21,8 @@ title('Button Component — Aura Wire');
     <!-- Variants -->
     <section class="space-y-4">
         <h2 class="text-xl font-bold text-zinc-900 dark:text-white">Variants</h2>
-        <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 space-y-6 shadow-sm">
-            <div class="flex flex-wrap items-center gap-3">
+        <x-aura::code title="Button Variants">
+            <x-slot:preview>
                 <x-aura::button variant="primary">Primary</x-aura::button>
                 <x-aura::button variant="secondary">Secondary</x-aura::button>
                 <x-aura::button variant="subtle">Subtle</x-aura::button>
@@ -30,25 +30,31 @@ title('Button Component — Aura Wire');
                 <x-aura::button variant="ghost">Ghost</x-aura::button>
                 <x-aura::button variant="danger">Danger</x-aura::button>
                 <x-aura::button variant="link" href="#">Link</x-aura::button>
-            </div>
-            <pre class="text-[11px] font-mono p-3 rounded-xl bg-zinc-100 dark:bg-zinc-950 text-zinc-800 dark:text-zinc-300 overflow-x-auto"><code>&lt;x-aura::button variant="primary"&gt;Primary&lt;/x-aura::button&gt;
+            </x-slot:preview>
+            <x-slot:codeSlot>&lt;x-aura::button variant="primary"&gt;Primary&lt;/x-aura::button&gt;
 &lt;x-aura::button variant="secondary"&gt;Secondary&lt;/x-aura::button&gt;
-&lt;x-aura::button variant="danger"&gt;Danger&lt;/x-aura::button&gt;</code></pre>
-        </div>
+&lt;x-aura::button variant="subtle"&gt;Subtle&lt;/x-aura::button&gt;
+&lt;x-aura::button variant="outline"&gt;Outline&lt;/x-aura::button&gt;
+&lt;x-aura::button variant="ghost"&gt;Ghost&lt;/x-aura::button&gt;
+&lt;x-aura::button variant="danger"&gt;Danger&lt;/x-aura::button&gt;
+&lt;x-aura::button variant="link" href="#"&gt;Link&lt;/x-aura::button&gt;</x-slot:codeSlot>
+        </x-aura::code>
     </section>
 
     <!-- Sizes -->
     <section class="space-y-4">
         <h2 class="text-xl font-bold text-zinc-900 dark:text-white">Sizes</h2>
-        <div class="p-6 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 space-y-6 shadow-sm">
-            <div class="flex flex-wrap items-center gap-4">
+        <x-aura::code title="Button Sizes">
+            <x-slot:preview>
                 <x-aura::button variant="primary" size="xs">Extra Small (xs)</x-aura::button>
                 <x-aura::button variant="primary" size="sm">Small (sm)</x-aura::button>
                 <x-aura::button variant="primary" size="md">Medium (md)</x-aura::button>
                 <x-aura::button variant="primary" size="lg">Large (lg)</x-aura::button>
-            </div>
-            <pre class="text-[11px] font-mono p-3 rounded-xl bg-zinc-100 dark:bg-zinc-950 text-zinc-800 dark:text-zinc-300 overflow-x-auto"><code>&lt;x-aura::button size="xs"&gt;XS&lt;/x-aura::button&gt;
-&lt;x-aura::button size="lg"&gt;LG&lt;/x-aura::button&gt;</code></pre>
-        </div>
+            </x-slot:preview>
+            <x-slot:codeSlot>&lt;x-aura::button size="xs"&gt;Extra Small (xs)&lt;/x-aura::button&gt;
+&lt;x-aura::button size="sm"&gt;Small (sm)&lt;/x-aura::button&gt;
+&lt;x-aura::button size="md"&gt;Medium (md)&lt;/x-aura::button&gt;
+&lt;x-aura::button size="lg"&gt;Large (lg)&lt;/x-aura::button&gt;</x-slot:codeSlot>
+        </x-aura::code>
     </section>
 </div>
