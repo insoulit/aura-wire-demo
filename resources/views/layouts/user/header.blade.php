@@ -13,6 +13,7 @@
 
             <nav class="hidden md:flex items-center gap-1 text-sm font-medium text-zinc-600 dark:text-zinc-400">
                 <a href="/dashboard" class="px-3 py-1.5 rounded-lg text-zinc-900 dark:text-white bg-zinc-200/60 dark:bg-zinc-800/80 font-medium">Dashboard</a>
+                <a href="/components" class="px-3 py-1.5 rounded-lg hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/40 transition-all">Components</a>
                 <a href="/projects" class="px-3 py-1.5 rounded-lg hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/40 transition-all">Projects</a>
                 <a href="/settings" class="px-3 py-1.5 rounded-lg hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/40 transition-all">Settings</a>
             </nav>

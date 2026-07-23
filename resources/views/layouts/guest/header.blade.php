@@ -11,6 +11,7 @@
         </a>
 
         <div class="flex items-center gap-4 text-sm font-medium">
+            <a href="/components" class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Components</a>
             <a href="/login" class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors px-3 py-1.5">Sign In</a>
             <x-aura::button variant="primary" size="sm" href="/register">Get Started</x-aura::button>
             <x-theme-switcher />

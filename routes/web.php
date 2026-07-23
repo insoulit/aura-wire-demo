@@ -6,6 +6,9 @@ use Livewire\Volt\Volt;
 // Main Portal Home Page (Card navigation to Guest, User, Admin)
 Volt::route('/', 'home')->name('home');
 
+// Component Showcase Route
+Volt::route('/components', 'components.index')->name('components');
+
 // Guest Portal Route
 Volt::route('/guest', 'guest.index')->name('guest.index');
 
