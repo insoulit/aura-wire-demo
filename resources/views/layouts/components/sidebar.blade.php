@@ -12,9 +12,9 @@
         </ul>
     </div>
 
-    <!-- Typography & Content -->
+    <!-- Typography -->
     <div class="space-y-2">
-        <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Typography & Content</h3>
+        <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Typography</h3>
         <ul class="space-y-1 font-medium">
             <li><a href="/components/heading" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/heading') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Heading</a></li>
             <li><a href="/components/subheading" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/subheading') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Subheading</a></li>
