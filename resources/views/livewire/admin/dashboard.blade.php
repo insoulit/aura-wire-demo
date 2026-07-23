@@ -9,10 +9,10 @@ title('Admin Console — Aura Wire');
 
 <div class="space-y-8">
     <!-- Page Header -->
-    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-zinc-800 pb-5">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-5">
         <div>
-            <h1 class="text-2xl font-bold text-white tracking-tight">Admin Console</h1>
-            <p class="text-xs text-zinc-400">System management & package analytics</p>
+            <x-aura::heading level="1" size="lg">Admin Console</x-aura::heading>
+            <x-aura::subheading>System management & package analytics</x-aura::subheading>
         </div>
 
         <div class="flex items-center gap-3">
@@ -28,31 +28,30 @@ title('Admin Console — Aura Wire');
 
     <!-- Admin System Metrics -->
     <div class="grid grid-cols-1 sm:grid-cols-4 gap-6">
-        <div class="p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 space-y-1">
-            <span class="text-xs font-medium text-zinc-400">Total Users</span>
-            <p class="text-2xl font-bold text-white">1,248</p>
-        </div>
-        <div class="p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 space-y-1">
-            <span class="text-xs font-medium text-zinc-400">Package Status</span>
-            <p class="text-2xl font-bold text-emerald-400">Linked</p>
-        </div>
-        <div class="p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 space-y-1">
-            <span class="text-xs font-medium text-zinc-400">PHP Version</span>
-            <p class="text-2xl font-bold text-indigo-400">8.4</p>
-        </div>
-        <div class="p-5 rounded-2xl bg-zinc-900/60 border border-zinc-800 space-y-1">
-            <span class="text-xs font-medium text-zinc-400">Livewire Volt</span>
-            <p class="text-2xl font-bold text-violet-400">v1.11</p>
-        </div>
+        <x-aura::card>
+            <x-aura::text variant="subtle" size="xs">Total Users</x-aura::text>
+            <x-aura::heading level="2" size="xl" class="mt-1">1,248</x-aura::heading>
+        </x-aura::card>
+        <x-aura::card>
+            <x-aura::text variant="subtle" size="xs">Package Status</x-aura::text>
+            <x-aura::heading level="2" size="xl" class="mt-1 text-emerald-600 dark:text-emerald-400">Linked</x-aura::heading>
+        </x-aura::card>
+        <x-aura::card>
+            <x-aura::text variant="subtle" size="xs">PHP Version</x-aura::text>
+            <x-aura::heading level="2" size="xl" class="mt-1 text-indigo-600 dark:text-indigo-400">8.4</x-aura::heading>
+        </x-aura::card>
+        <x-aura::card>
+            <x-aura::text variant="subtle" size="xs">Livewire Volt</x-aura::text>
+            <x-aura::heading level="2" size="xl" class="mt-1 text-violet-600 dark:text-violet-400">v1.11</x-aura::heading>
+        </x-aura::card>
     </div>
 
     <!-- Package Management Actions -->
-    <div class="p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800 space-y-4">
-        <h2 class="text-lg font-semibold text-white">Package Quick Actions</h2>
+    <x-aura::card title="Package Quick Actions">
         <div class="flex flex-wrap items-center gap-3">
             <x-aura::button variant="primary">Sync Package Autoload</x-aura::button>
             <x-aura::button variant="secondary">Run Unit Tests</x-aura::button>
             <x-aura::button variant="outline">Re-publish Assets</x-aura::button>
         </div>
-    </div>
+    </x-aura::card>
 </div>

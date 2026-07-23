@@ -9,10 +9,10 @@ title('User Dashboard — Aura Wire');
 
 <div class="space-y-8">
     <!-- Page Header -->
-    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-zinc-800 pb-5">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-5">
         <div>
-            <h1 class="text-2xl font-bold text-white tracking-tight">User Dashboard</h1>
-            <p class="text-xs text-zinc-400">Welcome back to your workspace</p>
+            <x-aura::heading level="1" size="lg">User Dashboard</x-aura::heading>
+            <x-aura::subheading>Welcome back to your workspace</x-aura::subheading>
         </div>
 
         <div class="flex items-center gap-3">
@@ -28,26 +28,27 @@ title('User Dashboard — Aura Wire');
 
     <!-- Quick Stats Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-        <div class="p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800 space-y-2">
-            <span class="text-xs font-medium text-zinc-400">Total Projects</span>
-            <p class="text-3xl font-bold text-white">12</p>
-            <span class="text-xs text-emerald-400 font-medium">+2 this month</span>
-        </div>
-        <div class="p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800 space-y-2">
-            <span class="text-xs font-medium text-zinc-400">Active Components</span>
-            <p class="text-3xl font-bold text-white">48</p>
-            <span class="text-xs text-indigo-400 font-medium">Aura Wire UI</span>
-        </div>
-        <div class="p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800 space-y-2">
-            <span class="text-xs font-medium text-zinc-400">Account Status</span>
-            <p class="text-3xl font-bold text-emerald-400">Active</p>
-            <span class="text-xs text-zinc-400">Pro Plan</span>
-        </div>
+        <x-aura::card>
+            <x-aura::text variant="subtle" size="xs">Total Projects</x-aura::text>
+            <x-aura::heading level="2" size="xl" class="mt-1">12</x-aura::heading>
+            <x-aura::text variant="positive" size="xs" class="mt-2">+2 this month</x-aura::text>
+        </x-aura::card>
+
+        <x-aura::card>
+            <x-aura::text variant="subtle" size="xs">Active Components</x-aura::text>
+            <x-aura::heading level="2" size="xl" class="mt-1">48</x-aura::heading>
+            <x-aura::text variant="accent" size="xs" class="mt-2">Aura Wire UI</x-aura::text>
+        </x-aura::card>
+
+        <x-aura::card>
+            <x-aura::text variant="subtle" size="xs">Account Status</x-aura::text>
+            <x-aura::heading level="2" size="xl" class="mt-1 text-emerald-600 dark:text-emerald-400">Active</x-aura::heading>
+            <x-aura::badge variant="positive" class="mt-2">Pro Plan</x-aura::badge>
+        </x-aura::card>
     </div>
 
     <!-- Interactive Component Demo Card -->
-    <div class="p-8 rounded-2xl bg-zinc-900/60 border border-zinc-800 space-y-6">
-        <h2 class="text-lg font-semibold text-white">Quick Actions</h2>
+    <x-aura::card title="Quick Actions">
         <div class="flex flex-wrap items-center gap-4">
             <x-aura::button.group>
                 <x-aura::button variant="secondary" size="sm">Overview</x-aura::button>
@@ -58,5 +59,5 @@ title('User Dashboard — Aura Wire');
             <x-aura::button variant="outline" size="sm">Manage Profile</x-aura::button>
             <x-aura::button variant="danger" size="sm">Archive Workspace</x-aura::button>
         </div>
-    </div>
+    </x-aura::card>
 </div>

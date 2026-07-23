@@ -1,5 +1,5 @@
-<header class="border-b border-zinc-200 dark:border-zinc-800/80 bg-white/80 dark:bg-zinc-900/50 backdrop-blur sticky top-0 z-50 transition-colors">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+<x-aura::header>
+    <x-slot:brand>
         <a href="{{ route('home') }}" class="flex items-center gap-3 group">
             <div class="h-9 w-9 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-violet-500 flex items-center justify-center font-bold text-white shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform duration-200">
                 A
@@ -9,12 +9,16 @@
                 <p class="text-xs text-zinc-500 dark:text-zinc-400">Guest Portal</p>
             </div>
         </a>
+    </x-slot:brand>
 
-        <div class="flex items-center gap-4 text-sm font-medium">
-            <a href="/components" class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors">Components</a>
-            <a href="/login" class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors px-3 py-1.5">Sign In</a>
-            <x-aura::button variant="primary" size="sm" href="/register">Get Started</x-aura::button>
-            <x-theme-switcher />
-        </div>
+    <div class="flex items-center gap-1">
+        <x-aura::header.item href="/guest" :active="request()->is('guest')">Guest Home</x-aura::header.item>
+        <x-aura::header.item href="/components" :active="request()->is('components*')">Components</x-aura::header.item>
+        <x-aura::header.item href="/login">Sign In</x-aura::header.item>
     </div>
-</header>
+
+    <x-slot:actions>
+        <x-aura::button variant="primary" size="sm" href="/register">Get Started</x-aura::button>
+        <x-theme-switcher />
+    </x-slot:actions>
+</x-aura::header>
