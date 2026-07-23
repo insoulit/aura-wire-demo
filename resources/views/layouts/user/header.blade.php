@@ -1,7 +1,7 @@
 <header class="border-b border-zinc-800/80 bg-zinc-900/60 backdrop-blur sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
         <div class="flex items-center gap-8">
-            <a href="/dashboard" class="flex items-center gap-3 group">
+            <a href="{{ route('home') }}" class="flex items-center gap-3 group">
                 <div class="h-9 w-9 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-violet-500 flex items-center justify-center font-bold text-white shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform duration-200">
                     A
                 </div>

@@ -1,15 +1,15 @@
 <aside class="w-64 border-r border-zinc-800/80 bg-zinc-900/60 p-4 flex flex-col justify-between hidden md:flex shrink-0">
     <div class="space-y-6">
-        <!-- Admin Brand Header -->
-        <div class="flex items-center gap-3 px-2 py-1">
-            <div class="h-8 w-8 rounded-lg bg-gradient-to-tr from-red-600 to-amber-500 flex items-center justify-center font-bold text-white shadow-md shadow-red-500/20">
+        <!-- Admin Brand Header linking back to Home -->
+        <a href="{{ route('home') }}" class="flex items-center gap-3 px-2 py-1 group">
+            <div class="h-8 w-8 rounded-lg bg-gradient-to-tr from-red-600 to-amber-500 flex items-center justify-center font-bold text-white shadow-md shadow-red-500/20 group-hover:scale-105 transition-transform duration-200">
                 A
             </div>
             <div>
-                <h1 class="text-sm font-semibold tracking-tight text-white">Admin Control</h1>
+                <h1 class="text-sm font-semibold tracking-tight text-white group-hover:text-red-400 transition-colors">Admin Control</h1>
                 <p class="text-xs text-zinc-400">Aura Wire System</p>
             </div>
-        </div>
+        </a>
 
         <!-- Navigation Links -->
         <nav class="space-y-1 text-sm font-medium text-zinc-400">
