@@ -12,12 +12,13 @@
                 </div>
             </a>
 
-            <!-- Component Navigation Links for future component pages -->
+            <!-- Component Navigation Links for sub-pages -->
             <nav class="hidden md:flex items-center gap-1 text-sm font-medium text-zinc-600 dark:text-zinc-400">
-                <a href="/components" class="px-3 py-1.5 rounded-lg text-zinc-900 dark:text-white bg-zinc-200/60 dark:bg-zinc-800/80 font-medium">All Components</a>
-                <a href="/components#buttons" class="px-3 py-1.5 rounded-lg hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/40 transition-all">Buttons</a>
-                <a href="/components#sizes" class="px-3 py-1.5 rounded-lg hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/40 transition-all">Sizes</a>
-                <a href="/components#groups" class="px-3 py-1.5 rounded-lg hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/40 transition-all">Button Groups</a>
+                <a href="/components" class="px-3 py-1.5 rounded-lg {{ request()->is('components') ? 'text-zinc-900 dark:text-white bg-zinc-200/60 dark:bg-zinc-800/80 font-semibold' : 'hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/40 transition-all' }}">Overview</a>
+                <a href="/components/buttons" class="px-3 py-1.5 rounded-lg {{ request()->is('components/buttons') ? 'text-zinc-900 dark:text-white bg-zinc-200/60 dark:bg-zinc-800/80 font-semibold' : 'hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/40 transition-all' }}">Buttons</a>
+                <a href="/components/inputs" class="px-3 py-1.5 rounded-lg {{ request()->is('components/inputs') ? 'text-zinc-900 dark:text-white bg-zinc-200/60 dark:bg-zinc-800/80 font-semibold' : 'hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/40 transition-all' }}">Inputs</a>
+                <a href="/components/toggles" class="px-3 py-1.5 rounded-lg {{ request()->is('components/toggles') ? 'text-zinc-900 dark:text-white bg-zinc-200/60 dark:bg-zinc-800/80 font-semibold' : 'hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/40 transition-all' }}">Toggles</a>
+                <a href="/components/data-display" class="px-3 py-1.5 rounded-lg {{ request()->is('components/data-display') ? 'text-zinc-900 dark:text-white bg-zinc-200/60 dark:bg-zinc-800/80 font-semibold' : 'hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/40 transition-all' }}">Display</a>
             </nav>
         </div>
 
