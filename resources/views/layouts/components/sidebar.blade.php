@@ -1,7 +1,7 @@
 <aside class="w-60 shrink-0 hidden lg:block border-r border-zinc-200 dark:border-zinc-800/80 pr-6 space-y-6 text-sm sticky top-20 self-start max-h-[calc(100vh-6rem)] overflow-y-auto scrollbar-thin">
     <!-- Getting Started -->
     <div class="space-y-2">
-        <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Getting Started</h3>
+        <x-aura::kicker>Getting Started</x-aura::kicker>
         <ul class="space-y-1 font-medium">
             <li>
                 <a href="/components" class="flex items-center gap-2 px-3 py-1.5 rounded-lg {{ request()->is('components') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">
@@ -14,7 +14,7 @@
 
     <!-- Typography -->
     <div class="space-y-2">
-        <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Typography</h3>
+        <x-aura::kicker>Typography</x-aura::kicker>
         <ul class="space-y-1 font-medium">
             <li><a href="/components/heading" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/heading') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Heading</a></li>
             <li><a href="/components/subheading" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/subheading') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Subheading</a></li>
@@ -25,7 +25,7 @@
 
     <!-- Layout & Structural -->
     <div class="space-y-2">
-        <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Layout & Structural</h3>
+        <x-aura::kicker>Layout & Structural</x-aura::kicker>
         <ul class="space-y-1 font-medium">
             <li><a href="/components/header" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/header') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Header</a></li>
             <li><a href="/components/sidebar" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/sidebar') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Sidebar</a></li>
@@ -36,7 +36,7 @@
 
     <!-- Actions -->
     <div class="space-y-2">
-        <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Actions</h3>
+        <x-aura::kicker>Actions</x-aura::kicker>
         <ul class="space-y-1 font-medium">
             <li><a href="/components/button" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/button') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Button</a></li>
             <li><a href="/components/button-group" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/button-group') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Button Group</a></li>
@@ -46,7 +46,7 @@
 
     <!-- Form Controls -->
     <div class="space-y-2">
-        <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Form Controls</h3>
+        <x-aura::kicker>Form Controls</x-aura::kicker>
         <ul class="space-y-1 font-medium">
             <li><a href="/components/input" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/input') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Input</a></li>
             <li><a href="/components/textarea" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/textarea') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Textarea</a></li>
@@ -61,7 +61,7 @@
 
     <!-- Data Display -->
     <div class="space-y-2">
-        <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Data Display</h3>
+        <x-aura::kicker>Data Display</x-aura::kicker>
         <ul class="space-y-1 font-medium">
             <li><a href="/components/avatar" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/avatar') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Avatar</a></li>
             <li><a href="/components/badge" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/badge') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Badge</a></li>
@@ -75,7 +75,7 @@
 
     <!-- Overlays -->
     <div class="space-y-2">
-        <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Overlays & Feedback</h3>
+        <x-aura::kicker>Overlays & Feedback</x-aura::kicker>
         <ul class="space-y-1 font-medium">
             <li><a href="/components/modal" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/modal') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Modal</a></li>
             <li><a href="/components/toast" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/toast') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Toast</a></li>

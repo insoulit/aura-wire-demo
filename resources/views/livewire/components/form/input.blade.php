@@ -1,42 +1,32 @@
 <?php
 
-use function Livewire\Volt\{layout, title};
+use function Livewire\Volt\{layout, title, state};
 
 layout('layouts.components');
 title('Input Component — Aura Wire');
+
+state(['email' => '']);
 
 ?>
 
 <div class="w-full space-y-10">
     <div class="border-b border-zinc-200 dark:border-zinc-800 pb-6">
-        <h1 class="text-3xl font-extrabold text-zinc-900 dark:text-white tracking-tight">Input Component</h1>
-        <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-1"><code class="text-indigo-600 dark:text-indigo-400 font-mono">&lt;x-aura::input&gt;</code></p>
+        <x-aura::heading level="1" size="xl">Input Component</x-aura::heading>
+        <x-aura::text variant="subtle" size="sm" class="mt-1"><x-aura::code>&lt;x-aura::input&gt;</x-aura::code></x-aura::text>
     </div>
 
     <section class="space-y-4">
-        <h2 class="text-xl font-bold text-zinc-900 dark:text-white">Text Inputs</h2>
-        <x-aura::code title="Text Inputs & Icons">
+        <x-aura::heading level="2" size="lg">Text Inputs</x-aura::heading>
+        <x-aura::code title="Input Controls">
             <x-slot:preview>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-xl">
-                    <div class="space-y-1">
-                        <x-aura::label>Standard Input</x-aura::label>
-                        <x-aura::input placeholder="Type something..." />
-                    </div>
-                    <div class="space-y-1">
-                        <x-aura::label>With Icon</x-aura::label>
-                        <x-aura::input placeholder="Search users...">
-                            <x-slot:icon>
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-                            </x-slot:icon>
-                        </x-aura::input>
-                    </div>
+                <div class="w-full max-w-sm space-y-4">
+                    <x-aura::input wire:model="email" placeholder="you@example.com" label="Email Address" />
+                    <x-aura::input type="password" placeholder="••••••••" label="Password" required />
+                    <x-aura::input placeholder="Disabled input" label="Disabled State" disabled />
                 </div>
             </x-slot:preview>
-            <x-slot:codeSlot>&lt;x-aura::input placeholder="Type something..." /&gt;
-
-&lt;x-aura::input placeholder="Search users..."&gt;
-    &lt;x-slot:icon&gt; &lt;svg ... /&gt; &lt;/x-slot:icon&gt;
-&lt;/x-aura::input&gt;</x-slot:codeSlot>
+            <x-slot:codeSlot>&lt;x-aura::input wire:model="email" placeholder="you@example.com" label="Email Address" /&gt;
+&lt;x-aura::input type="password" placeholder="••••••••" label="Password" required /&gt;</x-slot:codeSlot>
         </x-aura::code>
     </section>
 </div>

@@ -9,37 +9,40 @@ title('Table Component — Aura Wire');
 
 <div class="w-full space-y-10">
     <div class="border-b border-zinc-200 dark:border-zinc-800 pb-6">
-        <h1 class="text-3xl font-extrabold text-zinc-900 dark:text-white tracking-tight">Table Component</h1>
-        <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-1"><code class="text-indigo-600 dark:text-indigo-400 font-mono">&lt;x-aura::table&gt;</code></p>
+        <x-aura::heading level="1" size="xl">Table Component</x-aura::heading>
+        <x-aura::text variant="subtle" size="sm" class="mt-1"><x-aura::code>&lt;x-aura::table&gt;</x-aura::code></x-aura::text>
     </div>
     <x-aura::code title="Data Table">
         <x-slot:preview>
-            <x-aura::table>
-                <x-slot:header>
-                    <tr>
-                        <th class="px-4 py-2 text-left">Name</th>
-                        <th class="px-4 py-2 text-left">Role</th>
-                        <th class="px-4 py-2 text-left">Status</th>
-                    </tr>
-                </x-slot:header>
-                <tr>
-                    <td class="px-4 py-2">Alex Morgan</td>
-                    <td class="px-4 py-2">Developer</td>
-                    <td class="px-4 py-2"><x-aura::badge variant="positive">Active</x-aura::badge></td>
-                </tr>
-            </x-aura::table>
+            <div class="w-full">
+                <x-aura::table>
+                    <x-slot:header>
+                        <x-aura::table.column>Name</x-aura::table.column>
+                        <x-aura::table.column>Role</x-aura::table.column>
+                        <x-aura::table.column>Status</x-aura::table.column>
+                    </x-slot:header>
+                    <x-aura::table.row>
+                        <x-aura::table.cell class="font-medium">Alex Rivers</x-aura::table.cell>
+                        <x-aura::table.cell>Administrator</x-aura::table.cell>
+                        <x-aura::table.cell><x-aura::badge variant="positive">Active</x-aura::badge></x-aura::table.cell>
+                    </x-aura::table.row>
+                    <x-aura::table.row>
+                        <x-aura::table.cell class="font-medium">Sarah Chen</x-aura::table.cell>
+                        <x-aura::table.cell>Developer</x-aura::table.cell>
+                        <x-aura::table.cell><x-aura::badge variant="subtle">Offline</x-aura::badge></x-aura::table.cell>
+                    </x-aura::table.row>
+                </x-aura::table>
+            </div>
         </x-slot:preview>
         <x-slot:codeSlot>&lt;x-aura::table&gt;
     &lt;x-slot:header&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Name&lt;/th&gt;
-            &lt;th&gt;Status&lt;/th&gt;
-        &lt;/tr&gt;
+        &lt;x-aura::table.column&gt;Name&lt;/x-aura::table.column&gt;
+        &lt;x-aura::table.column&gt;Role&lt;/x-aura::table.column&gt;
     &lt;/x-slot:header&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Alex&lt;/td&gt;
-        &lt;td&gt;&lt;x-aura::badge variant="positive"&gt;Active&lt;/x-aura::badge&gt;&lt;/td&gt;
-    &lt;/tr&gt;
+    &lt;x-aura::table.row&gt;
+        &lt;x-aura::table.cell&gt;Alex Rivers&lt;/x-aura::table.cell&gt;
+        &lt;x-aura::table.cell&gt;Administrator&lt;/x-aura::table.cell&gt;
+    &lt;/x-aura::table.row&gt;
 &lt;/x-aura::table&gt;</x-slot:codeSlot>
     </x-aura::code>
 </div>

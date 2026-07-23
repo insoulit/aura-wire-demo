@@ -5,8 +5,8 @@
                 A
             </div>
             <div>
-                <h1 class="text-sm font-semibold tracking-tight text-zinc-900 dark:text-white group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">Admin Control</h1>
-                <p class="text-xs text-zinc-500 dark:text-zinc-400">Aura Wire System</p>
+                <x-aura::heading level="1" size="xs" class="group-hover:text-red-600 dark:group-hover:text-red-400">Admin Control</x-aura::heading>
+                <x-aura::text size="xs" variant="subtle">Aura Wire System</x-aura::text>
             </div>
         </a>
     </x-slot:header>
@@ -41,7 +41,7 @@
 
     <x-slot:footer>
         <div class="flex items-center justify-between text-xs">
-            <span class="text-zinc-500">DDEV Local</span>
+            <x-aura::text size="xs" variant="subtle">DDEV Local</x-aura::text>
             <x-aura::badge variant="negative">Admin</x-aura::badge>
         </div>
     </x-slot:footer>

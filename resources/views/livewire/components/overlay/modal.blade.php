@@ -13,14 +13,14 @@ state([
 
 <div class="w-full space-y-10">
     <div class="border-b border-zinc-200 dark:border-zinc-800 pb-6">
-        <h1 class="text-3xl font-extrabold text-zinc-900 dark:text-white tracking-tight">Modal Component</h1>
-        <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-1"><code class="text-indigo-600 dark:text-indigo-400 font-mono">&lt;x-aura::modal&gt;</code></p>
+        <x-aura::heading level="1" size="xl">Modal Component</x-aura::heading>
+        <x-aura::text variant="subtle" size="sm" class="mt-1"><x-aura::code>&lt;x-aura::modal&gt;</x-aura::code></x-aura::text>
     </div>
     <x-aura::code title="Interactive Modal Dialog">
         <x-slot:preview>
             <x-aura::button variant="primary" wire:click="$set('showModal', true)">Open Modal</x-aura::button>
             <x-aura::modal wire:model="showModal" title="Confirmation" description="Modal dialog content">
-                <p class="text-sm text-zinc-600 dark:text-zinc-300">Are you sure you want to proceed?</p>
+                <x-aura::text size="sm">Are you sure you want to proceed?</x-aura::text>
                 <x-slot:footer>
                     <x-aura::button variant="secondary" size="sm" wire:click="$set('showModal', false)">Cancel</x-aura::button>
                     <x-aura::button variant="primary" size="sm" wire:click="$set('showModal', false)">Confirm</x-aura::button>
@@ -30,7 +30,7 @@ state([
         <x-slot:codeSlot>&lt;x-aura::button wire:click="$set('showModal', true)"&gt;Open Modal&lt;/x-aura::button&gt;
 
 &lt;x-aura::modal wire:model="showModal" title="Confirmation" description="..."&gt;
-    &lt;p&gt;Are you sure?&lt;/p&gt;
+    &lt;x-aura::text size="sm"&gt;Are you sure?&lt;/x-aura::text&gt;
     &lt;x-slot:footer&gt;
         &lt;x-aura::button variant="primary" size="sm"&gt;Confirm&lt;/x-aura::button&gt;
     &lt;/x-slot:footer&gt;

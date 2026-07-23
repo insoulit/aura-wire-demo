@@ -5,8 +5,8 @@
                 A
             </div>
             <div>
-                <h1 class="text-sm font-semibold tracking-tight text-zinc-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Aura Wire</h1>
-                <p class="text-xs text-zinc-500 dark:text-zinc-400">User Workspace</p>
+                <x-aura::heading level="1" size="xs" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400">Aura Wire</x-aura::heading>
+                <x-aura::text size="xs" variant="subtle">User Workspace</x-aura::text>
             </div>
         </a>
     </x-slot:brand>
