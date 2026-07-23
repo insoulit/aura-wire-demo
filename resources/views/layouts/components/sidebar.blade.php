@@ -1,4 +1,4 @@
-<aside class="w-60 shrink-0 hidden lg:block border-r border-zinc-200 dark:border-zinc-800/80 pr-6 space-y-6 text-sm sticky top-20 self-start max-h-[calc(100vh-6rem)] overflow-y-auto">
+<aside class="w-60 shrink-0 hidden lg:block border-r border-zinc-200 dark:border-zinc-800/80 pr-6 space-y-6 text-sm sticky top-20 self-start max-h-[calc(100vh-6rem)] overflow-y-auto scrollbar-thin">
     <!-- Getting Started -->
     <div class="space-y-2">
         <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Getting Started</h3>
@@ -12,7 +12,18 @@
         </ul>
     </div>
 
-    <!-- Actions & Buttons -->
+    <!-- Layout & Structural -->
+    <div class="space-y-2">
+        <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Layout & Structural</h3>
+        <ul class="space-y-1 font-medium">
+            <li><a href="/components/header" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/header') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Header</a></li>
+            <li><a href="/components/sidebar" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/sidebar') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Sidebar</a></li>
+            <li><a href="/components/main" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/main') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Main</a></li>
+            <li><a href="/components/navbar" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/navbar') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Navbar</a></li>
+        </ul>
+    </div>
+
+    <!-- Actions -->
     <div class="space-y-2">
         <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Actions</h3>
         <ul class="space-y-1 font-medium">
@@ -46,15 +57,6 @@
             <li><a href="/components/card" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/card') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Card</a></li>
             <li><a href="/components/separator" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/separator') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Separator</a></li>
             <li><a href="/components/table" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/table') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Table</a></li>
-        </ul>
-    </div>
-
-    <!-- Navigation -->
-    <div class="space-y-2">
-        <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-400 dark:text-zinc-500">Navigation</h3>
-        <ul class="space-y-1 font-medium">
-            <li><a href="/components/navbar" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/navbar') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Navbar</a></li>
-            <li><a href="/components/sidebar" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/sidebar') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Sidebar</a></li>
             <li><a href="/components/tabs" class="block px-3 py-1.5 rounded-lg {{ request()->is('components/tabs') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Tabs</a></li>
         </ul>
     </div>

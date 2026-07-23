@@ -14,11 +14,14 @@ Volt::route('/components/button', 'components.button')->name('components.button'
 Volt::route('/components/button-group', 'components.button-group')->name('components.button-group');
 Volt::route('/components/card', 'components.card')->name('components.card');
 Volt::route('/components/checkbox', 'components.checkbox')->name('components.checkbox');
+Volt::route('/components/code', 'components.code')->name('components.code');
 Volt::route('/components/dropdown', 'components.dropdown')->name('components.dropdown');
 Volt::route('/components/error', 'components.error')->name('components.error');
 Volt::route('/components/field', 'components.field')->name('components.field');
+Volt::route('/components/header', 'components.header')->name('components.header');
 Volt::route('/components/input', 'components.input')->name('components.input');
 Volt::route('/components/label', 'components.label')->name('components.label');
+Volt::route('/components/main', 'components.main')->name('components.main');
 Volt::route('/components/modal', 'components.modal')->name('components.modal');
 Volt::route('/components/navbar', 'components.navbar')->name('components.navbar');
 Volt::route('/components/radio', 'components.radio')->name('components.radio');
