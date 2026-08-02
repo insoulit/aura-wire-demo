@@ -81,6 +81,11 @@ Volt::route('/components/table', 'components.table.index')->name('components.tab
 
 // Portal Layout Routes
 Volt::route('/guest', 'guest.index')->name('guest.index');
+Volt::route('/guest/ecommerce', 'guest.ecommerce')->name('guest.ecommerce');
+Volt::route('/guest/portfolio', 'guest.portfolio')->name('guest.portfolio');
+Volt::route('/guest/restaurant', 'guest.restaurant')->name('guest.restaurant');
+Volt::route('/guest/saas', 'guest.saas')->name('guest.saas');
+Volt::route('/guest/agency', 'guest.agency')->name('guest.agency');
 Volt::route('/dashboard', 'user.dashboard')->name('dashboard');
 Volt::route('/user/profile', 'user.profile')->name('user.profile');
 Volt::route('/user/avatar', 'user.avatar')->name('user.avatar');
