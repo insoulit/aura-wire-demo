@@ -1,7 +1,18 @@
 <?php
 
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
+
+// Utility Routes
+Route::get('/optimize-clear', function () {
+    Artisan::call('optimize:clear');
+    return response()->json([
+        'status' => 'success',
+        'message' => 'Application cache cleared successfully via optimize:clear.',
+        'output' => trim(Artisan::output()),
+    ]);
+})->name('optimize.clear');
 
 // Main Portal Home Page
 Volt::route('/', 'home')->name('home');
@@ -76,3 +87,5 @@ Volt::route('/user/email', 'user.email')->name('user.email');
 Volt::route('/user/password', 'user.password')->name('user.password');
 Volt::route('/user/settings', 'user.settings')->name('user.settings');
 Volt::route('/admin', 'admin.dashboard')->name('admin.dashboard');
+
+
