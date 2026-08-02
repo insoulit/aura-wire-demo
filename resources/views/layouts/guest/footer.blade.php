@@ -1,6 +1,6 @@
 <x-aura::footer>
     <x-slot:brand>
-        <div class="h-7 w-7 rounded-lg bg-gradient-to-tr from-indigo-600 via-indigo-500 to-violet-500 flex items-center justify-center font-bold text-white text-xs shadow-sm">
+        <div class="h-7 w-7 rounded-lg bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center font-bold text-xs shadow-sm">
             A
         </div>
         <x-aura::text size="sm" weight="semibold">Aura Wire</x-aura::text>

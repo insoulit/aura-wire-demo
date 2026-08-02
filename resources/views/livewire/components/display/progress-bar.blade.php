@@ -14,45 +14,36 @@ title('Progress Bar — Aura Wire');
     </div>
 
     {{-- Progress Bar Variations --}}
-    <x-aura::code class="w-full" title="Progress Bar Variants & Sizes">
+    <x-aura::code class="w-full" title="Progress Bar Variants &amp; Sizes">
         <x-slot:preview>
             <div class="w-full max-w-xl space-y-6">
                 <div>
                     <div class="flex justify-between text-xs font-semibold mb-1">
-                        <span>Upload Progress (Indigo)</span>
+                        <span>Upload Progress (Primary)</span>
                         <span>75%</span>
                     </div>
-                    <x-aura::progress-bar percent="75" variant="indigo" size="md" />
+                    <x-aura::progress-bar percent="75" variant="default" size="md" />
                 </div>
 
                 <div>
                     <div class="flex justify-between text-xs font-semibold mb-1">
-                        <span>Task Completed (Emerald)</span>
-                        <span>100%</span>
-                    </div>
-                    <x-aura::progress-bar percent="100" variant="emerald" size="lg" />
-                </div>
-
-                <div>
-                    <div class="flex justify-between text-xs font-semibold mb-1">
-                        <span>Storage Usage (Amber)</span>
+                        <span>Storage Usage (Subtle)</span>
                         <span>60%</span>
                     </div>
-                    <x-aura::progress-bar percent="60" variant="amber" size="sm" />
+                    <x-aura::progress-bar percent="60" variant="subtle" size="sm" />
                 </div>
 
                 <div>
                     <div class="flex justify-between text-xs font-semibold mb-1">
-                        <span>Server Load (Red)</span>
+                        <span>System Load (Action Danger)</span>
                         <span>92%</span>
                     </div>
-                    <x-aura::progress-bar percent="92" variant="red" size="md" />
+                    <x-aura::progress-bar percent="92" variant="danger" size="md" />
                 </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::progress-bar percent="75" variant="indigo" size="md" /&gt;
-&lt;x-aura::progress-bar percent="100" variant="emerald" size="lg" /&gt;
-&lt;x-aura::progress-bar percent="60" variant="amber" size="sm" /&gt;
-&lt;x-aura::progress-bar percent="92" variant="red" size="md" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>&lt;x-aura::progress-bar percent="75" variant="default" size="md" /&gt;
+&lt;x-aura::progress-bar percent="60" variant="subtle" size="sm" /&gt;
+&lt;x-aura::progress-bar percent="92" variant="danger" size="md" /&gt;</x-slot:codeSlot>
     </x-aura::code>
 </div>
