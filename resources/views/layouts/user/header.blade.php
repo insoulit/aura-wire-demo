@@ -1,5 +1,5 @@
 <x-aura::header>
-    <x-slot:brand>
+    <x-slot name="brand">
         <a href="{{ route('home') }}" class="flex items-center gap-3 group">
             <div class="h-9 w-9 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-violet-500 flex items-center justify-center font-bold text-white shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform duration-200">
                 A
@@ -9,18 +9,16 @@
                 <x-aura::text size="xs" variant="subtle">User Workspace</x-aura::text>
             </div>
         </a>
-    </x-slot:brand>
+    </x-slot>
 
-    <div class="hidden md:flex items-center gap-1">
-        <x-aura::header.item href="/dashboard" :active="request()->is('dashboard')">Dashboard</x-aura::header.item>
+    <div class="flex items-center justify-center gap-1">
         <x-aura::header.item href="/components" :active="request()->is('components*')">Components</x-aura::header.item>
-        <x-aura::header.item href="/projects">Projects</x-aura::header.item>
-        <x-aura::header.item href="/settings">Settings</x-aura::header.item>
+        <x-aura::header.item href="/guest" :active="request()->is('guest*')">Guest</x-aura::header.item>
+        <x-aura::header.item href="/dashboard" :active="request()->is('dashboard*')">User</x-aura::header.item>
+        <x-aura::header.item href="/admin" :active="request()->is('admin*')">Admin</x-aura::header.item>
     </div>
 
-    <x-slot:actions>
-        <x-aura::badge variant="positive">Member</x-aura::badge>
+    <x-slot name="actions">
         <x-theme-switcher />
-        <x-aura::avatar initials="US" size="sm" status="online" />
-    </x-slot:actions>
+    </x-slot>
 </x-aura::header>
