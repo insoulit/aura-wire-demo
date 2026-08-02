@@ -6,3 +6,9 @@ use Illuminate\Support\Facades\Artisan;
 Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
+
+Artisan::command('db:snapshot', function () {
+    $this->call('snapshot:create', ['name' => 'backup']);
+})->purpose('Create a database snapshot always named backup inside database/snapshots');
+
+

@@ -13,7 +13,8 @@
         "insoulit/aura-wire": "@dev",
         "laravel/framework": "^13.8",
         "laravel/tinker": "^3.0",
-        "livewire/volt": "^1.11"
+        "livewire/volt": "^1.11",
+        "spatie/laravel-db-snapshots": "^2.10"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
