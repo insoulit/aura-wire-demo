@@ -1,16 +1,14 @@
 <x-layouts::app :title="$title ?? 'Admin Console — Aura Wire'">
-    <div class="flex-1 flex min-h-[93vh]">
-        <!-- Admin Sidebar -->
+    <div class="flex-1 flex min-h-screen">
+        <!-- Admin Sidebar with Compact Portal Links -->
         @include('layouts.admin.sidebar')
 
-        <!-- Main Content Area -->
-        <div class="flex-1 flex flex-col min-w-0 min-h-[93vh]">
-            @include('layouts.admin.header')
-
-            <main class="flex-1 p-6 md:p-8 overflow-y-auto">
+        <!-- Main Content Area (Max Width 7xl Centered Vertically & Horizontally) -->
+        <main class="flex-1 p-6 md:p-8 min-w-0 overflow-y-auto flex flex-col justify-center items-center">
+            <div class="max-w-7xl mx-auto w-full my-auto">
                 {{ $slot }}
-            </main>
-        </div>
+            </div>
+        </main>
     </div>
 
     @include('layouts.shared.footer')

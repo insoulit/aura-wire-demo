@@ -88,5 +88,8 @@ Volt::route('/user/email', 'user.email')->name('user.email');
 Volt::route('/user/password', 'user.password')->name('user.password');
 Volt::route('/user/settings', 'user.settings')->name('user.settings');
 Volt::route('/admin', 'admin.dashboard')->name('admin.dashboard');
+Volt::route('/admin/users', 'admin.users')->name('admin.users');
+Volt::route('/admin/logs', 'admin.logs')->name('admin.logs');
+Volt::route('/admin/settings', 'admin.settings')->name('admin.settings');
 
 
