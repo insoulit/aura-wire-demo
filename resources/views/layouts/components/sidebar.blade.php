@@ -1,12 +1,27 @@
 <aside class="w-60 shrink-0 hidden lg:block border-r border-zinc-200 dark:border-zinc-800/80 pr-6 space-y-4 text-sm sticky top-20 self-start max-h-[calc(100vh-6rem)] overflow-y-auto scrollbar-thin">
-    <!-- Getting Started -->
+    <!-- Start -->
     <div class="space-y-1">
-        <x-aura::kicker class="px-1 text-xs font-semibold uppercase tracking-wider text-zinc-400">Getting Started</x-aura::kicker>
+        <x-aura::kicker class="px-1 text-xs font-semibold uppercase tracking-wider text-zinc-400">Start</x-aura::kicker>
         <ul class="space-y-1 font-medium">
             <li>
                 <a href="/components" class="flex items-center gap-2 px-3 py-1.5 rounded-lg {{ request()->is('components') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
                     Overview
+                </a>
+            </li>
+            <li>
+                <a href="/components/installation" class="flex items-center gap-2 px-3 py-1.5 rounded-lg {{ request()->is('components/installation') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                    Installation
+                </a>
+            </li>
+            <li>
+                <a href="https://packagist.org/packages/insoulit/aura-wire" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-zinc-600 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-zinc-100 dark:hover:bg-zinc-800/50 transition-colors">
+                    <span class="flex items-center gap-2">
+                        <svg class="w-4 h-4 text-indigo-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        Packagist
+                    </span>
+                    <svg class="w-3 h-3 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
                 </a>
             </li>
         </ul>
@@ -44,7 +59,7 @@
         </ul>
     </div>
 
-    <!-- Layout & Structural Dropdown -->
+    <!-- Layout Dropdown -->
     @php
         $isLayoutActive = request()->is('components/header', 'components/sidebar', 'components/main', 'components/navbar', 'components/footer');
     @endphp
@@ -103,12 +118,12 @@
         </button>
         <ul x-show="open" x-transition class="space-y-1 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-1.5 my-1">
             <li><a href="/components/button" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/button') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Button</a></li>
-            <li><a href="/components/button-group" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/button-group') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Button Group</a></li>
+            <li><a href="/components/button-group" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/button-group') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Group</a></li>
             <li><a href="/components/dropdown" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/dropdown') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Dropdown</a></li>
         </ul>
     </div>
 
-    <!-- Form Controls Dropdown -->
+    <!-- Form Dropdown -->
     @php
         $isFormActive = request()->is('components/input', 'components/textarea', 'components/select', 'components/checkbox', 'components/radio', 'components/switch', 'components/field', 'components/file-upload', 'components/pin-code', 'components/error');
     @endphp
@@ -139,14 +154,14 @@
             <li><a href="/components/checkbox" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/checkbox') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Checkbox</a></li>
             <li><a href="/components/radio" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/radio') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Radio</a></li>
             <li><a href="/components/switch" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/switch') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Switch</a></li>
-            <li><a href="/components/field" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/field') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Field &amp; Label</a></li>
-            <li><a href="/components/file-upload" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/file-upload') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">File Upload</a></li>
-            <li><a href="/components/pin-code" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/pin-code') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">PIN Code</a></li>
+            <li><a href="/components/field" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/field') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Field</a></li>
+            <li><a href="/components/file-upload" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/file-upload') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Upload</a></li>
+            <li><a href="/components/pin-code" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/pin-code') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Pin</a></li>
             <li><a href="/components/error" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/error') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Error</a></li>
         </ul>
     </div>
 
-    <!-- Data Display Dropdown -->
+    <!-- Display Dropdown -->
     @php
         $isDisplayActive = request()->is('components/avatar', 'components/badge', 'components/card', 'components/code', 'components/empty-state', 'components/numbered-list', 'components/product-card', 'components/progress-bar', 'components/separator', 'components/table', 'components/tabs');
     @endphp
@@ -175,10 +190,10 @@
             <li><a href="/components/badge" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/badge') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Badge</a></li>
             <li><a href="/components/card" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/card') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Card</a></li>
             <li><a href="/components/code" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/code') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Code</a></li>
-            <li><a href="/components/empty-state" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/empty-state') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Empty State</a></li>
-            <li><a href="/components/numbered-list" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/numbered-list') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Numbered List</a></li>
-            <li><a href="/components/product-card" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/product-card') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Product Card</a></li>
-            <li><a href="/components/progress-bar" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/progress-bar') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Progress Bar</a></li>
+            <li><a href="/components/empty-state" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/empty-state') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Empty</a></li>
+            <li><a href="/components/numbered-list" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/numbered-list') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">List</a></li>
+            <li><a href="/components/product-card" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/product-card') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Product</a></li>
+            <li><a href="/components/progress-bar" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/progress-bar') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Progress</a></li>
             <li><a href="/components/separator" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/separator') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Separator</a></li>
             <li><a href="/components/table" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/table') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Table</a></li>
             <li><a href="/components/tabs" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/tabs') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Tabs</a></li>
@@ -215,9 +230,9 @@
         </ul>
     </div>
 
-    <!-- Overlays & Feedback Dropdown -->
+    <!-- Overlays Dropdown -->
     @php
-        $isOverlayActive = request()->is('components/banner', 'components/modal', 'components/sheet', 'components/spinner', 'components/tag', 'components/toast');
+        $isOverlayActive = request()->is('components/banner', 'components/modal', 'components/sheet');
     @endphp
     <div x-data="{ open: {{ $isOverlayActive ? 'true' : 'false' }} }" class="space-y-1">
         <button
@@ -226,8 +241,8 @@
             class="flex items-center justify-between w-full px-1 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer select-none group {{ $isOverlayActive ? 'text-indigo-600 dark:text-indigo-400' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white' }}"
         >
             <span class="flex items-center gap-1.5">
-                <svg class="w-3.5 h-3.5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
-                Overlays &amp; Feedback
+                <svg class="w-3.5 h-3.5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                Overlays
             </span>
             <svg
                 class="w-3.5 h-3.5 transition-transform duration-200 text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-300"
@@ -242,7 +257,35 @@
         <ul x-show="open" x-transition class="space-y-1 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-1.5 my-1">
             <li><a href="/components/banner" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/banner') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Banner</a></li>
             <li><a href="/components/modal" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/modal') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Modal</a></li>
-            <li><a href="/components/sheet" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/sheet') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Sheet Drawer</a></li>
+            <li><a href="/components/sheet" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/sheet') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Sheet</a></li>
+        </ul>
+    </div>
+
+    <!-- Feedback Dropdown -->
+    @php
+        $isFeedbackActive = request()->is('components/spinner', 'components/tag', 'components/toast');
+    @endphp
+    <div x-data="{ open: {{ $isFeedbackActive ? 'true' : 'false' }} }" class="space-y-1">
+        <button
+            type="button"
+            x-on:click="open = !open"
+            class="flex items-center justify-between w-full px-1 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer select-none group {{ $isFeedbackActive ? 'text-indigo-600 dark:text-indigo-400' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white' }}"
+        >
+            <span class="flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+                Feedback
+            </span>
+            <svg
+                class="w-3.5 h-3.5 transition-transform duration-200 text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-300"
+                :class="open ? 'rotate-90' : ''"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+        </button>
+        <ul x-show="open" x-transition class="space-y-1 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-1.5 my-1">
             <li><a href="/components/spinner" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/spinner') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Spinner</a></li>
             <li><a href="/components/tag" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/tag') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Tag</a></li>
             <li><a href="/components/toast" class="block px-2.5 py-1.5 rounded-lg {{ request()->is('components/toast') ? 'bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 font-semibold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Toast</a></li>

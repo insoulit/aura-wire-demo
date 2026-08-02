@@ -9,13 +9,79 @@ title('Component Directory — Aura Wire');
 ?>
 
 <div class="w-full space-y-12">
-    <!-- Header Banner -->
-    <div class="border-b border-zinc-200 dark:border-zinc-800 pb-6">
-        <x-aura::kicker class="text-indigo-600 dark:text-indigo-400 mb-2">📦 insoulit/aura-wire Component Suite</x-aura::kicker>
-        <x-aura::heading level="1" size="xl">Component Directory</x-aura::heading>
-        <x-aura::subheading class="mt-1">
-            Browse through individual standalone documentation pages for every component registered by Aura Wire, organized by category.
-        </x-aura::subheading>
+    <!-- Header Banner & Package Link -->
+    <div class="space-y-6">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-6">
+            <div>
+                <div class="flex items-center gap-2 mb-2">
+                    <x-aura::kicker class="text-indigo-600 dark:text-indigo-400">📦 insoulit/aura-wire Component Suite</x-aura::kicker>
+                    <x-aura::badge variant="positive" size="sm">v1.0.0</x-aura::badge>
+                </div>
+                <x-aura::heading level="1" size="xl">Component Directory</x-aura::heading>
+                <x-aura::subheading class="mt-1">
+                    Browse through individual standalone documentation pages for every component registered by Aura Wire, organized by category.
+                </x-aura::subheading>
+            </div>
+            
+            <div class="flex items-center gap-3 shrink-0">
+                <a href="/components/installation" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-500 shadow-md shadow-indigo-600/20 transition-all group">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                    <span>Installation Guide</span>
+                    <svg class="w-3.5 h-3.5 opacity-70 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+
+        <!-- Quick Package Installation Card -->
+        <div class="rounded-2xl bg-gradient-to-r from-zinc-900 via-indigo-950/80 to-zinc-900 p-6 text-white border border-indigo-500/30 shadow-xl space-y-5">
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3 border-b border-white/10 pb-4">
+                <div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                        <x-aura::heading level="2" size="md" class="text-white">Package Installation & Setup</x-aura::heading>
+                    </div>
+                    <p class="text-xs text-zinc-300 mt-1">Install the Composer package into your Laravel application to use `<aura:...>` components.</p>
+                </div>
+                <div class="flex items-center gap-2 text-xs text-indigo-300 bg-indigo-500/10 px-3 py-1.5 rounded-lg border border-indigo-500/20">
+                    <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Supports Laravel 11/12 & Livewire Volt</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Composer Install Step -->
+                <div class="space-y-2 bg-black/40 p-4 rounded-xl border border-white/10">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-semibold text-indigo-400 uppercase tracking-wider">1. Install Package</span>
+                        <span class="text-[10px] text-zinc-400">Composer</span>
+                    </div>
+                    <div class="flex items-center justify-between bg-zinc-950 px-3 py-2 rounded-lg border border-zinc-800 font-mono text-xs text-emerald-400">
+                        <code>composer require insoulit/aura-wire</code>
+                    </div>
+                </div>
+
+                <!-- Publish Assets Step -->
+                <div class="space-y-2 bg-black/40 p-4 rounded-xl border border-white/10">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs font-semibold text-indigo-400 uppercase tracking-wider">2. Publish Config & Views</span>
+                        <span class="text-[10px] text-zinc-400">Artisan</span>
+                    </div>
+                    <div class="flex items-center justify-between bg-zinc-950 px-3 py-2 rounded-lg border border-zinc-800 font-mono text-xs text-indigo-300">
+                        <code>php artisan vendor:publish --tag="aura-wire-config"</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap items-center justify-between gap-3 text-xs text-zinc-400 pt-2 border-t border-white/5">
+                <div class="flex items-center gap-4">
+                    <span class="flex items-center gap-1.5"><strong class="text-white">Package Link:</strong> <a href="https://packagist.org/packages/insoulit/aura-wire" target="_blank" class="text-indigo-400 hover:underline">insoulit/aura-wire</a></span>
+                    <span class="flex items-center gap-1.5"><strong class="text-white">Prefixes:</strong> <code class="text-zinc-300">&lt;aura:...&gt;</code> & <code class="text-zinc-300">&lt;x-aura::...&gt;</code></span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-xs text-zinc-400">License: <strong class="text-white">MIT</strong></span>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Category 1: Typography -->

@@ -19,6 +19,7 @@ Volt::route('/', 'home')->name('home');
 
 // Component Showcase Routes (Organized by Component Group)
 Volt::route('/components', 'components.index')->name('components.index');
+Volt::route('/components/installation', 'components.installation')->name('components.installation');
 
 // Typography Group
 Volt::route('/components/heading', 'components.typography.heading')->name('components.heading');
