@@ -26,26 +26,26 @@ state([
             <x-aura::button variant="secondary" size="sm" square title="Shopping Cart">
                 <svg class="w-4 h-4 text-zinc-700 dark:text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
             </x-aura::button>
-            <x-aura::badge variant="positive" size="sm">{{ $cartCount }} Items in Bag</x-aura::badge>
+            <x-aura::badge variant="neutral" size="sm">{{ $cartCount }} Items in Bag</x-aura::badge>
         </div>
     </div>
 
     <!-- Store Hero Banner -->
-    <div class="rounded-3xl bg-zinc-900 text-white p-8 md:p-12 relative overflow-hidden border border-zinc-800 shadow-2xl">
+    <div class="rounded-3xl bg-zinc-100/90 dark:bg-zinc-900 text-zinc-900 dark:text-white p-8 md:p-12 relative overflow-hidden border border-zinc-200/80 dark:border-zinc-800 shadow-sm">
         <div class="max-w-2xl space-y-4">
             <div class="inline-flex items-center gap-2">
-                <x-aura::badge variant="subtle" size="sm">🔥 Summer Collection 2026</x-aura::badge>
+                <x-aura::badge variant="neutral" size="sm">🔥 Summer Collection 2026</x-aura::badge>
                 <x-aura::badge variant="warning" size="sm">Up to 40% Off</x-aura::badge>
             </div>
-            <x-aura::heading level="1" size="display-md" class="text-white">
+            <x-aura::heading level="1" size="display-md" class="text-zinc-900 dark:text-white">
                 Next-Gen Audio &amp; Workspace Gear
             </x-aura::heading>
-            <x-aura::subheading class="text-zinc-300 text-base">
+            <x-aura::subheading class="text-zinc-600 dark:text-zinc-400 text-base">
                 Discover precision-crafted headphones, minimalist desk lamps, and ergonomic studio accessories designed for creators.
             </x-aura::subheading>
             <div class="pt-2 flex flex-wrap gap-3">
                 <x-aura::button variant="primary" size="md">Shop New Arrivals &rarr;</x-aura::button>
-                <x-aura::button variant="outline" size="md" class="border-zinc-700 text-zinc-200 hover:bg-zinc-800">Browse Deals</x-aura::button>
+                <x-aura::button variant="outline" size="md">Browse Deals</x-aura::button>
             </div>
         </div>
     </div>
@@ -71,7 +71,7 @@ state([
             <div class="aspect-4/3 bg-zinc-100 dark:bg-zinc-800/60 flex items-center justify-center relative p-6">
                 <span class="text-6xl group-hover:scale-110 transition-transform duration-300">🎧</span>
                 <div class="absolute top-3 left-3">
-                    <x-aura::badge variant="positive" size="sm">Best Seller</x-aura::badge>
+                    <x-aura::badge variant="neutral" size="sm">Best Seller</x-aura::badge>
                 </div>
             </div>
             <div class="p-5 space-y-3">
@@ -156,7 +156,7 @@ state([
                 </div>
                 <div class="flex justify-between text-sm text-zinc-600 dark:text-zinc-400">
                     <span>Express Shipping</span>
-                    <span class="font-semibold text-emerald-600 dark:text-emerald-400">FREE</span>
+                    <span class="font-bold text-zinc-900 dark:text-white">FREE</span>
                 </div>
                 <div class="pt-3 border-t border-zinc-200 dark:border-zinc-700 flex justify-between text-base font-extrabold text-zinc-900 dark:text-white">
                     <span>Total Amount</span>

@@ -37,7 +37,7 @@ new #[Layout('layouts.user')] #[Title('Profile Picture — User Panel | Aura Wir
     <x-aura::card>
         <form wire:submit="save" class="space-y-6">
             <div class="flex items-center gap-6 pb-6 border-b border-zinc-100 dark:border-zinc-800">
-                <x-aura::avatar initials="AK" size="xl" status="online" />
+                <x-aura::avatar initials="AK" size="xl"  />
                 <div class="space-y-1">
                     <x-aura::heading level="2" size="md">Current Avatar</x-aura::heading>
                     <x-aura::text variant="subtle" size="xs">

@@ -43,11 +43,11 @@
 
                     <div class="relative z-10 flex-1 min-w-0">
                         <div class="flex items-center gap-2 mb-1">
-                            <h3 class="text-base sm:text-lg font-black text-zinc-900 dark:text-white tracking-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                            <h3 class="text-base sm:text-lg font-black text-zinc-900 dark:text-white tracking-tight group-hover:underline transition-colors">
                                 {{ $section['title'] }}
                             </h3>
                             @if($section['active'])
-                                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-600/10 text-blue-600 dark:text-blue-400">Active</span>
+                                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-zinc-900 text-white dark:bg-white dark:text-zinc-900">Active</span>
                             @endif
                         </div>
                         <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 font-medium leading-relaxed">
@@ -56,7 +56,7 @@
                     </div>
 
                     <div class="relative z-10 shrink-0 hidden sm:block">
-                        <svg class="w-6 h-6 text-zinc-400 dark:text-zinc-600 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <svg class="w-6 h-6 text-zinc-400 dark:text-zinc-600 group-hover:underline group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
                     </div>
@@ -87,11 +87,11 @@
 
                     <div class="relative z-10 flex-1 min-w-0">
                         <div class="flex items-center gap-2 mb-1">
-                            <h3 class="text-base sm:text-lg font-black text-zinc-900 dark:text-white tracking-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                            <h3 class="text-base sm:text-lg font-black text-zinc-900 dark:text-white tracking-tight group-hover:underline transition-colors">
                                 {{ $section['title'] }}
                             </h3>
                             @if($section['active'])
-                                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-600/10 text-blue-600 dark:text-blue-400">Active</span>
+                                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-zinc-900 text-white dark:bg-white dark:text-zinc-900">Active</span>
                             @endif
                         </div>
                         <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 font-medium leading-relaxed">
@@ -100,7 +100,7 @@
                     </div>
 
                     <div class="relative z-10 shrink-0 hidden sm:block">
-                        <svg class="w-6 h-6 text-zinc-400 dark:text-zinc-600 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <svg class="w-6 h-6 text-zinc-400 dark:text-zinc-600 group-hover:underline group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
                     </div>

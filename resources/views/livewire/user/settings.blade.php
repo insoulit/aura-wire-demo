@@ -35,7 +35,7 @@ title('Profile & Account Settings — User Panel | Aura Wire');
         <div class="space-y-6">
             <!-- Profile Avatar Upload Block -->
             <div class="flex flex-col sm:flex-row sm:items-center gap-6 pb-6 border-b border-zinc-200/60 dark:border-zinc-800/60">
-                <x-aura::avatar initials="AK" size="xl" status="online" />
+                <x-aura::avatar initials="AK" size="xl"  />
                 <div class="space-y-2 flex-1">
                     <x-aura::file-upload label="Change Avatar Image" hint="PNG, JPG, or SVG up to 2MB" />
                 </div>

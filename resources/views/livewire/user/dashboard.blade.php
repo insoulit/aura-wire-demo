@@ -19,7 +19,7 @@ new #[Layout('layouts.user')] #[Title('User Dashboard — User Panel | Aura Wire
 
         <div class="relative z-10 p-4 sm:p-6 space-y-4">
             <div class="flex items-center gap-2">
-                <x-aura::badge variant="positive">👋 Welcome Back</x-aura::badge>
+                <x-aura::badge variant="neutral">👋 Welcome Back</x-aura::badge>
                 <x-aura::badge variant="subtle">User Account</x-aura::badge>
             </div>
 
@@ -43,10 +43,10 @@ new #[Layout('layouts.user')] #[Title('User Dashboard — User Panel | Aura Wire
             <a href="/user/profile" class="block group" wire:navigate>
                 <x-aura::card class="hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all duration-300 shadow-xs">
                     <div class="flex items-center gap-5">
-                        <x-aura::avatar initials="PI" size="md" status="online" />
+                        <x-aura::avatar initials="PI" size="md"  />
                         <div class="flex-1 min-w-0">
                             <div class="flex items-center gap-2 mb-1">
-                                <x-aura::heading level="3" size="sm" class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                                <x-aura::heading level="3" size="sm" class="group-hover:underline transition-colors">
                                     Profile Info
                                 </x-aura::heading>
                                 <x-aura::badge variant="neutral" class="text-[10px]">Account</x-aura::badge>
@@ -66,10 +66,10 @@ new #[Layout('layouts.user')] #[Title('User Dashboard — User Panel | Aura Wire
             <a href="/user/avatar" class="block group" wire:navigate>
                 <x-aura::card class="hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all duration-300 shadow-xs">
                     <div class="flex items-center gap-5">
-                        <x-aura::avatar initials="AK" size="md" status="online" />
+                        <x-aura::avatar initials="AK" size="md"  />
                         <div class="flex-1 min-w-0">
                             <div class="flex items-center gap-2 mb-1">
-                                <x-aura::heading level="3" size="sm" class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                                <x-aura::heading level="3" size="sm" class="group-hover:underline transition-colors">
                                     Change Profile Picture
                                 </x-aura::heading>
                                 <x-aura::badge variant="neutral" class="text-[10px]">Media</x-aura::badge>
@@ -89,13 +89,13 @@ new #[Layout('layouts.user')] #[Title('User Dashboard — User Panel | Aura Wire
             <a href="/user/email" class="block group" wire:navigate>
                 <x-aura::card class="hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all duration-300 shadow-xs">
                     <div class="flex items-center gap-5">
-                        <x-aura::avatar initials="EM" size="md" status="away" />
+                        <x-aura::avatar initials="EM" size="md"  />
                         <div class="flex-1 min-w-0">
                             <div class="flex items-center gap-2 mb-1">
-                                <x-aura::heading level="3" size="sm" class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                                <x-aura::heading level="3" size="sm" class="group-hover:underline transition-colors">
                                     Change Email Address
                                 </x-aura::heading>
-                                <x-aura::badge variant="warning" class="text-[10px]">Verification</x-aura::badge>
+                                <x-aura::badge variant="subtle" class="text-[10px]">Verification</x-aura::badge>
                             </div>
                             <x-aura::text variant="subtle" size="sm">
                                 Update primary login email address and dispatch confirmation code.
@@ -112,13 +112,13 @@ new #[Layout('layouts.user')] #[Title('User Dashboard — User Panel | Aura Wire
             <a href="/user/password" class="block group" wire:navigate>
                 <x-aura::card class="hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all duration-300 shadow-xs">
                     <div class="flex items-center gap-5">
-                        <x-aura::avatar initials="PS" size="md" status="busy" />
+                        <x-aura::avatar initials="PS" size="md"  />
                         <div class="flex-1 min-w-0">
                             <div class="flex items-center gap-2 mb-1">
-                                <x-aura::heading level="3" size="sm" class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                                <x-aura::heading level="3" size="sm" class="group-hover:underline transition-colors">
                                     Change Password &amp; Security PIN
                                 </x-aura::heading>
-                                <x-aura::badge variant="positive" class="text-[10px]">Security</x-aura::badge>
+                                <x-aura::badge variant="neutral" class="text-[10px]">Security</x-aura::badge>
                             </div>
                             <x-aura::text variant="subtle" size="sm">
                                 Update login password credentials and configure 4-digit PIN code.
@@ -145,7 +145,7 @@ new #[Layout('layouts.user')] #[Title('User Dashboard — User Panel | Aura Wire
                         <x-aura::avatar initials="UI" size="md" />
                         <div class="flex-1 min-w-0">
                             <div class="flex items-center gap-2 mb-1">
-                                <x-aura::heading level="3" size="sm" class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                                <x-aura::heading level="3" size="sm" class="group-hover:underline transition-colors">
                                     Component Directory
                                 </x-aura::heading>
                                 <x-aura::badge variant="subtle" class="text-[10px]">47 Ready</x-aura::badge>
@@ -168,7 +168,7 @@ new #[Layout('layouts.user')] #[Title('User Dashboard — User Panel | Aura Wire
                         <x-aura::avatar initials="GP" size="md" />
                         <div class="flex-1 min-w-0">
                             <div class="flex items-center gap-2 mb-1">
-                                <x-aura::heading level="3" size="sm" class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                                <x-aura::heading level="3" size="sm" class="group-hover:underline transition-colors">
                                     Guest Marketing Portal
                                 </x-aura::heading>
                                 <x-aura::badge variant="neutral" class="text-[10px]">Public</x-aura::badge>
@@ -191,10 +191,10 @@ new #[Layout('layouts.user')] #[Title('User Dashboard — User Panel | Aura Wire
                         <x-aura::avatar initials="AD" size="md" />
                         <div class="flex-1 min-w-0">
                             <div class="flex items-center gap-2 mb-1">
-                                <x-aura::heading level="3" size="sm" class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                                <x-aura::heading level="3" size="sm" class="group-hover:underline transition-colors">
                                     Admin Control Console
                                 </x-aura::heading>
-                                <x-aura::badge variant="positive" class="text-[10px]">Admin</x-aura::badge>
+                                <x-aura::badge variant="neutral" class="text-[10px]">Admin</x-aura::badge>
                             </div>
                             <x-aura::text variant="subtle" size="sm">
                                 Access administrative management, system statistics, and user directory table.

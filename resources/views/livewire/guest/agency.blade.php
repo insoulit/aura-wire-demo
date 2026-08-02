@@ -23,27 +23,27 @@ state([
             <x-aura::badge variant="neutral" size="sm">Agency UI Kit</x-aura::badge>
         </div>
 
-        <x-aura::badge variant="positive" size="sm">Accepting Q3/Q4 Projects</x-aura::badge>
+        <x-aura::badge variant="neutral" size="sm">Accepting Q3/Q4 Projects</x-aura::badge>
     </div>
 
     <!-- Agency Hero Section -->
-    <div class="rounded-3xl bg-zinc-900 text-white p-8 md:p-12 relative overflow-hidden border border-zinc-800 shadow-2xl">
+    <div class="rounded-3xl bg-zinc-100/90 dark:bg-zinc-900 text-zinc-900 dark:text-white p-8 md:p-12 relative overflow-hidden border border-zinc-200/80 dark:border-zinc-800 shadow-sm">
         <div class="max-w-2xl space-y-4">
             <div class="inline-flex items-center gap-2">
-                <x-aura::kicker class="text-zinc-400">⚡ STUDIO AURA DIGITAL</x-aura::kicker>
-                <x-aura::badge variant="subtle" size="sm">Design &amp; Engineering</x-aura::badge>
+                <x-aura::kicker class="text-zinc-500">⚡ STUDIO AURA DIGITAL</x-aura::kicker>
+                <x-aura::badge variant="neutral" size="sm">Design &amp; Engineering</x-aura::badge>
             </div>
-            <x-aura::heading level="1" size="display-md" class="text-white">
+            <x-aura::heading level="1" size="display-md" class="text-zinc-900 dark:text-white">
                 We Craft Digital Products That Drive Growth
             </x-aura::heading>
-            <x-aura::subheading class="text-zinc-300 text-base">
+            <x-aura::subheading class="text-zinc-600 dark:text-zinc-400 text-base">
                 Partnering with ambitious founders and enterprise engineering teams to design high-converting web applications, brand identities, and design systems.
             </x-aura::subheading>
             <div class="pt-2 flex flex-wrap gap-3">
                 <x-aura::button variant="primary" size="md">
                     Start a Project &rarr;
                 </x-aura::button>
-                <x-aura::button variant="outline" size="md" class="border-zinc-700 text-zinc-200 hover:bg-zinc-800">
+                <x-aura::button variant="outline" size="md">
                     View Portfolio Works
                 </x-aura::button>
             </div>
@@ -83,7 +83,7 @@ state([
                         Laravel 12, Livewire Volt, and Tailwind CSS app engineering with 100% test coverage.
                     </x-aura::text>
                 </div>
-                <x-aura::badge variant="positive" size="sm">Production Engineering</x-aura::badge>
+                <x-aura::badge variant="neutral" size="sm">Production Engineering</x-aura::badge>
             </x-aura::card>
 
             <!-- Service 3 -->
@@ -135,7 +135,7 @@ state([
 
         <x-slot:footer>
             <div class="flex items-center justify-between w-full">
-                <x-aura::badge variant="positive" size="sm">Proposal within 48 hours</x-aura::badge>
+                <x-aura::badge variant="neutral" size="sm">Proposal within 48 hours</x-aura::badge>
                 <x-aura::button variant="primary" size="sm">Submit Project Inquiry &rarr;</x-aura::button>
             </div>
         </x-slot:footer>

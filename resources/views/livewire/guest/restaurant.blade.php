@@ -23,27 +23,27 @@ state([
             <x-aura::badge variant="neutral" size="sm">Restaurant UI Kit</x-aura::badge>
         </div>
 
-        <x-aura::badge variant="positive" size="sm">Open Today 12:00 PM – 11:00 PM</x-aura::badge>
+        <x-aura::badge variant="neutral" size="sm">Open Today 12:00 PM – 11:00 PM</x-aura::badge>
     </div>
 
     <!-- Dining Hero -->
-    <div class="rounded-3xl bg-zinc-900 text-white p-8 md:p-12 relative overflow-hidden border border-zinc-800 shadow-2xl">
+    <div class="rounded-3xl bg-zinc-100/90 dark:bg-zinc-900 text-zinc-900 dark:text-white p-8 md:p-12 relative overflow-hidden border border-zinc-200/80 dark:border-zinc-800 shadow-sm">
         <div class="max-w-2xl space-y-4">
             <div class="inline-flex items-center gap-2">
-                <x-aura::kicker class="text-zinc-400">🍽️ L'AURA BISTRO &amp; GRILL</x-aura::kicker>
-                <x-aura::badge variant="subtle" size="sm">★ 4.9 Michelin Recommended</x-aura::badge>
+                <x-aura::kicker class="text-zinc-500">🍽️ L'AURA BISTRO &amp; GRILL</x-aura::kicker>
+                <x-aura::badge variant="neutral" size="sm">★ 4.9 Michelin Recommended</x-aura::badge>
             </div>
-            <x-aura::heading level="1" size="display-md" class="text-white">
+            <x-aura::heading level="1" size="display-md" class="text-zinc-900 dark:text-white">
                 Artisanal Culinary Craft &amp; Fine Dining
             </x-aura::heading>
-            <x-aura::subheading class="text-zinc-300 text-base">
+            <x-aura::subheading class="text-zinc-600 dark:text-zinc-400 text-base">
                 Fresh seasonal ingredients, wood-fired specialties, and curated organic wine pairings served in a cozy modern atmosphere.
             </x-aura::subheading>
             <div class="pt-2 flex flex-wrap gap-3">
                 <x-aura::button variant="primary" size="md">
                     Reserve a Table &rarr;
                 </x-aura::button>
-                <x-aura::button variant="outline" size="md" class="border-zinc-700 text-zinc-200 hover:bg-zinc-800">
+                <x-aura::button variant="outline" size="md">
                     Explore Digital Menu
                 </x-aura::button>
             </div>
@@ -78,7 +78,7 @@ state([
                     <x-aura::text variant="subtle" size="xs">Crispy risotto balls infused with black truffle emulsion and aged parmesan dip.</x-aura::text>
                 </div>
                 <div class="pt-4 flex items-center gap-2 border-t border-zinc-100 dark:border-zinc-800">
-                    <x-aura::badge variant="positive" size="sm">Vegetarian</x-aura::badge>
+                    <x-aura::badge variant="neutral" size="sm">Vegetarian</x-aura::badge>
                     <x-aura::badge variant="subtle" size="sm">Chef Favorite</x-aura::badge>
                 </div>
             </x-aura::card>
@@ -126,7 +126,7 @@ state([
 
         <x-slot:footer>
             <div class="flex items-center justify-between w-full">
-                <x-aura::badge variant="positive" size="sm">Instant Confirmation</x-aura::badge>
+                <x-aura::badge variant="neutral" size="sm">Instant Confirmation</x-aura::badge>
                 <x-aura::button variant="primary" size="sm">Confirm Reservation &rarr;</x-aura::button>
             </div>
         </x-slot:footer>

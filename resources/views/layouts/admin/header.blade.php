@@ -1,7 +1,7 @@
 <x-aura::header>
     <x-slot name="brand">
         <a href="{{ route('home') }}" class="flex items-center gap-3 group">
-            <div class="h-9 w-9 rounded-xl bg-gradient-to-tr from-red-600 via-rose-500 to-amber-500 flex items-center justify-center font-bold text-white shadow-md shadow-red-500/20 group-hover:scale-105 transition-transform duration-200">
+            <div class="h-9 w-9 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center font-bold text-white shadow-md shadow-sm group-hover:scale-105 transition-transform duration-200">
                 A
             </div>
             <div>

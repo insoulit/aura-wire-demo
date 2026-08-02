@@ -13,7 +13,7 @@ title('Admin Console — Aura Wire');
         <div>
             <div class="flex items-center gap-2 mb-1">
                 <x-aura::kicker class="text-zinc-500">⚡ ADMIN CONSOLE</x-aura::kicker>
-                <x-aura::badge variant="positive" size="sm">System Operational</x-aura::badge>
+                <x-aura::badge variant="neutral" size="sm">System Operational</x-aura::badge>
             </div>
             <x-aura::heading level="1" size="lg">System Management &amp; Analytics</x-aura::heading>
             <x-aura::subheading>Monitor insoulit/aura-wire package state, cached views, and user registries</x-aura::subheading>
@@ -37,12 +37,12 @@ title('Admin Console — Aura Wire');
         <x-aura::card>
             <x-aura::text variant="subtle" size="xs">Total Registrations</x-aura::text>
             <x-aura::heading level="2" size="xl" class="mt-1">1,248</x-aura::heading>
-            <x-aura::badge variant="positive" class="mt-2 text-[10px]">+14% this week</x-aura::badge>
+            <x-aura::badge variant="neutral" class="mt-2 text-[10px]">+14% this week</x-aura::badge>
         </x-aura::card>
 
         <x-aura::card>
             <x-aura::text variant="subtle" size="xs">Package Symlink</x-aura::text>
-            <x-aura::heading level="2" size="xl" class="mt-1 text-emerald-600 dark:text-emerald-400">@dev</x-aura::heading>
+            <x-aura::heading level="2" size="xl" class="mt-1 text-zinc-900 dark:text-white">@dev</x-aura::heading>
             <x-aura::badge variant="neutral" class="mt-2 text-[10px]">packages/aura-wire</x-aura::badge>
         </x-aura::card>
 
@@ -76,7 +76,7 @@ title('Admin Console — Aura Wire');
                     <x-aura::table.cell class="font-semibold text-zinc-900 dark:text-white">Typography</x-aura::table.cell>
                     <x-aura::table.cell>4 Components</x-aura::table.cell>
                     <x-aura::table.cell><code class="text-xs font-mono text-zinc-900 dark:text-zinc-200">&lt;aura:heading&gt;</code></x-aura::table.cell>
-                    <x-aura::table.cell><x-aura::badge variant="positive">Registered</x-aura::badge></x-aura::table.cell>
+                    <x-aura::table.cell><x-aura::badge variant="neutral">Registered</x-aura::badge></x-aura::table.cell>
                     <x-aura::table.cell class="text-right">
                         <x-aura::button variant="ghost" size="xs" href="/components/heading">Inspect &rarr;</x-aura::button>
                     </x-aura::table.cell>
@@ -86,7 +86,7 @@ title('Admin Console — Aura Wire');
                     <x-aura::table.cell class="font-semibold text-zinc-900 dark:text-white">Form Controls</x-aura::table.cell>
                     <x-aura::table.cell>10 Components</x-aura::table.cell>
                     <x-aura::table.cell><code class="text-xs font-mono text-zinc-900 dark:text-zinc-200">&lt;aura:input&gt;</code></x-aura::table.cell>
-                    <x-aura::table.cell><x-aura::badge variant="positive">Registered</x-aura::badge></x-aura::table.cell>
+                    <x-aura::table.cell><x-aura::badge variant="neutral">Registered</x-aura::badge></x-aura::table.cell>
                     <x-aura::table.cell class="text-right">
                         <x-aura::button variant="ghost" size="xs" href="/components/input">Inspect &rarr;</x-aura::button>
                     </x-aura::table.cell>
@@ -96,7 +96,7 @@ title('Admin Console — Aura Wire');
                     <x-aura::table.cell class="font-semibold text-zinc-900 dark:text-white">Display &amp; Data</x-aura::table.cell>
                     <x-aura::table.cell>11 Components</x-aura::table.cell>
                     <x-aura::table.cell><code class="text-xs font-mono text-zinc-900 dark:text-zinc-200">&lt;aura:card&gt;</code></x-aura::table.cell>
-                    <x-aura::table.cell><x-aura::badge variant="positive">Registered</x-aura::badge></x-aura::table.cell>
+                    <x-aura::table.cell><x-aura::badge variant="neutral">Registered</x-aura::badge></x-aura::table.cell>
                     <x-aura::table.cell class="text-right">
                         <x-aura::button variant="ghost" size="xs" href="/components/card">Inspect &rarr;</x-aura::button>
                     </x-aura::table.cell>
@@ -106,7 +106,7 @@ title('Admin Console — Aura Wire');
                     <x-aura::table.cell class="font-semibold text-zinc-900 dark:text-white">Overlays &amp; Feedback</x-aura::table.cell>
                     <x-aura::table.cell>6 Components</x-aura::table.cell>
                     <x-aura::table.cell><code class="text-xs font-mono text-zinc-900 dark:text-zinc-200">&lt;aura:modal&gt;</code></x-aura::table.cell>
-                    <x-aura::table.cell><x-aura::badge variant="positive">Registered</x-aura::badge></x-aura::table.cell>
+                    <x-aura::table.cell><x-aura::badge variant="neutral">Registered</x-aura::badge></x-aura::table.cell>
                     <x-aura::table.cell class="text-right">
                         <x-aura::button variant="ghost" size="xs" href="/components/modal">Inspect &rarr;</x-aura::button>
                     </x-aura::table.cell>

@@ -27,7 +27,7 @@ state([
     <div class="relative text-center space-y-6 max-w-4xl mx-auto">
         <div class="inline-flex items-center gap-2">
             <x-aura::kicker class="text-zinc-500">⚡ CLOUD MONITORING</x-aura::kicker>
-            <x-aura::badge variant="positive" size="sm">99.99% Uptime SLA</x-aura::badge>
+            <x-aura::badge variant="neutral" size="sm">99.99% Uptime SLA</x-aura::badge>
         </div>
 
         <x-aura::heading level="1" size="display-lg" class="tracking-tight text-zinc-900 dark:text-white">
@@ -90,7 +90,7 @@ state([
             <!-- Pro Featured Plan Card -->
             <x-aura::card class="flex flex-col justify-between p-6 border-2 border-zinc-900 dark:border-white shadow-xl relative">
                 <div class="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <x-aura::badge variant="positive" size="sm">Most Popular</x-aura::badge>
+                    <x-aura::badge variant="neutral" size="sm">Most Popular</x-aura::badge>
                 </div>
                 <div class="space-y-4">
                     <div>

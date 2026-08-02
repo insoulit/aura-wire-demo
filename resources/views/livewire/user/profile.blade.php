@@ -39,7 +39,7 @@ new #[Layout('layouts.user')] #[Title('Profile Details — User Panel | Aura Wir
     {{-- Form Card --}}
     <x-aura::card>
         <div class="flex items-center gap-4 pb-6 mb-6 border-b border-zinc-100 dark:border-zinc-800">
-            <x-aura::avatar initials="AK" size="lg" status="online" />
+            <x-aura::avatar initials="AK" size="lg"  />
             <div>
                 <x-aura::heading level="2" size="md" class="uppercase tracking-tight">
                     ALEX KOVACS

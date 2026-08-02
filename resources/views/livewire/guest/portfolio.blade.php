@@ -22,21 +22,21 @@ state([
             <x-aura::badge variant="neutral" size="sm">Portfolio UI Kit</x-aura::badge>
         </div>
 
-        <x-aura::badge variant="positive" size="sm">Available for Q3 Projects</x-aura::badge>
+        <x-aura::badge variant="neutral" size="sm">Available for Q3 Projects</x-aura::badge>
     </div>
 
     <!-- Creator Profile Hero -->
-    <div class="flex flex-col md:flex-row md:items-center justify-between gap-8 bg-zinc-900 text-white p-8 md:p-12 rounded-3xl border border-zinc-800 shadow-2xl">
+    <div class="flex flex-col md:flex-row md:items-center justify-between gap-8 bg-zinc-100/90 dark:bg-zinc-900 text-zinc-900 dark:text-white p-8 md:p-12 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 shadow-sm">
         <div class="space-y-4 max-w-2xl">
             <div class="flex items-center gap-3">
-                <x-aura::avatar initials="AK" size="lg" status="online" />
+                <x-aura::avatar initials="AK" size="lg"  />
                 <div>
-                    <x-aura::heading level="1" size="lg" class="text-white">Alex Kovacs</x-aura::heading>
-                    <x-aura::text variant="subtle" size="xs" class="text-zinc-300">Staff Product Designer &amp; Frontend Engineer</x-aura::text>
+                    <x-aura::heading level="1" size="lg" class="text-zinc-900 dark:text-white">Alex Kovacs</x-aura::heading>
+                    <x-aura::text variant="subtle" size="xs" class="text-zinc-600 dark:text-zinc-400">Staff Product Designer &amp; Frontend Engineer</x-aura::text>
                 </div>
             </div>
 
-            <x-aura::subheading class="text-zinc-300 text-base leading-relaxed">
+            <x-aura::subheading class="text-zinc-600 dark:text-zinc-400 text-base leading-relaxed">
                 Specializing in high-contrast design systems, developer tools, and reactive Laravel Livewire interfaces.
             </x-aura::subheading>
 
@@ -85,7 +85,7 @@ state([
                 </div>
                 <div class="pt-4 flex items-center justify-between border-t border-zinc-100 dark:border-zinc-800">
                     <x-aura::text variant="accent" size="xs" weight="semibold">Read Case Study &rarr;</x-aura::text>
-                    <x-aura::badge variant="positive" size="sm">Open Source</x-aura::badge>
+                    <x-aura::badge variant="neutral" size="sm">Open Source</x-aura::badge>
                 </div>
             </x-aura::card>
 
@@ -136,7 +136,7 @@ state([
 
         <x-slot:footer>
             <div class="flex items-center justify-between w-full">
-                <x-aura::badge variant="positive" size="sm">⚡ Fast 24h Response</x-aura::badge>
+                <x-aura::badge variant="neutral" size="sm">⚡ Fast 24h Response</x-aura::badge>
                 <x-aura::button variant="primary" size="sm">Send Project Inquiry &rarr;</x-aura::button>
             </div>
         </x-slot:footer>

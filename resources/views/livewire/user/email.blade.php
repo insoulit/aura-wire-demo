@@ -31,7 +31,7 @@ new #[Layout('layouts.user')] #[Title('Change Email Address — User Panel | Aur
     </div>
 
     @if($sent)
-        <x-aura::banner variant="warning" dismissible="true">
+        <x-aura::banner variant="subtle" dismissible="true">
             Verification email code sent to <strong>{{ $newEmail ?: 'new email' }}</strong>. Please check your inbox.
         </x-aura::banner>
     @endif

@@ -13,7 +13,7 @@ title('System Logs — Admin Console | Aura Wire');
         <div>
             <div class="flex items-center gap-2 mb-1">
                 <x-aura::kicker class="text-zinc-500">⚡ SYSTEM LOGS</x-aura::kicker>
-                <x-aura::badge variant="positive" size="sm">Realtime Pail Log Stream</x-aura::badge>
+                <x-aura::badge variant="neutral" size="sm">Realtime Pail Log Stream</x-aura::badge>
             </div>
             <x-aura::heading level="1" size="lg">System Logs &amp; Activity</x-aura::heading>
             <x-aura::subheading>Inspect application event streams, exception traces, and package runtime logs</x-aura::subheading>
@@ -40,7 +40,7 @@ title('System Logs — Admin Console | Aura Wire');
             <x-aura::table.body>
                 <x-aura::table.row>
                     <x-aura::table.cell class="text-xs font-mono text-zinc-500">19:32:05</x-aura::table.cell>
-                    <x-aura::table.cell><x-aura::badge variant="positive">INFO</x-aura::badge></x-aura::table.cell>
+                    <x-aura::table.cell><x-aura::badge variant="neutral">INFO</x-aura::badge></x-aura::table.cell>
                     <x-aura::table.cell class="text-xs">local</x-aura::table.cell>
                     <x-aura::table.cell class="font-mono text-xs text-zinc-800 dark:text-zinc-200">Compiled views cleared successfully via ddev artisan view:clear.</x-aura::table.cell>
                     <x-aura::table.cell class="text-right">
@@ -60,7 +60,7 @@ title('System Logs — Admin Console | Aura Wire');
 
                 <x-aura::table.row>
                     <x-aura::table.cell class="text-xs font-mono text-zinc-500">19:22:10</x-aura::table.cell>
-                    <x-aura::table.cell><x-aura::badge variant="warning">WARNING</x-aura::badge></x-aura::table.cell>
+                    <x-aura::table.cell><x-aura::badge variant="subtle">WARNING</x-aura::badge></x-aura::table.cell>
                     <x-aura::table.cell class="text-xs">local</x-aura::table.cell>
                     <x-aura::table.cell class="font-mono text-xs text-zinc-800 dark:text-zinc-200">View cache empty for route [components.installation]. Recompiled template.</x-aura::table.cell>
                     <x-aura::table.cell class="text-right">
