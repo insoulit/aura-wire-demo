@@ -18,9 +18,9 @@ title('Admin Console — Aura Wire');
         <div class="flex items-center gap-3">
             <x-aura::button variant="outline" size="sm">Download Logs</x-aura::button>
             <x-aura::button variant="danger" size="sm">
-                <x-slot:icon>
+                <x-slot name="icon">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                </x-slot:icon>
+                </x-slot>
                 Clear Cache
             </x-aura::button>
         </div>

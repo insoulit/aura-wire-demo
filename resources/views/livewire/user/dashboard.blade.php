@@ -18,9 +18,9 @@ title('User Dashboard — Aura Wire');
         <div class="flex items-center gap-3">
             <x-aura::button variant="secondary" size="sm">Export Data</x-aura::button>
             <x-aura::button variant="primary" size="sm">
-                <x-slot:icon>
+                <x-slot name="icon">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-                </x-slot:icon>
+                </x-slot>
                 New Project
             </x-aura::button>
         </div>

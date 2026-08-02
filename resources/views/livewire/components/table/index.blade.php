@@ -16,11 +16,11 @@ title('Table Component — Aura Wire');
         <x-slot:preview>
             <div class="w-full">
                 <x-aura::table>
-                    <x-slot:header>
+                    <x-slot name="header">
                         <x-aura::table.column>Name</x-aura::table.column>
                         <x-aura::table.column>Role</x-aura::table.column>
                         <x-aura::table.column>Status</x-aura::table.column>
-                    </x-slot:header>
+                    </x-slot>
                     <x-aura::table.row>
                         <x-aura::table.cell class="font-medium">Alex Rivers</x-aura::table.cell>
                         <x-aura::table.cell>Administrator</x-aura::table.cell>
@@ -35,10 +35,10 @@ title('Table Component — Aura Wire');
             </div>
         </x-slot:preview>
         <x-slot:codeSlot>&lt;x-aura::table&gt;
-    &lt;x-slot:header&gt;
+    &amp;lt;x-slot name="header"&amp;gt;
         &lt;x-aura::table.column&gt;Name&lt;/x-aura::table.column&gt;
         &lt;x-aura::table.column&gt;Role&lt;/x-aura::table.column&gt;
-    &lt;/x-slot:header&gt;
+    &amp;lt;/x-slot&amp;gt;
     &lt;x-aura::table.row&gt;
         &lt;x-aura::table.cell&gt;Alex Rivers&lt;/x-aura::table.cell&gt;
         &lt;x-aura::table.cell&gt;Administrator&lt;/x-aura::table.cell&gt;

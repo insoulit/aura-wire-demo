@@ -17,17 +17,17 @@ title('Card Component — Aura Wire');
             <div class="w-full max-w-lg">
                 <x-aura::card title="Project Statistics" description="Monthly traffic overview">
                     <x-aura::text size="sm">Total Visitors: 45,210</x-aura::text>
-                    <x-slot:footer>
+                    <x-slot name="footer">
                         <x-aura::button variant="primary" size="sm">Export Report</x-aura::button>
-                    </x-slot:footer>
+                    </x-slot>
                 </x-aura::card>
             </div>
         </x-slot:preview>
         <x-slot:codeSlot>&lt;x-aura::card title="Project Statistics" description="Monthly traffic overview"&gt;
     &lt;x-aura::text size="sm"&gt;Total Visitors: 45,210&lt;/x-aura::text&gt;
-    &lt;x-slot:footer&gt;
+    &amp;lt;x-slot name="footer"&amp;gt;
         &lt;x-aura::button variant="primary" size="sm"&gt;Export Report&lt;/x-aura::button&gt;
-    &lt;/x-slot:footer&gt;
+    &amp;lt;/x-slot&amp;gt;
 &lt;/x-aura::card&gt;</x-slot:codeSlot>
     </x-aura::code>
 </div>
