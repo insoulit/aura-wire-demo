@@ -70,4 +70,9 @@ Volt::route('/components/table', 'components.table.index')->name('components.tab
 // Portal Layout Routes
 Volt::route('/guest', 'guest.index')->name('guest.index');
 Volt::route('/dashboard', 'user.dashboard')->name('dashboard');
+Volt::route('/user/profile', 'user.profile')->name('user.profile');
+Volt::route('/user/avatar', 'user.avatar')->name('user.avatar');
+Volt::route('/user/email', 'user.email')->name('user.email');
+Volt::route('/user/password', 'user.password')->name('user.password');
+Volt::route('/user/settings', 'user.settings')->name('user.settings');
 Volt::route('/admin', 'admin.dashboard')->name('admin.dashboard');
