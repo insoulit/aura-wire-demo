@@ -1,11 +1,11 @@
 <x-aura::sidebar>
     <x-slot:header>
         <a href="{{ route('home') }}" class="flex items-center gap-3 px-2 py-1 group">
-            <div class="h-8 w-8 rounded-lg bg-gradient-to-tr from-red-600 via-rose-500 to-amber-500 flex items-center justify-center font-bold text-white shadow-md shadow-red-500/20 group-hover:scale-105 transition-transform duration-200">
+            <div class="h-8 w-8 rounded-lg bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center font-bold shadow-sm group-hover:scale-105 transition-transform duration-200">
                 A
             </div>
             <div>
-                <x-aura::heading level="1" size="xs" class="group-hover:text-red-600 dark:group-hover:text-red-400 font-extrabold tracking-tight">Aura Wire</x-aura::heading>
+                <x-aura::heading level="1" size="xs" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 font-extrabold tracking-tight">Aura Wire</x-aura::heading>
                 <x-aura::text size="xs" variant="subtle" class="text-[11px]">Admin Console</x-aura::text>
             </div>
         </a>

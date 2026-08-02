@@ -5,7 +5,7 @@
                 A
             </div>
             <div>
-                <x-aura::heading level="1" size="xs" class="group-hover:text-blue-600 dark:group-hover:text-blue-400 font-extrabold tracking-tight">Aura Wire</x-aura::heading>
+                <x-aura::heading level="1" size="xs" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 font-extrabold tracking-tight">Aura Wire</x-aura::heading>
                 <x-aura::text size="xs" variant="subtle" class="text-[11px] font-medium">User Workspace</x-aura::text>
             </div>
         </a>

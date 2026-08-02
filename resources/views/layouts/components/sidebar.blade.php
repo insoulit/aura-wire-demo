@@ -1,24 +1,24 @@
-<aside class="w-60 shrink-0 hidden lg:block border-r border-zinc-200 dark:border-zinc-800/80 pr-6 space-y-4 text-sm sticky top-20 self-start max-h-[calc(100vh-6rem)] overflow-y-auto scrollbar-thin">
+<aside class="w-60 shrink-0 hidden lg:block border-r border-zinc-200 dark:border-zinc-800/80 pr-6 space-y-4 text-sm sticky top-20 min-h-full overflow-y-auto scrollbar-thin">
     <!-- Start -->
     <div class="space-y-1">
         <x-aura::kicker class="px-1 text-xs font-semibold uppercase tracking-wider text-zinc-400">Start</x-aura::kicker>
         <ul class="space-y-1 font-medium">
             <li>
-                <a href="/components" class="flex items-center gap-2 px-3 py-1.5 rounded-lg {{ request()->is('components') ? 'bg-indigo-500/10 text-blue-600 dark:text-blue-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">
+                <a href="/components" class="flex items-center gap-2 px-3 py-1.5 rounded-lg {{ request()->is('components') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
                     Overview
                 </a>
             </li>
             <li>
-                <a href="/components/installation" class="flex items-center gap-2 px-3 py-1.5 rounded-lg {{ request()->is('components/installation') ? 'bg-indigo-500/10 text-blue-600 dark:text-blue-400 font-semibold border border-indigo-500/20' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">
+                <a href="/components/installation" class="flex items-center gap-2 px-3 py-1.5 rounded-lg {{ request()->is('components/installation') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
                     Installation
                 </a>
             </li>
             <li>
-                <a href="https://packagist.org/packages/insoulit/aura-wire" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-zinc-600 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-zinc-100 dark:hover:bg-zinc-800/50 transition-colors">
+                <a href="https://packagist.org/packages/insoulit/aura-wire" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50 transition-colors">
                     <span class="flex items-center gap-2">
-                        <svg class="w-4 h-4 text-indigo-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        <svg class="w-4 h-4 text-zinc-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
                         Packagist
                     </span>
                     <svg class="w-3 h-3 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
@@ -35,7 +35,7 @@
         <button
             type="button"
             x-on:click="open = !open"
-            class="flex items-center justify-between w-full px-1 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer select-none group {{ $isTypographyActive ? 'text-blue-600 dark:text-blue-400' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white' }}"
+            class="flex items-center justify-between w-full px-1 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer select-none group {{ $isTypographyActive ? 'text-zinc-900 dark:text-white font-bold' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white' }}"
         >
             <span class="flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
@@ -67,7 +67,7 @@
         <button
             type="button"
             x-on:click="open = !open"
-            class="flex items-center justify-between w-full px-1 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer select-none group {{ $isLayoutActive ? 'text-blue-600 dark:text-blue-400' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white' }}"
+            class="flex items-center justify-between w-full px-1 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer select-none group {{ $isLayoutActive ? 'text-zinc-900 dark:text-white font-bold' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white' }}"
         >
             <span class="flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h3a1 1 0 011 1v6a1 1 0 01-1 1h-3a1 1 0 01-1-1v-6z"/></svg>
@@ -100,7 +100,7 @@
         <button
             type="button"
             x-on:click="open = !open"
-            class="flex items-center justify-between w-full px-1 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer select-none group {{ $isActionsActive ? 'text-blue-600 dark:text-blue-400' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white' }}"
+            class="flex items-center justify-between w-full px-1 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer select-none group {{ $isActionsActive ? 'text-zinc-900 dark:text-white font-bold' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white' }}"
         >
             <span class="flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/></svg>
@@ -123,7 +123,7 @@
         </ul>
     </div>
 
-    <!-- Form Dropdown -->
+    <!-- Form Controls Dropdown -->
     @php
         $isFormActive = request()->is('components/input', 'components/textarea', 'components/select', 'components/checkbox', 'components/radio', 'components/switch', 'components/field', 'components/file-upload', 'components/pin-code', 'components/error');
     @endphp
@@ -131,7 +131,7 @@
         <button
             type="button"
             x-on:click="open = !open"
-            class="flex items-center justify-between w-full px-1 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer select-none group {{ $isFormActive ? 'text-blue-600 dark:text-blue-400' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white' }}"
+            class="flex items-center justify-between w-full px-1 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer select-none group {{ $isFormActive ? 'text-zinc-900 dark:text-white font-bold' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white' }}"
         >
             <span class="flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
@@ -169,7 +169,7 @@
         <button
             type="button"
             x-on:click="open = !open"
-            class="flex items-center justify-between w-full px-1 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer select-none group {{ $isDisplayActive ? 'text-blue-600 dark:text-blue-400' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white' }}"
+            class="flex items-center justify-between w-full px-1 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer select-none group {{ $isDisplayActive ? 'text-zinc-900 dark:text-white font-bold' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white' }}"
         >
             <span class="flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
@@ -209,7 +209,7 @@
         <button
             type="button"
             x-on:click="open = !open"
-            class="flex items-center justify-between w-full px-1 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer select-none group {{ $isNavActive ? 'text-blue-600 dark:text-blue-400' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white' }}"
+            class="flex items-center justify-between w-full px-1 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer select-none group {{ $isNavActive ? 'text-zinc-900 dark:text-white font-bold' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white' }}"
         >
             <span class="flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
@@ -239,7 +239,7 @@
         <button
             type="button"
             x-on:click="open = !open"
-            class="flex items-center justify-between w-full px-1 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer select-none group {{ $isOverlayActive ? 'text-blue-600 dark:text-blue-400' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white' }}"
+            class="flex items-center justify-between w-full px-1 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer select-none group {{ $isOverlayActive ? 'text-zinc-900 dark:text-white font-bold' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white' }}"
         >
             <span class="flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
@@ -270,7 +270,7 @@
         <button
             type="button"
             x-on:click="open = !open"
-            class="flex items-center justify-between w-full px-1 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer select-none group {{ $isFeedbackActive ? 'text-blue-600 dark:text-blue-400' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white' }}"
+            class="flex items-center justify-between w-full px-1 py-1.5 text-xs font-semibold uppercase tracking-wider transition-colors cursor-pointer select-none group {{ $isFeedbackActive ? 'text-zinc-900 dark:text-white font-bold' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-white' }}"
         >
             <span class="flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>

@@ -3,22 +3,18 @@
 use function Livewire\Volt\{layout, title};
 
 layout('layouts.components');
-title('Text Component — Aura Wire');
+title('Text — Aura Wire');
 
 ?>
 
-<div class="w-full space-y-10">
-    <div class="border-b border-zinc-200 dark:border-zinc-800 pb-6">
-        <x-aura::heading level="1" size="xl">Text Component</x-aura::heading>
-        <x-aura::text variant="subtle" size="sm" class="mt-1">
-            <x-aura::code>&lt;x-aura::text&gt;</x-aura::code>
-        </x-aura::text>
+<div class="w-full max-w-3xl mx-auto space-y-6 flex flex-col items-center justify-center">
+    <div class="space-y-2 text-center flex flex-col items-center">
+        <x-aura::heading level="1" size="md">Text</x-aura::heading>
+        <code class="inline-flex items-center px-3.5 py-1.5 mt-3 rounded-xl text-base sm:text-lg font-mono font-bold bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 shadow-sm">&lt;x-aura::text&gt;</code>
     </div>
 
     <!-- Sizes & Variants -->
-    <section class="space-y-4">
-        <x-aura::heading level="2" size="lg">Sizes &amp; Variants</x-aura::heading>
-        <x-aura::code title="Text Options">
+    <x-aura::code class="w-full" title="Text Options">
             <x-slot:preview>
                 <div class="space-y-3 w-full">
                     <x-aura::text size="lg" variant="default">Default Large Text</x-aura::text>
@@ -34,5 +30,5 @@ title('Text Component — Aura Wire');
 &lt;x-aura::text size="sm" variant="accent"&gt;Accent Colored Text&lt;/x-aura::text&gt;
 &lt;x-aura::text size="xs" variant="mono"&gt;Monospace Code String&lt;/x-aura::text&gt;</x-slot:codeSlot>
         </x-aura::code>
-    </section>
+    
 </div>

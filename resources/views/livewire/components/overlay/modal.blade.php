@@ -3,7 +3,7 @@
 use function Livewire\Volt\{layout, title, state};
 
 layout('layouts.components');
-title('Modal Component — Aura Wire');
+title('Modal — Aura Wire');
 
 state([
     'showModal' => false,
@@ -11,12 +11,12 @@ state([
 
 ?>
 
-<div class="w-full space-y-10">
-    <div class="border-b border-zinc-200 dark:border-zinc-800 pb-6">
-        <x-aura::heading level="1" size="xl">Modal Component</x-aura::heading>
-        <x-aura::text variant="subtle" size="sm" class="mt-1"><x-aura::code>&lt;x-aura::modal&gt;</x-aura::code></x-aura::text>
+<div class="w-full max-w-3xl mx-auto space-y-6 flex flex-col items-center justify-center">
+    <div class="space-y-2 text-center flex flex-col items-center">
+        <x-aura::heading level="1" size="md">Modal</x-aura::heading>
+        <code class="inline-flex items-center px-3.5 py-1.5 mt-3 rounded-xl text-base sm:text-lg font-mono font-bold bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 shadow-sm">&lt;x-aura::modal&gt;</code>
     </div>
-    <x-aura::code title="Interactive Modal Dialog">
+    <x-aura::code class="w-full" title="Interactive Modal Dialog">
         <x-slot:preview>
             <x-aura::button variant="primary" wire:click="$set('showModal', true)">Open Modal</x-aura::button>
             <x-aura::modal wire:model="showModal" title="Confirmation" description="Modal dialog content">

@@ -3,20 +3,20 @@
 use function Livewire\Volt\{layout, title};
 
 layout('layouts.components');
-title('PIN Code Component — Aura Wire');
+title('PIN Code — Aura Wire');
 
 ?>
 
-<div class="w-full space-y-10">
-    <div class="border-b border-zinc-200 dark:border-zinc-800 pb-6">
-        <x-aura::heading level="1" size="xl">PIN Code Input Component</x-aura::heading>
-        <x-aura::text variant="subtle" size="sm" class="mt-1"><x-aura::code>&lt;x-aura::pin-code&gt;</x-aura::code></x-aura::text>
+<div class="w-full max-w-3xl mx-auto space-y-6 flex flex-col items-center justify-center">
+    <div class="space-y-2 text-center flex flex-col items-center">
+        <x-aura::heading level="1" size="md">PIN Code Input</x-aura::heading>
+        <code class="inline-flex items-center px-3.5 py-1.5 mt-3 rounded-xl text-base sm:text-lg font-mono font-bold bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 shadow-sm">&lt;x-aura::pin-code&gt;</code>
     </div>
 
     {{-- Default PIN Code (4 digits) --}}
-    <x-aura::code title="Default 4-Digit Verification Code">
+    <x-aura::code class="w-full" title="Default 4-Digit Verification Code">
         <x-slot:preview>
-            <div class="space-y-4">
+            <div class="space-y-3">
                 <x-aura::label>Enter Security Code</x-aura::label>
                 <x-aura::pin-code length="4" size="md" />
             </div>
@@ -26,7 +26,7 @@ title('PIN Code Component — Aura Wire');
     </x-aura::code>
 
     {{-- 6-Digit PIN Code & Sizes --}}
-    <x-aura::code title="6-Digit Code & Size Variations">
+    <x-aura::code class="w-full" title="6-Digit Code & Size Variations">
         <x-slot:preview>
             <div class="space-y-6">
                 <div>
@@ -48,9 +48,9 @@ title('PIN Code Component — Aura Wire');
     </x-aura::code>
 
     {{-- Invalid State --}}
-    <x-aura::code title="Invalid State">
+    <x-aura::code class="w-full" title="Invalid State">
         <x-slot:preview>
-            <div class="space-y-2">
+            <div class="space-y-2 text-center flex flex-col items-center">
                 <x-aura::pin-code length="4" :invalid="true" />
                 <x-aura::error>The security code you entered is invalid.</x-aura::error>
             </div>
