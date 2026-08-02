@@ -19,22 +19,24 @@ new #[Layout('layouts.user')] #[Title('Change Email Address — User Panel | Aur
 ?>
 
 <div class="space-y-6 w-full max-w-2xl mx-auto py-4">
-    {{-- Header with Back Button --}}
+    {{-- Header Section --}}
     <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-4">
         <div>
             <x-aura::heading level="1" size="lg">Change Email Address</x-aura::heading>
-            <x-aura::text variant="subtle" size="xs">Update your primary login and notification email address.</x-aura::text>
+            <x-aura::subheading class="mt-1">
+                Update your primary login and notification email address.
+            </x-aura::subheading>
         </div>
         <x-aura::button variant="outline" size="sm" href="/dashboard">&larr; Back to Dashboard</x-aura::button>
     </div>
 
     @if($sent)
         <x-aura::banner variant="warning" dismissible="true">
-            Verification link sent to <strong>{{ $newEmail ?: 'new email' }}</strong>. Please check your inbox.
+            Verification email code sent to <strong>{{ $newEmail ?: 'new email' }}</strong>. Please check your inbox.
         </x-aura::banner>
     @endif
 
-    {{-- Email Change Card --}}
+    {{-- Form Card --}}
     <x-aura::card>
         <form wire:submit="updateEmail" class="space-y-6">
             <x-aura::field label="Current Email Address">
@@ -50,7 +52,7 @@ new #[Layout('layouts.user')] #[Title('Change Email Address — User Panel | Aur
             </x-aura::field>
 
             <div class="pt-4 border-t border-zinc-100 dark:border-zinc-800 flex justify-end">
-                <x-aura::button variant="primary" type="submit">Update Email &amp; Send Verification</x-aura::button>
+                <x-aura::button variant="primary" type="submit">Update Email &amp; Send Code</x-aura::button>
             </div>
         </form>
     </x-aura::card>

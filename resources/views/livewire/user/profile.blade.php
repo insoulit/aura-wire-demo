@@ -19,11 +19,13 @@ new #[Layout('layouts.user')] #[Title('Profile Details — User Panel | Aura Wir
 ?>
 
 <div class="space-y-6 w-full max-w-2xl mx-auto py-4">
-    {{-- Header with Back Button --}}
+    {{-- Header Section --}}
     <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-4">
         <div>
-            <x-aura::heading level="1" size="lg">Profile Details</x-aura::heading>
-            <x-aura::text variant="subtle" size="xs">Update your global account display name, bio, and mobile number.</x-aura::text>
+            <x-aura::heading level="1" size="lg">Profile Info</x-aura::heading>
+            <x-aura::subheading class="mt-1">
+                Update your global account display name, bio, and mobile contact number.
+            </x-aura::subheading>
         </div>
         <x-aura::button variant="outline" size="sm" href="/dashboard">&larr; Back to Dashboard</x-aura::button>
     </div>
@@ -34,15 +36,27 @@ new #[Layout('layouts.user')] #[Title('Profile Details — User Panel | Aura Wir
         </x-aura::banner>
     @endif
 
-    {{-- Profile Form Card --}}
+    {{-- Form Card --}}
     <x-aura::card>
+        <div class="flex items-center gap-4 pb-6 mb-6 border-b border-zinc-100 dark:border-zinc-800">
+            <x-aura::avatar initials="AK" size="lg" status="online" />
+            <div>
+                <x-aura::heading level="2" size="md" class="uppercase tracking-tight">
+                    ALEX KOVACS
+                </x-aura::heading>
+                <x-aura::text variant="subtle" size="xs" weight="medium">
+                    alex.kovacs@example.com
+                </x-aura::text>
+            </div>
+        </div>
+
         <form wire:submit="save" class="space-y-6">
             <x-aura::field label="Display Name" hint="Your full name visible across workspace modules." required>
                 <x-aura::input wire:model="name" placeholder="Enter display name" required />
             </x-aura::field>
 
             <x-aura::field label="Short Bio" hint="Brief overview of your role or organization.">
-                <textarea wire:model="bio" rows="3" class="w-full rounded-xl border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white px-3.5 py-2.5 text-sm focus:ring-2 focus:ring-indigo-500/20 focus:border-indigo-500 transition-all"></textarea>
+                <x-aura::textarea wire:model="bio" rows="3" placeholder="Tell us about yourself..." />
             </x-aura::field>
 
             <x-aura::field label="Mobile Phone" hint="Optional mobile contact number for SMS alerts.">
@@ -50,7 +64,7 @@ new #[Layout('layouts.user')] #[Title('Profile Details — User Panel | Aura Wir
             </x-aura::field>
 
             <div class="pt-4 border-t border-zinc-100 dark:border-zinc-800 flex justify-end">
-                <x-aura::button variant="primary" type="submit">Save Profile</x-aura::button>
+                <x-aura::button variant="primary" type="submit">Save Profile Changes</x-aura::button>
             </div>
         </form>
     </x-aura::card>
