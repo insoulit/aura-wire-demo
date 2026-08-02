@@ -12,7 +12,7 @@ title('Admin Settings — Admin Console | Aura Wire');
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-5">
         <div>
             <div class="flex items-center gap-2 mb-1">
-                <x-aura::kicker class="text-indigo-600 dark:text-indigo-400">⚡ ADMIN MODULE</x-aura::kicker>
+                <x-aura::kicker class="text-zinc-500">⚡ ADMIN MODULE</x-aura::kicker>
                 <x-aura::badge variant="accent" size="sm">config/aura-wire.php</x-aura::badge>
             </div>
             <x-aura::heading level="1" size="lg">Admin &amp; System Settings</x-aura::heading>

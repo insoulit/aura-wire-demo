@@ -12,7 +12,7 @@ title('User Management — Admin Console | Aura Wire');
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-5">
         <div>
             <div class="flex items-center gap-2 mb-1">
-                <x-aura::kicker class="text-indigo-600 dark:text-indigo-400">⚡ ADMIN MODULE</x-aura::kicker>
+                <x-aura::kicker class="text-zinc-500">⚡ ADMIN MODULE</x-aura::kicker>
                 <x-aura::badge variant="info" size="sm">4 Accounts</x-aura::badge>
             </div>
             <x-aura::heading level="1" size="lg">User Management</x-aura::heading>
@@ -74,7 +74,7 @@ title('User Management — Admin Console | Aura Wire');
                     <x-aura::table.cell class="text-xs text-zinc-500">2026-08-01</x-aura::table.cell>
                     <x-aura::table.cell class="text-right">
                         <div class="flex items-center justify-end gap-2">
-                            <x-aura::button variant="subtle" size="sm" square title="View User Details" class="text-zinc-400 hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-950/40 dark:hover:text-indigo-400">
+                            <x-aura::button variant="subtle" size="sm" square title="View User Details" class="text-zinc-400 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-blue-950/40 dark:hover:text-blue-400">
                                 <x-aura::icon.show />
                             </x-aura::button>
                             <x-aura::button variant="subtle" size="sm" square title="Edit User" class="text-zinc-400 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-blue-950/40 dark:hover:text-blue-400">
@@ -102,7 +102,7 @@ title('User Management — Admin Console | Aura Wire');
                     <x-aura::table.cell class="text-xs text-zinc-500">2026-07-28</x-aura::table.cell>
                     <x-aura::table.cell class="text-right">
                         <div class="flex items-center justify-end gap-2">
-                            <x-aura::button variant="subtle" size="sm" square title="View User Details" class="text-zinc-400 hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-950/40 dark:hover:text-indigo-400">
+                            <x-aura::button variant="subtle" size="sm" square title="View User Details" class="text-zinc-400 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-blue-950/40 dark:hover:text-blue-400">
                                 <x-aura::icon.show />
                             </x-aura::button>
                             <x-aura::button variant="subtle" size="sm" square title="Edit User" class="text-zinc-400 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-blue-950/40 dark:hover:text-blue-400">
@@ -130,7 +130,7 @@ title('User Management — Admin Console | Aura Wire');
                     <x-aura::table.cell class="text-xs text-zinc-500">2026-07-15</x-aura::table.cell>
                     <x-aura::table.cell class="text-right">
                         <div class="flex items-center justify-end gap-2">
-                            <x-aura::button variant="subtle" size="sm" square title="View User Details" class="text-zinc-400 hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-950/40 dark:hover:text-indigo-400">
+                            <x-aura::button variant="subtle" size="sm" square title="View User Details" class="text-zinc-400 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-blue-950/40 dark:hover:text-blue-400">
                                 <x-aura::icon.show />
                             </x-aura::button>
                             <x-aura::button variant="subtle" size="sm" square title="Edit User" class="text-zinc-400 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-blue-950/40 dark:hover:text-blue-400">
@@ -158,7 +158,7 @@ title('User Management — Admin Console | Aura Wire');
                     <x-aura::table.cell class="text-xs text-zinc-500">2026-06-10</x-aura::table.cell>
                     <x-aura::table.cell class="text-right">
                         <div class="flex items-center justify-end gap-2">
-                            <x-aura::button variant="subtle" size="sm" square title="View User Details" class="text-zinc-400 hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-950/40 dark:hover:text-indigo-400">
+                            <x-aura::button variant="subtle" size="sm" square title="View User Details" class="text-zinc-400 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-blue-950/40 dark:hover:text-blue-400">
                                 <x-aura::icon.show />
                             </x-aura::button>
                             <x-aura::button variant="subtle" size="sm" square title="Edit User" class="text-zinc-400 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-blue-950/40 dark:hover:text-blue-400">

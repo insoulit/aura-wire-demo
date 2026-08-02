@@ -15,13 +15,12 @@ new #[Layout('layouts.user')] #[Title('User Dashboard — User Panel | Aura Wire
     {{-- Hero Banner Card built with Package Components --}}
     <x-aura::card class="relative overflow-hidden bg-gradient-to-br from-zinc-100 via-white to-zinc-50 dark:from-zinc-900 dark:via-zinc-900 dark:to-zinc-950 border-zinc-200/80 dark:border-zinc-800/80 shadow-md">
         {{-- Decorative Blurs --}}
-        <div class="absolute -top-32 -left-32 w-96 h-96 bg-indigo-500/10 dark:bg-indigo-950/30 rounded-full blur-3xl pointer-events-none"></div>
-        <div class="absolute bottom-0 right-0 w-80 h-80 bg-purple-500/10 dark:bg-purple-950/30 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -top-32 -left-32 w-96 h-96 bg-zinc-500/10 dark:bg-zinc-800/20 rounded-full blur-3xl pointer-events-none"></div>
 
         <div class="relative z-10 p-4 sm:p-6 space-y-4">
             <div class="flex items-center gap-2">
                 <x-aura::badge variant="positive">👋 Welcome Back</x-aura::badge>
-                <x-aura::badge variant="info">User Account</x-aura::badge>
+                <x-aura::badge variant="subtle">User Account</x-aura::badge>
             </div>
 
             <div>
@@ -42,12 +41,12 @@ new #[Layout('layouts.user')] #[Title('User Dashboard — User Panel | Aura Wire
         <div class="flex flex-col gap-4">
             {{-- 1. Profile Info --}}
             <a href="/user/profile" class="block group" wire:navigate>
-                <x-aura::card class="hover:border-indigo-500/60 dark:hover:border-indigo-500/60 hover:shadow-lg transition-all duration-300">
+                <x-aura::card class="hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all duration-300 shadow-xs">
                     <div class="flex items-center gap-5">
                         <x-aura::avatar initials="PI" size="md" status="online" />
                         <div class="flex-1 min-w-0">
                             <div class="flex items-center gap-2 mb-1">
-                                <x-aura::heading level="3" size="sm" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                <x-aura::heading level="3" size="sm" class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                     Profile Info
                                 </x-aura::heading>
                                 <x-aura::badge variant="neutral" class="text-[10px]">Account</x-aura::badge>
@@ -65,12 +64,12 @@ new #[Layout('layouts.user')] #[Title('User Dashboard — User Panel | Aura Wire
 
             {{-- 2. Profile Picture --}}
             <a href="/user/avatar" class="block group" wire:navigate>
-                <x-aura::card class="hover:border-indigo-500/60 dark:hover:border-indigo-500/60 hover:shadow-lg transition-all duration-300">
+                <x-aura::card class="hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all duration-300 shadow-xs">
                     <div class="flex items-center gap-5">
                         <x-aura::avatar initials="AK" size="md" status="online" />
                         <div class="flex-1 min-w-0">
                             <div class="flex items-center gap-2 mb-1">
-                                <x-aura::heading level="3" size="sm" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                <x-aura::heading level="3" size="sm" class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                     Change Profile Picture
                                 </x-aura::heading>
                                 <x-aura::badge variant="neutral" class="text-[10px]">Media</x-aura::badge>
@@ -88,12 +87,12 @@ new #[Layout('layouts.user')] #[Title('User Dashboard — User Panel | Aura Wire
 
             {{-- 3. Change Email --}}
             <a href="/user/email" class="block group" wire:navigate>
-                <x-aura::card class="hover:border-indigo-500/60 dark:hover:border-indigo-500/60 hover:shadow-lg transition-all duration-300">
+                <x-aura::card class="hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all duration-300 shadow-xs">
                     <div class="flex items-center gap-5">
                         <x-aura::avatar initials="EM" size="md" status="away" />
                         <div class="flex-1 min-w-0">
                             <div class="flex items-center gap-2 mb-1">
-                                <x-aura::heading level="3" size="sm" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                <x-aura::heading level="3" size="sm" class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                     Change Email Address
                                 </x-aura::heading>
                                 <x-aura::badge variant="warning" class="text-[10px]">Verification</x-aura::badge>
@@ -111,12 +110,12 @@ new #[Layout('layouts.user')] #[Title('User Dashboard — User Panel | Aura Wire
 
             {{-- 4. Change Password & Security --}}
             <a href="/user/password" class="block group" wire:navigate>
-                <x-aura::card class="hover:border-indigo-500/60 dark:hover:border-indigo-500/60 hover:shadow-lg transition-all duration-300">
+                <x-aura::card class="hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all duration-300 shadow-xs">
                     <div class="flex items-center gap-5">
                         <x-aura::avatar initials="PS" size="md" status="busy" />
                         <div class="flex-1 min-w-0">
                             <div class="flex items-center gap-2 mb-1">
-                                <x-aura::heading level="3" size="sm" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                <x-aura::heading level="3" size="sm" class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                     Change Password &amp; Security PIN
                                 </x-aura::heading>
                                 <x-aura::badge variant="positive" class="text-[10px]">Security</x-aura::badge>
@@ -141,15 +140,15 @@ new #[Layout('layouts.user')] #[Title('User Dashboard — User Panel | Aura Wire
         <div class="flex flex-col gap-4">
             {{-- Component Directory --}}
             <a href="/components" class="block group" wire:navigate>
-                <x-aura::card class="hover:border-indigo-500/60 dark:hover:border-indigo-500/60 hover:shadow-lg transition-all duration-300">
+                <x-aura::card class="hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all duration-300 shadow-xs">
                     <div class="flex items-center gap-5">
                         <x-aura::avatar initials="UI" size="md" />
                         <div class="flex-1 min-w-0">
                             <div class="flex items-center gap-2 mb-1">
-                                <x-aura::heading level="3" size="sm" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                <x-aura::heading level="3" size="sm" class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                     Component Directory
                                 </x-aura::heading>
-                                <x-aura::badge variant="accent" class="text-[10px]">47 Ready</x-aura::badge>
+                                <x-aura::badge variant="subtle" class="text-[10px]">47 Ready</x-aura::badge>
                             </div>
                             <x-aura::text variant="subtle" size="sm">
                                 Explore and test all 47 interactive Blade &amp; Livewire UI components.
@@ -164,12 +163,12 @@ new #[Layout('layouts.user')] #[Title('User Dashboard — User Panel | Aura Wire
 
             {{-- Guest Marketing Portal --}}
             <a href="/guest" class="block group" wire:navigate>
-                <x-aura::card class="hover:border-indigo-500/60 dark:hover:border-indigo-500/60 hover:shadow-lg transition-all duration-300">
+                <x-aura::card class="hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all duration-300 shadow-xs">
                     <div class="flex items-center gap-5">
                         <x-aura::avatar initials="GP" size="md" />
                         <div class="flex-1 min-w-0">
                             <div class="flex items-center gap-2 mb-1">
-                                <x-aura::heading level="3" size="sm" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                <x-aura::heading level="3" size="sm" class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                     Guest Marketing Portal
                                 </x-aura::heading>
                                 <x-aura::badge variant="neutral" class="text-[10px]">Public</x-aura::badge>
@@ -187,12 +186,12 @@ new #[Layout('layouts.user')] #[Title('User Dashboard — User Panel | Aura Wire
 
             {{-- Admin Control Console --}}
             <a href="/admin" class="block group" wire:navigate>
-                <x-aura::card class="hover:border-indigo-500/60 dark:hover:border-indigo-500/60 hover:shadow-lg transition-all duration-300">
+                <x-aura::card class="hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all duration-300 shadow-xs">
                     <div class="flex items-center gap-5">
                         <x-aura::avatar initials="AD" size="md" />
                         <div class="flex-1 min-w-0">
                             <div class="flex items-center gap-2 mb-1">
-                                <x-aura::heading level="3" size="sm" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                                <x-aura::heading level="3" size="sm" class="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                     Admin Control Console
                                 </x-aura::heading>
                                 <x-aura::badge variant="positive" class="text-[10px]">Admin</x-aura::badge>

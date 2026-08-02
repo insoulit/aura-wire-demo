@@ -33,21 +33,21 @@
                 <a href="{{ $section['url'] }}" 
                    class="group flex items-center gap-5 bg-white dark:bg-zinc-900 rounded-3xl p-5 sm:p-6 border transition-all duration-300 relative overflow-hidden
                           {{ $section['active'] 
-                              ? 'border-indigo-500/60 shadow-lg ring-2 ring-indigo-500/20 bg-indigo-500/5 dark:bg-indigo-950/20' 
+                              ? 'border-zinc-900 dark:border-white shadow-lg ring-2 ring-zinc-900/10 dark:ring-white/10 bg-zinc-100/50 dark:bg-zinc-800/50' 
                               : 'border-zinc-200/80 dark:border-zinc-800/80 hover:border-zinc-300 dark:hover:border-zinc-700 shadow-sm hover:shadow-md' }}">
                     
                     <div class="relative z-10 w-14 h-14 shrink-0 rounded-full flex items-center justify-center transition-all duration-300
-                                {{ $section['active'] ? 'bg-indigo-600 text-white shadow-md shadow-indigo-500/30' : 'bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 group-hover:scale-105' }}">
+                                {{ $section['active'] ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 shadow-md' : 'bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 group-hover:scale-105' }}">
                         {!! $section['icon'] !!}
                     </div>
 
                     <div class="relative z-10 flex-1 min-w-0">
                         <div class="flex items-center gap-2 mb-1">
-                            <h3 class="text-base sm:text-lg font-black text-zinc-900 dark:text-white tracking-tight group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                            <h3 class="text-base sm:text-lg font-black text-zinc-900 dark:text-white tracking-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                 {{ $section['title'] }}
                             </h3>
                             @if($section['active'])
-                                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigo-500/20 text-indigo-600 dark:text-indigo-300">Active</span>
+                                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-600/10 text-blue-600 dark:text-blue-400">Active</span>
                             @endif
                         </div>
                         <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 font-medium leading-relaxed">
@@ -56,7 +56,7 @@
                     </div>
 
                     <div class="relative z-10 shrink-0 hidden sm:block">
-                        <svg class="w-6 h-6 text-zinc-400 dark:text-zinc-600 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <svg class="w-6 h-6 text-zinc-400 dark:text-zinc-600 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
                     </div>
@@ -77,21 +77,21 @@
                 <a href="{{ $section['url'] }}" 
                    class="group flex items-center gap-5 bg-white dark:bg-zinc-900 rounded-3xl p-5 sm:p-6 border transition-all duration-300 relative overflow-hidden
                           {{ $section['active'] 
-                              ? 'border-indigo-500/60 shadow-lg ring-2 ring-indigo-500/20 bg-indigo-500/5 dark:bg-indigo-950/20' 
+                              ? 'border-zinc-900 dark:border-white shadow-lg ring-2 ring-zinc-900/10 dark:ring-white/10 bg-zinc-100/50 dark:bg-zinc-800/50' 
                               : 'border-zinc-200/80 dark:border-zinc-800/80 hover:border-zinc-300 dark:hover:border-zinc-700 shadow-sm hover:shadow-md' }}">
                     
                     <div class="relative z-10 w-14 h-14 shrink-0 rounded-full flex items-center justify-center transition-all duration-300
-                                {{ $section['active'] ? 'bg-indigo-600 text-white shadow-md shadow-indigo-500/30' : 'bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 group-hover:scale-105' }}">
+                                {{ $section['active'] ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 shadow-md' : 'bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 group-hover:scale-105' }}">
                         {!! $section['icon'] !!}
                     </div>
 
                     <div class="relative z-10 flex-1 min-w-0">
                         <div class="flex items-center gap-2 mb-1">
-                            <h3 class="text-base sm:text-lg font-black text-zinc-900 dark:text-white tracking-tight group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                            <h3 class="text-base sm:text-lg font-black text-zinc-900 dark:text-white tracking-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                 {{ $section['title'] }}
                             </h3>
                             @if($section['active'])
-                                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-indigo-500/20 text-indigo-600 dark:text-indigo-300">Active</span>
+                                <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-600/10 text-blue-600 dark:text-blue-400">Active</span>
                             @endif
                         </div>
                         <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-400 font-medium leading-relaxed">
@@ -100,7 +100,7 @@
                     </div>
 
                     <div class="relative z-10 shrink-0 hidden sm:block">
-                        <svg class="w-6 h-6 text-zinc-400 dark:text-zinc-600 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <svg class="w-6 h-6 text-zinc-400 dark:text-zinc-600 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:translate-x-1 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
                         </svg>
                     </div>
