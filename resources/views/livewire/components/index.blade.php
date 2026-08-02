@@ -342,6 +342,14 @@ title('Component Directory — Aura Wire');
                 </div>
                 <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1">View Component &rarr;</x-aura::text>
             </a>
+
+            <a href="/components/tag" class="p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-indigo-500/50 hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
+                <div>
+                    <x-aura::heading level="3" size="sm" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Tag</x-aura::heading>
+                    <x-aura::text variant="mono" size="xs" class="mt-1">&lt;x-aura::tag&gt;</x-aura::text>
+                </div>
+                <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1">View Component &rarr;</x-aura::text>
+            </a>
         </div>
     </section>
 
@@ -371,22 +379,14 @@ title('Component Directory — Aura Wire');
         </div>
     </section>
 
-    <!-- Category 7: Overlays & Feedback -->
+    <!-- Category 7: Overlays -->
     <section class="space-y-4">
         <div class="flex items-center gap-2 border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
-            <svg class="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
-            <x-aura::heading level="2" size="md">Overlays &amp; Feedback</x-aura::heading>
-            <x-aura::badge variant="neutral" class="ml-auto">6 Components</x-aura::badge>
+            <svg class="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+            <x-aura::heading level="2" size="md">Overlays</x-aura::heading>
+            <x-aura::badge variant="neutral" class="ml-auto">3 Components</x-aura::badge>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <a href="/components/banner" class="p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-indigo-500/50 hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
-                <div>
-                    <x-aura::heading level="3" size="sm" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Banner</x-aura::heading>
-                    <x-aura::text variant="mono" size="xs" class="mt-1">&lt;x-aura::banner&gt;</x-aura::text>
-                </div>
-                <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1">View Component &rarr;</x-aura::text>
-            </a>
-
             <a href="/components/modal" class="p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-indigo-500/50 hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
                 <div>
                     <x-aura::heading level="3" size="sm" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Modal</x-aura::heading>
@@ -403,26 +403,36 @@ title('Component Directory — Aura Wire');
                 <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1">View Component &rarr;</x-aura::text>
             </a>
 
-            <a href="/components/spinner" class="p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-indigo-500/50 hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
-                <div>
-                    <x-aura::heading level="3" size="sm" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Spinner</x-aura::heading>
-                    <x-aura::text variant="mono" size="xs" class="mt-1">&lt;x-aura::spinner&gt;</x-aura::text>
-                </div>
-                <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1">View Component &rarr;</x-aura::text>
-            </a>
-
-            <a href="/components/tag" class="p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-indigo-500/50 hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
-                <div>
-                    <x-aura::heading level="3" size="sm" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Tag</x-aura::heading>
-                    <x-aura::text variant="mono" size="xs" class="mt-1">&lt;x-aura::tag&gt;</x-aura::text>
-                </div>
-                <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1">View Component &rarr;</x-aura::text>
-            </a>
-
             <a href="/components/toast" class="p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-indigo-500/50 hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
                 <div>
                     <x-aura::heading level="3" size="sm" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Toast</x-aura::heading>
                     <x-aura::text variant="mono" size="xs" class="mt-1">&lt;x-aura::toast&gt;</x-aura::text>
+                </div>
+                <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1">View Component &rarr;</x-aura::text>
+            </a>
+        </div>
+    </section>
+
+    <!-- Category 8: Feedback -->
+    <section class="space-y-4">
+        <div class="flex items-center gap-2 border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
+            <svg class="w-5 h-5 text-indigo-600 dark:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+            <x-aura::heading level="2" size="md">Feedback</x-aura::heading>
+            <x-aura::badge variant="neutral" class="ml-auto">2 Components</x-aura::badge>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <a href="/components/banner" class="p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-indigo-500/50 hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
+                <div>
+                    <x-aura::heading level="3" size="sm" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Banner</x-aura::heading>
+                    <x-aura::text variant="mono" size="xs" class="mt-1">&lt;x-aura::banner&gt;</x-aura::text>
+                </div>
+                <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1">View Component &rarr;</x-aura::text>
+            </a>
+
+            <a href="/components/spinner" class="p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-indigo-500/50 hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
+                <div>
+                    <x-aura::heading level="3" size="sm" class="group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Spinner</x-aura::heading>
+                    <x-aura::text variant="mono" size="xs" class="mt-1">&lt;x-aura::spinner&gt;</x-aura::text>
                 </div>
                 <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1">View Component &rarr;</x-aura::text>
             </a>
