@@ -46,7 +46,7 @@ title('User Management — Admin Console | Aura Wire');
         </div>
     </x-aura::card>
 
-    <!-- Users Table built with compact square action buttons & package CRUD icons -->
+    <!-- Users Table styled following Episure design system -->
     <x-aura::card title="System Users Registry">
         <x-aura::table>
             <x-aura::table.header>
@@ -69,18 +69,18 @@ title('User Management — Admin Console | Aura Wire');
                             </div>
                         </div>
                     </x-aura::table.cell>
-                    <x-aura::table.cell><x-aura::badge variant="negative">System Admin</x-aura::badge></x-aura::table.cell>
-                    <x-aura::table.cell><x-aura::badge variant="positive">Active</x-aura::badge></x-aura::table.cell>
+                    <x-aura::table.cell><x-aura::badge variant="negative" size="sm">System Admin</x-aura::badge></x-aura::table.cell>
+                    <x-aura::table.cell><x-aura::badge variant="positive" size="sm">Active</x-aura::badge></x-aura::table.cell>
                     <x-aura::table.cell class="text-xs text-zinc-500">2026-08-01</x-aura::table.cell>
                     <x-aura::table.cell class="text-right">
-                        <div class="flex items-center justify-end gap-1">
-                            <x-aura::button variant="ghost" size="xs" square title="View Details">
+                        <div class="flex items-center justify-end gap-2">
+                            <x-aura::button variant="subtle" size="sm" square title="View User Details" class="text-zinc-400 hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-950/40 dark:hover:text-indigo-400">
                                 <x-aura::icon.show />
                             </x-aura::button>
-                            <x-aura::button variant="ghost" size="xs" square title="Edit User">
+                            <x-aura::button variant="subtle" size="sm" square title="Edit User" class="text-zinc-400 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-blue-950/40 dark:hover:text-blue-400">
                                 <x-aura::icon.edit />
                             </x-aura::button>
-                            <x-aura::button variant="ghost" size="xs" square class="text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/40" title="Delete User">
+                            <x-aura::button variant="subtle" size="sm" square title="Delete User" class="text-zinc-400 hover:bg-red-50 hover:text-red-600 dark:hover:bg-red-950/40 dark:hover:text-red-400">
                                 <x-aura::icon.delete />
                             </x-aura::button>
                         </div>
@@ -97,18 +97,18 @@ title('User Management — Admin Console | Aura Wire');
                             </div>
                         </div>
                     </x-aura::table.cell>
-                    <x-aura::table.cell><x-aura::badge variant="info">Developer</x-aura::badge></x-aura::table.cell>
-                    <x-aura::table.cell><x-aura::badge variant="positive">Active</x-aura::badge></x-aura::table.cell>
+                    <x-aura::table.cell><x-aura::badge variant="info" size="sm">Developer</x-aura::badge></x-aura::table.cell>
+                    <x-aura::table.cell><x-aura::badge variant="positive" size="sm">Active</x-aura::badge></x-aura::table.cell>
                     <x-aura::table.cell class="text-xs text-zinc-500">2026-07-28</x-aura::table.cell>
                     <x-aura::table.cell class="text-right">
-                        <div class="flex items-center justify-end gap-1">
-                            <x-aura::button variant="ghost" size="xs" square title="View Details">
+                        <div class="flex items-center justify-end gap-2">
+                            <x-aura::button variant="subtle" size="sm" square title="View User Details" class="text-zinc-400 hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-950/40 dark:hover:text-indigo-400">
                                 <x-aura::icon.show />
                             </x-aura::button>
-                            <x-aura::button variant="ghost" size="xs" square title="Edit User">
+                            <x-aura::button variant="subtle" size="sm" square title="Edit User" class="text-zinc-400 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-blue-950/40 dark:hover:text-blue-400">
                                 <x-aura::icon.edit />
                             </x-aura::button>
-                            <x-aura::button variant="ghost" size="xs" square class="text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/40" title="Delete User">
+                            <x-aura::button variant="subtle" size="sm" square title="Delete User" class="text-zinc-400 hover:bg-red-50 hover:text-red-600 dark:hover:bg-red-950/40 dark:hover:text-red-400">
                                 <x-aura::icon.delete />
                             </x-aura::button>
                         </div>
@@ -125,18 +125,18 @@ title('User Management — Admin Console | Aura Wire');
                             </div>
                         </div>
                     </x-aura::table.cell>
-                    <x-aura::table.cell><x-aura::badge variant="neutral">Member</x-aura::badge></x-aura::table.cell>
-                    <x-aura::table.cell><x-aura::badge variant="warning">Pending</x-aura::badge></x-aura::table.cell>
+                    <x-aura::table.cell><x-aura::badge variant="neutral" size="sm">Member</x-aura::badge></x-aura::table.cell>
+                    <x-aura::table.cell><x-aura::badge variant="warning" size="sm">Pending</x-aura::badge></x-aura::table.cell>
                     <x-aura::table.cell class="text-xs text-zinc-500">2026-07-15</x-aura::table.cell>
                     <x-aura::table.cell class="text-right">
-                        <div class="flex items-center justify-end gap-1">
-                            <x-aura::button variant="ghost" size="xs" square title="View Details">
+                        <div class="flex items-center justify-end gap-2">
+                            <x-aura::button variant="subtle" size="sm" square title="View User Details" class="text-zinc-400 hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-950/40 dark:hover:text-indigo-400">
                                 <x-aura::icon.show />
                             </x-aura::button>
-                            <x-aura::button variant="ghost" size="xs" square title="Edit User">
+                            <x-aura::button variant="subtle" size="sm" square title="Edit User" class="text-zinc-400 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-blue-950/40 dark:hover:text-blue-400">
                                 <x-aura::icon.edit />
                             </x-aura::button>
-                            <x-aura::button variant="ghost" size="xs" square class="text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/40" title="Delete User">
+                            <x-aura::button variant="subtle" size="sm" square title="Delete User" class="text-zinc-400 hover:bg-red-50 hover:text-red-600 dark:hover:bg-red-950/40 dark:hover:text-red-400">
                                 <x-aura::icon.delete />
                             </x-aura::button>
                         </div>
@@ -153,18 +153,18 @@ title('User Management — Admin Console | Aura Wire');
                             </div>
                         </div>
                     </x-aura::table.cell>
-                    <x-aura::table.cell><x-aura::badge variant="neutral">Member</x-aura::badge></x-aura::table.cell>
-                    <x-aura::table.cell><x-aura::badge variant="subtle">Inactive</x-aura::badge></x-aura::table.cell>
+                    <x-aura::table.cell><x-aura::badge variant="neutral" size="sm">Member</x-aura::badge></x-aura::table.cell>
+                    <x-aura::table.cell><x-aura::badge variant="subtle" size="sm">Inactive</x-aura::badge></x-aura::table.cell>
                     <x-aura::table.cell class="text-xs text-zinc-500">2026-06-10</x-aura::table.cell>
                     <x-aura::table.cell class="text-right">
-                        <div class="flex items-center justify-end gap-1">
-                            <x-aura::button variant="ghost" size="xs" square title="View Details">
+                        <div class="flex items-center justify-end gap-2">
+                            <x-aura::button variant="subtle" size="sm" square title="View User Details" class="text-zinc-400 hover:bg-indigo-50 hover:text-indigo-600 dark:hover:bg-indigo-950/40 dark:hover:text-indigo-400">
                                 <x-aura::icon.show />
                             </x-aura::button>
-                            <x-aura::button variant="ghost" size="xs" square title="Edit User">
+                            <x-aura::button variant="subtle" size="sm" square title="Edit User" class="text-zinc-400 hover:bg-blue-50 hover:text-blue-600 dark:hover:bg-blue-950/40 dark:hover:text-blue-400">
                                 <x-aura::icon.edit />
                             </x-aura::button>
-                            <x-aura::button variant="ghost" size="xs" square class="text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/40" title="Delete User">
+                            <x-aura::button variant="subtle" size="sm" square title="Delete User" class="text-zinc-400 hover:bg-red-50 hover:text-red-600 dark:hover:bg-red-950/40 dark:hover:text-red-400">
                                 <x-aura::icon.delete />
                             </x-aura::button>
                         </div>
