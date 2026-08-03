@@ -3,7 +3,7 @@
 use function Livewire\Volt\{layout, title};
 
 layout('layouts.components');
-title('Header — Aura Wire');
+title('Header - Aura Wire');
 
 ?>
 

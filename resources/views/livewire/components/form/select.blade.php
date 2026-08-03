@@ -3,7 +3,7 @@
 use function Livewire\Volt\{layout, title, state};
 
 layout('layouts.components');
-title('Select — Aura Wire');
+title('Select - Aura Wire');
 
 state(['selected' => 'us']);
 

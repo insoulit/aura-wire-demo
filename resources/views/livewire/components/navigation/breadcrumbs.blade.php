@@ -3,7 +3,7 @@
 use function Livewire\Volt\{layout, title, with};
 
 layout('layouts.components');
-title('Breadcrumbs — Aura Wire');
+title('Breadcrumbs - Aura Wire');
 
 with([
     'items' => [

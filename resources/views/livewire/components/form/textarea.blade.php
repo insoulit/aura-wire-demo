@@ -3,7 +3,7 @@
 use function Livewire\Volt\{layout, title, state};
 
 layout('layouts.components');
-title('Textarea — Aura Wire');
+title('Textarea - Aura Wire');
 
 state(['bio' => '']);
 

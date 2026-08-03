@@ -3,7 +3,7 @@
 use function Livewire\Volt\{layout, title, state};
 
 layout('layouts.components');
-title('Checkbox — Aura Wire');
+title('Checkbox - Aura Wire');
 
 state(['remember' => true]);
 

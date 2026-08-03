@@ -52,8 +52,15 @@ Volt::route('/components/code', 'components.display.code')->name('components.cod
 Volt::route('/components/separator', 'components.display.separator')->name('components.separator');
 Volt::route('/components/empty-state', 'components.display.empty-state')->name('components.empty-state');
 Volt::route('/components/numbered-list', 'components.display.numbered-list')->name('components.numbered-list');
-Volt::route('/components/product-card', 'components.display.product-card')->name('components.product-card');
+Volt::route('/components/product-card', 'blocks.product-card')->name('components.product-card');
 Volt::route('/components/progress-bar', 'components.display.progress-bar')->name('components.progress-bar');
+
+// Design Blocks Group
+Volt::route('/blocks/product-card', 'blocks.product-card')->name('blocks.product-card');
+Volt::route('/blocks/pricing', 'blocks.pricing')->name('blocks.pricing');
+Volt::route('/blocks/dashboard', 'blocks.dashboard')->name('blocks.dashboard');
+Volt::route('/blocks/auth', 'blocks.auth')->name('blocks.auth');
+Volt::route('/blocks/profile', 'blocks.profile')->name('blocks.profile');
 
 // Navigation Group
 Volt::route('/components/breadcrumbs', 'components.navigation.breadcrumbs')->name('components.breadcrumbs');

@@ -7,7 +7,7 @@ it('returns a successful 200 response for all component and portal page links', 
         fwrite(STDERR, "\nFAILED URL: {$url}\nError: " . ($response->exception ? $response->exception->getMessage() : 'No exception') . "\n");
     }
 
-    $response->assertStatus(200);
+    $response->assertStatus(200, "Failed URL: {$url} with error: " . ($response->exception ? $response->exception->getMessage() : 'none'));
 })->with([
     'Home Page' => '/',
     'Guest Portal' => '/guest',

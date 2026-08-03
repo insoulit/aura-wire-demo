@@ -3,7 +3,7 @@
 use function Livewire\Volt\{layout, title, state};
 
 layout('layouts.components');
-title('Radio — Aura Wire');
+title('Radio - Aura Wire');
 
 state(['plan' => 'pro']);
 

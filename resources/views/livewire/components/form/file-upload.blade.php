@@ -3,7 +3,7 @@
 use function Livewire\Volt\{layout, title};
 
 layout('layouts.components');
-title('File Upload — Aura Wire');
+title('File Upload - Aura Wire');
 
 ?>
 

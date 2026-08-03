@@ -3,7 +3,7 @@
 use function Livewire\Volt\{layout, title, with};
 
 layout('layouts.components');
-title('Numbered List — Aura Wire');
+title('Numbered List - Aura Wire');
 
 with([
     'steps' => [

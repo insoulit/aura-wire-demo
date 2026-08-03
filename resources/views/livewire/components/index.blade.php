@@ -4,7 +4,7 @@ use function Livewire\Volt\layout;
 use function Livewire\Volt\title;
 
 layout('layouts.components');
-title('Component Directory — Aura Wire');
+title('Component Directory - Aura Wire');
 
 ?>
 
