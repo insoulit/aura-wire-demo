@@ -4,16 +4,16 @@ use Livewire\Volt\Component;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
-new #[Layout('layouts.components')] #[Title('User Profile Block - Design Blocks | Aura Wire')] class extends Component {
+new #[Layout('layouts.guest')] #[Title('User Profile Block — Guest Portal | Aura Wire')] class extends Component {
     //
 };
 
 ?>
 
-<div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
+<div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center py-6">
     <!-- Header -->
     <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Design Blocks</x-aura::kicker>
+        <x-aura::kicker>Guest Portal Design Blocks</x-aura::kicker>
         <x-aura::heading level="1" size="lg">User Profile Block</x-aura::heading>
         <x-aura::subheading class="max-w-lg">
             User account management settings cards, avatar uploader, and profile controls.

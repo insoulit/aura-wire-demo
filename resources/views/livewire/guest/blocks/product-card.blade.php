@@ -4,16 +4,16 @@ use Livewire\Volt\Component;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
-new #[Layout('layouts.components')] #[Title('Product Card Block - Design Blocks | Aura Wire')] class extends Component {
+new #[Layout('layouts.guest')] #[Title('Product Card Block — Guest Portal | Aura Wire')] class extends Component {
     //
 };
 
 ?>
 
-<div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
+<div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center py-6">
     <!-- Header -->
     <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Design Blocks</x-aura::kicker>
+        <x-aura::kicker>Guest Portal Design Blocks</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Product Card Blocks</x-aura::heading>
         <x-aura::subheading class="max-w-lg">
             High-converting e-commerce product cards, digital item showcases, and comparison grid layouts built with Aura Wire components.
@@ -33,7 +33,6 @@ new #[Layout('layouts.components')] #[Title('Product Card Block - Design Blocks 
                         <button type="button" class="absolute top-3 right-3 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-md transition-all">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
                         </button>
-                        <!-- Product Icon / Mock Graphic -->
                         <div class="w-28 h-28 rounded-2xl bg-zinc-800/80 border border-zinc-700/50 flex items-center justify-center text-zinc-300 shadow-2xl group-hover:scale-105 transition-transform duration-300">
                             <svg class="w-14 h-14 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
                         </div>
@@ -43,7 +42,7 @@ new #[Layout('layouts.components')] #[Title('Product Card Block - Design Blocks 
                     <div class="p-6 space-y-4">
                         <div class="space-y-1">
                             <div class="flex items-center justify-between">
-                                <x-aura::kicker>Audio & Electronics</x-aura::kicker>
+                                <x-aura::kicker>Audio &amp; Electronics</x-aura::kicker>
                                 <div class="flex items-center gap-1 text-amber-400 text-xs font-bold">
                                     <span>★ 4.9</span>
                                     <span class="text-zinc-400 font-normal">(128)</span>
@@ -86,12 +85,10 @@ new #[Layout('layouts.components')] #[Title('Product Card Block - Design Blocks 
             </div>
         </x-slot:preview>
         <x-slot name="codeSlot">&lt;x-aura::card class="p-0 border overflow-hidden"&gt;
-    &lt;!-- Image Header Area --&gt;
     &lt;div class="h-56 bg-zinc-900 flex items-center justify-center"&gt;
         &lt;x-aura::badge variant="positive" size="sm"&gt;Save $50&lt;/x-aura::badge&gt;
     &lt;/div&gt;
 
-    &lt;!-- Content --&gt;
     &lt;div class="p-6 space-y-4"&gt;
         &lt;x-aura::kicker&gt;Audio &amp; Electronics&lt;/x-aura::kicker&gt;
         &lt;h3 class="text-lg font-extrabold"&gt;Aura SoundPro Wireless&lt;/h3&gt;
@@ -107,7 +104,6 @@ new #[Layout('layouts.components')] #[Title('Product Card Block - Design Blocks 
     <x-aura::code class="w-full" title="2. Grid Comparison Layout">
         <x-slot:preview>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-3xl">
-                <!-- Card 1 -->
                 <x-aura::card class="space-y-4">
                     <div class="flex items-center justify-between">
                         <x-aura::badge variant="neutral" size="sm">Workspace</x-aura::badge>
@@ -123,7 +119,6 @@ new #[Layout('layouts.components')] #[Title('Product Card Block - Design Blocks 
                     </div>
                 </x-aura::card>
 
-                <!-- Card 2 -->
                 <x-aura::card class="space-y-4">
                     <div class="flex items-center justify-between">
                         <x-aura::badge variant="neutral" size="sm">Office</x-aura::badge>

@@ -4,16 +4,16 @@ use Livewire\Volt\Component;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
-new #[Layout('layouts.components')] #[Title('Pricing Cards Block - Design Blocks | Aura Wire')] class extends Component {
+new #[Layout('layouts.guest')] #[Title('Pricing Block — Guest Portal | Aura Wire')] class extends Component {
     //
 };
 
 ?>
 
-<div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
+<div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center py-6">
     <!-- Header -->
     <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Design Blocks</x-aura::kicker>
+        <x-aura::kicker>Guest Portal Design Blocks</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Pricing Cards Block</x-aura::heading>
         <x-aura::subheading class="max-w-lg">
             Conversion-optimized pricing tier tables for SaaS platforms, subscriptions, and digital services.
@@ -48,7 +48,7 @@ new #[Layout('layouts.components')] #[Title('Pricing Cards Block - Design Blocks
                             </li>
                             <li class="flex items-center gap-2">
                                 <span class="text-emerald-500 font-bold">✓</span>
-                                Community Discord Support
+                                Community Support
                             </li>
                         </ul>
                     </div>
@@ -78,7 +78,7 @@ new #[Layout('layouts.components')] #[Title('Pricing Cards Block - Design Blocks
                             </li>
                             <li class="flex items-center gap-2 font-medium">
                                 <span class="text-emerald-500 font-bold">✓</span>
-                                500 GB High-Speed NVMe
+                                500 GB Storage
                             </li>
                             <li class="flex items-center gap-2 font-medium">
                                 <span class="text-emerald-500 font-bold">✓</span>
@@ -99,7 +99,7 @@ new #[Layout('layouts.components')] #[Title('Pricing Cards Block - Design Blocks
                         <div class="space-y-1">
                             <x-aura::kicker>For Organizations</x-aura::kicker>
                             <h3 class="text-xl font-bold text-zinc-900 dark:text-white">Enterprise</h3>
-                            <p class="text-xs text-zinc-500">Custom SLA, dedicated server nodes &amp; SSO.</p>
+                            <p class="text-xs text-zinc-500">Custom SLA &amp; dedicated server nodes.</p>
                         </div>
                         <div class="flex items-baseline gap-1">
                             <span class="text-3xl font-black font-mono tracking-tight text-zinc-900 dark:text-white">$199</span>
