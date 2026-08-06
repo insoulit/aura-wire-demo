@@ -1,42 +1,103 @@
 <?php
 
 use Livewire\Volt\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-new class extends Component {
-    public function rendering($view)
-    {
-        $view->layout('layouts.components')->title('Empty State - Aura Wire');
-    }
+new #[Layout('layouts.components')] #[Title('Empty State - Aura Wire')] class extends Component {
+    //
 };
 
 ?>
 
-<div class="w-full max-w-3xl mx-auto space-y-6 flex flex-col items-center justify-center">
-    <div class="space-y-2 text-center flex flex-col items-center">
-        <x-aura::heading level="1" size="md">Empty State</x-aura::heading>
-        <code class="inline-flex items-center px-3.5 py-1.5 mt-3 rounded-xl text-base sm:text-lg font-mono font-bold bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 shadow-sm">&lt;x-aura::empty-state&gt;</code>
+<div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
+    <!-- Header -->
+    <div class="space-y-3 text-center flex flex-col items-center">
+        <x-aura::kicker>Display Components</x-aura::kicker>
+        <x-aura::heading level="1" size="lg">Empty State</x-aura::heading>
+        <x-aura::subheading class="max-w-lg">
+            Placeholder layouts for empty datasets, search resets, document creation, and zero-state screens using buttons and icons.
+        </x-aura::subheading>
+        <div class="pt-1">
+            <code class="inline-flex items-center px-3.5 py-1.5 rounded-xl text-sm font-mono font-bold bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 shadow-2xs">
+                &lt;x-aura::empty-state&gt;
+            </code>
+        </div>
     </div>
 
-    {{-- Default Empty State --}}
-    <x-aura::code class="w-full" title="Standard Empty State">
+    <!-- 1. Standard Empty State with Primary Action -->
+    <x-aura::code class="w-full" title="1. Standard No Data State">
         <x-slot:preview>
             <div class="w-full max-w-xl">
-                <x-aura::empty-state title="No Projects Found" description="You haven't created any projects yet. Start by creating a new project to get going.">
-                    <x-slot name="icon">
-                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
-                    </x-slot>
-                    <x-aura::button variant="primary" size="sm">Create First Project</x-aura::button>
+                <x-aura::empty-state 
+                    icon="folder-open"
+                    title="No Projects Found" 
+                    description="You haven't created any workspace projects yet. Get started by creating your first project."
+                >
+                    <div class="flex items-center gap-2.5">
+                        <x-aura::button variant="primary" size="sm" icon="plus">
+                            Create Project
+                        </x-aura::button>
+                        <x-aura::button variant="secondary" size="sm" icon="sparkles">
+                            Browse Templates
+                        </x-aura::button>
+                    </div>
                 </x-aura::empty-state>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::empty-state
-    title="No Projects Found"
-    description="You haven't created any projects yet. Start by creating a new project to get going."
+        <x-slot:codeSlot>&lt;x-aura::empty-state 
+    icon="folder-open"
+    title="No Projects Found" 
+    description="You haven't created any workspace projects yet. Get started by creating your first project."
 &gt;
-    &amp;lt;x-slot name="icon"&amp;gt;
-        &amp;lt;svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"&amp;gt;...&amp;lt;/svg&amp;gt;
-    &amp;lt;/x-slot&amp;gt;
-    &amp;lt;x-aura::button variant="primary" size="sm"&amp;gt;Create First Project&amp;lt;/x-aura::button&amp;gt;
-&amp;lt;/x-aura::empty-state&amp;gt;</x-slot:codeSlot>
+    &lt;x-aura::button variant="primary" size="sm" icon="plus"&gt;
+        Create Project
+    &lt;/x-aura::button&gt;
+    &lt;x-aura::button variant="secondary" size="sm" icon="sparkles"&gt;
+        Browse Templates
+    &lt;/x-aura::button&gt;
+&lt;/x-aura::empty-state&gt;</x-slot:codeSlot>
+    </x-aura::code>
+
+    <!-- 2. Search No Results State -->
+    <x-aura::code class="w-full" title="2. Search No Matching Results State">
+        <x-slot:preview>
+            <div class="w-full max-w-xl">
+                <x-aura::empty-state 
+                    icon="search-x"
+                    title="No Matching Search Results" 
+                    description="We couldn't find any documents matching your query. Try resetting filters or searching with a different term."
+                >
+                    <x-aura::button variant="secondary" size="sm" icon="refresh-cw">Reset All Filters</x-aura::button>
+                    <x-aura::icon-button icon="pencil" variant="secondary" size="sm" label="New Note" />
+                </x-aura::empty-state>
+            </div>
+        </x-slot:preview>
+        <x-slot:codeSlot>&lt;x-aura::empty-state 
+    icon="search-x"
+    title="No Matching Results" 
+    description="We couldn't find any documents matching your query."
+&gt;
+    &lt;x-aura::button variant="secondary" size="sm" icon="refresh-cw"&gt;Reset All Filters&lt;/x-aura::button&gt;
+    &lt;x-aura::icon-button icon="pencil" variant="secondary" size="sm" label="New Note" /&gt;
+&lt;/x-aura::empty-state&gt;</x-slot:codeSlot>
+    </x-aura::code>
+
+    <!-- 3. Inbox Empty State -->
+    <x-aura::code class="w-full" title="3. Empty Inbox / Messages State">
+        <x-slot:preview>
+            <div class="w-full max-w-xl">
+                <x-aura::empty-state 
+                    icon="inbox"
+                    title="Your Inbox is Empty" 
+                    description="All caught up! You have no unread notifications or messages in your queue."
+                />
+            </div>
+        </x-slot:preview>
+        <x-slot:codeSlot>&lt;x-aura::empty-state 
+    icon="inbox"
+    title="Your Inbox is Empty" 
+    description="All caught up! You have no unread notifications or messages in your queue."
+/&gt;</x-slot:codeSlot>
     </x-aura::code>
 </div>

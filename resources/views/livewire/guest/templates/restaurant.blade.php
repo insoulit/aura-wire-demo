@@ -59,11 +59,11 @@ state([
             </div>
 
             <!-- Menu Category Tabs -->
-            <x-aura::button.group>
+            <x-aura::action.group>
                 <x-aura::button variant="{{ $activeTab === 'starters' ? 'primary' : 'secondary' }}" size="sm" wire:click="$set('activeTab', 'starters')">Starters</x-aura::button>
                 <x-aura::button variant="{{ $activeTab === 'mains' ? 'primary' : 'secondary' }}" size="sm" wire:click="$set('activeTab', 'mains')">Mains</x-aura::button>
                 <x-aura::button variant="{{ $activeTab === 'desserts' ? 'primary' : 'secondary' }}" size="sm" wire:click="$set('activeTab', 'desserts')">Desserts</x-aura::button>
-            </x-aura::button.group>
+            </x-aura::action.group>
         </div>
 
         <!-- Menu Item Cards -->

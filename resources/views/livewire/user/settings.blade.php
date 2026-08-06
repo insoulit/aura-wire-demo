@@ -22,12 +22,12 @@ title('Profile & Account Settings — User Panel | Aura Wire');
 
     <!-- Settings Section Button Group -->
     <div class="flex items-center gap-2">
-        <x-aura::button.group>
+        <x-aura::action.group>
             <x-aura::button variant="primary" size="sm">Profile Details</x-aura::button>
             <x-aura::button variant="secondary" size="sm">Security &amp; PIN</x-aura::button>
             <x-aura::button variant="secondary" size="sm">Notifications</x-aura::button>
             <x-aura::button variant="secondary" size="sm">API Keys</x-aura::button>
-        </x-aura::button.group>
+        </x-aura::action.group>
     </div>
 
     <!-- Form Section 1: Personal Profile Details -->

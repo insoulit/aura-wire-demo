@@ -120,8 +120,7 @@ new #[Layout('layouts.components')] #[Title('Card - Aura Wire')] class extends C
                         </div>
                     </div>
                     <x-slot name="footer">
-                        <x-aura::button variant="outline" size="sm">
-                            <x-slot name="icon"><x-aura::icon.edit size="xs" /></x-slot>
+                        <x-aura::button variant="outline" size="sm" icon="pencil">
                             Edit Profile
                         </x-aura::button>
                         <x-aura::button variant="secondary" size="sm">Settings</x-aura::button>

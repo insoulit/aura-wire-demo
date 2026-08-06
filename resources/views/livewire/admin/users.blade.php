@@ -1,62 +1,62 @@
 <?php
 
-use function Livewire\Volt\{layout, title};
+use Livewire\Volt\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-layout('layouts.admin');
-title('User Management — Admin Console | Aura Wire');
+new #[Layout('layouts.components')] #[Title('Admin Users - Aura Wire')] class extends Component {
+    public string $search = '';
+    public string $role = 'all';
+};
 
 ?>
 
-<div class="space-y-8">
+<div class="w-full max-w-6xl mx-auto space-y-8">
     <!-- Header -->
-    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-5">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-6">
         <div>
-            <div class="flex items-center gap-2 mb-1">
-                <x-aura::kicker class="text-zinc-500">⚡ ADMIN MODULE</x-aura::kicker>
-                <x-aura::badge variant="info" size="sm">4 Accounts</x-aura::badge>
-            </div>
-            <x-aura::heading level="1" size="lg">User Management</x-aura::heading>
-            <x-aura::subheading>Manage application user accounts, security roles, and active permissions</x-aura::subheading>
+            <x-aura::kicker>Administration</x-aura::kicker>
+            <x-aura::heading level="1" size="xl">User Management</x-aura::heading>
+            <x-aura::subheading class="mt-1">
+                Manage organization user accounts, roles, access permissions, and active sessions.
+            </x-aura::subheading>
         </div>
-
         <div class="flex items-center gap-3">
-            <x-aura::button variant="primary" size="sm">
-                <x-slot name="icon">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-                </x-slot>
-                Create New User
+            <x-aura::button variant="primary" icon="plus" size="sm">
+                Add New User
             </x-aura::button>
         </div>
     </div>
 
-    <!-- Search & Filter Card -->
-    <x-aura::card>
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div class="w-full sm:w-80">
-                <x-aura::input placeholder="Search users by name or email..." />
-            </div>
-            <div class="flex items-center gap-2">
-                <x-aura::select placeholder="Filter by Role">
+    <!-- Filter & Action Bar -->
+    <x-aura::card class="p-4">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3 w-full sm:w-auto">
+                <x-aura::input wire:model.live="search" placeholder="Search users..." icon="search" class="w-full sm:w-64" size="sm" />
+                <x-aura::select wire:model.live="role" size="sm" class="w-36">
                     <option value="all">All Roles</option>
-                    <option value="admin">Admin</option>
-                    <option value="member">Member</option>
+                    <option value="admin">Admins</option>
+                    <option value="dev">Developers</option>
+                    <option value="member">Members</option>
                 </x-aura::select>
-                <x-aura::button variant="secondary" size="sm">Filter</x-aura::button>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-zinc-500">
+                <span>Showing 4 active users</span>
             </div>
         </div>
     </x-aura::card>
 
-    <!-- Users Table styled following Episure design system -->
-    <x-aura::card title="System Users Registry">
+    <!-- Users Table -->
+    <x-aura::card>
         <x-aura::table>
             <x-aura::table.header>
-                <tr>
+                <x-aura::table.row>
                     <x-aura::table.column>User</x-aura::table.column>
                     <x-aura::table.column>Role</x-aura::table.column>
                     <x-aura::table.column>Status</x-aura::table.column>
                     <x-aura::table.column>Joined Date</x-aura::table.column>
                     <x-aura::table.column class="text-right">Actions</x-aura::table.column>
-                </tr>
+                </x-aura::table.row>
             </x-aura::table.header>
             <x-aura::table.body>
                 <x-aura::table.row>
@@ -65,24 +65,18 @@ title('User Management — Admin Console | Aura Wire');
                             <x-aura::avatar initials="AK" size="sm" status="online" />
                             <div>
                                 <div class="font-semibold text-zinc-900 dark:text-white">Alex Kovacs</div>
-                                <div class="text-xs text-zinc-500">alex.kovacs@example.com</div>
+                                <div class="text-xs text-zinc-500">alex@example.com</div>
                             </div>
                         </div>
                     </x-aura::table.cell>
-                    <x-aura::table.cell><x-aura::badge variant="negative" size="sm">System Admin</x-aura::badge></x-aura::table.cell>
+                    <x-aura::table.cell><x-aura::badge variant="positive" size="sm">Admin</x-aura::badge></x-aura::table.cell>
                     <x-aura::table.cell><x-aura::badge variant="neutral" size="sm">Active</x-aura::badge></x-aura::table.cell>
                     <x-aura::table.cell class="text-xs text-zinc-500">2026-08-01</x-aura::table.cell>
                     <x-aura::table.cell class="text-right">
-                        <div class="flex items-center justify-end gap-2">
-                            <x-aura::button variant="subtle" size="sm" square title="View User Details" class="text-zinc-400 hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-white">
-                                <x-aura::icon.show />
-                            </x-aura::button>
-                            <x-aura::button variant="subtle" size="sm" square title="Edit User" class="text-zinc-400 hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-white">
-                                <x-aura::icon.edit />
-                            </x-aura::button>
-                            <x-aura::button variant="subtle" size="sm" square title="Delete User" class="text-zinc-400 hover:bg-red-50 hover:text-red-600 dark:hover:bg-red-950/40 dark:hover:text-red-400">
-                                <x-aura::icon.delete />
-                            </x-aura::button>
+                        <div class="flex items-center justify-end gap-1.5">
+                            <x-aura::icon-button icon="eye" variant="ghost" size="sm" label="View User" />
+                            <x-aura::icon-button icon="pencil" variant="ghost" size="sm" label="Edit User" />
+                            <x-aura::icon-button icon="trash-2" variant="danger" size="sm" label="Delete User" />
                         </div>
                     </x-aura::table.cell>
                 </x-aura::table.row>
@@ -101,16 +95,10 @@ title('User Management — Admin Console | Aura Wire');
                     <x-aura::table.cell><x-aura::badge variant="neutral" size="sm">Active</x-aura::badge></x-aura::table.cell>
                     <x-aura::table.cell class="text-xs text-zinc-500">2026-07-28</x-aura::table.cell>
                     <x-aura::table.cell class="text-right">
-                        <div class="flex items-center justify-end gap-2">
-                            <x-aura::button variant="subtle" size="sm" square title="View User Details" class="text-zinc-400 hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-white">
-                                <x-aura::icon.show />
-                            </x-aura::button>
-                            <x-aura::button variant="subtle" size="sm" square title="Edit User" class="text-zinc-400 hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-white">
-                                <x-aura::icon.edit />
-                            </x-aura::button>
-                            <x-aura::button variant="subtle" size="sm" square title="Delete User" class="text-zinc-400 hover:bg-red-50 hover:text-red-600 dark:hover:bg-red-950/40 dark:hover:text-red-400">
-                                <x-aura::icon.delete />
-                            </x-aura::button>
+                        <div class="flex items-center justify-end gap-1.5">
+                            <x-aura::icon-button icon="eye" variant="ghost" size="sm" label="View User" />
+                            <x-aura::icon-button icon="pencil" variant="ghost" size="sm" label="Edit User" />
+                            <x-aura::icon-button icon="trash-2" variant="danger" size="sm" label="Delete User" />
                         </div>
                     </x-aura::table.cell>
                 </x-aura::table.row>
@@ -129,16 +117,10 @@ title('User Management — Admin Console | Aura Wire');
                     <x-aura::table.cell><x-aura::badge variant="subtle" size="sm">Pending</x-aura::badge></x-aura::table.cell>
                     <x-aura::table.cell class="text-xs text-zinc-500">2026-07-15</x-aura::table.cell>
                     <x-aura::table.cell class="text-right">
-                        <div class="flex items-center justify-end gap-2">
-                            <x-aura::button variant="subtle" size="sm" square title="View User Details" class="text-zinc-400 hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-white">
-                                <x-aura::icon.show />
-                            </x-aura::button>
-                            <x-aura::button variant="subtle" size="sm" square title="Edit User" class="text-zinc-400 hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-white">
-                                <x-aura::icon.edit />
-                            </x-aura::button>
-                            <x-aura::button variant="subtle" size="sm" square title="Delete User" class="text-zinc-400 hover:bg-red-50 hover:text-red-600 dark:hover:bg-red-950/40 dark:hover:text-red-400">
-                                <x-aura::icon.delete />
-                            </x-aura::button>
+                        <div class="flex items-center justify-end gap-1.5">
+                            <x-aura::icon-button icon="eye" variant="ghost" size="sm" label="View User" />
+                            <x-aura::icon-button icon="pencil" variant="ghost" size="sm" label="Edit User" />
+                            <x-aura::icon-button icon="trash-2" variant="danger" size="sm" label="Delete User" />
                         </div>
                     </x-aura::table.cell>
                 </x-aura::table.row>
@@ -157,16 +139,10 @@ title('User Management — Admin Console | Aura Wire');
                     <x-aura::table.cell><x-aura::badge variant="subtle" size="sm">Inactive</x-aura::badge></x-aura::table.cell>
                     <x-aura::table.cell class="text-xs text-zinc-500">2026-06-10</x-aura::table.cell>
                     <x-aura::table.cell class="text-right">
-                        <div class="flex items-center justify-end gap-2">
-                            <x-aura::button variant="subtle" size="sm" square title="View User Details" class="text-zinc-400 hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-white">
-                                <x-aura::icon.show />
-                            </x-aura::button>
-                            <x-aura::button variant="subtle" size="sm" square title="Edit User" class="text-zinc-400 hover:bg-zinc-100 hover:text-zinc-900 dark:hover:bg-zinc-800 dark:hover:text-white">
-                                <x-aura::icon.edit />
-                            </x-aura::button>
-                            <x-aura::button variant="subtle" size="sm" square title="Delete User" class="text-zinc-400 hover:bg-red-50 hover:text-red-600 dark:hover:bg-red-950/40 dark:hover:text-red-400">
-                                <x-aura::icon.delete />
-                            </x-aura::button>
+                        <div class="flex items-center justify-end gap-1.5">
+                            <x-aura::icon-button icon="eye" variant="ghost" size="sm" label="View User" />
+                            <x-aura::icon-button icon="pencil" variant="ghost" size="sm" label="Edit User" />
+                            <x-aura::icon-button icon="trash-2" variant="danger" size="sm" label="Delete User" />
                         </div>
                     </x-aura::table.cell>
                 </x-aura::table.row>
