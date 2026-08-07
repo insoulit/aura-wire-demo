@@ -99,8 +99,28 @@ new #[Layout('layouts.components')] #[Title('Button - Aura Wire')] class extends
 &lt;/x-aura::button&gt;</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 4. Square & Circular Icon Buttons -->
-    <x-aura::code class="w-full" title="4. Square Icon Buttons">
+    <!-- 4. Pill & Circular Buttons -->
+    <x-aura::code class="w-full" title="4. Pill &amp; Circular Buttons">
+        <x-slot:preview>
+            <div class="flex flex-wrap items-center gap-3">
+                <x-aura::button variant="primary" pill>Pill Primary</x-aura::button>
+                <x-aura::button variant="secondary" pill icon="sparkles">Pill with Icon</x-aura::button>
+                <x-aura::button variant="outline" pill icon-trailing="arrow-right">Explore</x-aura::button>
+                <x-aura::button variant="primary" square pill icon="plus" />
+                <x-aura::button variant="secondary" square pill icon="heart" />
+                <x-aura::icon-button variant="primary" shape="circle" icon="bell" />
+                <x-aura::icon-button variant="subtle" shape="circle" icon="user" />
+            </div>
+        </x-slot:preview>
+        <x-slot:codeSlot>&lt;x-aura::button variant="primary" pill&gt;Pill Primary&lt;/x-aura::button&gt;
+&lt;x-aura::button variant="secondary" pill icon="sparkles"&gt;Pill with Icon&lt;/x-aura::button&gt;
+&lt;x-aura::button variant="outline" pill icon-trailing="arrow-right"&gt;Explore&lt;/x-aura::button&gt;
+&lt;x-aura::button variant="primary" square pill icon="plus" /&gt;
+&lt;x-aura::icon-button variant="primary" shape="circle" icon="bell" /&gt;</x-slot:codeSlot>
+    </x-aura::code>
+
+    <!-- 5. Square Icon Buttons -->
+    <x-aura::code class="w-full" title="5. Square Icon Buttons">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-3">
                 <x-aura::button variant="primary" square size="xs" icon="pencil" />
@@ -114,8 +134,8 @@ new #[Layout('layouts.components')] #[Title('Button - Aura Wire')] class extends
 &lt;x-aura::button variant="danger" square size="lg" icon="trash-2" /&gt;</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 5. Disabled & Loading States -->
-    <x-aura::code class="w-full" title="5. Disabled &amp; Loading States">
+    <!-- 6. Disabled & Loading States -->
+    <x-aura::code class="w-full" title="6. Disabled &amp; Loading States">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-3">
                 <x-aura::button variant="primary" disabled>Primary Disabled</x-aura::button>
@@ -129,8 +149,8 @@ new #[Layout('layouts.components')] #[Title('Button - Aura Wire')] class extends
 &lt;x-aura::button variant="outline" :loading="true"&gt;Syncing Data&lt;/x-aura::button&gt;</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 6. Real-World Action Card Patterns -->
-    <x-aura::code class="w-full" title="6. Real-World Action Card Patterns">
+    <!-- 7. Real-World Action Card Patterns -->
+    <x-aura::code class="w-full" title="7. Real-World Action Card Patterns">
         <x-slot:preview>
             <div class="w-full space-y-4">
                 <!-- Save / Cancel Toolbar -->

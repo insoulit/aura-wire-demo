@@ -39,19 +39,19 @@ new #[Layout('layouts.components')] #[Title('Header - Aura Wire')] class extends
                         </div>
                     </x-slot>
 
-                    <div class="flex items-center gap-1">
-                        <x-aura::header.item href="#" active>Overview</x-aura::header.item>
-                        <x-aura::header.item href="#">Deployments</x-aura::header.item>
-                        <x-aura::header.item href="#">Analytics</x-aura::header.item>
-                        <x-aura::header.item href="#">Settings</x-aura::header.item>
-                    </div>
+                    <x-aura::header.item href="#" active>Overview</x-aura::header.item>
+                    <x-aura::header.item href="#">Deployments</x-aura::header.item>
+                    <x-aura::header.item href="#">Analytics</x-aura::header.item>
+                    <x-aura::header.item href="#">Settings</x-aura::header.item>
 
                     <x-slot name="actions">
-                        <div class="hidden sm:flex items-center gap-2">
-                            <x-aura::input placeholder="Search... (⌘K)" icon="search" size="sm" class="w-44" />
-                            <x-aura::icon-button icon="bell" variant="ghost" size="sm" label="Notifications" />
+                        <div class="flex items-center gap-2">
+                            <div class="hidden md:flex items-center gap-2">
+                                <x-aura::input placeholder="Search... (⌘K)" icon="search" size="sm" class="w-32 sm:w-44" />
+                                <x-aura::icon-button icon="bell" variant="ghost" size="sm" label="Notifications" />
+                            </div>
+                            <x-aura::avatar src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" size="sm" class="cursor-pointer" />
                         </div>
-                        <x-aura::avatar src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" size="sm" class="cursor-pointer" />
                     </x-slot>
                 </x-aura::header>
             </div>
@@ -76,52 +76,8 @@ new #[Layout('layouts.components')] #[Title('Header - Aura Wire')] class extends
 &lt;/x-aura::header&gt;</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 2. Dark Theme Developer Platform Header -->
-    <x-aura::code class="w-full" title="2. Dark Theme Developer Platform Header">
-        <x-slot:preview>
-            <div class="w-full rounded-2xl border border-zinc-800 bg-zinc-950 p-3">
-                <x-aura::header :sticky="false" variant="dark" class="rounded-xl">
-                    <x-slot name="brand">
-                        <div class="flex items-center gap-2.5">
-                            <span class="font-black text-white tracking-wider text-sm font-mono">&lt;AURA/&gt;</span>
-                            <x-aura::badge variant="positive" size="xs">SYSTEM OPERATIONAL</x-aura::badge>
-                        </div>
-                    </x-slot>
-
-                    <div class="flex items-center gap-1">
-                        <x-aura::header.item href="#" active class="!text-white !bg-zinc-800">Documentation</x-aura::header.item>
-                        <x-aura::header.item href="#" class="!text-zinc-400 hover:!text-white hover:!bg-zinc-900">API Reference</x-aura::header.item>
-                        <x-aura::header.item href="#" class="!text-zinc-400 hover:!text-white hover:!bg-zinc-900">Changelog</x-aura::header.item>
-                    </div>
-
-                    <x-slot name="actions">
-                        <x-aura::button variant="ghost" size="sm" class="!text-zinc-300 hover:!text-white hover:!bg-zinc-800">
-                            Star on GitHub
-                        </x-aura::button>
-                        <x-aura::button variant="secondary" size="sm" class="!bg-zinc-800 !text-white !border-zinc-700 hover:!bg-zinc-700">
-                            Console Login
-                        </x-aura::button>
-                    </x-slot>
-                </x-aura::header>
-            </div>
-        </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::header variant="dark"&gt;
-    &lt;x-slot name="brand"&gt;
-        &lt;span class="font-mono font-black text-white"&gt;&amp;lt;AURA/&amp;gt;&lt;/span&gt;
-        &lt;x-aura::badge variant="positive" size="xs"&gt;OPERATIONAL&lt;/x-aura::badge&gt;
-    &lt;/x-slot&gt;
-
-    &lt;x-aura::header.item href="#" active&gt;Documentation&lt;/x-aura::header.item&gt;
-    &lt;x-aura::header.item href="#"&gt;API Reference&lt;/x-aura::header.item&gt;
-
-    &lt;x-slot name="actions"&gt;
-        &lt;x-aura::button variant="secondary" size="sm"&gt;Console Login&lt;/x-aura::button&gt;
-    &lt;/x-slot&gt;
-&lt;/x-aura::header&gt;</x-slot:codeSlot>
-    </x-aura::code>
-
-    <!-- 3. E-Commerce Store Header -->
-    <x-aura::code class="w-full" title="3. E-Commerce Storefront Header">
+    <!-- 2. E-Commerce Store Header -->
+    <x-aura::code class="w-full" title="2. E-Commerce Storefront Header">
         <x-slot:preview>
             <div class="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-3">
                 <x-aura::header :sticky="false" variant="default" class="rounded-xl">
@@ -129,15 +85,15 @@ new #[Layout('layouts.components')] #[Title('Header - Aura Wire')] class extends
                         <span class="font-extrabold text-zinc-900 dark:text-white text-base tracking-widest uppercase font-sans">AURA STORE</span>
                     </x-slot>
 
-                    <div class="flex items-center gap-1">
-                        <x-aura::header.item href="#" active>New Arrivals</x-aura::header.item>
-                        <x-aura::header.item href="#">Men</x-aura::header.item>
-                        <x-aura::header.item href="#">Women</x-aura::header.item>
-                        <x-aura::header.item href="#" class="text-red-600 font-bold">Summer Sale -30%</x-aura::header.item>
-                    </div>
+                    <x-aura::header.item href="#" active>New Arrivals</x-aura::header.item>
+                    <x-aura::header.item href="#">Men</x-aura::header.item>
+                    <x-aura::header.item href="#">Page 2</x-aura::header.item>
+                    <x-aura::header.item href="#" class="text-red-600 font-bold">Summer Sale -30%</x-aura::header.item>
 
                     <x-slot name="actions">
-                        <x-aura::icon-button icon="heart" variant="ghost" size="sm" label="Wishlist" />
+                        <span class="hidden md:inline-flex">
+                            <x-aura::icon-button icon="heart" variant="ghost" size="sm" label="Wishlist" />
+                        </span>
                         <x-aura::button variant="primary" size="sm" icon="shopping-bag">
                             Cart (3)
                         </x-aura::button>
@@ -161,8 +117,8 @@ new #[Layout('layouts.components')] #[Title('Header - Aura Wire')] class extends
 &lt;/x-aura::header&gt;</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 4. Minimal Marketing Header -->
-    <x-aura::code class="w-full" title="4. Minimal Landing Page Header">
+    <!-- 3. Minimal Marketing Header -->
+    <x-aura::code class="w-full" title="3. Minimal Landing Page Header">
         <x-slot:preview>
             <div class="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 p-3">
                 <x-aura::header :sticky="false" variant="minimal" class="rounded-xl">
@@ -170,14 +126,14 @@ new #[Layout('layouts.components')] #[Title('Header - Aura Wire')] class extends
                         <span class="font-bold text-zinc-900 dark:text-white text-sm">acme.inc</span>
                     </x-slot>
 
-                    <div class="flex items-center gap-2">
-                        <x-aura::header.item href="#">Features</x-aura::header.item>
-                        <x-aura::header.item href="#">Customers</x-aura::header.item>
-                        <x-aura::header.item href="#">Pricing</x-aura::header.item>
-                    </div>
+                    <x-aura::header.item href="#">Features</x-aura::header.item>
+                    <x-aura::header.item href="#">Customers</x-aura::header.item>
+                    <x-aura::header.item href="#">Pricing</x-aura::header.item>
 
                     <x-slot name="actions">
-                        <x-aura::button variant="ghost" size="sm">Sign In</x-aura::button>
+                        <span class="hidden md:inline-flex">
+                            <x-aura::button variant="ghost" size="sm">Sign In</x-aura::button>
+                        </span>
                         <x-aura::button variant="primary" size="sm">Get Started</x-aura::button>
                     </x-slot>
                 </x-aura::header>
@@ -194,5 +150,89 @@ new #[Layout('layouts.components')] #[Title('Header - Aura Wire')] class extends
         &lt;x-aura::button variant="primary" size="sm"&gt;Get Started&lt;/x-aura::button&gt;
     &lt;/x-slot&gt;
 &lt;/x-aura::header&gt;</x-slot:codeSlot>
+    </x-aura::code>
+
+    <!-- 4. Custom Mobile Navigation Sheet Drawer -->
+    <x-aura::code class="w-full" title="4. Custom Mobile Navigation Sheet Drawer">
+        <x-slot:preview>
+            <div class="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100/60 dark:bg-zinc-950 p-3 space-y-3">
+                <x-aura::header :sticky="false" :responsive="false" variant="bordered" class="rounded-xl">
+                    <x-slot name="brand">
+                        <div class="flex items-center gap-2">
+                            <x-aura::icon name="sparkles" size="xs" />
+                            <span class="font-bold text-sm text-zinc-900 dark:text-white">Aura App</span>
+                        </div>
+                    </x-slot>
+
+                    <!-- Desktop Nav (Hidden on mobile < md) -->
+                    <div class="hidden md:flex items-center gap-1">
+                        <x-aura::header.item href="#" active>Dashboard</x-aura::header.item>
+                        <x-aura::header.item href="#">Projects</x-aura::header.item>
+                        <x-aura::header.item href="#">Team</x-aura::header.item>
+                        <x-aura::header.item href="#">Billing</x-aura::header.item>
+                    </div>
+
+                    <x-slot name="actions">
+                        <span class="hidden md:inline-flex">
+                            <x-aura::button variant="primary" size="sm">
+                                Upgrade Plan
+                            </x-aura::button>
+                        </span>
+
+                        <!-- Mobile Hamburger Trigger -->
+                        <div class="md:hidden">
+                            <x-aura::icon-button
+                                icon="menu"
+                                variant="ghost"
+                                size="sm"
+                                label="Open menu"
+                                x-on:click="$dispatch('open-sheet', 'header-demo-mobile-nav')"
+                            />
+                        </div>
+                    </x-slot>
+                </x-aura::header>
+
+                <x-aura::sheet name="header-demo-mobile-nav" side="right" title="Navigation">
+                    <div class="flex flex-col gap-2 pt-2">
+                        <x-aura::header.item href="#" active class="w-full justify-start">Dashboard</x-aura::header.item>
+                        <x-aura::header.item href="#" class="w-full justify-start">Projects</x-aura::header.item>
+                        <x-aura::header.item href="#" class="w-full justify-start">Team</x-aura::header.item>
+                        <x-aura::header.item href="#" class="w-full justify-start">Billing</x-aura::header.item>
+                    </div>
+                </x-aura::sheet>
+            </div>
+        </x-slot:preview>
+        <x-slot:codeSlot>&lt;x-aura::header :responsive="false" variant="bordered"&gt;
+    &lt;x-slot name="brand"&gt;
+        &lt;span class="font-bold text-sm"&gt;Aura App&lt;/span&gt;
+    &lt;/x-slot&gt;
+
+    &lt;!-- Desktop Navigation --&gt;
+    &lt;div class="hidden md:flex items-center gap-1"&gt;
+        &lt;x-aura::header.item href="#" active&gt;Dashboard&lt;/x-aura::header.item&gt;
+        &lt;x-aura::header.item href="#"&gt;Projects&lt;/x-aura::header.item&gt;
+        &lt;x-aura::header.item href="#"&gt;Team&lt;/x-aura::header.item&gt;
+        &lt;x-aura::header.item href="#"&gt;Billing&lt;/x-aura::header.item&gt;
+    &lt;/div&gt;
+
+    &lt;x-slot name="actions"&gt;
+        &lt;x-aura::button variant="primary" size="sm" class="hidden md:inline-flex"&gt;Upgrade Plan&lt;/x-aura::button&gt;
+
+        &lt;!-- Mobile Hamburger --&gt;
+        &lt;div class="md:hidden"&gt;
+            &lt;x-aura::icon-button icon="menu" variant="ghost" size="sm" x-on:click="$dispatch('open-sheet', 'mobile-nav')" /&gt;
+        &lt;/div&gt;
+    &lt;/x-slot&gt;
+&lt;/x-aura::header&gt;
+
+&lt;!-- Mobile Sheet Drawer --&gt;
+&lt;x-aura::sheet name="mobile-nav" side="right" title="Navigation"&gt;
+    &lt;div class="flex flex-col gap-2 pt-2"&gt;
+        &lt;x-aura::header.item href="#" active class="w-full justify-start"&gt;Dashboard&lt;/x-aura::header.item&gt;
+        &lt;x-aura::header.item href="#" class="w-full justify-start"&gt;Projects&lt;/x-aura::header.item&gt;
+        &lt;x-aura::header.item href="#" class="w-full justify-start"&gt;Team&lt;/x-aura::header.item&gt;
+        &lt;x-aura::header.item href="#" class="w-full justify-start"&gt;Billing&lt;/x-aura::header.item&gt;
+    &lt;/div&gt;
+&lt;/x-aura::sheet&gt;</x-slot:codeSlot>
     </x-aura::code>
 </div>
