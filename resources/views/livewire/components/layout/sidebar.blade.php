@@ -8,9 +8,17 @@ title('Sidebar - Aura Wire');
 ?>
 
 <div class="w-full max-w-3xl mx-auto space-y-6 flex flex-col items-center justify-center">
-    <div class="space-y-2 text-center flex flex-col items-center">
-        <x-aura::heading level="1" size="md">Sidebar</x-aura::heading>
-        <code class="inline-flex items-center px-3.5 py-1.5 mt-3 rounded-xl text-base sm:text-lg font-mono font-bold bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 shadow-sm">&lt;x-aura::sidebar&gt;</code>
+    <div class="space-y-3 text-center flex flex-col items-center">
+        <x-aura::kicker>Layout Components</x-aura::kicker>
+        <x-aura::heading level="1" size="lg">Sidebar</x-aura::heading>
+        <x-aura::subheading class="max-w-xl">
+            Collapsible vertical navigation sidebars with section groups, active state highlights, and icon items.
+        </x-aura::subheading>
+        <div class="pt-1">
+            <code class="inline-flex items-center px-3.5 py-1.5 rounded-xl text-sm font-mono font-bold bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 shadow-2xs">
+                &lt;x-aura::sidebar&gt;
+            </code>
+        </div>
     </div>
 
     {{-- Standard Sidebar --}}

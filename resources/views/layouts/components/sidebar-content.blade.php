@@ -92,7 +92,7 @@
 
 <!-- 3. Form Controls Dropdown -->
 @php
-    $isFormActive = request()->is('components/input', 'components/textarea', 'components/select', 'components/checkbox', 'components/radio', 'components/switch', 'components/field', 'components/file-upload', 'components/pin-code', 'components/rich-text', 'components/error');
+    $isFormActive = request()->is('components/input', 'components/textarea', 'components/select', 'components/checkbox', 'components/radio', 'components/switch', 'components/field', 'components/label', 'components/file-upload', 'components/pin-code', 'components/rich-text', 'components/error');
 @endphp
 <div x-data="{ open: {{ $isFormActive ? 'true' : 'false' }} }" class="space-y-1">
     <button
