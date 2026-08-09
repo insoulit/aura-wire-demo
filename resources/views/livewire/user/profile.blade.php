@@ -18,16 +18,20 @@ new #[Layout('layouts.user')] #[Title('Profile Details — User Panel | Aura Wir
 
 ?>
 
-<div class="space-y-6 w-full max-w-2xl mx-auto py-4">
-    {{-- Header Section --}}
-    <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-4">
-        <div>
+<div class="max-w-2xl mx-auto space-y-6 py-4">
+
+    <!-- Top Header -->
+    <div class="border-b border-zinc-200 dark:border-zinc-800 pb-4 space-y-1">
+        <div class="flex items-center justify-between gap-4">
             <x-aura::heading level="1" size="lg">Profile Info</x-aura::heading>
-            <x-aura::subheading class="mt-1">
-                Update your global account display name, bio, and mobile contact number.
-            </x-aura::subheading>
+            <x-aura::button variant="secondary" size="sm" href="/dashboard" wire:navigate class="shrink-0">
+                <x-aura::icon name="arrow-left" class="w-4 h-4 mr-1.5 shrink-0 inline-block text-zinc-900 dark:text-white" />
+                <span>Back</span>
+            </x-aura::button>
         </div>
-        <x-aura::button variant="outline" size="sm" href="/dashboard">&larr; Back to Dashboard</x-aura::button>
+        <x-aura::subheading size="xs" class="text-zinc-500 dark:text-zinc-400">
+            Manage your account display name, bio, and mobile contact number.
+        </x-aura::subheading>
     </div>
 
     @if($saved)
@@ -36,21 +40,22 @@ new #[Layout('layouts.user')] #[Title('Profile Details — User Panel | Aura Wir
         </x-aura::banner>
     @endif
 
-    {{-- Form Card --}}
+    <!-- Profile Form Card (No Sidebar) -->
     <x-aura::card>
-        <div class="flex items-center gap-4 pb-6 mb-6 border-b border-zinc-100 dark:border-zinc-800">
-            <x-aura::avatar initials="AK" size="lg"  />
-            <div>
-                <x-aura::heading level="2" size="md">
-                    Alex Kovacs
-                </x-aura::heading>
-                <x-aura::text variant="subtle" size="xs" weight="medium">
-                    alex.kovacs@example.com
-                </x-aura::text>
+        <div class="flex items-center justify-between pb-6 mb-6 border-b border-zinc-100 dark:border-zinc-800">
+            <div class="flex items-center gap-4">
+                <x-aura::avatar initials="AK" size="lg" />
+                <div>
+                    <x-aura::heading level="2" size="sm">Alex Kovacs</x-aura::heading>
+                    <x-aura::text variant="subtle" size="xs">alex.kovacs@example.com</x-aura::text>
+                </div>
             </div>
+            <x-aura::button variant="secondary" size="xs" href="/user/avatar" wire:navigate>
+                Change Photo
+            </x-aura::button>
         </div>
 
-        <form wire:submit="save" class="space-y-6">
+        <form wire:submit="save" class="space-y-5">
             <x-aura::field label="Display Name" hint="Your full name visible across workspace modules." required>
                 <x-aura::input wire:model="name" placeholder="Enter display name" required />
             </x-aura::field>
@@ -64,8 +69,11 @@ new #[Layout('layouts.user')] #[Title('Profile Details — User Panel | Aura Wir
             </x-aura::field>
 
             <div class="pt-4 border-t border-zinc-100 dark:border-zinc-800 flex justify-end">
-                <x-aura::button variant="primary" type="submit">Save Profile Changes</x-aura::button>
+                <x-aura::button variant="primary" size="md" type="submit">
+                    Save Changes
+                </x-aura::button>
             </div>
         </form>
     </x-aura::card>
+
 </div>

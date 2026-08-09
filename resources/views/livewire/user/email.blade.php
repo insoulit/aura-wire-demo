@@ -18,16 +18,18 @@ new #[Layout('layouts.user')] #[Title('Change Email Address — User Panel | Aur
 
 ?>
 
-<div class="space-y-6 w-full max-w-2xl mx-auto py-4">
-    {{-- Header Section --}}
-    <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-4">
-        <div>
+    <!-- Top Header -->
+    <div class="border-b border-zinc-200 dark:border-zinc-800 pb-4 space-y-1">
+        <div class="flex items-center justify-between gap-4">
             <x-aura::heading level="1" size="lg">Change Email Address</x-aura::heading>
-            <x-aura::subheading class="mt-1">
-                Update your primary login and notification email address.
-            </x-aura::subheading>
+            <x-aura::button variant="secondary" size="sm" href="/dashboard" wire:navigate class="shrink-0">
+                <x-aura::icon name="arrow-left" class="w-4 h-4 mr-1.5 shrink-0 inline-block text-zinc-900 dark:text-white" />
+                <span>Back</span>
+            </x-aura::button>
         </div>
-        <x-aura::button variant="outline" size="sm" href="/dashboard">&larr; Back to Dashboard</x-aura::button>
+        <x-aura::subheading size="xs" class="text-zinc-500 dark:text-zinc-400">
+            Update your primary login and notification email address.
+        </x-aura::subheading>
     </div>
 
     @if($sent)
