@@ -18,6 +18,8 @@ new #[Layout('layouts.user')] #[Title('Change Email Address — User Panel | Aur
 
 ?>
 
+<div class="max-w-2xl mx-auto space-y-6 py-4">
+
     <!-- Top Header -->
     <div class="border-b border-zinc-200 dark:border-zinc-800 pb-4 space-y-1">
         <div class="flex items-center justify-between gap-4">
@@ -33,16 +35,27 @@ new #[Layout('layouts.user')] #[Title('Change Email Address — User Panel | Aur
     </div>
 
     @if($sent)
-        <x-aura::banner variant="subtle" dismissible="true">
+        <x-aura::banner variant="success" dismissible="true">
             Verification email code sent to <strong>{{ $newEmail ?: 'new email' }}</strong>. Please check your inbox.
         </x-aura::banner>
     @endif
 
-    {{-- Form Card --}}
+    <!-- Email Form Card -->
     <x-aura::card>
-        <form wire:submit="updateEmail" class="space-y-6">
+        <div class="flex items-center justify-between pb-6 mb-6 border-b border-zinc-100 dark:border-zinc-800">
+            <div class="flex items-center gap-4">
+                <x-aura::avatar initials="AK" size="lg" />
+                <div>
+                    <x-aura::heading level="2" size="sm">Alex Kovacs</x-aura::heading>
+                    <x-aura::text variant="subtle" size="xs">alex.kovacs@example.com</x-aura::text>
+                </div>
+            </div>
+            <x-aura::badge variant="neutral" size="sm">Primary Address</x-aura::badge>
+        </div>
+
+        <form wire:submit="updateEmail" class="space-y-5">
             <x-aura::field label="Current Email Address">
-                <x-aura::input wire:model="currentEmail" disabled readonly />
+                <x-aura::input wire:model="currentEmail" disabled readonly class="opacity-75 cursor-not-allowed" />
             </x-aura::field>
 
             <x-aura::field label="New Email Address" hint="Must be a valid email address you have access to." required>
@@ -54,8 +67,9 @@ new #[Layout('layouts.user')] #[Title('Change Email Address — User Panel | Aur
             </x-aura::field>
 
             <div class="pt-4 border-t border-zinc-100 dark:border-zinc-800 flex justify-end">
-                <x-aura::button variant="primary" type="submit">Update Email &amp; Send Code</x-aura::button>
+                <x-aura::button variant="primary" size="md" type="submit">Update Email &amp; Send Code</x-aura::button>
             </div>
         </form>
     </x-aura::card>
+
 </div>
