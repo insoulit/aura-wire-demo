@@ -12,16 +12,22 @@ title('System Logs — Admin Console | Aura Wire');
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-5">
         <div>
             <div class="flex items-center gap-2 mb-1">
-                <x-aura::kicker class="text-zinc-500">⚡ SYSTEM LOGS</x-aura::kicker>
-                <x-aura::badge variant="neutral" size="sm">Realtime Pail Log Stream</x-aura::badge>
+                <x-aura::kicker class="text-zinc-500">SYSTEM LOGS</x-aura::kicker>
+                <x-aura::badge variant="neutral" size="sm">Realtime Log Stream</x-aura::badge>
             </div>
             <x-aura::heading level="1" size="lg">System Logs &amp; Activity</x-aura::heading>
-            <x-aura::subheading>Inspect application event streams, exception traces, and package runtime logs</x-aura::subheading>
+            <x-aura::subheading size="xs">Inspect application event streams, exception traces, and package runtime logs</x-aura::subheading>
         </div>
 
         <div class="flex items-center gap-3">
-            <x-aura::button variant="outline" size="sm">Export CSV</x-aura::button>
-            <x-aura::button variant="danger" size="sm">Clear Log File</x-aura::button>
+            <x-aura::button variant="secondary" size="sm">
+                <x-aura::icon name="download" class="w-4 h-4 mr-1.5 inline-block text-zinc-900 dark:text-white" />
+                <span>Export CSV</span>
+            </x-aura::button>
+            <x-aura::button variant="danger" size="sm">
+                <x-aura::icon name="trash-2" class="w-4 h-4 mr-1.5 inline-block" />
+                <span>Clear Logs</span>
+            </x-aura::button>
         </div>
     </div>
 
@@ -50,7 +56,7 @@ title('System Logs — Admin Console | Aura Wire');
 
                 <x-aura::table.row>
                     <x-aura::table.cell class="text-xs font-mono text-zinc-500">19:28:40</x-aura::table.cell>
-                    <x-aura::table.cell><x-aura::badge variant="info">NOTICE</x-aura::badge></x-aura::table.cell>
+                    <x-aura::table.cell><x-aura::badge variant="positive">NOTICE</x-aura::badge></x-aura::table.cell>
                     <x-aura::table.cell class="text-xs">local</x-aura::table.cell>
                     <x-aura::table.cell class="font-mono text-xs text-zinc-800 dark:text-zinc-200">Aura Wire ServiceProvider registered 9 component group anonymous paths.</x-aura::table.cell>
                     <x-aura::table.cell class="text-right">

@@ -12,22 +12,21 @@ title('Admin Console — Aura Wire');
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-5">
         <div>
             <div class="flex items-center gap-2 mb-1">
-                <x-aura::kicker class="text-zinc-500">⚡ ADMIN CONSOLE</x-aura::kicker>
+                <x-aura::kicker class="text-zinc-500">ADMIN CONSOLE</x-aura::kicker>
                 <x-aura::badge variant="neutral" size="sm">System Operational</x-aura::badge>
             </div>
             <x-aura::heading level="1" size="lg">System Management &amp; Analytics</x-aura::heading>
-            <x-aura::subheading>Monitor insoulit/aura-wire package state, cached views, and user registries</x-aura::subheading>
+            <x-aura::subheading size="xs">Monitor insoulit/aura-wire package state, cached views, and user registries</x-aura::subheading>
         </div>
 
         <div class="flex items-center gap-3">
-            <x-aura::button variant="outline" size="sm" href="/optimize-clear" target="_blank">
-                <x-slot name="icon">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
-                </x-slot>
-                Clear Caches
+            <x-aura::button variant="secondary" size="sm" href="/optimize-clear" target="_blank">
+                <x-aura::icon name="refresh-cw" class="w-4 h-4 mr-1.5 text-zinc-900 dark:text-white" />
+                <span>Clear Caches</span>
             </x-aura::button>
             <x-aura::button variant="primary" size="sm" href="https://packagist.org/packages/insoulit/aura-wire" target="_blank">
-                Packagist Package &rarr;
+                <span>Packagist Package</span>
+                <x-aura::icon name="arrow-right" class="w-4 h-4 ml-1.5 inline-block" />
             </x-aura::button>
         </div>
     </div>
@@ -78,7 +77,10 @@ title('Admin Console — Aura Wire');
                     <x-aura::table.cell><code class="text-xs font-mono text-zinc-900 dark:text-zinc-200">&lt;aura:heading&gt;</code></x-aura::table.cell>
                     <x-aura::table.cell><x-aura::badge variant="neutral">Registered</x-aura::badge></x-aura::table.cell>
                     <x-aura::table.cell class="text-right">
-                        <x-aura::button variant="ghost" size="xs" href="/components/heading">Inspect &rarr;</x-aura::button>
+                        <x-aura::button variant="ghost" size="xs" href="/components/heading">
+                            <span>Inspect</span>
+                            <x-aura::icon name="chevron-right" class="w-3.5 h-3.5 ml-1 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-all inline-block" />
+                        </x-aura::button>
                     </x-aura::table.cell>
                 </x-aura::table.row>
 
@@ -88,7 +90,10 @@ title('Admin Console — Aura Wire');
                     <x-aura::table.cell><code class="text-xs font-mono text-zinc-900 dark:text-zinc-200">&lt;aura:input&gt;</code></x-aura::table.cell>
                     <x-aura::table.cell><x-aura::badge variant="neutral">Registered</x-aura::badge></x-aura::table.cell>
                     <x-aura::table.cell class="text-right">
-                        <x-aura::button variant="ghost" size="xs" href="/components/input">Inspect &rarr;</x-aura::button>
+                        <x-aura::button variant="ghost" size="xs" href="/components/input">
+                            <span>Inspect</span>
+                            <x-aura::icon name="chevron-right" class="w-3.5 h-3.5 ml-1 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-all inline-block" />
+                        </x-aura::button>
                     </x-aura::table.cell>
                 </x-aura::table.row>
 
@@ -98,7 +103,10 @@ title('Admin Console — Aura Wire');
                     <x-aura::table.cell><code class="text-xs font-mono text-zinc-900 dark:text-zinc-200">&lt;aura:card&gt;</code></x-aura::table.cell>
                     <x-aura::table.cell><x-aura::badge variant="neutral">Registered</x-aura::badge></x-aura::table.cell>
                     <x-aura::table.cell class="text-right">
-                        <x-aura::button variant="ghost" size="xs" href="/components/card">Inspect &rarr;</x-aura::button>
+                        <x-aura::button variant="ghost" size="xs" href="/components/card">
+                            <span>Inspect</span>
+                            <x-aura::icon name="chevron-right" class="w-3.5 h-3.5 ml-1 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-all inline-block" />
+                        </x-aura::button>
                     </x-aura::table.cell>
                 </x-aura::table.row>
 
@@ -108,7 +116,10 @@ title('Admin Console — Aura Wire');
                     <x-aura::table.cell><code class="text-xs font-mono text-zinc-900 dark:text-zinc-200">&lt;aura:modal&gt;</code></x-aura::table.cell>
                     <x-aura::table.cell><x-aura::badge variant="neutral">Registered</x-aura::badge></x-aura::table.cell>
                     <x-aura::table.cell class="text-right">
-                        <x-aura::button variant="ghost" size="xs" href="/components/modal">Inspect &rarr;</x-aura::button>
+                        <x-aura::button variant="ghost" size="xs" href="/components/modal">
+                            <span>Inspect</span>
+                            <x-aura::icon name="chevron-right" class="w-3.5 h-3.5 ml-1 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-all inline-block" />
+                        </x-aura::button>
                     </x-aura::table.cell>
                 </x-aura::table.row>
             </x-aura::table.body>

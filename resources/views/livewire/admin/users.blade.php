@@ -4,7 +4,7 @@ use Livewire\Volt\Component;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
-new #[Layout('layouts.components')] #[Title('Admin Users - Aura Wire')] class extends Component {
+new #[Layout('layouts.admin')] #[Title('User Management — Admin Panel | Aura Wire')] class extends Component {
     public string $search = '';
     public string $role = 'all';
 };
@@ -17,13 +17,14 @@ new #[Layout('layouts.components')] #[Title('Admin Users - Aura Wire')] class ex
         <div>
             <x-aura::kicker>Administration</x-aura::kicker>
             <x-aura::heading level="1" size="xl">User Management</x-aura::heading>
-            <x-aura::subheading class="mt-1">
+            <x-aura::subheading size="xs" class="mt-1">
                 Manage organization user accounts, roles, access permissions, and active sessions.
             </x-aura::subheading>
         </div>
         <div class="flex items-center gap-3">
-            <x-aura::button variant="primary" icon="plus" size="sm">
-                Add New User
+            <x-aura::button variant="primary" size="sm">
+                <x-aura::icon name="plus" class="w-4 h-4 mr-1.5 inline-block" />
+                <span>Add New User</span>
             </x-aura::button>
         </div>
     </div>
@@ -32,7 +33,7 @@ new #[Layout('layouts.components')] #[Title('Admin Users - Aura Wire')] class ex
     <x-aura::card class="p-4">
         <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div class="flex items-center gap-3 w-full sm:w-auto">
-                <x-aura::input wire:model.live="search" placeholder="Search users..." icon="search" class="w-full sm:w-64" size="sm" />
+                <x-aura::input wire:model.live="search" placeholder="Search users..." class="w-full sm:w-64" size="sm" />
                 <x-aura::select wire:model.live="role" size="sm" class="w-36">
                     <option value="all">All Roles</option>
                     <option value="admin">Admins</option>
@@ -41,7 +42,7 @@ new #[Layout('layouts.components')] #[Title('Admin Users - Aura Wire')] class ex
                 </x-aura::select>
             </div>
             <div class="flex items-center gap-2 text-xs text-zinc-500">
-                <span>Showing 4 active users</span>
+                <x-aura::text size="xs" variant="subtle">Showing 4 active users</x-aura::text>
             </div>
         </div>
     </x-aura::card>
@@ -62,7 +63,7 @@ new #[Layout('layouts.components')] #[Title('Admin Users - Aura Wire')] class ex
                 <x-aura::table.row>
                     <x-aura::table.cell>
                         <div class="flex items-center gap-3">
-                            <x-aura::avatar initials="AK" size="sm" status="online" />
+                            <x-aura::avatar initials="AK" size="sm" />
                             <div>
                                 <div class="font-semibold text-zinc-900 dark:text-white">Alex Kovacs</div>
                                 <div class="text-xs text-zinc-500">alex@example.com</div>
@@ -84,14 +85,14 @@ new #[Layout('layouts.components')] #[Title('Admin Users - Aura Wire')] class ex
                 <x-aura::table.row>
                     <x-aura::table.cell>
                         <div class="flex items-center gap-3">
-                            <x-aura::avatar initials="JD" size="sm" status="online" />
+                            <x-aura::avatar initials="JD" size="sm" />
                             <div>
                                 <div class="font-semibold text-zinc-900 dark:text-white">Jane Doe</div>
                                 <div class="text-xs text-zinc-500">jane.doe@example.com</div>
                             </div>
                         </div>
                     </x-aura::table.cell>
-                    <x-aura::table.cell><x-aura::badge variant="info" size="sm">Developer</x-aura::badge></x-aura::table.cell>
+                    <x-aura::table.cell><x-aura::badge variant="neutral" size="sm">Developer</x-aura::badge></x-aura::table.cell>
                     <x-aura::table.cell><x-aura::badge variant="neutral" size="sm">Active</x-aura::badge></x-aura::table.cell>
                     <x-aura::table.cell class="text-xs text-zinc-500">2026-07-28</x-aura::table.cell>
                     <x-aura::table.cell class="text-right">
@@ -106,7 +107,7 @@ new #[Layout('layouts.components')] #[Title('Admin Users - Aura Wire')] class ex
                 <x-aura::table.row>
                     <x-aura::table.cell>
                         <div class="flex items-center gap-3">
-                            <x-aura::avatar initials="MS" size="sm" status="away" />
+                            <x-aura::avatar initials="MS" size="sm" />
                             <div>
                                 <div class="font-semibold text-zinc-900 dark:text-white">Marcus Smith</div>
                                 <div class="text-xs text-zinc-500">marcus@example.com</div>
@@ -128,7 +129,7 @@ new #[Layout('layouts.components')] #[Title('Admin Users - Aura Wire')] class ex
                 <x-aura::table.row>
                     <x-aura::table.cell>
                         <div class="flex items-center gap-3">
-                            <x-aura::avatar initials="SL" size="sm" status="offline" />
+                            <x-aura::avatar initials="SL" size="sm" />
                             <div>
                                 <div class="font-semibold text-zinc-900 dark:text-white">Sarah Lee</div>
                                 <div class="text-xs text-zinc-500">sarah.lee@example.com</div>
