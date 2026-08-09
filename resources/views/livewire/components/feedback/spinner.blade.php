@@ -15,7 +15,7 @@ new #[Layout('layouts.components')] #[Title('Spinner - Aura Wire')] class extend
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Feedback Components</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Spinner</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
+        <x-aura::subheading size="sm" class="max-w-lg">
             Animated loading indicators supporting circular rings, bouncing dots, pulsating bars, and radar pings.
         </x-aura::subheading>
         <div class="pt-1">

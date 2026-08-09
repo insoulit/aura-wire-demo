@@ -15,7 +15,7 @@ new #[Layout('layouts.components')] #[Title('Subheading - Aura Wire')] class ext
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Typography Components</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Subheading</x-aura::heading>
-        <x-aura::subheading class="max-w-xl">
+        <x-aura::subheading size="sm" class="max-w-xl">
             Subheading typography component for section lead paragraphs, feature summaries, card header descriptions, and hero text.
         </x-aura::subheading>
         <div class="pt-1">
@@ -30,7 +30,7 @@ new #[Layout('layouts.components')] #[Title('Subheading - Aura Wire')] class ext
         <x-slot:preview>
             <div class="space-y-2 text-center flex flex-col items-center w-full">
                 <x-aura::heading level="2" size="md">Dashboard Analytics</x-aura::heading>
-                <x-aura::subheading class="max-w-lg">
+                <x-aura::subheading size="sm" class="max-w-lg">
                     Monitor your key performance metrics, revenue growth, and active project statistics in real time.
                 </x-aura::subheading>
             </div>

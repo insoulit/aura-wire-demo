@@ -15,7 +15,7 @@ new #[Layout('layouts.components')] #[Title('Sheet Drawer - Aura Wire')] class e
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Overlay Components</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Sheet Drawer</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
+        <x-aura::subheading size="sm" class="max-w-lg">
             Slide-over panels for filter options, mobile navigation drawers, bottom action sheets, and side parameter panels.
         </x-aura::subheading>
         <div class="pt-1">

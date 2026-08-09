@@ -16,7 +16,7 @@ new class extends Component {
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Overlay Components</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Command</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
+        <x-aura::subheading size="sm" class="max-w-lg">
             Keyboard-driven command palette modal dialog listening on <code class="text-xs bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded">Cmd+K</code> / <code class="text-xs bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded">Ctrl+K</code> with instant search filtering.
         </x-aura::subheading>
         <div class="pt-1">

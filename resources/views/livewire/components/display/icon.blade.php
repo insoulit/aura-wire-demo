@@ -95,7 +95,7 @@ new #[Layout('layouts.components')] #[Title('Icon Library - Aura Wire')] class e
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Display Components</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Lucide Icons Library ({{ number_format($this->totalCount) }} Icons)</x-aura::heading>
-        <x-aura::subheading class="max-w-xl">
+        <x-aura::subheading size="sm" class="max-w-xl">
             Browse and search all {{ number_format($this->totalCount) }} Lucide SVG icons natively integrated into Aura Wire. Click any icon card to copy its Blade tag syntax instantly.
         </x-aura::subheading>
         <div class="pt-1 flex items-center gap-3">

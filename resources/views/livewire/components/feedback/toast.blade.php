@@ -15,7 +15,7 @@ new #[Layout('layouts.components')] #[Title('Toast - Aura Wire')] class extends 
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Feedback Components</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Toast</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
+        <x-aura::subheading size="sm" class="max-w-lg">
             Temporary notification popups supporting status variants, dismiss triggers, action buttons, and live notification stacks.
         </x-aura::subheading>
         <div class="pt-1">

@@ -13,7 +13,7 @@ state(['bio' => '']);
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Form Controls</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Textarea</x-aura::heading>
-        <x-aura::subheading class="max-w-xl">
+        <x-aura::subheading size="sm" class="max-w-xl">
             Multi-line text input field supporting auto-resize, custom row count, labels, and error states.
         </x-aura::subheading>
         <div class="pt-1">

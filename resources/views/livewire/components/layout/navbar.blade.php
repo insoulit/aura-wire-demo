@@ -15,7 +15,7 @@ new #[Layout('layouts.components')] #[Title('Navbar - Aura Wire')] class extends
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Layout Components</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Navbar Component</x-aura::heading>
-        <x-aura::subheading class="max-w-xl">
+        <x-aura::subheading size="sm" class="max-w-xl">
             Lightweight, sticky application navigation bars. Supports brand logos, inline links, quick action triggers, search inputs, and user controls.
         </x-aura::subheading>
         <div class="pt-1">

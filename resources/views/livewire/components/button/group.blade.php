@@ -15,7 +15,7 @@ new #[Layout('layouts.components')] #[Title('Button Group - Aura Wire')] class e
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Action Components</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Button Group</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
+        <x-aura::subheading size="sm" class="max-w-lg">
             Group related buttons into cohesive segmented controls, toolbars, and layout actions with refined, subtle border radius.
         </x-aura::subheading>
         <div class="pt-1">

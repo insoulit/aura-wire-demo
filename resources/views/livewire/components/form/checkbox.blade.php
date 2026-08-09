@@ -13,7 +13,7 @@ state(['remember' => true]);
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Form Controls</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Checkbox</x-aura::heading>
-        <x-aura::subheading class="max-w-xl">
+        <x-aura::subheading size="sm" class="max-w-xl">
             Boolean selection inputs for multi-option forms, terms agreements, and toggle states.
         </x-aura::subheading>
         <div class="pt-1">

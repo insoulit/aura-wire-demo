@@ -11,7 +11,7 @@ title('PIN Code - Aura Wire');
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Form Controls</x-aura::kicker>
         <x-aura::heading level="1" size="lg">PIN Code Input</x-aura::heading>
-        <x-aura::subheading class="max-w-xl">
+        <x-aura::subheading size="sm" class="max-w-xl">
             Multi-digit OTP and security verification PIN inputs with auto-focus movement.
         </x-aura::subheading>
         <div class="pt-1">

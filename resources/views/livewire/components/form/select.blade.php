@@ -13,7 +13,7 @@ state(['selected' => 'us']);
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Form Controls</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Select</x-aura::heading>
-        <x-aura::subheading class="max-w-xl">
+        <x-aura::subheading size="sm" class="max-w-xl">
             Native option selection dropdowns supporting option arrays, key-value maps, and field validation.
         </x-aura::subheading>
         <div class="pt-1">

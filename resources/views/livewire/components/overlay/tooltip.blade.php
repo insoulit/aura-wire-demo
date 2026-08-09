@@ -12,7 +12,7 @@ title('Tooltip - Aura Wire');
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Overlay Components</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Tooltip</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
+        <x-aura::subheading size="sm" class="max-w-lg">
             Hover and focus popover tooltips with directional placement options.
         </x-aura::subheading>
         <div class="pt-1">

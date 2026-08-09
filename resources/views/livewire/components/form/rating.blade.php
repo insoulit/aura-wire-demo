@@ -12,7 +12,7 @@ title('Rating - Aura Wire');
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Form Controls</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Rating</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
+        <x-aura::subheading size="sm" class="max-w-lg">
             Monochrome star rating form controls and read-only star rating indicators with precise half-star support.
         </x-aura::subheading>
         <div class="pt-1">

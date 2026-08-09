@@ -66,7 +66,7 @@ new #[Layout('layouts.components')] #[Title('Numbered List - Aura Wire')] class 
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Display Components</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Numbered List</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
+        <x-aura::subheading size="sm" class="max-w-lg">
             Multi-purpose list components with images, action toolbars, card grids, step bars, and compact row lists.
         </x-aura::subheading>
         <div class="pt-1">

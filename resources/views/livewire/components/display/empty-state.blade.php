@@ -15,7 +15,7 @@ new #[Layout('layouts.components')] #[Title('Empty State - Aura Wire')] class ex
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Display Components</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Empty State</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
+        <x-aura::subheading size="sm" class="max-w-lg">
             Placeholder layouts for empty datasets, search resets, document creation, and zero-state screens using buttons and icons.
         </x-aura::subheading>
         <div class="pt-1">

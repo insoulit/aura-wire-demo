@@ -15,7 +15,7 @@ new #[Layout('layouts.components')] #[Title('Pagination - Aura Wire')] class ext
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Navigation Components</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Pagination</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
+        <x-aura::subheading size="sm" class="max-w-lg">
             Multi-purpose pagination components supporting numbered windows, icon-only navigation, circular pills, card footer bars, and alignment controls.
         </x-aura::subheading>
         <div class="pt-1">

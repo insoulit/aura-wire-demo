@@ -12,7 +12,7 @@ title('Tag - Aura Wire');
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Feedback & Status</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Tag</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
+        <x-aura::subheading size="sm" class="max-w-lg">
             Compact pills with generous horizontal padding for labeling, filtering, categories, and active filters.
         </x-aura::subheading>
         <div class="pt-1">

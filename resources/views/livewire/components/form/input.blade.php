@@ -17,7 +17,7 @@ state([
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Form Components</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Input</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
+        <x-aura::subheading size="sm" class="max-w-lg">
             Versatile text, password, and search inputs with icon prefixing, size scales, and validation states.
         </x-aura::subheading>
         <div class="pt-1">

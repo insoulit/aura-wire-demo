@@ -69,7 +69,7 @@ with([
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Data Display Components</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Table</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
+        <x-aura::subheading size="sm" class="max-w-lg">
             Production-grade data tables supporting avatars, status badges, progress indicators, action toolbars, and striped layouts.
         </x-aura::subheading>
         <div class="pt-1">

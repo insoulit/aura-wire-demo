@@ -15,7 +15,7 @@ new #[Layout('layouts.components')] #[Title('Icon Button - Aura Wire')] class ex
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Action Components</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Icon Button</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
+        <x-aura::subheading size="sm" class="max-w-lg">
             Compact circular and square icon triggers powered by 1,000+ Lucide icons for toolbars, list controls, and quick actions.
         </x-aura::subheading>
         <div class="pt-1 flex items-center gap-2">

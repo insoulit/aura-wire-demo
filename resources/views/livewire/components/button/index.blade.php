@@ -15,7 +15,7 @@ new #[Layout('layouts.components')] #[Title('Button - Aura Wire')] class extends
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Action Components</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Button</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
+        <x-aura::subheading size="sm" class="max-w-lg">
             Versatile pill and circular square buttons for triggers, form submissions, icon actions, and interactive layouts.
         </x-aura::subheading>
         <div class="pt-1">

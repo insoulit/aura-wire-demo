@@ -29,7 +29,7 @@ new #[Layout('layouts.components')] #[Title('List - Aura Wire')] class extends C
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Display Components</x-aura::kicker>
         <x-aura::heading level="1" size="lg">List (Un-numbered)</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
+        <x-aura::subheading size="sm" class="max-w-lg">
             Clean un-numbered list components supporting media rows, compact list groups, cards, and minimalist layouts.
         </x-aura::subheading>
         <div class="pt-1 flex items-center gap-2">

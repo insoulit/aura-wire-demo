@@ -15,7 +15,7 @@ new #[Layout('layouts.components')] #[Title('Dropdown - Aura Wire')] class exten
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Action Components</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Dropdown Menu</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
+        <x-aura::subheading size="sm" class="max-w-lg">
             Contextual popover menus with support for headers, icon items, badges, separators, and destructive danger actions.
         </x-aura::subheading>
         <div class="pt-1">

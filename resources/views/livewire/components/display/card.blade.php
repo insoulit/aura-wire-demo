@@ -15,7 +15,7 @@ new #[Layout('layouts.components')] #[Title('Card - Aura Wire')] class extends C
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Display Components</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Card</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
+        <x-aura::subheading size="sm" class="max-w-lg">
             Versatile container cards with header, body, and action footer slots for dashboards, forms, and statistics.
         </x-aura::subheading>
         <div class="pt-1">

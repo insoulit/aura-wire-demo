@@ -12,7 +12,7 @@ title('Accordion - Aura Wire');
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Display Components</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Accordion</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
+        <x-aura::subheading size="sm" class="max-w-lg">
             Expandable vertical accordion item groups with support for single or multiple open items.
         </x-aura::subheading>
         <div class="pt-1">

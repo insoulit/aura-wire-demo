@@ -15,7 +15,7 @@ new #[Layout('layouts.components')] #[Title('Heading - Aura Wire')] class extend
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Typography Components</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Heading</x-aura::heading>
-        <x-aura::subheading class="max-w-xl">
+        <x-aura::subheading size="sm" class="max-w-xl">
             Semantic section headers and display titles supporting multiple levels, size scales, font weights, and layout alignments.
         </x-aura::subheading>
         <div class="pt-1">

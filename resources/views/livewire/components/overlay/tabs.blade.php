@@ -12,7 +12,7 @@ title('Tabs - Aura Wire');
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Overlay Components</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Tabs</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
+        <x-aura::subheading size="sm" class="max-w-lg">
             Tabbed navigation and content area switcher for profile settings, dashboards, and views.
         </x-aura::subheading>
         <div class="pt-1">

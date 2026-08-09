@@ -31,7 +31,7 @@ new #[Layout('layouts.components')] #[Title('Breadcrumbs - Aura Wire')] class ex
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Navigation Components</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Breadcrumbs</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
+        <x-aura::subheading size="sm" class="max-w-lg">
             Hierarchy navigation trails supporting plain text, rectangular panel containers, pill-shaped badge groups, and custom separators.
         </x-aura::subheading>
         <div class="pt-1 flex items-center gap-2">
