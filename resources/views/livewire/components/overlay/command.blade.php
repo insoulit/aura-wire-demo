@@ -5,7 +5,7 @@ use Livewire\Volt\Component;
 new class extends Component {
     public function rendering($view)
     {
-        $view->layout('layouts.components')->title('Command Palette - Aura Wire');
+        $view->layout('layouts.components')->title('Command - Aura Wire');
     }
 };
 
@@ -15,7 +15,7 @@ new class extends Component {
     <!-- Header -->
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Overlay Components</x-aura::kicker>
-        <x-aura::heading level="1" size="lg">Command Palette</x-aura::heading>
+        <x-aura::heading level="1" size="lg">Command</x-aura::heading>
         <x-aura::subheading class="max-w-lg">
             Keyboard-driven command palette modal dialog listening on <code class="text-xs bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded">Cmd+K</code> / <code class="text-xs bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded">Ctrl+K</code> with instant search filtering.
         </x-aura::subheading>
