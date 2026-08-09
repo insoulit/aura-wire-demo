@@ -7,101 +7,202 @@ title('Installation & Setup Guide - Aura Wire');
 
 ?>
 
-<div class="w-full max-w-4xl mx-auto space-y-10">
+<div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <div class="border-b border-zinc-200 dark:border-zinc-800 pb-6">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div>
-                <x-aura::kicker class="text-zinc-500 mb-2">⚡ GETTING STARTED</x-aura::kicker>
-                <x-aura::heading level="1" size="xl">Installation &amp; Setup Guide</x-aura::heading>
-                <x-aura::subheading class="mt-2 max-w-xl text-sm sm:text-base">
-                    Install <code class="text-zinc-900 dark:text-white font-mono font-semibold">insoulit/aura-wire</code> via Composer into your Laravel application and publish assets.
-                </x-aura::subheading>
-            </div>
-
-            <a href="https://packagist.org/packages/insoulit/aura-wire" target="_blank" rel="noopener noreferrer" class="self-start sm:self-center inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold text-white bg-zinc-900 dark:bg-white dark:text-zinc-900 hover:bg-zinc-800 dark:hover:bg-zinc-100 shadow-md transition-all group shrink-0">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                <span>Packagist Release</span>
+    <div class="space-y-3 text-center flex flex-col items-center">
+        <x-aura::kicker>Getting Started</x-aura::kicker>
+        <x-aura::heading level="1" size="lg">Installation &amp; Setup Guide</x-aura::heading>
+        <x-aura::subheading size="sm" class="max-w-xl">
+            Install <code class="text-zinc-900 dark:text-white font-mono font-semibold">insoulit/aura-wire</code> via Composer into your Laravel application and configure Inter typography.
+        </x-aura::subheading>
+        <div class="pt-2 flex items-center gap-3">
+            <a href="https://packagist.org/packages/insoulit/aura-wire" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-white bg-zinc-900 dark:bg-white dark:text-zinc-900 hover:bg-zinc-800 dark:hover:bg-zinc-100 shadow-2xs transition-all group shrink-0">
+                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                <span>Packagist v1.3.0</span>
             </a>
+            <code class="inline-flex items-center px-3.5 py-1.5 rounded-xl text-xs font-mono font-bold bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 shadow-2xs">
+                composer require insoulit/aura-wire
+            </code>
         </div>
     </div>
 
     <!-- Requirements Card -->
-    <x-aura::card title="System Requirements">
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div class="flex items-center gap-3">
-                <x-aura::badge variant="neutral" size="sm">PHP 8.2+</x-aura::badge>
-                <x-aura::text size="xs" variant="subtle">Modern PHP Runtime</x-aura::text>
+    <x-aura::card title="System Requirements" class="w-full">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+            {{-- PHP --}}
+            <div class="flex items-center justify-between p-3.5 rounded-xl bg-zinc-50/80 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800">
+                <div class="flex items-center gap-3 min-w-0">
+                    <div class="w-8 h-8 rounded-lg bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center font-mono font-bold text-xs shrink-0 shadow-2xs">PHP</div>
+                    <div class="min-w-0">
+                        <div class="text-xs font-bold text-zinc-900 dark:text-white truncate">PHP Runtime</div>
+                        <div class="text-[11px] text-zinc-500 dark:text-zinc-400 truncate">Version 8.2 or higher</div>
+                    </div>
+                </div>
+                <x-aura::badge variant="neutral" size="sm" class="shrink-0 ml-2">v8.2+</x-aura::badge>
             </div>
-            <div class="flex items-center gap-3">
-                <x-aura::badge variant="positive" size="sm">Laravel 11 / 12</x-aura::badge>
-                <x-aura::text size="xs" variant="subtle">Framework Support</x-aura::text>
+
+            {{-- Laravel --}}
+            <div class="flex items-center justify-between p-3.5 rounded-xl bg-zinc-50/80 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800">
+                <div class="flex items-center gap-3 min-w-0">
+                    <div class="w-8 h-8 rounded-lg bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center font-mono font-bold text-xs shrink-0 shadow-2xs">LV</div>
+                    <div class="min-w-0">
+                        <div class="text-xs font-bold text-zinc-900 dark:text-white truncate">Laravel Framework</div>
+                        <div class="text-[11px] text-zinc-500 dark:text-zinc-400 truncate">Version 11.x or 12.x</div>
+                    </div>
+                </div>
+                <x-aura::badge variant="positive" size="sm" class="shrink-0 ml-2">v11 / v12</x-aura::badge>
             </div>
-            <div class="flex items-center gap-3">
-                <x-aura::badge variant="subtle" size="sm">Tailwind CSS 3/4</x-aura::badge>
-                <x-aura::text size="xs" variant="subtle">Utility Styling</x-aura::text>
+
+            {{-- Livewire --}}
+            <div class="flex items-center justify-between p-3.5 rounded-xl bg-zinc-50/80 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800">
+                <div class="flex items-center gap-3 min-w-0">
+                    <div class="w-8 h-8 rounded-lg bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center font-mono font-bold text-xs shrink-0 shadow-2xs">LW</div>
+                    <div class="min-w-0">
+                        <div class="text-xs font-bold text-zinc-900 dark:text-white truncate">Livewire Core</div>
+                        <div class="text-[11px] text-zinc-500 dark:text-zinc-400 truncate">Version 3.0 or higher</div>
+                    </div>
+                </div>
+                <x-aura::badge variant="primary" size="sm" class="shrink-0 ml-2">v3.0+</x-aura::badge>
+            </div>
+
+            {{-- Tailwind CSS --}}
+            <div class="flex items-center justify-between p-3.5 rounded-xl bg-zinc-50/80 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800">
+                <div class="flex items-center gap-3 min-w-0">
+                    <div class="w-8 h-8 rounded-lg bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center font-mono font-bold text-xs shrink-0 shadow-2xs">TW</div>
+                    <div class="min-w-0">
+                        <div class="text-xs font-bold text-zinc-900 dark:text-white truncate">Tailwind CSS</div>
+                        <div class="text-[11px] text-zinc-500 dark:text-zinc-400 truncate">Version 3.x or 4.x</div>
+                    </div>
+                </div>
+                <x-aura::badge variant="subtle" size="sm" class="shrink-0 ml-2">v3 / v4</x-aura::badge>
             </div>
         </div>
     </x-aura::card>
 
     <!-- Installation Steps -->
-    <div class="space-y-6">
+    <div class="w-full space-y-6">
         <!-- Step 1 -->
-        <x-aura::card class="space-y-3">
-            <div class="flex items-center gap-3">
-                <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 font-bold text-xs shrink-0">1</span>
-                <x-aura::heading level="2" size="md">Require Package via Composer</x-aura::heading>
+        <x-aura::card class="space-y-4">
+            <div class="flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3">
+                    <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold text-xs shrink-0 shadow-2xs">1</span>
+                    <x-aura::heading level="2" size="md">Require Package via Composer</x-aura::heading>
+                </div>
+                <x-aura::badge variant="subtle" size="sm">Terminal</x-aura::badge>
             </div>
             <x-aura::text size="sm" variant="subtle">Run the composer require command in your Laravel root directory:</x-aura::text>
-            <div class="bg-zinc-950 p-3.5 sm:p-4 rounded-xl border border-zinc-800 text-zinc-100 font-mono text-xs sm:text-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-inner overflow-x-auto scrollbar-none">
-                <span class="break-all">composer require insoulit/aura-wire</span>
-                <x-aura::badge variant="subtle" size="sm" class="self-start sm:self-center shrink-0">Bash</x-aura::badge>
-            </div>
+            <x-aura::code class="w-full" language="bash" active="code" :showTabs="false">
+                <x-slot:codeSlot>composer require insoulit/aura-wire</x-slot:codeSlot>
+            </x-aura::code>
         </x-aura::card>
 
         <!-- Step 2 -->
-        <x-aura::card class="space-y-3">
-            <div class="flex items-center gap-3">
-                <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 font-bold text-xs shrink-0">2</span>
-                <x-aura::heading level="2" size="md">Publish Package Assets &amp; Config</x-aura::heading>
+        <x-aura::card class="space-y-4">
+            <div class="flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3">
+                    <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold text-xs shrink-0 shadow-2xs">2</span>
+                    <x-aura::heading level="2" size="md">Publish Package Assets &amp; Config</x-aura::heading>
+                </div>
+                <x-aura::badge variant="subtle" size="sm">Artisan</x-aura::badge>
             </div>
             <x-aura::text size="sm" variant="subtle">Publish the configuration and Blade components using Artisan:</x-aura::text>
-            <div class="bg-zinc-950 p-3.5 sm:p-4 rounded-xl border border-zinc-800 text-zinc-100 font-mono text-xs sm:text-sm flex flex-col sm:flex-row sm:items-center justify-between gap-3 shadow-inner overflow-x-auto scrollbar-none">
-                <span class="break-all">php artisan vendor:publish --tag="aura-wire-config"</span>
-                <x-aura::badge variant="subtle" size="sm" class="self-start sm:self-center shrink-0">Artisan</x-aura::badge>
-            </div>
+            <x-aura::code class="w-full" language="bash" active="code" :showTabs="false">
+                <x-slot:codeSlot>php artisan vendor:publish --tag="aura-wire-config"</x-slot:codeSlot>
+            </x-aura::code>
         </x-aura::card>
 
         <!-- Step 3 -->
-        <x-aura::card class="space-y-3">
-            <div class="flex items-center gap-3">
-                <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 font-bold text-xs shrink-0">3</span>
-                <x-aura::heading level="2" size="md">Register Component Views in Tailwind</x-aura::heading>
+        <x-aura::card class="space-y-4">
+            <div class="flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3">
+                    <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold text-xs shrink-0 shadow-2xs">3</span>
+                    <x-aura::heading level="2" size="md">Register Component Views in Tailwind</x-aura::heading>
+                </div>
+                <x-aura::badge variant="subtle" size="sm">Tailwind CSS</x-aura::badge>
             </div>
-            <x-aura::text size="sm" variant="subtle">Ensure your <code class="text-zinc-900 dark:text-white font-mono font-semibold">tailwind.config.js</code> or CSS includes vendor components:</x-aura::text>
-            <div class="bg-zinc-950 p-3.5 sm:p-4 rounded-xl border border-zinc-800 text-zinc-200 font-mono text-xs overflow-x-auto scrollbar-none">
-                <pre class="whitespace-pre">content: [
+            <x-aura::text size="sm" variant="subtle">Ensure your <code class="text-zinc-900 dark:text-white font-mono font-semibold">tailwind.config.js</code> or CSS includes vendor component views:</x-aura::text>
+            <x-aura::code class="w-full" language="javascript" active="code" :showTabs="false">
+                <x-slot:codeSlot>content: [
     './resources/**/*.blade.php',
     './vendor/insoulit/aura-wire/resources/views/**/*.blade.php',
-],</pre>
+],</x-slot:codeSlot>
+            </x-aura::code>
+        </x-aura::card>
+
+        <!-- Step 4: Inter Font Guideline (Recommended) -->
+        <x-aura::card class="space-y-4">
+            <div class="flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3">
+                    <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold text-xs shrink-0 shadow-2xs">4</span>
+                    <x-aura::heading level="2" size="md">Inter Font Integration (Recommended)</x-aura::heading>
+                </div>
+                <x-aura::badge variant="primary" size="sm">Typography Guideline</x-aura::badge>
+            </div>
+
+            <x-aura::text size="sm" variant="subtle">
+                AuraWire is designed to look crisp and state-of-the-art using the <strong>Inter</strong> font family. Import Inter in your layout head and configure Tailwind CSS:
+            </x-aura::text>
+
+            <div class="space-y-2">
+                <div class="text-xs font-bold uppercase tracking-wider text-zinc-900 dark:text-white">A. Include Inter via Google Fonts (&lt;head&gt;)</div>
+                <x-aura::code class="w-full" language="html" active="code" :showTabs="false">
+                    <x-slot:codeSlot>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet"&gt;</x-slot:codeSlot>
+                </x-aura::code>
+            </div>
+
+            <div class="space-y-3 pt-2">
+                <div class="text-xs font-bold uppercase tracking-wider text-zinc-900 dark:text-white">B. Configure Font Family in Tailwind CSS</div>
+                <div class="space-y-4">
+                    <div class="space-y-1.5">
+                        <span class="text-xs font-semibold text-zinc-600 dark:text-zinc-400">Tailwind CSS v4 (<code class="font-mono text-indigo-500">resources/css/app.css</code>)</span>
+                        <x-aura::code class="w-full" language="css" active="code" :showTabs="false">
+                            <x-slot:codeSlot>@theme {
+  --font-sans: 'Inter', sans-serif;
+}</x-slot:codeSlot>
+                        </x-aura::code>
+                    </div>
+                    <div class="space-y-1.5">
+                        <span class="text-xs font-semibold text-zinc-600 dark:text-zinc-400">Tailwind CSS v3 (<code class="font-mono text-indigo-500">tailwind.config.js</code>)</span>
+                        <x-aura::code class="w-full" language="javascript" active="code" :showTabs="false">
+                            <x-slot:codeSlot>module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+      },
+    },
+  },
+}</x-slot:codeSlot>
+                        </x-aura::code>
+                    </div>
+                </div>
             </div>
         </x-aura::card>
 
-        <!-- Step 4 -->
-        <x-aura::card class="space-y-3">
-            <div class="flex items-center gap-3">
-                <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 font-bold text-xs shrink-0">4</span>
-                <x-aura::heading level="2" size="md">Use Components with Shorthand Tag Syntax</x-aura::heading>
-            </div>
-            <x-aura::text size="sm" variant="subtle">You can now render components using either <code class="text-zinc-900 dark:text-white font-mono font-semibold">&lt;x-aura::button&gt;</code> or shorthand <code class="text-zinc-900 dark:text-white font-mono font-semibold">&lt;aura:button&gt;</code>:</x-aura::text>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
-                <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 space-y-2">
-                    <div class="text-xs font-semibold text-zinc-900 dark:text-white uppercase tracking-wider">Shorthand Tag Syntax</div>
-                    <div class="bg-zinc-950 p-3 rounded-lg text-zinc-200 font-mono text-xs overflow-x-auto scrollbar-none">&lt;aura:button variant="primary"&gt;Click&lt;/aura:button&gt;</div>
+        <!-- Step 5 -->
+        <x-aura::card class="space-y-4">
+            <div class="flex items-center justify-between gap-3">
+                <div class="flex items-center gap-3">
+                    <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold text-xs shrink-0 shadow-2xs">5</span>
+                    <x-aura::heading level="2" size="md">Use Components with Tag Syntax</x-aura::heading>
                 </div>
-                <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 space-y-2">
-                    <div class="text-xs font-semibold text-zinc-500 uppercase tracking-wider">Standard Blade Syntax</div>
-                    <div class="bg-zinc-950 p-3 rounded-lg text-zinc-200 font-mono text-xs overflow-x-auto scrollbar-none">&lt;x-aura::button variant="primary"&gt;Click&lt;/x-aura::button&gt;</div>
+                <x-aura::badge variant="subtle" size="sm">Usage</x-aura::badge>
+            </div>
+            <x-aura::text size="sm" variant="subtle">Render components using either shorthand <code class="text-zinc-900 dark:text-white font-mono font-semibold">&lt;aura:...&gt;</code> or standard Blade prefix syntax <code class="text-zinc-900 dark:text-white font-mono font-semibold">&lt;x-aura::...&gt;</code>:</x-aura::text>
+            <div class="space-y-4 pt-1">
+                <div class="space-y-1.5">
+                    <div class="text-xs font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">Shorthand Tag Syntax (Recommended)</div>
+                    <x-aura::code class="w-full" language="html" active="code" :showTabs="false">
+                        <x-slot:codeSlot>&lt;aura:button variant="primary"&gt;Save Changes&lt;/aura:button&gt;</x-slot:codeSlot>
+                    </x-aura::code>
+                </div>
+                <div class="space-y-1.5">
+                    <div class="text-xs font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">Standard Blade Prefix Syntax</div>
+                    <x-aura::code class="w-full" language="html" active="code" :showTabs="false">
+                        <x-slot:codeSlot>&lt;x-aura::button variant="primary"&gt;Save Changes&lt;/x-aura::button&gt;</x-slot:codeSlot>
+                    </x-aura::code>
                 </div>
             </div>
         </x-aura::card>
