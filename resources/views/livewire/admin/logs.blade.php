@@ -21,11 +21,11 @@ title('System Logs — Admin Console | Aura Wire');
 
         <div class="flex items-center gap-3">
             <x-aura::button variant="secondary" size="sm">
-                <x-aura::icon name="download" class="w-4 h-4 mr-1.5 inline-block text-zinc-900 dark:text-white" />
+                <x-aura::icon name="download" class="w-4 h-4 mr-1 inline-block text-zinc-900 dark:text-white" />
                 <span>Export CSV</span>
             </x-aura::button>
             <x-aura::button variant="danger" size="sm">
-                <x-aura::icon name="trash-2" class="w-4 h-4 mr-1.5 inline-block" />
+                <x-aura::icon name="trash-2" class="w-4 h-4 mr-1 inline-block" />
                 <span>Clear Logs</span>
             </x-aura::button>
         </div>

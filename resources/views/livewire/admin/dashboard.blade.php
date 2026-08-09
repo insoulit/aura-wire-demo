@@ -21,12 +21,12 @@ title('Admin Console — Aura Wire');
 
         <div class="flex items-center gap-3">
             <x-aura::button variant="secondary" size="sm" href="/optimize-clear" target="_blank">
-                <x-aura::icon name="refresh-cw" class="w-4 h-4 mr-1.5 text-zinc-900 dark:text-white" />
+                <x-aura::icon name="refresh-cw" class="w-4 h-4 mr-1 text-zinc-900 dark:text-white" />
                 <span>Clear Caches</span>
             </x-aura::button>
             <x-aura::button variant="primary" size="sm" href="https://packagist.org/packages/insoulit/aura-wire" target="_blank">
                 <span>Packagist Package</span>
-                <x-aura::icon name="arrow-right" class="w-4 h-4 ml-1.5 inline-block" />
+                <x-aura::icon name="arrow-right" class="w-4 h-4 ml-1 inline-block" />
             </x-aura::button>
         </div>
     </div>
