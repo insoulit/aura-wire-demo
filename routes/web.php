@@ -46,6 +46,9 @@ Volt::route('/components/error', 'components.form.error')->name('components.erro
 Volt::route('/components/file-upload', 'components.form.file-upload')->name('components.file-upload');
 Volt::route('/components/pin-code', 'components.form.pin-code')->name('components.pin-code');
 Volt::route('/components/rich-text', 'components.form.rich-text')->name('components.rich-text');
+Volt::route('/components/combobox', 'components.form.combobox')->name('components.combobox');
+Volt::route('/components/date-picker', 'components.form.date-picker')->name('components.date-picker');
+Volt::route('/components/rating', 'components.form.rating')->name('components.rating');
 
 // Data Display Group
 Volt::route('/components/avatar', 'components.display.avatar')->name('components.avatar');
@@ -56,9 +59,13 @@ Volt::route('/components/separator', 'components.display.separator')->name('comp
 Volt::route('/components/empty-state', 'components.display.empty-state')->name('components.empty-state');
 Volt::route('/components/numbered-list', 'components.display.numbered-list')->name('components.numbered-list');
 Volt::route('/components/list', 'components.display.list')->name('components.list');
-Volt::route('/components/product-card', 'guest.blocks.product-card')->name('components.product-card');
+Volt::route('/components/product-card', 'components.display.product-card')->name('components.product-card');
 Volt::route('/components/progress-bar', 'components.display.progress-bar')->name('components.progress-bar');
 Volt::route('/components/icon', 'components.display.icon')->name('components.icon');
+Volt::route('/components/accordion', 'components.display.accordion')->name('components.accordion');
+Volt::route('/components/stat', 'components.display.stat')->name('components.stat');
+Volt::route('/components/skeleton', 'components.display.skeleton')->name('components.skeleton');
+Volt::route('/components/timeline', 'components.display.timeline')->name('components.timeline');
 
 // Guest Design Blocks Primary Group
 Volt::route('/guest/blocks', 'guest.blocks.index')->name('guest.blocks.index');
@@ -98,6 +105,7 @@ Volt::route('/guest/blocks/user', 'guest.blocks.profile')->name('guest.blocks.us
 // Navigation Group
 Volt::route('/components/breadcrumbs', 'components.navigation.breadcrumbs')->name('components.breadcrumbs');
 Volt::route('/components/pagination', 'components.navigation.pagination')->name('components.pagination');
+Volt::route('/components/stepper', 'components.navigation.stepper')->name('components.stepper');
 
 // Layout & Structural Group
 Volt::route('/components/header', 'components.layout.header')->name('components.header');
@@ -116,6 +124,9 @@ Volt::route('/components/alert', 'components.feedback.alert')->name('components.
 Volt::route('/components/banner', 'components.feedback.alert')->name('components.banner');
 Volt::route('/components/spinner', 'components.feedback.spinner')->name('components.spinner');
 Volt::route('/components/tag', 'components.display.tag')->name('components.tag');
+Volt::route('/components/tooltip', 'components.overlay.tooltip')->name('components.tooltip');
+Volt::route('/components/popover', 'components.overlay.popover')->name('components.popover');
+Volt::route('/components/command', 'components.overlay.command')->name('components.command');
 
 // Table Group
 Volt::route('/components/table', 'components.table.index')->name('components.table');

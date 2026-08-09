@@ -268,6 +268,30 @@ title('Component Directory - Aura Wire');
                 </div>
                 <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1 text-zinc-900 dark:text-white">View Component &rarr;</x-aura::text>
             </a>
+
+            <a href="/components/combobox" class="p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
+                <div>
+                    <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">Combobox</x-aura::heading>
+                    <x-aura::text variant="mono" size="xs" class="mt-1">&lt;x-aura::combobox&gt;</x-aura::text>
+                </div>
+                <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1 text-zinc-900 dark:text-white">View Component &rarr;</x-aura::text>
+            </a>
+
+            <a href="/components/date-picker" class="p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
+                <div>
+                    <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">Date Picker</x-aura::heading>
+                    <x-aura::text variant="mono" size="xs" class="mt-1">&lt;x-aura::date-picker&gt;</x-aura::text>
+                </div>
+                <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1 text-zinc-900 dark:text-white">View Component &rarr;</x-aura::text>
+            </a>
+
+            <a href="/components/rating" class="p-5 rounded-2xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
+                <div>
+                    <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">Rating</x-aura::heading>
+                    <x-aura::text variant="mono" size="xs" class="mt-1">&lt;x-aura::rating&gt;</x-aura::text>
+                </div>
+                <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1 text-zinc-900 dark:text-white">View Component &rarr;</x-aura::text>
+            </a>
         </div>
     </section>
 
