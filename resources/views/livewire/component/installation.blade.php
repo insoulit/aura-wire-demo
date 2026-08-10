@@ -18,7 +18,7 @@ title('Installation & Setup Guide - Aura Wire');
         <div class="pt-2 flex items-center gap-3">
             <a href="https://packagist.org/packages/insoulit/aura-wire" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-white bg-zinc-900 dark:bg-white dark:text-zinc-900 hover:bg-zinc-800 dark:hover:bg-zinc-100 shadow-2xs transition-all group shrink-0">
                 <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                <span>Packagist v1.3.0</span>
+                <span>Packagist v1.4.0</span>
             </a>
             <code class="inline-flex items-center px-3.5 py-1.5 rounded-xl text-xs font-mono font-bold bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 shadow-2xs">
                 composer require insoulit/aura-wire

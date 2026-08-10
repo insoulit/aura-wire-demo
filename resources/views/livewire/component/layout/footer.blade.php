@@ -48,7 +48,7 @@ class extends Component {};
                     <x-slot name="bottom">
                         <span>&copy; {{ date('Y') }} Insoulit. All rights reserved.</span>
                         <div class="flex items-center gap-4 text-xs">
-                            <span class="font-mono">v1.2.0</span>
+                            <span class="font-mono">v1.4.0</span>
                             <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
                         </div>
                     </x-slot>
@@ -69,7 +69,7 @@ class extends Component {};
 
     &lt;x-slot name="bottom"&gt;
         &lt;span&gt;&amp;copy; {{ date('Y') }} Insoulit. All rights reserved.&lt;/span&gt;
-        &lt;span class="font-mono"&gt;v1.2.0&lt;/span&gt;
+        &lt;span class="font-mono"&gt;v1.4.0&lt;/span&gt;
     &lt;/x-slot&gt;
 &lt;/x-aura::footer&gt;</x-slot:codeSlot>
     </x-aura::code>

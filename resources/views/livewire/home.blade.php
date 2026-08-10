@@ -19,7 +19,7 @@ title('Aura Wire — Modern Blade & Livewire UI Components for Laravel');
             
             <!-- Top Version Pill -->
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200/80 dark:border-zinc-700/60 shadow-2xs">
-                <x-aura::badge variant="positive" size="sm" class="font-semibold">v1.3.0</x-aura::badge>
+                <x-aura::badge variant="positive" size="sm" class="font-semibold">v1.4.0</x-aura::badge>
                 <span class="text-xs font-medium text-zinc-600 dark:text-zinc-300">Laravel 11/12 &amp; Livewire 3</span>
             </div>
 

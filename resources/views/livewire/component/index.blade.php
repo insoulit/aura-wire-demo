@@ -14,7 +14,7 @@ title('Component Directory - Aura Wire');
         <div>
             <div class="flex items-center gap-2 mb-2">
                 <x-aura::kicker class="text-zinc-500">📦 insoulit/aura-wire Component Suite</x-aura::kicker>
-                <x-aura::badge variant="positive" size="sm">v1.0.0</x-aura::badge>
+                <x-aura::badge variant="positive" size="sm">v1.4.0</x-aura::badge>
             </div>
             <x-aura::heading level="1" size="xl">Component Directory</x-aura::heading>
             <x-aura::subheading class="mt-1">
