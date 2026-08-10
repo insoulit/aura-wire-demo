@@ -64,25 +64,25 @@ class extends Component {};
 &lt;x-aura::kicker class="text-[10px]"&gt;PROJECT LABELS&lt;/x-aura::kicker&gt;</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 3. Pill & Icon Accent Kickers -->
-    <x-aura::code class="w-full" title="3. Pill &amp; Icon Accent Kickers">
+    <!-- 3. Badge & Icon Accent Kickers -->
+    <x-aura::code class="w-full" title="3. Badge &amp; Icon Accent Kickers">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-4">
-                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/50 border border-indigo-200 dark:border-indigo-800">
-                    <x-aura::icon name="sparkles" size="xs" class="text-indigo-600 dark:text-indigo-400" />
-                    <x-aura::kicker class="!text-indigo-600 dark:!text-indigo-400">NEW RELEASE v2.0</x-aura::kicker>
-                </div>
+                <x-aura::badge variant="subtle" size="sm">
+                    <x-aura::icon name="sparkles" size="xs" class="mr-1 inline-block text-zinc-500 dark:text-zinc-400" />
+                    <span>NEW RELEASE v2.0</span>
+                </x-aura::badge>
 
-                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800">
-                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    <x-aura::kicker class="!text-emerald-700 dark:!text-emerald-300">LIVE MONITORING</x-aura::kicker>
-                </div>
+                <x-aura::badge variant="subtle" size="sm">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse mr-1 inline-block"></span>
+                    <span>LIVE MONITORING</span>
+                </x-aura::badge>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 border border-indigo-200"&gt;
-    &lt;x-aura::icon name="sparkles" size="xs" class="text-indigo-600" /&gt;
-    &lt;x-aura::kicker class="!text-indigo-600"&gt;NEW RELEASE v2.0&lt;/x-aura::kicker&gt;
-&lt;/div&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>&lt;x-aura::badge variant="subtle" size="sm"&gt;
+    &lt;x-aura::icon name="sparkles" size="xs" class="mr-1 inline-block" /&gt;
+    &lt;span&gt;NEW RELEASE v2.0&lt;/span&gt;
+&lt;/x-aura::badge&gt;</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 4. Hero Banner Section Header -->

@@ -8,8 +8,8 @@
             <!-- Component Navigation Sidebar -->
             @include('layouts.components.sidebar')
 
-            <!-- Main Component Page Content Slot Centered on X Axis -->
-            <main class="flex-1 min-w-0 w-full flex flex-col items-center">
+            <!-- Main Component Page Content Slot Centered on X and Y Axis -->
+            <main class="flex-1 min-w-0 w-full flex flex-col items-center justify-center my-auto">
                 {{ $slot }}
 
                 @include('layouts.components.doc-pagination')

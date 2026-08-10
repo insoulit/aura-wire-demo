@@ -75,21 +75,21 @@ class extends Component {};
         <x-slot:preview>
             <div class="space-y-4 w-full">
                 <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 space-y-1">
-                    <p class="text-xs font-mono font-bold text-indigo-600 dark:text-indigo-400 uppercase">as="p" (Default paragraph tag)</p>
+                    <p class="text-xs font-mono font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">as="p" (Default paragraph tag)</p>
                     <x-aura::subheading as="p">
                         Standard paragraph lead text for descriptive body content.
                     </x-aura::subheading>
                 </div>
 
                 <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 space-y-1">
-                    <p class="text-xs font-mono font-bold text-indigo-600 dark:text-indigo-400 uppercase">as="h2" (Semantic H2 heading element)</p>
+                    <p class="text-xs font-mono font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">as="h2" (Semantic H2 heading element)</p>
                     <x-aura::subheading as="h2">
                         Subheading rendered as a semantic level-2 header tag for search engines.
                     </x-aura::subheading>
                 </div>
 
                 <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 space-y-1">
-                    <p class="text-xs font-mono font-bold text-indigo-600 dark:text-indigo-400 uppercase">as="span" (Inline span element)</p>
+                    <p class="text-xs font-mono font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">as="span" (Inline span element)</p>
                     <x-aura::subheading as="span">
                         Inline subheading element for flexible inline container integration.
                     </x-aura::subheading>
