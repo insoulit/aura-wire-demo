@@ -6,32 +6,24 @@ use Livewire\Attributes\Title;
 
 new 
 #[Layout('layout.guest')] 
-#[Title('Auth & Security Block — Guest Portal | Aura Wire')] 
+#[Title('Auth & Security — Guest Portal | Aura Wire')] 
 class extends Component {};
 
 ?>
 
-<div class="w-full max-w-4xl mx-auto space-y-8 py-6">
-    <!-- Header Navigation -->
-    <div class="w-full flex items-center justify-between pb-2">
-        <x-aura::breadcrumb :items="[
-            ['label' => 'Guest Portal', 'href' => '/guest'],
-            ['label' => 'Design Block', 'href' => '/guest/block'],
-            ['label' => 'Auth & Security']
-        ]" separator="slash" />
-
-        <x-aura::button variant="subtle" size="sm" href="/guest" icon="arrow-left">
-            Back
-        </x-aura::button>
-    </div>
-
-    <!-- Header -->
-    <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Guest Portal Design Blocks</x-aura::kicker>
-        <x-aura::heading level="1" size="lg">Auth &amp; Security Blocks</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
-            High-security sign-in cards, multi-factor OTP verification forms, and password recovery modules.
-        </x-aura::subheading>
+<div class="w-full max-w-4xl mx-auto space-y-4 py-6">
+    <!-- Top Header -->
+    <div class="space-y-1 px-1">
+        <div class="flex items-center justify-between gap-4">
+            <div>
+                <x-aura::kicker>Design Blocks</x-aura::kicker>
+                <x-aura::heading level="1" size="lg">Auth &amp; Security</x-aura::heading>
+            </div>
+            <x-aura::button href="/guest" variant="subtle" size="sm" class="shrink-0 gap-1.5">
+                <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 shrink-0" />
+                <span>Back</span>
+            </x-aura::button>
+        </div>
     </div>
 
     <!-- Login Block Preview -->
@@ -72,11 +64,30 @@ class extends Component {};
                 </x-aura::card>
             </div>
         </x-slot:preview>
-        <x-slot name="codeSlot">&lt;x-aura::card class="p-8 max-w-md"&gt;
-    &lt;x-aura::field label="Work Email"&gt;
-        &lt;x-aura::input type="email" /&gt;
-    &lt;/x-aura::field&gt;
-    &lt;x-aura::button variant="primary"&gt;Sign In&lt;/x-aura::button&gt;
+        <x-slot name="codeSlot">&lt;x-aura::card class="p-8 max-w-md space-y-6 shadow-xl"&gt;
+    &lt;div class="space-y-2 text-center"&gt;
+        &lt;h3 class="text-xl font-extrabold"&gt;Welcome Back&lt;/h3&gt;
+        &lt;p class="text-xs text-zinc-500"&gt;Sign in to access your dashboard workspace.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;form class="space-y-4"&gt;
+        &lt;x-aura::field label="Work Email"&gt;
+            &lt;x-aura::input type="email" placeholder="alex@company.com" /&gt;
+        &lt;/x-aura::field&gt;
+
+        &lt;x-aura::field label="Password"&gt;
+            &lt;x-aura::input type="password" placeholder="••••••••" /&gt;
+        &lt;/x-aura::field&gt;
+
+        &lt;div class="flex items-center justify-between text-xs"&gt;
+            &lt;x-aura::checkbox label="Remember me for 30 days" checked /&gt;
+            &lt;a href="#" class="text-indigo-600 font-semibold hover:underline"&gt;Forgot password?&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;x-aura::button variant="primary" size="md" class="w-full"&gt;
+            Sign In to Account
+        &lt;/x-aura::button&gt;
+    &lt;/form&gt;
 &lt;/x-aura::card&gt;</x-slot>
     </x-aura::code>
 </div>

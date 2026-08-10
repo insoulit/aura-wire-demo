@@ -6,32 +6,24 @@ use Livewire\Attributes\Title;
 
 new 
 #[Layout('layout.guest')] 
-#[Title('Pricing Block — Guest Portal | Aura Wire')] 
+#[Title('Pricing Cards — Guest Portal | Aura Wire')] 
 class extends Component {};
 
 ?>
 
-<div class="w-full max-w-4xl mx-auto space-y-8 py-6">
-    <!-- Header Navigation -->
-    <div class="w-full flex items-center justify-between pb-2">
-        <x-aura::breadcrumb :items="[
-            ['label' => 'Guest Portal', 'href' => '/guest'],
-            ['label' => 'Design Block', 'href' => '/guest/block'],
-            ['label' => 'Pricing Cards']
-        ]" separator="slash" />
-
-        <x-aura::button variant="subtle" size="sm" href="/guest" icon="arrow-left">
-            Back
-        </x-aura::button>
-    </div>
-
-    <!-- Header -->
-    <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Guest Portal Design Blocks</x-aura::kicker>
-        <x-aura::heading level="1" size="lg">Pricing Cards Block</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
-            Conversion-optimized pricing tier tables for SaaS platforms, subscriptions, and digital services.
-        </x-aura::subheading>
+<div class="w-full max-w-4xl mx-auto space-y-4 py-6">
+    <!-- Top Header -->
+    <div class="space-y-1 px-1">
+        <div class="flex items-center justify-between gap-4">
+            <div>
+                <x-aura::kicker>Design Blocks</x-aura::kicker>
+                <x-aura::heading level="1" size="lg">Pricing Cards</x-aura::heading>
+            </div>
+            <x-aura::button href="/guest" variant="subtle" size="sm" class="shrink-0 gap-1.5">
+                <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 shrink-0" />
+                <span>Back</span>
+            </x-aura::button>
+        </div>
     </div>
 
     <!-- Pricing Block Preview -->
@@ -66,7 +58,9 @@ class extends Component {};
                             </li>
                         </ul>
                     </div>
-                    <x-aura::button variant="outline" size="md" class="w-full justify-center">Get Started</x-aura::button>
+                    <div class="pt-3">
+                        <x-aura::button variant="outline" size="md" class="w-full justify-center">Get Started</x-aura::button>
+                    </div>
                 </x-aura::card>
 
                 <!-- Tier 2: Pro (Featured) -->
@@ -104,7 +98,9 @@ class extends Component {};
                             </li>
                         </ul>
                     </div>
-                    <x-aura::button variant="primary" size="md" class="w-full justify-center shadow-md">Upgrade to Pro</x-aura::button>
+                    <div class="pt-3">
+                        <x-aura::button variant="primary" size="md" class="w-full justify-center shadow-md">Upgrade to Pro</x-aura::button>
+                    </div>
                 </x-aura::card>
 
                 <!-- Tier 3: Enterprise -->
@@ -135,14 +131,46 @@ class extends Component {};
                             </li>
                         </ul>
                     </div>
-                    <x-aura::button variant="secondary" size="md" class="w-full justify-center">Contact Sales</x-aura::button>
+                    <div class="pt-3">
+                        <x-aura::button variant="secondary" size="md" class="w-full justify-center">Contact Sales</x-aura::button>
+                    </div>
                 </x-aura::card>
             </div>
         </x-slot:preview>
-        <x-slot name="codeSlot">&lt;div class="grid grid-cols-1 md:grid-cols-3 gap-6"&gt;
-    &lt;x-aura::card&gt;Starter ($19)&lt;/x-aura::card&gt;
-    &lt;x-aura::card class="border-2 border-indigo-500"&gt;Pro ($49)&lt;/x-aura::card&gt;
-    &lt;x-aura::card&gt;Enterprise ($199)&lt;/x-aura::card&gt;
+        <x-slot name="codeSlot">&lt;div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full"&gt;
+    &lt;!-- Starter --&gt;
+    &lt;x-aura::card class="flex flex-col justify-between p-6 space-y-6"&gt;
+        &lt;div class="space-y-4"&gt;
+            &lt;x-aura::kicker&gt;For Individuals&lt;/x-aura::kicker&gt;
+            &lt;h3 class="text-xl font-bold"&gt;Starter&lt;/h3&gt;
+            &lt;span class="text-3xl font-black font-mono"&gt;$19/mo&lt;/span&gt;
+            &lt;x-aura::separator /&gt;
+        &lt;/div&gt;
+        &lt;x-aura::button variant="outline" class="w-full"&gt;Get Started&lt;/x-aura::button&gt;
+    &lt;/x-aura::card&gt;
+
+    &lt;!-- Pro (Featured) --&gt;
+    &lt;x-aura::card class="flex flex-col justify-between p-6 space-y-6 border-2 border-indigo-500 shadow-xl"&gt;
+        &lt;x-aura::badge variant="positive" class="bg-indigo-600 text-white"&gt;MOST POPULAR&lt;/x-aura::badge&gt;
+        &lt;div class="space-y-4"&gt;
+            &lt;x-aura::kicker class="text-indigo-500"&gt;For Growing Teams&lt;/x-aura::kicker&gt;
+            &lt;h3 class="text-xl font-bold"&gt;Pro Plan&lt;/h3&gt;
+            &lt;span class="text-3xl font-black font-mono"&gt;$49/mo&lt;/span&gt;
+            &lt;x-aura::separator /&gt;
+        &lt;/div&gt;
+        &lt;x-aura::button variant="primary" class="w-full"&gt;Upgrade to Pro&lt;/x-aura::button&gt;
+    &lt;/x-aura::card&gt;
+
+    &lt;!-- Enterprise --&gt;
+    &lt;x-aura::card class="flex flex-col justify-between p-6 space-y-6"&gt;
+        &lt;div class="space-y-4"&gt;
+            &lt;x-aura::kicker&gt;For Organizations&lt;/x-aura::kicker&gt;
+            &lt;h3 class="text-xl font-bold"&gt;Enterprise&lt;/h3&gt;
+            &lt;span class="text-3xl font-black font-mono"&gt;$199/mo&lt;/span&gt;
+            &lt;x-aura::separator /&gt;
+        &lt;/div&gt;
+        &lt;x-aura::button variant="secondary" class="w-full"&gt;Contact Sales&lt;/x-aura::button&gt;
+    &lt;/x-aura::card&gt;
 &lt;/div&gt;</x-slot>
     </x-aura::code>
 </div>

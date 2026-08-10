@@ -6,32 +6,24 @@ use Livewire\Attributes\Title;
 
 new 
 #[Layout('layout.guest')] 
-#[Title('User Profile Block — Guest Portal | Aura Wire')] 
+#[Title('User Profile — Guest Portal | Aura Wire')] 
 class extends Component {};
 
 ?>
 
-<div class="w-full max-w-4xl mx-auto space-y-8 py-6">
-    <!-- Header Navigation -->
-    <div class="w-full flex items-center justify-between pb-2">
-        <x-aura::breadcrumb :items="[
-            ['label' => 'Guest Portal', 'href' => '/guest'],
-            ['label' => 'Design Block', 'href' => '/guest/block'],
-            ['label' => 'User Profile']
-        ]" separator="slash" />
-
-        <x-aura::button variant="subtle" size="sm" href="/guest" icon="arrow-left">
-            Back
-        </x-aura::button>
-    </div>
-
-    <!-- Header -->
-    <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Guest Portal Design Blocks</x-aura::kicker>
-        <x-aura::heading level="1" size="lg">User Profile Block</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
-            User account management settings cards, avatar uploader, and profile controls.
-        </x-aura::subheading>
+<div class="w-full max-w-4xl mx-auto space-y-4 py-6">
+    <!-- Top Header -->
+    <div class="space-y-1 px-1">
+        <div class="flex items-center justify-between gap-4">
+            <div>
+                <x-aura::kicker>Design Blocks</x-aura::kicker>
+                <x-aura::heading level="1" size="lg">User Profile</x-aura::heading>
+            </div>
+            <x-aura::button href="/guest" variant="subtle" size="sm" class="shrink-0 gap-1.5">
+                <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 shrink-0" />
+                <span>Back</span>
+            </x-aura::button>
+        </div>
     </div>
 
     <!-- User Profile Block Preview -->
@@ -79,11 +71,44 @@ class extends Component {};
                 </x-aura::card>
             </div>
         </x-slot:preview>
-        <x-slot name="codeSlot">&lt;x-aura::card title="Public Profile Information"&gt;
-    &lt;x-aura::avatar initials="AM" status="online" size="xl" /&gt;
-    &lt;x-aura::field label="Email Address"&gt;
-        &lt;x-aura::input type="email" value="alex@company.com" /&gt;
-    &lt;/x-aura::field&gt;
+        <x-slot name="codeSlot">&lt;x-aura::card title="Public Profile Information" description="Update your account details and public avatar."&gt;
+    &lt;div class="space-y-6 py-2"&gt;
+        &lt;!-- Avatar Uploader Row --&gt;
+        &lt;div class="flex items-center gap-5 p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border"&gt;
+            &lt;x-aura::avatar initials="AM" status="online" size="xl" /&gt;
+            &lt;div class="space-y-1 flex-1"&gt;
+                &lt;h4 class="text-sm font-bold"&gt;Alex Morgan&lt;/h4&gt;
+                &lt;p class="text-xs text-zinc-500"&gt;Lead Systems Architect&lt;/p&gt;
+                &lt;div class="flex items-center gap-2 pt-1"&gt;
+                    &lt;x-aura::button variant="outline" size="xs"&gt;Change Photo&lt;/x-aura::button&gt;
+                    &lt;x-aura::button variant="ghost" size="xs"&gt;Remove&lt;/x-aura::button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Form Grid --&gt;
+        &lt;div class="grid grid-cols-1 sm:grid-cols-2 gap-4"&gt;
+            &lt;x-aura::field label="First Name"&gt;
+                &lt;x-aura::input value="Alex" /&gt;
+            &lt;/x-aura::field&gt;
+            &lt;x-aura::field label="Last Name"&gt;
+                &lt;x-aura::input value="Morgan" /&gt;
+            &lt;/x-aura::field&gt;
+        &lt;/div&gt;
+
+        &lt;x-aura::field label="Email Address"&gt;
+            &lt;x-aura::input type="email" value="alex.morgan@company.com"&gt;
+                &lt;x-slot name="iconTrailing"&gt;
+                    &lt;x-aura::badge variant="positive" size="sm"&gt;Verified&lt;/x-aura::badge&gt;
+                &lt;/x-slot&gt;
+            &lt;/x-aura::input&gt;
+        &lt;/x-aura::field&gt;
+    &lt;/div&gt;
+
+    &lt;x-slot name="footer"&gt;
+        &lt;x-aura::button variant="ghost" size="sm"&gt;Cancel&lt;/x-aura::button&gt;
+        &lt;x-aura::button variant="primary" size="sm"&gt;Save Profile&lt;/x-aura::button&gt;
+    &lt;/x-slot&gt;
 &lt;/x-aura::card&gt;</x-slot>
     </x-aura::code>
 </div>

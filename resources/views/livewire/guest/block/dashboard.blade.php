@@ -6,32 +6,24 @@ use Livewire\Attributes\Title;
 
 new 
 #[Layout('layout.guest')] 
-#[Title('Dashboard Widgets Block — Guest Portal | Aura Wire')] 
+#[Title('Dashboard Widgets — Guest Portal | Aura Wire')] 
 class extends Component {};
 
 ?>
 
-<div class="w-full max-w-4xl mx-auto space-y-8 py-6">
-    <!-- Header Navigation -->
-    <div class="w-full flex items-center justify-between pb-2">
-        <x-aura::breadcrumb :items="[
-            ['label' => 'Guest Portal', 'href' => '/guest'],
-            ['label' => 'Design Block', 'href' => '/guest/block'],
-            ['label' => 'Dashboard Widgets']
-        ]" separator="slash" />
-
-        <x-aura::button variant="subtle" size="sm" href="/guest" icon="arrow-left">
-            Back
-        </x-aura::button>
-    </div>
-
-    <!-- Header -->
-    <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Guest Portal Design Blocks</x-aura::kicker>
-        <x-aura::heading level="1" size="lg">Dashboard Widgets Block</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
-            Analytics KPI widgets, operational metric gauges, and activity stream panels.
-        </x-aura::subheading>
+<div class="w-full max-w-4xl mx-auto space-y-4 py-6">
+    <!-- Top Header -->
+    <div class="space-y-1 px-1">
+        <div class="flex items-center justify-between gap-4">
+            <div>
+                <x-aura::kicker>Design Blocks</x-aura::kicker>
+                <x-aura::heading level="1" size="lg">Dashboard Widgets</x-aura::heading>
+            </div>
+            <x-aura::button href="/guest" variant="subtle" size="sm" class="shrink-0 gap-1.5">
+                <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 shrink-0" />
+                <span>Back</span>
+            </x-aura::button>
+        </div>
     </div>
 
     <!-- Dashboard Widgets Block -->
@@ -88,8 +80,40 @@ class extends Component {};
                 </x-aura::card>
             </div>
         </x-slot:preview>
-        <x-slot name="codeSlot">&lt;div class="grid grid-cols-3 gap-4"&gt;
-    &lt;x-aura::card&gt;Metrics&lt;/x-aura::card&gt;
+        <x-slot name="codeSlot">&lt;div class="space-y-6 w-full"&gt;
+    &lt;!-- 3 Metric Summary Cards --&gt;
+    &lt;div class="grid grid-cols-1 sm:grid-cols-3 gap-4"&gt;
+        &lt;x-aura::card class="space-y-2"&gt;
+            &lt;x-aura::kicker&gt;Gross Monthly Sales&lt;/x-aura::kicker&gt;
+            &lt;p class="text-2xl font-black font-mono"&gt;$84,120.00&lt;/p&gt;
+            &lt;x-aura::badge variant="positive" size="sm"&gt;+18.4%&lt;/x-aura::badge&gt;
+        &lt;/x-aura::card&gt;
+
+        &lt;x-aura::card class="space-y-2"&gt;
+            &lt;x-aura::kicker&gt;Active Team Members&lt;/x-aura::kicker&gt;
+            &lt;p class="text-2xl font-black font-mono"&gt;42 Active&lt;/p&gt;
+            &lt;div class="flex items-center gap-1.5"&gt;
+                &lt;x-aura::avatar initials="AM" status="online" size="xs" /&gt;
+                &lt;x-aura::avatar initials="SC" status="online" size="xs" /&gt;
+            &lt;/div&gt;
+        &lt;/x-aura::card&gt;
+
+        &lt;x-aura::card class="space-y-2"&gt;
+            &lt;x-aura::kicker&gt;Cluster Infrastructure&lt;/x-aura::kicker&gt;
+            &lt;p class="text-2xl font-black font-mono text-emerald-600"&gt;99.98% SLA&lt;/p&gt;
+            &lt;x-aura::badge variant="positive" size="sm"&gt;Operational&lt;/x-aura::badge&gt;
+        &lt;/x-aura::card&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Capacity Card --&gt;
+    &lt;x-aura::card title="Infrastructure Load &amp;amp; Capacity"&gt;
+        &lt;x-aura::progress-bar percent="38" variant="emerald" size="md" /&gt;
+        &lt;x-aura::progress-bar percent="72" variant="amber" size="md" /&gt;
+        &lt;x-slot name="footer"&gt;
+            &lt;x-aura::button variant="ghost" size="sm"&gt;System Logs&lt;/x-aura::button&gt;
+            &lt;x-aura::button variant="primary" size="sm"&gt;Scale Node&lt;/x-aura::button&gt;
+        &lt;/x-slot&gt;
+    &lt;/x-aura::card&gt;
 &lt;/div&gt;</x-slot>
     </x-aura::code>
 </div>

@@ -6,32 +6,24 @@ use Livewire\Attributes\Title;
 
 new 
 #[Layout('layout.guest')] 
-#[Title('Product Card Block — Guest Portal | Aura Wire')] 
+#[Title('Product Card — Guest Portal | Aura Wire')] 
 class extends Component {};
 
 ?>
 
-<div class="w-full max-w-4xl mx-auto space-y-8 py-6">
-    <!-- Header Navigation -->
-    <div class="w-full flex items-center justify-between pb-2">
-        <x-aura::breadcrumb :items="[
-            ['label' => 'Guest Portal', 'href' => '/guest'],
-            ['label' => 'Design Block', 'href' => '/guest/block'],
-            ['label' => 'Product Card']
-        ]" separator="slash" />
-
-        <x-aura::button variant="subtle" size="sm" href="/guest" icon="arrow-left">
-            Back
-        </x-aura::button>
-    </div>
-
-    <!-- Header -->
-    <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Guest Portal Design Blocks</x-aura::kicker>
-        <x-aura::heading level="1" size="lg">Product Card Blocks</x-aura::heading>
-        <x-aura::subheading class="max-w-lg">
-            High-converting e-commerce product cards, digital item showcases, and comparison grid layouts built with Aura Wire components.
-        </x-aura::subheading>
+<div class="w-full max-w-4xl mx-auto space-y-4 py-6">
+    <!-- Top Header -->
+    <div class="space-y-1 px-1">
+        <div class="flex items-center justify-between gap-4">
+            <div>
+                <x-aura::kicker>Design Blocks</x-aura::kicker>
+                <x-aura::heading level="1" size="lg">Product Card</x-aura::heading>
+            </div>
+            <x-aura::button href="/guest" variant="subtle" size="sm" class="shrink-0 gap-1.5">
+                <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 shrink-0" />
+                <span>Back</span>
+            </x-aura::button>
+        </div>
     </div>
 
     <!-- 1. E-Commerce Masterpiece Product Block -->
@@ -98,15 +90,22 @@ class extends Component {};
                 </x-aura::card>
             </div>
         </x-slot:preview>
-        <x-slot name="codeSlot">&lt;x-aura::card class="p-0 border overflow-hidden"&gt;
-    &lt;div class="h-56 bg-zinc-900 flex items-center justify-center"&gt;
-        &lt;x-aura::badge variant="positive" size="sm"&gt;Save $50&lt;/x-aura::badge&gt;
+        <x-slot name="codeSlot">&lt;x-aura::card class="overflow-hidden p-0 border border-zinc-200 dark:border-zinc-800 shadow-md"&gt;
+    &lt;!-- Image Showcase Area --&gt;
+    &lt;div class="relative w-full h-56 bg-zinc-900 flex items-center justify-center p-6"&gt;
+        &lt;x-aura::badge variant="positive" size="sm" class="absolute top-3 left-3"&gt;Save $50 (15% OFF)&lt;/x-aura::badge&gt;
     &lt;/div&gt;
 
+    &lt;!-- Card Body Details --&gt;
     &lt;div class="p-6 space-y-4"&gt;
-        &lt;x-aura::kicker&gt;Audio &amp; Electronics&lt;/x-aura::kicker&gt;
-        &lt;h3 class="text-lg font-extrabold"&gt;Aura SoundPro Wireless&lt;/h3&gt;
-        &lt;div class="flex items-center justify-between"&gt;
+        &lt;div class="space-y-1"&gt;
+            &lt;x-aura::kicker&gt;Audio &amp;amp; Electronics&lt;/x-aura::kicker&gt;
+            &lt;h3 class="text-lg font-extrabold text-zinc-900 dark:text-white"&gt;Aura SoundPro Wireless ANC&lt;/h3&gt;
+            &lt;p class="text-xs text-zinc-500 dark:text-zinc-400"&gt;Active noise-cancelling studio headphones.&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;!-- Price &amp; Action CTA --&gt;
+        &lt;div class="pt-2 flex items-center justify-between"&gt;
             &lt;span class="text-2xl font-black font-mono"&gt;$299.00&lt;/span&gt;
             &lt;x-aura::button variant="primary" size="md"&gt;Add to Cart&lt;/x-aura::button&gt;
         &lt;/div&gt;
@@ -150,8 +149,17 @@ class extends Component {};
             </div>
         </x-slot:preview>
         <x-slot name="codeSlot">&lt;div class="grid grid-cols-1 sm:grid-cols-2 gap-6"&gt;
-    &lt;x-aura::card&gt;...&lt;/x-aura::card&gt;
-    &lt;x-aura::card&gt;...&lt;/x-aura::card&gt;
+    &lt;x-aura::card class="space-y-4"&gt;
+        &lt;div class="flex items-center justify-between"&gt;
+            &lt;x-aura::badge variant="neutral" size="sm"&gt;Workspace&lt;/x-aura::badge&gt;
+            &lt;x-aura::badge variant="positive" size="sm"&gt;Popular&lt;/x-aura::badge&gt;
+        &lt;/div&gt;
+        &lt;h4 class="text-base font-bold"&gt;Minimalist Ergonomic Studio Desk&lt;/h4&gt;
+        &lt;div class="flex items-center justify-between pt-2 border-t"&gt;
+            &lt;span class="text-xl font-bold font-mono"&gt;$649.00&lt;/span&gt;
+            &lt;x-aura::button variant="secondary" size="sm"&gt;View Details&lt;/x-aura::button&gt;
+        &lt;/div&gt;
+    &lt;/x-aura::card&gt;
 &lt;/div&gt;</x-slot>
     </x-aura::code>
 </div>
