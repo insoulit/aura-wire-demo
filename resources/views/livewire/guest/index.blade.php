@@ -217,6 +217,296 @@ class extends Component {};
                 </div>
             </x-aura::card>
 
+            <!-- BLOCK 6: Hero Header -->
+            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+                <div class="h-full flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
+                                <x-aura::icon name="layout" class="w-5 h-5" />
+                            </div>
+                            <x-aura::badge variant="subtle" size="sm">Landing</x-aura::badge>
+                        </div>
+
+                        <div class="space-y-2">
+                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                                Hero Header
+                            </x-aura::heading>
+                            <x-aura::text variant="subtle" size="sm">
+                                High-impact landing page hero section with kicker, main title, subheading, and CTA action buttons.
+                            </x-aura::text>
+                        </div>
+                    </div>
+
+                    <div>
+                        <x-aura::button variant="primary" size="md" href="/guest/block/hero" class="w-full justify-center" icon-trailing="arrow-right">
+                            Explore Block
+                        </x-aura::button>
+                    </div>
+                </div>
+            </x-aura::card>
+
+            <!-- BLOCK 7: Feature Grid -->
+            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+                <div class="h-full flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
+                                <x-aura::icon name="grid" class="w-5 h-5" />
+                            </div>
+                            <x-aura::badge variant="subtle" size="sm">Features</x-aura::badge>
+                        </div>
+
+                        <div class="space-y-2">
+                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                                Feature Grid
+                            </x-aura::heading>
+                            <x-aura::text variant="subtle" size="sm">
+                                3-column feature highlights with icon tags, headings, and description cards.
+                            </x-aura::text>
+                        </div>
+                    </div>
+
+                    <div>
+                        <x-aura::button variant="primary" size="md" href="/guest/block/feature" class="w-full justify-center" icon-trailing="arrow-right">
+                            Explore Block
+                        </x-aura::button>
+                    </div>
+                </div>
+            </x-aura::card>
+
+            <!-- BLOCK 8: CTA Banner -->
+            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+                <div class="h-full flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
+                                <x-aura::icon name="zap" class="w-5 h-5" />
+                            </div>
+                            <x-aura::badge variant="subtle" size="sm">Conversion</x-aura::badge>
+                        </div>
+
+                        <div class="space-y-2">
+                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                                CTA Banner
+                            </x-aura::heading>
+                            <x-aura::text variant="subtle" size="sm">
+                                High-converting banner card with special offer badge, title, and action button.
+                            </x-aura::text>
+                        </div>
+                    </div>
+
+                    <div>
+                        <x-aura::button variant="primary" size="md" href="/guest/block/cta" class="w-full justify-center" icon-trailing="arrow-right">
+                            Explore Block
+                        </x-aura::button>
+                    </div>
+                </div>
+            </x-aura::card>
+
+            <!-- BLOCK 9: Testimonial -->
+            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+                <div class="h-full flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
+                                <x-aura::icon name="heart" class="w-5 h-5" />
+                            </div>
+                            <x-aura::badge variant="subtle" size="sm">Reviews</x-aura::badge>
+                        </div>
+
+                        <div class="space-y-2">
+                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                                Testimonial
+                            </x-aura::heading>
+                            <x-aura::text variant="subtle" size="sm">
+                                Customer review card with star ratings, quotes, avatar initials, and company titles.
+                            </x-aura::text>
+                        </div>
+                    </div>
+
+                    <div>
+                        <x-aura::button variant="primary" size="md" href="/guest/block/testimonial" class="w-full justify-center" icon-trailing="arrow-right">
+                            Explore Block
+                        </x-aura::button>
+                    </div>
+                </div>
+            </x-aura::card>
+
+            <!-- BLOCK 10: Modal -->
+            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+                <div class="h-full flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
+                                <x-aura::icon name="layers" class="w-5 h-5" />
+                            </div>
+                            <x-aura::badge variant="subtle" size="sm">Overlay</x-aura::badge>
+                        </div>
+
+                        <div class="space-y-2">
+                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                                Modal
+                            </x-aura::heading>
+                            <x-aura::text variant="subtle" size="sm">
+                                Interactive dialog modal overlay popups with backdrop blur, form fields, and action buttons.
+                            </x-aura::text>
+                        </div>
+                    </div>
+
+                    <div>
+                        <x-aura::button variant="primary" size="md" href="/guest/block/modal" class="w-full justify-center" icon-trailing="arrow-right">
+                            Explore Block
+                        </x-aura::button>
+                    </div>
+                </div>
+            </x-aura::card>
+
+            <!-- BLOCK 11: Slide Over -->
+            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+                <div class="h-full flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
+                                <x-aura::icon name="sidebar" class="w-5 h-5" />
+                            </div>
+                            <x-aura::badge variant="subtle" size="sm">Drawer</x-aura::badge>
+                        </div>
+
+                        <div class="space-y-2">
+                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                                Slide Over
+                            </x-aura::heading>
+                            <x-aura::text variant="subtle" size="sm">
+                                Sliding side drawer panels for filter panels, detail views, and mobile menus.
+                            </x-aura::text>
+                        </div>
+                    </div>
+
+                    <div>
+                        <x-aura::button variant="primary" size="md" href="/guest/block/slide-over" class="w-full justify-center" icon-trailing="arrow-right">
+                            Explore Block
+                        </x-aura::button>
+                    </div>
+                </div>
+            </x-aura::card>
+
+            <!-- BLOCK 12: Timeline -->
+            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+                <div class="h-full flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
+                                <x-aura::icon name="clock" class="w-5 h-5" />
+                            </div>
+                            <x-aura::badge variant="subtle" size="sm">Activity</x-aura::badge>
+                        </div>
+
+                        <div class="space-y-2">
+                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                                Timeline
+                            </x-aura::heading>
+                            <x-aura::text variant="subtle" size="sm">
+                                System deployment and audit log timeline stream with status dots and timestamps.
+                            </x-aura::text>
+                        </div>
+                    </div>
+
+                    <div>
+                        <x-aura::button variant="primary" size="md" href="/guest/block/timeline" class="w-full justify-center" icon-trailing="arrow-right">
+                            Explore Block
+                        </x-aura::button>
+                    </div>
+                </div>
+            </x-aura::card>
+
+            <!-- BLOCK 13: Empty State -->
+            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+                <div class="h-full flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
+                                <x-aura::icon name="folder-open" class="w-5 h-5" />
+                            </div>
+                            <x-aura::badge variant="subtle" size="sm">States</x-aura::badge>
+                        </div>
+
+                        <div class="space-y-2">
+                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                                Empty State
+                            </x-aura::heading>
+                            <x-aura::text variant="subtle" size="sm">
+                                First-time onboarding empty state card with folder icon, description, and create button.
+                            </x-aura::text>
+                        </div>
+                    </div>
+
+                    <div>
+                        <x-aura::button variant="primary" size="md" href="/guest/block/empty-state" class="w-full justify-center" icon-trailing="arrow-right">
+                            Explore Block
+                        </x-aura::button>
+                    </div>
+                </div>
+            </x-aura::card>
+
+            <!-- BLOCK 14: FAQ Accordion -->
+            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+                <div class="h-full flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
+                                <x-aura::icon name="help-circle" class="w-5 h-5" />
+                            </div>
+                            <x-aura::badge variant="subtle" size="sm">Support</x-aura::badge>
+                        </div>
+
+                        <div class="space-y-2">
+                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                                FAQ Accordion
+                            </x-aura::heading>
+                            <x-aura::text variant="subtle" size="sm">
+                                Expandable FAQ card accordion for help centers and common product questions.
+                            </x-aura::text>
+                        </div>
+                    </div>
+
+                    <div>
+                        <x-aura::button variant="primary" size="md" href="/guest/block/faq" class="w-full justify-center" icon-trailing="arrow-right">
+                            Explore Block
+                        </x-aura::button>
+                    </div>
+                </div>
+            </x-aura::card>
+
+            <!-- BLOCK 15: Footer -->
+            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+                <div class="h-full flex flex-col justify-between space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
+                                <x-aura::icon name="compass" class="w-5 h-5" />
+                            </div>
+                            <x-aura::badge variant="subtle" size="sm">Structure</x-aura::badge>
+                        </div>
+
+                        <div class="space-y-2">
+                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                                Footer
+                            </x-aura::heading>
+                            <x-aura::text variant="subtle" size="sm">
+                                Multi-column application footer with brand info, link lists, and copyright bar.
+                            </x-aura::text>
+                        </div>
+                    </div>
+
+                    <div>
+                        <x-aura::button variant="primary" size="md" href="/guest/block/navigation" class="w-full justify-center" icon-trailing="arrow-right">
+                            Explore Block
+                        </x-aura::button>
+                    </div>
+                </div>
+            </x-aura::card>
+
         </div>
     </div>
 

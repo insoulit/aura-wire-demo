@@ -74,6 +74,16 @@ Volt::route('/guest/block/pricing', 'guest.block.pricing')->name('guest.block.pr
 Volt::route('/guest/block/dashboard', 'guest.block.dashboard')->name('guest.block.dashboard');
 Volt::route('/guest/block/auth', 'guest.block.auth')->name('guest.block.auth');
 Volt::route('/guest/block/profile', 'guest.block.profile')->name('guest.block.profile');
+Volt::route('/guest/block/hero', 'guest.block.hero')->name('guest.block.hero');
+Volt::route('/guest/block/feature', 'guest.block.feature')->name('guest.block.feature');
+Volt::route('/guest/block/cta', 'guest.block.cta')->name('guest.block.cta');
+Volt::route('/guest/block/testimonial', 'guest.block.testimonial')->name('guest.block.testimonial');
+Volt::route('/guest/block/modal', 'guest.block.modal')->name('guest.block.modal');
+Volt::route('/guest/block/slide-over', 'guest.block.slide-over')->name('guest.block.slide-over');
+Volt::route('/guest/block/timeline', 'guest.block.timeline')->name('guest.block.timeline');
+Volt::route('/guest/block/empty-state', 'guest.block.empty-state')->name('guest.block.empty-state');
+Volt::route('/guest/block/faq', 'guest.block.faq')->name('guest.block.faq');
+Volt::route('/guest/block/navigation', 'guest.block.navigation')->name('guest.block.navigation');
 
 // Direct /guest/* Aliases for Design Blocks
 Volt::route('/guest/product-card', 'guest.block.product-card')->name('guest.product-card');
