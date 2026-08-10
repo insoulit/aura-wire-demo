@@ -138,18 +138,29 @@ class extends Component {
     </x-aura::card>
 
     <!-- Delete Confirmation Modal -->
-    <x-aura::modal name="delete-user-modal" variant="danger" title="Delete User Account" description="Are you sure you want to delete this user account? This action cannot be undone.">
-        <p class="text-xs text-zinc-600 dark:text-zinc-400">
-            Deleting this user will permanently remove their profile data, access permissions, and active session logs.
-        </p>
+    <x-aura::modal name="delete-user-modal" variant="centered" maxWidth="sm">
+        <div class="flex flex-col items-center text-center space-y-3">
+            <div class="w-12 h-12 rounded-2xl bg-red-100 dark:bg-red-950/60 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-800/60 flex items-center justify-center shrink-0 shadow-xs">
+                <x-aura::icon name="trash" class="w-6 h-6" />
+            </div>
+            
+            <div class="space-y-1">
+                <h3 class="text-base font-bold text-zinc-900 dark:text-white tracking-tight">Delete User Account?</h3>
+                <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                    This action will permanently delete this user profile, active sessions, and permissions. This cannot be undone.
+                </p>
+            </div>
+        </div>
 
         <x-slot:footer>
-            <x-aura::button variant="secondary" size="sm" x-on:click="$dispatch('close-modal', 'delete-user-modal')">
-                Cancel
-            </x-aura::button>
-            <x-aura::button variant="danger" size="sm" x-on:click="$dispatch('close-modal', 'delete-user-modal')">
-                Confirm Delete
-            </x-aura::button>
+            <div class="grid grid-cols-2 gap-3 w-full">
+                <x-aura::button variant="secondary" size="sm" class="w-full justify-center" x-on:click="$dispatch('close-modal', 'delete-user-modal')">
+                    Cancel
+                </x-aura::button>
+                <x-aura::button variant="danger" size="sm" class="w-full justify-center" x-on:click="$dispatch('close-modal', 'delete-user-modal')">
+                    Delete
+                </x-aura::button>
+            </div>
         </x-slot:footer>
     </x-aura::modal>
 
