@@ -1,128 +1,125 @@
 <?php
 
-use function Livewire\Volt\{layout, title};
+use Livewire\Volt\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-layout('layouts.admin');
-title('Admin Console — Aura Wire');
+new 
+#[Layout('layouts.admin')] 
+#[Title('Admin Console — Aura Wire')] 
+class extends Component {
+    public function with(): array
+    {
+        return [
+            'recentUsers' => collect([
+                ['id' => 1, 'name' => 'Alex Kovacs', 'email' => 'alex.k@example.com', 'initials' => 'AK', 'role' => 'Admin', 'variant' => 'positive', 'joined' => '2026-08-01'],
+                ['id' => 2, 'name' => 'Jane Doe', 'email' => 'jane.doe@example.com', 'initials' => 'JD', 'role' => 'Developer', 'variant' => 'neutral', 'joined' => '2026-07-28'],
+                ['id' => 3, 'name' => 'Marcus Vance', 'email' => 'marcus.v@example.com', 'initials' => 'MV', 'role' => 'Member', 'variant' => 'subtle', 'joined' => '2026-07-20'],
+                ['id' => 4, 'name' => 'Elena Rostova', 'email' => 'elena.r@example.com', 'initials' => 'ER', 'role' => 'Admin', 'variant' => 'positive', 'joined' => '2026-07-15'],
+            ]),
+            'recentLogs' => collect([
+                ['time' => '10:48:12', 'level' => 'INFO', 'variant' => 'neutral', 'message' => 'Compiled views cleared successfully via view:clear.'],
+                ['time' => '10:42:05', 'level' => 'NOTICE', 'variant' => 'positive', 'message' => 'Aura Wire ServiceProvider registered 9 component paths.'],
+                ['time' => '10:35:19', 'level' => 'WARNING', 'variant' => 'subtle', 'message' => 'View cache empty for route [components.installation].'],
+                ['time' => '10:20:44', 'level' => 'ERROR', 'variant' => 'danger', 'message' => 'Uncaught ConnectionException: Redis server unreachable.'],
+            ]),
+        ];
+    }
+};
 
 ?>
 
-<div class="space-y-8">
-    <!-- Page Header -->
-    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-5">
-        <div>
-            <div class="flex items-center gap-2 mb-1">
-                <x-aura::kicker class="text-zinc-500">ADMIN CONSOLE</x-aura::kicker>
-                <x-aura::badge variant="neutral" size="sm">System Operational</x-aura::badge>
+<div class="w-full max-w-6xl mx-auto space-y-3">
+
+    <!-- Top Header -->
+    <div class="space-y-1 px-1">
+        <div class="flex items-center justify-between gap-4">
+            <div>
+                <x-aura::kicker>Administration</x-aura::kicker>
+                <x-aura::heading level="1" size="lg">Admin Dashboard</x-aura::heading>
             </div>
-            <x-aura::heading level="1" size="lg">System Management &amp; Analytics</x-aura::heading>
-            <x-aura::subheading size="xs">Monitor insoulit/aura-wire package state, cached views, and user registries</x-aura::subheading>
-        </div>
-
-        <div class="flex items-center gap-3">
-            <x-aura::button variant="secondary" size="sm" href="/optimize-clear" target="_blank">
-                <x-aura::icon name="refresh-cw" class="w-4 h-4 mr-1 text-zinc-900 dark:text-white" />
-                <span>Clear Caches</span>
-            </x-aura::button>
-            <x-aura::button variant="primary" size="sm" href="https://packagist.org/packages/insoulit/aura-wire" target="_blank">
-                <span>Packagist Package</span>
-                <x-aura::icon name="arrow-right" class="w-4 h-4 ml-1 inline-block" />
-            </x-aura::button>
+            <div class="flex items-center gap-2">
+                <x-aura::button href="/admin/users" wire:navigate variant="primary" size="sm" class="shrink-0 gap-1">
+                    <x-aura::icon name="users" class="w-3.5 h-3.5 shrink-0" />
+                    <span>Manage Users</span>
+                </x-aura::button>
+            </div>
         </div>
     </div>
 
-    <!-- Admin System Metrics -->
-    <div class="grid grid-cols-1 sm:grid-cols-4 gap-6">
-        <x-aura::card>
-            <x-aura::text variant="subtle" size="xs">Total Registrations</x-aura::text>
-            <x-aura::heading level="2" size="xl" class="mt-1">1,248</x-aura::heading>
-            <x-aura::badge variant="neutral" class="mt-2 text-[10px]">+14% this week</x-aura::badge>
-        </x-aura::card>
+    <!-- Metrics Cards Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+        <x-aura::stat title="Total Users" value="30" trend="+14% month" trendDirection="up">
+            <x-slot:icon><x-aura::icon name="users" class="w-4 h-4 text-zinc-900 dark:text-white" /></x-slot:icon>
+        </x-aura::stat>
 
-        <x-aura::card>
-            <x-aura::text variant="subtle" size="xs">Package Symlink</x-aura::text>
-            <x-aura::heading level="2" size="xl" class="mt-1 text-zinc-900 dark:text-white">@dev</x-aura::heading>
-            <x-aura::badge variant="neutral" class="mt-2 text-[10px]">packages/aura-wire</x-aura::badge>
-        </x-aura::card>
+        <x-aura::stat title="System Logs" value="24" trend="0 Errors" trendDirection="neutral">
+            <x-slot:icon><x-aura::icon name="activity" class="w-4 h-4 text-zinc-900 dark:text-white" /></x-slot:icon>
+        </x-aura::stat>
 
-        <x-aura::card>
-            <x-aura::text variant="subtle" size="xs">PHP Runtime</x-aura::text>
-            <x-aura::heading level="2" size="xl" class="mt-1 text-zinc-900 dark:text-white">v8.3+</x-aura::heading>
-            <x-aura::badge variant="subtle" class="mt-2 text-[10px]">Strict Types</x-aura::badge>
-        </x-aura::card>
+        <x-aura::stat title="Package Mode" value="@dev" trend="aura-wire" trendDirection="neutral">
+            <x-slot:icon><x-aura::icon name="box" class="w-4 h-4 text-zinc-900 dark:text-white" /></x-slot:icon>
+        </x-aura::stat>
 
-        <x-aura::card>
-            <x-aura::text variant="subtle" size="xs">Livewire Volt</x-aura::text>
-            <x-aura::heading level="2" size="xl" class="mt-1 text-zinc-900 dark:text-white">v1.11</x-aura::heading>
-            <x-aura::badge variant="subtle" class="mt-2 text-[10px]">Functional Routing</x-aura::badge>
-        </x-aura::card>
+        <x-aura::stat title="PHP &amp; Volt" value="v8.3+" trend="Volt v1.11" trendDirection="up">
+            <x-slot:icon><x-aura::icon name="terminal" class="w-4 h-4 text-zinc-900 dark:text-white" /></x-slot:icon>
+        </x-aura::stat>
     </div>
 
-    <!-- Admin Data Table Built with Package Components -->
-    <x-aura::card title="Active Package Registries" description="Registered components and layout portals active in memory">
-        <x-aura::table>
-            <x-aura::table.header>
-                <tr>
-                    <x-aura::table.column>Component Group</x-aura::table.column>
-                    <x-aura::table.column>Count</x-aura::table.column>
-                    <x-aura::table.column>Shorthand Syntax</x-aura::table.column>
-                    <x-aura::table.column>Status</x-aura::table.column>
-                    <x-aura::table.column class="text-right">Actions</x-aura::table.column>
-                </tr>
-            </x-aura::table.header>
-            <x-aura::table.body>
-                <x-aura::table.row>
-                    <x-aura::table.cell class="font-semibold text-zinc-900 dark:text-white">Typography</x-aura::table.cell>
-                    <x-aura::table.cell>4 Components</x-aura::table.cell>
-                    <x-aura::table.cell><code class="text-xs font-mono text-zinc-900 dark:text-zinc-200">&lt;aura:heading&gt;</code></x-aura::table.cell>
-                    <x-aura::table.cell><x-aura::badge variant="neutral">Registered</x-aura::badge></x-aura::table.cell>
-                    <x-aura::table.cell class="text-right">
-                        <x-aura::button variant="ghost" size="xs" href="/components/heading">
-                            <span>Inspect</span>
-                            <x-aura::icon name="chevron-right" class="w-3.5 h-3.5 ml-1 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-all inline-block" />
-                        </x-aura::button>
-                    </x-aura::table.cell>
-                </x-aura::table.row>
+    <!-- Quick Overview Section Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        
+        <!-- Recent Users Card -->
+        <x-aura::card title="Recent Registered Users" description="Latest member registrations in system">
+            <div class="divide-y divide-zinc-100 dark:divide-zinc-800">
+                @foreach ($recentUsers as $user)
+                    <div class="py-3 flex items-center justify-between gap-3">
+                        <div class="flex items-center gap-3">
+                            <x-aura::avatar :initials="$user['initials']" size="sm" />
+                            <div>
+                                <div class="font-semibold text-xs text-zinc-900 dark:text-white">{{ $user['name'] }}</div>
+                                <div class="text-[11px] text-zinc-500">{{ $user['email'] }}</div>
+                            </div>
+                        </div>
+                        <x-aura::badge :variant="$user['variant']" size="sm">{{ $user['role'] }}</x-aura::badge>
+                    </div>
+                @endforeach
+            </div>
 
-                <x-aura::table.row>
-                    <x-aura::table.cell class="font-semibold text-zinc-900 dark:text-white">Form Controls</x-aura::table.cell>
-                    <x-aura::table.cell>10 Components</x-aura::table.cell>
-                    <x-aura::table.cell><code class="text-xs font-mono text-zinc-900 dark:text-zinc-200">&lt;aura:input&gt;</code></x-aura::table.cell>
-                    <x-aura::table.cell><x-aura::badge variant="neutral">Registered</x-aura::badge></x-aura::table.cell>
-                    <x-aura::table.cell class="text-right">
-                        <x-aura::button variant="ghost" size="xs" href="/components/input">
-                            <span>Inspect</span>
-                            <x-aura::icon name="chevron-right" class="w-3.5 h-3.5 ml-1 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-all inline-block" />
-                        </x-aura::button>
-                    </x-aura::table.cell>
-                </x-aura::table.row>
+            <x-slot:footer>
+                <div class="flex items-center justify-end w-full">
+                    <x-aura::button href="/admin/users" wire:navigate variant="ghost" size="xs">
+                        <span>View All Users</span>
+                        <x-aura::icon name="chevron-right" class="w-3.5 h-3.5 ml-1" />
+                    </x-aura::button>
+                </div>
+            </x-slot:footer>
+        </x-aura::card>
 
-                <x-aura::table.row>
-                    <x-aura::table.cell class="font-semibold text-zinc-900 dark:text-white">Display &amp; Data</x-aura::table.cell>
-                    <x-aura::table.cell>11 Components</x-aura::table.cell>
-                    <x-aura::table.cell><code class="text-xs font-mono text-zinc-900 dark:text-zinc-200">&lt;aura:card&gt;</code></x-aura::table.cell>
-                    <x-aura::table.cell><x-aura::badge variant="neutral">Registered</x-aura::badge></x-aura::table.cell>
-                    <x-aura::table.cell class="text-right">
-                        <x-aura::button variant="ghost" size="xs" href="/components/card">
-                            <span>Inspect</span>
-                            <x-aura::icon name="chevron-right" class="w-3.5 h-3.5 ml-1 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-all inline-block" />
-                        </x-aura::button>
-                    </x-aura::table.cell>
-                </x-aura::table.row>
+        <!-- System Log Activity Card -->
+        <x-aura::card title="Recent System Logs" description="Latest runtime events and exception traces">
+            <div class="divide-y divide-zinc-100 dark:divide-zinc-800">
+                @foreach ($recentLogs as $log)
+                    <div class="py-3 flex items-center justify-between gap-3">
+                        <div class="flex items-center gap-2.5 min-w-0">
+                            <x-aura::badge :variant="$log['variant']" size="sm" class="shrink-0">{{ $log['level'] }}</x-aura::badge>
+                            <span class="font-mono text-xs text-zinc-800 dark:text-zinc-200 truncate">{{ $log['message'] }}</span>
+                        </div>
+                        <span class="text-[11px] font-mono text-zinc-400 shrink-0">{{ $log['time'] }}</span>
+                    </div>
+                @endforeach
+            </div>
 
-                <x-aura::table.row>
-                    <x-aura::table.cell class="font-semibold text-zinc-900 dark:text-white">Overlays &amp; Feedback</x-aura::table.cell>
-                    <x-aura::table.cell>6 Components</x-aura::table.cell>
-                    <x-aura::table.cell><code class="text-xs font-mono text-zinc-900 dark:text-zinc-200">&lt;aura:modal&gt;</code></x-aura::table.cell>
-                    <x-aura::table.cell><x-aura::badge variant="neutral">Registered</x-aura::badge></x-aura::table.cell>
-                    <x-aura::table.cell class="text-right">
-                        <x-aura::button variant="ghost" size="xs" href="/components/modal">
-                            <span>Inspect</span>
-                            <x-aura::icon name="chevron-right" class="w-3.5 h-3.5 ml-1 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-white transition-all inline-block" />
-                        </x-aura::button>
-                    </x-aura::table.cell>
-                </x-aura::table.row>
-            </x-aura::table.body>
-        </x-aura::table>
-    </x-aura::card>
+            <x-slot:footer>
+                <div class="flex items-center justify-end w-full">
+                    <x-aura::button href="/admin/logs" wire:navigate variant="ghost" size="xs">
+                        <span>View All Logs</span>
+                        <x-aura::icon name="chevron-right" class="w-3.5 h-3.5 ml-1" />
+                    </x-aura::button>
+                </div>
+            </x-slot:footer>
+        </x-aura::card>
+
+    </div>
+
 </div>
