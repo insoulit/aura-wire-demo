@@ -18,54 +18,54 @@ Route::get('/optimize-clear', function () {
 Volt::route('/', 'home')->name('home');
 
 // Component Showcase Routes (Organized by Component Group)
-Volt::route('/components', 'components.index')->name('components.index');
-Volt::route('/components/installation', 'components.installation')->name('components.installation');
+Volt::route('/components', 'component.index')->name('component.index');
+Volt::route('/components/installation', 'component.installation')->name('component.installation');
 
 // Typography Group
-Volt::route('/components/heading', 'components.typography.heading')->name('components.heading');
-Volt::route('/components/subheading', 'components.typography.subheading')->name('components.subheading');
-Volt::route('/components/kicker', 'components.typography.kicker')->name('components.kicker');
-Volt::route('/components/text', 'components.typography.text')->name('components.text');
+Volt::route('/components/heading', 'component.typography.heading')->name('component.heading');
+Volt::route('/components/subheading', 'component.typography.subheading')->name('component.subheading');
+Volt::route('/components/kicker', 'component.typography.kicker')->name('component.kicker');
+Volt::route('/components/text', 'component.typography.text')->name('component.text');
 
 // Button Group
-Volt::route('/components/button', 'components.button.index')->name('components.button');
-Volt::route('/components/button-group', 'components.button.group')->name('components.button-group');
-Volt::route('/components/icon-button', 'components.button.icon-button')->name('components.icon-button');
-Volt::route('/components/button-icon', 'components.button.icon-button')->name('components.button-icon');
+Volt::route('/components/button', 'component.button.index')->name('component.button');
+Volt::route('/components/button-group', 'component.button.group')->name('component.button-group');
+Volt::route('/components/icon-button', 'component.button.icon-button')->name('component.icon-button');
+Volt::route('/components/button-icon', 'component.button.icon-button')->name('component.button-icon');
 
 // Form Controls Group
-Volt::route('/components/input', 'components.form.input')->name('components.input');
-Volt::route('/components/textarea', 'components.form.textarea')->name('components.textarea');
-Volt::route('/components/select', 'components.form.select')->name('components.select');
-Volt::route('/components/checkbox', 'components.form.checkbox')->name('components.checkbox');
-Volt::route('/components/radio', 'components.form.radio')->name('components.radio');
-Volt::route('/components/switch', 'components.form.switch')->name('components.switch');
-Volt::route('/components/field', 'components.form.field')->name('components.field');
-Volt::route('/components/label', 'components.form.label')->name('components.label');
-Volt::route('/components/error', 'components.form.error')->name('components.error');
-Volt::route('/components/file-upload', 'components.form.file-upload')->name('components.file-upload');
-Volt::route('/components/pin-code', 'components.form.pin-code')->name('components.pin-code');
-Volt::route('/components/rich-text', 'components.form.rich-text')->name('components.rich-text');
-Volt::route('/components/combobox', 'components.form.combobox')->name('components.combobox');
-Volt::route('/components/date-picker', 'components.form.date-picker')->name('components.date-picker');
-Volt::route('/components/rating', 'components.form.rating')->name('components.rating');
+Volt::route('/components/input', 'component.form.input')->name('component.input');
+Volt::route('/components/textarea', 'component.form.textarea')->name('component.textarea');
+Volt::route('/components/select', 'component.form.select')->name('component.select');
+Volt::route('/components/checkbox', 'component.form.checkbox')->name('component.checkbox');
+Volt::route('/components/radio', 'component.form.radio')->name('component.radio');
+Volt::route('/components/switch', 'component.form.switch')->name('component.switch');
+Volt::route('/components/field', 'component.form.field')->name('component.field');
+Volt::route('/components/label', 'component.form.label')->name('component.label');
+Volt::route('/components/error', 'component.form.error')->name('component.error');
+Volt::route('/components/file-upload', 'component.form.file-upload')->name('component.file-upload');
+Volt::route('/components/pin-code', 'component.form.pin-code')->name('component.pin-code');
+Volt::route('/components/rich-text', 'component.form.rich-text')->name('component.rich-text');
+Volt::route('/components/combobox', 'component.form.combobox')->name('component.combobox');
+Volt::route('/components/date-picker', 'component.form.date-picker')->name('component.date-picker');
+Volt::route('/components/rating', 'component.form.rating')->name('component.rating');
 
 // Data Display Group
-Volt::route('/components/avatar', 'components.display.avatar')->name('components.avatar');
-Volt::route('/components/badge', 'components.display.badge')->name('components.badge');
-Volt::route('/components/card', 'components.display.card')->name('components.card');
-Volt::route('/components/code', 'components.display.code')->name('components.code');
-Volt::route('/components/separator', 'components.display.separator')->name('components.separator');
-Volt::route('/components/empty-state', 'components.display.empty-state')->name('components.empty-state');
-Volt::route('/components/numbered-list', 'components.display.numbered-list')->name('components.numbered-list');
-Volt::route('/components/list', 'components.display.list')->name('components.list');
-Volt::route('/components/product-card', 'components.display.product-card')->name('components.product-card');
-Volt::route('/components/progress-bar', 'components.display.progress-bar')->name('components.progress-bar');
-Volt::route('/components/icon', 'components.display.icon')->name('components.icon');
-Volt::route('/components/accordion', 'components.display.accordion')->name('components.accordion');
-Volt::route('/components/stat', 'components.display.stat')->name('components.stat');
-Volt::route('/components/skeleton', 'components.display.skeleton')->name('components.skeleton');
-Volt::route('/components/timeline', 'components.display.timeline')->name('components.timeline');
+Volt::route('/components/avatar', 'component.display.avatar')->name('component.avatar');
+Volt::route('/components/badge', 'component.display.badge')->name('component.badge');
+Volt::route('/components/card', 'component.display.card')->name('component.card');
+Volt::route('/components/code', 'component.display.code')->name('component.code');
+Volt::route('/components/separator', 'component.display.separator')->name('component.separator');
+Volt::route('/components/empty-state', 'component.display.empty-state')->name('component.empty-state');
+Volt::route('/components/numbered-list', 'component.display.numbered-list')->name('component.numbered-list');
+Volt::route('/components/list', 'component.display.list')->name('component.list');
+Volt::route('/components/product-card', 'component.display.product-card')->name('component.product-card');
+Volt::route('/components/progress-bar', 'component.display.progress-bar')->name('component.progress-bar');
+Volt::route('/components/icon', 'component.display.icon')->name('component.icon');
+Volt::route('/components/accordion', 'component.display.accordion')->name('component.accordion');
+Volt::route('/components/stat', 'component.display.stat')->name('component.stat');
+Volt::route('/components/skeleton', 'component.display.skeleton')->name('component.skeleton');
+Volt::route('/components/timeline', 'component.display.timeline')->name('component.timeline');
 
 // Guest Design Blocks Primary Group
 Volt::route('/guest/blocks', 'guest.blocks.index')->name('guest.blocks.index');
@@ -103,33 +103,33 @@ Volt::route('/guest/blocks/user-profile', 'guest.blocks.profile')->name('guest.b
 Volt::route('/guest/blocks/user', 'guest.blocks.profile')->name('guest.blocks.user');
 
 // Navigation Group
-Volt::route('/components/breadcrumb', 'components.navigation.breadcrumb')->name('components.breadcrumb');
-Volt::route('/components/pagination', 'components.navigation.pagination')->name('components.pagination');
-Volt::route('/components/stepper', 'components.navigation.stepper')->name('components.stepper');
+Volt::route('/components/breadcrumb', 'component.navigation.breadcrumb')->name('component.breadcrumb');
+Volt::route('/components/pagination', 'component.navigation.pagination')->name('component.pagination');
+Volt::route('/components/stepper', 'component.navigation.stepper')->name('component.stepper');
 
 // Layout & Structural Group
-Volt::route('/components/header', 'components.layout.header')->name('components.header');
-Volt::route('/components/sidebar', 'components.layout.sidebar')->name('components.sidebar');
-Volt::route('/components/main', 'components.layout.main')->name('components.main');
-Volt::route('/components/navbar', 'components.layout.navbar')->name('components.navbar');
-Volt::route('/components/footer', 'components.layout.footer')->name('components.footer');
+Volt::route('/components/header', 'component.layout.header')->name('component.header');
+Volt::route('/components/sidebar', 'component.layout.sidebar')->name('component.sidebar');
+Volt::route('/components/main', 'component.layout.main')->name('component.main');
+Volt::route('/components/navbar', 'component.layout.navbar')->name('component.navbar');
+Volt::route('/components/footer', 'component.layout.footer')->name('component.footer');
 
 // Overlays & Feedback Group
-Volt::route('/components/modal', 'components.overlay.modal')->name('components.modal');
-Volt::route('/components/toast', 'components.feedback.toast')->name('components.toast');
-Volt::route('/components/dropdown', 'components.overlay.dropdown')->name('components.dropdown');
-Volt::route('/components/tabs', 'components.overlay.tabs')->name('components.tabs');
-Volt::route('/components/sheet', 'components.overlay.sheet')->name('components.sheet');
-Volt::route('/components/alert', 'components.feedback.alert')->name('components.alert');
-Volt::route('/components/banner', 'components.feedback.alert')->name('components.banner');
-Volt::route('/components/spinner', 'components.feedback.spinner')->name('components.spinner');
-Volt::route('/components/tag', 'components.display.tag')->name('components.tag');
-Volt::route('/components/tooltip', 'components.overlay.tooltip')->name('components.tooltip');
-Volt::route('/components/popover', 'components.overlay.popover')->name('components.popover');
-Volt::route('/components/command', 'components.overlay.command')->name('components.command');
+Volt::route('/components/modal', 'component.overlay.modal')->name('component.modal');
+Volt::route('/components/toast', 'component.feedback.toast')->name('component.toast');
+Volt::route('/components/dropdown', 'component.overlay.dropdown')->name('component.dropdown');
+Volt::route('/components/tabs', 'component.overlay.tabs')->name('component.tabs');
+Volt::route('/components/sheet', 'component.overlay.sheet')->name('component.sheet');
+Volt::route('/components/alert', 'component.feedback.alert')->name('component.alert');
+Volt::route('/components/banner', 'component.feedback.alert')->name('component.banner');
+Volt::route('/components/spinner', 'component.feedback.spinner')->name('component.spinner');
+Volt::route('/components/tag', 'component.display.tag')->name('component.tag');
+Volt::route('/components/tooltip', 'component.overlay.tooltip')->name('component.tooltip');
+Volt::route('/components/popover', 'component.overlay.popover')->name('component.popover');
+Volt::route('/components/command', 'component.overlay.command')->name('component.command');
 
 // Table Group
-Volt::route('/components/table', 'components.table.index')->name('components.table');
+Volt::route('/components/table', 'component.table.index')->name('component.table');
 
 // Portal Layout Routes
 Volt::route('/guest', 'guest.index')->name('guest.index');
