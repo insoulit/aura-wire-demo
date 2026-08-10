@@ -11,7 +11,20 @@ class extends Component {};
 
 ?>
 
-<div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center py-6">
+<div class="w-full max-w-4xl mx-auto space-y-8 py-6">
+    <!-- Header Navigation -->
+    <div class="w-full flex items-center justify-between pb-2">
+        <x-aura::breadcrumb :items="[
+            ['label' => 'Guest Portal', 'href' => '/guest'],
+            ['label' => 'Design Block', 'href' => '/guest/block'],
+            ['label' => 'Product Card']
+        ]" separator="slash" />
+
+        <x-aura::button variant="subtle" size="sm" href="/guest" icon="arrow-left">
+            Back
+        </x-aura::button>
+    </div>
+
     <!-- Header -->
     <div class="space-y-3 text-center flex flex-col items-center">
         <x-aura::kicker>Guest Portal Design Blocks</x-aura::kicker>

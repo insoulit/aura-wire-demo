@@ -11,7 +11,19 @@ class extends Component {};
 
 ?>
 
-<div class="w-full max-w-6xl space-y-12 py-6">
+<div class="w-full max-w-6xl space-y-8 py-6">
+    <!-- Header Navigation -->
+    <div class="w-full flex items-center justify-between pb-2">
+        <x-aura::breadcrumb :items="[
+            ['label' => 'Guest Portal', 'href' => '/guest'],
+            ['label' => 'Design Block Catalog']
+        ]" separator="slash" />
+
+        <x-aura::button variant="subtle" size="sm" href="/guest" icon="arrow-left">
+            Back
+        </x-aura::button>
+    </div>
+
     <!-- Header -->
     <div class="relative text-center space-y-4 max-w-3xl mx-auto">
         <x-aura::badge variant="neutral" size="md">GUEST PORTAL DESIGN BLOCKS</x-aura::badge>
