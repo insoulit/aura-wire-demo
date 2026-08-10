@@ -4,7 +4,10 @@ use Livewire\Volt\Component;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
-new #[Layout('layouts.user')] #[Title('Profile Picture — User Panel | Aura Wire')] class extends Component {
+new 
+#[Layout('layouts.user')] 
+#[Title('Profile Picture — User Panel | Aura Wire')] 
+class extends Component {
     public bool $uploaded = false;
 
     public function save()

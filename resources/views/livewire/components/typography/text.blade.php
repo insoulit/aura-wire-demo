@@ -4,9 +4,10 @@ use Livewire\Volt\Component;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
-new #[Layout('layouts.components')] #[Title('Text - Aura Wire')] class extends Component {
-    //
-};
+new 
+#[Layout('layouts.components')] 
+#[Title('Text - Aura Wire')] 
+class extends Component {};
 
 ?>
 

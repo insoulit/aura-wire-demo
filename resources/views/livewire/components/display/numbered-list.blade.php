@@ -4,7 +4,10 @@ use Livewire\Volt\Component;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
-new #[Layout('layouts.components')] #[Title('Numbered List - Aura Wire')] class extends Component {
+new 
+#[Layout('layouts.components')] 
+#[Title('Numbered List - Aura Wire')] 
+class extends Component {
     public function with(): array
     {
         return [

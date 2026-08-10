@@ -4,7 +4,10 @@ use Livewire\Volt\Component;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
-new #[Layout('layouts.components')] #[Title('Icon Library - Aura Wire')] class extends Component {
+new 
+#[Layout('layouts.components')] 
+#[Title('Icon Library - Aura Wire')] 
+class extends Component {
     public string $search = '';
     public int $page = 1;
     public int $perPage = 48;

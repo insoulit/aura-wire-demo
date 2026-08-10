@@ -4,9 +4,10 @@ use Livewire\Volt\Component;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
-new #[Layout('layouts.guest')] #[Title('Guest Portal — Design Blocks & Templates | Aura Wire')] class extends Component {
-    //
-};
+new 
+#[Layout('layouts.guest')] 
+#[Title('Guest Portal — Design Blocks & Templates | Aura Wire')] 
+class extends Component {};
 
 ?>
 

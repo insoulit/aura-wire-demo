@@ -4,7 +4,10 @@ use Livewire\Volt\Component;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
-new #[Layout('layouts.user')] #[Title('Profile & Account Settings — User Panel | Aura Wire')] class extends Component {
+new 
+#[Layout('layouts.user')] 
+#[Title('Profile & Account Settings — User Panel | Aura Wire')] 
+class extends Component {
     public string $firstName = 'Alex';
     public string $lastName = 'Kovacs';
     public string $email = 'alex.kovacs@example.com';

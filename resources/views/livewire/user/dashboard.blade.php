@@ -4,9 +4,10 @@ use Livewire\Volt\Component;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
-new #[Layout('layouts.user')] #[Title('User Dashboard — User Panel | Aura Wire')] class extends Component {
-    //
-};
+new 
+#[Layout('layouts.user')] 
+#[Title('User Dashboard — User Panel | Aura Wire')] 
+class extends Component {};
 
 ?>
 
