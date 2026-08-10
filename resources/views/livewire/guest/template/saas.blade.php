@@ -2,7 +2,7 @@
 
 use function Livewire\Volt\{layout, title, state};
 
-layout('layouts.guest');
+layout('layout.guest');
 title('SaaS Platform UI Kit — Aura Wire');
 
 state([

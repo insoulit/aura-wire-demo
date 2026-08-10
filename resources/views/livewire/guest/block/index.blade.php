@@ -5,7 +5,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
 new 
-#[Layout('layouts.guest')] 
+#[Layout('layout.guest')] 
 #[Title('Design Blocks — Guest Portal | Aura Wire')] 
 class extends Component {};
 
@@ -40,7 +40,7 @@ class extends Component {};
                 </div>
             </div>
             <div class="pt-6">
-                <x-aura::button variant="primary" size="sm" href="/guest/blocks/product-card" class="w-full justify-center">
+                <x-aura::button variant="primary" size="sm" href="/guest/block/product-card" class="w-full justify-center">
                     Explore Product Card Block &rarr;
                 </x-aura::button>
             </div>
@@ -63,7 +63,7 @@ class extends Component {};
                 </div>
             </div>
             <div class="pt-6">
-                <x-aura::button variant="primary" size="sm" href="/guest/blocks/pricing" class="w-full justify-center">
+                <x-aura::button variant="primary" size="sm" href="/guest/block/pricing" class="w-full justify-center">
                     Explore Pricing Cards &rarr;
                 </x-aura::button>
             </div>
@@ -86,7 +86,7 @@ class extends Component {};
                 </div>
             </div>
             <div class="pt-6">
-                <x-aura::button variant="primary" size="sm" href="/guest/blocks/dashboard" class="w-full justify-center">
+                <x-aura::button variant="primary" size="sm" href="/guest/block/dashboard" class="w-full justify-center">
                     Explore Dashboard Widgets &rarr;
                 </x-aura::button>
             </div>
@@ -109,7 +109,7 @@ class extends Component {};
                 </div>
             </div>
             <div class="pt-6">
-                <x-aura::button variant="primary" size="sm" href="/guest/blocks/auth" class="w-full justify-center">
+                <x-aura::button variant="primary" size="sm" href="/guest/block/auth" class="w-full justify-center">
                     Explore Auth Block &rarr;
                 </x-aura::button>
             </div>
@@ -132,7 +132,7 @@ class extends Component {};
                 </div>
             </div>
             <div class="pt-6">
-                <x-aura::button variant="primary" size="sm" href="/guest/blocks/profile" class="w-full justify-center">
+                <x-aura::button variant="primary" size="sm" href="/guest/block/profile" class="w-full justify-center">
                     Explore User Profile Block &rarr;
                 </x-aura::button>
             </div>

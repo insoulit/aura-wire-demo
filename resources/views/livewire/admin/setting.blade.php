@@ -5,7 +5,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
 new 
-#[Layout('layouts.admin')] 
+#[Layout('layout.admin')] 
 #[Title('Admin Settings — Admin Panel | Aura Wire')] 
 class extends Component {
     public string $siteName = 'Aura Wire Portal';

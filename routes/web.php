@@ -68,39 +68,39 @@ Volt::route('/components/skeleton', 'component.display.skeleton')->name('compone
 Volt::route('/components/timeline', 'component.display.timeline')->name('component.timeline');
 
 // Guest Design Blocks Primary Group
-Volt::route('/guest/blocks', 'guest.blocks.index')->name('guest.blocks.index');
-Volt::route('/guest/blocks/product-card', 'guest.blocks.product-card')->name('guest.blocks.product-card');
-Volt::route('/guest/blocks/pricing', 'guest.blocks.pricing')->name('guest.blocks.pricing');
-Volt::route('/guest/blocks/dashboard', 'guest.blocks.dashboard')->name('guest.blocks.dashboard');
-Volt::route('/guest/blocks/auth', 'guest.blocks.auth')->name('guest.blocks.auth');
-Volt::route('/guest/blocks/profile', 'guest.blocks.profile')->name('guest.blocks.profile');
+Volt::route('/guest/block', 'guest.block.index')->name('guest.block.index');
+Volt::route('/guest/block/product-card', 'guest.block.product-card')->name('guest.block.product-card');
+Volt::route('/guest/block/pricing', 'guest.block.pricing')->name('guest.block.pricing');
+Volt::route('/guest/block/dashboard', 'guest.block.dashboard')->name('guest.block.dashboard');
+Volt::route('/guest/block/auth', 'guest.block.auth')->name('guest.block.auth');
+Volt::route('/guest/block/profile', 'guest.block.profile')->name('guest.block.profile');
 
 // Direct /guest/* Aliases for Design Blocks
-Volt::route('/guest/product-card', 'guest.blocks.product-card')->name('guest.product-card');
-Volt::route('/guest/pricing', 'guest.blocks.pricing')->name('guest.pricing');
-Volt::route('/guest/dashboard-widgets', 'guest.blocks.dashboard')->name('guest.dashboard-widgets');
-Volt::route('/guest/auth', 'guest.blocks.auth')->name('guest.auth');
-Volt::route('/guest/profile', 'guest.blocks.profile')->name('guest.profile');
+Volt::route('/guest/product-card', 'guest.block.product-card')->name('guest.product-card');
+Volt::route('/guest/pricing', 'guest.block.pricing')->name('guest.pricing');
+Volt::route('/guest/dashboard-widgets', 'guest.block.dashboard')->name('guest.dashboard-widgets');
+Volt::route('/guest/auth', 'guest.block.auth')->name('guest.auth');
+Volt::route('/guest/profile', 'guest.block.profile')->name('guest.profile');
 
 // Top-Level /blocks/* Aliases for Design Blocks
-Volt::route('/blocks', 'guest.blocks.index')->name('blocks.index');
-Volt::route('/blocks/product-card', 'guest.blocks.product-card')->name('blocks.product-card');
-Volt::route('/blocks/pricing', 'guest.blocks.pricing')->name('blocks.pricing');
-Volt::route('/blocks/dashboard', 'guest.blocks.dashboard')->name('blocks.dashboard');
-Volt::route('/blocks/auth', 'guest.blocks.auth')->name('blocks.auth');
-Volt::route('/blocks/profile', 'guest.blocks.profile')->name('blocks.profile');
+Volt::route('/blocks', 'guest.block.index')->name('blocks.index');
+Volt::route('/blocks/product-card', 'guest.block.product-card')->name('blocks.product-card');
+Volt::route('/blocks/pricing', 'guest.block.pricing')->name('blocks.pricing');
+Volt::route('/blocks/dashboard', 'guest.block.dashboard')->name('blocks.dashboard');
+Volt::route('/blocks/auth', 'guest.block.auth')->name('blocks.auth');
+Volt::route('/blocks/profile', 'guest.block.profile')->name('blocks.profile');
 
 // Synonym / Plural Route Aliases for Design Blocks
-Volt::route('/guest/blocks/product', 'guest.blocks.product-card')->name('guest.blocks.product');
-Volt::route('/guest/blocks/products', 'guest.blocks.product-card')->name('guest.blocks.products');
-Volt::route('/guest/blocks/pricing-table', 'guest.blocks.pricing')->name('guest.blocks.pricing-table');
-Volt::route('/guest/blocks/pricing-cards', 'guest.blocks.pricing')->name('guest.blocks.pricing-cards');
-Volt::route('/guest/blocks/widgets', 'guest.blocks.dashboard')->name('guest.blocks.widgets');
-Volt::route('/guest/blocks/analytics', 'guest.blocks.dashboard')->name('guest.blocks.analytics');
-Volt::route('/guest/blocks/login', 'guest.blocks.auth')->name('guest.blocks.login');
-Volt::route('/guest/blocks/security', 'guest.blocks.auth')->name('guest.blocks.security');
-Volt::route('/guest/blocks/user-profile', 'guest.blocks.profile')->name('guest.blocks.user-profile');
-Volt::route('/guest/blocks/user', 'guest.blocks.profile')->name('guest.blocks.user');
+Volt::route('/guest/block/product', 'guest.block.product-card')->name('guest.block.product');
+Volt::route('/guest/block/products', 'guest.block.product-card')->name('guest.block.products');
+Volt::route('/guest/block/pricing-table', 'guest.block.pricing')->name('guest.block.pricing-table');
+Volt::route('/guest/block/pricing-cards', 'guest.block.pricing')->name('guest.block.pricing-cards');
+Volt::route('/guest/block/widgets', 'guest.block.dashboard')->name('guest.block.widgets');
+Volt::route('/guest/block/analytics', 'guest.block.dashboard')->name('guest.block.analytics');
+Volt::route('/guest/block/login', 'guest.block.auth')->name('guest.block.login');
+Volt::route('/guest/block/security', 'guest.block.auth')->name('guest.block.security');
+Volt::route('/guest/block/user-profile', 'guest.block.profile')->name('guest.block.user-profile');
+Volt::route('/guest/block/user', 'guest.block.profile')->name('guest.block.user');
 
 // Navigation Group
 Volt::route('/components/breadcrumb', 'component.navigation.breadcrumb')->name('component.breadcrumb');
@@ -118,7 +118,7 @@ Volt::route('/components/footer', 'component.layout.footer')->name('component.fo
 Volt::route('/components/modal', 'component.overlay.modal')->name('component.modal');
 Volt::route('/components/toast', 'component.feedback.toast')->name('component.toast');
 Volt::route('/components/dropdown', 'component.overlay.dropdown')->name('component.dropdown');
-Volt::route('/components/tabs', 'component.overlay.tabs')->name('component.tabs');
+Volt::route('/components/tabs', 'component.overlay.tab')->name('component.tabs');
 Volt::route('/components/sheet', 'component.overlay.sheet')->name('component.sheet');
 Volt::route('/components/alert', 'component.feedback.alert')->name('component.alert');
 Volt::route('/components/banner', 'component.feedback.alert')->name('component.banner');
@@ -135,25 +135,25 @@ Volt::route('/components/table', 'component.table.index')->name('component.table
 Volt::route('/guest', 'guest.index')->name('guest.index');
 
 // Guest Templates Group
-Volt::route('/guest/templates', 'guest.templates.index')->name('guest.templates.index');
-Volt::route('/guest/templates/ecommerce', 'guest.templates.ecommerce')->name('guest.templates.ecommerce');
-Volt::route('/guest/templates/portfolio', 'guest.templates.portfolio')->name('guest.templates.portfolio');
-Volt::route('/guest/templates/restaurant', 'guest.templates.restaurant')->name('guest.templates.restaurant');
-Volt::route('/guest/templates/saas', 'guest.templates.saas')->name('guest.templates.saas');
-Volt::route('/guest/templates/agency', 'guest.templates.agency')->name('guest.templates.agency');
+Volt::route('/guest/template', 'guest.template.index')->name('guest.template.index');
+Volt::route('/guest/template/ecommerce', 'guest.template.ecommerce')->name('guest.template.ecommerce');
+Volt::route('/guest/template/portfolio', 'guest.template.portfolio')->name('guest.template.portfolio');
+Volt::route('/guest/template/restaurant', 'guest.template.restaurant')->name('guest.template.restaurant');
+Volt::route('/guest/template/saas', 'guest.template.saas')->name('guest.template.saas');
+Volt::route('/guest/template/agency', 'guest.template.agency')->name('guest.template.agency');
 
 // Backward Compatibility Aliases for /guest/*
-Volt::route('/guest/ecommerce', 'guest.templates.ecommerce')->name('guest.ecommerce');
-Volt::route('/guest/portfolio', 'guest.templates.portfolio')->name('guest.portfolio');
-Volt::route('/guest/restaurant', 'guest.templates.restaurant')->name('guest.restaurant');
-Volt::route('/guest/saas', 'guest.templates.saas')->name('guest.saas');
-Volt::route('/guest/agency', 'guest.templates.agency')->name('guest.agency');
+Volt::route('/guest/ecommerce', 'guest.template.ecommerce')->name('guest.ecommerce');
+Volt::route('/guest/portfolio', 'guest.template.portfolio')->name('guest.portfolio');
+Volt::route('/guest/restaurant', 'guest.template.restaurant')->name('guest.restaurant');
+Volt::route('/guest/saas', 'guest.template.saas')->name('guest.saas');
+Volt::route('/guest/agency', 'guest.template.agency')->name('guest.agency');
 Volt::route('/dashboard', 'user.dashboard')->name('dashboard');
 Volt::route('/user/profile', 'user.profile')->name('user.profile');
 Volt::route('/user/avatar', 'user.avatar')->name('user.avatar');
 Volt::route('/user/email', 'user.email')->name('user.email');
 Volt::route('/user/password', 'user.password')->name('user.password');
-Volt::route('/user/settings', 'user.settings')->name('user.settings');
+Volt::route('/user/setting', 'user.setting')->name('user.setting');
 Volt::route('/admin', 'admin.dashboard')->name('admin.dashboard');
 Volt::route('/admin/users', 'admin.user.index')->name('admin.users');
 Volt::route('/admin/users/create', 'admin.user.create')->name('admin.users.create');
@@ -161,6 +161,6 @@ Volt::route('/admin/users/edit', 'admin.user.edit')->name('admin.users.edit');
 Volt::route('/admin/users/show', 'admin.user.show')->name('admin.users.show');
 Volt::route('/admin/logs', 'admin.log.index')->name('admin.logs');
 Volt::route('/admin/logs/show', 'admin.log.show')->name('admin.logs.show');
-Volt::route('/admin/settings', 'admin.settings')->name('admin.settings');
+Volt::route('/admin/setting', 'admin.setting')->name('admin.setting');
 
 

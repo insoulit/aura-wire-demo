@@ -5,7 +5,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
 new 
-#[Layout('layouts.components')] 
+#[Layout('layout.component')] 
 #[Title('Header - Aura Wire')] 
 class extends Component {};
 

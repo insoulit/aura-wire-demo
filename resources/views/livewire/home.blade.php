@@ -2,7 +2,7 @@
 
 use function Livewire\Volt\{layout, title};
 
-layout('layouts.app');
+layout('layout.app');
 title('Aura Wire — Modern Blade & Livewire UI Components for Laravel');
 
 ?>

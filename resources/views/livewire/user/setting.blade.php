@@ -5,7 +5,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
 new 
-#[Layout('layouts.user')] 
+#[Layout('layout.user')] 
 #[Title('Profile & Account Settings — User Panel | Aura Wire')] 
 class extends Component {
     public string $firstName = 'Alex';

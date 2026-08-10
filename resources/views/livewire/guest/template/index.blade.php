@@ -5,7 +5,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
 new 
-#[Layout('layouts.guest')] 
+#[Layout('layout.guest')] 
 #[Title('Full Page Templates — Guest Portal | Aura Wire')] 
 class extends Component {};
 
@@ -40,7 +40,7 @@ class extends Component {};
                 </div>
             </div>
             <div class="pt-6">
-                <x-aura::button variant="primary" size="sm" href="/guest/templates/ecommerce" class="w-full justify-center">
+                <x-aura::button variant="primary" size="sm" href="/guest/template/ecommerce" class="w-full justify-center">
                     Explore E-Commerce &rarr;
                 </x-aura::button>
             </div>
@@ -63,7 +63,7 @@ class extends Component {};
                 </div>
             </div>
             <div class="pt-6">
-                <x-aura::button variant="primary" size="sm" href="/guest/templates/portfolio" class="w-full justify-center">
+                <x-aura::button variant="primary" size="sm" href="/guest/template/portfolio" class="w-full justify-center">
                     Explore Portfolio &rarr;
                 </x-aura::button>
             </div>
@@ -86,7 +86,7 @@ class extends Component {};
                 </div>
             </div>
             <div class="pt-6">
-                <x-aura::button variant="primary" size="sm" href="/guest/templates/restaurant" class="w-full justify-center">
+                <x-aura::button variant="primary" size="sm" href="/guest/template/restaurant" class="w-full justify-center">
                     Explore Restaurant &rarr;
                 </x-aura::button>
             </div>
@@ -109,7 +109,7 @@ class extends Component {};
                 </div>
             </div>
             <div class="pt-6">
-                <x-aura::button variant="primary" size="sm" href="/guest/templates/saas" class="w-full justify-center">
+                <x-aura::button variant="primary" size="sm" href="/guest/template/saas" class="w-full justify-center">
                     Explore SaaS Template &rarr;
                 </x-aura::button>
             </div>
@@ -132,7 +132,7 @@ class extends Component {};
                 </div>
             </div>
             <div class="pt-6">
-                <x-aura::button variant="primary" size="sm" href="/guest/templates/agency" class="w-full justify-center">
+                <x-aura::button variant="primary" size="sm" href="/guest/template/agency" class="w-full justify-center">
                     Explore Agency &rarr;
                 </x-aura::button>
             </div>

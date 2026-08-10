@@ -5,7 +5,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
 new 
-#[Layout('layouts.guest')] 
+#[Layout('layout.guest')] 
 #[Title('Dashboard Widgets Block — Guest Portal | Aura Wire')] 
 class extends Component {};
 

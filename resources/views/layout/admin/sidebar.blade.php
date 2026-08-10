@@ -32,7 +32,7 @@
         </x-slot:icon>
         Logs
     </x-aura::sidebar.item>
-    <x-aura::sidebar.item href="/admin/settings" :active="request()->is('admin/settings*')">
+    <x-aura::sidebar.item href="/admin/setting" :active="request()->is('admin/setting*')">
         <x-slot:icon>
             <x-aura::icon name="settings" class="w-4 h-4 text-zinc-900 dark:text-white" />
         </x-slot:icon>

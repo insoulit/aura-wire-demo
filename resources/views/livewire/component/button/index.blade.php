@@ -5,7 +5,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
 new 
-#[Layout('layouts.components')] 
+#[Layout('layout.component')] 
 #[Title('Button - Aura Wire')] 
 class extends Component {};
 
@@ -17,7 +17,7 @@ class extends Component {};
         <x-aura::kicker>Action</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Button</x-aura::heading>
         <x-aura::subheading size="sm" class="max-w-lg">
-            Versatile pill and circular square buttons for triggers, form submissions, icon actions, and interactive layouts.
+            Versatile pill and circular square buttons for triggers, form submissions, icon actions, and interactive layout.
         </x-aura::subheading>
         <div class="pt-1">
             <code class="inline-flex items-center px-3.5 py-1.5 rounded-xl text-sm font-mono font-bold bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 shadow-2xs">

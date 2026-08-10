@@ -5,7 +5,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
 new 
-#[Layout('layouts.guest')] 
+#[Layout('layout.guest')] 
 #[Title('Guest Portal — Design Blocks & Templates | Aura Wire')] 
 class extends Component {};
 
@@ -63,7 +63,7 @@ class extends Component {};
                 <x-aura::subheading>Composite, production-ready UI blocks with live design previews and copyable Blade markup.</x-aura::subheading>
             </div>
             <div class="flex items-center gap-3">
-                <x-aura::button variant="outline" size="sm" href="/guest/blocks">Explore Catalog &rarr;</x-aura::button>
+                <x-aura::button variant="outline" size="sm" href="/guest/block">Explore Catalog &rarr;</x-aura::button>
                 <x-aura::badge variant="neutral" size="sm">5 Blocks</x-aura::badge>
             </div>
         </div>
@@ -86,7 +86,7 @@ class extends Component {};
                     </div>
                 </div>
                 <div class="pt-6">
-                    <x-aura::button variant="primary" size="sm" href="/guest/blocks/product-card" class="w-full justify-center">
+                    <x-aura::button variant="primary" size="sm" href="/guest/block/product-card" class="w-full justify-center">
                         Explore Product Block &rarr;
                     </x-aura::button>
                 </div>
@@ -109,7 +109,7 @@ class extends Component {};
                     </div>
                 </div>
                 <div class="pt-6">
-                    <x-aura::button variant="primary" size="sm" href="/guest/blocks/pricing" class="w-full justify-center">
+                    <x-aura::button variant="primary" size="sm" href="/guest/block/pricing" class="w-full justify-center">
                         Explore Pricing Block &rarr;
                     </x-aura::button>
                 </div>
@@ -132,7 +132,7 @@ class extends Component {};
                     </div>
                 </div>
                 <div class="pt-6">
-                    <x-aura::button variant="primary" size="sm" href="/guest/blocks/dashboard" class="w-full justify-center">
+                    <x-aura::button variant="primary" size="sm" href="/guest/block/dashboard" class="w-full justify-center">
                         Explore Dashboard Block &rarr;
                     </x-aura::button>
                 </div>
@@ -155,7 +155,7 @@ class extends Component {};
                     </div>
                 </div>
                 <div class="pt-6">
-                    <x-aura::button variant="primary" size="sm" href="/guest/blocks/auth" class="w-full justify-center">
+                    <x-aura::button variant="primary" size="sm" href="/guest/block/auth" class="w-full justify-center">
                         Explore Auth Block &rarr;
                     </x-aura::button>
                 </div>
@@ -178,7 +178,7 @@ class extends Component {};
                     </div>
                 </div>
                 <div class="pt-6">
-                    <x-aura::button variant="primary" size="sm" href="/guest/blocks/profile" class="w-full justify-center">
+                    <x-aura::button variant="primary" size="sm" href="/guest/block/profile" class="w-full justify-center">
                         Explore Profile Block &rarr;
                     </x-aura::button>
                 </div>
@@ -199,7 +199,7 @@ class extends Component {};
                 <x-aura::subheading>Explore complete end-to-end page layout templates built with Aura Wire.</x-aura::subheading>
             </div>
             <div class="flex items-center gap-3">
-                <x-aura::button variant="outline" size="sm" href="/guest/templates">Explore Catalog &rarr;</x-aura::button>
+                <x-aura::button variant="outline" size="sm" href="/guest/template">Explore Catalog &rarr;</x-aura::button>
                 <x-aura::badge variant="neutral" size="sm">5 Templates</x-aura::badge>
             </div>
         </div>
@@ -222,7 +222,7 @@ class extends Component {};
                     </div>
                 </div>
                 <div class="pt-6">
-                    <x-aura::button variant="primary" size="sm" href="/guest/templates/ecommerce" class="w-full justify-center">
+                    <x-aura::button variant="primary" size="sm" href="/guest/template/ecommerce" class="w-full justify-center">
                         View E-Commerce &rarr;
                     </x-aura::button>
                 </div>
@@ -245,7 +245,7 @@ class extends Component {};
                     </div>
                 </div>
                 <div class="pt-6">
-                    <x-aura::button variant="primary" size="sm" href="/guest/templates/portfolio" class="w-full justify-center">
+                    <x-aura::button variant="primary" size="sm" href="/guest/template/portfolio" class="w-full justify-center">
                         View Portfolio &rarr;
                     </x-aura::button>
                 </div>
@@ -268,7 +268,7 @@ class extends Component {};
                     </div>
                 </div>
                 <div class="pt-6">
-                    <x-aura::button variant="primary" size="sm" href="/guest/templates/restaurant" class="w-full justify-center">
+                    <x-aura::button variant="primary" size="sm" href="/guest/template/restaurant" class="w-full justify-center">
                         View Restaurant &rarr;
                     </x-aura::button>
                 </div>
@@ -291,7 +291,7 @@ class extends Component {};
                     </div>
                 </div>
                 <div class="pt-6">
-                    <x-aura::button variant="primary" size="sm" href="/guest/templates/saas" class="w-full justify-center">
+                    <x-aura::button variant="primary" size="sm" href="/guest/template/saas" class="w-full justify-center">
                         View SaaS Template &rarr;
                     </x-aura::button>
                 </div>
@@ -314,7 +314,7 @@ class extends Component {};
                     </div>
                 </div>
                 <div class="pt-6">
-                    <x-aura::button variant="primary" size="sm" href="/guest/templates/agency" class="w-full justify-center">
+                    <x-aura::button variant="primary" size="sm" href="/guest/template/agency" class="w-full justify-center">
                         View Agency &rarr;
                     </x-aura::button>
                 </div>

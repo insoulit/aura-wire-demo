@@ -5,7 +5,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
 new 
-#[Layout('layouts.components')] 
+#[Layout('layout.component')] 
 #[Title('Modal - Aura Wire')] 
 class extends Component {};
 
@@ -17,7 +17,7 @@ class extends Component {};
         <x-aura::kicker>Overlay</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Modal</x-aura::heading>
         <x-aura::subheading size="sm" class="max-w-lg">
-            Accessible dialog windows supporting standard forms, centered alert popups, destructive prompts, and wide modal layouts.
+            Accessible dialog windows supporting standard forms, centered alert popups, destructive prompts, and wide modal layout.
         </x-aura::subheading>
         <div class="pt-1">
             <code class="inline-flex items-center px-3.5 py-1.5 rounded-xl text-sm font-mono font-bold bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 shadow-2xs">
