@@ -300,9 +300,17 @@ title('Component Directory - Aura Wire');
         <div class="flex items-center gap-2 border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
             <svg class="w-5 h-5 text-zinc-900 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
             <x-aura::heading level="2" size="md">Display</x-aura::heading>
-            <x-aura::badge variant="neutral" class="ml-auto">13 Components</x-aura::badge>
+            <x-aura::badge variant="neutral" class="ml-auto">18 Components</x-aura::badge>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <a href="/components/accordion" class="p-5 rounded-xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
+                <div>
+                    <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">Accordion</x-aura::heading>
+                    <x-aura::text variant="mono" size="xs" class="mt-1">&lt;x-aura::accordion&gt;</x-aura::text>
+                </div>
+                <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1 text-zinc-900 dark:text-white">View Component &rarr;</x-aura::text>
+            </a>
+
             <a href="/components/avatar" class="p-5 rounded-xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
                 <div>
                     <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">Avatar</x-aura::heading>
@@ -383,6 +391,22 @@ title('Component Directory - Aura Wire');
                 <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1 text-zinc-900 dark:text-white">View Component &rarr;</x-aura::text>
             </a>
 
+            <a href="/components/skeleton" class="p-5 rounded-xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
+                <div>
+                    <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">Skeleton</x-aura::heading>
+                    <x-aura::text variant="mono" size="xs" class="mt-1">&lt;x-aura::skeleton&gt;</x-aura::text>
+                </div>
+                <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1 text-zinc-900 dark:text-white">View Component &rarr;</x-aura::text>
+            </a>
+
+            <a href="/components/stat" class="p-5 rounded-xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
+                <div>
+                    <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">Stat Card</x-aura::heading>
+                    <x-aura::text variant="mono" size="xs" class="mt-1">&lt;x-aura::stat&gt;</x-aura::text>
+                </div>
+                <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1 text-zinc-900 dark:text-white">View Component &rarr;</x-aura::text>
+            </a>
+
             <a href="/components/table" class="p-5 rounded-xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
                 <div>
                     <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">Table</x-aura::heading>
@@ -407,6 +431,14 @@ title('Component Directory - Aura Wire');
                 <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1 text-zinc-900 dark:text-white">View Component &rarr;</x-aura::text>
             </a>
 
+            <a href="/components/timeline" class="p-5 rounded-xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
+                <div>
+                    <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">Timeline</x-aura::heading>
+                    <x-aura::text variant="mono" size="xs" class="mt-1">&lt;x-aura::timeline&gt;</x-aura::text>
+                </div>
+                <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1 text-zinc-900 dark:text-white">View Component &rarr;</x-aura::text>
+            </a>
+
             <a href="/components/icon" class="p-5 rounded-xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
                 <div>
                     <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">Icon (Lucide)</x-aura::heading>
@@ -422,7 +454,7 @@ title('Component Directory - Aura Wire');
         <div class="flex items-center gap-2 border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
             <svg class="w-5 h-5 text-zinc-900 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
             <x-aura::heading level="2" size="md">Navigation</x-aura::heading>
-            <x-aura::badge variant="neutral" class="ml-auto">2 Components</x-aura::badge>
+            <x-aura::badge variant="neutral" class="ml-auto">3 Components</x-aura::badge>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <a href="/components/breadcrumb" class="p-5 rounded-xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
@@ -440,6 +472,14 @@ title('Component Directory - Aura Wire');
                 </div>
                 <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1 text-zinc-900 dark:text-white">View Component &rarr;</x-aura::text>
             </a>
+
+            <a href="/components/stepper" class="p-5 rounded-xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
+                <div>
+                    <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">Stepper</x-aura::heading>
+                    <x-aura::text variant="mono" size="xs" class="mt-1">&lt;x-aura::stepper&gt;</x-aura::text>
+                </div>
+                <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1 text-zinc-900 dark:text-white">View Component &rarr;</x-aura::text>
+            </a>
         </div>
     </section>
 
@@ -448,7 +488,7 @@ title('Component Directory - Aura Wire');
         <div class="flex items-center gap-2 border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
             <svg class="w-5 h-5 text-zinc-900 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
             <x-aura::heading level="2" size="md">Feedback</x-aura::heading>
-            <x-aura::badge variant="neutral" class="ml-auto">5 Components</x-aura::badge>
+            <x-aura::badge variant="neutral" class="ml-auto">8 Components</x-aura::badge>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             <a href="/components/alert" class="p-5 rounded-xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
@@ -459,10 +499,26 @@ title('Component Directory - Aura Wire');
                 <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1 text-zinc-900 dark:text-white">View Component &rarr;</x-aura::text>
             </a>
 
+            <a href="/components/command" class="p-5 rounded-xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
+                <div>
+                    <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">Command Palette</x-aura::heading>
+                    <x-aura::text variant="mono" size="xs" class="mt-1">&lt;x-aura::command&gt;</x-aura::text>
+                </div>
+                <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1 text-zinc-900 dark:text-white">View Component &rarr;</x-aura::text>
+            </a>
+
             <a href="/components/modal" class="p-5 rounded-xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
                 <div>
                     <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">Modal</x-aura::heading>
                     <x-aura::text variant="mono" size="xs" class="mt-1">&lt;x-aura::modal&gt;</x-aura::text>
+                </div>
+                <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1 text-zinc-900 dark:text-white">View Component &rarr;</x-aura::text>
+            </a>
+
+            <a href="/components/popover" class="p-5 rounded-xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
+                <div>
+                    <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">Popover</x-aura::heading>
+                    <x-aura::text variant="mono" size="xs" class="mt-1">&lt;x-aura::popover&gt;</x-aura::text>
                 </div>
                 <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1 text-zinc-900 dark:text-white">View Component &rarr;</x-aura::text>
             </a>
@@ -487,6 +543,14 @@ title('Component Directory - Aura Wire');
                 <div>
                     <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">Toast</x-aura::heading>
                     <x-aura::text variant="mono" size="xs" class="mt-1">&lt;x-aura::toast&gt;</x-aura::text>
+                </div>
+                <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1 text-zinc-900 dark:text-white">View Component &rarr;</x-aura::text>
+            </a>
+
+            <a href="/components/tooltip" class="p-5 rounded-xl bg-white dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800/80 hover:border-zinc-900 dark:hover:border-white hover:shadow-lg transition-all shadow-xs flex flex-col justify-between group">
+                <div>
+                    <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">Tooltip</x-aura::heading>
+                    <x-aura::text variant="mono" size="xs" class="mt-1">&lt;x-aura::tooltip&gt;</x-aura::text>
                 </div>
                 <x-aura::text variant="accent" size="xs" weight="semibold" class="mt-4 flex items-center gap-1 text-zinc-900 dark:text-white">View Component &rarr;</x-aura::text>
             </a>
