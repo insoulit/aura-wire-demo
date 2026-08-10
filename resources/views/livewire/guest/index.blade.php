@@ -64,7 +64,6 @@ class extends Component {};
                 <x-aura::subheading>Composite UI pattern blocks with live preview controls and copyable Blade markup.</x-aura::subheading>
             </div>
             <div class="flex items-center gap-3">
-                <x-aura::button variant="outline" size="sm" href="/guest/block" icon-trailing="arrow-right">View All Blocks</x-aura::button>
                 <x-aura::badge variant="subtle" size="sm">5 Blocks</x-aura::badge>
             </div>
         </div>
@@ -85,7 +84,7 @@ class extends Component {};
 
                         <div class="space-y-2">
                             <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
-                                Product Card Block
+                                Product Card
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
                                 Product showcase cards with discount badges, color swatches, stock tags, and add-to-cart actions.
@@ -521,7 +520,6 @@ class extends Component {};
                 <x-aura::subheading>Explore complete end-to-end page layout templates built with Aura Wire components.</x-aura::subheading>
             </div>
             <div class="flex items-center gap-3">
-                <x-aura::button variant="outline" size="sm" href="/guest/template" icon-trailing="arrow-right">View All Templates</x-aura::button>
                 <x-aura::badge variant="subtle" size="sm">5 Templates</x-aura::badge>
             </div>
         </div>

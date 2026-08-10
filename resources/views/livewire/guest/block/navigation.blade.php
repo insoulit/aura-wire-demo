@@ -19,7 +19,7 @@ class extends Component {};
                 <x-aura::kicker>Design Blocks</x-aura::kicker>
                 <x-aura::heading level="1" size="lg">Footer</x-aura::heading>
             </div>
-            <x-aura::button href="/guest" variant="subtle" size="sm" class="shrink-0 gap-1.5">
+            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" class="shrink-0 gap-1.5">
                 <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 shrink-0" />
                 <span>Back</span>
             </x-aura::button>
@@ -40,7 +40,7 @@ class extends Component {};
                             <x-aura::heading level="3" size="sm" class="tracking-tight whitespace-nowrap">Aura Wire</x-aura::heading>
                         </div>
                         <nav class="hidden lg:flex items-center gap-5 text-xs font-medium text-zinc-500 dark:text-zinc-400 shrink-0">
-                            <a href="/guest" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Components</a>
+                            <a href="/guest#design-block" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Components</a>
                             <a href="/guest#design-block" class="text-zinc-900 dark:text-white font-semibold">Design Blocks</a>
                             <a href="/guest#full-template" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Templates</a>
                             <a href="/component/installation" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Docs</a>
@@ -109,7 +109,7 @@ class extends Component {};
                     <div class="space-y-2.5">
                         <x-aura::heading level="4" size="xxs" class="text-zinc-400">PRODUCT</x-aura::heading>
                         <ul class="space-y-2 text-xs text-zinc-500 dark:text-zinc-400">
-                            <li><a href="/guest" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Component Catalog</a></li>
+                            <li><a href="/guest#design-block" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Component Catalog</a></li>
                             <li><a href="/guest#design-block" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Design Blocks</a></li>
                             <li><a href="/guest#full-template" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Starter Kits</a></li>
                             <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Figma UI Kit</a></li>

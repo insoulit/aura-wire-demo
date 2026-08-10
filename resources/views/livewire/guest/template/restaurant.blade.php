@@ -1,16 +1,18 @@
 <?php
 
-use function Livewire\Volt\{layout, title, state};
+use Livewire\Volt\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-layout('layout.guest');
-title('Restaurant & Bistro UI Kit — Aura Wire');
-
-state([
-    'activeTab' => 'starters',
-    'guests' => '2',
-    'date' => '2026-08-15',
-    'time' => '19:00',
-]);
+new 
+#[Layout('layout.guest')] 
+#[Title('Restaurant & Bistro UI Kit — Guest Portal | Aura Wire')] 
+class extends Component {
+    public string $activeTab = 'starters';
+    public string $guests = '2';
+    public string $date = '2026-08-15';
+    public string $time = '19:00';
+};
 
 ?>
 
@@ -18,7 +20,9 @@ state([
     <!-- Top Bar -->
     <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-4">
         <div class="flex items-center gap-3">
-            <a href="/guest" class="text-xs font-semibold text-zinc-900 dark:text-white hover:underline">&larr; Guest Portal</a>
+            <x-aura::button href="/guest#full-template" variant="subtle" size="sm" icon="arrow-left">
+                Back
+            </x-aura::button>
             <span class="text-zinc-300 dark:text-zinc-700">/</span>
             <x-aura::badge variant="neutral" size="sm">Restaurant UI Kit</x-aura::badge>
         </div>
@@ -40,8 +44,8 @@ state([
                 Fresh seasonal ingredients, wood-fired specialties, and curated organic wine pairings served in a cozy modern atmosphere.
             </x-aura::subheading>
             <div class="pt-2 flex flex-wrap gap-3">
-                <x-aura::button variant="primary" size="md">
-                    Reserve a Table &rarr;
+                <x-aura::button variant="primary" size="md" icon-trailing="arrow-right">
+                    Reserve a Table
                 </x-aura::button>
                 <x-aura::button variant="outline" size="md">
                     Explore Digital Menu
@@ -58,18 +62,18 @@ state([
                 <x-aura::subheading>Explore our daily prepared dishes and seasonal specialties</x-aura::subheading>
             </div>
 
-            <!-- Menu Category Tabs -->
-            <x-aura::action.group>
-                <x-aura::button variant="{{ $activeTab === 'starters' ? 'primary' : 'secondary' }}" size="sm" wire:click="$set('activeTab', 'starters')">Starters</x-aura::button>
-                <x-aura::button variant="{{ $activeTab === 'mains' ? 'primary' : 'secondary' }}" size="sm" wire:click="$set('activeTab', 'mains')">Mains</x-aura::button>
-                <x-aura::button variant="{{ $activeTab === 'desserts' ? 'primary' : 'secondary' }}" size="sm" wire:click="$set('activeTab', 'desserts')">Desserts</x-aura::button>
-            </x-aura::action.group>
+            <!-- Menu Category Category Tabs -->
+            <div class="inline-flex items-center p-1 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700">
+                <x-aura::button variant="{{ $activeTab === 'starters' ? 'primary' : 'subtle' }}" size="sm" wire:click="$set('activeTab', 'starters')">Starters</x-aura::button>
+                <x-aura::button variant="{{ $activeTab === 'mains' ? 'primary' : 'subtle' }}" size="sm" wire:click="$set('activeTab', 'mains')">Mains</x-aura::button>
+                <x-aura::button variant="{{ $activeTab === 'desserts' ? 'primary' : 'subtle' }}" size="sm" wire:click="$set('activeTab', 'desserts')">Desserts</x-aura::button>
+            </div>
         </div>
 
         <!-- Menu Item Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Item 1 -->
-            <x-aura::card class="flex flex-col justify-between hover:border-zinc-900 dark:hover:border-white transition-all">
+            <x-aura::card class="flex flex-col justify-between hover:border-zinc-900 dark:hover:border-white transition-all border border-zinc-200 dark:border-zinc-800">
                 <div class="space-y-3">
                     <div class="flex items-center justify-between">
                         <x-aura::heading level="3" size="sm">Truffle Wild Mushroom Arancini</x-aura::heading>
@@ -84,7 +88,7 @@ state([
             </x-aura::card>
 
             <!-- Item 2 -->
-            <x-aura::card class="flex flex-col justify-between hover:border-zinc-900 dark:hover:border-white transition-all">
+            <x-aura::card class="flex flex-col justify-between hover:border-zinc-900 dark:hover:border-white transition-all border border-zinc-200 dark:border-zinc-800">
                 <div class="space-y-3">
                     <div class="flex items-center justify-between">
                         <x-aura::heading level="3" size="sm">Wood-Fired Ribeye Steak</x-aura::heading>
@@ -127,7 +131,7 @@ state([
         <x-slot:footer>
             <div class="flex items-center justify-between w-full">
                 <x-aura::badge variant="neutral" size="sm">Instant Confirmation</x-aura::badge>
-                <x-aura::button variant="primary" size="sm">Confirm Reservation &rarr;</x-aura::button>
+                <x-aura::button variant="primary" size="sm" icon-trailing="arrow-right">Confirm Reservation</x-aura::button>
             </div>
         </x-slot:footer>
     </x-aura::card>

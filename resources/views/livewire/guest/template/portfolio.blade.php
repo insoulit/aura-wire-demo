@@ -1,15 +1,17 @@
 <?php
 
-use function Livewire\Volt\{layout, title, state};
+use Livewire\Volt\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-layout('layout.guest');
-title('Portfolio UI Kit — Aura Wire');
-
-state([
-    'contactName' => '',
-    'contactEmail' => '',
-    'contactMessage' => '',
-]);
+new 
+#[Layout('layout.guest')] 
+#[Title('Portfolio UI Kit — Guest Portal | Aura Wire')] 
+class extends Component {
+    public string $contactName = '';
+    public string $contactEmail = '';
+    public string $contactMessage = '';
+};
 
 ?>
 
@@ -17,7 +19,9 @@ state([
     <!-- Breadcrumb & Status Top Bar -->
     <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-4">
         <div class="flex items-center gap-3">
-            <a href="/guest" class="text-xs font-semibold text-zinc-900 dark:text-white hover:underline">&larr; Guest Portal</a>
+            <x-aura::button href="/guest#full-template" variant="subtle" size="sm" icon="arrow-left">
+                Back
+            </x-aura::button>
             <span class="text-zinc-300 dark:text-zinc-700">/</span>
             <x-aura::badge variant="neutral" size="sm">Portfolio UI Kit</x-aura::badge>
         </div>
@@ -29,7 +33,7 @@ state([
     <div class="flex flex-col md:flex-row md:items-center justify-between gap-8 bg-zinc-100/90 dark:bg-zinc-900 text-zinc-900 dark:text-white p-8 md:p-12 rounded-3xl border border-zinc-200/80 dark:border-zinc-800 shadow-sm">
         <div class="space-y-4 max-w-2xl">
             <div class="flex items-center gap-3">
-                <x-aura::avatar initials="AK" size="lg"  />
+                <x-aura::avatar initials="AK" size="lg" status="online" />
                 <div>
                     <x-aura::heading level="1" size="lg" class="text-zinc-900 dark:text-white">Alex Kovacs</x-aura::heading>
                     <x-aura::text variant="subtle" size="xs" class="text-zinc-600 dark:text-zinc-400">Staff Product Designer &amp; Frontend Engineer</x-aura::text>
@@ -49,8 +53,8 @@ state([
             </div>
 
             <div class="pt-4 flex flex-wrap gap-3">
-                <x-aura::button variant="primary" size="md">Book Project Call &rarr;</x-aura::button>
-                <x-aura::button variant="outline" size="md" class="border-zinc-700 text-zinc-200 hover:bg-zinc-800">Download CV</x-aura::button>
+                <x-aura::button variant="primary" size="md" icon-trailing="arrow-right">Book Project Call</x-aura::button>
+                <x-aura::button variant="outline" size="md" icon="download">Download CV</x-aura::button>
             </div>
         </div>
     </div>
@@ -67,7 +71,7 @@ state([
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Project 1 -->
-            <x-aura::card class="flex flex-col justify-between hover:border-zinc-900 dark:hover:border-white transition-all group">
+            <x-aura::card class="flex flex-col justify-between hover:border-zinc-900 dark:hover:border-white transition-all group border border-zinc-200 dark:border-zinc-800">
                 <div class="space-y-4">
                     <div class="aspect-16/9 rounded-2xl bg-zinc-900 p-6 flex items-center justify-center text-white border border-zinc-800">
                         <span class="text-5xl font-black group-hover:scale-110 transition-transform duration-300">⚡ Aura</span>
@@ -77,20 +81,23 @@ state([
                             <x-aura::badge variant="neutral" size="sm">UI Package</x-aura::badge>
                             <x-aura::text variant="subtle" size="xs">2026</x-aura::text>
                         </div>
-                        <x-aura::heading level="3" size="sm" class="group-hover:underline">Aura Wire Component Suite</x-aura::heading>
+                        <x-aura::heading level="3" size="sm">Aura Wire Component Suite</x-aura::heading>
                         <x-aura::text variant="subtle" size="xs" class="mt-1">
                             High-contrast Blade component suite featuring 30+ interactive elements for Laravel.
                         </x-aura::text>
                     </div>
                 </div>
                 <div class="pt-4 flex items-center justify-between border-t border-zinc-100 dark:border-zinc-800">
-                    <x-aura::text variant="accent" size="xs" weight="semibold">Read Case Study &rarr;</x-aura::text>
+                    <x-aura::text variant="accent" size="xs" weight="semibold" class="flex items-center gap-1">
+                        <span>Read Case Study</span>
+                        <x-aura::icon name="arrow-right" class="w-3.5 h-3.5" />
+                    </x-aura::text>
                     <x-aura::badge variant="neutral" size="sm">Open Source</x-aura::badge>
                 </div>
             </x-aura::card>
 
             <!-- Project 2 -->
-            <x-aura::card class="flex flex-col justify-between hover:border-zinc-900 dark:hover:border-white transition-all group">
+            <x-aura::card class="flex flex-col justify-between hover:border-zinc-900 dark:hover:border-white transition-all group border border-zinc-200 dark:border-zinc-800">
                 <div class="space-y-4">
                     <div class="aspect-16/9 rounded-2xl bg-zinc-900 p-6 flex items-center justify-center text-white border border-zinc-800">
                         <span class="text-5xl font-black group-hover:scale-110 transition-transform duration-300">📊 Pulse</span>
@@ -100,14 +107,17 @@ state([
                             <x-aura::badge variant="subtle" size="sm">Analytics App</x-aura::badge>
                             <x-aura::text variant="subtle" size="xs">2025</x-aura::text>
                         </div>
-                        <x-aura::heading level="3" size="sm" class="group-hover:underline">Pulse Metrics Dashboard</x-aura::heading>
+                        <x-aura::heading level="3" size="sm">Pulse Metrics Dashboard</x-aura::heading>
                         <x-aura::text variant="subtle" size="xs" class="mt-1">
                             Realtime event tracking dashboard handling 50k events/sec with dark mode UI tokens.
                         </x-aura::text>
                     </div>
                 </div>
                 <div class="pt-4 flex items-center justify-between border-t border-zinc-100 dark:border-zinc-800">
-                    <x-aura::text variant="accent" size="xs" weight="semibold">Read Case Study &rarr;</x-aura::text>
+                    <x-aura::text variant="accent" size="xs" weight="semibold" class="flex items-center gap-1">
+                        <span>Read Case Study</span>
+                        <x-aura::icon name="arrow-right" class="w-3.5 h-3.5" />
+                    </x-aura::text>
                     <x-aura::badge variant="neutral" size="sm">SaaS Product</x-aura::badge>
                 </div>
             </x-aura::card>
@@ -119,11 +129,11 @@ state([
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="space-y-4">
                 <x-aura::field label="Your Name">
-                    <x-aura::input wire:model="contactName" placeholder="Jane Doe" />
+                    <x-aura::input wire:model="contactName" placeholder="Jane Doe" icon="user" />
                 </x-aura::field>
 
                 <x-aura::field label="Email Address">
-                    <x-aura::input wire:model="contactEmail" type="email" placeholder="jane@company.com" />
+                    <x-aura::input wire:model="contactEmail" type="email" placeholder="jane@company.com" icon="mail" />
                 </x-aura::field>
             </div>
 
@@ -137,7 +147,7 @@ state([
         <x-slot:footer>
             <div class="flex items-center justify-between w-full">
                 <x-aura::badge variant="neutral" size="sm">⚡ Fast 24h Response</x-aura::badge>
-                <x-aura::button variant="primary" size="sm">Send Project Inquiry &rarr;</x-aura::button>
+                <x-aura::button variant="primary" size="sm" icon-trailing="arrow-right">Send Project Inquiry</x-aura::button>
             </div>
         </x-slot:footer>
     </x-aura::card>

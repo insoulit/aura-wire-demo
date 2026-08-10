@@ -1,15 +1,17 @@
 <?php
 
-use function Livewire\Volt\{layout, title, state};
+use Livewire\Volt\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-layout('layout.guest');
-title('E-Commerce UI Kit — Aura Wire');
-
-state([
-    'search' => '',
-    'category' => 'all',
-    'cartCount' => 2,
-]);
+new 
+#[Layout('layout.guest')] 
+#[Title('E-Commerce UI Kit — Guest Portal | Aura Wire')] 
+class extends Component {
+    public string $search = '';
+    public string $category = 'all';
+    public int $cartCount = 2;
+};
 
 ?>
 
@@ -17,14 +19,16 @@ state([
     <!-- Navigation Breadcrumbs & Top Bar -->
     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-4">
         <div class="flex items-center gap-3">
-            <a href="/guest" class="text-xs font-semibold text-zinc-900 dark:text-white hover:underline">&larr; Guest Portal</a>
+            <x-aura::button href="/guest#full-template" variant="subtle" size="sm" icon="arrow-left">
+                Back
+            </x-aura::button>
             <span class="text-zinc-300 dark:text-zinc-700">/</span>
             <x-aura::badge variant="neutral" size="sm">E-Commerce UI Kit</x-aura::badge>
         </div>
 
         <div class="flex items-center gap-3">
             <x-aura::button variant="secondary" size="sm" square title="Shopping Cart">
-                <svg class="w-4 h-4 text-zinc-700 dark:text-zinc-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+                <x-aura::icon name="shopping-bag" class="w-4 h-4 text-zinc-700 dark:text-zinc-300" />
             </x-aura::button>
             <x-aura::badge variant="neutral" size="sm">{{ $cartCount }} Items in Bag</x-aura::badge>
         </div>
@@ -44,7 +48,7 @@ state([
                 Discover precision-crafted headphones, minimalist desk lamps, and ergonomic studio accessories designed for creators.
             </x-aura::subheading>
             <div class="pt-2 flex flex-wrap gap-3">
-                <x-aura::button variant="primary" size="md">Shop New Arrivals &rarr;</x-aura::button>
+                <x-aura::button variant="primary" size="md" icon-trailing="arrow-right">Shop New Arrivals</x-aura::button>
                 <x-aura::button variant="outline" size="md">Browse Deals</x-aura::button>
             </div>
         </div>
@@ -53,7 +57,7 @@ state([
     <!-- Search & Filter Controls -->
     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div class="w-full sm:w-80">
-            <x-aura::input wire:model.live="search" placeholder="Search products, brands, gear..." />
+            <x-aura::input wire:model.live="search" placeholder="Search products, brands, gear..." icon="search" />
         </div>
 
         <div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
@@ -67,7 +71,7 @@ state([
     <!-- Product Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <!-- Product 1 -->
-        <x-aura::card class="flex flex-col justify-between p-0 overflow-hidden hover:border-zinc-900 dark:hover:border-white transition-all group">
+        <x-aura::card class="flex flex-col justify-between p-0 overflow-hidden hover:border-zinc-900 dark:hover:border-white transition-all group border border-zinc-200 dark:border-zinc-800">
             <div class="aspect-4/3 bg-zinc-100 dark:bg-zinc-800/60 flex items-center justify-center relative p-6">
                 <span class="text-6xl group-hover:scale-110 transition-transform duration-300">🎧</span>
                 <div class="absolute top-3 left-3">
@@ -89,7 +93,7 @@ state([
         </x-aura::card>
 
         <!-- Product 2 -->
-        <x-aura::card class="flex flex-col justify-between p-0 overflow-hidden hover:border-zinc-900 dark:hover:border-white transition-all group">
+        <x-aura::card class="flex flex-col justify-between p-0 overflow-hidden hover:border-zinc-900 dark:hover:border-white transition-all group border border-zinc-200 dark:border-zinc-800">
             <div class="aspect-4/3 bg-zinc-100 dark:bg-zinc-800/60 flex items-center justify-center relative p-6">
                 <span class="text-6xl group-hover:scale-110 transition-transform duration-300">💡</span>
                 <div class="absolute top-3 left-3">
@@ -111,7 +115,7 @@ state([
         </x-aura::card>
 
         <!-- Product 3 -->
-        <x-aura::card class="flex flex-col justify-between p-0 overflow-hidden hover:border-zinc-900 dark:hover:border-white transition-all group">
+        <x-aura::card class="flex flex-col justify-between p-0 overflow-hidden hover:border-zinc-900 dark:hover:border-white transition-all group border border-zinc-200 dark:border-zinc-800">
             <div class="aspect-4/3 bg-zinc-100 dark:bg-zinc-800/60 flex items-center justify-center relative p-6">
                 <span class="text-6xl group-hover:scale-110 transition-transform duration-300">⌨️</span>
                 <div class="absolute top-3 left-3">
@@ -133,12 +137,12 @@ state([
         </x-aura::card>
     </div>
 
-    <!-- Quick Checkout Drawer Summary Card -->
+    <!-- Quick Checkout Summary Card -->
     <x-aura::card title="Quick Checkout Summary">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="space-y-4">
                 <x-aura::field label="Shipping Address">
-                    <x-aura::input placeholder="123 Creator St, Tech District" />
+                    <x-aura::input placeholder="123 Creator St, Tech District" icon="map-pin" />
                 </x-aura::field>
 
                 <x-aura::field label="Payment Method">
@@ -162,8 +166,8 @@ state([
                     <span>Total Amount</span>
                     <span>$428.00</span>
                 </div>
-                <x-aura::button variant="primary" size="md" class="w-full justify-center mt-3">
-                    Complete Secure Checkout &rarr;
+                <x-aura::button variant="primary" size="md" class="w-full justify-center mt-3" icon-trailing="arrow-right">
+                    Complete Secure Checkout
                 </x-aura::button>
             </div>
         </div>

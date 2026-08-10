@@ -19,7 +19,7 @@ class extends Component {};
                 <x-aura::kicker>Design Blocks</x-aura::kicker>
                 <x-aura::heading level="1" size="lg">Dashboard Widgets</x-aura::heading>
             </div>
-            <x-aura::button href="/guest" variant="subtle" size="sm" class="shrink-0 gap-1.5">
+            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" class="shrink-0 gap-1.5">
                 <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 shrink-0" />
                 <span>Back</span>
             </x-aura::button>

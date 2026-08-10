@@ -19,7 +19,7 @@ class extends Component {};
                 <x-aura::kicker>Design Blocks</x-aura::kicker>
                 <x-aura::heading level="1" size="lg">Slide Overs</x-aura::heading>
             </div>
-            <x-aura::button href="/guest" variant="subtle" size="sm" class="shrink-0 gap-1.5">
+            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" class="shrink-0 gap-1.5">
                 <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 shrink-0" />
                 <span>Back</span>
             </x-aura::button>
@@ -67,7 +67,7 @@ class extends Component {};
                 <!-- Left Drawer Sheet -->
                 <x-aura::sheet name="left-drawer-demo" side="left" title="Navigation Drawer" description="Quick access menu for mobile navigation." maxWidth="sm">
                     <div class="space-y-3 py-2 text-left">
-                        <x-aura::button variant="subtle" size="sm" class="w-full justify-start gap-2" href="/guest">
+                        <x-aura::button variant="subtle" size="sm" class="w-full justify-start gap-2" href="/guest#design-block">
                             <x-aura::icon name="home" class="w-4 h-4" />
                             <span>Guest Home</span>
                         </x-aura::button>

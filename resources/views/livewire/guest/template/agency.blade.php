@@ -1,16 +1,18 @@
 <?php
 
-use function Livewire\Volt\{layout, title, state};
+use Livewire\Volt\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-layout('layout.guest');
-title('Creative Agency UI Kit — Aura Wire');
-
-state([
-    'service' => 'web',
-    'budget' => '10k',
-    'hasBranding' => false,
-    'hasDevelopment' => true,
-]);
+new 
+#[Layout('layout.guest')] 
+#[Title('Creative Agency UI Kit — Guest Portal | Aura Wire')] 
+class extends Component {
+    public string $service = 'web';
+    public string $budget = '10k';
+    public bool $hasBranding = false;
+    public bool $hasDevelopment = true;
+};
 
 ?>
 
@@ -18,7 +20,9 @@ state([
     <!-- Top Navigation Bar -->
     <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-4">
         <div class="flex items-center gap-3">
-            <a href="/guest" class="text-xs font-semibold text-zinc-900 dark:text-white hover:underline">&larr; Guest Portal</a>
+            <x-aura::button href="/guest#full-template" variant="subtle" size="sm" icon="arrow-left">
+                Back
+            </x-aura::button>
             <span class="text-zinc-300 dark:text-zinc-700">/</span>
             <x-aura::badge variant="neutral" size="sm">Agency UI Kit</x-aura::badge>
         </div>
@@ -40,8 +44,8 @@ state([
                 Partnering with ambitious founders and enterprise engineering teams to design high-converting web applications, brand identities, and design systems.
             </x-aura::subheading>
             <div class="pt-2 flex flex-wrap gap-3">
-                <x-aura::button variant="primary" size="md">
-                    Start a Project &rarr;
+                <x-aura::button variant="primary" size="md" icon-trailing="arrow-right">
+                    Start a Project
                 </x-aura::button>
                 <x-aura::button variant="outline" size="md">
                     View Portfolio Works
@@ -59,9 +63,9 @@ state([
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Service 1 -->
-            <x-aura::card class="p-6 space-y-4 hover:border-zinc-900 dark:hover:border-white transition-all">
-                <div class="h-10 w-10 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center font-bold text-lg">
-                    ✨
+            <x-aura::card class="p-6 space-y-4 hover:border-zinc-900 dark:hover:border-white transition-all border border-zinc-200 dark:border-zinc-800">
+                <div class="h-10 w-10 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center shadow-2xs">
+                    <x-aura::icon name="sparkles" class="w-5 h-5" />
                 </div>
                 <div>
                     <x-aura::heading level="3" size="sm">Brand Identity &amp; System</x-aura::heading>
@@ -73,9 +77,9 @@ state([
             </x-aura::card>
 
             <!-- Service 2 -->
-            <x-aura::card class="p-6 space-y-4 hover:border-zinc-900 dark:hover:border-white transition-all">
-                <div class="h-10 w-10 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center font-bold text-lg">
-                    💻
+            <x-aura::card class="p-6 space-y-4 hover:border-zinc-900 dark:hover:border-white transition-all border border-zinc-200 dark:border-zinc-800">
+                <div class="h-10 w-10 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center shadow-2xs">
+                    <x-aura::icon name="code" class="w-5 h-5" />
                 </div>
                 <div>
                     <x-aura::heading level="3" size="sm">Full-Stack Web Development</x-aura::heading>
@@ -87,9 +91,9 @@ state([
             </x-aura::card>
 
             <!-- Service 3 -->
-            <x-aura::card class="p-6 space-y-4 hover:border-zinc-900 dark:hover:border-white transition-all">
-                <div class="h-10 w-10 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center font-bold text-lg">
-                    🎯
+            <x-aura::card class="p-6 space-y-4 hover:border-zinc-900 dark:hover:border-white transition-all border border-zinc-200 dark:border-zinc-800">
+                <div class="h-10 w-10 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center shadow-2xs">
+                    <x-aura::icon name="target" class="w-5 h-5" />
                 </div>
                 <div>
                     <x-aura::heading level="3" size="sm">UI/UX Audit &amp; Optimization</x-aura::heading>
@@ -125,7 +129,7 @@ state([
 
             <div class="space-y-4">
                 <x-aura::field label="Required Deliverables">
-                    <div class="space-y-2 pt-1">
+                    <div class="space-y-2.5 pt-1">
                         <x-aura::checkbox wire:model="hasBranding" label="Design System & Token Specs" />
                         <x-aura::checkbox wire:model="hasDevelopment" label="Laravel & Livewire Implementation" />
                     </div>
@@ -136,7 +140,7 @@ state([
         <x-slot:footer>
             <div class="flex items-center justify-between w-full">
                 <x-aura::badge variant="neutral" size="sm">Proposal within 48 hours</x-aura::badge>
-                <x-aura::button variant="primary" size="sm">Submit Project Inquiry &rarr;</x-aura::button>
+                <x-aura::button variant="primary" size="sm" icon-trailing="arrow-right">Submit Project Inquiry</x-aura::button>
             </div>
         </x-slot:footer>
     </x-aura::card>

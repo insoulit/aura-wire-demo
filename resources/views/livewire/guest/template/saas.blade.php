@@ -1,13 +1,15 @@
 <?php
 
-use function Livewire\Volt\{layout, title, state};
+use Livewire\Volt\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-layout('layout.guest');
-title('SaaS Platform UI Kit — Aura Wire');
-
-state([
-    'annualBilling' => true,
-]);
+new 
+#[Layout('layout.guest')] 
+#[Title('SaaS Platform UI Kit — Guest Portal | Aura Wire')] 
+class extends Component {
+    public bool $annualBilling = true;
+};
 
 ?>
 
@@ -15,7 +17,9 @@ state([
     <!-- Top Navigation Bar -->
     <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-4">
         <div class="flex items-center gap-3">
-            <a href="/guest" class="text-xs font-semibold text-zinc-900 dark:text-white hover:underline">&larr; Guest Portal</a>
+            <x-aura::button href="/guest#full-template" variant="subtle" size="sm" icon="arrow-left">
+                Back
+            </x-aura::button>
             <span class="text-zinc-300 dark:text-zinc-700">/</span>
             <x-aura::badge variant="neutral" size="sm">SaaS Platform UI Kit</x-aura::badge>
         </div>
@@ -24,31 +28,127 @@ state([
     </div>
 
     <!-- SaaS Hero Section -->
-    <div class="relative text-center space-y-6 max-w-4xl mx-auto">
-        <div class="inline-flex items-center gap-2">
-            <x-aura::kicker class="text-zinc-500">⚡ CLOUD MONITORING</x-aura::kicker>
-            <x-aura::badge variant="neutral" size="sm">99.99% Uptime SLA</x-aura::badge>
-        </div>
+    <div class="relative space-y-10 max-w-5xl mx-auto">
+        <!-- Hero Header Content -->
+        <div class="text-center space-y-6 max-w-4xl mx-auto">
+            <div class="inline-flex items-center gap-2">
+                <x-aura::kicker class="text-zinc-500">⚡ CLOUD PLATFORM v2.4</x-aura::kicker>
+                <x-aura::badge variant="neutral" size="sm">99.99% Uptime SLA</x-aura::badge>
+            </div>
 
-        <x-aura::heading level="1" size="display-lg" class="tracking-tight text-zinc-900 dark:text-white">
+            <x-aura::heading level="1" size="display-lg" class="tracking-tight text-zinc-900 dark:text-white">
             Accelerate your Application Workflow with <br class="hidden sm:block" />
-            <span class="underline decoration-zinc-400 dark:decoration-zinc-600 underline-offset-8">
+            <span class="text-zinc-500 dark:text-zinc-400">
                 Realtime Cloud Analytics
             </span>
         </x-aura::heading>
 
-        <x-aura::subheading class="max-w-2xl mx-auto text-lg">
-            Monitor API latencies, server error rates, and user events across multi-region infrastructure with instant alert notifications.
-        </x-aura::subheading>
+            <x-aura::subheading class="max-w-2xl mx-auto text-lg">
+                Monitor API latencies, server error rates, and user events across multi-region infrastructure with instant alert notifications.
+            </x-aura::subheading>
 
-        <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <x-aura::button variant="primary" size="lg">Start 14-Day Free Trial &rarr;</x-aura::button>
-            <x-aura::button variant="outline" size="lg">Schedule Demo</x-aura::button>
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 pt-2 w-full sm:w-auto max-w-xs sm:max-w-none mx-auto">
+                <x-aura::button variant="primary" size="lg" icon-trailing="arrow-right">Start 14-Day Free Trial</x-aura::button>
+                <x-aura::button variant="outline" size="lg" icon="play">Watch Platform Demo</x-aura::button>
+            </div>
+
+            <!-- Social Proof & Team Avatars -->
+            <div class="flex items-center justify-center gap-3 pt-4 text-xs text-zinc-500 dark:text-zinc-400">
+                <div class="flex -space-x-2 overflow-hidden">
+                    <x-aura::avatar initials="JD" size="sm" class="ring-2 ring-white dark:ring-zinc-900" />
+                    <x-aura::avatar initials="AS" size="sm" class="ring-2 ring-white dark:ring-zinc-900" />
+                    <x-aura::avatar initials="MK" size="sm" class="ring-2 ring-white dark:ring-zinc-900" />
+                    <x-aura::avatar initials="SL" size="sm" class="ring-2 ring-white dark:ring-zinc-900" />
+                </div>
+                <span>Trusted by over <strong class="text-zinc-900 dark:text-white font-semibold">12,000+</strong> dev teams worldwide</span>
+            </div>
         </div>
+
+        <!-- SaaS Hero Visual Dashboard Mockup Card -->
+        <x-aura::card class="p-6 md:p-8 bg-zinc-950 text-white border-2 border-zinc-800 shadow-2xl rounded-3xl relative overflow-hidden">
+            <div class="space-y-6">
+                <!-- Top Toolbar Mockup -->
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-zinc-800">
+                    <div class="flex items-center gap-3">
+                        <div class="flex gap-1.5">
+                            <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+                        </div>
+                        <div class="h-4 w-px bg-zinc-800"></div>
+                        <span class="text-xs font-mono text-zinc-400">live-cluster-production-us-east.aura</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <x-aura::badge variant="neutral" size="sm" class="bg-emerald-950 text-emerald-300 border-emerald-800">● 1.2M Req / sec</x-aura::badge>
+                        <x-aura::badge variant="subtle" size="sm" class="bg-zinc-900 text-zinc-300 border-zinc-700">Latency: 14ms</x-aura::badge>
+                    </div>
+                </div>
+
+                <!-- Metrics Gauge Row -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div class="p-4 rounded-xl bg-zinc-900/90 border border-zinc-800 space-y-2">
+                        <div class="flex justify-between text-xs text-zinc-400">
+                            <span>CPU Capacity</span>
+                            <span class="text-emerald-400 font-bold">42%</span>
+                        </div>
+                        <x-aura::progress-bar percent="42" size="sm" />
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-zinc-900/90 border border-zinc-800 space-y-2">
+                        <div class="flex justify-between text-xs text-zinc-400">
+                            <span>Memory Cache</span>
+                            <span class="text-blue-400 font-bold">68%</span>
+                        </div>
+                        <x-aura::progress-bar percent="68" size="sm" />
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-zinc-900/90 border border-zinc-800 space-y-2">
+                        <div class="flex justify-between text-xs text-zinc-400">
+                            <span>API Health</span>
+                            <span class="text-emerald-400 font-bold">99.98%</span>
+                        </div>
+                        <x-aura::progress-bar percent="99" size="sm" />
+                    </div>
+                </div>
+            </div>
+        </x-aura::card>
+    </div>
+
+    <!-- Core Platform Highlights Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <x-aura::card class="p-6 space-y-3 border border-zinc-200 dark:border-zinc-800">
+            <div class="h-10 w-10 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center shadow-2xs">
+                <x-aura::icon name="zap" class="w-5 h-5" />
+            </div>
+            <x-aura::heading level="3" size="sm">Sub-Millisecond Tracing</x-aura::heading>
+            <x-aura::text variant="subtle" size="xs">
+                Capture detailed distributed stack traces without overhead on your production server nodes.
+            </x-aura::text>
+        </x-aura::card>
+
+        <x-aura::card class="p-6 space-y-3 border border-zinc-200 dark:border-zinc-800">
+            <div class="h-10 w-10 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center shadow-2xs">
+                <x-aura::icon name="shield-check" class="w-5 h-5" />
+            </div>
+            <x-aura::heading level="3" size="sm">SOC2 Type II Certified</x-aura::heading>
+            <x-aura::text variant="subtle" size="xs">
+                Enterprise-grade data encryption at rest and in transit with automated compliance reporting.
+            </x-aura::text>
+        </x-aura::card>
+
+        <x-aura::card class="p-6 space-y-3 border border-zinc-200 dark:border-zinc-800">
+            <div class="h-10 w-10 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center shadow-2xs">
+                <x-aura::icon name="bell" class="w-5 h-5" />
+            </div>
+            <x-aura::heading level="3" size="sm">Instant Alert Webhooks</x-aura::heading>
+            <x-aura::text variant="subtle" size="xs">
+                Route anomaly alerts directly to Slack, PagerDuty, or custom webhook endpoints instantly.
+            </x-aura::text>
+        </x-aura::card>
     </div>
 
     <!-- Interactive Pricing Tiers Section -->
-    <div class="space-y-8">
+    <div class="space-y-8 pt-4">
         <div class="text-center space-y-4 max-w-xl mx-auto">
             <x-aura::heading level="2" size="lg">Flexible Plans for Every Team</x-aura::heading>
             <x-aura::subheading>Scale as your application traffic grows. No hidden fees or contracts.</x-aura::subheading>
@@ -63,7 +163,7 @@ state([
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Starter Plan Card -->
-            <x-aura::card class="flex flex-col justify-between p-6 hover:border-zinc-900 dark:hover:border-white transition-all">
+            <x-aura::card class="flex flex-col justify-between p-6 hover:border-zinc-900 dark:hover:border-white transition-all border border-zinc-200 dark:border-zinc-800">
                 <div class="space-y-4">
                     <div>
                         <x-aura::badge variant="subtle" size="sm">Starter</x-aura::badge>
@@ -76,11 +176,20 @@ state([
                         <span class="text-xs font-normal text-zinc-500">/mo</span>
                     </div>
 
-                    <ul class="space-y-2 text-xs text-zinc-600 dark:text-zinc-400 pt-2 border-t border-zinc-100 dark:border-zinc-800">
-                        <li class="flex items-center gap-2">✓ 100,000 Events / month</li>
-                        <li class="flex items-center gap-2">✓ 3 Team Members</li>
-                        <li class="flex items-center gap-2">✓ 7-Day Log Retention</li>
-                    </ul>
+                    <div class="space-y-2 pt-2 border-t border-zinc-100 dark:border-zinc-800 text-xs">
+                        <div class="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
+                            <x-aura::icon name="check" class="w-4 h-4 text-emerald-500 shrink-0" />
+                            <span>100,000 Events / month</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
+                            <x-aura::icon name="check" class="w-4 h-4 text-emerald-500 shrink-0" />
+                            <span>3 Team Members</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
+                            <x-aura::icon name="check" class="w-4 h-4 text-emerald-500 shrink-0" />
+                            <span>7-Day Log Retention</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="pt-6">
                     <x-aura::button variant="secondary" size="md" class="w-full justify-center">Get Started Free</x-aura::button>
@@ -104,12 +213,24 @@ state([
                         <span class="text-xs font-normal text-zinc-500">/mo</span>
                     </div>
 
-                    <ul class="space-y-2 text-xs text-zinc-600 dark:text-zinc-400 pt-2 border-t border-zinc-100 dark:border-zinc-800">
-                        <li class="flex items-center gap-2 font-semibold text-zinc-900 dark:text-white">✓ 2,500,000 Events / month</li>
-                        <li class="flex items-center gap-2">✓ 15 Team Members</li>
-                        <li class="flex items-center gap-2">✓ 30-Day Log Retention</li>
-                        <li class="flex items-center gap-2">✓ Slack &amp; Webhook Alerts</li>
-                    </ul>
+                    <div class="space-y-2 pt-2 border-t border-zinc-100 dark:border-zinc-800 text-xs">
+                        <div class="flex items-center gap-2 font-semibold text-zinc-900 dark:text-white">
+                            <x-aura::icon name="check" class="w-4 h-4 text-emerald-500 shrink-0" />
+                            <span>2,500,000 Events / month</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
+                            <x-aura::icon name="check" class="w-4 h-4 text-emerald-500 shrink-0" />
+                            <span>15 Team Members</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
+                            <x-aura::icon name="check" class="w-4 h-4 text-emerald-500 shrink-0" />
+                            <span>30-Day Log Retention</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
+                            <x-aura::icon name="check" class="w-4 h-4 text-emerald-500 shrink-0" />
+                            <span>Slack &amp; Webhook Alerts</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="pt-6">
                     <x-aura::button variant="primary" size="md" class="w-full justify-center">Start 14-Day Free Trial</x-aura::button>
@@ -117,7 +238,7 @@ state([
             </x-aura::card>
 
             <!-- Enterprise Plan Card -->
-            <x-aura::card class="flex flex-col justify-between p-6 hover:border-zinc-900 dark:hover:border-white transition-all">
+            <x-aura::card class="flex flex-col justify-between p-6 hover:border-zinc-900 dark:hover:border-white transition-all border border-zinc-200 dark:border-zinc-800">
                 <div class="space-y-4">
                     <div>
                         <x-aura::badge variant="subtle" size="sm">Enterprise</x-aura::badge>
@@ -129,15 +250,27 @@ state([
                         Custom
                     </div>
 
-                    <ul class="space-y-2 text-xs text-zinc-600 dark:text-zinc-400 pt-2 border-t border-zinc-100 dark:border-zinc-800">
-                        <li class="flex items-center gap-2">✓ Unlimited Volume</li>
-                        <li class="flex items-center gap-2">✓ Unlimited Team Seats</li>
-                        <li class="flex items-center gap-2">✓ 365-Day Retention</li>
-                        <li class="flex items-center gap-2">✓ Dedicated Account Manager</li>
-                    </ul>
+                    <div class="space-y-2 pt-2 border-t border-zinc-100 dark:border-zinc-800 text-xs">
+                        <div class="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
+                            <x-aura::icon name="check" class="w-4 h-4 text-emerald-500 shrink-0" />
+                            <span>Unlimited Volume</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
+                            <x-aura::icon name="check" class="w-4 h-4 text-emerald-500 shrink-0" />
+                            <span>Unlimited Team Seats</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
+                            <x-aura::icon name="check" class="w-4 h-4 text-emerald-500 shrink-0" />
+                            <span>365-Day Retention</span>
+                        </div>
+                        <div class="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
+                            <x-aura::icon name="check" class="w-4 h-4 text-emerald-500 shrink-0" />
+                            <span>Dedicated Account Manager</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="pt-6">
-                    <x-aura::button variant="outline" size="md" class="w-full justify-center">Contact Sales &rarr;</x-aura::button>
+                    <x-aura::button variant="outline" size="md" class="w-full justify-center" icon-trailing="arrow-right">Contact Sales</x-aura::button>
                 </div>
             </x-aura::card>
         </div>
