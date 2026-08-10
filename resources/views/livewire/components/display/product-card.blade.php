@@ -10,7 +10,7 @@ title('Product Card - Aura Wire');
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
     <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Display Components</x-aura::kicker>
+        <x-aura::kicker>Display</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Product Card</x-aura::heading>
         <x-aura::subheading size="sm" class="max-w-lg">
             E-commerce and SaaS item showcase card with badge overlays, original vs discounted prices, and action slots.

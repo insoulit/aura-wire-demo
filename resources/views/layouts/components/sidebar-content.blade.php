@@ -10,7 +10,7 @@
         $activeGroup = 'display';
     } elseif (request()->is('components/alert', 'components/modal', 'components/sheet', 'components/spinner', 'components/toast', 'components/banner', 'components/tooltip', 'components/popover', 'components/command')) {
         $activeGroup = 'feedback';
-    } elseif (request()->is('components/breadcrumbs', 'components/pagination', 'components/stepper')) {
+    } elseif (request()->is('components/breadcrumb', 'components/pagination', 'components/stepper')) {
         $activeGroup = 'navigation';
     } elseif (request()->is('components/header', 'components/sidebar', 'components/main', 'components/navbar', 'components/footer')) {
         $activeGroup = 'layout';
@@ -240,7 +240,7 @@
 
     <!-- 6. Navigation Dropdown -->
     @php
-        $isNavActive = request()->is('components/breadcrumbs', 'components/pagination', 'components/stepper');
+        $isNavActive = request()->is('components/breadcrumb', 'components/pagination', 'components/stepper');
     @endphp
     <div class="space-y-0.5">
         <button
@@ -263,7 +263,7 @@
             </svg>
         </button>
         <ul x-show="openGroup === 'navigation'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 my-1 text-xs sm:text-sm">
-            <li><a href="/components/breadcrumbs" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/breadcrumbs') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Breadcrumbs</a></li>
+            <li><a href="/components/breadcrumb" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/breadcrumb') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Breadcrumb</a></li>
             <li><a href="/components/pagination" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/pagination') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Pagination</a></li>
             <li><a href="/components/stepper" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/stepper') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Stepper</a></li>
         </ul>

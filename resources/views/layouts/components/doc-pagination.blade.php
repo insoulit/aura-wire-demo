@@ -51,7 +51,7 @@
         ['title' => 'Spinner', 'url' => '/components/spinner'],
         ['title' => 'Toast', 'url' => '/components/toast'],
         ['title' => 'Tooltip', 'url' => '/components/tooltip'],
-        ['title' => 'Breadcrumbs', 'url' => '/components/breadcrumbs'],
+        ['title' => 'Breadcrumb', 'url' => '/components/breadcrumb'],
         ['title' => 'Pagination', 'url' => '/components/pagination'],
         ['title' => 'Stepper', 'url' => '/components/stepper'],
         ['title' => 'Header', 'url' => '/components/header'],

@@ -9,7 +9,7 @@ title('Sidebar - Aura Wire');
 
 <div class="w-full max-w-3xl mx-auto space-y-6 flex flex-col items-center justify-center">
     <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Layout Components</x-aura::kicker>
+        <x-aura::kicker>Layout</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Sidebar</x-aura::heading>
         <x-aura::subheading size="sm" class="max-w-xl">
             Collapsible vertical navigation sidebars with section groups, active state highlights, and icon items.

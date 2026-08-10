@@ -14,7 +14,7 @@ class extends Component {};
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
     <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Action Components</x-aura::kicker>
+        <x-aura::kicker>Action</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Button Group</x-aura::heading>
         <x-aura::subheading size="sm" class="max-w-lg">
             Group related buttons into cohesive segmented controls, toolbars, and layout actions with refined, subtle border radius.

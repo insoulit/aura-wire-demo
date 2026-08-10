@@ -14,7 +14,7 @@ class extends Component {};
 <div class="w-full max-w-4xl mx-auto space-y-10">
     <!-- Header -->
     <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Typography Components</x-aura::kicker>
+        <x-aura::kicker>Typography</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Subheading</x-aura::heading>
         <x-aura::subheading size="sm" class="max-w-xl">
             Subheading typography component for section lead paragraphs, feature summaries, card header descriptions, and hero text.

@@ -15,7 +15,7 @@ state([
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
     <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Form Components</x-aura::kicker>
+        <x-aura::kicker>Form</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Rich Text Editor</x-aura::heading>
         <x-aura::subheading size="sm" class="max-w-lg">
             WYSIWYG rich text editor component with interactive formatting toolbar, live HTML output, Livewire entangle reactivity, and word counter.

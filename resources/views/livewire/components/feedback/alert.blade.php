@@ -14,7 +14,7 @@ class extends Component {};
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
     <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Feedback Components</x-aura::kicker>
+        <x-aura::kicker>Feedback</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Alert</x-aura::heading>
         <x-aura::subheading size="sm" class="max-w-lg">
             Contextual feedback callouts for status updates, system warnings, product announcements, and inline error notices.

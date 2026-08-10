@@ -14,8 +14,8 @@ class extends Component {};
 <div class="w-full max-w-5xl mx-auto space-y-12">
     <!-- Footer Page Intro -->
     <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Layout Components</x-aura::kicker>
-        <x-aura::heading level="1" size="lg">Footer Component</x-aura::heading>
+        <x-aura::kicker>Layout</x-aura::kicker>
+        <x-aura::heading level="1" size="lg">Footer</x-aura::heading>
         <x-aura::subheading size="sm" class="max-w-xl">
             Flexible, responsive application footers. Supports brand logos, multi-column navigation links, social triggers, newsletter subscriptions, and copyright bottom bars.
         </x-aura::subheading>

@@ -103,7 +103,7 @@ Volt::route('/guest/blocks/user-profile', 'guest.blocks.profile')->name('guest.b
 Volt::route('/guest/blocks/user', 'guest.blocks.profile')->name('guest.blocks.user');
 
 // Navigation Group
-Volt::route('/components/breadcrumbs', 'components.navigation.breadcrumbs')->name('components.breadcrumbs');
+Volt::route('/components/breadcrumb', 'components.navigation.breadcrumb')->name('components.breadcrumb');
 Volt::route('/components/pagination', 'components.navigation.pagination')->name('components.pagination');
 Volt::route('/components/stepper', 'components.navigation.stepper')->name('components.stepper');
 

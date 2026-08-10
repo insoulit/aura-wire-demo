@@ -10,7 +10,7 @@ title('Progress Bar - Aura Wire');
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
     <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Display Components</x-aura::kicker>
+        <x-aura::kicker>Display</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Progress Bar</x-aura::heading>
         <x-aura::subheading size="sm" class="max-w-lg">
             Visual progress indicators for file uploads, storage quota limits, onboarding steps, and system metrics.

@@ -14,8 +14,8 @@ class extends Component {};
 <div class="w-full max-w-5xl mx-auto space-y-12">
     <!-- Navbar Page Intro -->
     <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Layout Components</x-aura::kicker>
-        <x-aura::heading level="1" size="lg">Navbar Component</x-aura::heading>
+        <x-aura::kicker>Layout</x-aura::kicker>
+        <x-aura::heading level="1" size="lg">Navbar</x-aura::heading>
         <x-aura::subheading size="sm" class="max-w-xl">
             Lightweight, sticky application navigation bars. Supports brand logos, inline links, quick action triggers, search inputs, and user controls.
         </x-aura::subheading>

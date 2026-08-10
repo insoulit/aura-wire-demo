@@ -14,8 +14,8 @@ class extends Component {};
 <div class="w-full max-w-5xl mx-auto space-y-12">
     <!-- Header Page Intro -->
     <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Layout Components</x-aura::kicker>
-        <x-aura::heading level="1" size="lg">Header Component</x-aura::heading>
+        <x-aura::kicker>Layout</x-aura::kicker>
+        <x-aura::heading level="1" size="lg">Header</x-aura::heading>
         <x-aura::subheading size="sm" class="max-w-xl">
             Flexible, responsive application headers and navigation bars. Supports brand logos, search bars, navigation items, notifications, and user action triggers.
         </x-aura::subheading>
