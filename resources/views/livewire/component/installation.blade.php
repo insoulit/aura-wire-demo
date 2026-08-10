@@ -90,7 +90,7 @@ title('Installation & Setup Guide - Aura Wire');
                 </div>
                 <x-aura::badge variant="subtle" size="sm">Terminal</x-aura::badge>
             </div>
-            <x-aura::text size="sm" variant="subtle">Run the composer require command in your Laravel root directory:</x-aura::text>
+            <x-aura::text size="sm" variant="subtle" class="py-3 block">Run the composer require command in your Laravel root directory:</x-aura::text>
             <x-aura::code class="w-full" language="bash" active="code" :showTabs="false">
                 <x-slot:codeSlot>composer require insoulit/aura-wire</x-slot:codeSlot>
             </x-aura::code>
@@ -105,7 +105,7 @@ title('Installation & Setup Guide - Aura Wire');
                 </div>
                 <x-aura::badge variant="subtle" size="sm">Artisan</x-aura::badge>
             </div>
-            <x-aura::text size="sm" variant="subtle">Publish the configuration and Blade components using Artisan:</x-aura::text>
+            <x-aura::text size="sm" variant="subtle" class="py-3 block">Publish the configuration and Blade components using Artisan:</x-aura::text>
             <x-aura::code class="w-full" language="bash" active="code" :showTabs="false">
                 <x-slot:codeSlot>php artisan vendor:publish --tag="aura-wire-config"</x-slot:codeSlot>
             </x-aura::code>
@@ -120,7 +120,7 @@ title('Installation & Setup Guide - Aura Wire');
                 </div>
                 <x-aura::badge variant="subtle" size="sm">Tailwind CSS</x-aura::badge>
             </div>
-            <x-aura::text size="sm" variant="subtle">Ensure your <code class="text-zinc-900 dark:text-white font-mono font-semibold">tailwind.config.js</code> or CSS includes vendor component views:</x-aura::text>
+            <x-aura::text size="sm" variant="subtle" class="py-3 block">Ensure your <code class="text-zinc-900 dark:text-white font-mono font-semibold">tailwind.config.js</code> or CSS includes vendor component views:</x-aura::text>
             <x-aura::code class="w-full" language="javascript" active="code" :showTabs="false">
                 <x-slot:codeSlot>content: [
     './resources/**/*.blade.php',
@@ -139,7 +139,7 @@ title('Installation & Setup Guide - Aura Wire');
                 <x-aura::badge variant="primary" size="sm">Typography Guideline</x-aura::badge>
             </div>
 
-            <x-aura::text size="sm" variant="subtle">
+            <x-aura::text size="sm" variant="subtle" class="py-3 block">
                 AuraWire is designed to look crisp and state-of-the-art using the <strong>Inter</strong> font family. Import Inter in your layout head and configure Tailwind CSS:
             </x-aura::text>
 
@@ -190,7 +190,7 @@ title('Installation & Setup Guide - Aura Wire');
                 </div>
                 <x-aura::badge variant="subtle" size="sm">Usage</x-aura::badge>
             </div>
-            <x-aura::text size="sm" variant="subtle">Render components using either shorthand <code class="text-zinc-900 dark:text-white font-mono font-semibold">&lt;aura:...&gt;</code> or standard Blade prefix syntax <code class="text-zinc-900 dark:text-white font-mono font-semibold">&lt;x-aura::...&gt;</code>:</x-aura::text>
+            <x-aura::text size="sm" variant="subtle" class="py-3 block">Render components using either shorthand <code class="text-zinc-900 dark:text-white font-mono font-semibold">&lt;aura:...&gt;</code> or standard Blade prefix syntax <code class="text-zinc-900 dark:text-white font-mono font-semibold">&lt;x-aura::...&gt;</code>:</x-aura::text>
             <div class="space-y-4 pt-1">
                 <div class="space-y-1.5">
                     <div class="text-xs font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">Shorthand Tag Syntax (Recommended)</div>

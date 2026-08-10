@@ -2,7 +2,7 @@
     $docsPages = [
         ['title' => 'Overview', 'url' => '/components'],
         ['title' => 'Installation', 'url' => '/components/installation'],
-        ['title' => 'Icons Library', 'url' => '/components/icon'],
+        ['title' => 'Icon library', 'url' => '/components/icon'],
         ['title' => 'Heading', 'url' => '/components/heading'],
         ['title' => 'Subheading', 'url' => '/components/subheading'],
         ['title' => 'Kicker', 'url' => '/components/kicker'],

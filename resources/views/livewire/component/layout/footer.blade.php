@@ -114,7 +114,7 @@ class extends Component {};
                         <ul class="space-y-2 text-xs text-zinc-600 dark:text-zinc-400">
                             <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Documentation</a></li>
                             <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Starter Kits</a></li>
-                            <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Icons Library</a></li>
+                            <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Icon library</a></li>
                             <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Community</a></li>
                         </ul>
                     </div>
