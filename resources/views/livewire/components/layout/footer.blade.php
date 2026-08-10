@@ -36,7 +36,7 @@ class extends Component {};
                             <div class="p-1.5 rounded-lg bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 shadow-xs flex items-center justify-center">
                                 <x-aura::icon name="sparkles" size="xs" />
                             </div>
-                            <span class="font-bold text-zinc-900 dark:text-white text-sm tracking-tight">Aura Wire UI</span>
+                            <span class="font-bold text-zinc-900 dark:text-white text-sm tracking-tight">Aura Wire</span>
                         </div>
                     </x-slot>
 
@@ -59,7 +59,7 @@ class extends Component {};
     &lt;x-slot name="brand"&gt;
         &lt;div class="flex items-center gap-2.5"&gt;
             &lt;x-aura::icon name="sparkles" size="xs" /&gt;
-            &lt;span class="font-bold text-sm"&gt;Aura Wire UI&lt;/span&gt;
+            &lt;span class="font-bold text-sm"&gt;Aura Wire&lt;/span&gt;
         &lt;/div&gt;
     &lt;/x-slot&gt;
 

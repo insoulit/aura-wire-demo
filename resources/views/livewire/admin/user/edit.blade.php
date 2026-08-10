@@ -46,9 +46,9 @@ class extends Component {
     </div>
 
     @if ($saved)
-        <x-aura::alert variant="positive" title="Changes Saved">
-            User details for {{ $name }} have been updated successfully.
-        </x-aura::alert>
+        <div class="fixed bottom-5 right-5 z-50">
+            <x-aura::toast variant="success" title="Changes Saved" description="User details for {{ $name }} updated successfully." />
+        </div>
     @endif
 
     <!-- Edit User Card Form -->

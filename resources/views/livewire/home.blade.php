@@ -9,42 +9,92 @@ title('Aura Wire — Modern Blade & Livewire UI Components for Laravel');
 
 <div class="w-full space-y-20 pb-16">
 
-    <!-- 1. Hero Section (100% Viewport Height) -->
-    <section class="min-h-[calc(100vh-5rem)] flex flex-col justify-between items-center max-w-4xl mx-auto px-4 py-8 text-center">
+    <!-- 1. Hero Section (Option 3: Hero + Code Snippet Terminal Card) -->
+    <section class="min-h-[calc(100vh-5rem)] flex flex-col justify-between items-center max-w-4xl mx-auto px-4 py-8 text-center space-y-8">
         <!-- Top Empty Spacer for Vertical Balance -->
         <div></div>
 
-        <!-- Hero Content (Centered) -->
-        <div class="space-y-6 max-w-3xl mx-auto">
+        <!-- Hero Content -->
+        <div class="space-y-6 max-w-2xl mx-auto flex flex-col items-center">
+            
+            <!-- Top Version Pill -->
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200/80 dark:border-zinc-700/60 shadow-2xs">
-                <x-aura::badge variant="positive" size="sm">v1.3.0</x-aura::badge>
-                <x-aura::text size="xs" variant="subtle" class="font-medium">Laravel 11/12 &amp; Livewire 3 Component Suite</x-aura::text>
+                <x-aura::badge variant="positive" size="sm" class="font-semibold">v1.3.0</x-aura::badge>
+                <span class="text-xs font-medium text-zinc-600 dark:text-zinc-300">Laravel 11/12 &amp; Livewire 3</span>
             </div>
 
-            <x-aura::heading level="1" size="display-xl" class="tracking-tight text-zinc-900 dark:text-white">
-                Aura Wire UI Component Suite
-            </x-aura::heading>
+            <!-- Display Headline & Subtitle -->
+            <div class="space-y-1.5 text-center">
+                <h1 class="text-5xl sm:text-6xl font-black tracking-tight text-zinc-900 dark:text-white">
+                    Aura Wire
+                </h1>
+                <p class="text-lg sm:text-xl font-medium text-zinc-500 dark:text-zinc-400 tracking-tight">
+                    Component Suite for Laravel
+                </p>
+            </div>
 
-            <x-aura::subheading size="lg" class="max-w-xl mx-auto text-zinc-600 dark:text-zinc-400">
-                Clean, unstyled-first Blade &amp; Livewire components crafted for modern Laravel applications.
-            </x-aura::subheading>
+            <!-- Description -->
+            <p class="text-sm sm:text-base text-zinc-600 dark:text-zinc-400 max-w-md mx-auto text-center leading-relaxed">
+                Unstyled-first Blade components, block layouts, and full-page portal templates.
+            </p>
 
-            <!-- CTA Buttons -->
-            <div class="pt-3 flex flex-wrap items-center justify-center gap-3.5">
+            <!-- Action CTAs -->
+            <div class="pt-1 flex flex-wrap items-center justify-center gap-3">
                 <x-aura::button variant="primary" size="lg" href="/components" class="shadow-sm">
-                    <span>Browse Components</span>
+                    <span>Explore Components</span>
                     <x-aura::icon name="arrow-right" class="w-4 h-4 ml-1.5 inline-block" />
                 </x-aura::button>
 
-                <x-aura::button variant="primary" size="lg" href="/components/installation">
+                <x-aura::button variant="secondary" size="lg" href="/components/installation">
                     <span>Quick Setup</span>
-                    <x-aura::icon name="arrow-right" class="w-4 h-4 ml-1.5 inline-block" />
                 </x-aura::button>
             </div>
         </div>
 
+        <!-- IDE Code Snippet Terminal Card -->
+        <div class="w-full max-w-2xl text-left rounded-2xl bg-zinc-900 text-zinc-100 border border-zinc-800 shadow-2xl overflow-hidden font-mono text-xs">
+            <!-- Window Header Bar -->
+            <div class="flex items-center justify-between px-4 py-3 bg-zinc-950/80 border-b border-zinc-800/80">
+                <div class="flex items-center gap-2">
+                    <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                    <div class="w-3 h-3 rounded-full bg-amber-500/80"></div>
+                    <div class="w-3 h-3 rounded-full bg-emerald-500/80"></div>
+                    <span class="ml-2 text-[11px] text-zinc-400 font-sans font-medium">resources/views/welcome.blade.php</span>
+                </div>
+                <div
+                    x-data="{ copied: false, snippet: @js('<x-aura::card title=\'Welcome\'>\n    <x-aura::input label=\'Email\' />\n    <x-aura::button variant=\'primary\'>Submit</x-aura::button>\n</x-aura::card>') }"
+                    x-on:click="navigator.clipboard.writeText(snippet); copied = true; setTimeout(() => copied = false, 2000)"
+                    class="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-zinc-800/60 hover:bg-zinc-800 text-zinc-300 hover:text-white transition-colors cursor-pointer text-[11px] font-sans"
+                >
+                    <template x-if="!copied">
+                        <div class="flex items-center gap-1">
+                            <x-aura::icon name="copy" class="w-3 h-3" />
+                            <span>Copy Code</span>
+                        </div>
+                    </template>
+                    <template x-if="copied">
+                        <div class="flex items-center gap-1 text-emerald-400">
+                            <x-aura::icon name="check" class="w-3 h-3" />
+                            <span>Copied!</span>
+                        </div>
+                    </template>
+                </div>
+            </div>
+
+            <!-- Code Preview Content -->
+            <div class="p-4 sm:p-5 space-y-1.5 overflow-x-auto text-[12px] leading-relaxed">
+                <div><span class="text-zinc-500">&lt;!-- Easy Blade Component Usage --&gt;</span></div>
+                <div><span class="text-indigo-400">&lt;x-aura::card</span> <span class="text-emerald-300">title</span>=<span class="text-amber-300">"Welcome to Aura Wire"</span><span class="text-indigo-400">&gt;</span></div>
+                <div class="pl-4"><span class="text-indigo-400">&lt;x-aura::field</span> <span class="text-emerald-300">label</span>=<span class="text-amber-300">"Email Address"</span><span class="text-indigo-400">&gt;</span></div>
+                <div class="pl-8"><span class="text-indigo-400">&lt;x-aura::input</span> <span class="text-emerald-300">placeholder</span>=<span class="text-amber-300">"alex@example.com"</span> <span class="text-indigo-400">/&gt;</span></div>
+                <div class="pl-4"><span class="text-indigo-400">&lt;/x-aura::field&gt;</span></div>
+                <div class="pl-4 pt-1"><span class="text-indigo-400">&lt;x-aura::button</span> <span class="text-emerald-300">variant</span>=<span class="text-amber-300">"primary"</span><span class="text-indigo-400">&gt;</span>Create<span class="text-indigo-400">&lt;/x-aura::button&gt;</span></div>
+                <div><span class="text-indigo-400">&lt;/x-aura::card&gt;</span></div>
+            </div>
+        </div>
+
         <!-- Bottom Scroll Down Hint -->
-        <div class="pt-8 flex flex-col items-center gap-1.5 animate-bounce">
+        <div class="pt-4 flex flex-col items-center gap-1.5 animate-bounce">
             <x-aura::text size="xs" variant="subtle" class="font-medium tracking-wider uppercase">Scroll For Demos</x-aura::text>
             <x-aura::icon name="arrow-down" class="w-4 h-4 text-zinc-400" />
         </div>
@@ -203,7 +253,7 @@ title('Aura Wire — Modern Blade & Livewire UI Components for Laravel');
         <x-slot name="brand">
             <div class="flex items-center gap-2">
                 <div class="w-6 h-6 rounded-md bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center text-xs font-bold shadow-2xs">A</div>
-                <x-aura::text size="sm" class="font-bold text-zinc-900 dark:text-white">Aura Wire UI</x-aura::text>
+                <x-aura::text size="sm" class="font-bold text-zinc-900 dark:text-white">Aura Wire</x-aura::text>
             </div>
         </x-slot>
 

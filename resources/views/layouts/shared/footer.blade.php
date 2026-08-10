@@ -2,7 +2,7 @@
     <x-slot name="brand">
         <a href="/" class="flex items-center gap-2 group">
             <div class="w-6 h-6 rounded-md bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center text-xs font-bold shadow-2xs group-hover:scale-105 transition-transform">A</div>
-            <span class="font-bold text-zinc-900 dark:text-white text-sm">Aura Wire UI</span>
+            <span class="font-bold text-zinc-900 dark:text-white text-sm">Aura Wire</span>
         </a>
     </x-slot>
 
