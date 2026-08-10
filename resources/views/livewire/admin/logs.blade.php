@@ -9,7 +9,7 @@ title('System Logs — Admin Console | Aura Wire');
 
 <div class="space-y-8">
     <!-- Header -->
-    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-5">
+    <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
             <div class="flex items-center gap-2 mb-1">
                 <x-aura::kicker class="text-zinc-500">SYSTEM LOGS</x-aura::kicker>

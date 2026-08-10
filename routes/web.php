@@ -155,7 +155,10 @@ Volt::route('/user/email', 'user.email')->name('user.email');
 Volt::route('/user/password', 'user.password')->name('user.password');
 Volt::route('/user/settings', 'user.settings')->name('user.settings');
 Volt::route('/admin', 'admin.dashboard')->name('admin.dashboard');
-Volt::route('/admin/users', 'admin.users')->name('admin.users');
+Volt::route('/admin/users', 'admin.user.index')->name('admin.users');
+Volt::route('/admin/users/create', 'admin.user.create')->name('admin.users.create');
+Volt::route('/admin/users/edit', 'admin.user.edit')->name('admin.users.edit');
+Volt::route('/admin/users/show', 'admin.user.show')->name('admin.users.show');
 Volt::route('/admin/logs', 'admin.logs')->name('admin.logs');
 Volt::route('/admin/settings', 'admin.settings')->name('admin.settings');
 

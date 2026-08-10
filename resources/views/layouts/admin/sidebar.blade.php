@@ -11,32 +11,6 @@
         </a>
     </x-slot:header>
 
-    <x-aura::sidebar.heading>Portals</x-aura::sidebar.heading>
-    <x-aura::sidebar.item href="/components" :active="request()->is('components*')" badge="Docs">
-        <x-slot:icon>
-            <x-aura::icon name="layers" class="w-4 h-4 text-zinc-900 dark:text-white" />
-        </x-slot:icon>
-        Components
-    </x-aura::sidebar.item>
-    <x-aura::sidebar.item href="/guest" :active="request()->is('guest*')">
-        <x-slot:icon>
-            <x-aura::icon name="globe" class="w-4 h-4 text-zinc-900 dark:text-white" />
-        </x-slot:icon>
-        Guest
-    </x-aura::sidebar.item>
-    <x-aura::sidebar.item href="/dashboard" :active="request()->is('dashboard*')">
-        <x-slot:icon>
-            <x-aura::icon name="user" class="w-4 h-4 text-zinc-900 dark:text-white" />
-        </x-slot:icon>
-        User
-    </x-aura::sidebar.item>
-    <x-aura::sidebar.item href="/admin" :active="request()->is('admin')">
-        <x-slot:icon>
-            <x-aura::icon name="shield-check" class="w-4 h-4 text-zinc-900 dark:text-white" />
-        </x-slot:icon>
-        Admin
-    </x-aura::sidebar.item>
-
     <x-aura::sidebar.heading>Core</x-aura::sidebar.heading>
     <x-aura::sidebar.item href="/admin" :active="request()->is('admin')">
         <x-slot:icon>
@@ -64,6 +38,34 @@
         </x-slot:icon>
         Settings
     </x-aura::sidebar.item>
+
+    <div class="mt-auto pt-4 border-t border-zinc-100 dark:border-zinc-800/80 space-y-1">
+        <x-aura::sidebar.heading>Portals</x-aura::sidebar.heading>
+        <x-aura::sidebar.item href="/components" :active="request()->is('components*')" badge="Docs">
+            <x-slot:icon>
+                <x-aura::icon name="layers" class="w-4 h-4 text-zinc-900 dark:text-white" />
+            </x-slot:icon>
+            Components
+        </x-aura::sidebar.item>
+        <x-aura::sidebar.item href="/guest" :active="request()->is('guest*')">
+            <x-slot:icon>
+                <x-aura::icon name="globe" class="w-4 h-4 text-zinc-900 dark:text-white" />
+            </x-slot:icon>
+            Guest
+        </x-aura::sidebar.item>
+        <x-aura::sidebar.item href="/dashboard" :active="request()->is('dashboard*')">
+            <x-slot:icon>
+                <x-aura::icon name="user" class="w-4 h-4 text-zinc-900 dark:text-white" />
+            </x-slot:icon>
+            User
+        </x-aura::sidebar.item>
+        <x-aura::sidebar.item href="/admin" :active="false">
+            <x-slot:icon>
+                <x-aura::icon name="shield-check" class="w-4 h-4 text-zinc-900 dark:text-white" />
+            </x-slot:icon>
+            Admin
+        </x-aura::sidebar.item>
+    </div>
 
     <x-slot:footer>
         <div class="space-y-3">
