@@ -11,6 +11,8 @@
             <!-- Main Component Page Content Slot Centered on X Axis -->
             <main class="flex-1 min-w-0 w-full flex flex-col items-center">
                 {{ $slot }}
+
+                @include('layouts.components.doc-pagination')
             </main>
         </div>
     </div>
