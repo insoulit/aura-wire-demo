@@ -65,7 +65,7 @@ class extends Component {};
 
                 <!-- Tier 2: Pro (Featured) -->
                 <x-aura::card class="flex flex-col justify-between p-6 space-y-6 relative border-2 border-indigo-500 shadow-xl ring-4 ring-indigo-500/10">
-                    <x-aura::badge variant="positive" size="sm" class="absolute -top-3 right-6 shadow-md bg-indigo-600 text-white font-bold">
+                    <x-aura::badge variant="positive" size="sm" class="absolute -top-3 right-6 z-10 shadow-md bg-indigo-600 text-white font-bold">
                         MOST POPULAR
                     </x-aura::badge>
                     <div class="space-y-4">

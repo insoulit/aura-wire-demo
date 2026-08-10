@@ -81,4 +81,22 @@ title('Tag - Aura Wire');
     &lt;/button&gt;
 &lt;/x-aura::tag&gt;</x-slot:codeSlot>
     </x-aura::code>
+
+    <!-- 4. Shapes (Pill & Rounded) -->
+    <x-aura::code class="w-full" title="4. Tag Shapes (Pill & Rounded)">
+        <x-slot:preview>
+            <div class="flex flex-wrap gap-3 items-center">
+                <x-aura::tag pill variant="primary">Pill Shape (Default)</x-aura::tag>
+                <x-aura::tag rounded variant="primary">Rounded Shape</x-aura::tag>
+                <x-aura::tag rounded variant="success">Rounded Success</x-aura::tag>
+                <x-aura::tag rounded variant="warning">Rounded Warning</x-aura::tag>
+            </div>
+        </x-slot:preview>
+        <x-slot:codeSlot>&lt;!-- Default Pill Shape --&gt;
+&lt;x-aura::tag shape="pill" variant="primary"&gt;Pill Shape&lt;/x-aura::tag&gt;
+
+&lt;!-- Rounded Shape --&gt;
+&lt;x-aura::tag rounded variant="primary"&gt;Rounded Shape&lt;/x-aura::tag&gt;
+&lt;x-aura::tag shape="rounded" variant="success"&gt;Rounded Success&lt;/x-aura::tag&gt;</x-slot:codeSlot>
+    </x-aura::code>
 </div>

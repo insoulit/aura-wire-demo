@@ -139,4 +139,28 @@ class extends Component {};
     &lt;/div&gt;
 &lt;/x-aura::card&gt;</x-slot>
     </x-aura::code>
+
+    <!-- 4. Featured Card with Floating Badge -->
+    <x-aura::code class="w-full" title="4. Featured Card with Floating Badge">
+        <x-slot:preview>
+            <div class="w-full max-w-md relative pt-3">
+                <x-aura::card class="border-2 border-indigo-500 shadow-xl relative">
+                    <x-aura::badge variant="positive" size="sm" class="absolute -top-3 right-6 z-10 shadow-md bg-indigo-600 text-white font-bold">
+                        FEATURED
+                    </x-aura::badge>
+                    <div class="space-y-2">
+                        <x-aura::kicker class="text-indigo-500 font-bold">Pro Plan</x-aura::kicker>
+                        <h4 class="text-xl font-bold text-zinc-900 dark:text-white">$49 / month</h4>
+                        <p class="text-xs text-zinc-500">Includes advanced analytics and 24/7 priority live support.</p>
+                    </div>
+                </x-aura::card>
+            </div>
+        </x-slot:preview>
+        <x-slot name="codeSlot">&lt;x-aura::card class="relative border-2 border-indigo-500"&gt;
+    &lt;x-aura::badge class="absolute -top-3 right-6 z-10 bg-indigo-600 text-white"&gt;
+        FEATURED
+    &lt;/x-aura::badge&gt;
+    &lt;h4 class="text-xl font-bold"&gt;$49 / month&lt;/h4&gt;
+&lt;/x-aura::card&gt;</x-slot>
+    </x-aura::code>
 </div>

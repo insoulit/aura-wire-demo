@@ -35,7 +35,7 @@ class extends Component {};
                     <x-aura::card class="space-y-2">
                         <x-aura::kicker>Gross Monthly Sales</x-aura::kicker>
                         <p class="text-2xl font-black font-mono tracking-tight text-zinc-900 dark:text-white">$84,120.00</p>
-                        <x-aura::badge variant="positive" size="sm">+18.4% vs last month</x-aura::badge>
+                        <x-aura::tag variant="success" size="sm">+18.4%</x-aura::tag>
                     </x-aura::card>
 
                     <x-aura::card class="space-y-2">
@@ -50,8 +50,8 @@ class extends Component {};
 
                     <x-aura::card class="space-y-2">
                         <x-aura::kicker>Cluster Infrastructure</x-aura::kicker>
-                        <p class="text-2xl font-black font-mono tracking-tight text-emerald-600 dark:text-emerald-400">99.98% SLA</p>
-                        <x-aura::badge variant="positive" size="sm">All Systems Operational</x-aura::badge>
+                        <p class="text-2xl font-black font-mono tracking-tight text-zinc-900 dark:text-white">99.98% SLA</p>
+                        <x-aura::tag variant="success" size="sm">Operational</x-aura::tag>
                     </x-aura::card>
                 </div>
 
@@ -59,22 +59,22 @@ class extends Component {};
                 <x-aura::card title="Infrastructure Load &amp; Capacity">
                     <div class="space-y-4 pt-1">
                         <div>
-                            <div class="flex justify-between text-xs font-bold mb-1">
+                            <div class="flex justify-between text-xs font-bold mb-1.5 text-zinc-900 dark:text-white">
                                 <span>CPU Cluster Utilization</span>
-                                <span class="font-mono text-emerald-600">38%</span>
+                                <span class="font-mono text-zinc-500 dark:text-zinc-400">38%</span>
                             </div>
-                            <x-aura::progress-bar percent="38" variant="emerald" size="md" />
+                            <x-aura::progress-bar percent="38" size="md" />
                         </div>
                         <div>
-                            <div class="flex justify-between text-xs font-bold mb-1">
+                            <div class="flex justify-between text-xs font-bold mb-1.5 text-zinc-900 dark:text-white">
                                 <span>Memory (RAM) Quota</span>
-                                <span class="font-mono text-amber-600">72%</span>
+                                <span class="font-mono text-zinc-500 dark:text-zinc-400">72%</span>
                             </div>
-                            <x-aura::progress-bar percent="72" variant="amber" size="md" />
+                            <x-aura::progress-bar percent="72" variant="subtle" size="md" />
                         </div>
                     </div>
                     <x-slot name="footer">
-                        <x-aura::button variant="ghost" size="sm">System Logs</x-aura::button>
+                        <x-aura::button variant="subtle" size="sm">System Logs</x-aura::button>
                         <x-aura::button variant="primary" size="sm">Scale Node</x-aura::button>
                     </x-slot>
                 </x-aura::card>
@@ -85,13 +85,13 @@ class extends Component {};
     &lt;div class="grid grid-cols-1 sm:grid-cols-3 gap-4"&gt;
         &lt;x-aura::card class="space-y-2"&gt;
             &lt;x-aura::kicker&gt;Gross Monthly Sales&lt;/x-aura::kicker&gt;
-            &lt;p class="text-2xl font-black font-mono"&gt;$84,120.00&lt;/p&gt;
-            &lt;x-aura::badge variant="positive" size="sm"&gt;+18.4%&lt;/x-aura::badge&gt;
+            &lt;p class="text-2xl font-black font-mono text-zinc-900 dark:text-white"&gt;$84,120.00&lt;/p&gt;
+            &lt;x-aura::tag variant="success" size="sm"&gt;+18.4%&lt;/x-aura::tag&gt;
         &lt;/x-aura::card&gt;
 
         &lt;x-aura::card class="space-y-2"&gt;
             &lt;x-aura::kicker&gt;Active Team Members&lt;/x-aura::kicker&gt;
-            &lt;p class="text-2xl font-black font-mono"&gt;42 Active&lt;/p&gt;
+            &lt;p class="text-2xl font-black font-mono text-zinc-900 dark:text-white"&gt;42 Active&lt;/p&gt;
             &lt;div class="flex items-center gap-1.5"&gt;
                 &lt;x-aura::avatar initials="AM" status="online" size="xs" /&gt;
                 &lt;x-aura::avatar initials="SC" status="online" size="xs" /&gt;
@@ -100,17 +100,31 @@ class extends Component {};
 
         &lt;x-aura::card class="space-y-2"&gt;
             &lt;x-aura::kicker&gt;Cluster Infrastructure&lt;/x-aura::kicker&gt;
-            &lt;p class="text-2xl font-black font-mono text-emerald-600"&gt;99.98% SLA&lt;/p&gt;
-            &lt;x-aura::badge variant="positive" size="sm"&gt;Operational&lt;/x-aura::badge&gt;
+            &lt;p class="text-2xl font-black font-mono text-zinc-900 dark:text-white"&gt;99.98% SLA&lt;/p&gt;
+            &lt;x-aura::tag variant="success" size="sm"&gt;Operational&lt;/x-aura::tag&gt;
         &lt;/x-aura::card&gt;
     &lt;/div&gt;
 
     &lt;!-- Capacity Card --&gt;
     &lt;x-aura::card title="Infrastructure Load &amp;amp; Capacity"&gt;
-        &lt;x-aura::progress-bar percent="38" variant="emerald" size="md" /&gt;
-        &lt;x-aura::progress-bar percent="72" variant="amber" size="md" /&gt;
+        &lt;div class="space-y-4"&gt;
+            &lt;div&gt;
+                &lt;div class="flex justify-between text-xs font-bold mb-1"&gt;
+                    &lt;span&gt;CPU Cluster Utilization&lt;/span&gt;
+                    &lt;span class="font-mono text-zinc-500"&gt;38%&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;x-aura::progress-bar percent="38" size="md" /&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+                &lt;div class="flex justify-between text-xs font-bold mb-1"&gt;
+                    &lt;span&gt;Memory (RAM) Quota&lt;/span&gt;
+                    &lt;span class="font-mono text-zinc-500"&gt;72%&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;x-aura::progress-bar percent="72" variant="subtle" size="md" /&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
         &lt;x-slot name="footer"&gt;
-            &lt;x-aura::button variant="ghost" size="sm"&gt;System Logs&lt;/x-aura::button&gt;
+            &lt;x-aura::button variant="subtle" size="sm"&gt;System Logs&lt;/x-aura::button&gt;
             &lt;x-aura::button variant="primary" size="sm"&gt;Scale Node&lt;/x-aura::button&gt;
         &lt;/x-slot&gt;
     &lt;/x-aura::card&gt;

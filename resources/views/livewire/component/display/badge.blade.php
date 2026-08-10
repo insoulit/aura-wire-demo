@@ -108,4 +108,22 @@ title('Badge - Aura Wire');
 &lt;x-aura::badge variant="warning" size="sm"&gt;Pending&lt;/x-aura::badge&gt;
 &lt;x-aura::badge variant="negative" size="sm"&gt;Refunded&lt;/x-aura::badge&gt;</x-slot:codeSlot>
     </x-aura::code>
+
+    <!-- 5. Badge Shapes (Pill & Rounded) -->
+    <x-aura::code class="w-full" title="5. Badge Shapes (Pill & Rounded)">
+        <x-slot:preview>
+            <div class="flex flex-wrap gap-3 items-center">
+                <x-aura::badge pill variant="neutral">Pill Shape (Default)</x-aura::badge>
+                <x-aura::badge rounded variant="neutral">Rounded Shape</x-aura::badge>
+                <x-aura::badge rounded variant="positive">Paid (Rounded)</x-aura::badge>
+                <x-aura::badge rounded variant="negative">Failed (Rounded)</x-aura::badge>
+            </div>
+        </x-slot:preview>
+        <x-slot:codeSlot>&lt;!-- Default Pill Shape --&gt;
+&lt;x-aura::badge shape="pill" variant="neutral"&gt;Pill Shape&lt;/x-aura::badge&gt;
+
+&lt;!-- Rounded Shape --&gt;
+&lt;x-aura::badge rounded variant="positive"&gt;Paid&lt;/x-aura::badge&gt;
+&lt;x-aura::badge shape="rounded" variant="negative"&gt;Failed&lt;/x-aura::badge&gt;</x-slot:codeSlot>
+    </x-aura::code>
 </div>
