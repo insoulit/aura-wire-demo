@@ -25,7 +25,7 @@ class extends Component {
 <div class="max-w-2xl mx-auto space-y-6 py-4">
 
     <!-- Top Header -->
-    <div class="border-b border-zinc-200 dark:border-zinc-800 pb-4 space-y-1">
+    <div class="space-y-1">
         <div class="flex items-center justify-between gap-4">
             <x-aura::heading level="1" size="lg">Change Password &amp; PIN</x-aura::heading>
             <x-aura::button variant="secondary" size="sm" href="/dashboard" wire:navigate class="shrink-0">
@@ -46,7 +46,7 @@ class extends Component {
 
     <!-- Password & PIN Form Card -->
     <x-aura::card>
-        <div class="flex items-center justify-between pb-6 mb-6 border-b border-zinc-100 dark:border-zinc-800">
+        <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-4">
                 <x-aura::avatar initials="AK" size="lg" />
                 <div>
@@ -72,13 +72,13 @@ class extends Component {
                 </x-aura::field>
             </div>
 
-            <div class="pt-5 border-t border-zinc-100 dark:border-zinc-800 space-y-3">
+            <div class="pt-3 space-y-3">
                 <x-aura::field label="4-Digit Security PIN" hint="Used for quick confirmation on sensitive workspace actions.">
                     <x-aura::pin-code wire:model="pinCode" length="4" />
                 </x-aura::field>
             </div>
 
-            <div class="pt-4 border-t border-zinc-100 dark:border-zinc-800 flex justify-end">
+            <div class="pt-2 flex justify-end">
                 <x-aura::button variant="primary" size="md" type="submit">Update Password &amp; PIN</x-aura::button>
             </div>
         </form>

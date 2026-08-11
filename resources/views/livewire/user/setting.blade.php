@@ -27,7 +27,7 @@ class extends Component {
 <div class="max-w-2xl mx-auto space-y-6 py-4">
 
     <!-- Top Header -->
-    <div class="border-b border-zinc-200 dark:border-zinc-800 pb-4 space-y-1">
+    <div class="space-y-1">
         <div class="flex items-center justify-between gap-4">
             <x-aura::heading level="1" size="lg">Account &amp; Workspace Settings</x-aura::heading>
             <x-aura::button variant="secondary" size="sm" href="/dashboard" wire:navigate class="shrink-0">
@@ -48,7 +48,7 @@ class extends Component {
 
     <!-- Main Settings Form Card -->
     <x-aura::card>
-        <div class="flex items-center justify-between pb-6 mb-6 border-b border-zinc-100 dark:border-zinc-800">
+        <div class="flex items-center justify-between mb-6">
             <div class="flex items-center gap-4">
                 <x-aura::avatar initials="AK" size="lg" />
                 <div>
@@ -94,7 +94,7 @@ class extends Component {
             </div>
 
             <!-- Notifications Checkboxes -->
-            <div class="pt-4 border-t border-zinc-100 dark:border-zinc-800 space-y-3">
+            <div class="pt-2 space-y-3">
                 <x-aura::heading level="2" size="xs">Notification Preferences</x-aura::heading>
                 <div class="space-y-3">
                     <x-aura::checkbox label="Project Activity Summaries" description="Receive a weekly digest of project progress and team updates." checked />
@@ -103,7 +103,7 @@ class extends Component {
             </div>
 
             <!-- Submit Button -->
-            <div class="pt-4 border-t border-zinc-100 dark:border-zinc-800 flex justify-end">
+            <div class="pt-2 flex justify-end">
                 <x-aura::button variant="primary" size="md" type="submit">Save All Settings</x-aura::button>
             </div>
         </form>
