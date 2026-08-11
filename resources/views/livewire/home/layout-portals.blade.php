@@ -7,10 +7,10 @@ new class extends Component {};
 ?>
 
 <section class="max-w-6xl mx-auto px-4 space-y-10 pt-16 sm:pt-24">
-    <div class="text-center space-y-2 max-w-xl mx-auto">
+    <div class="text-center max-w-xl mx-auto">
         <x-aura::kicker>Layout Architectures</x-aura::kicker>
-        <x-aura::heading level="2" size="lg">Explore Application Layouts</x-aura::heading>
-        <x-aura::subheading size="sm">
+        <x-aura::heading level="2" size="xl">Application Layouts</x-aura::heading>
+        <x-aura::subheading size="md">
             Interactive layout environment templates built with Aura Wire components.
         </x-aura::subheading>
     </div>
@@ -22,36 +22,33 @@ new class extends Component {};
             <div class="space-y-4">
                 <!-- Card Header -->
                 <div class="flex items-center justify-between">
-                    <div class="w-10 h-10 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white flex items-center justify-center font-bold border border-zinc-200/80 dark:border-zinc-700/60 shadow-2xs group-hover:scale-105 transition-transform">
-                        <x-aura::icon name="globe" size="md" class="text-zinc-900 dark:text-white" />
-                    </div>
-                    <x-aura::badge variant="neutral" size="sm">Public Portal</x-aura::badge>
+                    <x-aura::icon-button icon="globe" variant="secondary" size="lg" class="rounded-xl group-hover:scale-105 transition-transform pointer-events-none" />
+                    <x-aura::badge variant="subtle" size="sm">Public</x-aura::badge>
                 </div>
 
-                <!-- Mini Visual Layout Skeleton Diagram -->
-                <div class="p-3 rounded-lg bg-zinc-100/70 dark:bg-zinc-950/60 border border-zinc-200/60 dark:border-zinc-800/80 space-y-2 select-none">
-                    <div class="h-3 rounded bg-zinc-300 dark:bg-zinc-700/80 w-full flex items-center justify-between px-2">
-                        <div class="h-1.5 w-8 rounded bg-zinc-400 dark:bg-zinc-600"></div>
-                        <div class="h-1.5 w-12 rounded bg-zinc-400 dark:bg-zinc-600"></div>
+                <!-- Mini Visual Layout Skeleton Diagram (100px height) -->
+                <div class="p-3 rounded-lg bg-zinc-100/70 dark:bg-zinc-950/60 border border-zinc-200/60 dark:border-zinc-800/80 space-y-2 select-none h-[100px] flex flex-col justify-between">
+                    <div class="h-3 rounded bg-zinc-300 dark:bg-zinc-700/80 w-full flex items-center justify-between px-2 shrink-0">
+                        <x-aura::skeleton height="6px" width="32px" class="bg-zinc-400 dark:bg-zinc-600" />
+                        <x-aura::skeleton height="6px" width="48px" class="bg-zinc-400 dark:bg-zinc-600" />
                     </div>
                     <div class="h-14 rounded-md bg-zinc-200/80 dark:bg-zinc-800/60 border border-dashed border-zinc-300 dark:border-zinc-700/60 flex items-center justify-center">
-                        <x-aura::text size="xs" variant="subtle" class="font-mono text-[10px]">Hero Layout</x-aura::text>
+                        <x-aura::text size="xs" variant="subtle" class="font-mono text-[10px]">Guest Layout</x-aura::text>
                     </div>
                 </div>
 
                 <!-- Info -->
                 <div>
-                    <x-aura::heading level="3" size="xs">Guest Layout</x-aura::heading>
-                    <x-aura::text variant="subtle" size="xs" class="mt-1.5 leading-relaxed">
+                    <x-aura::heading level="3" size="sm">Guest</x-aura::heading>
+                    <x-aura::text variant="subtle" size="sm" class="mt-1.5 leading-relaxed">
                         Public-facing portal layout for landing pages, marketing features, and authentication screens.
                     </x-aura::text>
                 </div>
             </div>
 
             <x-slot:footer>
-                <x-aura::button variant="primary" size="md" class="w-full justify-between" href="/guest">
-                    <span>Explore Guest Portal</span>
-                    <x-aura::icon name="arrow-right" class="ml-2 shrink-0 inline-block" />
+                <x-aura::button variant="primary" size="md" iconTrailing="arrow-right" class="w-full justify-between" href="/guest">
+                    Explore Guest
                 </x-aura::button>
             </x-slot:footer>
         </x-aura::card>
@@ -61,43 +58,40 @@ new class extends Component {};
             <div class="space-y-4">
                 <!-- Card Header -->
                 <div class="flex items-center justify-between">
-                    <div class="w-10 h-10 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white flex items-center justify-center font-bold border border-zinc-200/80 dark:border-zinc-700/60 shadow-2xs group-hover:scale-105 transition-transform">
-                        <x-aura::icon name="user" size="md" class="text-zinc-900 dark:text-white" />
-                    </div>
-                    <x-aura::badge variant="positive" size="sm">Member Portal</x-aura::badge>
+                    <x-aura::icon-button icon="user" variant="secondary" size="lg" class="rounded-xl group-hover:scale-105 transition-transform pointer-events-none" />
+                    <x-aura::badge variant="subtle" size="sm">Member</x-aura::badge>
                 </div>
 
-                <!-- Mini Visual Layout Skeleton Diagram -->
-                <div class="p-3 rounded-lg bg-zinc-100/70 dark:bg-zinc-950/60 border border-zinc-200/60 dark:border-zinc-800/80 space-y-2 select-none">
-                    <div class="h-3 rounded bg-zinc-300 dark:bg-zinc-700/80 w-full flex items-center justify-between px-2">
-                        <div class="h-1.5 w-10 rounded bg-zinc-400 dark:bg-zinc-600"></div>
-                        <div class="h-1.5 w-4 rounded-full bg-zinc-400 dark:bg-zinc-600"></div>
+                <!-- Mini Visual Layout Skeleton Diagram (100px height) -->
+                <div class="p-3 rounded-lg bg-zinc-100/70 dark:bg-zinc-950/60 border border-zinc-200/60 dark:border-zinc-800/80 space-y-2 select-none h-[100px] flex flex-col justify-between">
+                    <div class="h-3 rounded bg-zinc-300 dark:bg-zinc-700/80 w-full flex items-center justify-between px-2 shrink-0">
+                        <x-aura::skeleton height="6px" width="40px" class="bg-zinc-400 dark:bg-zinc-600" />
+                        <x-aura::skeleton height="6px" width="16px" class="bg-zinc-400 dark:bg-zinc-600 rounded-full" />
                     </div>
                     <div class="grid grid-cols-2 gap-1.5 h-14">
                         <div class="rounded-md bg-zinc-200/80 dark:bg-zinc-800/60 p-1.5 flex flex-col justify-between">
-                            <div class="h-1.5 w-6 bg-zinc-400 dark:bg-zinc-600 rounded"></div>
-                            <div class="h-3 w-8 bg-zinc-400 dark:bg-zinc-500 rounded"></div>
+                            <x-aura::skeleton height="6px" width="24px" class="bg-zinc-400 dark:bg-zinc-600" />
+                            <x-aura::skeleton height="12px" width="32px" class="bg-zinc-400 dark:bg-zinc-500" />
                         </div>
                         <div class="rounded-md bg-zinc-200/80 dark:bg-zinc-800/60 p-1.5 flex flex-col justify-between">
-                            <div class="h-1.5 w-6 bg-zinc-400 dark:bg-zinc-600 rounded"></div>
-                            <div class="h-3 w-8 bg-zinc-400 dark:bg-zinc-500 rounded"></div>
+                            <x-aura::skeleton height="6px" width="24px" class="bg-zinc-400 dark:bg-zinc-600" />
+                            <x-aura::skeleton height="12px" width="32px" class="bg-zinc-400 dark:bg-zinc-500" />
                         </div>
                     </div>
                 </div>
 
                 <!-- Info -->
                 <div>
-                    <x-aura::heading level="3" size="xs">User Workspace</x-aura::heading>
-                    <x-aura::text variant="subtle" size="xs" class="mt-1.5 leading-relaxed">
+                    <x-aura::heading level="3" size="sm">User</x-aura::heading>
+                    <x-aura::text variant="subtle" size="sm" class="mt-1.5 leading-relaxed">
                         Authenticated member workspace layout featuring a header navbar, status badges, and project metrics.
                     </x-aura::text>
                 </div>
             </div>
 
             <x-slot:footer>
-                <x-aura::button variant="primary" size="md" class="w-full justify-between" href="/dashboard">
-                    <span>Launch Workspace</span>
-                    <x-aura::icon name="arrow-right" class="ml-2 shrink-0 inline-block" />
+                <x-aura::button variant="primary" size="md" iconTrailing="arrow-right" class="w-full justify-between" href="/dashboard">
+                    Launch User
                 </x-aura::button>
             </x-slot:footer>
         </x-aura::card>
@@ -107,45 +101,42 @@ new class extends Component {};
             <div class="space-y-4">
                 <!-- Card Header -->
                 <div class="flex items-center justify-between">
-                    <div class="w-10 h-10 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center font-bold border border-transparent shadow-2xs group-hover:scale-105 transition-transform">
-                        <x-aura::icon name="shield-check" size="md" />
-                    </div>
-                    <x-aura::badge variant="primary" size="sm">Admin Portal</x-aura::badge>
+                    <x-aura::icon-button icon="shield-check" variant="primary" size="lg" class="rounded-xl group-hover:scale-105 transition-transform pointer-events-none" />
+                    <x-aura::badge variant="primary" size="sm">Admin</x-aura::badge>
                 </div>
 
-                <!-- Mini Visual Layout Skeleton Diagram -->
-                <div class="p-3 rounded-lg bg-zinc-100/70 dark:bg-zinc-950/60 border border-zinc-200/60 dark:border-zinc-800/80 flex gap-2 h-[76px] select-none">
+                <!-- Mini Visual Layout Skeleton Diagram (100px height) -->
+                <div class="p-3 rounded-lg bg-zinc-100/70 dark:bg-zinc-950/60 border border-zinc-200/60 dark:border-zinc-800/80 flex gap-2 h-[100px] select-none">
                     <!-- Mini Sidebar -->
-                    <div class="w-7 rounded bg-zinc-900 dark:bg-zinc-800 p-1 flex flex-col gap-1 shrink-0">
-                        <div class="h-1.5 w-full bg-white/40 dark:bg-zinc-600 rounded"></div>
-                        <div class="h-1 w-full bg-white/20 dark:bg-zinc-700 rounded"></div>
-                        <div class="h-1 w-full bg-white/20 dark:bg-zinc-700 rounded"></div>
-                        <div class="h-1 w-full bg-white/20 dark:bg-zinc-700 rounded"></div>
+                    <div class="w-7 rounded-md bg-zinc-900 dark:bg-zinc-800 p-1.5 flex flex-col gap-1.5 shrink-0 justify-start">
+                        <x-aura::skeleton height="6px" class="w-full bg-white/40 dark:bg-zinc-600" />
+                        <x-aura::skeleton height="4px" class="w-full bg-white/20 dark:bg-zinc-700" />
+                        <x-aura::skeleton height="4px" class="w-full bg-white/20 dark:bg-zinc-700" />
+                        <x-aura::skeleton height="4px" class="w-full bg-white/20 dark:bg-zinc-700" />
                     </div>
                     <!-- Mini Main -->
-                    <div class="flex-1 flex flex-col justify-between gap-1.5">
-                        <div class="h-3 rounded bg-zinc-200 dark:bg-zinc-800 w-full flex items-center px-1">
-                            <div class="h-1 w-8 bg-zinc-400 dark:bg-zinc-600 rounded"></div>
+                    <div class="flex-1 flex flex-col justify-between gap-2">
+                        <div class="h-3 rounded bg-zinc-200 dark:bg-zinc-800 w-full flex items-center px-1 shrink-0">
+                            <x-aura::skeleton height="4px" width="32px" class="bg-zinc-400 dark:bg-zinc-600" />
                         </div>
-                        <div class="flex-1 rounded bg-zinc-200/80 dark:bg-zinc-800/60 border border-dashed border-zinc-300 dark:border-zinc-700/60 flex items-center justify-center">
-                            <x-aura::text size="xs" variant="subtle" class="font-mono text-[9px]">Admin Console</x-aura::text>
+                        <div class="flex-1 rounded-md bg-zinc-200/80 dark:bg-zinc-800/60 border border-dashed border-zinc-300 dark:border-zinc-700/60 flex items-center justify-center">
+                            <x-aura::text size="xs" variant="subtle" class="font-mono text-[10px]">Admin Layout</x-aura::text>
                         </div>
                     </div>
                 </div>
 
                 <!-- Info -->
                 <div>
-                    <x-aura::heading level="3" size="xs">Admin Console</x-aura::heading>
-                    <x-aura::text variant="subtle" size="xs" class="mt-1.5 leading-relaxed">
+                    <x-aura::heading level="3" size="sm">Admin</x-aura::heading>
+                    <x-aura::text variant="subtle" size="sm" class="mt-1.5 leading-relaxed">
                         System administrator console layout featuring a dedicated sidebar navigation, metrics, and health logs.
                     </x-aura::text>
                 </div>
             </div>
 
             <x-slot:footer>
-                <x-aura::button variant="primary" size="md" class="w-full justify-between" href="/admin">
-                    <span>Access Admin Console</span>
-                    <x-aura::icon name="arrow-right" class="ml-2 shrink-0 inline-block" />
+                <x-aura::button variant="primary" size="md" iconTrailing="arrow-right" class="w-full justify-between" href="/admin">
+                    Access Admin
                 </x-aura::button>
             </x-slot:footer>
         </x-aura::card>

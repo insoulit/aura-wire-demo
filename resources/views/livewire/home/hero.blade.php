@@ -15,23 +15,21 @@ new class extends Component {};
 
     <!-- Display Headline & Subtitle -->
     <div class="space-y-1.5 text-center">
-        <x-aura::heading level="1" size="display-xl">
+        <x-aura::heading level="1" size="display-lg">
             Aura Wire
         </x-aura::heading>
-        <x-aura::heading level="2" size="sm" class="text-zinc-500 dark:text-zinc-400 font-medium">
+        <x-aura::subheading size="lg" class="text-zinc-600 dark:text-zinc-400 font-medium">
             UI Component Suite for Laravel &amp; Livewire
-        </x-aura::heading>
+        </x-aura::subheading>
     </div>
 
     <!-- Action CTAs -->
     <div class="pt-1 flex flex-wrap items-center justify-center gap-3">
-        <x-aura::button variant="primary" size="lg" href="/components" class="shadow-sm">
+        <x-aura::button variant="primary" size="lg" icon="layers" href="/components" class="shadow-sm">
             <span>Components</span>
-            <x-aura::icon name="arrow-right" class="ml-1.5 inline-block" />
         </x-aura::button>
 
-        <x-aura::button variant="outline" size="lg" href="https://github.com/insoulit/aura-wire" target="_blank" rel="noopener noreferrer">
-            <x-aura::icon name="github" class="mr-1.5 inline-block" />
+        <x-aura::button variant="outline" size="lg" icon="github" href="https://github.com/insoulit/aura-wire" target="_blank" rel="noopener noreferrer">
             <span>GitHub</span>
         </x-aura::button>
     </div>
