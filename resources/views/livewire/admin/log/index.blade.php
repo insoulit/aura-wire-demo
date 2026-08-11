@@ -152,26 +152,26 @@ class extends Component {
         <x-aura::table>
             <x-aura::table.header>
                 <x-aura::table.row>
-                    <x-aura::table.column class="w-32">Timestamp</x-aura::table.column>
-                    <x-aura::table.column class="w-24">Level</x-aura::table.column>
-                    <x-aura::table.column class="w-24">Env</x-aura::table.column>
-                    <x-aura::table.column>Message</x-aura::table.column>
-                    <x-aura::table.column class="text-right w-24">Action</x-aura::table.column>
+                    <x-aura::table.column class="w-36 text-sm">Timestamp</x-aura::table.column>
+                    <x-aura::table.column class="w-28 text-sm">Level</x-aura::table.column>
+                    <x-aura::table.column class="w-28 text-sm">Env</x-aura::table.column>
+                    <x-aura::table.column class="text-sm">Message</x-aura::table.column>
+                    <x-aura::table.column class="text-right w-24 text-sm">Action</x-aura::table.column>
                 </x-aura::table.row>
             </x-aura::table.header>
             <x-aura::table.body>
                 @forelse ($logs as $log)
                     <x-aura::table.row>
-                        <x-aura::table.cell class="text-xs font-mono text-zinc-500 whitespace-nowrap">
+                        <x-aura::table.cell class="text-sm font-mono text-zinc-600 dark:text-zinc-400 whitespace-nowrap">
                             {{ $log['time'] }}
                         </x-aura::table.cell>
                         <x-aura::table.cell>
-                            <x-aura::badge :variant="$log['variant']" size="sm">{{ $log['level'] }}</x-aura::badge>
+                            <x-aura::badge :variant="$log['variant']" size="md">{{ $log['level'] }}</x-aura::badge>
                         </x-aura::table.cell>
-                        <x-aura::table.cell class="text-xs text-zinc-500 dark:text-zinc-400 font-medium">
+                        <x-aura::table.cell class="text-sm text-zinc-600 dark:text-zinc-400 font-medium">
                             {{ $log['env'] }}
                         </x-aura::table.cell>
-                        <x-aura::table.cell class="font-mono text-xs text-zinc-800 dark:text-zinc-200 truncate max-w-md">
+                        <x-aura::table.cell class="font-mono text-sm text-zinc-800 dark:text-zinc-200 truncate max-w-md">
                             {{ $log['message'] }}
                         </x-aura::table.cell>
                         <x-aura::table.cell class="text-right whitespace-nowrap">
