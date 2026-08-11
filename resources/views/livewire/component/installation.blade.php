@@ -9,22 +9,23 @@ title('Installation & Setup Guide - Aura Wire');
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Getting Started</x-aura::kicker>
-        <x-aura::heading level="1" size="lg">Installation &amp; Setup Guide</x-aura::heading>
-        <x-aura::subheading size="sm" class="max-w-xl">
-            Install <code class="text-zinc-900 dark:text-white font-mono font-semibold">insoulit/aura-wire</code> via Composer into your Laravel application and configure Plus Jakarta Sans typography.
-        </x-aura::subheading>
-        <div class="pt-2 flex items-center gap-3">
-            <a href="https://packagist.org/packages/insoulit/aura-wire" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-white bg-zinc-900 dark:bg-white dark:text-zinc-900 hover:bg-zinc-800 dark:hover:bg-zinc-100 shadow-2xs transition-all group shrink-0">
-                <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                <span>Packagist v1.4.0</span>
-            </a>
-            <code class="inline-flex items-center px-3.5 py-1.5 rounded-xl text-xs font-mono font-bold bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 shadow-2xs">
-                composer require insoulit/aura-wire
-            </code>
+    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+        <div class="space-y-2 max-w-2xl">
+            <div class="flex items-center gap-2.5">
+                <x-aura::kicker>Getting Started</x-aura::kicker>
+                <x-aura::badge variant="subtle" size="sm">Documentation</x-aura::badge>
+            </div>
+            <x-aura::heading level="1" size="xl">Installation &amp; Setup Guide</x-aura::heading>
+            <x-aura::subheading size="md">
+                Install insoulit/aura-wire via Composer into your Laravel application and configure Plus Jakarta Sans typography.
+            </x-aura::subheading>
         </div>
-    </div>
+    </x-aura::card>
+
+    <!-- Installation Command Syntax -->
+    <x-aura::code variant="dark" title="Composer Installation" :showTabs="false" active="code" class="w-full">
+        <x-slot:codeSlot>composer require insoulit/aura-wire</x-slot:codeSlot>
+    </x-aura::code>
 
     <!-- Requirements Card -->
     <x-aura::card title="System Requirements" class="w-full">

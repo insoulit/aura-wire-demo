@@ -57,13 +57,13 @@ class extends Component {
             <div class="space-y-5 pt-2">
 
                 <!-- Avatar & Identity Preview -->
-                <div class="flex items-center gap-4 p-4 rounded-xl bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200/80 dark:border-zinc-800">
+                <x-aura::card class="flex items-center gap-4 p-4 bg-zinc-50/80 dark:bg-zinc-800/50">
                     <x-aura::avatar initials="AK" size="md" />
                     <div>
                         <div class="font-bold text-zinc-900 dark:text-white text-sm">Alex Kovacs</div>
                         <div class="text-xs text-zinc-500">ID #1001 &bull; Member since Aug 2026</div>
                     </div>
-                </div>
+                </x-aura::card>
 
                 <!-- Full Name & Email -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
