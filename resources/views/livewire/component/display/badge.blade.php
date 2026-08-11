@@ -95,18 +95,18 @@ title('Badge - Aura Wire');
     <x-aura::code class="w-full" title="4. Real-World Data Table Status Badges">
         <x-slot:preview>
             <div class="w-full space-y-2">
-                <div class="p-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 flex items-center justify-between">
+                <x-aura::card class="p-3 bg-zinc-50/50 dark:bg-zinc-900/50 flex items-center justify-between">
                     <span class="text-sm font-medium text-zinc-900 dark:text-white">Order #10429</span>
                     <x-aura::badge variant="positive" size="sm">Paid</x-aura::badge>
-                </div>
-                <div class="p-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 flex items-center justify-between">
+                </x-aura::card>
+                <x-aura::card class="p-3 bg-zinc-50/50 dark:bg-zinc-900/50 flex items-center justify-between">
                     <span class="text-sm font-medium text-zinc-900 dark:text-white">Order #10428</span>
                     <x-aura::badge variant="warning" size="sm">Pending</x-aura::badge>
-                </div>
-                <div class="p-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/50 flex items-center justify-between">
+                </x-aura::card>
+                <x-aura::card class="p-3 bg-zinc-50/50 dark:bg-zinc-900/50 flex items-center justify-between">
                     <span class="text-sm font-medium text-zinc-900 dark:text-white">Order #10427</span>
                     <x-aura::badge variant="negative" size="sm">Refunded</x-aura::badge>
-                </div>
+                </x-aura::card>
             </div>
         </x-slot:preview>
         <x-slot:codeSlot>&lt;x-aura::badge variant="positive" size="sm"&gt;Paid&lt;/x-aura::badge&gt;

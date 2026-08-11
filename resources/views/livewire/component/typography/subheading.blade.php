@@ -79,26 +79,26 @@ class extends Component {};
     <x-aura::code class="w-full" title="3. Custom HTML Element Types (as prop)">
         <x-slot:preview>
             <div class="space-y-4 w-full">
-                <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 space-y-1">
+                <x-aura::card class="p-4 space-y-1">
                     <p class="text-xs font-mono font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">as="p" (Default paragraph tag)</p>
                     <x-aura::subheading as="p">
                         Standard paragraph lead text for descriptive body content.
                     </x-aura::subheading>
-                </div>
+                </x-aura::card>
 
-                <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 space-y-1">
+                <x-aura::card class="p-4 space-y-1">
                     <p class="text-xs font-mono font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">as="h2" (Semantic H2 heading element)</p>
                     <x-aura::subheading as="h2">
                         Subheading rendered as a semantic level-2 header tag for search engines.
                     </x-aura::subheading>
-                </div>
+                </x-aura::card>
 
-                <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 space-y-1">
+                <x-aura::card class="p-4 space-y-1">
                     <p class="text-xs font-mono font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">as="span" (Inline span element)</p>
                     <x-aura::subheading as="span">
                         Inline subheading element for flexible inline container integration.
                     </x-aura::subheading>
-                </div>
+                </x-aura::card>
             </div>
         </x-slot:preview>
         <x-slot:codeSlot>&lt;x-aura::subheading as="p"&gt;Standard paragraph lead text.&lt;/x-aura::subheading&gt;
@@ -109,7 +109,7 @@ class extends Component {};
     <!-- 4. Card & Panel Header Descriptions -->
     <x-aura::code class="w-full" title="4. Card &amp; Panel Header Descriptions">
         <x-slot:preview>
-            <div class="p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 space-y-6 w-full">
+            <x-aura::card class="p-6 space-y-6 w-full">
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-4">
                     <div>
                         <x-aura::heading level="3" size="sm">Security &amp; Authentication</x-aura::heading>
@@ -127,9 +127,9 @@ class extends Component {};
                             Receive real-time HTTP callbacks when events occur in your account.
                         </x-aura::subheading>
                     </div>
-                    <x-aura::button variant="primary" size="sm" icon="plus">Add Webhook</x-aura::button>
+                    <x-aura::button variant="primary" size="sm" icon="plus"><span>Create</span></x-aura::button>
                 </div>
-            </div>
+            </x-aura::card>
         </x-slot:preview>
         <x-slot:codeSlot>&lt;div class="flex items-center justify-between gap-4"&gt;
     &lt;div&gt;

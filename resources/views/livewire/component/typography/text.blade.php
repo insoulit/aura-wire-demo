@@ -70,7 +70,7 @@ class extends Component {};
     <!-- 3. Monospace & Code Strings -->
     <x-aura::code class="w-full" title="3. Monospace Code &amp; Key Strings">
         <x-slot:preview>
-            <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 space-y-2 font-mono text-xs w-full">
+            <x-aura::card class="p-4 space-y-2 font-mono text-xs w-full">
                 <div class="flex items-center justify-between">
                     <x-aura::text variant="mono" size="xs" class="text-zinc-500">API_KEY_SECRET</x-aura::text>
                     <x-aura::text variant="mono" size="xs" class="text-emerald-600 dark:text-emerald-400">sk_live_99f2...x81a</x-aura::text>
@@ -79,7 +79,7 @@ class extends Component {};
                     <x-aura::text variant="mono" size="xs" class="text-zinc-500">SHA256_HASH</x-aura::text>
                     <x-aura::text variant="mono" size="xs">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</x-aura::text>
                 </div>
-            </div>
+            </x-aura::card>
         </x-slot:preview>
         <x-slot:codeSlot>&lt;x-aura::text variant="mono" size="xs"&gt;sk_live_99f2...x81a&lt;/x-aura::text&gt;
 &lt;x-aura::text variant="mono" size="xs"&gt;SHA256_HASH&lt;/x-aura::text&gt;</x-slot:codeSlot>
@@ -88,7 +88,7 @@ class extends Component {};
     <!-- 4. Real-World Article / Paragraph Block -->
     <x-aura::code class="w-full" title="4. Real-World Article Paragraph Block">
         <x-slot:preview>
-            <div class="p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 space-y-2.5 w-full">
+            <x-aura::card class="p-6 space-y-2.5 w-full">
                 <x-aura::heading level="3" size="sm">Getting Started with Livewire Components</x-aura::heading>
                 <x-aura::text size="sm" variant="subtle">
                     Aura Wire components are designed to be completely unstyled and responsive out of the box. By coupling native Blade components with Tailwind CSS v4 design tokens, you can compose rich application interfaces with full accessibility support.
@@ -98,7 +98,7 @@ class extends Component {};
                     <span class="text-zinc-400 text-xs">•</span>
                     <x-aura::text size="xs" variant="accent">5 min read</x-aura::text>
                 </div>
-            </div>
+            </x-aura::card>
         </x-slot:preview>
         <x-slot:codeSlot>&lt;x-aura::heading level="3" size="sm"&gt;Getting Started with Livewire Components&lt;/x-aura::heading&gt;
 &lt;x-aura::text size="sm" variant="subtle"&gt;

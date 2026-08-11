@@ -120,7 +120,7 @@ class extends Component {};
     <!-- 5. Real-World Table & Toolbar Actions -->
     <x-aura::code class="w-full" title="5. Real-World Table Actions">
         <x-slot:preview>
-            <div class="w-full p-4 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 flex items-center justify-between">
+            <x-aura::card class="w-full p-4 flex items-center justify-between">
                 <div>
                     <h4 class="text-sm font-bold text-zinc-900 dark:text-white">User Account: Alex Kovacs</h4>
                     <p class="text-xs text-zinc-500">alex@example.com</p>
@@ -130,7 +130,7 @@ class extends Component {};
                     <x-aura::icon-button icon="pencil" variant="ghost" size="sm" label="Edit Profile" />
                     <x-aura::icon-button icon="trash-2" variant="danger" size="sm" label="Delete User" />
                 </div>
-            </div>
+            </x-aura::card>
         </x-slot:preview>
         <x-slot:codeSlot>&lt;div class="flex items-center gap-1.5"&gt;
     &lt;x-aura::icon-button icon="eye" variant="ghost" size="sm" label="View Profile" /&gt;

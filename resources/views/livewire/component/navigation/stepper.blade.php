@@ -58,7 +58,7 @@ new class extends Component {
                     <x-aura::stepper.step step="4" title="Finish" description="Launch dashboard" :status="$currentStep === 4 ? 'completed' : ($currentStep === 4 ? 'active' : 'pending')" />
                 </x-aura::stepper>
 
-                <div class="p-6 rounded-2xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 space-y-4">
+                <x-aura::card class="p-6 bg-zinc-50/80 dark:bg-zinc-900 space-y-4">
                     @if ($currentStep === 1)
                         <div class="space-y-3">
                             <h4 class="text-sm font-bold text-zinc-900 dark:text-white">Step 1: Account Information</h4>
@@ -93,7 +93,7 @@ new class extends Component {
                             {{ $currentStep === 3 ? 'Complete Setup' : ($currentStep === 4 ? 'Done' : 'Next Step') }}
                         </x-aura::button>
                     </div>
-                </div>
+                </x-aura::card>
             </div>
         </x-slot:preview>
         <x-slot:codeSlot>&lt;x-aura::stepper :active="$currentStep"&gt;

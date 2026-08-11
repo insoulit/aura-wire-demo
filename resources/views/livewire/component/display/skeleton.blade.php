@@ -30,13 +30,13 @@ title('Skeleton - Aura Wire');
     <!-- 1. Text & Avatar Shimmers -->
     <x-aura::code class="w-full" title="1. Profile Header Loading State">
         <x-slot:preview>
-            <div class="flex items-center gap-4 w-full max-w-md p-4 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
+            <x-aura::card class="flex items-center gap-4 w-full max-w-md p-4">
                 <x-aura::skeleton variant="avatar" />
                 <div class="space-y-2 flex-1">
                     <x-aura::skeleton variant="text" width="60%" />
                     <x-aura::skeleton variant="text" width="40%" />
                 </div>
-            </div>
+            </x-aura::card>
         </x-slot:preview>
         <x-slot:codeSlot>&lt;x-aura::skeleton variant="avatar" /&gt;
 &lt;x-aura::skeleton variant="text" width="60%" /&gt;
@@ -46,11 +46,11 @@ title('Skeleton - Aura Wire');
     <!-- 2. Card Skeleton -->
     <x-aura::code class="w-full" title="2. Content Card Skeleton Loader">
         <x-slot:preview>
-            <div class="w-full max-w-md p-5 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 space-y-4">
+            <x-aura::card class="w-full max-w-md p-5 space-y-4">
                 <x-aura::skeleton variant="card" />
                 <x-aura::skeleton variant="text" width="80%" />
                 <x-aura::skeleton variant="button" />
-            </div>
+            </x-aura::card>
         </x-slot:preview>
         <x-slot:codeSlot>&lt;x-aura::skeleton variant="card" /&gt;
 &lt;x-aura::skeleton variant="text" width="80%" /&gt;

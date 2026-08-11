@@ -160,7 +160,7 @@ class extends Component {};
         <x-slot:preview>
             <div class="w-full space-y-4">
                 <!-- Save / Cancel Toolbar -->
-                <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/60 flex items-center justify-between gap-4">
+                <x-aura::card class="p-4 bg-zinc-50/80 dark:bg-zinc-900/60 flex items-center justify-between gap-4">
                     <div>
                         <p class="text-sm font-semibold text-zinc-900 dark:text-white">Unsaved Changes</p>
                         <p class="text-xs text-zinc-500">You have unsaved form modifications.</p>
@@ -169,7 +169,7 @@ class extends Component {};
                         <x-aura::button variant="ghost" size="sm">Discard</x-aura::button>
                         <x-aura::button variant="primary" size="sm">Save Changes</x-aura::button>
                     </div>
-                </div>
+                </x-aura::card>
 
                 <!-- Destructive Confirm Action Bar -->
                 <div class="p-4 rounded-xl border border-red-200 dark:border-red-900/50 bg-red-50/50 dark:bg-red-950/20 flex items-center justify-between gap-4">

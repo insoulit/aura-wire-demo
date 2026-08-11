@@ -83,23 +83,23 @@ class extends Component {};
     <!-- 4. Real-World Dashboard Header Pattern -->
     <x-aura::code class="w-full" title="4. Real-World Dashboard Section Header">
         <x-slot:preview>
-            <div class="p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 flex flex-col sm:flex-row sm:items-center justify-between gap-4 w-full">
+            <x-aura::card class="p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 w-full">
                 <div class="space-y-1">
                     <x-aura::heading level="2" size="md">Project Settings &amp; Security</x-aura::heading>
                     <x-aura::subheading class="text-sm">Manage API tokens, environment keys, and deployment webhooks.</x-aura::subheading>
                 </div>
                 <div class="flex items-center gap-2">
                     <x-aura::button variant="secondary" size="sm">Audit Log</x-aura::button>
-                    <x-aura::button variant="primary" size="sm" icon="plus">New API Key</x-aura::button>
+                    <x-aura::button variant="primary" size="sm" icon="plus"><span>Create</span></x-aura::button>
                 </div>
-            </div>
+            </x-aura::card>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;div class="flex items-center justify-between gap-4"&gt;
+        <x-slot:codeSlot>&lt;x-aura::card class="p-6 flex items-center justify-between gap-4"&gt;
     &lt;div class="space-y-1"&gt;
         &lt;x-aura::heading level="2" size="md"&gt;Project Settings &amp;amp; Security&lt;/x-aura::heading&gt;
         &lt;x-aura::subheading class="text-sm"&gt;Manage API tokens and deployment webhooks.&lt;/x-aura::subheading&gt;
     &lt;/div&gt;
-    &lt;x-aura::button variant="primary" size="sm" icon="plus"&gt;New API Key&lt;/x-aura::button&gt;
-&lt;/div&gt;</x-slot:codeSlot>
+    &lt;x-aura::button variant="primary" size="sm" icon="plus"&gt;&lt;span&gt;Create&lt;/span&gt;&lt;/x-aura::button&gt;
+&lt;/x-aura::card&gt;</x-slot:codeSlot>
     </x-aura::code>
 </div>

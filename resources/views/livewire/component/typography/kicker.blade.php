@@ -46,7 +46,7 @@ class extends Component {};
     <!-- 2. Sidebar & Group Section Kickers -->
     <x-aura::code class="w-full" title="2. Sidebar &amp; Group Section Kickers">
         <x-slot:preview>
-            <div class="w-64 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 space-y-3">
+            <x-aura::card class="w-64 p-4 space-y-3">
                 <div class="space-y-1">
                     <x-aura::kicker class="text-[10px]">MAIN NAVIGATION</x-aura::kicker>
                     <ul class="space-y-1 text-xs text-zinc-700 dark:text-zinc-300 font-medium">
@@ -63,7 +63,7 @@ class extends Component {};
                         <x-aura::badge variant="subtle" size="xs">Staging</x-aura::badge>
                     </div>
                 </div>
-            </div>
+            </x-aura::card>
         </x-slot:preview>
         <x-slot:codeSlot>&lt;x-aura::kicker class="text-[10px]"&gt;MAIN NAVIGATION&lt;/x-aura::kicker&gt;
 &lt;x-aura::kicker class="text-[10px]"&gt;PROJECT LABELS&lt;/x-aura::kicker&gt;</x-slot:codeSlot>
@@ -93,7 +93,7 @@ class extends Component {};
     <!-- 4. Hero Banner Section Header -->
     <x-aura::code class="w-full" title="4. Hero Banner Section Header">
         <x-slot:preview>
-            <div class="p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/60 text-center flex flex-col items-center space-y-3 w-full">
+            <x-aura::card class="p-8 bg-zinc-50/80 dark:bg-zinc-900/60 text-center flex flex-col items-center space-y-3 w-full">
                 <x-aura::kicker class="text-indigo-600 dark:text-indigo-400 font-bold tracking-widest">
                     ENTERPRISE DEPLOYMENTS
                 </x-aura::kicker>
@@ -103,7 +103,7 @@ class extends Component {};
                 <x-aura::subheading size="sm" class="max-w-md">
                     Global multi-region cloud servers with automated load balancing.
                 </x-aura::subheading>
-            </div>
+            </x-aura::card>
         </x-slot:preview>
         <x-slot:codeSlot>&lt;x-aura::kicker class="text-indigo-600 font-bold tracking-widest"&gt;
     ENTERPRISE DEPLOYMENTS

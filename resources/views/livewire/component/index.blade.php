@@ -10,7 +10,7 @@ title('Component Directory - Aura Wire');
 
 <div class="w-full space-y-12">
     <!-- Header Banner -->
-    <div class="relative overflow-hidden rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white/60 dark:bg-zinc-900/50 p-6 sm:p-8 backdrop-blur-md shadow-xs">
+    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Component Directory</x-aura::kicker>
@@ -21,7 +21,7 @@ title('Component Directory - Aura Wire');
                 Browse through individual standalone documentation pages for every component registered by Aura Wire, organized by category.
             </x-aura::subheading>
         </div>
-    </div>
+    </x-aura::card>
 
     <!-- Category 1: Typography -->
     <section class="space-y-4">
