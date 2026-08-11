@@ -9,18 +9,25 @@ title('Tabs - Aura Wire');
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Overlay</x-aura::kicker>
-        <x-aura::heading level="1" size="lg">Tabs</x-aura::heading>
-        <x-aura::subheading size="sm" class="max-w-lg">
-            Tabbed navigation and content area switcher for profile settings, dashboards, and views.
-        </x-aura::subheading>
-        <div class="pt-1">
-            <code class="inline-flex items-center px-3.5 py-1.5 rounded-xl text-sm font-mono font-bold bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 shadow-2xs">
-                &lt;x-aura::tab&gt;
-            </code>
+    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+        <div class="space-y-2 max-w-2xl">
+            <div class="flex items-center gap-2.5">
+                <x-aura::kicker>Overlay</x-aura::kicker>
+                <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
+            </div>
+            <x-aura::heading level="1" size="xl">Tabs</x-aura::heading>
+            <x-aura::subheading size="md">
+                Tabbed navigation and content area switcher for profile settings, dashboards, and views.
+            </x-aura::subheading>
         </div>
-    </div>
+    </x-aura::card>
+
+    <!-- Component Syntax -->
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+        <x-slot:codeSlot>&lt;x-aura::tab default="profile"&gt;
+    &lt;x-aura::tab.item name="profile" label="Profile"&gt;Content...&lt;/x-aura::tab.item&gt;
+&lt;/x-aura::tab&gt;</x-slot:codeSlot>
+    </x-aura::code>
 
     <!-- 1. Standard Tabs -->
     <x-aura::code class="w-full" title="1. Standard Horizontal Tabs">

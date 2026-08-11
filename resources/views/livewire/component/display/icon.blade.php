@@ -95,21 +95,23 @@ class extends Component {
 
 <div class="w-full max-w-5xl mx-auto space-y-12">
     <!-- Header Page Intro -->
-    <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Display</x-aura::kicker>
-        <x-aura::heading level="1" size="lg">Lucide Icon Library ({{ number_format($this->totalCount) }} Icons)</x-aura::heading>
-        <x-aura::subheading size="sm" class="max-w-xl">
-            Browse and search all {{ number_format($this->totalCount) }} Lucide SVG icons natively integrated into Aura Wire. Click any icon card to copy its Blade tag syntax instantly.
-        </x-aura::subheading>
-        <div class="pt-1 flex items-center gap-3">
-            <code class="inline-flex items-center px-3.5 py-1.5 rounded-xl text-sm font-mono font-bold bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 shadow-2xs">
-                &lt;x-aura::icon name="sparkles" /&gt;
-            </code>
-            <code class="inline-flex items-center px-3.5 py-1.5 rounded-xl text-sm font-mono font-bold bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 shadow-2xs">
-                icon="search"
-            </code>
+    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+        <div class="space-y-2 max-w-2xl">
+            <div class="flex items-center gap-2.5">
+                <x-aura::kicker>Display</x-aura::kicker>
+                <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
+            </div>
+            <x-aura::heading level="1" size="xl">Icon Library ({{ number_format($this->totalCount) }} Icons)</x-aura::heading>
+            <x-aura::subheading size="md">
+                Browse and search all {{ number_format($this->totalCount) }} Lucide SVG icons natively integrated into Aura Wire. Click any icon card to copy its Blade tag syntax instantly.
+            </x-aura::subheading>
         </div>
-    </div>
+    </x-aura::card>
+
+    <!-- Component Syntax -->
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+        <x-slot:codeSlot>&lt;x-aura::icon name="sparkles" size="md" /&gt;</x-slot:codeSlot>
+    </x-aura::code>
 
     <!-- Search & Filter Bar -->
     <x-aura::card class="p-4">

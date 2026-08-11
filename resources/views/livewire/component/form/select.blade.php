@@ -10,18 +10,24 @@ state(['selected' => 'us']);
 ?>
 
 <div class="w-full max-w-3xl mx-auto space-y-6 flex flex-col items-center justify-center">
-    <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Form Controls</x-aura::kicker>
-        <x-aura::heading level="1" size="lg">Select</x-aura::heading>
-        <x-aura::subheading size="sm" class="max-w-xl">
-            Native option selection dropdowns supporting option arrays, key-value maps, and field validation.
-        </x-aura::subheading>
-        <div class="pt-1">
-            <code class="inline-flex items-center px-3.5 py-1.5 rounded-xl text-sm font-mono font-bold bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 shadow-2xs">
-                &lt;x-aura::select&gt;
-            </code>
+    <!-- Header -->
+    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+        <div class="space-y-2 max-w-2xl">
+            <div class="flex items-center gap-2.5">
+                <x-aura::kicker>Form Controls</x-aura::kicker>
+                <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
+            </div>
+            <x-aura::heading level="1" size="xl">Select</x-aura::heading>
+            <x-aura::subheading size="md">
+                Native option selection dropdowns supporting option arrays, key-value maps, and field validation.
+            </x-aura::subheading>
         </div>
-    </div>
+    </x-aura::card>
+
+    <!-- Component Syntax -->
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+        <x-slot:codeSlot>&lt;x-aura::select wire:model="selected" label="Country" :options="['us' =&gt; 'United States', 'ca' =&gt; 'Canada']" /&gt;</x-slot:codeSlot>
+    </x-aura::code>
     <x-aura::code class="w-full" title="Select Input">
         <x-slot:preview>
             <div class="w-full max-w-sm">

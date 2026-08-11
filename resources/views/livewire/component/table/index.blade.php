@@ -66,18 +66,23 @@ with([
 
 <div class="w-full max-w-4xl mx-auto space-y-12 flex flex-col items-center justify-center">
     <!-- Header -->
-    <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Data Display</x-aura::kicker>
-        <x-aura::heading level="1" size="lg">Table</x-aura::heading>
-        <x-aura::subheading size="sm" class="max-w-lg">
-            Production-grade data tables supporting avatars, status badges, progress indicators, action toolbars, and striped layout.
-        </x-aura::subheading>
-        <div class="pt-1">
-            <code class="inline-flex items-center px-3.5 py-1.5 rounded-xl text-sm font-mono font-bold bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 shadow-2xs">
-                &lt;x-aura::table&gt;
-            </code>
+    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+        <div class="space-y-2 max-w-2xl">
+            <div class="flex items-center gap-2.5">
+                <x-aura::kicker>Data Display</x-aura::kicker>
+                <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
+            </div>
+            <x-aura::heading level="1" size="xl">Table</x-aura::heading>
+            <x-aura::subheading size="md">
+                Production-grade data tables supporting avatars, status badges, progress indicators, action toolbars, and striped layout.
+            </x-aura::subheading>
         </div>
-    </div>
+    </x-aura::card>
+
+    <!-- Component Syntax -->
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+        <x-slot:codeSlot>&lt;x-aura::table :headers="$headers" :rows="$rows" /&gt;</x-slot:codeSlot>
+    </x-aura::code>
 
     <!-- 1. User Management Directory Table (with Show, Edit, Delete Actions) -->
     <x-aura::code class="w-full" title="1. User Management Directory Table">

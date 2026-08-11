@@ -13,18 +13,26 @@ class extends Component {};
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <div class="space-y-3 text-center flex flex-col items-center">
-        <x-aura::kicker>Display</x-aura::kicker>
-        <x-aura::heading level="1" size="lg">Card</x-aura::heading>
-        <x-aura::subheading size="sm" class="max-w-lg">
-            Versatile container cards with header, body, and action footer slots for dashboards, forms, and statistics.
-        </x-aura::subheading>
-        <div class="pt-1">
-            <code class="inline-flex items-center px-3.5 py-1.5 rounded-xl text-sm font-mono font-bold bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-zinc-100 border border-zinc-200 dark:border-zinc-700 shadow-2xs">
-                &lt;x-aura::card&gt;
-            </code>
+    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+        <div class="space-y-2 max-w-2xl">
+            <div class="flex items-center gap-2.5">
+                <x-aura::kicker>Display</x-aura::kicker>
+                <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
+            </div>
+            <x-aura::heading level="1" size="xl">Card</x-aura::heading>
+            <x-aura::subheading size="md">
+                Versatile container cards with header, body, and action footer slots for dashboards, forms, and statistics.
+            </x-aura::subheading>
         </div>
-    </div>
+    </x-aura::card>
+
+    <!-- Component Syntax -->
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+        <x-slot:codeSlot>&lt;x-aura::card class="p-6 space-y-4"&gt;
+    &lt;x-aura::heading level="3" size="md"&gt;Card Title&lt;/x-aura::heading&gt;
+    &lt;x-aura::text size="sm"&gt;Card body content goes here.&lt;/x-aura::text&gt;
+&lt;/x-aura::card&gt;</x-slot:codeSlot>
+    </x-aura::code>
 
     <!-- 1. Standard Header & Footer Card -->
     <x-aura::code class="w-full" title="1. Standard Header & Action Footer Card">
