@@ -1144,12 +1144,13 @@
             "dist": {
                 "type": "path",
                 "url": "packages/aura-wire",
-                "reference": "5b9232ac1517b28363670d25a37ec527c4d6eba1"
+                "reference": "92f7a3967dd3d74a77e9ee74cc80c45003c552bf"
             },
             "require": {
                 "illuminate/contracts": "^11.0||^12.0||^13.0",
                 "livewire/livewire": "^3.0||^4.0",
                 "livewire/volt": "^1.0",
+                "mallardduck/blade-lucide-icons": "^2.0",
                 "php": "^8.3||^8.4",
                 "spatie/laravel-package-tools": "^1.16"
             },

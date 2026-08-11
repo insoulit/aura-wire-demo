@@ -9,7 +9,7 @@ new class extends Component {};
 <div class="space-y-6 max-w-2xl mx-auto flex flex-col items-center">
     <!-- Top Version Pill -->
     <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200/80 dark:border-zinc-700/60 shadow-2xs">
-        <x-aura::badge variant="positive" size="sm" class="font-semibold">v1.4.0</x-aura::badge>
+        <x-aura::badge variant="positive" size="sm" class="font-semibold">v1.5.0</x-aura::badge>
         <x-aura::text size="xs" variant="subtle" weight="medium">Laravel &amp; Livewire</x-aura::text>
     </div>
 
