@@ -54,9 +54,7 @@ class extends Component {};
                         </div>
                         <x-aura::button variant="subtle" size="sm" class="hidden sm:inline-flex shrink-0">Sign In</x-aura::button>
                         <x-aura::button variant="primary" size="sm" class="shrink-0">Get Started</x-aura::button>
-                        <button type="button" class="lg:hidden p-1.5 rounded-lg text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer shrink-0" aria-label="Toggle navigation menu">
-                            <x-aura::icon name="menu" class="w-5 h-5" />
-                        </button>
+                        <x-aura::icon-button icon="menu" variant="ghost" size="sm" class="lg:hidden shrink-0" label="Toggle navigation menu" />
                     </div>
                 </div>
             </x-aura::card>

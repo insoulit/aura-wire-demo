@@ -36,9 +36,7 @@ class extends Component {};
                         <x-aura::badge variant="positive" size="sm" class="absolute top-3 left-3 shadow-sm font-bold">
                             Save $50 (15% OFF)
                         </x-aura::badge>
-                        <button type="button" class="absolute top-3 right-3 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-md transition-all">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
-                        </button>
+                        <x-aura::icon-button icon="heart" variant="ghost" size="sm" class="absolute top-3 right-3 text-white backdrop-blur-md" label="Save wishlist" />
                         <div class="w-28 h-28 rounded-2xl bg-zinc-800/80 border border-zinc-700/50 flex items-center justify-center text-zinc-300 shadow-2xl group-hover:scale-105 transition-transform duration-300">
                             <svg class="w-14 h-14 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
                         </div>
