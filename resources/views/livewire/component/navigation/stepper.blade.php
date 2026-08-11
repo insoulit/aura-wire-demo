@@ -21,7 +21,7 @@ new class extends Component {
 
     public function rendering($view)
     {
-        $view->layout('layout.component')->title('Stepper - Aura Wire');
+        $view->layout('livewire.layout.component')->title('Stepper - Aura Wire');
     }
 };
 

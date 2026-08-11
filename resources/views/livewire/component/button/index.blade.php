@@ -5,7 +5,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
 new 
-#[Layout('layout.component')] 
+#[Layout('livewire.layout.component')] 
 #[Title('Button - Aura Wire')] 
 class extends Component {};
 

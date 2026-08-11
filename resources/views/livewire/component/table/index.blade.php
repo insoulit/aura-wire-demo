@@ -2,7 +2,7 @@
 
 use function Livewire\Volt\{layout, title, with};
 
-layout('layout.component');
+layout('livewire.layout.component');
 title('Table - Aura Wire');
 
 with([

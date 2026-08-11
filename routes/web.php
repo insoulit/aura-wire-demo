@@ -15,7 +15,7 @@ Route::get('/optimize-clear', function () {
 })->name('optimize.clear');
 
 // Main Portal Home Page
-Volt::route('/', 'home')->name('home');
+Volt::route('/', 'home.index')->name('home');
 
 // Component Showcase Routes (Organized by Component Group)
 Volt::route('/components', 'component.index')->name('component.index');
@@ -118,6 +118,8 @@ Volt::route('/components/pagination', 'component.navigation.pagination')->name('
 Volt::route('/components/stepper', 'component.navigation.stepper')->name('component.stepper');
 
 // Layout & Structural Group
+Volt::route('/components/container', 'component.layout.container')->name('component.container');
+Volt::route('/components/body', 'component.layout.body')->name('component.body');
 Volt::route('/components/header', 'component.layout.header')->name('component.header');
 Volt::route('/components/sidebar', 'component.layout.sidebar')->name('component.sidebar');
 Volt::route('/components/main', 'component.layout.main')->name('component.main');

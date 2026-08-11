@@ -1,3 +1,11 @@
+<?php
+
+use Livewire\Volt\Component;
+
+new class extends Component {};
+
+?>
+
 <x-aura::sidebar>
     <x-slot:header>
         <a href="{{ route('home') }}" class="flex items-center gap-3 px-2 py-1 group">

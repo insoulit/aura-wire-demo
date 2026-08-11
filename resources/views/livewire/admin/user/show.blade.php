@@ -5,7 +5,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
 new 
-#[Layout('layout.admin')] 
+#[Layout('livewire.layout.admin')] 
 #[Title('User Profile — Admin Panel | Aura Wire')] 
 class extends Component {
     public array $user = [

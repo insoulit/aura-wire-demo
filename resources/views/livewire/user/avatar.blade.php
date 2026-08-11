@@ -5,7 +5,7 @@ use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
 new 
-#[Layout('layout.user')] 
+#[Layout('livewire.layout.app')] 
 #[Title('Profile Picture — User Panel | Aura Wire')] 
 class extends Component {
     public bool $uploaded = false;

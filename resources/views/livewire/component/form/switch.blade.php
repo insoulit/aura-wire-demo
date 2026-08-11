@@ -2,7 +2,7 @@
 
 use function Livewire\Volt\{layout, title, state};
 
-layout('layout.component');
+layout('livewire.layout.component');
 title('Switch - Aura Wire');
 
 state(['enabled' => false]);

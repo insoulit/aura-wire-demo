@@ -2,7 +2,7 @@
 
 use function Livewire\Volt\{layout, title, state};
 
-layout('layout.component');
+layout('livewire.layout.component');
 title('Rich Text - Aura Wire');
 
 state([

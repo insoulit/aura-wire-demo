@@ -1,21 +1,32 @@
-@php
-    $activeGroup = 'none';
-    if (request()->is('components/heading', 'components/subheading', 'components/kicker', 'components/text')) {
-        $activeGroup = 'typography';
-    } elseif (request()->is('components/button', 'components/button-group', 'components/icon-button', 'components/dropdown')) {
-        $activeGroup = 'actions';
-    } elseif (request()->is('components/input', 'components/textarea', 'components/select', 'components/checkbox', 'components/radio', 'components/switch', 'components/field', 'components/label', 'components/file-upload', 'components/pin-code', 'components/rich-text', 'components/error', 'components/combobox', 'components/date-picker', 'components/rating')) {
-        $activeGroup = 'form';
-    } elseif (request()->is('components/avatar', 'components/badge', 'components/card', 'components/code', 'components/empty-state', 'components/numbered-list', 'components/list', 'components/product-card', 'components/progress-bar', 'components/separator', 'components/table', 'components/tabs', 'components/tag', 'components/accordion', 'components/stat', 'components/skeleton', 'components/timeline')) {
-        $activeGroup = 'display';
-    } elseif (request()->is('components/alert', 'components/modal', 'components/sheet', 'components/spinner', 'components/toast', 'components/banner', 'components/tooltip', 'components/popover', 'components/command')) {
-        $activeGroup = 'feedback';
-    } elseif (request()->is('components/breadcrumb', 'components/pagination', 'components/stepper')) {
-        $activeGroup = 'navigation';
-    } elseif (request()->is('components/header', 'components/sidebar', 'components/main', 'components/navbar', 'components/footer')) {
-        $activeGroup = 'layout';
+<?php
+
+use Livewire\Volt\Component;
+
+new class extends Component {
+    public function with(): array
+    {
+        $activeGroup = 'none';
+        if (request()->is('components/heading', 'components/subheading', 'components/kicker', 'components/text')) {
+            $activeGroup = 'typography';
+        } elseif (request()->is('components/button', 'components/button-group', 'components/icon-button', 'components/dropdown')) {
+            $activeGroup = 'actions';
+        } elseif (request()->is('components/input', 'components/textarea', 'components/select', 'components/checkbox', 'components/radio', 'components/switch', 'components/field', 'components/label', 'components/file-upload', 'components/pin-code', 'components/rich-text', 'components/error', 'components/combobox', 'components/date-picker', 'components/rating')) {
+            $activeGroup = 'form';
+        } elseif (request()->is('components/avatar', 'components/badge', 'components/card', 'components/code', 'components/empty-state', 'components/numbered-list', 'components/list', 'components/product-card', 'components/progress-bar', 'components/separator', 'components/table', 'components/tabs', 'components/tag', 'components/accordion', 'components/stat', 'components/skeleton', 'components/timeline')) {
+            $activeGroup = 'display';
+        } elseif (request()->is('components/alert', 'components/modal', 'components/sheet', 'components/spinner', 'components/toast', 'components/banner', 'components/tooltip', 'components/popover', 'components/command')) {
+            $activeGroup = 'feedback';
+        } elseif (request()->is('components/breadcrumb', 'components/pagination', 'components/stepper')) {
+            $activeGroup = 'navigation';
+        } elseif (request()->is('components/header', 'components/sidebar', 'components/main', 'components/navbar', 'components/footer')) {
+            $activeGroup = 'layout';
+        }
+
+        return ['activeGroup' => $activeGroup];
     }
-@endphp
+};
+
+?>
 
 <div x-data="{ openGroup: '{{ $activeGroup }}' }" class="space-y-2.5">
 
@@ -271,7 +282,7 @@
 
     <!-- 7. Layout Dropdown -->
     @php
-        $isLayoutActive = request()->is('components/header', 'components/sidebar', 'components/main', 'components/navbar', 'components/footer');
+        $isLayoutActive = request()->is('components/container', 'components/body', 'components/header', 'components/sidebar', 'components/main', 'components/navbar', 'components/footer');
     @endphp
     <div class="space-y-0.5">
         <button
@@ -294,6 +305,8 @@
             </svg>
         </button>
         <ul x-show="openGroup === 'layout'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 my-1 text-xs sm:text-sm">
+            <li><a href="/components/container" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/container') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Container</a></li>
+            <li><a href="/components/body" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/body') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Body</a></li>
             <li><a href="/components/header" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/header') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Header</a></li>
             <li><a href="/components/sidebar" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/sidebar') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Sidebar</a></li>
             <li><a href="/components/main" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/main') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Main</a></li>

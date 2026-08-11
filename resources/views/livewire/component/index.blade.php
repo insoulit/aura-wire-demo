@@ -3,7 +3,7 @@
 use function Livewire\Volt\layout;
 use function Livewire\Volt\title;
 
-layout('layout.component');
+layout('livewire.layout.component');
 title('Component Directory - Aura Wire');
 
 ?>

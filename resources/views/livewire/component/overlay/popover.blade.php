@@ -5,7 +5,7 @@ use Livewire\Volt\Component;
 new class extends Component {
     public function rendering($view)
     {
-        $view->layout('layout.component')->title('Popover - Aura Wire');
+        $view->layout('livewire.layout.component')->title('Popover - Aura Wire');
     }
 };
 
