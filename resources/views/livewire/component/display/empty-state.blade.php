@@ -37,7 +37,7 @@ class extends Component {};
                 >
                     <div class="flex items-center gap-2.5">
                         <x-aura::button variant="primary" size="sm" icon="plus">
-                            Create Project
+                            Create
                         </x-aura::button>
                         <x-aura::button variant="secondary" size="sm" icon="sparkles">
                             Browse Templates
@@ -52,7 +52,7 @@ class extends Component {};
     description="You haven't created any workspace projects yet. Get started by creating your first project."
 &gt;
     &lt;x-aura::button variant="primary" size="sm" icon="plus"&gt;
-        Create Project
+        Create
     &lt;/x-aura::button&gt;
     &lt;x-aura::button variant="secondary" size="sm" icon="sparkles"&gt;
         Browse Templates

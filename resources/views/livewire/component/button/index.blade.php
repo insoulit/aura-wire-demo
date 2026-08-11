@@ -71,7 +71,7 @@ class extends Component {};
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-3">
                 <x-aura::button variant="primary" icon="plus">
-                    Create Project
+                    Create
                 </x-aura::button>
 
                 <x-aura::button variant="secondary" icon-trailing="download">
@@ -88,7 +88,7 @@ class extends Component {};
             </div>
         </x-slot:preview>
         <x-slot:codeSlot>&lt;x-aura::button variant="primary" icon="plus"&gt;
-    Create Project
+    Create
 &lt;/x-aura::button&gt;
 
 &lt;x-aura::button variant="secondary" icon-trailing="download"&gt;

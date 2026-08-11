@@ -130,7 +130,7 @@ class extends Component {};
 
                     <x-slot:footer>
                         <x-aura::button variant="ghost" size="sm" x-on:click="$dispatch('close-modal', 'wide-modal')">Cancel</x-aura::button>
-                        <x-aura::button variant="primary" size="sm" x-on:click="$dispatch('close-modal', 'wide-modal')">Create Member</x-aura::button>
+                        <x-aura::button variant="primary" size="sm" x-on:click="$dispatch('close-modal', 'wide-modal')">Create</x-aura::button>
                     </x-slot:footer>
                 </x-aura::modal>
             </div>
@@ -141,7 +141,7 @@ class extends Component {};
         &lt;x-aura::input label="Email Address" /&gt;
     &lt;/div&gt;
     &lt;x-slot:footer&gt;
-        &lt;x-aura::button variant="primary" size="sm"&gt;Create Member&lt;/x-aura::button&gt;
+        &lt;x-aura::button variant="primary" size="sm"&gt;Create&lt;/x-aura::button&gt;
     &lt;/x-slot:footer&gt;
 &lt;/x-aura::modal&gt;</x-slot:codeSlot>
     </x-aura::code>

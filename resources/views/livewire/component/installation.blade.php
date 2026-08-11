@@ -13,7 +13,7 @@ title('Installation & Setup Guide - Aura Wire');
         <x-aura::kicker>Getting Started</x-aura::kicker>
         <x-aura::heading level="1" size="lg">Installation &amp; Setup Guide</x-aura::heading>
         <x-aura::subheading size="sm" class="max-w-xl">
-            Install <code class="text-zinc-900 dark:text-white font-mono font-semibold">insoulit/aura-wire</code> via Composer into your Laravel application and configure Inter typography.
+            Install <code class="text-zinc-900 dark:text-white font-mono font-semibold">insoulit/aura-wire</code> via Composer into your Laravel application and configure Plus Jakarta Sans typography.
         </x-aura::subheading>
         <div class="pt-2 flex items-center gap-3">
             <a href="https://packagist.org/packages/insoulit/aura-wire" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-white bg-zinc-900 dark:bg-white dark:text-zinc-900 hover:bg-zinc-800 dark:hover:bg-zinc-100 shadow-2xs transition-all group shrink-0">
@@ -129,26 +129,26 @@ title('Installation & Setup Guide - Aura Wire');
             </x-aura::code>
         </x-aura::card>
 
-        <!-- Step 4: Inter Font Guideline (Recommended) -->
+        <!-- Step 4: Plus Jakarta Sans Font Integration (Recommended) -->
         <x-aura::card class="space-y-4">
             <div class="flex items-center justify-between gap-3">
                 <div class="flex items-center gap-3">
                     <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold text-xs shrink-0 shadow-2xs">4</span>
-                    <x-aura::heading level="2" size="md">Inter Font Integration (Recommended)</x-aura::heading>
+                    <x-aura::heading level="2" size="md">Plus Jakarta Sans Font Integration (Recommended)</x-aura::heading>
                 </div>
                 <x-aura::badge variant="primary" size="sm">Typography Guideline</x-aura::badge>
             </div>
 
             <x-aura::text size="sm" variant="subtle" class="py-3 block">
-                AuraWire is designed to look crisp and state-of-the-art using the <strong>Inter</strong> font family. Import Inter in your layout head and configure Tailwind CSS:
+                AuraWire is designed to look crisp and state-of-the-art using modern typography like <strong>Plus Jakarta Sans</strong>. Import the font in your layout head and configure Tailwind CSS:
             </x-aura::text>
 
             <div class="space-y-2">
-                <div class="text-xs font-bold uppercase tracking-wider text-zinc-900 dark:text-white">A. Include Inter via Google Fonts (&lt;head&gt;)</div>
+                <div class="text-xs font-bold uppercase tracking-wider text-zinc-900 dark:text-white">A. Include Plus Jakarta Sans via Google Fonts (&lt;head&gt;)</div>
                 <x-aura::code class="w-full" language="html" active="code" :showTabs="false">
                     <x-slot:codeSlot>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
 &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
-&lt;link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet"&gt;</x-slot:codeSlot>
+&lt;link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400..800;1,400..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"&gt;</x-slot:codeSlot>
                 </x-aura::code>
             </div>
 
@@ -159,7 +159,8 @@ title('Installation & Setup Guide - Aura Wire');
                         <span class="text-xs font-semibold text-zinc-600 dark:text-zinc-400">Tailwind CSS v4 (<code class="font-mono text-indigo-500">resources/css/app.css</code>)</span>
                         <x-aura::code class="w-full" language="css" active="code" :showTabs="false">
                             <x-slot:codeSlot>@theme {
-  --font-sans: 'Inter', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }</x-slot:codeSlot>
                         </x-aura::code>
                     </div>
@@ -170,7 +171,8 @@ title('Installation & Setup Guide - Aura Wire');
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Plus Jakarta Sans', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
     },
   },
