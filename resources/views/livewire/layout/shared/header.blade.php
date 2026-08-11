@@ -18,20 +18,9 @@ new class extends Component {};
                     <span class="font-extrabold tracking-tight text-sm sm:text-lg text-zinc-900 dark:text-white group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors leading-none truncate">
                         Aura Wire
                     </span>
-                    <x-aura::badge variant="subtle" size="xs">
-                        @if (request()->is('admin*'))
-                            Admin
-                        @elseif (request()->is('guest*'))
-                            Guest
-                        @elseif (request()->is('dashboard*'))
-                            User
-                        @else
-                            Docs
-                        @endif
-                    </x-aura::badge>
                 </div>
                 <span class="hidden sm:block text-xs text-zinc-500 dark:text-zinc-400 font-medium leading-normal mt-0.5 truncate">
-                    Modern Livewire UI Kit
+                    Livewire UI Kit
                 </span>
             </div>
         </a>
