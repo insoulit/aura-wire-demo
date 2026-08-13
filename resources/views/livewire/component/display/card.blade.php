@@ -28,7 +28,7 @@ class extends Component {};
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
-        <x-slot:codeSlot>@verbatim<x-aura::card class="p-6 space-y-4">
+        <x-slot:codeSlot>@verbatim<x-aura::card>
     <x-aura::heading level="3" size="md">Card Title</x-aura::heading>
     <x-aura::text size="sm">Card body content goes here.</x-aura::text>
 </x-aura::card>@endverbatim</x-slot:codeSlot>
@@ -148,27 +148,30 @@ class extends Component {};
 &lt;/x-aura::card&gt;</x-slot>
     </x-aura::code>
 
-    <!-- 4. Featured Card with Floating Badge -->
-    <x-aura::code  title="4. Featured Card with Floating Badge">
+    <!-- 4. Featured Card Pattern -->
+    <x-aura::code title="4. Interactive & Featured Card Layouts">
         <x-slot:preview>
             <div class="w-full max-w-md relative pt-3">
-                <x-aura::card class="border-2 border-indigo-500 shadow-xl relative">
-                    <x-aura::badge variant="positive" size="sm" class="absolute -top-3 right-6 z-10 shadow-md bg-indigo-600 text-white font-bold">
-                        FEATURED
-                    </x-aura::badge>
+                <div class="absolute -top-1 right-6 z-10">
+                    <x-aura::badge variant="positive" size="sm">FEATURED</x-aura::badge>
+                </div>
+                <x-aura::card>
                     <div class="space-y-2">
-                        <x-aura::kicker class="text-indigo-500 font-bold">Pro Plan</x-aura::kicker>
+                        <x-aura::kicker>Pro Plan</x-aura::kicker>
                         <h4 class="text-xl font-bold text-zinc-900 dark:text-white">$49 / month</h4>
                         <p class="text-xs text-zinc-500">Includes advanced analytics and 24/7 priority live support.</p>
                     </div>
                 </x-aura::card>
             </div>
         </x-slot:preview>
-        <x-slot name="codeSlot">&lt;x-aura::card class="relative border-2 border-indigo-500"&gt;
-    &lt;x-aura::badge class="absolute -top-3 right-6 z-10 bg-indigo-600 text-white"&gt;
-        FEATURED
-    &lt;/x-aura::badge&gt;
-    &lt;h4 class="text-xl font-bold"&gt;$49 / month&lt;/h4&gt;
-&lt;/x-aura::card&gt;</x-slot>
+        <x-slot name="codeSlot">@verbatim<div class="relative pt-3">
+    <div class="absolute -top-1 right-6 z-10">
+        <x-aura::badge variant="positive" size="sm">FEATURED</x-aura::badge>
+    </div>
+    <x-aura::card>
+        <x-aura::kicker>Pro Plan</x-aura::kicker>
+        <h4 class="text-xl font-bold">$49 / month</h4>
+    </x-aura::card>
+</div>@endverbatim</x-slot>
     </x-aura::code>
 </div>
