@@ -139,36 +139,40 @@ title('Installation & Setup Guide - Aura Wire');
                 </div>
                 <x-aura::badge variant="primary" size="sm">Typography Guideline</x-aura::badge>
             </div>
-
             <x-aura::text size="sm" variant="subtle" class="py-3 block">
-                AuraWire is designed to look crisp and state-of-the-art using modern typography like <strong>Plus Jakarta Sans</strong>. Import the font in your layout head and configure Tailwind CSS:
+                Include Google Fonts in your layout <code class="text-zinc-900 dark:text-white font-mono font-semibold">&lt;head&gt;</code> and configure Tailwind CSS using either approach below:
             </x-aura::text>
 
-            <div class="space-y-2">
-                <div class="text-xs font-bold uppercase tracking-wider text-zinc-900 dark:text-white">A. Include Plus Jakarta Sans via Google Fonts (&lt;head&gt;)</div>
-                <x-aura::code class="w-full" language="html" active="code" :showTabs="false">
-                    <x-slot:codeSlot>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+            <div class="space-y-4 pt-1">
+                <div class="space-y-1.5">
+                    <div class="text-xs font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">A. Google Fonts Import (&lt;head&gt;)</div>
+                    <x-aura::code class="w-full" language="html" active="code" :showTabs="false">
+                        <x-slot:codeSlot>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
 &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
 &lt;link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400..800;1,400..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"&gt;</x-slot:codeSlot>
-                </x-aura::code>
-            </div>
+                    </x-aura::code>
+                </div>
 
-            <div class="space-y-3 pt-2">
-                <div class="text-xs font-bold uppercase tracking-wider text-zinc-900 dark:text-white">B. Configure Font Family in Tailwind CSS</div>
-                <div class="space-y-4">
-                    <div class="space-y-1.5">
-                        <span class="text-xs font-semibold text-zinc-600 dark:text-zinc-400">Tailwind CSS v4 (<code class="font-mono text-indigo-500">resources/css/app.css</code>)</span>
-                        <x-aura::code class="w-full" language="css" active="code" :showTabs="false">
-                            <x-slot:codeSlot>@theme {
+                <div class="space-y-1.5">
+                    <div class="text-xs font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">Approach 1: Tailwind CSS v4 (<code class="font-mono text-indigo-500 lowercase">resources/css/app.css</code>)</div>
+                    <x-aura::code class="w-full" language="css" active="code" :showTabs="false">
+                        <x-slot:codeSlot>@theme {
   --font-sans: 'Plus Jakarta Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 }</x-slot:codeSlot>
-                        </x-aura::code>
-                    </div>
-                    <div class="space-y-1.5">
-                        <span class="text-xs font-semibold text-zinc-600 dark:text-zinc-400">Tailwind CSS v3 (<code class="font-mono text-indigo-500">tailwind.config.js</code>)</span>
-                        <x-aura::code class="w-full" language="javascript" active="code" :showTabs="false">
-                            <x-slot:codeSlot>module.exports = {
+                    </x-aura::code>
+                </div>
+
+                <!-- OR Divider -->
+                <div class="relative flex items-center justify-center py-1">
+                    <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-zinc-200/80 dark:border-zinc-800"></div></div>
+                    <span class="relative px-3 py-0.5 bg-zinc-100 dark:bg-zinc-800 text-[10px] font-bold tracking-widest text-zinc-500 dark:text-zinc-400 uppercase rounded-full border border-zinc-200/80 dark:border-zinc-700/80 shadow-2xs">OR</span>
+                </div>
+
+                <div class="space-y-1.5">
+                    <div class="text-xs font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">Approach 2: Tailwind CSS v3 (<code class="font-mono text-indigo-500 lowercase">tailwind.config.js</code>)</div>
+                    <x-aura::code class="w-full" language="javascript" active="code" :showTabs="false">
+                        <x-slot:codeSlot>module.exports = {
   theme: {
     extend: {
       fontFamily: {
@@ -178,8 +182,7 @@ title('Installation & Setup Guide - Aura Wire');
     },
   },
 }</x-slot:codeSlot>
-                        </x-aura::code>
-                    </div>
+                    </x-aura::code>
                 </div>
             </div>
         </x-aura::card>
@@ -193,18 +196,12 @@ title('Installation & Setup Guide - Aura Wire');
                 </div>
                 <x-aura::badge variant="subtle" size="sm">Usage</x-aura::badge>
             </div>
-            <x-aura::text size="sm" variant="subtle" class="py-3 block">Render components using either shorthand <code class="text-zinc-900 dark:text-white font-mono font-semibold">&lt;aura:...&gt;</code> or standard Blade prefix syntax <code class="text-zinc-900 dark:text-white font-mono font-semibold">&lt;x-aura::...&gt;</code>:</x-aura::text>
+            <x-aura::text size="sm" variant="subtle" class="py-3 block">Render components using standard Blade prefix syntax <code class="text-zinc-900 dark:text-white font-mono font-semibold">&lt;x-aura::...&gt;</code>:</x-aura::text>
             <div class="space-y-4 pt-1">
-                <div class="space-y-1.5">
-                    <div class="text-xs font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">Shorthand Tag Syntax (Recommended)</div>
-                    <x-aura::code class="w-full" language="html" active="code" :showTabs="false">
-                        <x-slot:codeSlot>&lt;aura:button variant="primary"&gt;Save Changes&lt;/aura:button&gt;</x-slot:codeSlot>
-                    </x-aura::code>
-                </div>
                 <div class="space-y-1.5">
                     <div class="text-xs font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">Standard Blade Prefix Syntax</div>
                     <x-aura::code class="w-full" language="html" active="code" :showTabs="false">
-                        <x-slot:codeSlot>&lt;x-aura::button variant="primary"&gt;Save Changes&lt;/x-aura::button&gt;</x-slot:codeSlot>
+                        <x-slot:codeSlot>&lt;x-aura::button variant="primary"&gt;&lt;span&gt;Create&lt;/span&gt;&lt;/x-aura::button&gt;</x-slot:codeSlot>
                     </x-aura::code>
                 </div>
             </div>
