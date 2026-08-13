@@ -7,7 +7,7 @@ title('Avatar - Aura Wire');
 
 ?>
 
-<div class="w-full max-w-3xl mx-auto space-y-6 flex flex-col items-center justify-center">
+<div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
     <x-aura::card >
         <div class="space-y-2 max-w-2xl">

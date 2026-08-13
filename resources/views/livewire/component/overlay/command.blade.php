@@ -40,7 +40,9 @@ new class extends Component {
                     @click="$dispatch('open-command')"
                     class="inline-flex items-center gap-3 px-4 py-2.5 rounded-xl text-xs font-semibold bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors cursor-pointer"
                 >
-                    <x-aura::icon name="search" size="xs" class="text-zinc-400" />
+                    <div class="text-zinc-400">
+                        <x-aura::icon name="search" size="xs" />
+                    </div>
                     <span>Search components or type a command...</span>
                     <kbd class="px-2 py-0.5 text-[10px] font-mono font-bold bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white rounded border border-zinc-200 dark:border-zinc-700">⌘K</kbd>
                 </button>

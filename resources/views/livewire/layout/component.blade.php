@@ -3,16 +3,16 @@
 <x-layout::shared.head :title="$title ?? 'Component Library — Aura Wire'" />
 <x-aura::body>
 
-    <div class="flex-1 flex flex-col justify-between">
+    <div class="flex-1 flex flex-col">
         <livewire:layout.shared.header />
 
         <x-aura::container>
-            <div class="flex-1 flex gap-0 lg:gap-8 items-stretch min-w-0">
+            <div class="flex-1 flex gap-0 lg:gap-8 items-start min-w-0">
                 <!-- Component Navigation Sidebar -->
                 <livewire:layout.component.sidebar />
 
                 <!-- Main Component Page Content Slot -->
-                <div class="flex-1 min-w-0 my-auto">
+                <div class="flex-1 min-w-0">
                     <x-aura::main :container="false">
                         {{ $slot }}
                         

@@ -3,7 +3,7 @@
 <x-layout::shared.head :title="$title ?? 'Aura Wire'" />
 <x-aura::body>
 
-    <div class="flex-1 flex flex-col justify-between">
+    <div class="flex-1 flex flex-col">
         <livewire:layout.shared.header />
 
         <x-aura::main>
