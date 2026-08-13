@@ -13,7 +13,7 @@ new class extends Component {
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card >
+    <x-aura::card>
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Display</x-aura::kicker>
@@ -34,7 +34,7 @@ new class extends Component {
     <!-- 1. Deployment & Release History Timeline -->
     <x-aura::code  title="1. Deployment & Release History">
         <x-slot:preview>
-            <x-aura::timeline class="w-full">
+            <x-aura::timeline>
                 <x-aura::timeline.item title="v1.5.0 Released to Production" time="Just now" variant="solid" description="Deployed 11 new UI components to the insoulit/aura-wire suite." />
                 <x-aura::timeline.item title="Pull Request #42 Merged" time="15 mins ago" variant="subtle" description="Approved and merged into main branch by @lead-dev." />
                 <x-aura::timeline.item title="Automated Test Suite Passed" time="30 mins ago" variant="solid" description="71 Pest tests passed with 220 assertions and 0 errors." />
@@ -52,7 +52,7 @@ new class extends Component {
     <!-- 2. Package Shipping & Delivery Tracker -->
     <x-aura::code  title="2. Package Shipping & Delivery Tracker">
         <x-slot:preview>
-            <x-aura::timeline class="w-full">
+            <x-aura::timeline>
                 <x-aura::timeline.item title="Package Delivered" time="02:15 PM" variant="solid" description="Signed for by receiver at front desk. Tracking ID: #TRK-89210." />
                 <x-aura::timeline.item title="Out for Delivery" time="08:30 AM" variant="subtle" description="Courier vehicle loaded and en route to destination." />
                 <x-aura::timeline.item title="Arrived at Regional Distribution Hub" time="Yesterday, 11:45 PM" variant="subtle" description="Processed at Chicago central transit facility." />
@@ -70,7 +70,7 @@ new class extends Component {
     <!-- 3. Security & Account Audit Log -->
     <x-aura::code  title="3. Security Audit & Access History">
         <x-slot:preview>
-            <x-aura::timeline class="w-full">
+            <x-aura::timeline>
                 <x-aura::timeline.item title="Two-Factor Authentication Enabled" time="1 hour ago" variant="solid" description="Authenticator app 2FA configured for user account." />
                 <x-aura::timeline.item title="New Production API Token Generated" time="3 hours ago" variant="subtle" description="Token created with read/write scopes for webhooks." />
                 <x-aura::timeline.item title="Password Changed Successfully" time="3 days ago" variant="subtle" description="Password updated from verified IP 192.168.1.1." />
@@ -86,7 +86,7 @@ new class extends Component {
     <!-- 4. Timeline with Custom Action Slots -->
     <x-aura::code  title="4. Timeline with Custom Action Slots">
         <x-slot:preview>
-            <x-aura::timeline class="w-full">
+            <x-aura::timeline>
                 <x-aura::timeline.item title="Database Migration Completed" time="Just now" variant="solid" description="Migrated 24 tables without downtime.">
                     <div class="mt-2 flex items-center gap-2">
                         <x-aura::badge variant="neutral" size="sm">Schema v2.4</x-aura::badge>

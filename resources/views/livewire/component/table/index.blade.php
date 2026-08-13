@@ -66,7 +66,7 @@ with([
 
 <div class="w-full max-w-4xl mx-auto space-y-12 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card >
+    <x-aura::card>
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Data Display</x-aura::kicker>
@@ -156,7 +156,7 @@ with([
             <div class="flex items-center justify-end gap-1.5">
                 <x-aura::icon-button icon="show" variant="subtle" size="sm" shape="circle" />
                 <x-aura::icon-button icon="edit" variant="subtle" size="sm" shape="circle" />
-                <x-aura::icon-button icon="delete" variant="subtle" size="sm" shape="circle" class="text-red-600" />
+                <x-aura::icon-button icon="delete" variant="subtle" size="sm" shape="circle"  />
             </div>
         </x-aura::table.cell>
     </x-aura::table.row>
@@ -329,7 +329,7 @@ with([
         <x-aura::table.cell><code class="px-2 py-1 font-mono">sk_live_9f83...</code></x-aura::table.cell>
         <x-aura::table.cell><x-aura::badge variant="positive">Active</x-aura::badge></x-aura::table.cell>
         <x-aura::table.cell class="text-right">
-            <x-aura::icon-button icon="delete" variant="subtle" size="sm" shape="circle" class="text-red-600" />
+            <x-aura::icon-button icon="delete" variant="subtle" size="sm" shape="circle"  />
         </x-aura::table.cell>
     </x-aura::table.row>
 </x-aura::table>@endverbatim</x-slot:codeSlot>

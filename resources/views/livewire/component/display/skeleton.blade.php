@@ -20,7 +20,7 @@ class extends Component {
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card >
+    <x-aura::card>
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Display</x-aura::kicker>
@@ -48,12 +48,12 @@ class extends Component {
                 <div class="flex items-center justify-between">
                     <x-aura::text size="xs" variant="subtle" weight="medium">Status: {{ $isLoading ? 'Loading Content...' : 'Data Loaded' }}</x-aura::text>
                     <x-aura::button variant="secondary" size="xs" wire:click="toggleLoading">
-                        <x-aura::icon name="refresh-cw" size="xs" class="{{ $isLoading ? 'animate-spin' : '' }}" />
+                        <x-aura::icon name="refresh-cw" size="xs"  />
                         <span>{{ $isLoading ? 'Show Loaded Content' : 'Simulate Loading' }}</span>
                     </x-aura::button>
                 </div>
 
-                <x-aura::card class="p-5">
+                <x-aura::card>
                     @if ($isLoading)
                         <div class="space-y-4">
                             <div class="flex items-center gap-3.5">
@@ -77,13 +77,13 @@ class extends Component {
                             <div class="flex items-center gap-3.5">
                                 <x-aura::avatar initials="AK" size="md" class="shrink-0" />
                                 <div class="min-w-0 space-y-0.5">
-                                    <x-aura::heading level="3" size="sm" class="leading-tight">Alex Kovacs</x-aura::heading>
-                                    <x-aura::text size="xs" variant="subtle" class="leading-tight">Senior Product Architect</x-aura::text>
+                                    <x-aura::heading level="3" size="sm" >Alex Kovacs</x-aura::heading>
+                                    <x-aura::text size="xs" variant="subtle" >Senior Product Architect</x-aura::text>
                                 </div>
                             </div>
                             <div class="p-4 rounded-xl bg-zinc-100/70 dark:bg-zinc-800/50 border border-zinc-200/60 dark:border-zinc-700/50 space-y-1.5">
-                                <x-aura::text size="xs" weight="semibold" class="text-zinc-900 dark:text-white leading-tight">Quarterly Analytics Report</x-aura::text>
-                                <x-aura::text size="xs" variant="subtle" class="leading-normal">Real-time metrics and revenue performance breakdown across active workspaces.</x-aura::text>
+                                <x-aura::text size="xs" weight="semibold" >Quarterly Analytics Report</x-aura::text>
+                                <x-aura::text size="xs" variant="subtle" >Real-time metrics and revenue performance breakdown across active workspaces.</x-aura::text>
                             </div>
                             <div class="flex items-center justify-between pt-0.5">
                                 <x-aura::badge variant="positive" size="sm">Completed</x-aura::badge>
@@ -123,7 +123,7 @@ class extends Component {
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl">
                 <!-- Text Lines -->
                 <div class="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200/80 dark:border-zinc-800 space-y-2.5">
-                    <x-aura::text size="xs" weight="bold" class="text-zinc-500 uppercase tracking-wider">Text Variant</x-aura::text>
+                    <x-aura::text size="xs" weight="bold" >Text Variant</x-aura::text>
                     <x-aura::skeleton variant="text" width="100%" />
                     <x-aura::skeleton variant="text" width="80%" />
                     <x-aura::skeleton variant="text" width="60%" />
@@ -131,7 +131,7 @@ class extends Component {
 
                 <!-- Avatar -->
                 <div class="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200/80 dark:border-zinc-800 space-y-3">
-                    <x-aura::text size="xs" weight="bold" class="text-zinc-500 uppercase tracking-wider">Avatar Variant</x-aura::text>
+                    <x-aura::text size="xs" weight="bold" >Avatar Variant</x-aura::text>
                     <div class="flex items-center gap-3">
                         <x-aura::skeleton variant="avatar" class="w-8 h-8" />
                         <x-aura::skeleton variant="avatar" class="w-10 h-10" />
@@ -141,7 +141,7 @@ class extends Component {
 
                 <!-- Button -->
                 <div class="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200/80 dark:border-zinc-800 space-y-3">
-                    <x-aura::text size="xs" weight="bold" class="text-zinc-500 uppercase tracking-wider">Button Variant</x-aura::text>
+                    <x-aura::text size="xs" weight="bold" >Button Variant</x-aura::text>
                     <div class="flex items-center gap-2">
                         <x-aura::skeleton variant="button" class="w-20 h-8" />
                         <x-aura::skeleton variant="button" class="w-28 h-10" />
@@ -150,7 +150,7 @@ class extends Component {
 
                 <!-- Card Block -->
                 <div class="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200/80 dark:border-zinc-800 space-y-3">
-                    <x-aura::text size="xs" weight="bold" class="text-zinc-500 uppercase tracking-wider">Card Variant</x-aura::text>
+                    <x-aura::text size="xs" weight="bold" >Card Variant</x-aura::text>
                     <x-aura::skeleton variant="card" class="h-20 w-full" />
                 </div>
             </div>

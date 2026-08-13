@@ -32,18 +32,18 @@ class extends Component {
         <!-- Hero Header Content -->
         <div class="text-center space-y-6 max-w-4xl mx-auto">
             <div class="inline-flex items-center gap-2">
-                <x-aura::kicker >⚡ CLOUD PLATFORM v2.4</x-aura::kicker>
+                <x-aura::kicker>⚡ CLOUD PLATFORM v2.4</x-aura::kicker>
                 <x-aura::badge variant="neutral" size="sm">99.99% Uptime SLA</x-aura::badge>
             </div>
 
-            <x-aura::heading level="1" size="display-lg" >
+            <x-aura::heading level="1" size="display-lg">
             Accelerate your Application Workflow with <br class="hidden sm:block" />
             <span class="text-zinc-500 dark:text-zinc-400">
                 Realtime Cloud Analytics
             </span>
         </x-aura::heading>
 
-            <x-aura::subheading >
+            <x-aura::subheading>
                 Monitor API latencies, server error rates, and user events across multi-region infrastructure with instant alert notifications.
             </x-aura::subheading>
 
@@ -65,7 +65,7 @@ class extends Component {
         </div>
 
         <!-- SaaS Hero Visual Dashboard Mockup Card -->
-        <x-aura::card >
+        <x-aura::card>
             <div class="space-y-6">
                 <!-- Top Toolbar Mockup -->
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-zinc-800">
@@ -79,8 +79,8 @@ class extends Component {
                         <span class="text-xs font-mono text-zinc-400">live-cluster-production-us-east.aura</span>
                     </div>
                     <div class="flex items-center gap-2">
-                        <x-aura::badge variant="neutral" size="sm" >● 1.2M Req / sec</x-aura::badge>
-                        <x-aura::badge variant="subtle" size="sm" >Latency: 14ms</x-aura::badge>
+                        <x-aura::badge variant="neutral" size="sm">● 1.2M Req / sec</x-aura::badge>
+                        <x-aura::badge variant="subtle" size="sm">Latency: 14ms</x-aura::badge>
                     </div>
                 </div>
 
@@ -116,7 +116,7 @@ class extends Component {
 
     <!-- Core Platform Highlights Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <x-aura::card >
+        <x-aura::card>
             <div class="h-10 w-10 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center shadow-2xs">
                 <x-aura::icon name="zap"  size="sm" />
             </div>
@@ -126,7 +126,7 @@ class extends Component {
             </x-aura::text>
         </x-aura::card>
 
-        <x-aura::card >
+        <x-aura::card>
             <div class="h-10 w-10 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center shadow-2xs">
                 <x-aura::icon name="shield-check"  size="sm" />
             </div>
@@ -136,7 +136,7 @@ class extends Component {
             </x-aura::text>
         </x-aura::card>
 
-        <x-aura::card >
+        <x-aura::card>
             <div class="h-10 w-10 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center shadow-2xs">
                 <x-aura::icon name="bell"  size="sm" />
             </div>
@@ -163,11 +163,11 @@ class extends Component {
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Starter Plan Card -->
-            <x-aura::card >
+            <x-aura::card>
                 <div class="space-y-4">
                     <div>
                         <x-aura::badge variant="subtle" size="sm">Starter</x-aura::badge>
-                        <x-aura::heading level="3" size="md" >Developer</x-aura::heading>
+                        <x-aura::heading level="3" size="md">Developer</x-aura::heading>
                         <x-aura::text variant="subtle" size="xs">Essential monitoring for side projects.</x-aura::text>
                     </div>
 
@@ -192,19 +192,19 @@ class extends Component {
                     </div>
                 </div>
                 <div class="pt-6">
-                    <x-aura::button variant="secondary" size="md" >Get Started Free</x-aura::button>
+                    <x-aura::button variant="secondary" size="md">Get Started Free</x-aura::button>
                 </div>
             </x-aura::card>
 
             <!-- Pro Featured Plan Card -->
-            <x-aura::card >
+            <x-aura::card>
                 <div class="absolute -top-3 left-1/2 -translate-x-1/2">
                     <x-aura::badge variant="neutral" size="sm">Most Popular</x-aura::badge>
                 </div>
                 <div class="space-y-4">
                     <div>
                         <x-aura::badge variant="neutral" size="sm">Pro Suite</x-aura::badge>
-                        <x-aura::heading level="3" size="md" >Growth Team</x-aura::heading>
+                        <x-aura::heading level="3" size="md">Growth Team</x-aura::heading>
                         <x-aura::text variant="subtle" size="xs">Advanced insights for scaling startups.</x-aura::text>
                     </div>
 
@@ -233,16 +233,16 @@ class extends Component {
                     </div>
                 </div>
                 <div class="pt-6">
-                    <x-aura::button variant="primary" size="md" >Start 14-Day Free Trial</x-aura::button>
+                    <x-aura::button variant="primary" size="md">Start 14-Day Free Trial</x-aura::button>
                 </div>
             </x-aura::card>
 
             <!-- Enterprise Plan Card -->
-            <x-aura::card >
+            <x-aura::card>
                 <div class="space-y-4">
                     <div>
                         <x-aura::badge variant="subtle" size="sm">Enterprise</x-aura::badge>
-                        <x-aura::heading level="3" size="md" >Scale &amp; Security</x-aura::heading>
+                        <x-aura::heading level="3" size="md">Scale &amp; Security</x-aura::heading>
                         <x-aura::text variant="subtle" size="xs">Dedicated infrastructure &amp; custom SLAs.</x-aura::text>
                     </div>
 

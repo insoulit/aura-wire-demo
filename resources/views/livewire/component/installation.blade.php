@@ -9,7 +9,7 @@ title('Installation & Setup Guide - Aura Wire');
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card >
+    <x-aura::card>
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Getting Started</x-aura::kicker>
@@ -28,7 +28,7 @@ title('Installation & Setup Guide - Aura Wire');
     </x-aura::code>
 
     <!-- Requirements Card -->
-    <x-aura::card title="System Requirements" class="w-full">
+    <x-aura::card title="System Requirements" >
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
             {{-- PHP --}}
             <div class="flex items-center justify-between p-3.5 rounded-xl bg-zinc-50/80 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800">
@@ -39,7 +39,7 @@ title('Installation & Setup Guide - Aura Wire');
                         <div class="text-[11px] text-zinc-500 dark:text-zinc-400 truncate">Version 8.2 or higher</div>
                     </div>
                 </div>
-                <x-aura::badge variant="neutral" size="sm" class="shrink-0 ml-2">v8.2+</x-aura::badge>
+                <x-aura::badge variant="neutral" size="sm" >v8.2+</x-aura::badge>
             </div>
 
             {{-- Laravel --}}
@@ -51,7 +51,7 @@ title('Installation & Setup Guide - Aura Wire');
                         <div class="text-[11px] text-zinc-500 dark:text-zinc-400 truncate">Version 11.x or 12.x</div>
                     </div>
                 </div>
-                <x-aura::badge variant="positive" size="sm" class="shrink-0 ml-2">v11 / v12</x-aura::badge>
+                <x-aura::badge variant="positive" size="sm" >v11 / v12</x-aura::badge>
             </div>
 
             {{-- Livewire --}}
@@ -63,7 +63,7 @@ title('Installation & Setup Guide - Aura Wire');
                         <div class="text-[11px] text-zinc-500 dark:text-zinc-400 truncate">Version 3.0 or higher</div>
                     </div>
                 </div>
-                <x-aura::badge variant="primary" size="sm" class="shrink-0 ml-2">v3.0+</x-aura::badge>
+                <x-aura::badge variant="primary" size="sm" >v3.0+</x-aura::badge>
             </div>
 
             {{-- Tailwind CSS --}}
@@ -75,7 +75,7 @@ title('Installation & Setup Guide - Aura Wire');
                         <div class="text-[11px] text-zinc-500 dark:text-zinc-400 truncate">Version 3.x or 4.x</div>
                     </div>
                 </div>
-                <x-aura::badge variant="subtle" size="sm" class="shrink-0 ml-2">v3 / v4</x-aura::badge>
+                <x-aura::badge variant="subtle" size="sm" >v3 / v4</x-aura::badge>
             </div>
         </div>
     </x-aura::card>
@@ -83,7 +83,7 @@ title('Installation & Setup Guide - Aura Wire');
     <!-- Installation Steps -->
     <div class="w-full space-y-6">
         <!-- Step 1 -->
-        <x-aura::card class="space-y-4">
+        <x-aura::card>
             <div class="flex items-center justify-between gap-3">
                 <div class="flex items-center gap-3">
                     <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold text-xs shrink-0 shadow-2xs">1</span>
@@ -91,14 +91,14 @@ title('Installation & Setup Guide - Aura Wire');
                 </div>
                 <x-aura::badge variant="subtle" size="sm">Terminal</x-aura::badge>
             </div>
-            <x-aura::text size="sm" variant="subtle" class="py-3 block">Run the composer require command in your Laravel root directory:</x-aura::text>
+            <x-aura::text size="sm" variant="subtle" >Run the composer require command in your Laravel root directory:</x-aura::text>
             <x-aura::code  language="bash" active="code" :showTabs="false">
                 <x-slot:codeSlot>@verbatimcomposer require insoulit/aura-wire@endverbatim</x-slot:codeSlot>
             </x-aura::code>
         </x-aura::card>
 
         <!-- Step 2 -->
-        <x-aura::card class="space-y-4">
+        <x-aura::card>
             <div class="flex items-center justify-between gap-3">
                 <div class="flex items-center gap-3">
                     <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold text-xs shrink-0 shadow-2xs">2</span>
@@ -106,14 +106,14 @@ title('Installation & Setup Guide - Aura Wire');
                 </div>
                 <x-aura::badge variant="subtle" size="sm">Artisan</x-aura::badge>
             </div>
-            <x-aura::text size="sm" variant="subtle" class="py-3 block">Publish the configuration and Blade components using Artisan:</x-aura::text>
+            <x-aura::text size="sm" variant="subtle" >Publish the configuration and Blade components using Artisan:</x-aura::text>
             <x-aura::code  language="bash" active="code" :showTabs="false">
                 <x-slot:codeSlot>@verbatimphp artisan vendor:publish --tag="aura-wire-config"@endverbatim</x-slot:codeSlot>
             </x-aura::code>
         </x-aura::card>
 
         <!-- Step 3 -->
-        <x-aura::card class="space-y-4">
+        <x-aura::card>
             <div class="flex items-center justify-between gap-3">
                 <div class="flex items-center gap-3">
                     <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold text-xs shrink-0 shadow-2xs">3</span>
@@ -121,7 +121,7 @@ title('Installation & Setup Guide - Aura Wire');
                 </div>
                 <x-aura::badge variant="subtle" size="sm">Tailwind CSS</x-aura::badge>
             </div>
-            <x-aura::text size="sm" variant="subtle" class="py-3 block">Ensure your <code class="text-zinc-900 dark:text-white font-mono font-semibold">tailwind.config.js</code> or CSS includes vendor component views:</x-aura::text>
+            <x-aura::text size="sm" variant="subtle" >Ensure your <code class="text-zinc-900 dark:text-white font-mono font-semibold">tailwind.config.js</code> or CSS includes vendor component views:</x-aura::text>
             <x-aura::code  language="javascript" active="code" :showTabs="false">
                 <x-slot:codeSlot>@verbatimcontent: [
     './resources/**/*.blade.php',
@@ -131,7 +131,7 @@ title('Installation & Setup Guide - Aura Wire');
         </x-aura::card>
 
         <!-- Step 4: Plus Jakarta Sans Font Integration (Recommended) -->
-        <x-aura::card class="space-y-4">
+        <x-aura::card>
             <div class="flex items-center justify-between gap-3">
                 <div class="flex items-center gap-3">
                     <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold text-xs shrink-0 shadow-2xs">4</span>
@@ -139,7 +139,7 @@ title('Installation & Setup Guide - Aura Wire');
                 </div>
                 <x-aura::badge variant="primary" size="sm">Typography Guideline</x-aura::badge>
             </div>
-            <x-aura::text size="sm" variant="subtle" class="py-3 block">
+            <x-aura::text size="sm" variant="subtle" >
                 Include Google Fonts in your layout <code class="text-zinc-900 dark:text-white font-mono font-semibold">&lt;head&gt;</code> and configure Tailwind CSS using either approach below:
             </x-aura::text>
 
@@ -188,7 +188,7 @@ title('Installation & Setup Guide - Aura Wire');
         </x-aura::card>
 
         <!-- Step 5 -->
-        <x-aura::card class="space-y-4">
+        <x-aura::card>
             <div class="flex items-center justify-between gap-3">
                 <div class="flex items-center gap-3">
                     <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold text-xs shrink-0 shadow-2xs">5</span>
@@ -196,7 +196,7 @@ title('Installation & Setup Guide - Aura Wire');
                 </div>
                 <x-aura::badge variant="subtle" size="sm">Usage</x-aura::badge>
             </div>
-            <x-aura::text size="sm" variant="subtle" class="py-3 block">Render components using standard Blade prefix syntax <code class="text-zinc-900 dark:text-white font-mono font-semibold">&lt;x-aura::...&gt;</code>:</x-aura::text>
+            <x-aura::text size="sm" variant="subtle" >Render components using standard Blade prefix syntax <code class="text-zinc-900 dark:text-white font-mono font-semibold">&lt;x-aura::...&gt;</code>:</x-aura::text>
             <div class="space-y-4 pt-1">
                 <div class="space-y-1.5">
                     <div class="text-xs font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">Standard Blade Prefix Syntax</div>

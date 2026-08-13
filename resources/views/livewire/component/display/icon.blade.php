@@ -95,7 +95,7 @@ class extends Component {
 
 <div class="w-full max-w-5xl mx-auto space-y-12">
     <!-- Header Page Intro -->
-    <x-aura::card >
+    <x-aura::card>
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Display</x-aura::kicker>
@@ -114,7 +114,7 @@ class extends Component {
     </x-aura::code>
 
     <!-- Search & Filter Bar -->
-    <x-aura::card class="p-4">
+    <x-aura::card>
         <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
             <x-aura::input wire:model.live.debounce.150ms="search" placeholder="Search {{ number_format($this->totalCount) }} Lucide icons... (e.g. user, bell, chart, arrow)" icon="search" class="w-full sm:w-96" />
             <div class="flex items-center gap-2 text-xs text-zinc-500 font-mono">
@@ -137,7 +137,7 @@ class extends Component {
                             title="Click to copy Blade tag"
                         >
                             <div class="p-2.5 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 group-hover:bg-zinc-100 dark:group-hover:bg-zinc-800 transition-colors">
-                                <x-aura::icon :name="$iconName" size="md" class="text-zinc-700 dark:text-zinc-300 group-hover:scale-110 transition-transform" />
+                                <x-aura::icon :name="$iconName" size="md"  />
                             </div>
                             <span class="text-[11px] font-mono text-zinc-600 dark:text-zinc-400 break-all text-center leading-tight max-w-full group-hover:text-zinc-900 dark:group-hover:text-white">
                                 {{ $iconName }}
@@ -149,7 +149,7 @@ class extends Component {
                         </div>
                     @empty
                         <div class="col-span-full p-12 text-center text-zinc-500 space-y-2">
-                            <x-aura::icon name="search-x" size="lg" class="mx-auto text-zinc-400" />
+                            <x-aura::icon name="search-x" size="lg"  />
                             <p class="font-medium text-sm">No icons found matching "<span class="font-mono text-zinc-800 dark:text-zinc-200">{{ $search }}</span>"</p>
                             <p class="text-xs text-zinc-400">Try searching for broader terms like <code class="font-mono">user</code>, <code class="font-mono">mail</code>, <code class="font-mono">arrow</code>, or <code class="font-mono">file</code>.</p>
                         </div>
@@ -207,7 +207,7 @@ class extends Component {
         </x-slot:preview>
         <x-slot:codeSlot>@verbatim<x-aura::icon name="sparkles" size="md" />
 <x-aura::icon name="search" size="sm" />
-<x-aura::icon name="heart" class="text-red-500" />
+<x-aura::icon name="heart"  />
 <x-aura::icon name="user" size="lg" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
@@ -216,23 +216,23 @@ class extends Component {
         <x-slot:preview>
             <div class="flex flex-wrap items-center justify-center gap-8 w-full py-4">
                 <div class="flex flex-col items-center gap-2">
-                    <x-aura::icon name="star" size="xs" class="text-amber-500 fill-amber-500" />
+                    <x-aura::icon name="star" size="xs"  />
                     <span class="text-xs text-zinc-500 font-mono">xs (14px)</span>
                 </div>
                 <div class="flex flex-col items-center gap-2">
-                    <x-aura::icon name="star" size="sm" class="text-amber-500 fill-amber-500" />
+                    <x-aura::icon name="star" size="sm"  />
                     <span class="text-xs text-zinc-500 font-mono">sm (16px)</span>
                 </div>
                 <div class="flex flex-col items-center gap-2">
-                    <x-aura::icon name="star" size="md" class="text-amber-500 fill-amber-500" />
+                    <x-aura::icon name="star" size="md"  />
                     <span class="text-xs text-zinc-500 font-mono">md (20px)</span>
                 </div>
                 <div class="flex flex-col items-center gap-2">
-                    <x-aura::icon name="star" size="lg" class="text-amber-500 fill-amber-500" />
+                    <x-aura::icon name="star" size="lg"  />
                     <span class="text-xs text-zinc-500 font-mono">lg (24px)</span>
                 </div>
                 <div class="flex flex-col items-center gap-2">
-                    <x-aura::icon name="star" size="xl" class="text-amber-500 fill-amber-500" />
+                    <x-aura::icon name="star" size="xl"  />
                     <span class="text-xs text-zinc-500 font-mono">xl (32px)</span>
                 </div>
             </div>

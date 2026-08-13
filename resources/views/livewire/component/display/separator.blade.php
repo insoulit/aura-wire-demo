@@ -9,7 +9,7 @@ title('Separator - Aura Wire');
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card >
+    <x-aura::card>
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Display</x-aura::kicker>
@@ -31,9 +31,9 @@ title('Separator - Aura Wire');
     <x-aura::code  title="Divider Separator">
             <x-slot:preview>
                 <div class="w-full max-w-lg space-y-4 py-2">
-                    <x-aura::text size="sm" class="text-zinc-500">Top Content Section</x-aura::text>
+                    <x-aura::text size="sm" >Top Content Section</x-aura::text>
                     <x-aura::separator label="OR" />
-                    <x-aura::text size="sm" class="text-zinc-500">Bottom Content Section</x-aura::text>
+                    <x-aura::text size="sm" >Bottom Content Section</x-aura::text>
                 </div>
             </x-slot:preview>
             <x-slot:codeSlot>@verbatim<x-aura::text size="sm">Top Content Section</x-aura::text>
@@ -46,9 +46,9 @@ title('Separator - Aura Wire');
     <x-aura::code  title="Plain Separator">
             <x-slot:preview>
                 <div class="w-full max-w-lg space-y-4 py-2">
-                    <x-aura::text size="sm" class="text-zinc-500">Section A</x-aura::text>
+                    <x-aura::text size="sm" >Section A</x-aura::text>
                     <x-aura::separator />
-                    <x-aura::text size="sm" class="text-zinc-500">Section B</x-aura::text>
+                    <x-aura::text size="sm" >Section B</x-aura::text>
                 </div>
             </x-slot:preview>
             <x-slot:codeSlot>@verbatim<x-aura::text size="sm">Section A</x-aura::text>

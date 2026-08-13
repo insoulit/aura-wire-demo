@@ -13,7 +13,7 @@ class extends Component {};
 
 <div class="w-full max-w-4xl mx-auto space-y-10">
     <!-- Header -->
-    <x-aura::card >
+    <x-aura::card>
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Typography</x-aura::kicker>
@@ -70,13 +70,13 @@ class extends Component {};
     <!-- 3. Monospace & Code Strings -->
     <x-aura::code  title="3. Monospace Code &amp; Key Strings">
         <x-slot:preview>
-            <x-aura::card class="p-4 space-y-2 font-mono text-xs w-full">
+            <x-aura::card>
                 <div class="flex items-center justify-between">
-                    <x-aura::text variant="mono" size="xs" class="text-zinc-500">API_KEY_SECRET</x-aura::text>
-                    <x-aura::text variant="mono" size="xs" class="text-emerald-600 dark:text-emerald-400">sk_live_99f2...x81a</x-aura::text>
+                    <x-aura::text variant="mono" size="xs" >API_KEY_SECRET</x-aura::text>
+                    <x-aura::text variant="mono" size="xs" >sk_live_99f2...x81a</x-aura::text>
                 </div>
                 <div class="flex items-center justify-between border-t border-zinc-200 dark:border-zinc-800 pt-2">
-                    <x-aura::text variant="mono" size="xs" class="text-zinc-500">SHA256_HASH</x-aura::text>
+                    <x-aura::text variant="mono" size="xs" >SHA256_HASH</x-aura::text>
                     <x-aura::text variant="mono" size="xs">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</x-aura::text>
                 </div>
             </x-aura::card>
@@ -88,7 +88,7 @@ class extends Component {};
     <!-- 4. Real-World Article / Paragraph Block -->
     <x-aura::code  title="4. Real-World Article Paragraph Block">
         <x-slot:preview>
-            <x-aura::card class="p-6 space-y-2.5 w-full">
+            <x-aura::card>
                 <x-aura::heading level="3" size="sm">Getting Started with Livewire Components</x-aura::heading>
                 <x-aura::text size="sm" variant="subtle">
                     Aura Wire components are designed to be completely unstyled and responsive out of the box. By coupling native Blade components with Tailwind CSS v4 design tokens, you can compose rich application interfaces with full accessibility support.

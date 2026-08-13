@@ -35,12 +35,12 @@ class extends Component {
             <div class="flex items-center gap-3">
                 <x-aura::avatar initials="AK" size="lg" status="online" />
                 <div>
-                    <x-aura::heading level="1" size="lg" >Alex Kovacs</x-aura::heading>
-                    <x-aura::text variant="subtle" size="xs" >Staff Product Designer &amp; Frontend Engineer</x-aura::text>
+                    <x-aura::heading level="1" size="lg">Alex Kovacs</x-aura::heading>
+                    <x-aura::text variant="subtle" size="xs">Staff Product Designer &amp; Frontend Engineer</x-aura::text>
                 </div>
             </div>
 
-            <x-aura::subheading >
+            <x-aura::subheading>
                 Specializing in high-contrast design systems, developer tools, and reactive Laravel Livewire interfaces.
             </x-aura::subheading>
 
@@ -71,7 +71,7 @@ class extends Component {
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Project 1 -->
-            <x-aura::card >
+            <x-aura::card>
                 <div class="space-y-4">
                     <div class="aspect-16/9 rounded-2xl bg-zinc-900 p-6 flex items-center justify-center text-white border border-zinc-800">
                         <span class="text-5xl font-black group-hover:scale-110 transition-transform duration-300">⚡ Aura</span>
@@ -82,13 +82,13 @@ class extends Component {
                             <x-aura::text variant="subtle" size="xs">2026</x-aura::text>
                         </div>
                         <x-aura::heading level="3" size="sm">Aura Wire Component Suite</x-aura::heading>
-                        <x-aura::text variant="subtle" size="xs" >
+                        <x-aura::text variant="subtle" size="xs">
                             High-contrast Blade component suite featuring 30+ interactive elements for Laravel.
                         </x-aura::text>
                     </div>
                 </div>
                 <div class="pt-4 flex items-center justify-between border-t border-zinc-100 dark:border-zinc-800">
-                    <x-aura::text variant="accent" size="xs" weight="semibold" >
+                    <x-aura::text variant="accent" size="xs" weight="semibold">
                         <span>Read Case Study</span>
                         <x-aura::icon name="arrow-right"  size="xs" />
                     </x-aura::text>
@@ -97,7 +97,7 @@ class extends Component {
             </x-aura::card>
 
             <!-- Project 2 -->
-            <x-aura::card >
+            <x-aura::card>
                 <div class="space-y-4">
                     <div class="aspect-16/9 rounded-2xl bg-zinc-900 p-6 flex items-center justify-center text-white border border-zinc-800">
                         <span class="text-5xl font-black group-hover:scale-110 transition-transform duration-300">📊 Pulse</span>
@@ -108,13 +108,13 @@ class extends Component {
                             <x-aura::text variant="subtle" size="xs">2025</x-aura::text>
                         </div>
                         <x-aura::heading level="3" size="sm">Pulse Metrics Dashboard</x-aura::heading>
-                        <x-aura::text variant="subtle" size="xs" >
+                        <x-aura::text variant="subtle" size="xs">
                             Realtime event tracking dashboard handling 50k events/sec with dark mode UI tokens.
                         </x-aura::text>
                     </div>
                 </div>
                 <div class="pt-4 flex items-center justify-between border-t border-zinc-100 dark:border-zinc-800">
-                    <x-aura::text variant="accent" size="xs" weight="semibold" >
+                    <x-aura::text variant="accent" size="xs" weight="semibold">
                         <span>Read Case Study</span>
                         <x-aura::icon name="arrow-right"  size="xs" />
                     </x-aura::text>

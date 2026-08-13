@@ -9,7 +9,7 @@ title('Main - Aura Wire');
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card >
+    <x-aura::card>
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Layout</x-aura::kicker>
@@ -32,7 +32,7 @@ title('Main - Aura Wire');
         <x-slot:preview>
             <div class="w-full border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-100 dark:bg-zinc-950 p-4 h-48 flex">
                 <x-aura::main alignX="center" alignY="center">
-                    <x-aura::text size="sm" class="font-bold">Centered Content (X &amp; Y)</x-aura::text>
+                    <x-aura::text size="sm" >Centered Content (X &amp; Y)</x-aura::text>
                 </x-aura::main>
             </div>
         </x-slot:preview>

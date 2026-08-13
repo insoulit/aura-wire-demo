@@ -41,10 +41,10 @@ class extends Component {
                 <x-aura::badge variant="neutral" size="sm">🔥 Summer Collection 2026</x-aura::badge>
                 <x-aura::badge variant="warning" size="sm">Up to 40% Off</x-aura::badge>
             </div>
-            <x-aura::heading level="1" size="display-md" >
+            <x-aura::heading level="1" size="display-md">
                 Next-Gen Audio &amp; Workspace Gear
             </x-aura::heading>
-            <x-aura::subheading >
+            <x-aura::subheading>
                 Discover precision-crafted headphones, minimalist desk lamps, and ergonomic studio accessories designed for creators.
             </x-aura::subheading>
             <div class="pt-2 flex flex-wrap gap-3">
@@ -71,7 +71,7 @@ class extends Component {
     <!-- Product Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <!-- Product 1 -->
-        <x-aura::card >
+        <x-aura::card>
             <div class="aspect-4/3 bg-zinc-100 dark:bg-zinc-800/60 flex items-center justify-center relative p-6">
                 <span class="text-6xl group-hover:scale-110 transition-transform duration-300">🎧</span>
                 <div class="absolute top-3 left-3">
@@ -81,7 +81,7 @@ class extends Component {
             <div class="p-5 space-y-3">
                 <div class="flex items-start justify-between gap-2">
                     <div>
-                        <x-aura::heading level="3" size="sm" >Aura Pro Studio ANC Headphones</x-aura::heading>
+                        <x-aura::heading level="3" size="sm">Aura Pro Studio ANC Headphones</x-aura::heading>
                         <x-aura::text variant="subtle" size="xs">High-fidelity active noise canceling audio.</x-aura::text>
                     </div>
                 </div>
@@ -93,7 +93,7 @@ class extends Component {
         </x-aura::card>
 
         <!-- Product 2 -->
-        <x-aura::card >
+        <x-aura::card>
             <div class="aspect-4/3 bg-zinc-100 dark:bg-zinc-800/60 flex items-center justify-center relative p-6">
                 <span class="text-6xl group-hover:scale-110 transition-transform duration-300">💡</span>
                 <div class="absolute top-3 left-3">
@@ -103,7 +103,7 @@ class extends Component {
             <div class="p-5 space-y-3">
                 <div class="flex items-start justify-between gap-2">
                     <div>
-                        <x-aura::heading level="3" size="sm" >Minimalist Aluminum Desk Lamp</x-aura::heading>
+                        <x-aura::heading level="3" size="sm">Minimalist Aluminum Desk Lamp</x-aura::heading>
                         <x-aura::text variant="subtle" size="xs">Dimmable LED touch bar with wireless charger.</x-aura::text>
                     </div>
                 </div>
@@ -115,7 +115,7 @@ class extends Component {
         </x-aura::card>
 
         <!-- Product 3 -->
-        <x-aura::card >
+        <x-aura::card>
             <div class="aspect-4/3 bg-zinc-100 dark:bg-zinc-800/60 flex items-center justify-center relative p-6">
                 <span class="text-6xl group-hover:scale-110 transition-transform duration-300">⌨️</span>
                 <div class="absolute top-3 left-3">
@@ -125,7 +125,7 @@ class extends Component {
             <div class="p-5 space-y-3">
                 <div class="flex items-start justify-between gap-2">
                     <div>
-                        <x-aura::heading level="3" size="sm" >Compact Wireless Mechanical Keyboard</x-aura::heading>
+                        <x-aura::heading level="3" size="sm">Compact Wireless Mechanical Keyboard</x-aura::heading>
                         <x-aura::text variant="subtle" size="xs">Custom hot-swappable switches with RGB.</x-aura::text>
                     </div>
                 </div>

@@ -13,7 +13,7 @@ class extends Component {};
 
 <div class="w-full max-w-5xl mx-auto space-y-12">
     <!-- Navbar Page Intro -->
-    <x-aura::card >
+    <x-aura::card>
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Layout</x-aura::kicker>

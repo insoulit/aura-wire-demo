@@ -13,7 +13,7 @@ class extends Component {};
 
 <div class="w-full max-w-4xl mx-auto space-y-10">
     <!-- Header -->
-    <x-aura::card >
+    <x-aura::card>
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Typography</x-aura::kicker>
@@ -83,10 +83,10 @@ class extends Component {};
     <!-- 4. Real-World Dashboard Header Pattern -->
     <x-aura::code  title="4. Real-World Dashboard Section Header">
         <x-slot:preview>
-            <x-aura::card class="p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 w-full">
+            <x-aura::card>
                 <div class="space-y-1">
                     <x-aura::heading level="2" size="md">Project Settings &amp; Security</x-aura::heading>
-                    <x-aura::subheading class="text-sm">Manage API tokens, environment keys, and deployment webhooks.</x-aura::subheading>
+                    <x-aura::subheading>Manage API tokens, environment keys, and deployment webhooks.</x-aura::subheading>
                 </div>
                 <div class="flex items-center gap-2">
                     <x-aura::button variant="secondary" size="sm">Audit Log</x-aura::button>
@@ -94,10 +94,10 @@ class extends Component {};
                 </div>
             </x-aura::card>
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::card class="p-6 flex items-center justify-between gap-4">
+        <x-slot:codeSlot>@verbatim<x-aura::card>
     <div class="space-y-1">
         <x-aura::heading level="2" size="md">Project Settings &amp; Security</x-aura::heading>
-        <x-aura::subheading class="text-sm">Manage API tokens and deployment webhooks.</x-aura::subheading>
+        <x-aura::subheading>Manage API tokens and deployment webhooks.</x-aura::subheading>
     </div>
     <x-aura::button variant="primary" size="sm" icon="plus"><span>Create</span></x-aura::button>
 </x-aura::card>@endverbatim</x-slot:codeSlot>

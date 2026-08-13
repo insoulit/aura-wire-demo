@@ -34,13 +34,13 @@ class extends Component {
     <div class="rounded-3xl bg-zinc-100/90 dark:bg-zinc-900 text-zinc-900 dark:text-white p-8 md:p-12 relative overflow-hidden border border-zinc-200/80 dark:border-zinc-800 shadow-sm">
         <div class="max-w-2xl space-y-4">
             <div class="inline-flex items-center gap-2">
-                <x-aura::kicker >⚡ STUDIO AURA DIGITAL</x-aura::kicker>
+                <x-aura::kicker>⚡ STUDIO AURA DIGITAL</x-aura::kicker>
                 <x-aura::badge variant="neutral" size="sm">Design &amp; Engineering</x-aura::badge>
             </div>
-            <x-aura::heading level="1" size="display-md" >
+            <x-aura::heading level="1" size="display-md">
                 We Craft Digital Products That Drive Growth
             </x-aura::heading>
-            <x-aura::subheading >
+            <x-aura::subheading>
                 Partnering with ambitious founders and enterprise engineering teams to design high-converting web applications, brand identities, and design systems.
             </x-aura::subheading>
             <div class="pt-2 flex flex-wrap gap-3">
@@ -63,13 +63,13 @@ class extends Component {
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Service 1 -->
-            <x-aura::card >
+            <x-aura::card>
                 <div class="h-10 w-10 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center shadow-2xs">
                     <x-aura::icon name="sparkles"  size="sm" />
                 </div>
                 <div>
                     <x-aura::heading level="3" size="sm">Brand Identity &amp; System</x-aura::heading>
-                    <x-aura::text variant="subtle" size="xs" >
+                    <x-aura::text variant="subtle" size="xs">
                         Logo systems, typography guidelines, design tokens, and marketing asset libraries.
                     </x-aura::text>
                 </div>
@@ -77,13 +77,13 @@ class extends Component {
             </x-aura::card>
 
             <!-- Service 2 -->
-            <x-aura::card >
+            <x-aura::card>
                 <div class="h-10 w-10 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center shadow-2xs">
                     <x-aura::icon name="code"  size="sm" />
                 </div>
                 <div>
                     <x-aura::heading level="3" size="sm">Full-Stack Web Development</x-aura::heading>
-                    <x-aura::text variant="subtle" size="xs" >
+                    <x-aura::text variant="subtle" size="xs">
                         Laravel 12, Livewire Volt, and Tailwind CSS app engineering with 100% test coverage.
                     </x-aura::text>
                 </div>
@@ -91,13 +91,13 @@ class extends Component {
             </x-aura::card>
 
             <!-- Service 3 -->
-            <x-aura::card >
+            <x-aura::card>
                 <div class="h-10 w-10 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center shadow-2xs">
                     <x-aura::icon name="target"  size="sm" />
                 </div>
                 <div>
                     <x-aura::heading level="3" size="sm">UI/UX Audit &amp; Optimization</x-aura::heading>
-                    <x-aura::text variant="subtle" size="xs" >
+                    <x-aura::text variant="subtle" size="xs">
                         Conversion rate optimization, accessibility compliance audits, and user testing sessions.
                     </x-aura::text>
                 </div>

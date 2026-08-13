@@ -13,7 +13,7 @@ class extends Component {};
 
 <div class="w-full max-w-4xl mx-auto space-y-10">
     <!-- Header -->
-    <x-aura::card >
+    <x-aura::card>
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Typography</x-aura::kicker>
@@ -36,13 +36,13 @@ class extends Component {};
         <x-slot:preview>
             <div class="space-y-2 text-center flex flex-col items-center w-full">
                 <x-aura::heading level="2" size="md">Dashboard Analytics</x-aura::heading>
-                <x-aura::subheading size="sm" class="max-w-lg">
+                <x-aura::subheading size="sm" >
                     Monitor your key performance metrics, revenue growth, and active project statistics in real time.
                 </x-aura::subheading>
             </div>
         </x-slot:preview>
         <x-slot:codeSlot>@verbatim<x-aura::heading level="2" size="md">Dashboard Analytics</x-aura::heading>
-<x-aura::subheading class="max-w-lg">
+<x-aura::subheading>
     Monitor your key performance metrics, revenue growth, and active project statistics in real time.
 </x-aura::subheading>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
@@ -52,10 +52,10 @@ class extends Component {};
         <x-slot:preview>
             <div class="p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/60 space-y-4 text-center flex flex-col items-center w-full">
                 <x-aura::kicker>PRODUCTIVITY PLATFORM</x-aura::kicker>
-                <x-aura::heading level="1" size="display-lg" class="max-w-2xl">
+                <x-aura::heading level="1" size="display-lg" >
                     Build faster with modern Blade components
                 </x-aura::heading>
-                <x-aura::subheading class="max-w-xl text-base sm:text-lg">
+                <x-aura::subheading>
                     Aura Wire provides unstyled, accessible Livewire design primitives designed to elevate your developer workflow.
                 </x-aura::subheading>
                 <div class="pt-2 flex items-center gap-3">
@@ -69,7 +69,7 @@ class extends Component {};
     <x-aura::heading level="1" size="display-lg">
         Build faster with modern Blade components
     </x-aura::heading>
-    <x-aura::subheading class="max-w-xl">
+    <x-aura::subheading>
         Aura Wire provides unstyled, accessible Livewire design primitives designed to elevate your developer workflow.
     </x-aura::subheading>
 </div>@endverbatim</x-slot:codeSlot>
@@ -79,21 +79,21 @@ class extends Component {};
     <x-aura::code  title="3. Custom HTML Element Types (as prop)">
         <x-slot:preview>
             <div class="space-y-4 w-full">
-                <x-aura::card class="p-4 space-y-1">
+                <x-aura::card>
                     <p class="text-xs font-mono font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">as="p" (Default paragraph tag)</p>
                     <x-aura::subheading as="p">
                         Standard paragraph lead text for descriptive body content.
                     </x-aura::subheading>
                 </x-aura::card>
 
-                <x-aura::card class="p-4 space-y-1">
+                <x-aura::card>
                     <p class="text-xs font-mono font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">as="h2" (Semantic H2 heading element)</p>
                     <x-aura::subheading as="h2">
                         Subheading rendered as a semantic level-2 header tag for search engines.
                     </x-aura::subheading>
                 </x-aura::card>
 
-                <x-aura::card class="p-4 space-y-1">
+                <x-aura::card>
                     <p class="text-xs font-mono font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">as="span" (Inline span element)</p>
                     <x-aura::subheading as="span">
                         Inline subheading element for flexible inline container integration.
@@ -109,11 +109,11 @@ class extends Component {};
     <!-- 4. Card & Panel Header Descriptions -->
     <x-aura::code  title="4. Card &amp; Panel Header Descriptions">
         <x-slot:preview>
-            <x-aura::card class="p-6 space-y-6 w-full">
+            <x-aura::card>
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-4">
                     <div>
                         <x-aura::heading level="3" size="sm">Security &amp; Authentication</x-aura::heading>
-                        <x-aura::subheading class="text-sm">
+                        <x-aura::subheading>
                             Manage two-factor authentication and active login sessions.
                         </x-aura::subheading>
                     </div>
@@ -123,7 +123,7 @@ class extends Component {};
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div>
                         <x-aura::heading level="3" size="sm">API Webhooks</x-aura::heading>
-                        <x-aura::subheading class="text-sm">
+                        <x-aura::subheading>
                             Receive real-time HTTP callbacks when events occur in your account.
                         </x-aura::subheading>
                     </div>
@@ -134,7 +134,7 @@ class extends Component {};
         <x-slot:codeSlot>@verbatim<div class="flex items-center justify-between gap-4">
     <div>
         <x-aura::heading level="3" size="sm">Security &amp; Authentication</x-aura::heading>
-        <x-aura::subheading class="text-sm">
+        <x-aura::subheading>
             Manage two-factor authentication and active login sessions.
         </x-aura::subheading>
     </div>

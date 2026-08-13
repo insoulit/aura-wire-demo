@@ -9,7 +9,7 @@ title('PIN Code - Aura Wire');
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card >
+    <x-aura::card>
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Form Controls</x-aura::kicker>
@@ -44,12 +44,12 @@ title('PIN Code - Aura Wire');
         <x-slot:preview>
             <div class="space-y-6">
                 <div>
-                    <x-aura::text size="xs" class="mb-2">Small Size (sm)</x-aura::text>
+                    <x-aura::text size="xs" >Small Size (sm)</x-aura::text>
                     <x-aura::pin-code length="6" size="sm" />
                 </div>
 
                 <div>
-                    <x-aura::text size="xs" class="mb-2">Large Size (lg)</x-aura::text>
+                    <x-aura::text size="xs" >Large Size (lg)</x-aura::text>
                     <x-aura::pin-code length="6" size="lg" />
                 </div>
             </div>

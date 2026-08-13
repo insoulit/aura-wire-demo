@@ -13,7 +13,7 @@ class extends Component {};
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card >
+    <x-aura::card>
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Overlay</x-aura::kicker>
@@ -85,7 +85,7 @@ class extends Component {};
                         <button type="button" class="flex items-center gap-2.5 p-1.5 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors cursor-pointer border border-zinc-200 dark:border-zinc-800">
                             <x-aura::avatar src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Sarah Connor" size="sm" />
                             <span class="text-xs font-semibold text-zinc-900 dark:text-white pr-1">Sarah Connor</span>
-                            <x-aura::icon name="chevron-down" size="xs" class="text-zinc-400 mr-1" />
+                            <x-aura::icon name="chevron-down" size="xs"  />
                         </button>
                     </x-slot>
 
@@ -132,7 +132,7 @@ class extends Component {};
             <div class="flex items-start justify-between w-full max-w-md mx-auto min-h-[280px] pt-8">
                 <x-aura::dropdown align="left" width="48">
                     <x-slot name="trigger">
-                        <x-aura::icon-button icon="ellipsis-vertical" variant="ghost" size="sm" class="rounded-xl border border-zinc-200 dark:border-zinc-800" />
+                        <x-aura::icon-button icon="ellipsis-vertical" variant="ghost" size="sm"  />
                     </x-slot>
 
                     <x-aura::dropdown.header>Quick Options</x-aura::dropdown.header>

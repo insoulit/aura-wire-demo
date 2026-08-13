@@ -13,7 +13,7 @@ class extends Component {};
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card >
+    <x-aura::card>
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Action</x-aura::kicker>
@@ -37,7 +37,7 @@ class extends Component {};
             <div class="flex flex-wrap items-center gap-4">
                 <x-aura::icon-button icon="pencil" variant="primary" label="Primary Edit" />
                 <x-aura::icon-button icon="eye" variant="secondary" label="Secondary View" />
-                <x-aura::icon-button icon="heart" variant="subtle" class="text-rose-500" label="Subtle Favorite" />
+                <x-aura::icon-button icon="heart" variant="subtle"  label="Subtle Favorite" />
                 <x-aura::icon-button icon="settings" variant="outline" label="Outline Settings" />
                 <x-aura::icon-button icon="share-2" variant="ghost" label="Ghost Share" />
                 <x-aura::icon-button icon="search" variant="secondary" label="Search" />
@@ -120,7 +120,7 @@ class extends Component {};
     <!-- 5. Real-World Table & Toolbar Actions -->
     <x-aura::code  title="5. Real-World Table Actions">
         <x-slot:preview>
-            <x-aura::card class="w-full p-4 flex items-center justify-between">
+            <x-aura::card>
                 <div>
                     <h4 class="text-sm font-bold text-zinc-900 dark:text-white">User Account: Alex Kovacs</h4>
                     <p class="text-xs text-zinc-500">alex@example.com</p>
