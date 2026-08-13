@@ -15,5 +15,4 @@
   #[Title('Title - Aura Wire')] 
   class extends Component {};
   ```
-
-
+- **No Tailwind CSS Classes on Component Tags**: When using component tags while designing anything, do not apply any Tailwind CSS `class="..."` attributes directly on the component tag itself. Keep component tags clean using only their native props.
