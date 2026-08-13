@@ -28,7 +28,7 @@ class extends Component {};
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code">
-        <x-slot:codeSlot>&lt;x-aura::subheading size="md"&gt;Section description or lead text.&lt;/x-aura::subheading&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::subheading size="md">Section description or lead text.</x-aura::subheading>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Standard Section Subheading -->
@@ -41,10 +41,10 @@ class extends Component {};
                 </x-aura::subheading>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::heading level="2" size="md"&gt;Dashboard Analytics&lt;/x-aura::heading&gt;
-&lt;x-aura::subheading class="max-w-lg"&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::heading level="2" size="md">Dashboard Analytics</x-aura::heading>
+<x-aura::subheading class="max-w-lg">
     Monitor your key performance metrics, revenue growth, and active project statistics in real time.
-&lt;/x-aura::subheading&gt;</x-slot:codeSlot>
+</x-aura::subheading>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Hero Section Header Pattern -->
@@ -64,15 +64,15 @@ class extends Component {};
                 </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;div class="text-center flex flex-col items-center space-y-3"&gt;
-    &lt;x-aura::kicker&gt;PRODUCTIVITY PLATFORM&lt;/x-aura::kicker&gt;
-    &lt;x-aura::heading level="1" size="display-lg"&gt;
+        <x-slot:codeSlot>@verbatim<div class="text-center flex flex-col items-center space-y-3">
+    <x-aura::kicker>PRODUCTIVITY PLATFORM</x-aura::kicker>
+    <x-aura::heading level="1" size="display-lg">
         Build faster with modern Blade components
-    &lt;/x-aura::heading&gt;
-    &lt;x-aura::subheading class="max-w-xl"&gt;
+    </x-aura::heading>
+    <x-aura::subheading class="max-w-xl">
         Aura Wire provides unstyled, accessible Livewire design primitives designed to elevate your developer workflow.
-    &lt;/x-aura::subheading&gt;
-&lt;/div&gt;</x-slot:codeSlot>
+    </x-aura::subheading>
+</div>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Custom HTML Tags (as="h2", as="p", as="span") -->
@@ -101,9 +101,9 @@ class extends Component {};
                 </x-aura::card>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::subheading as="p"&gt;Standard paragraph lead text.&lt;/x-aura::subheading&gt;
-&lt;x-aura::subheading as="h2"&gt;Semantic level-2 header tag.&lt;/x-aura::subheading&gt;
-&lt;x-aura::subheading as="span"&gt;Inline subheading element.&lt;/x-aura::subheading&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::subheading as="p">Standard paragraph lead text.</x-aura::subheading>
+<x-aura::subheading as="h2">Semantic level-2 header tag.</x-aura::subheading>
+<x-aura::subheading as="span">Inline subheading element.</x-aura::subheading>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 4. Card & Panel Header Descriptions -->
@@ -131,14 +131,14 @@ class extends Component {};
                 </div>
             </x-aura::card>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;div class="flex items-center justify-between gap-4"&gt;
-    &lt;div&gt;
-        &lt;x-aura::heading level="3" size="sm"&gt;Security &amp;amp; Authentication&lt;/x-aura::heading&gt;
-        &lt;x-aura::subheading class="text-sm"&gt;
+        <x-slot:codeSlot>@verbatim<div class="flex items-center justify-between gap-4">
+    <div>
+        <x-aura::heading level="3" size="sm">Security &amp; Authentication</x-aura::heading>
+        <x-aura::subheading class="text-sm">
             Manage two-factor authentication and active login sessions.
-        &lt;/x-aura::subheading&gt;
-    &lt;/div&gt;
-    &lt;x-aura::button variant="secondary" size="sm"&gt;Manage Sessions&lt;/x-aura::button&gt;
-&lt;/div&gt;</x-slot:codeSlot>
+        </x-aura::subheading>
+    </div>
+    <x-aura::button variant="secondary" size="sm">Manage Sessions</x-aura::button>
+</div>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

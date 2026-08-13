@@ -28,7 +28,7 @@ class extends Component {};
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code">
-        <x-slot:codeSlot>&lt;x-aura::heading level="1" size="xl"&gt;Heading Title&lt;/x-aura::heading&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::heading level="1" size="xl">Heading Title</x-aura::heading>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Heading Levels (H1 - H6) -->
@@ -43,11 +43,11 @@ class extends Component {};
                 <x-aura::heading level="6" size="xs">Level 6 (H6) Heading</x-aura::heading>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::heading level="1" size="xl"&gt;Level 1 (H1) Heading&lt;/x-aura::heading&gt;
-&lt;x-aura::heading level="2" size="lg"&gt;Level 2 (H2) Heading&lt;/x-aura::heading&gt;
-&lt;x-aura::heading level="3" size="md"&gt;Level 3 (H3) Heading&lt;/x-aura::heading&gt;
-&lt;x-aura::heading level="4" size="sm"&gt;Level 4 (H4) Heading&lt;/x-aura::heading&gt;
-&lt;x-aura::heading level="5" size="xs"&gt;Level 5 (H5) Heading&lt;/x-aura::heading&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::heading level="1" size="xl">Level 1 (H1) Heading</x-aura::heading>
+<x-aura::heading level="2" size="lg">Level 2 (H2) Heading</x-aura::heading>
+<x-aura::heading level="3" size="md">Level 3 (H3) Heading</x-aura::heading>
+<x-aura::heading level="4" size="sm">Level 4 (H4) Heading</x-aura::heading>
+<x-aura::heading level="5" size="xs">Level 5 (H5) Heading</x-aura::heading>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Display Title Scales -->
@@ -59,9 +59,9 @@ class extends Component {};
                 <x-aura::heading level="1" size="display-lg">Display Large Title</x-aura::heading>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::heading level="1" size="display-2xl"&gt;Display 2XL Title&lt;/x-aura::heading&gt;
-&lt;x-aura::heading level="1" size="display-xl"&gt;Display XL Title&lt;/x-aura::heading&gt;
-&lt;x-aura::heading level="1" size="display-lg"&gt;Display Large Title&lt;/x-aura::heading&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::heading level="1" size="display-2xl">Display 2XL Title</x-aura::heading>
+<x-aura::heading level="1" size="display-xl">Display XL Title</x-aura::heading>
+<x-aura::heading level="1" size="display-lg">Display Large Title</x-aura::heading>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Font Weights -->
@@ -75,9 +75,9 @@ class extends Component {};
                 <x-aura::heading level="2" size="md" weight="extrabold">Extrabold Weight Heading</x-aura::heading>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::heading level="2" size="md" weight="normal"&gt;Normal Weight&lt;/x-aura::heading&gt;
-&lt;x-aura::heading level="2" size="md" weight="semibold"&gt;Semibold Weight&lt;/x-aura::heading&gt;
-&lt;x-aura::heading level="2" size="md" weight="extrabold"&gt;Extrabold Weight&lt;/x-aura::heading&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::heading level="2" size="md" weight="normal">Normal Weight</x-aura::heading>
+<x-aura::heading level="2" size="md" weight="semibold">Semibold Weight</x-aura::heading>
+<x-aura::heading level="2" size="md" weight="extrabold">Extrabold Weight</x-aura::heading>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 4. Real-World Dashboard Header Pattern -->
@@ -94,12 +94,12 @@ class extends Component {};
                 </div>
             </x-aura::card>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::card class="p-6 flex items-center justify-between gap-4"&gt;
-    &lt;div class="space-y-1"&gt;
-        &lt;x-aura::heading level="2" size="md"&gt;Project Settings &amp;amp; Security&lt;/x-aura::heading&gt;
-        &lt;x-aura::subheading class="text-sm"&gt;Manage API tokens and deployment webhooks.&lt;/x-aura::subheading&gt;
-    &lt;/div&gt;
-    &lt;x-aura::button variant="primary" size="sm" icon="plus"&gt;&lt;span&gt;Create&lt;/span&gt;&lt;/x-aura::button&gt;
-&lt;/x-aura::card&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::card class="p-6 flex items-center justify-between gap-4">
+    <div class="space-y-1">
+        <x-aura::heading level="2" size="md">Project Settings &amp; Security</x-aura::heading>
+        <x-aura::subheading class="text-sm">Manage API tokens and deployment webhooks.</x-aura::subheading>
+    </div>
+    <x-aura::button variant="primary" size="sm" icon="plus"><span>Create</span></x-aura::button>
+</x-aura::card>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

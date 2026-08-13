@@ -28,7 +28,7 @@ class extends Component {};
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::icon-button icon="pencil" variant="subtle" size="md" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::icon-button icon="pencil" variant="subtle" size="md" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. General Action Variants (Diverse Icons) -->
@@ -45,11 +45,11 @@ class extends Component {};
                 <x-aura::icon-button icon="sparkles" variant="link" href="#" label="Link Sparkles" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::icon-button icon="pencil" variant="primary" label="Edit" /&gt;
-&lt;x-aura::icon-button icon="eye" variant="secondary" label="View" /&gt;
-&lt;x-aura::icon-button icon="heart" variant="subtle" label="Favorite" /&gt;
-&lt;x-aura::icon-button icon="settings" variant="outline" label="Settings" /&gt;
-&lt;x-aura::icon-button icon="share-2" variant="ghost" label="Share" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::icon-button icon="pencil" variant="primary" label="Edit" />
+<x-aura::icon-button icon="eye" variant="secondary" label="View" />
+<x-aura::icon-button icon="heart" variant="subtle" label="Favorite" />
+<x-aura::icon-button icon="settings" variant="outline" label="Settings" />
+<x-aura::icon-button icon="share-2" variant="ghost" label="Share" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Destructive & Delete Icon Buttons -->
@@ -62,14 +62,14 @@ class extends Component {};
                 <x-aura::icon-button icon="x" variant="danger" label="Cancel / Close" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;!-- Hover Red Delete (No solid red background by default) --&gt;
-&lt;x-aura::icon-button icon="trash-2" variant="danger" label="Delete" /&gt;
+        <x-slot:codeSlot>@verbatim<!-- Hover Red Delete (No solid red background by default) -->
+<x-aura::icon-button icon="trash-2" variant="danger" label="Delete" />
 
-&lt;!-- Subtle Danger --&gt;
-&lt;x-aura::icon-button icon="trash" variant="danger-subtle" label="Delete" /&gt;
+<!-- Subtle Danger -->
+<x-aura::icon-button icon="trash" variant="danger-subtle" label="Delete" />
 
-&lt;!-- Solid Red Background (For critical alerts) --&gt;
-&lt;x-aura::icon-button icon="trash-2" variant="danger-solid" label="Solid Delete" /&gt;</x-slot:codeSlot>
+<!-- Solid Red Background (For critical alerts) -->
+<x-aura::icon-button icon="trash-2" variant="danger-solid" label="Solid Delete" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Shapes (Circle vs Square) -->
@@ -92,11 +92,11 @@ class extends Component {};
                 </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;!-- Circle (Default) --&gt;
-&lt;x-aura::icon-button icon="pencil" variant="primary" shape="circle" /&gt;
+        <x-slot:codeSlot>@verbatim<!-- Circle (Default) -->
+<x-aura::icon-button icon="pencil" variant="primary" shape="circle" />
 
-&lt;!-- Square --&gt;
-&lt;x-aura::icon-button icon="pencil" variant="primary" shape="square" /&gt;</x-slot:codeSlot>
+<!-- Square -->
+<x-aura::icon-button icon="pencil" variant="primary" shape="square" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 4. Sizes -->
@@ -110,11 +110,11 @@ class extends Component {};
                 <x-aura::icon-button icon="bell" size="xl" variant="secondary" label="Extra Large" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::icon-button icon="bell" size="xs" /&gt;
-&lt;x-aura::icon-button icon="bell" size="sm" /&gt;
-&lt;x-aura::icon-button icon="bell" size="md" /&gt;
-&lt;x-aura::icon-button icon="bell" size="lg" /&gt;
-&lt;x-aura::icon-button icon="bell" size="xl" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::icon-button icon="bell" size="xs" />
+<x-aura::icon-button icon="bell" size="sm" />
+<x-aura::icon-button icon="bell" size="md" />
+<x-aura::icon-button icon="bell" size="lg" />
+<x-aura::icon-button icon="bell" size="xl" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 5. Real-World Table & Toolbar Actions -->
@@ -132,10 +132,10 @@ class extends Component {};
                 </div>
             </x-aura::card>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;div class="flex items-center gap-1.5"&gt;
-    &lt;x-aura::icon-button icon="eye" variant="ghost" size="sm" label="View Profile" /&gt;
-    &lt;x-aura::icon-button icon="pencil" variant="ghost" size="sm" label="Edit Profile" /&gt;
-    &lt;x-aura::icon-button icon="trash-2" variant="danger" size="sm" label="Delete User" /&gt;
-&lt;/div&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<div class="flex items-center gap-1.5">
+    <x-aura::icon-button icon="eye" variant="ghost" size="sm" label="View Profile" />
+    <x-aura::icon-button icon="pencil" variant="ghost" size="sm" label="Edit Profile" />
+    <x-aura::icon-button icon="trash-2" variant="danger" size="sm" label="Delete User" />
+</div>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

@@ -29,7 +29,7 @@ state([
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::rich-text wire:model="content" label="Article Body" placeholder="Write content..." /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::rich-text wire:model="content" label="Article Body" placeholder="Write content..." />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Interactive Livewire Bindings -->
@@ -52,9 +52,9 @@ state([
                 </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::field label="Article Body"&gt;
-    &lt;x-aura::rich-text wire:model="content" placeholder="Start typing..." :showCount="true" minHeight="200px" /&gt;
-&lt;/x-aura::field&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::field label="Article Body">
+    <x-aura::rich-text wire:model="content" placeholder="Start typing..." :showCount="true" minHeight="200px" />
+</x-aura::field>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Toolbar Variants & Compact Mode -->
@@ -66,7 +66,7 @@ state([
                 </x-aura::field>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::rich-text wire:model="comment" toolbar="compact" minHeight="120px" placeholder="Write a comment..." /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::rich-text wire:model="comment" toolbar="compact" minHeight="120px" placeholder="Write a comment..." />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Validation Error & Disabled States -->
@@ -82,10 +82,10 @@ state([
                 </x-aura::field>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;!-- Invalid state --&gt;
-&lt;x-aura::rich-text :invalid="true" /&gt;
+        <x-slot:codeSlot>@verbatim<!-- Invalid state -->
+<x-aura::rich-text :invalid="true" />
 
-&lt;!-- Disabled state --&gt;
-&lt;x-aura::rich-text :disabled="true" /&gt;</x-slot:codeSlot>
+<!-- Disabled state -->
+<x-aura::rich-text :disabled="true" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

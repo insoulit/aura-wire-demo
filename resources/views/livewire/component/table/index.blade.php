@@ -81,7 +81,7 @@ with([
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::table :headers="$headers" :rows="$rows" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::table :headers="$headers" :rows="$rows" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. User Management Directory Table (with Show, Edit, Delete Actions) -->
@@ -132,35 +132,35 @@ with([
                 </x-aura::table>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::table&gt;
-    &lt;x-slot:header&gt;
-        &lt;x-aura::table.column&gt;Member&lt;/x-aura::table.column&gt;
-        &lt;x-aura::table.column&gt;Role&lt;/x-aura::table.column&gt;
-        &lt;x-aura::table.column&gt;Status&lt;/x-aura::table.column&gt;
-        &lt;x-aura::table.column class="text-right"&gt;Actions&lt;/x-aura::table.column&gt;
-    &lt;/x-slot:header&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::table>
+    <x-slot:header>
+        <x-aura::table.column>Member</x-aura::table.column>
+        <x-aura::table.column>Role</x-aura::table.column>
+        <x-aura::table.column>Status</x-aura::table.column>
+        <x-aura::table.column class="text-right">Actions</x-aura::table.column>
+    </x-slot:header>
 
-    &lt;x-aura::table.row&gt;
-        &lt;x-aura::table.cell&gt;
-            &lt;div class="flex items-center gap-3"&gt;
-                &lt;img src="..." class="w-9 h-9 rounded-full" /&gt;
-                &lt;div&gt;
-                    &lt;p class="font-bold"&gt;Alex Morgan&lt;/p&gt;
-                    &lt;p class="text-xs text-zinc-500"&gt;alex@company.com&lt;/p&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/x-aura::table.cell&gt;
-        &lt;x-aura::table.cell&gt;Lead Developer&lt;/x-aura::table.cell&gt;
-        &lt;x-aura::table.cell&gt;&lt;x-aura::badge variant="positive"&gt;Active&lt;/x-aura::badge&gt;&lt;/x-aura::table.cell&gt;
-        &lt;x-aura::table.cell class="text-right"&gt;
-            &lt;div class="flex items-center justify-end gap-1.5"&gt;
-                &lt;x-aura::icon-button icon="show" variant="subtle" size="sm" shape="circle" /&gt;
-                &lt;x-aura::icon-button icon="edit" variant="subtle" size="sm" shape="circle" /&gt;
-                &lt;x-aura::icon-button icon="delete" variant="subtle" size="sm" shape="circle" class="text-red-600" /&gt;
-            &lt;/div&gt;
-        &lt;/x-aura::table.cell&gt;
-    &lt;/x-aura::table.row&gt;
-&lt;/x-aura::table&gt;</x-slot:codeSlot>
+    <x-aura::table.row>
+        <x-aura::table.cell>
+            <div class="flex items-center gap-3">
+                <img src="..." class="w-9 h-9 rounded-full" />
+                <div>
+                    <p class="font-bold">Alex Morgan</p>
+                    <p class="text-xs text-zinc-500">alex@company.com</p>
+                </div>
+            </div>
+        </x-aura::table.cell>
+        <x-aura::table.cell>Lead Developer</x-aura::table.cell>
+        <x-aura::table.cell><x-aura::badge variant="positive">Active</x-aura::badge></x-aura::table.cell>
+        <x-aura::table.cell class="text-right">
+            <div class="flex items-center justify-end gap-1.5">
+                <x-aura::icon-button icon="show" variant="subtle" size="sm" shape="circle" />
+                <x-aura::icon-button icon="edit" variant="subtle" size="sm" shape="circle" />
+                <x-aura::icon-button icon="delete" variant="subtle" size="sm" shape="circle" class="text-red-600" />
+            </div>
+        </x-aura::table.cell>
+    </x-aura::table.row>
+</x-aura::table>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Orders & Transactions Log Table -->
@@ -202,21 +202,21 @@ with([
                 </x-aura::table>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::table&gt;
-    &lt;x-slot:header&gt;
-        &lt;x-aura::table.column&gt;Order ID&lt;/x-aura::table.column&gt;
-        &lt;x-aura::table.column&gt;Customer&lt;/x-aura::table.column&gt;
-        &lt;x-aura::table.column&gt;Amount&lt;/x-aura::table.column&gt;
-        &lt;x-aura::table.column&gt;Status&lt;/x-aura::table.column&gt;
-    &lt;/x-slot:header&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::table>
+    <x-slot:header>
+        <x-aura::table.column>Order ID</x-aura::table.column>
+        <x-aura::table.column>Customer</x-aura::table.column>
+        <x-aura::table.column>Amount</x-aura::table.column>
+        <x-aura::table.column>Status</x-aura::table.column>
+    </x-slot:header>
 
-    &lt;x-aura::table.row&gt;
-        &lt;x-aura::table.cell class="font-mono"&gt;ORD-9482&lt;/x-aura::table.cell&gt;
-        &lt;x-aura::table.cell&gt;TechCorp Inc.&lt;/x-aura::table.cell&gt;
-        &lt;x-aura::table.cell class="font-bold"&gt;$1,450.00&lt;/x-aura::table.cell&gt;
-        &lt;x-aura::table.cell&gt;&lt;x-aura::badge variant="positive"&gt;Paid&lt;/x-aura::badge&gt;&lt;/x-aura::table.cell&gt;
-    &lt;/x-aura::table.row&gt;
-&lt;/x-aura::table&gt;</x-slot:codeSlot>
+    <x-aura::table.row>
+        <x-aura::table.cell class="font-mono">ORD-9482</x-aura::table.cell>
+        <x-aura::table.cell>TechCorp Inc.</x-aura::table.cell>
+        <x-aura::table.cell class="font-bold">$1,450.00</x-aura::table.cell>
+        <x-aura::table.cell><x-aura::badge variant="positive">Paid</x-aura::badge></x-aura::table.cell>
+    </x-aura::table.row>
+</x-aura::table>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Project Tasks & Issue Tracker Table -->
@@ -259,21 +259,21 @@ with([
                 </x-aura::table>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::table&gt;
-    &lt;x-slot:header&gt;
-        &lt;x-aura::table.column&gt;Task&lt;/x-aura::table.column&gt;
-        &lt;x-aura::table.column&gt;Priority&lt;/x-aura::table.column&gt;
-        &lt;x-aura::table.column&gt;Completion&lt;/x-aura::table.column&gt;
-    &lt;/x-slot:header&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::table>
+    <x-slot:header>
+        <x-aura::table.column>Task</x-aura::table.column>
+        <x-aura::table.column>Priority</x-aura::table.column>
+        <x-aura::table.column>Completion</x-aura::table.column>
+    </x-slot:header>
 
-    &lt;x-aura::table.row&gt;
-        &lt;x-aura::table.cell class="font-bold"&gt;Design Tokens Audit&lt;/x-aura::table.cell&gt;
-        &lt;x-aura::table.cell&gt;&lt;x-aura::badge variant="warning"&gt;High&lt;/x-aura::badge&gt;&lt;/x-aura::table.cell&gt;
-        &lt;x-aura::table.cell&gt;
-            &lt;x-aura::progress-bar :value="85" size="xs" /&gt;
-        &lt;/x-aura::table.cell&gt;
-    &lt;/x-aura::table.row&gt;
-&lt;/x-aura::table&gt;</x-slot:codeSlot>
+    <x-aura::table.row>
+        <x-aura::table.cell class="font-bold">Design Tokens Audit</x-aura::table.cell>
+        <x-aura::table.cell><x-aura::badge variant="warning">High</x-aura::badge></x-aura::table.cell>
+        <x-aura::table.cell>
+            <x-aura::progress-bar :value="85" size="xs" />
+        </x-aura::table.cell>
+    </x-aura::table.row>
+</x-aura::table>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 4. Striped API Keys & Security Tokens Table -->
@@ -316,23 +316,23 @@ with([
                 </x-aura::table>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::table :striped="true"&gt;
-    &lt;x-slot:header&gt;
-        &lt;x-aura::table.column&gt;Key Name&lt;/x-aura::table.column&gt;
-        &lt;x-aura::table.column&gt;Token&lt;/x-aura::table.column&gt;
-        &lt;x-aura::table.column&gt;Status&lt;/x-aura::table.column&gt;
-        &lt;x-aura::table.column class="text-right"&gt;Actions&lt;/x-aura::table.column&gt;
-    &lt;/x-slot:header&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::table :striped="true">
+    <x-slot:header>
+        <x-aura::table.column>Key Name</x-aura::table.column>
+        <x-aura::table.column>Token</x-aura::table.column>
+        <x-aura::table.column>Status</x-aura::table.column>
+        <x-aura::table.column class="text-right">Actions</x-aura::table.column>
+    </x-slot:header>
 
-    &lt;x-aura::table.row&gt;
-        &lt;x-aura::table.cell class="font-bold"&gt;Production Secret&lt;/x-aura::table.cell&gt;
-        &lt;x-aura::table.cell&gt;&lt;code class="px-2 py-1 font-mono"&gt;sk_live_9f83...&lt;/code&gt;&lt;/x-aura::table.cell&gt;
-        &lt;x-aura::table.cell&gt;&lt;x-aura::badge variant="positive"&gt;Active&lt;/x-aura::badge&gt;&lt;/x-aura::table.cell&gt;
-        &lt;x-aura::table.cell class="text-right"&gt;
-            &lt;x-aura::icon-button icon="delete" variant="subtle" size="sm" shape="circle" class="text-red-600" /&gt;
-        &lt;/x-aura::table.cell&gt;
-    &lt;/x-aura::table.row&gt;
-&lt;/x-aura::table&gt;</x-slot:codeSlot>
+    <x-aura::table.row>
+        <x-aura::table.cell class="font-bold">Production Secret</x-aura::table.cell>
+        <x-aura::table.cell><code class="px-2 py-1 font-mono">sk_live_9f83...</code></x-aura::table.cell>
+        <x-aura::table.cell><x-aura::badge variant="positive">Active</x-aura::badge></x-aura::table.cell>
+        <x-aura::table.cell class="text-right">
+            <x-aura::icon-button icon="delete" variant="subtle" size="sm" shape="circle" class="text-red-600" />
+        </x-aura::table.cell>
+    </x-aura::table.row>
+</x-aura::table>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 5. Table with Footer Totals Summary -->
@@ -370,25 +370,25 @@ with([
                 </x-aura::table>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::table&gt;
-    &lt;x-slot:header&gt;
-        &lt;x-aura::table.column&gt;Item Description&lt;/x-aura::table.column&gt;
-        &lt;x-aura::table.column class="text-center"&gt;Qty&lt;/x-aura::table.column&gt;
-        &lt;x-aura::table.column class="text-right"&gt;Subtotal&lt;/x-aura::table.column&gt;
-    &lt;/x-slot:header&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::table>
+    <x-slot:header>
+        <x-aura::table.column>Item Description</x-aura::table.column>
+        <x-aura::table.column class="text-center">Qty</x-aura::table.column>
+        <x-aura::table.column class="text-right">Subtotal</x-aura::table.column>
+    </x-slot:header>
 
-    &lt;x-aura::table.row&gt;
-        &lt;x-aura::table.cell&gt;Aura UI Pro License&lt;/x-aura::table.cell&gt;
-        &lt;x-aura::table.cell class="text-center"&gt;1&lt;/x-aura::table.cell&gt;
-        &lt;x-aura::table.cell class="text-right font-bold"&gt;$299.00&lt;/x-aura::table.cell&gt;
-    &lt;/x-aura::table.row&gt;
+    <x-aura::table.row>
+        <x-aura::table.cell>Aura UI Pro License</x-aura::table.cell>
+        <x-aura::table.cell class="text-center">1</x-aura::table.cell>
+        <x-aura::table.cell class="text-right font-bold">$299.00</x-aura::table.cell>
+    </x-aura::table.row>
 
-    &lt;x-slot:footer&gt;
-        &lt;tr&gt;
-            &lt;td colspan="2" class="px-4 py-3 text-right font-bold"&gt;Total Due:&lt;/td&gt;
-            &lt;td class="px-4 py-3 text-right font-black"&gt;$397.00&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/x-slot:footer&gt;
-&lt;/x-aura::table&gt;</x-slot:codeSlot>
+    <x-slot:footer>
+        <tr>
+            <td colspan="2" class="px-4 py-3 text-right font-bold">Total Due:</td>
+            <td class="px-4 py-3 text-right font-black">$397.00</td>
+        </tr>
+    </x-slot:footer>
+</x-aura::table>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

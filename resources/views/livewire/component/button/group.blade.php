@@ -28,10 +28,10 @@ class extends Component {};
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::action.group&gt;
-    &lt;x-aura::button variant="subtle"&gt;Day&lt;/x-aura::button&gt;
-    &lt;x-aura::button variant="subtle"&gt;Week&lt;/x-aura::button&gt;
-&lt;/x-aura::action.group&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::action.group>
+    <x-aura::button variant="subtle">Day</x-aura::button>
+    <x-aura::button variant="subtle">Week</x-aura::button>
+</x-aura::action.group>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Horizontal Segmented Control -->
@@ -54,20 +54,20 @@ class extends Component {};
                 </x-aura::action.group>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;!-- Default Button Group --&gt;
-&lt;x-aura::action.group&gt;
-    &lt;x-aura::button variant="primary" size="sm"&gt;Day&lt;/x-aura::button&gt;
-    &lt;x-aura::button variant="secondary" size="sm"&gt;Week&lt;/x-aura::button&gt;
-    &lt;x-aura::button variant="secondary" size="sm"&gt;Month&lt;/x-aura::button&gt;
-    &lt;x-aura::button variant="secondary" size="sm"&gt;Year&lt;/x-aura::button&gt;
-&lt;/x-aura::action.group&gt;
+        <x-slot:codeSlot>@verbatim<!-- Default Button Group -->
+<x-aura::action.group>
+    <x-aura::button variant="primary" size="sm">Day</x-aura::button>
+    <x-aura::button variant="secondary" size="sm">Week</x-aura::button>
+    <x-aura::button variant="secondary" size="sm">Month</x-aura::button>
+    <x-aura::button variant="secondary" size="sm">Year</x-aura::button>
+</x-aura::action.group>
 
-&lt;!-- Compact Button Group --&gt;
-&lt;x-aura::action.group shape="compact"&gt;
-    &lt;x-aura::button variant="outline" size="sm"&gt;List View&lt;/x-aura::button&gt;
-    &lt;x-aura::button variant="outline" size="sm"&gt;Grid View&lt;/x-aura::button&gt;
-    &lt;x-aura::button variant="outline" size="sm"&gt;Map View&lt;/x-aura::button&gt;
-&lt;/x-aura::action.group&gt;</x-slot:codeSlot>
+<!-- Compact Button Group -->
+<x-aura::action.group shape="compact">
+    <x-aura::button variant="outline" size="sm">List View</x-aura::button>
+    <x-aura::button variant="outline" size="sm">Grid View</x-aura::button>
+    <x-aura::button variant="outline" size="sm">Map View</x-aura::button>
+</x-aura::action.group>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Rich Icon Toolbar Group -->
@@ -82,12 +82,12 @@ class extends Component {};
                 </x-aura::action.group>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::action.group shape="compact"&gt;
-    &lt;x-aura::icon-button icon="pencil" variant="secondary" shape="square" size="sm" /&gt;
-    &lt;x-aura::icon-button icon="eye" variant="secondary" shape="square" size="sm" /&gt;
-    &lt;x-aura::icon-button icon="share-2" variant="secondary" shape="square" size="sm" /&gt;
-    &lt;x-aura::icon-button icon="trash-2" variant="danger" shape="square" size="sm" /&gt;
-&lt;/x-aura::action.group&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::action.group shape="compact">
+    <x-aura::icon-button icon="pencil" variant="secondary" shape="square" size="sm" />
+    <x-aura::icon-button icon="eye" variant="secondary" shape="square" size="sm" />
+    <x-aura::icon-button icon="share-2" variant="secondary" shape="square" size="sm" />
+    <x-aura::icon-button icon="trash-2" variant="danger" shape="square" size="sm" />
+</x-aura::action.group>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Vertical Button Group -->
@@ -101,10 +101,10 @@ class extends Component {};
                 </x-aura::action.group>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::action.group vertical shape="compact"&gt;
-    &lt;x-aura::button variant="outline" size="sm"&gt;Top Priority&lt;/x-aura::button&gt;
-    &lt;x-aura::button variant="outline" size="sm"&gt;Medium Priority&lt;/x-aura::button&gt;
-    &lt;x-aura::button variant="outline" size="sm"&gt;Low Priority&lt;/x-aura::button&gt;
-&lt;/x-aura::action.group&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::action.group vertical shape="compact">
+    <x-aura::button variant="outline" size="sm">Top Priority</x-aura::button>
+    <x-aura::button variant="outline" size="sm">Medium Priority</x-aura::button>
+    <x-aura::button variant="outline" size="sm">Low Priority</x-aura::button>
+</x-aura::action.group>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

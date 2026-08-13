@@ -46,7 +46,7 @@ class extends Component {
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::breadcrumb :items="['Home' =&gt; '/', 'Docs' =&gt; '/docs', 'Breadcrumb' =&gt; '#']" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::breadcrumb :items="['Home' => '/', 'Docs' => '/docs', 'Breadcrumb' => '#']" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Separators Variety -->
@@ -74,21 +74,21 @@ class extends Component {
                 </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;!-- Chevron Separator (Default) --&gt;
-&lt;x-aura::breadcrumb :items="[
-    ['label' =&gt; 'Home', 'href' =&gt; '#'],
-    ['label' =&gt; 'Components', 'href' =&gt; '#'],
-    ['label' =&gt; 'Breadcrumbs'],
-]" separator="chevron" /&gt;
+        <x-slot:codeSlot>@verbatim<!-- Chevron Separator (Default) -->
+<x-aura::breadcrumb :items="[
+    ['label' => 'Home', 'href' => '#'],
+    ['label' => 'Components', 'href' => '#'],
+    ['label' => 'Breadcrumbs'],
+]" separator="chevron" />
 
-&lt;!-- Slash Separator --&gt;
-&lt;x-aura::breadcrumb :items="..." separator="slash" /&gt;
+<!-- Slash Separator -->
+<x-aura::breadcrumb :items="..." separator="slash" />
 
-&lt;!-- Dot Separator --&gt;
-&lt;x-aura::breadcrumb :items="..." separator="dot" /&gt;
+<!-- Dot Separator -->
+<x-aura::breadcrumb :items="..." separator="dot" />
 
-&lt;!-- Arrow Separator --&gt;
-&lt;x-aura::breadcrumb :items="..." separator="arrow" /&gt;</x-slot:codeSlot>
+<!-- Arrow Separator -->
+<x-aura::breadcrumb :items="..." separator="arrow" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Rectangular Panel Box vs Pill-Shaped Badges -->
@@ -106,11 +106,11 @@ class extends Component {
                 </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;!-- Rectangular Panel Box --&gt;
-&lt;x-aura::breadcrumb :items="$items" variant="rectangle" :homeIcon="true" /&gt;
+        <x-slot:codeSlot>@verbatim<!-- Rectangular Panel Box -->
+<x-aura::breadcrumb :items="$items" variant="rectangle" :homeIcon="true" />
 
-&lt;!-- Circular Pill Badges --&gt;
-&lt;x-aura::breadcrumb :items="$items" variant="pills" :homeIcon="true" /&gt;</x-slot:codeSlot>
+<!-- Circular Pill Badges -->
+<x-aura::breadcrumb :items="$items" variant="pills" :homeIcon="true" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Deep Nested Trail with Home Icon -->
@@ -120,12 +120,12 @@ class extends Component {
                 <x-aura::breadcrumb :items="$deepItems" :homeIcon="true" separator="chevron" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::breadcrumb :items="[
-    ['label' =&gt; 'Dashboard', 'href' =&gt; '#'],
-    ['label' =&gt; 'E-Commerce Store', 'href' =&gt; '#'],
-    ['label' =&gt; 'Product Catalog', 'href' =&gt; '#'],
-    ['label' =&gt; 'Audio & Headphones', 'href' =&gt; '#'],
-    ['label' =&gt; 'Aura Pro Wireless'],
-]" :homeIcon="true" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::breadcrumb :items="[
+    ['label' => 'Dashboard', 'href' => '#'],
+    ['label' => 'E-Commerce Store', 'href' => '#'],
+    ['label' => 'Product Catalog', 'href' => '#'],
+    ['label' => 'Audio & Headphones', 'href' => '#'],
+    ['label' => 'Aura Pro Wireless'],
+]" :homeIcon="true" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

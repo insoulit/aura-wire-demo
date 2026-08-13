@@ -24,7 +24,7 @@ title('Combobox - Aura Wire');
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::combobox wire:model="framework" label="Framework" :options="$options" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::combobox wire:model="framework" label="Framework" :options="$options" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Inline Country Options -->
@@ -46,7 +46,7 @@ title('Combobox - Aura Wire');
                 />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::combobox
+        <x-slot:codeSlot>@verbatim<x-aura::combobox
     label="Select Country"
     :options="[
         ['value' => 'us', 'label' => 'United States'],
@@ -58,7 +58,7 @@ title('Combobox - Aura Wire');
     ]"
     name="country"
     placeholder="Search country..."
-/&gt;</x-slot:codeSlot>
+/>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Associative Key-Value Inline Options -->
@@ -79,7 +79,7 @@ title('Combobox - Aura Wire');
                 />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::combobox
+        <x-slot:codeSlot>@verbatim<x-aura::combobox
     label="Account Timezone"
     :options="[
         'UTC' => '(UTC+00:00) UTC Universal Time',
@@ -89,7 +89,7 @@ title('Combobox - Aura Wire');
     ]"
     value="EST"
     name="timezone"
-/&gt;</x-slot:codeSlot>
+/>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Team Member Selector -->
@@ -109,7 +109,7 @@ title('Combobox - Aura Wire');
                 />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::combobox
+        <x-slot:codeSlot>@verbatim<x-aura::combobox
     label="Assign Task To"
     :options="[
         ['value' => 'alex', 'label' => 'Alex Rivera (Lead Engineer)'],
@@ -118,6 +118,6 @@ title('Combobox - Aura Wire');
     ]"
     value="alex"
     name="assignee"
-/&gt;</x-slot:codeSlot>
+/>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

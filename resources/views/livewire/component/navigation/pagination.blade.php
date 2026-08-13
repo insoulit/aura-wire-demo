@@ -28,7 +28,7 @@ class extends Component {};
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::pagination :currentPage="2" :totalPages="8" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::pagination :currentPage="2" :totalPages="8" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Numbered Window Pagination (Text vs Icon-Only) -->
@@ -46,11 +46,11 @@ class extends Component {};
                 </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;!-- Clean Text Previous / Next Buttons --&gt;
-&lt;x-aura::pagination :page="4" :totalPages="12" :total="120" :perPage="10" variant="numbers" /&gt;
+        <x-slot:codeSlot>@verbatim<!-- Clean Text Previous / Next Buttons -->
+<x-aura::pagination :page="4" :totalPages="12" :total="120" :perPage="10" variant="numbers" />
 
-&lt;!-- Icon-Only Previous / Next Triggers --&gt;
-&lt;x-aura::pagination :page="4" :totalPages="12" :total="120" :perPage="10" variant="numbers" :iconsOnly="true" /&gt;</x-slot:codeSlot>
+<!-- Icon-Only Previous / Next Triggers -->
+<x-aura::pagination :page="4" :totalPages="12" :total="120" :perPage="10" variant="numbers" :iconsOnly="true" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Contained Card Footer Bar -->
@@ -60,7 +60,7 @@ class extends Component {};
                 <x-aura::pagination :page="2" :totalPages="8" :total="80" :perPage="10" variant="card" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::pagination :page="2" :totalPages="8" :total="80" :perPage="10" variant="card" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::pagination :page="2" :totalPages="8" :total="80" :perPage="10" variant="card" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Circular Pill Buttons Group in 3 Alignment Positions (Start, Center, End) -->
@@ -83,14 +83,14 @@ class extends Component {};
                 </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;!-- Start Aligned (Left) --&gt;
-&lt;x-aura::pagination :page="3" :totalPages="5" variant="pills" align="start" /&gt;
+        <x-slot:codeSlot>@verbatim<!-- Start Aligned (Left) -->
+<x-aura::pagination :page="3" :totalPages="5" variant="pills" align="start" />
 
-&lt;!-- Center Aligned --&gt;
-&lt;x-aura::pagination :page="3" :totalPages="5" variant="pills" align="center" /&gt;
+<!-- Center Aligned -->
+<x-aura::pagination :page="3" :totalPages="5" variant="pills" align="center" />
 
-&lt;!-- End Aligned (Right) --&gt;
-&lt;x-aura::pagination :page="3" :totalPages="5" variant="pills" align="end" /&gt;</x-slot:codeSlot>
+<!-- End Aligned (Right) -->
+<x-aura::pagination :page="3" :totalPages="5" variant="pills" align="end" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 4. Simple Previous / Next with Page Label -->
@@ -100,7 +100,7 @@ class extends Component {};
                 <x-aura::pagination :page="3" :totalPages="10" variant="simple" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::pagination :page="3" :totalPages="10" variant="simple" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::pagination :page="3" :totalPages="10" variant="simple" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 5. Compact Icon Controls -->
@@ -110,6 +110,6 @@ class extends Component {};
                 <x-aura::pagination :page="5" :totalPages="15" variant="compact" shape="circle" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::pagination :page="5" :totalPages="15" variant="compact" shape="circle" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::pagination :page="5" :totalPages="15" variant="compact" shape="circle" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

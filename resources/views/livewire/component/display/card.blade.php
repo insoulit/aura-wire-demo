@@ -28,10 +28,10 @@ class extends Component {};
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::card class="p-6 space-y-4"&gt;
-    &lt;x-aura::heading level="3" size="md"&gt;Card Title&lt;/x-aura::heading&gt;
-    &lt;x-aura::text size="sm"&gt;Card body content goes here.&lt;/x-aura::text&gt;
-&lt;/x-aura::card&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::card class="p-6 space-y-4">
+    <x-aura::heading level="3" size="md">Card Title</x-aura::heading>
+    <x-aura::text size="sm">Card body content goes here.</x-aura::text>
+</x-aura::card>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Standard Header & Footer Card -->

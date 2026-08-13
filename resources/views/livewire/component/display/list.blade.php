@@ -44,7 +44,7 @@ class extends Component {
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::list :items="$items" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::list :items="$items" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Un-numbered Media List -->
@@ -54,11 +54,11 @@ class extends Component {
                 <x-aura::list :items="$features" variant="media" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::list :items="[
-    ['title' =&gt; 'Tailwind CSS v4 Integration', 'subtitle' =&gt; 'Zero-config styling with dark mode.', 'image' =&gt; 'https://...', 'badge' =&gt; 'Core'],
-    ['title' =&gt; 'Livewire Volt Single-File Views', 'subtitle' =&gt; 'Unified component logic in one file.', 'image' =&gt; 'https://...', 'badge' =&gt; 'Blade'],
-    ['title' =&gt; 'Polymorphic Component Engine', 'subtitle' =&gt; 'Flexible prop schemas and slots.', 'image' =&gt; 'https://...', 'badge' =&gt; 'UI'],
-]" variant="media" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::list :items="[
+    ['title' => 'Tailwind CSS v4 Integration', 'subtitle' => 'Zero-config styling with dark mode.', 'image' => 'https://...', 'badge' => 'Core'],
+    ['title' => 'Livewire Volt Single-File Views', 'subtitle' => 'Unified component logic in one file.', 'image' => 'https://...', 'badge' => 'Blade'],
+    ['title' => 'Polymorphic Component Engine', 'subtitle' => 'Flexible prop schemas and slots.', 'image' => 'https://...', 'badge' => 'UI'],
+]" variant="media" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Un-numbered Compact List Group -->
@@ -68,11 +68,11 @@ class extends Component {
                 <x-aura::list :items="$compactList" variant="compact" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::list :items="[
-    ['title' =&gt; 'System Backup Completed', 'subtitle' =&gt; 'Automated snapshot created', 'badge' =&gt; 'Success'],
-    ['title' =&gt; 'SSL Certificate Renewed', 'subtitle' =&gt; 'Valid until August 2027', 'badge' =&gt; 'Active'],
-    ['title' =&gt; 'Database Vacuum Run', 'subtitle' =&gt; 'Cleared 420MB unused space', 'badge' =&gt; 'Optimized'],
-]" variant="compact" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::list :items="[
+    ['title' => 'System Backup Completed', 'subtitle' => 'Automated snapshot created', 'badge' => 'Success'],
+    ['title' => 'SSL Certificate Renewed', 'subtitle' => 'Valid until August 2027', 'badge' => 'Active'],
+    ['title' => 'Database Vacuum Run', 'subtitle' => 'Cleared 420MB unused space', 'badge' => 'Optimized'],
+]" variant="compact" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Un-numbered Card List -->
@@ -82,9 +82,9 @@ class extends Component {
                 <x-aura::list :items="$features" variant="card" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::list :items="[
-    ['title' =&gt; 'Tailwind CSS v4 Integration', 'subtitle' =&gt; 'Zero-config styling.'],
-    ['title' =&gt; 'Livewire Volt Single-File Views', 'subtitle' =&gt; 'Unified component logic.'],
-]" variant="card" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::list :items="[
+    ['title' => 'Tailwind CSS v4 Integration', 'subtitle' => 'Zero-config styling.'],
+    ['title' => 'Livewire Volt Single-File Views', 'subtitle' => 'Unified component logic.'],
+]" variant="card" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

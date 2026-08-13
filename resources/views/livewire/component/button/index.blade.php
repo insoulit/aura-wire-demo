@@ -28,7 +28,7 @@ class extends Component {};
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::button variant="primary" size="md" icon="sparkles"&gt;Action&lt;/x-aura::button&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::button variant="primary" size="md" icon="sparkles">Action</x-aura::button>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Variants -->
@@ -45,14 +45,14 @@ class extends Component {};
                 <x-aura::button variant="link" href="#">Link</x-aura::button>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::button variant="primary"&gt;Primary&lt;/x-aura::button&gt;
-&lt;x-aura::button variant="secondary"&gt;Secondary&lt;/x-aura::button&gt;
-&lt;x-aura::button variant="filled"&gt;Filled&lt;/x-aura::button&gt;
-&lt;x-aura::button variant="subtle"&gt;Subtle&lt;/x-aura::button&gt;
-&lt;x-aura::button variant="outline"&gt;Outline&lt;/x-aura::button&gt;
-&lt;x-aura::button variant="ghost"&gt;Ghost&lt;/x-aura::button&gt;
-&lt;x-aura::button variant="danger"&gt;Danger&lt;/x-aura::button&gt;
-&lt;x-aura::button variant="link" href="#"&gt;Link&lt;/x-aura::button&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::button variant="primary">Primary</x-aura::button>
+<x-aura::button variant="secondary">Secondary</x-aura::button>
+<x-aura::button variant="filled">Filled</x-aura::button>
+<x-aura::button variant="subtle">Subtle</x-aura::button>
+<x-aura::button variant="outline">Outline</x-aura::button>
+<x-aura::button variant="ghost">Ghost</x-aura::button>
+<x-aura::button variant="danger">Danger</x-aura::button>
+<x-aura::button variant="link" href="#">Link</x-aura::button>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Sizes -->
@@ -65,10 +65,10 @@ class extends Component {};
                 <x-aura::button variant="primary" size="lg">Large (lg)</x-aura::button>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::button size="xs"&gt;Extra Small&lt;/x-aura::button&gt;
-&lt;x-aura::button size="sm"&gt;Small&lt;/x-aura::button&gt;
-&lt;x-aura::button size="md"&gt;Medium&lt;/x-aura::button&gt;
-&lt;x-aura::button size="lg"&gt;Large&lt;/x-aura::button&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::button size="xs">Extra Small</x-aura::button>
+<x-aura::button size="sm">Small</x-aura::button>
+<x-aura::button size="md">Medium</x-aura::button>
+<x-aura::button size="lg">Large</x-aura::button>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Leading & Trailing Icons -->
@@ -92,17 +92,17 @@ class extends Component {};
                 </x-aura::button>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::button variant="primary" icon="plus"&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::button variant="primary" icon="plus">
     Create
-&lt;/x-aura::button&gt;
+</x-aura::button>
 
-&lt;x-aura::button variant="secondary" icon-trailing="download"&gt;
+<x-aura::button variant="secondary" icon-trailing="download">
     Download Report
-&lt;/x-aura::button&gt;
+</x-aura::button>
 
-&lt;x-aura::button variant="danger" icon="trash-2"&gt;
+<x-aura::button variant="danger" icon="trash-2">
     Delete File
-&lt;/x-aura::button&gt;</x-slot:codeSlot>
+</x-aura::button>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 4. Pill & Circular Buttons -->
@@ -118,11 +118,11 @@ class extends Component {};
                 <x-aura::icon-button variant="subtle" shape="circle" icon="user" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::button variant="primary" pill&gt;Pill Primary&lt;/x-aura::button&gt;
-&lt;x-aura::button variant="secondary" pill icon="sparkles"&gt;Pill with Icon&lt;/x-aura::button&gt;
-&lt;x-aura::button variant="outline" pill icon-trailing="arrow-right"&gt;Explore&lt;/x-aura::button&gt;
-&lt;x-aura::button variant="primary" square pill icon="plus" /&gt;
-&lt;x-aura::icon-button variant="primary" shape="circle" icon="bell" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::button variant="primary" pill>Pill Primary</x-aura::button>
+<x-aura::button variant="secondary" pill icon="sparkles">Pill with Icon</x-aura::button>
+<x-aura::button variant="outline" pill icon-trailing="arrow-right">Explore</x-aura::button>
+<x-aura::button variant="primary" square pill icon="plus" />
+<x-aura::icon-button variant="primary" shape="circle" icon="bell" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 5. Square Icon Buttons -->
@@ -135,9 +135,9 @@ class extends Component {};
                 <x-aura::button variant="danger" square size="lg" icon="trash-2" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::button variant="primary" square size="xs" icon="pencil" /&gt;
-&lt;x-aura::button variant="secondary" square size="sm" icon="eye" /&gt;
-&lt;x-aura::button variant="danger" square size="lg" icon="trash-2" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::button variant="primary" square size="xs" icon="pencil" />
+<x-aura::button variant="secondary" square size="sm" icon="eye" />
+<x-aura::button variant="danger" square size="lg" icon="trash-2" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 6. Disabled & Loading States -->
@@ -150,9 +150,9 @@ class extends Component {};
                 <x-aura::button variant="outline" :loading="true">Syncing Data</x-aura::button>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::button variant="primary" disabled&gt;Disabled Button&lt;/x-aura::button&gt;
-&lt;x-aura::button variant="primary" :loading="true"&gt;Processing...&lt;/x-aura::button&gt;
-&lt;x-aura::button variant="outline" :loading="true"&gt;Syncing Data&lt;/x-aura::button&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::button variant="primary" disabled>Disabled Button</x-aura::button>
+<x-aura::button variant="primary" :loading="true">Processing...</x-aura::button>
+<x-aura::button variant="outline" :loading="true">Syncing Data</x-aura::button>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 7. Real-World Action Card Patterns -->
@@ -186,9 +186,9 @@ class extends Component {};
                 </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;div class="flex items-center gap-2"&gt;
-    &lt;x-aura::button variant="ghost" size="sm"&gt;Discard&lt;/x-aura::button&gt;
-    &lt;x-aura::button variant="primary" size="sm"&gt;Save Changes&lt;/x-aura::button&gt;
-&lt;/div&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<div class="flex items-center gap-2">
+    <x-aura::button variant="ghost" size="sm">Discard</x-aura::button>
+    <x-aura::button variant="primary" size="sm">Save Changes</x-aura::button>
+</div>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

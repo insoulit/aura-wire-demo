@@ -26,7 +26,7 @@ state(['selected' => 'us']);
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::select wire:model="selected" label="Country" :options="['us' =&gt; 'United States', 'ca' =&gt; 'Canada']" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::select wire:model="selected" label="Country" :options="['us' => 'United States', 'ca' => 'Canada']" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
     <x-aura::code class="w-full" title="Select Input">
         <x-slot:preview>
@@ -38,9 +38,9 @@ state(['selected' => 'us']);
                 </x-aura::select>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::select wire:model="selected" label="Country"&gt;
-    &lt;option value="us"&gt;United States&lt;/option&gt;
-    &lt;option value="ca"&gt;Canada&lt;/option&gt;
-&lt;/x-aura::select&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::select wire:model="selected" label="Country">
+    <option value="us">United States</option>
+    <option value="ca">Canada</option>
+</x-aura::select>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

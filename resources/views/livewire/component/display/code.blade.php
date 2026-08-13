@@ -24,7 +24,7 @@ title('Code - Aura Wire');
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::code title="Example Code" language="blade"&gt;...&lt;/x-aura::code&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::code title="Example Code" language="blade">...</x-aura::code>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <x-aura::code class="w-full" title="Code Block Component">
@@ -34,15 +34,15 @@ title('Code - Aura Wire');
                     <x-slot:preview>
                         <x-aura::button variant="primary">Click Me</x-aura::button>
                     </x-slot:preview>
-                    <x-slot:codeSlot>&lt;x-aura::button variant="primary"&gt;Click Me&lt;/x-aura::button&gt;</x-slot:codeSlot>
+                    <x-slot:codeSlot>@verbatim<x-aura::button variant="primary">Click Me</x-aura::button>@endverbatim</x-slot:codeSlot>
                 </x-aura::code>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::code title="Example Code Block" language="blade"&gt;
-    &lt;x-slot:preview&gt;
-        &lt;x-aura::button variant="primary"&gt;Click Me&lt;/x-aura::button&gt;
-    &lt;/x-slot:preview&gt;
-    &lt;x-slot:codeSlot&gt;&amp;lt;x-aura::button variant="primary"&amp;gt;Click Me&amp;lt;/x-aura::button&amp;gt;&lt;/x-slot:codeSlot&gt;
-&lt;/x-aura::code&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::code title="Example Code Block" language="blade">
+    <x-slot:preview>
+        <x-aura::button variant="primary">Click Me</x-aura::button>
+    </x-slot:preview>
+    <x-slot:codeSlot>&lt;x-aura::button variant="primary"&gt;Click Me&lt;/x-aura::button&gt;</x-slot:codeSlot>
+</x-aura::code>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

@@ -26,7 +26,7 @@ state(['enabled' => false]);
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::switch wire:model="enabled" label="Enable Notifications" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::switch wire:model="enabled" label="Enable Notifications" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
     <x-aura::code class="w-full" title="Toggle Switch">
         <x-slot:preview>
@@ -34,6 +34,6 @@ state(['enabled' => false]);
                 <x-aura::switch wire:model="enabled" label="Enable Notifications" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::switch wire:model="enabled" label="Enable Notifications" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::switch wire:model="enabled" label="Enable Notifications" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

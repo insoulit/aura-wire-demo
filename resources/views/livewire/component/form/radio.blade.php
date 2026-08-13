@@ -26,7 +26,7 @@ state(['plan' => 'pro']);
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::radio wire:model="plan" value="pro" label="Pro Tier" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::radio wire:model="plan" value="pro" label="Pro Tier" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
     <x-aura::code class="w-full" title="Radio Options">
         <x-slot:preview>
@@ -36,7 +36,7 @@ state(['plan' => 'pro']);
                 <x-aura::radio wire:model="plan" value="enterprise" label="Enterprise" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::radio wire:model="plan" value="free" label="Free Tier" /&gt;
-&lt;x-aura::radio wire:model="plan" value="pro" label="Pro Tier" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::radio wire:model="plan" value="free" label="Free Tier" />
+<x-aura::radio wire:model="plan" value="pro" label="Pro Tier" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

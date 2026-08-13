@@ -24,7 +24,7 @@ title('PIN Code - Aura Wire');
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::pin-code length="4" wire:model="otp" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::pin-code length="4" wire:model="otp" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     {{-- Default PIN Code (4 digits) --}}
@@ -35,8 +35,8 @@ title('PIN Code - Aura Wire');
                 <x-aura::pin-code length="4" size="md" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::label&gt;Enter Security Code&lt;/x-aura::label&gt;
-&lt;x-aura::pin-code length="4" size="md" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::label>Enter Security Code</x-aura::label>
+<x-aura::pin-code length="4" size="md" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     {{-- 6-Digit PIN Code & Sizes --}}
@@ -54,11 +54,11 @@ title('PIN Code - Aura Wire');
                 </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;!-- Small 6-digit --&gt;
-&lt;x-aura::pin-code length="6" size="sm" /&gt;
+        <x-slot:codeSlot>@verbatim<!-- Small 6-digit -->
+<x-aura::pin-code length="6" size="sm" />
 
-&lt;!-- Large 6-digit --&gt;
-&lt;x-aura::pin-code length="6" size="lg" /&gt;</x-slot:codeSlot>
+<!-- Large 6-digit -->
+<x-aura::pin-code length="6" size="lg" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     {{-- Invalid State --}}
@@ -69,7 +69,7 @@ title('PIN Code - Aura Wire');
                 <x-aura::error>The security code you entered is invalid.</x-aura::error>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::pin-code length="4" :invalid="true" /&gt;
-&lt;x-aura::error&gt;The security code you entered is invalid.&lt;/x-aura::error&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::pin-code length="4" :invalid="true" />
+<x-aura::error>The security code you entered is invalid.</x-aura::error>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

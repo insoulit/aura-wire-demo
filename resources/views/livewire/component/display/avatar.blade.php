@@ -24,7 +24,7 @@ title('Avatar - Aura Wire');
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::avatar initials="JD" size="md" status="online" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::avatar initials="JD" size="md" status="online" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
     <x-aura::code class="w-full" title="User Avatars">
         <x-slot:preview>
@@ -36,8 +36,8 @@ title('Avatar - Aura Wire');
                 <x-aura::avatar initials="SQ" size="xl" square status="offline" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::avatar initials="AW" size="xs" status="online" /&gt;
-&lt;x-aura::avatar initials="US" size="md" status="busy" /&gt;
-&lt;x-aura::avatar initials="SQ" size="xl" square status="offline" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::avatar initials="AW" size="xs" status="online" />
+<x-aura::avatar initials="US" size="md" status="busy" />
+<x-aura::avatar initials="SQ" size="xl" square status="offline" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

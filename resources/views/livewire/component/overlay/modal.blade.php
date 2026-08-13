@@ -28,9 +28,9 @@ class extends Component {};
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::modal name="create-user" title="Create User"&gt;
-    &lt;p&gt;Modal body content...&lt;/p&gt;
-&lt;/x-aura::modal&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::modal name="create-user" title="Create User">
+    <p>Modal body content...</p>
+</x-aura::modal>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Standard Confirmation Modal -->
@@ -55,16 +55,16 @@ class extends Component {};
                 </x-aura::modal>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::button x-on:click="$dispatch('open-modal', 'demo-modal')"&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::button x-on:click="$dispatch('open-modal', 'demo-modal')">
     Launch Modal
-&lt;/x-aura::button&gt;
+</x-aura::button>
 
-&lt;x-aura::modal name="demo-modal" title="Confirm Deployment" description="..."&gt;
-    &lt;x-aura::text size="sm"&gt;Deploy version v2.4.0?&lt;/x-aura::text&gt;
-    &lt;x-slot:footer&gt;
-        &lt;x-aura::button variant="primary" size="sm"&gt;Start Deployment&lt;/x-aura::button&gt;
-    &lt;/x-slot:footer&gt;
-&lt;/x-aura::modal&gt;</x-slot:codeSlot>
+<x-aura::modal name="demo-modal" title="Confirm Deployment" description="...">
+    <x-aura::text size="sm">Deploy version v2.4.0?</x-aura::text>
+    <x-slot:footer>
+        <x-aura::button variant="primary" size="sm">Start Deployment</x-aura::button>
+    </x-slot:footer>
+</x-aura::modal>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Centered Success Alert Modal -->
@@ -82,11 +82,11 @@ class extends Component {};
                 </x-aura::modal>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::modal name="success-modal" variant="centered" title="Payment Completed!" description="..."&gt;
-    &lt;x-slot:footer&gt;
-        &lt;x-aura::button variant="primary" size="sm"&gt;Continue&lt;/x-aura::button&gt;
-    &lt;/x-slot:footer&gt;
-&lt;/x-aura::modal&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::modal name="success-modal" variant="centered" title="Payment Completed!" description="...">
+    <x-slot:footer>
+        <x-aura::button variant="primary" size="sm">Continue</x-aura::button>
+    </x-slot:footer>
+</x-aura::modal>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Destructive Danger Confirm Modal -->
@@ -109,14 +109,14 @@ class extends Component {};
                 </x-aura::modal>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::modal name="delete-modal" variant="danger" title="Delete Repository"&gt;
-    &lt;div class="p-3 rounded-xl bg-red-50 text-red-700"&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::modal name="delete-modal" variant="danger" title="Delete Repository">
+    <div class="p-3 rounded-xl bg-red-50 text-red-700">
         Warning: All data will be lost.
-    &lt;/div&gt;
-    &lt;x-slot:footer&gt;
-        &lt;x-aura::button variant="danger" size="sm"&gt;Delete Permanently&lt;/x-aura::button&gt;
-    &lt;/x-slot:footer&gt;
-&lt;/x-aura::modal&gt;</x-slot:codeSlot>
+    </div>
+    <x-slot:footer>
+        <x-aura::button variant="danger" size="sm">Delete Permanently</x-aura::button>
+    </x-slot:footer>
+</x-aura::modal>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 4. Wide Form Modal (maxWidth='2xl') -->
@@ -142,14 +142,14 @@ class extends Component {};
                 </x-aura::modal>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::modal name="wide-modal" maxWidth="2xl" title="Create Team Member"&gt;
-    &lt;div class="grid grid-cols-2 gap-4"&gt;
-        &lt;x-aura::input label="Full Name" /&gt;
-        &lt;x-aura::input label="Email Address" /&gt;
-    &lt;/div&gt;
-    &lt;x-slot:footer&gt;
-        &lt;x-aura::button variant="primary" size="sm"&gt;Create&lt;/x-aura::button&gt;
-    &lt;/x-slot:footer&gt;
-&lt;/x-aura::modal&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::modal name="wide-modal" maxWidth="2xl" title="Create Team Member">
+    <div class="grid grid-cols-2 gap-4">
+        <x-aura::input label="Full Name" />
+        <x-aura::input label="Email Address" />
+    </div>
+    <x-slot:footer>
+        <x-aura::button variant="primary" size="sm">Create</x-aura::button>
+    </x-slot:footer>
+</x-aura::modal>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

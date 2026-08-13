@@ -26,7 +26,7 @@ state(['bio' => '']);
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::textarea wire:model="bio" rows="4" label="Biography" placeholder="Tell us about yourself..." /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::textarea wire:model="bio" rows="4" label="Biography" placeholder="Tell us about yourself..." />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
     <x-aura::code class="w-full" title="Textarea Control">
         <x-slot:preview>
@@ -34,6 +34,6 @@ state(['bio' => '']);
                 <x-aura::textarea wire:model="bio" rows="4" label="Biography" placeholder="Tell us about yourself..." />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::textarea wire:model="bio" rows="4" label="Biography" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::textarea wire:model="bio" rows="4" label="Biography" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

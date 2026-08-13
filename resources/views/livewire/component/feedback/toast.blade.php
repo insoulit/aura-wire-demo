@@ -28,7 +28,7 @@ class extends Component {};
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::toast variant="success" title="Changes Saved" message="Profile updated." /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::toast variant="success" title="Changes Saved" message="Profile updated." />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Status Varieties (Success, Warning, Danger, Info) -->
@@ -41,10 +41,10 @@ class extends Component {};
                 <x-aura::toast variant="danger" title="Database Connection Failed" description="Could not establish connection to primary database cluster." />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::toast variant="success" title="Project Published" description="Your project has been deployed to production environment (us-east-1)." /&gt;
-&lt;x-aura::toast variant="info" title="System Update Available" description="Aura Wire v2.4.0 is ready for installation." /&gt;
-&lt;x-aura::toast variant="warning" title="API Rate Limit Warning" description="You have consumed 85% of your hourly API request quota." /&gt;
-&lt;x-aura::toast variant="danger" title="Database Connection Failed" description="Could not establish connection to primary database cluster." /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::toast variant="success" title="Project Published" description="Your project has been deployed to production environment (us-east-1)." />
+<x-aura::toast variant="info" title="System Update Available" description="Aura Wire v2.4.0 is ready for installation." />
+<x-aura::toast variant="warning" title="API Rate Limit Warning" description="You have consumed 85% of your hourly API request quota." />
+<x-aura::toast variant="danger" title="Database Connection Failed" description="Could not establish connection to primary database cluster." />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Subtle & Neutral Card Toasts with Action Links -->
@@ -68,21 +68,21 @@ class extends Component {};
                 </x-aura::toast>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::toast variant="subtle" title="New Message Received" description="Alex Rivera sent 3 new attachments in #design-system."&gt;
-    &lt;x-slot:action&gt;
-        &lt;a href="#" class="inline-flex items-center text-xs font-bold text-zinc-900 dark:text-white no-underline hover:opacity-80"&gt;
-            Reply in Chat &rarr;
-        &lt;/a&gt;
-    &lt;/x-slot:action&gt;
-&lt;/x-aura::toast&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::toast variant="subtle" title="New Message Received" description="Alex Rivera sent 3 new attachments in #design-system.">
+    <x-slot:action>
+        <a href="#" class="inline-flex items-center text-xs font-bold text-zinc-900 dark:text-white no-underline hover:opacity-80">
+            Reply in Chat →
+        </a>
+    </x-slot:action>
+</x-aura::toast>
 
-&lt;x-aura::toast variant="neutral" title="Backup Created Successfully" description="Automated daily SQL snapshot completed at 04:00 AM."&gt;
-    &lt;x-slot:action&gt;
-        &lt;a href="#" class="inline-flex items-center text-xs font-bold text-white dark:text-zinc-900 no-underline hover:opacity-80"&gt;
-            View Backups &rarr;
-        &lt;/a&gt;
-    &lt;/x-slot:action&gt;
-&lt;/x-aura::toast&gt;</x-slot:codeSlot>
+<x-aura::toast variant="neutral" title="Backup Created Successfully" description="Automated daily SQL snapshot completed at 04:00 AM.">
+    <x-slot:action>
+        <a href="#" class="inline-flex items-center text-xs font-bold text-white dark:text-zinc-900 no-underline hover:opacity-80">
+            View Backups →
+        </a>
+    </x-slot:action>
+</x-aura::toast>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Live Interactive Toast Stack Trigger Demo -->
@@ -132,28 +132,28 @@ class extends Component {};
                 </template>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;!-- Trigger Success Toast --&gt;
-&lt;x-aura::button x-on:click="addToast('success', 'Project Settings Saved', 'Your team workspace and API webhooks have been updated successfully.')"&gt;
+        <x-slot:codeSlot>@verbatim<!-- Trigger Success Toast -->
+<x-aura::button x-on:click="addToast('success', 'Project Settings Saved', 'Your team workspace and API webhooks have been updated successfully.')">
     Trigger Success Toast
-&lt;/x-aura::button&gt;
+</x-aura::button>
 
-&lt;!-- Trigger Error Toast --&gt;
-&lt;x-aura::button x-on:click="addToast('danger', 'Payment Authorization Failed', 'Unable to process card ending in 4242. Please check your billing details.')"&gt;
+<!-- Trigger Error Toast -->
+<x-aura::button x-on:click="addToast('danger', 'Payment Authorization Failed', 'Unable to process card ending in 4242. Please check your billing details.')">
     Trigger Error Toast
-&lt;/x-aura::button&gt;
+</x-aura::button>
 
-&lt;!-- Trigger Info Toast --&gt;
-&lt;x-aura::button x-on:click="addToast('info', 'New Pull Request #142', 'Sarah Chen requested a code review on Add Toast Notification Stack.')"&gt;
+<!-- Trigger Info Toast -->
+<x-aura::button x-on:click="addToast('info', 'New Pull Request #142', 'Sarah Chen requested a code review on Add Toast Notification Stack.')">
     Trigger Info Toast
-&lt;/x-aura::button&gt;
+</x-aura::button>
 
-&lt;!-- Floating Toast Stack Container --&gt;
-&lt;template x-teleport="body"&gt;
-    &lt;div class="fixed top-5 right-5 z-50 flex flex-col gap-3"&gt;
-        &lt;template x-for="t in toasts" :key="t.id"&gt;
-            &lt;x-aura::toast /&gt;
-        &lt;/template&gt;
-    &lt;/div&gt;
-&lt;/template&gt;</x-slot:codeSlot>
+<!-- Floating Toast Stack Container -->
+<template x-teleport="body">
+    <div class="fixed top-5 right-5 z-50 flex flex-col gap-3">
+        <template x-for="t in toasts" :key="t.id">
+            <x-aura::toast />
+        </template>
+    </div>
+</template>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

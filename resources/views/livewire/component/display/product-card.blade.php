@@ -24,7 +24,7 @@ title('Product Card - Aura Wire');
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::product-card title="Headphones" price="$199" badge="Popular" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::product-card title="Headphones" price="$199" badge="Popular" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. E-Commerce Product Card -->
@@ -43,16 +43,16 @@ title('Product Card - Aura Wire');
                 </x-aura::product-card>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::product-card
+        <x-slot:codeSlot>@verbatim<x-aura::product-card
     title="Aura Pro Wireless Headphones"
     subtitle="Audio & Electronics"
     price="$299.00"
     originalPrice="$349.00"
     badge="Save $50"
     href="#"
-&gt;
-    &lt;x-aura::button variant="primary" size="sm"&gt;Add to Cart&lt;/x-aura::button&gt;
-&lt;/x-aura::product-card&gt;</x-slot:codeSlot>
+>
+    <x-aura::button variant="primary" size="sm">Add to Cart</x-aura::button>
+</x-aura::product-card>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Dual Product Grid -->
@@ -81,8 +81,8 @@ title('Product Card - Aura Wire');
                 </x-aura::product-card>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::product-card title="Minimalist Studio Desk" price="$549.00" badge="Best Seller"&gt;
-    &lt;x-aura::button variant="secondary" size="sm"&gt;Quick View&lt;/x-aura::button&gt;
-&lt;/x-aura::product-card&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::product-card title="Minimalist Studio Desk" price="$549.00" badge="Best Seller">
+    <x-aura::button variant="secondary" size="sm">Quick View</x-aura::button>
+</x-aura::product-card>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

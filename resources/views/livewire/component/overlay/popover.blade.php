@@ -28,10 +28,10 @@ new class extends Component {
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::popover&gt;
-    &lt;x-slot:trigger&gt;&lt;x-aura::button&gt;Open Popover&lt;/x-aura::button&gt;&lt;/x-slot:trigger&gt;
-    &lt;div class="p-4"&gt;Popover Content&lt;/div&gt;
-&lt;/x-aura::popover&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::popover>
+    <x-slot:trigger><x-aura::button>Open Popover</x-aura::button></x-slot:trigger>
+    <div class="p-4">Popover Content</div>
+</x-aura::popover>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Multiple Popovers Toolbar Example -->
@@ -102,39 +102,39 @@ new class extends Component {
                 </x-aura::popover>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;div class="flex items-center gap-3"&gt;
-    &lt;!-- Popover 1: Filter --&gt;
-    &lt;x-aura::popover align="left" width="72"&gt;
-        &lt;x-slot:trigger&gt;
-            &lt;x-aura::button variant="secondary" size="sm"&gt;Filter Results&lt;/x-aura::button&gt;
-        &lt;/x-slot:trigger&gt;
-        &lt;div class="space-y-3"&gt;
-            &lt;x-aura::checkbox label="In Stock Only" /&gt;
-            &lt;x-aura::checkbox label="On Sale" /&gt;
-        &lt;/div&gt;
-    &lt;/x-aura::popover&gt;
+        <x-slot:codeSlot>@verbatim<div class="flex items-center gap-3">
+    <!-- Popover 1: Filter -->
+    <x-aura::popover align="left" width="72">
+        <x-slot:trigger>
+            <x-aura::button variant="secondary" size="sm">Filter Results</x-aura::button>
+        </x-slot:trigger>
+        <div class="space-y-3">
+            <x-aura::checkbox label="In Stock Only" />
+            <x-aura::checkbox label="On Sale" />
+        </div>
+    </x-aura::popover>
 
-    &lt;!-- Popover 2: Sort --&gt;
-    &lt;x-aura::popover align="center" width="64"&gt;
-        &lt;x-slot:trigger&gt;
-            &lt;x-aura::button variant="secondary" size="sm"&gt;Sort Order&lt;/x-aura::button&gt;
-        &lt;/x-slot:trigger&gt;
-        &lt;div class="space-y-2"&gt;
-            &lt;x-aura::radio label="Newest Arrivals" /&gt;
-            &lt;x-aura::radio label="Price: Low to High" /&gt;
-        &lt;/div&gt;
-    &lt;/x-aura::popover&gt;
+    <!-- Popover 2: Sort -->
+    <x-aura::popover align="center" width="64">
+        <x-slot:trigger>
+            <x-aura::button variant="secondary" size="sm">Sort Order</x-aura::button>
+        </x-slot:trigger>
+        <div class="space-y-2">
+            <x-aura::radio label="Newest Arrivals" />
+            <x-aura::radio label="Price: Low to High" />
+        </div>
+    </x-aura::popover>
 
-    &lt;!-- Popover 3: Export --&gt;
-    &lt;x-aura::popover align="right" width="64"&gt;
-        &lt;x-slot:trigger&gt;
-            &lt;x-aura::button variant="primary" size="sm"&gt;Export Data&lt;/x-aura::button&gt;
-        &lt;/x-slot:trigger&gt;
-        &lt;div class="space-y-2"&gt;
-            &lt;x-aura::button variant="secondary" size="xs" class="w-full"&gt;Export CSV&lt;/x-aura::button&gt;
-        &lt;/div&gt;
-    &lt;/x-aura::popover&gt;
-&lt;/div&gt;</x-slot:codeSlot>
+    <!-- Popover 3: Export -->
+    <x-aura::popover align="right" width="64">
+        <x-slot:trigger>
+            <x-aura::button variant="primary" size="sm">Export Data</x-aura::button>
+        </x-slot:trigger>
+        <div class="space-y-2">
+            <x-aura::button variant="secondary" size="xs" class="w-full">Export CSV</x-aura::button>
+        </div>
+    </x-aura::popover>
+</div>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Alignment Showcase (Left, Center, Right) -->
@@ -181,9 +181,9 @@ new class extends Component {
                 </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::popover align="left" width="64"&gt;...&lt;/x-aura::popover&gt;
-&lt;x-aura::popover align="center" width="64"&gt;...&lt;/x-aura::popover&gt;
-&lt;x-aura::popover align="right" width="64"&gt;...&lt;/x-aura::popover&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::popover align="left" width="64">...</x-aura::popover>
+<x-aura::popover align="center" width="64">...</x-aura::popover>
+<x-aura::popover align="right" width="64">...</x-aura::popover>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. User Profile Card Popover -->
@@ -224,17 +224,17 @@ new class extends Component {
                 </x-aura::popover>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::popover align="right" width="80"&gt;
-    &lt;x-slot:trigger&gt;
-        &lt;div class="flex items-center gap-3 cursor-pointer"&gt;
-            &lt;x-aura::avatar initials="JD" status="online" /&gt;
-            &lt;span&gt;Jane Doe&lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/x-slot:trigger&gt;
-    &lt;div class="space-y-4"&gt;
-        &lt;!-- Profile Header &amp; Info --&gt;
-        &lt;x-aura::button variant="primary" size="xs" class="w-full"&gt;View Full Profile&lt;/x-aura::button&gt;
-    &lt;/div&gt;
-&lt;/x-aura::popover&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::popover align="right" width="80">
+    <x-slot:trigger>
+        <div class="flex items-center gap-3 cursor-pointer">
+            <x-aura::avatar initials="JD" status="online" />
+            <span>Jane Doe</span>
+        </div>
+    </x-slot:trigger>
+    <div class="space-y-4">
+        <!-- Profile Header & Info -->
+        <x-aura::button variant="primary" size="xs" class="w-full">View Full Profile</x-aura::button>
+    </div>
+</x-aura::popover>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

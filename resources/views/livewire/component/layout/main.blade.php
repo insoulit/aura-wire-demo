@@ -24,7 +24,7 @@ title('Main - Aura Wire');
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::main alignX="center" alignY="center"&gt;Main content&lt;/x-aura::main&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::main alignX="center" alignY="center">Main content</x-aura::main>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Default Centered Alignment -->
@@ -36,9 +36,9 @@ title('Main - Aura Wire');
                 </x-aura::main>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::main alignX="center" alignY="center"&gt;
-    &lt;x-aura::text size="sm"&gt;Centered content...&lt;/x-aura::text&gt;
-&lt;/x-aura::main&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::main alignX="center" alignY="center">
+    <x-aura::text size="sm">Centered content...</x-aura::text>
+</x-aura::main>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Alignment Options -->
@@ -57,10 +57,10 @@ title('Main - Aura Wire');
                 </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;!-- Top Left Alignment --&gt;
-&lt;x-aura::main alignX="start" alignY="start"&gt; ... &lt;/x-aura::main&gt;
+        <x-slot:codeSlot>@verbatim<!-- Top Left Alignment -->
+<x-aura::main alignX="start" alignY="start"> ... </x-aura::main>
 
-&lt;!-- Bottom Right Alignment --&gt;
-&lt;x-aura::main alignX="end" alignY="end"&gt; ... &lt;/x-aura::main&gt;</x-slot:codeSlot>
+<!-- Bottom Right Alignment -->
+<x-aura::main alignX="end" alignY="end"> ... </x-aura::main>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

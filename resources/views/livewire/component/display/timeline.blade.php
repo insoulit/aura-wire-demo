@@ -28,7 +28,7 @@ new class extends Component {
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::timeline :items="$events" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::timeline :items="$events" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Deployment & Release History Timeline -->
@@ -41,12 +41,12 @@ new class extends Component {
                 <x-aura::timeline.item title="Build Compiled Successfully" time="45 mins ago" variant="subtle" description="Vite production bundle compiled in 1.28s." />
             </x-aura::timeline>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::timeline&gt;
-    &lt;x-aura::timeline.item title="v1.5.0 Released to Production" time="Just now" variant="solid" description="Deployed 11 new UI components." /&gt;
-    &lt;x-aura::timeline.item title="Pull Request #42 Merged" time="15 mins ago" variant="subtle" description="Approved by @lead-dev." /&gt;
-    &lt;x-aura::timeline.item title="Automated Test Suite Passed" time="30 mins ago" variant="solid" description="71 Pest tests passed." /&gt;
-    &lt;x-aura::timeline.item title="Build Compiled" time="45 mins ago" variant="subtle" /&gt;
-&lt;/x-aura::timeline&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::timeline>
+    <x-aura::timeline.item title="v1.5.0 Released to Production" time="Just now" variant="solid" description="Deployed 11 new UI components." />
+    <x-aura::timeline.item title="Pull Request #42 Merged" time="15 mins ago" variant="subtle" description="Approved by @lead-dev." />
+    <x-aura::timeline.item title="Automated Test Suite Passed" time="30 mins ago" variant="solid" description="71 Pest tests passed." />
+    <x-aura::timeline.item title="Build Compiled" time="45 mins ago" variant="subtle" />
+</x-aura::timeline>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Package Shipping & Delivery Tracker -->
@@ -59,12 +59,12 @@ new class extends Component {
                 <x-aura::timeline.item title="Shipment Information Received" time="2 days ago" variant="subtle" description="Label created by seller and carrier notified." />
             </x-aura::timeline>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::timeline&gt;
-    &lt;x-aura::timeline.item title="Package Delivered" time="02:15 PM" variant="solid" description="Signed for by receiver. Tracking #TRK-89210." /&gt;
-    &lt;x-aura::timeline.item title="Out for Delivery" time="08:30 AM" variant="subtle" /&gt;
-    &lt;x-aura::timeline.item title="Arrived at Regional Hub" time="Yesterday" variant="subtle" /&gt;
-    &lt;x-aura::timeline.item title="Shipment Info Received" time="2 days ago" variant="subtle" /&gt;
-&lt;/x-aura::timeline&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::timeline>
+    <x-aura::timeline.item title="Package Delivered" time="02:15 PM" variant="solid" description="Signed for by receiver. Tracking #TRK-89210." />
+    <x-aura::timeline.item title="Out for Delivery" time="08:30 AM" variant="subtle" />
+    <x-aura::timeline.item title="Arrived at Regional Hub" time="Yesterday" variant="subtle" />
+    <x-aura::timeline.item title="Shipment Info Received" time="2 days ago" variant="subtle" />
+</x-aura::timeline>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Security & Account Audit Log -->
@@ -76,11 +76,11 @@ new class extends Component {
                 <x-aura::timeline.item title="Password Changed Successfully" time="3 days ago" variant="subtle" description="Password updated from verified IP 192.168.1.1." />
             </x-aura::timeline>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::timeline&gt;
-    &lt;x-aura::timeline.item title="Two-Factor Authentication Enabled" time="1 hour ago" variant="solid" /&gt;
-    &lt;x-aura::timeline.item title="New API Token Generated" time="3 hours ago" variant="subtle" /&gt;
-    &lt;x-aura::timeline.item title="Password Changed" time="3 days ago" variant="subtle" /&gt;
-&lt;/x-aura::timeline&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::timeline>
+    <x-aura::timeline.item title="Two-Factor Authentication Enabled" time="1 hour ago" variant="solid" />
+    <x-aura::timeline.item title="New API Token Generated" time="3 hours ago" variant="subtle" />
+    <x-aura::timeline.item title="Password Changed" time="3 days ago" variant="subtle" />
+</x-aura::timeline>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 4. Timeline with Custom Action Slots -->
@@ -100,16 +100,16 @@ new class extends Component {
                 </x-aura::timeline.item>
             </x-aura::timeline>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::timeline&gt;
-    &lt;x-aura::timeline.item title="Database Migration Completed" time="Just now" variant="solid"&gt;
-        &lt;div class="mt-2 flex items-center gap-2"&gt;
-            &lt;x-aura::badge variant="neutral" size="sm"&gt;Schema v2.4&lt;/x-aura::badge&gt;
-            &lt;x-aura::button variant="secondary" size="xs"&gt;View Logs&lt;/x-aura::button&gt;
-        &lt;/div&gt;
-    &lt;/x-aura::timeline.item&gt;
-    &lt;x-aura::timeline.item title="Server Backup Created" time="2 hours ago" variant="subtle"&gt;
-        &lt;code class="text-[11px] font-mono bg-zinc-100 dark:bg-zinc-800 px-2 py-1 rounded"&gt;backup-2026-08-09.tar.gz&lt;/code&gt;
-    &lt;/x-aura::timeline.item&gt;
-&lt;/x-aura::timeline&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::timeline>
+    <x-aura::timeline.item title="Database Migration Completed" time="Just now" variant="solid">
+        <div class="mt-2 flex items-center gap-2">
+            <x-aura::badge variant="neutral" size="sm">Schema v2.4</x-aura::badge>
+            <x-aura::button variant="secondary" size="xs">View Logs</x-aura::button>
+        </div>
+    </x-aura::timeline.item>
+    <x-aura::timeline.item title="Server Backup Created" time="2 hours ago" variant="subtle">
+        <code class="text-[11px] font-mono bg-zinc-100 dark:bg-zinc-800 px-2 py-1 rounded">backup-2026-08-09.tar.gz</code>
+    </x-aura::timeline.item>
+</x-aura::timeline>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

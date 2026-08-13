@@ -44,7 +44,7 @@ new class extends Component {
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::stepper :steps="$steps" :currentStep="$currentStep" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::stepper :steps="$steps" :currentStep="$currentStep" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Interactive Livewire Stepper Form -->
@@ -96,12 +96,12 @@ new class extends Component {
                 </x-aura::card>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::stepper :active="$currentStep"&gt;
-    &lt;x-aura::stepper.step step="1" title="Account Setup" description="Enter email &amp; password" :status="$currentStep &gt; 1 ? 'completed' : ($currentStep === 1 ? 'active' : 'pending')" /&gt;
-    &lt;x-aura::stepper.step step="2" title="Workspace Setup" description="Configure team domain" :status="$currentStep &gt; 2 ? 'completed' : ($currentStep === 2 ? 'active' : 'pending')" /&gt;
-    &lt;x-aura::stepper.step step="3" title="Team Members" description="Invite collaborators" :status="$currentStep &gt; 3 ? 'completed' : ($currentStep === 3 ? 'active' : 'pending')" /&gt;
-    &lt;x-aura::stepper.step step="4" title="Finish" description="Launch dashboard" :status="$currentStep === 4 ? 'completed' : ($currentStep === 4 ? 'active' : 'pending')" /&gt;
-&lt;/x-aura::stepper&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::stepper :active="$currentStep">
+    <x-aura::stepper.step step="1" title="Account Setup" description="Enter email & password" :status="$currentStep > 1 ? 'completed' : ($currentStep === 1 ? 'active' : 'pending')" />
+    <x-aura::stepper.step step="2" title="Workspace Setup" description="Configure team domain" :status="$currentStep > 2 ? 'completed' : ($currentStep === 2 ? 'active' : 'pending')" />
+    <x-aura::stepper.step step="3" title="Team Members" description="Invite collaborators" :status="$currentStep > 3 ? 'completed' : ($currentStep === 3 ? 'active' : 'pending')" />
+    <x-aura::stepper.step step="4" title="Finish" description="Launch dashboard" :status="$currentStep === 4 ? 'completed' : ($currentStep === 4 ? 'active' : 'pending')" />
+</x-aura::stepper>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Order Checkout Stepper -->
@@ -114,12 +114,12 @@ new class extends Component {
                 <x-aura::stepper.step step="4" title="Order Placed" description="Send confirmation email" status="pending" />
             </x-aura::stepper>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::stepper active="3"&gt;
-    &lt;x-aura::stepper.step step="1" title="Cart Review" description="2 items in cart" status="completed" /&gt;
-    &lt;x-aura::stepper.step step="2" title="Shipping Address" description="Express shipping" status="completed" /&gt;
-    &lt;x-aura::stepper.step step="3" title="Payment Method" description="Credit card ending 4242" status="active" /&gt;
-    &lt;x-aura::stepper.step step="4" title="Order Placed" description="Send confirmation email" status="pending" /&gt;
-&lt;/x-aura::stepper&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::stepper active="3">
+    <x-aura::stepper.step step="1" title="Cart Review" description="2 items in cart" status="completed" />
+    <x-aura::stepper.step step="2" title="Shipping Address" description="Express shipping" status="completed" />
+    <x-aura::stepper.step step="3" title="Payment Method" description="Credit card ending 4242" status="active" />
+    <x-aura::stepper.step step="4" title="Order Placed" description="Send confirmation email" status="pending" />
+</x-aura::stepper>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Identity Verification & KYC Pipeline -->
@@ -132,11 +132,11 @@ new class extends Component {
                 <x-aura::stepper.step step="4" title="Approval" description="Instant verification" status="pending" />
             </x-aura::stepper>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::stepper active="2"&gt;
-    &lt;x-aura::stepper.step step="1" title="Personal Details" description="Name &amp; DOB" status="completed" /&gt;
-    &lt;x-aura::stepper.step step="2" title="Government ID" description="Upload passport or license" status="active" /&gt;
-    &lt;x-aura::stepper.step step="3" title="Selfie Verification" description="Biometric face check" status="pending" /&gt;
-    &lt;x-aura::stepper.step step="4" title="Approval" description="Instant verification" status="pending" /&gt;
-&lt;/x-aura::stepper&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::stepper active="2">
+    <x-aura::stepper.step step="1" title="Personal Details" description="Name & DOB" status="completed" />
+    <x-aura::stepper.step step="2" title="Government ID" description="Upload passport or license" status="active" />
+    <x-aura::stepper.step step="3" title="Selfie Verification" description="Biometric face check" status="pending" />
+    <x-aura::stepper.step step="4" title="Approval" description="Instant verification" status="pending" />
+</x-aura::stepper>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

@@ -28,7 +28,7 @@ new class extends Component {
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::command shortcut="meta.k" placeholder="Type a command..." /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::command shortcut="meta.k" placeholder="Type a command..." />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Command Palette Modal Trigger -->
@@ -72,23 +72,23 @@ new class extends Component {
                 </x-aura::command>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;button @click="$dispatch('open-command')"&gt;Search components... (⌘K)&lt;/button&gt;
+        <x-slot:codeSlot>@verbatim<button @click="$dispatch('open-command')">Search components... (⌘K)</button>
 
-&lt;x-aura::command placeholder="Type a command or search..."&gt;
-    &lt;x-aura::command.group title="Navigation"&gt;
-        &lt;x-aura::command.item href="/components/button" icon="square-mouse-pointer" shortcut="⌘B"&gt;
+<x-aura::command placeholder="Type a command or search...">
+    <x-aura::command.group title="Navigation">
+        <x-aura::command.item href="/components/button" icon="square-mouse-pointer" shortcut="⌘B">
             Button Component
-        &lt;/x-aura::command.item&gt;
-        &lt;x-aura::command.item href="/components/date-picker" icon="calendar" shortcut="⌘D"&gt;
+        </x-aura::command.item>
+        <x-aura::command.item href="/components/date-picker" icon="calendar" shortcut="⌘D">
             Date Picker Component
-        &lt;/x-aura::command.item&gt;
-    &lt;/x-aura::command.group&gt;
+        </x-aura::command.item>
+    </x-aura::command.group>
 
-    &lt;x-aura::command.group title="Quick Actions"&gt;
-        &lt;x-aura::command.item icon="moon" shortcut="⌘T"&gt;
+    <x-aura::command.group title="Quick Actions">
+        <x-aura::command.item icon="moon" shortcut="⌘T">
             Toggle Dark Mode
-        &lt;/x-aura::command.item&gt;
-    &lt;/x-aura::command.group&gt;
-&lt;/x-aura::command&gt;</x-slot:codeSlot>
+        </x-aura::command.item>
+    </x-aura::command.group>
+</x-aura::command>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

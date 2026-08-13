@@ -24,7 +24,7 @@ title('Label - Aura Wire');
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::label required&gt;Email Address&lt;/x-aura::label&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::label required>Email Address</x-aura::label>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
     <x-aura::code class="w-full" title="Form Label">
         <x-slot:preview>
@@ -33,7 +33,7 @@ title('Label - Aura Wire');
                 <x-aura::label>Optional Nickname</x-aura::label>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::label required&gt;Email Address&lt;/x-aura::label&gt;
-&lt;x-aura::label&gt;Optional Nickname&lt;/x-aura::label&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::label required>Email Address</x-aura::label>
+<x-aura::label>Optional Nickname</x-aura::label>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

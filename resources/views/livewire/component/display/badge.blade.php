@@ -24,7 +24,7 @@ title('Badge - Aura Wire');
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::badge variant="positive" size="sm"&gt;Active&lt;/x-aura::badge&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::badge variant="positive" size="sm">Active</x-aura::badge>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Color Variants -->
@@ -39,10 +39,10 @@ title('Badge - Aura Wire');
                 <x-aura::badge variant="info">In Progress</x-aura::badge>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::badge variant="neutral"&gt;Neutral&lt;/x-aura::badge&gt;
-&lt;x-aura::badge variant="positive"&gt;Completed&lt;/x-aura::badge&gt;
-&lt;x-aura::badge variant="warning"&gt;Pending Review&lt;/x-aura::badge&gt;
-&lt;x-aura::badge variant="negative"&gt;Failed&lt;/x-aura::badge&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::badge variant="neutral">Neutral</x-aura::badge>
+<x-aura::badge variant="positive">Completed</x-aura::badge>
+<x-aura::badge variant="warning">Pending Review</x-aura::badge>
+<x-aura::badge variant="negative">Failed</x-aura::badge>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Badge Sizes -->
@@ -54,9 +54,9 @@ title('Badge - Aura Wire');
                 <x-aura::badge variant="positive" size="lg">Large (lg)</x-aura::badge>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::badge size="sm"&gt;Small (sm)&lt;/x-aura::badge&gt;
-&lt;x-aura::badge size="md"&gt;Medium (md)&lt;/x-aura::badge&gt;
-&lt;x-aura::badge size="lg"&gt;Large (lg)&lt;/x-aura::badge&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::badge size="sm">Small (sm)</x-aura::badge>
+<x-aura::badge size="md">Medium (md)</x-aura::badge>
+<x-aura::badge size="lg">Large (lg)</x-aura::badge>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Badges with Icons -->
@@ -85,10 +85,10 @@ title('Badge - Aura Wire');
                 </x-aura::badge>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::badge variant="positive"&gt;
-    &lt;x-slot:icon&gt;&lt;span class="w-2 h-2 rounded-full bg-emerald-500 inline-block"&gt;&lt;/span&gt;&lt;/x-slot:icon&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::badge variant="positive">
+    <x-slot:icon><span class="w-2 h-2 rounded-full bg-emerald-500 inline-block"></span></x-slot:icon>
     System Operational
-&lt;/x-aura::badge&gt;</x-slot:codeSlot>
+</x-aura::badge>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 4. Real-World Status Table Pattern -->
@@ -109,9 +109,9 @@ title('Badge - Aura Wire');
                 </x-aura::card>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::badge variant="positive" size="sm"&gt;Paid&lt;/x-aura::badge&gt;
-&lt;x-aura::badge variant="warning" size="sm"&gt;Pending&lt;/x-aura::badge&gt;
-&lt;x-aura::badge variant="negative" size="sm"&gt;Refunded&lt;/x-aura::badge&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::badge variant="positive" size="sm">Paid</x-aura::badge>
+<x-aura::badge variant="warning" size="sm">Pending</x-aura::badge>
+<x-aura::badge variant="negative" size="sm">Refunded</x-aura::badge>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 5. Badge Shapes (Pill & Rounded) -->
@@ -124,11 +124,11 @@ title('Badge - Aura Wire');
                 <x-aura::badge rounded variant="negative">Failed (Rounded)</x-aura::badge>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;!-- Default Pill Shape --&gt;
-&lt;x-aura::badge shape="pill" variant="neutral"&gt;Pill Shape&lt;/x-aura::badge&gt;
+        <x-slot:codeSlot>@verbatim<!-- Default Pill Shape -->
+<x-aura::badge shape="pill" variant="neutral">Pill Shape</x-aura::badge>
 
-&lt;!-- Rounded Shape --&gt;
-&lt;x-aura::badge rounded variant="positive"&gt;Paid&lt;/x-aura::badge&gt;
-&lt;x-aura::badge shape="rounded" variant="negative"&gt;Failed&lt;/x-aura::badge&gt;</x-slot:codeSlot>
+<!-- Rounded Shape -->
+<x-aura::badge rounded variant="positive">Paid</x-aura::badge>
+<x-aura::badge shape="rounded" variant="negative">Failed</x-aura::badge>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

@@ -24,7 +24,7 @@ title('Error - Aura Wire');
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::error message="The email field is required." /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::error message="The email field is required." />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
     <x-aura::code class="w-full" title="Field Error Message">
         <x-slot:preview>
@@ -33,6 +33,6 @@ title('Error - Aura Wire');
                 <x-aura::error message="Password must be at least 8 characters." />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::error message="The email field is required." /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::error message="The email field is required." />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

@@ -24,10 +24,10 @@ title('Sidebar - Aura Wire');
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::sidebar&gt;
-    &lt;x-aura::sidebar.heading&gt;Navigation&lt;/x-aura::sidebar.heading&gt;
-    &lt;x-aura::sidebar.item href="#" icon="layout-dashboard" active&gt;Dashboard&lt;/x-aura::sidebar.item&gt;
-&lt;/x-aura::sidebar&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::sidebar>
+    <x-aura::sidebar.heading>Navigation</x-aura::sidebar.heading>
+    <x-aura::sidebar.item href="#" icon="layout-dashboard" active>Dashboard</x-aura::sidebar.item>
+</x-aura::sidebar>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     {{-- Standard Sidebar --}}
@@ -40,11 +40,11 @@ title('Sidebar - Aura Wire');
                 <x-aura::sidebar.item href="#">Settings</x-aura::sidebar.item>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::sidebar&gt;
-    &lt;x-aura::sidebar.heading&gt;Navigation&lt;/x-aura::sidebar.heading&gt;
-    &lt;x-aura::sidebar.item href="#" active&gt;Dashboard&lt;/x-aura::sidebar.item&gt;
-    &lt;x-aura::sidebar.item href="#" badge="12"&gt;Notifications&lt;/x-aura::sidebar.item&gt;
-&lt;/x-aura::sidebar&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::sidebar>
+    <x-aura::sidebar.heading>Navigation</x-aura::sidebar.heading>
+    <x-aura::sidebar.item href="#" active>Dashboard</x-aura::sidebar.item>
+    <x-aura::sidebar.item href="#" badge="12">Notifications</x-aura::sidebar.item>
+</x-aura::sidebar>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     {{-- Sidebar Collapsible Dropdown Menu --}}
@@ -59,10 +59,10 @@ title('Sidebar - Aura Wire');
                 </x-aura::sidebar.dropdown>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::sidebar.dropdown label="Management" badge="Admin" :active="true"&gt;
-    &lt;x-aura::sidebar.item href="#" active&gt;User Accounts&lt;/x-aura::sidebar.item&gt;
-    &lt;x-aura::sidebar.item href="#"&gt;Roles &amp; Permissions&lt;/x-aura::sidebar.item&gt;
-    &lt;x-aura::sidebar.item href="#"&gt;Access Control&lt;/x-aura::sidebar.item&gt;
-&lt;/x-aura::sidebar.dropdown&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::sidebar.dropdown label="Management" badge="Admin" :active="true">
+    <x-aura::sidebar.item href="#" active>User Accounts</x-aura::sidebar.item>
+    <x-aura::sidebar.item href="#">Roles & Permissions</x-aura::sidebar.item>
+    <x-aura::sidebar.item href="#">Access Control</x-aura::sidebar.item>
+</x-aura::sidebar.dropdown>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

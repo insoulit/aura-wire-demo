@@ -24,7 +24,7 @@ title('Body - Aura Wire');
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::body&gt;Page content&lt;/x-aura::body&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::body>Page content</x-aura::body>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <x-aura::code class="w-full" title="Root Page Body Layout Component">
@@ -35,16 +35,16 @@ title('Body - Aura Wire');
                 </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;!DOCTYPE html&gt;
-&lt;html lang="en" class="h-full antialiased"&gt;
-&lt;x-layout::shared.head title="App" /&gt;
-&lt;x-aura::body&gt;
-    &lt;livewire:layout.shared.header /&gt;
-    &lt;main&gt;
+        <x-slot:codeSlot>@verbatim<!DOCTYPE html>
+<html lang="en" class="h-full antialiased">
+<x-layout::shared.head title="App" />
+<x-aura::body>
+    <livewire:layout.shared.header />
+    <main>
         {{ $slot }}
-    &lt;/main&gt;
-    &lt;livewire:layout.shared.footer /&gt;
-&lt;/x-aura::body&gt;
-&lt;/html&gt;</x-slot:codeSlot>
+    </main>
+    <livewire:layout.shared.footer />
+</x-aura::body>
+</html>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

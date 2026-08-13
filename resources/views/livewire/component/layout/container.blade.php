@@ -24,7 +24,7 @@ title('Container - Aura Wire');
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::container size="7xl" class="py-8"&gt;Page content&lt;/x-aura::container&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::container size="7xl" class="py-8">Page content</x-aura::container>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Default Container (7xl) -->
@@ -36,9 +36,9 @@ title('Container - Aura Wire');
                 </x-aura::container>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::container size="7xl"&gt;
-    &lt;x-aura::text size="sm"&gt;Centered page content...&lt;/x-aura::text&gt;
-&lt;/x-aura::container&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::container size="7xl">
+    <x-aura::text size="sm">Centered page content...</x-aura::text>
+</x-aura::container>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Container Sizes -->
@@ -53,7 +53,7 @@ title('Container - Aura Wire');
                 </x-aura::container>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::container size="md"&gt; ... &lt;/x-aura::container&gt;
-&lt;x-aura::container size="xl"&gt; ... &lt;/x-aura::container&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::container size="md"> ... </x-aura::container>
+<x-aura::container size="xl"> ... </x-aura::container>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

@@ -28,7 +28,7 @@ class extends Component {};
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::empty-state icon="folder-open" title="No Projects Found" description="Get started by creating a new project." /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::empty-state icon="folder-open" title="No Projects Found" description="Get started by creating a new project." />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Standard Empty State with Primary Action -->
@@ -51,18 +51,18 @@ class extends Component {};
                 </x-aura::empty-state>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::empty-state 
+        <x-slot:codeSlot>@verbatim<x-aura::empty-state 
     icon="folder-open"
     title="No Projects Found" 
     description="You haven't created any workspace projects yet. Get started by creating your first project."
-&gt;
-    &lt;x-aura::button variant="primary" size="sm" icon="plus"&gt;
+>
+    <x-aura::button variant="primary" size="sm" icon="plus">
         Create
-    &lt;/x-aura::button&gt;
-    &lt;x-aura::button variant="secondary" size="sm" icon="sparkles"&gt;
+    </x-aura::button>
+    <x-aura::button variant="secondary" size="sm" icon="sparkles">
         Browse Templates
-    &lt;/x-aura::button&gt;
-&lt;/x-aura::empty-state&gt;</x-slot:codeSlot>
+    </x-aura::button>
+</x-aura::empty-state>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Search No Results State -->
@@ -79,14 +79,14 @@ class extends Component {};
                 </x-aura::empty-state>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::empty-state 
+        <x-slot:codeSlot>@verbatim<x-aura::empty-state 
     icon="search-x"
     title="No Matching Results" 
     description="We couldn't find any documents matching your query."
-&gt;
-    &lt;x-aura::button variant="secondary" size="sm" icon="refresh-cw"&gt;Reset All Filters&lt;/x-aura::button&gt;
-    &lt;x-aura::icon-button icon="pencil" variant="secondary" size="sm" label="New Note" /&gt;
-&lt;/x-aura::empty-state&gt;</x-slot:codeSlot>
+>
+    <x-aura::button variant="secondary" size="sm" icon="refresh-cw">Reset All Filters</x-aura::button>
+    <x-aura::icon-button icon="pencil" variant="secondary" size="sm" label="New Note" />
+</x-aura::empty-state>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Inbox Empty State -->
@@ -100,10 +100,10 @@ class extends Component {};
                 />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::empty-state 
+        <x-slot:codeSlot>@verbatim<x-aura::empty-state 
     icon="inbox"
     title="Your Inbox is Empty" 
     description="All caught up! You have no unread notifications or messages in your queue."
-/&gt;</x-slot:codeSlot>
+/>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

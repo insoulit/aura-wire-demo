@@ -28,10 +28,10 @@ class extends Component {};
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::dropdown&gt;
-    &lt;x-slot:trigger&gt;&lt;x-aura::button&gt;Options&lt;/x-aura::button&gt;&lt;/x-slot:trigger&gt;
-    &lt;x-aura::dropdown.item icon="user"&gt;Profile&lt;/x-aura::dropdown.item&gt;
-&lt;/x-aura::dropdown&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::dropdown>
+    <x-slot:trigger><x-aura::button>Options</x-aura::button></x-slot:trigger>
+    <x-aura::dropdown.item icon="user">Profile</x-aura::dropdown.item>
+</x-aura::dropdown>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Standard Action Menu -->
@@ -57,23 +57,23 @@ class extends Component {};
                 </x-aura::dropdown>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::dropdown align="right" width="56"&gt;
-    &lt;x-slot name="trigger"&gt;
-        &lt;x-aura::button variant="secondary"&gt;
-            &lt;span&gt;Actions Menu&lt;/span&gt;
-            &lt;x-aura::icon name="chevron-down" size="xs" /&gt;
-        &lt;/x-aura::button&gt;
-    &lt;/x-slot&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::dropdown align="right" width="56">
+    <x-slot name="trigger">
+        <x-aura::button variant="secondary">
+            <span>Actions Menu</span>
+            <x-aura::icon name="chevron-down" size="xs" />
+        </x-aura::button>
+    </x-slot>
 
-    &lt;x-aura::dropdown.header&gt;Manage Item&lt;/x-aura::dropdown.header&gt;
-    &lt;x-aura::dropdown.item href="#" icon="pencil"&gt;Edit Item&lt;/x-aura::dropdown.item&gt;
-    &lt;x-aura::dropdown.item href="#" icon="copy" badge="Ctrl+C"&gt;Duplicate&lt;/x-aura::dropdown.item&gt;
-    &lt;x-aura::dropdown.item href="#" icon="share-2"&gt;Share Link&lt;/x-aura::dropdown.item&gt;
+    <x-aura::dropdown.header>Manage Item</x-aura::dropdown.header>
+    <x-aura::dropdown.item href="#" icon="pencil">Edit Item</x-aura::dropdown.item>
+    <x-aura::dropdown.item href="#" icon="copy" badge="Ctrl+C">Duplicate</x-aura::dropdown.item>
+    <x-aura::dropdown.item href="#" icon="share-2">Share Link</x-aura::dropdown.item>
 
-    &lt;x-aura::dropdown.separator /&gt;
+    <x-aura::dropdown.separator />
 
-    &lt;x-aura::dropdown.item href="#" icon="trash-2" variant="danger"&gt;Delete Item&lt;/x-aura::dropdown.item&gt;
-&lt;/x-aura::dropdown&gt;</x-slot:codeSlot>
+    <x-aura::dropdown.item href="#" icon="trash-2" variant="danger">Delete Item</x-aura::dropdown.item>
+</x-aura::dropdown>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. User Account Dropdown -->
@@ -105,25 +105,25 @@ class extends Component {};
                 </x-aura::dropdown>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::dropdown align="right" width="64"&gt;
-    &lt;x-slot name="trigger"&gt;
-        &lt;button type="button" class="flex items-center gap-2.5 p-1.5 rounded-full border"&gt;
-            &lt;x-aura::avatar src="..." size="sm" /&gt;
-            &lt;span class="text-xs font-semibold"&gt;Sarah Connor&lt;/span&gt;
-        &lt;/button&gt;
-    &lt;/x-slot&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::dropdown align="right" width="64">
+    <x-slot name="trigger">
+        <button type="button" class="flex items-center gap-2.5 p-1.5 rounded-full border">
+            <x-aura::avatar src="..." size="sm" />
+            <span class="text-xs font-semibold">Sarah Connor</span>
+        </button>
+    </x-slot>
 
-    &lt;div class="px-3 py-2.5 bg-zinc-50 dark:bg-zinc-800/50 rounded-xl border mb-1"&gt;
-        &lt;p class="text-xs font-bold"&gt;Sarah Connor&lt;/p&gt;
-        &lt;p class="text-[11px] text-zinc-500"&gt;sarah@example.com&lt;/p&gt;
-    &lt;/div&gt;
+    <div class="px-3 py-2.5 bg-zinc-50 dark:bg-zinc-800/50 rounded-xl border mb-1">
+        <p class="text-xs font-bold">Sarah Connor</p>
+        <p class="text-[11px] text-zinc-500">sarah@example.com</p>
+    </div>
 
-    &lt;x-aura::dropdown.header&gt;Account&lt;/x-aura::dropdown.header&gt;
-    &lt;x-aura::dropdown.item href="#" icon="user"&gt;My Profile&lt;/x-aura::dropdown.item&gt;
-    &lt;x-aura::dropdown.item href="#" icon="settings"&gt;Account Settings&lt;/x-aura::dropdown.item&gt;
-    &lt;x-aura::dropdown.separator /&gt;
-    &lt;x-aura::dropdown.item href="#" icon="log-out" variant="danger"&gt;Sign Out&lt;/x-aura::dropdown.item&gt;
-&lt;/x-aura::dropdown&gt;</x-slot:codeSlot>
+    <x-aura::dropdown.header>Account</x-aura::dropdown.header>
+    <x-aura::dropdown.item href="#" icon="user">My Profile</x-aura::dropdown.item>
+    <x-aura::dropdown.item href="#" icon="settings">Account Settings</x-aura::dropdown.item>
+    <x-aura::dropdown.separator />
+    <x-aura::dropdown.item href="#" icon="log-out" variant="danger">Sign Out</x-aura::dropdown.item>
+</x-aura::dropdown>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Icon Kebab Trigger & Alignment -->
@@ -157,13 +157,13 @@ class extends Component {};
                 </x-aura::dropdown>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::dropdown align="left" width="48"&gt;
-    &lt;x-slot name="trigger"&gt;
-        &lt;x-aura::icon-button icon="ellipsis-vertical" variant="ghost" /&gt;
-    &lt;/x-slot&gt;
-    &lt;x-aura::dropdown.header&gt;Quick Options&lt;/x-aura::dropdown.header&gt;
-    &lt;x-aura::dropdown.item href="#" icon="eye"&gt;View Details&lt;/x-aura::dropdown.item&gt;
-    &lt;x-aura::dropdown.item href="#" icon="download"&gt;Download File&lt;/x-aura::dropdown.item&gt;
-&lt;/x-aura::dropdown&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::dropdown align="left" width="48">
+    <x-slot name="trigger">
+        <x-aura::icon-button icon="ellipsis-vertical" variant="ghost" />
+    </x-slot>
+    <x-aura::dropdown.header>Quick Options</x-aura::dropdown.header>
+    <x-aura::dropdown.item href="#" icon="eye">View Details</x-aura::dropdown.item>
+    <x-aura::dropdown.item href="#" icon="download">Download File</x-aura::dropdown.item>
+</x-aura::dropdown>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

@@ -24,9 +24,9 @@ title('Tooltip - Aura Wire');
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::tooltip text="Edit profile" position="top"&gt;
-    &lt;x-aura::icon-button icon="pencil" /&gt;
-&lt;/x-aura::tooltip&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::tooltip text="Edit profile" position="top">
+    <x-aura::icon-button icon="pencil" />
+</x-aura::tooltip>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Directional Tooltips -->
@@ -50,9 +50,9 @@ title('Tooltip - Aura Wire');
                 </x-aura::tooltip>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::tooltip text="Tooltip on Top" position="top"&gt;
-    &lt;x-aura::button variant="secondary"&gt;Hover Top&lt;/x-aura::button&gt;
-&lt;/x-aura::tooltip&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::tooltip text="Tooltip on Top" position="top">
+    <x-aura::button variant="secondary">Hover Top</x-aura::button>
+</x-aura::tooltip>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Tooltips on Action Buttons -->
@@ -72,8 +72,8 @@ title('Tooltip - Aura Wire');
                 </x-aura::tooltip>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::tooltip text="Edit Document" position="top"&gt;
-    &lt;x-aura::icon-button icon="pencil" variant="secondary" /&gt;
-&lt;/x-aura::tooltip&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::tooltip text="Edit Document" position="top">
+    <x-aura::icon-button icon="pencil" variant="secondary" />
+</x-aura::tooltip>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

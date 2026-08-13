@@ -24,7 +24,7 @@ title('Rating - Aura Wire');
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::rating wire:model="score" :max="5" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::rating wire:model="score" :max="5" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Interactive Rating -->
@@ -35,7 +35,7 @@ title('Rating - Aura Wire');
                 <x-aura::rating rating="4" max="5" name="user_feedback" size="lg" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::rating rating="4" max="5" name="user_feedback" size="lg" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::rating rating="4" max="5" name="user_feedback" size="lg" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Half-Star Read-Only Score -->
@@ -47,9 +47,9 @@ title('Rating - Aura Wire');
                 <span class="text-xs text-zinc-500 font-medium">(1,280 verified customer reviews)</span>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;span class="text-2xl font-bold"&gt;4.5&lt;/span&gt;
-&lt;x-aura::rating rating="4.5" max="5" readonly size="lg" /&gt;
-&lt;span class="text-xs text-zinc-500"&gt;(1,280 reviews)&lt;/span&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<span class="text-2xl font-bold">4.5</span>
+<x-aura::rating rating="4.5" max="5" readonly size="lg" />
+<span class="text-xs text-zinc-500">(1,280 reviews)</span>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Size Variations -->
@@ -74,10 +74,10 @@ title('Rating - Aura Wire');
                 </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::rating rating="4.5" size="sm" readonly /&gt;
-&lt;x-aura::rating rating="4.5" size="md" readonly /&gt;
-&lt;x-aura::rating rating="4.5" size="lg" readonly /&gt;
-&lt;x-aura::rating rating="4.5" size="xl" readonly /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::rating rating="4.5" size="sm" readonly />
+<x-aura::rating rating="4.5" size="md" readonly />
+<x-aura::rating rating="4.5" size="lg" readonly />
+<x-aura::rating rating="4.5" size="xl" readonly />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 4. 10-Point Scale Rating -->
@@ -88,6 +88,6 @@ title('Rating - Aura Wire');
                 <x-aura::rating rating="8.5" max="10" name="nps_score" size="md" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::rating rating="8.5" max="10" name="nps_score" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::rating rating="8.5" max="10" name="nps_score" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

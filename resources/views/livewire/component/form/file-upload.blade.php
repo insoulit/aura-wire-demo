@@ -24,7 +24,7 @@ title('File Upload - Aura Wire');
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::file-upload label="Click or drag and drop" hint="PNG, JPG, PDF (max 10MB)" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::file-upload label="Click or drag and drop" hint="PNG, JPG, PDF (max 10MB)" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     {{-- Default Dropzone --}}
@@ -34,10 +34,10 @@ title('File Upload - Aura Wire');
                 <x-aura::file-upload label="Click to upload or drag and drop" hint="SVG, PNG, JPG, GIF or PDF (max 10MB)" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::file-upload
+        <x-slot:codeSlot>@verbatim<x-aura::file-upload
     label="Click to upload or drag and drop"
     hint="SVG, PNG, JPG, GIF or PDF (max 10MB)"
-/&gt;</x-slot:codeSlot>
+/>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     {{-- Disabled State --}}
@@ -47,10 +47,10 @@ title('File Upload - Aura Wire');
                 <x-aura::file-upload label="Upload disabled" hint="File uploads are currently locked" :disabled="true" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::file-upload
+        <x-slot:codeSlot>@verbatim<x-aura::file-upload
     label="Upload disabled"
     hint="File uploads are currently locked"
     :disabled="true"
-/&gt;</x-slot:codeSlot>
+/>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

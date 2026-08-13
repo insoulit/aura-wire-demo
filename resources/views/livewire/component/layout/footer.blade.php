@@ -28,10 +28,10 @@ class extends Component {};
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::footer&gt;
-    &lt;x-slot:brand&gt;Brand Content&lt;/x-slot:brand&gt;
-    &lt;x-slot:bottom&gt;Copyright Content&lt;/x-slot:bottom&gt;
-&lt;/x-aura::footer&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::footer>
+    <x-slot:brand>Brand Content</x-slot:brand>
+    <x-slot:bottom>Copyright Content</x-slot:bottom>
+</x-aura::footer>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Simple Application Footer -->
@@ -63,23 +63,23 @@ class extends Component {};
                 </x-aura::footer>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::footer&gt;
-    &lt;x-slot name="brand"&gt;
-        &lt;div class="flex items-center gap-2.5"&gt;
-            &lt;x-aura::icon name="sparkles" size="xs" /&gt;
-            &lt;span class="font-bold text-sm"&gt;Aura Wire&lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/x-slot&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::footer>
+    <x-slot name="brand">
+        <div class="flex items-center gap-2.5">
+            <x-aura::icon name="sparkles" size="xs" />
+            <span class="font-bold text-sm">Aura Wire</span>
+        </div>
+    </x-slot>
 
-    &lt;a href="#"&gt;Documentation&lt;/a&gt;
-    &lt;a href="#"&gt;GitHub&lt;/a&gt;
-    &lt;a href="#"&gt;License&lt;/a&gt;
+    <a href="#">Documentation</a>
+    <a href="#">GitHub</a>
+    <a href="#">License</a>
 
-    &lt;x-slot name="bottom"&gt;
-        &lt;span&gt;&amp;copy; {{ date('Y') }} Insoulit. All rights reserved.&lt;/span&gt;
-        &lt;span class="font-mono"&gt;v1.5.0&lt;/span&gt;
-    &lt;/x-slot&gt;
-&lt;/x-aura::footer&gt;</x-slot:codeSlot>
+    <x-slot name="bottom">
+        <span>&copy; {{ date('Y') }} Insoulit. All rights reserved.</span>
+        <span class="font-mono">v1.5.0</span>
+    </x-slot>
+</x-aura::footer>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Multi-Column Corporate SaaS Footer -->
@@ -150,20 +150,20 @@ class extends Component {};
                 </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;div class="grid grid-cols-2 md:grid-cols-5 gap-8"&gt;
-    &lt;div class="col-span-2 space-y-3"&gt;
-        &lt;span class="font-extrabold text-base"&gt;Aura Cloud&lt;/span&gt;
-        &lt;p class="text-xs text-zinc-500"&gt;Empowering Livewire developers.&lt;/p&gt;
-    &lt;/div&gt;
+        <x-slot:codeSlot>@verbatim<div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+    <div class="col-span-2 space-y-3">
+        <span class="font-extrabold text-base">Aura Cloud</span>
+        <p class="text-xs text-zinc-500">Empowering Livewire developers.</p>
+    </div>
 
-    &lt;div class="space-y-2.5"&gt;
-        &lt;p class="text-xs font-bold uppercase"&gt;Product&lt;/p&gt;
-        &lt;ul class="space-y-2 text-xs text-zinc-600"&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Components&lt;/a&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;a href="#"&gt;Templates&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</x-slot:codeSlot>
+    <div class="space-y-2.5">
+        <p class="text-xs font-bold uppercase">Product</p>
+        <ul class="space-y-2 text-xs text-zinc-600">
+            <li><a href="#">Components</a></li>
+            <li><a href="#">Templates</a></li>
+        </ul>
+    </div>
+</div>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Dark Theme Developer Platform Footer -->
@@ -193,19 +193,19 @@ class extends Component {};
                 </x-aura::footer>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::footer class="!bg-zinc-900 !border-zinc-800 !text-zinc-300"&gt;
-    &lt;x-slot name="brand"&gt;
-        &lt;span class="font-mono font-black text-white"&gt;&amp;lt;AURA/&amp;gt;&lt;/span&gt;
-        &lt;x-aura::badge variant="positive" size="xs"&gt;OPERATIONAL&lt;/x-aura::badge&gt;
-    &lt;/x-slot&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::footer class="!bg-zinc-900 !border-zinc-800 !text-zinc-300">
+    <x-slot name="brand">
+        <span class="font-mono font-black text-white">&lt;AURA/&gt;</span>
+        <x-aura::badge variant="positive" size="xs">OPERATIONAL</x-aura::badge>
+    </x-slot>
 
-    &lt;a href="#"&gt;API Docs&lt;/a&gt;
-    &lt;a href="#"&gt;Status&lt;/a&gt;
+    <a href="#">API Docs</a>
+    <a href="#">Status</a>
 
-    &lt;x-slot name="bottom"&gt;
-        &lt;span&gt;&amp;copy; {{ date('Y') }} Aura Dev Platform.&lt;/span&gt;
-    &lt;/x-slot&gt;
-&lt;/x-aura::footer&gt;</x-slot:codeSlot>
+    <x-slot name="bottom">
+        <span>&copy; {{ date('Y') }} Aura Dev Platform.</span>
+    </x-slot>
+</x-aura::footer>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 4. E-Commerce Storefront Footer with Newsletter -->
@@ -250,19 +250,19 @@ class extends Component {};
                 </x-aura::footer>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;div class="p-6 rounded-xl bg-white border border-zinc-200 flex justify-between gap-6"&gt;
-    &lt;div&gt;
-        &lt;h4 class="text-sm font-bold"&gt;Subscribe to our newsletter&lt;/h4&gt;
-    &lt;/div&gt;
-    &lt;div class="flex gap-2"&gt;
-        &lt;x-aura::input placeholder="Enter your email" size="sm" /&gt;
-        &lt;x-aura::button variant="primary" size="sm"&gt;Subscribe&lt;/x-aura::button&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+        <x-slot:codeSlot>@verbatim<div class="p-6 rounded-xl bg-white border border-zinc-200 flex justify-between gap-6">
+    <div>
+        <h4 class="text-sm font-bold">Subscribe to our newsletter</h4>
+    </div>
+    <div class="flex gap-2">
+        <x-aura::input placeholder="Enter your email" size="sm" />
+        <x-aura::button variant="primary" size="sm">Subscribe</x-aura::button>
+    </div>
+</div>
 
-&lt;x-aura::footer brand="AURA STORE"&gt;
-    &lt;a href="#"&gt;Track Order&lt;/a&gt;
-    &lt;a href="#"&gt;Shipping &amp;amp; Returns&lt;/a&gt;
-&lt;/x-aura::footer&gt;</x-slot:codeSlot>
+<x-aura::footer brand="AURA STORE">
+    <a href="#">Track Order</a>
+    <a href="#">Shipping &amp; Returns</a>
+</x-aura::footer>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

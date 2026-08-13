@@ -28,7 +28,7 @@ class extends Component {};
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::spinner variant="ring" size="md" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::spinner variant="ring" size="md" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Spinner Types (Ring, Dots, Bars, Ping) -->
@@ -56,17 +56,17 @@ class extends Component {};
                 </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;!-- Ring Spinner --&gt;
-&lt;x-aura::spinner type="ring" size="lg" variant="primary" /&gt;
+        <x-slot:codeSlot>@verbatim<!-- Ring Spinner -->
+<x-aura::spinner type="ring" size="lg" variant="primary" />
 
-&lt;!-- Bouncing Dots Loader --&gt;
-&lt;x-aura::spinner type="dots" variant="primary" /&gt;
+<!-- Bouncing Dots Loader -->
+<x-aura::spinner type="dots" variant="primary" />
 
-&lt;!-- Equalizer Bars Loader --&gt;
-&lt;x-aura::spinner type="bars" variant="primary" /&gt;
+<!-- Equalizer Bars Loader -->
+<x-aura::spinner type="bars" variant="primary" />
 
-&lt;!-- Radar Ping Loader --&gt;
-&lt;x-aura::spinner type="ping" size="lg" variant="primary" /&gt;</x-slot:codeSlot>
+<!-- Radar Ping Loader -->
+<x-aura::spinner type="ping" size="lg" variant="primary" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Sizes Variety -->
@@ -95,11 +95,11 @@ class extends Component {};
                 </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::spinner size="xs" /&gt;
-&lt;x-aura::spinner size="sm" /&gt;
-&lt;x-aura::spinner size="md" /&gt;
-&lt;x-aura::spinner size="lg" /&gt;
-&lt;x-aura::spinner size="xl" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::spinner size="xs" />
+<x-aura::spinner size="sm" />
+<x-aura::spinner size="md" />
+<x-aura::spinner size="lg" />
+<x-aura::spinner size="xl" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Color Varieties -->
@@ -118,12 +118,12 @@ class extends Component {};
                 </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::spinner variant="default" /&gt;
-&lt;x-aura::spinner variant="primary" /&gt;
-&lt;x-aura::spinner variant="success" /&gt;
-&lt;x-aura::spinner variant="warning" /&gt;
-&lt;x-aura::spinner variant="danger" /&gt;
-&lt;x-aura::spinner variant="white" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::spinner variant="default" />
+<x-aura::spinner variant="primary" />
+<x-aura::spinner variant="success" />
+<x-aura::spinner variant="warning" />
+<x-aura::spinner variant="danger" />
+<x-aura::spinner variant="white" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 4. Contextual Button & Card Loading Examples -->
@@ -154,16 +154,16 @@ class extends Component {};
                 </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;!-- Button with Ring Spinner --&gt;
-&lt;x-aura::button variant="primary" size="sm"&gt;
-    &lt;x-aura::spinner size="xs" variant="white" /&gt;
+        <x-slot:codeSlot>@verbatim<!-- Button with Ring Spinner -->
+<x-aura::button variant="primary" size="sm">
+    <x-aura::spinner size="xs" variant="white" />
     Saving Changes...
-&lt;/x-aura::button&gt;
+</x-aura::button>
 
-&lt;!-- Button with Bouncing Dots --&gt;
-&lt;x-aura::button variant="secondary" size="sm"&gt;
-    &lt;x-aura::spinner type="dots" size="xs" /&gt;
+<!-- Button with Bouncing Dots -->
+<x-aura::button variant="secondary" size="sm">
+    <x-aura::spinner type="dots" size="xs" />
     Processing Order
-&lt;/x-aura::button&gt;</x-slot:codeSlot>
+</x-aura::button>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

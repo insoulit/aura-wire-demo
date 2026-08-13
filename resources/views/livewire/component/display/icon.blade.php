@@ -110,7 +110,7 @@ class extends Component {
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::icon name="sparkles" size="md" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::icon name="sparkles" size="md" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- Search & Filter Bar -->
@@ -205,10 +205,10 @@ class extends Component {
                 @endif
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::icon name="sparkles" size="md" /&gt;
-&lt;x-aura::icon name="search" size="sm" /&gt;
-&lt;x-aura::icon name="heart" class="text-red-500" /&gt;
-&lt;x-aura::icon name="user" size="lg" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::icon name="sparkles" size="md" />
+<x-aura::icon name="search" size="sm" />
+<x-aura::icon name="heart" class="text-red-500" />
+<x-aura::icon name="user" size="lg" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Sizes Variety -->
@@ -237,10 +237,10 @@ class extends Component {
                 </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::icon name="star" size="xs" /&gt;
-&lt;x-aura::icon name="star" size="sm" /&gt;
-&lt;x-aura::icon name="star" size="md" /&gt;
-&lt;x-aura::icon name="star" size="lg" /&gt;
-&lt;x-aura::icon name="star" size="xl" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::icon name="star" size="xs" />
+<x-aura::icon name="star" size="sm" />
+<x-aura::icon name="star" size="md" />
+<x-aura::icon name="star" size="lg" />
+<x-aura::icon name="star" size="xl" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

@@ -24,9 +24,9 @@ title('Field - Aura Wire');
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::field label="Username" hint="Enter handle" required&gt;
-    &lt;x-aura::input placeholder="johndoe" /&gt;
-&lt;/x-aura::field&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::field label="Username" hint="Enter handle" required>
+    <x-aura::input placeholder="johndoe" />
+</x-aura::field>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
     <x-aura::code class="w-full" title="Field Wrapper">
         <x-slot:preview>
@@ -36,8 +36,8 @@ title('Field - Aura Wire');
                 </x-aura::field>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::field label="Username" hint="Enter a unique handle" required&gt;
-    &lt;x-aura::input placeholder="johndoe" /&gt;
-&lt;/x-aura::field&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::field label="Username" hint="Enter a unique handle" required>
+    <x-aura::input placeholder="johndoe" />
+</x-aura::field>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

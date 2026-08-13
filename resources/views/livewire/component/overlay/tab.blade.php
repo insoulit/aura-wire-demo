@@ -24,9 +24,9 @@ title('Tabs - Aura Wire');
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::tab default="profile"&gt;
-    &lt;x-aura::tab.item name="profile" label="Profile"&gt;Content...&lt;/x-aura::tab.item&gt;
-&lt;/x-aura::tab&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::tab default="profile">
+    <x-aura::tab.item name="profile" label="Profile">Content...</x-aura::tab.item>
+</x-aura::tab>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Standard Tabs -->
@@ -41,12 +41,12 @@ title('Tabs - Aura Wire');
                 </x-aura::tab>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::tab active="overview"&gt;
-    &lt;x-aura::tab.tab name="overview"&gt;Overview&lt;/x-aura::tab.tab&gt;
-    &lt;x-aura::tab.tab name="analytics"&gt;Analytics&lt;/x-aura::tab.tab&gt;
-    &lt;x-aura::tab.tab name="reports"&gt;Reports&lt;/x-aura::tab.tab&gt;
-    &lt;x-aura::tab.tab name="settings"&gt;Settings&lt;/x-aura::tab.tab&gt;
-&lt;/x-aura::tab&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::tab active="overview">
+    <x-aura::tab.tab name="overview">Overview</x-aura::tab.tab>
+    <x-aura::tab.tab name="analytics">Analytics</x-aura::tab.tab>
+    <x-aura::tab.tab name="reports">Reports</x-aura::tab.tab>
+    <x-aura::tab.tab name="settings">Settings</x-aura::tab.tab>
+</x-aura::tab>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Tabs with Icons -->
@@ -70,11 +70,11 @@ title('Tabs - Aura Wire');
                 </x-aura::tab>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::tab active="account"&gt;
-    &lt;x-aura::tab.tab name="account"&gt;
-        &lt;x-slot:icon&gt;&lt;svg class="w-4 h-4" .../&gt;&lt;/x-slot:icon&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::tab active="account">
+    <x-aura::tab.tab name="account">
+        <x-slot:icon><svg class="w-4 h-4" .../></x-slot:icon>
         Account Details
-    &lt;/x-aura::tab.tab&gt;
-&lt;/x-aura::tab&gt;</x-slot:codeSlot>
+    </x-aura::tab.tab>
+</x-aura::tab>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

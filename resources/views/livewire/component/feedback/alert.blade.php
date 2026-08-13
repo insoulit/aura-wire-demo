@@ -28,7 +28,7 @@ class extends Component {};
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::alert variant="info" title="System Notice"&gt;Maintenance scheduled.&lt;/x-aura::alert&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::alert variant="info" title="System Notice">Maintenance scheduled.</x-aura::alert>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Status Alerts -->
@@ -41,10 +41,10 @@ class extends Component {};
                 <x-aura::alert variant="danger" title="Deployment Failure" description="Build process exited with non-zero status code 1." dismissible />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::alert variant="info" title="System Update" description="..." dismissible /&gt;
-&lt;x-aura::alert variant="success" title="Payment Authorized" description="..." dismissible /&gt;
-&lt;x-aura::alert variant="warning" title="Storage Limit Reached" description="..." dismissible /&gt;
-&lt;x-aura::alert variant="danger" title="Deployment Failure" description="..." dismissible /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::alert variant="info" title="System Update" description="..." dismissible />
+<x-aura::alert variant="success" title="Payment Authorized" description="..." dismissible />
+<x-aura::alert variant="warning" title="Storage Limit Reached" description="..." dismissible />
+<x-aura::alert variant="danger" title="Deployment Failure" description="..." dismissible />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Left-Accent Alerts -->
@@ -64,11 +64,11 @@ class extends Component {};
                 </x-aura::alert>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::alert layout="left-accent" variant="info" title="New Feature Unlocked" description="..."&gt;
-    &lt;x-slot:action&gt;
-        &lt;x-aura::button variant="outline" size="xs"&gt;Learn More&lt;/x-aura::button&gt;
-    &lt;/x-slot:action&gt;
-&lt;/x-aura::alert&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::alert layout="left-accent" variant="info" title="New Feature Unlocked" description="...">
+    <x-slot:action>
+        <x-aura::button variant="outline" size="xs">Learn More</x-aura::button>
+    </x-slot:action>
+</x-aura::alert>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Announcement Banner Layout -->
@@ -82,10 +82,10 @@ class extends Component {};
                 </x-aura::alert>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::alert layout="announcement" badge="NEW" title="Aura Wire v2.4.0 Released" description="..."&gt;
-    &lt;x-slot:action&gt;
-        &lt;x-aura::button variant="primary" size="xs"&gt;Read Changelog&lt;/x-aura::button&gt;
-    &lt;/x-slot:action&gt;
-&lt;/x-aura::alert&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::alert layout="announcement" badge="NEW" title="Aura Wire v2.4.0 Released" description="...">
+    <x-slot:action>
+        <x-aura::button variant="primary" size="xs">Read Changelog</x-aura::button>
+    </x-slot:action>
+</x-aura::alert>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

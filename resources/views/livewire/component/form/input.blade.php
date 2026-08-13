@@ -29,7 +29,7 @@ state([
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::input wire:model="email" placeholder="Enter email address" icon="mail" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::input wire:model="email" placeholder="Enter email address" icon="mail" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Standard Input Types -->
@@ -40,8 +40,8 @@ state([
                 <x-aura::input type="password" name="password" placeholder="Enter secure password" value="secret123" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::input name="email" wire:model="email" placeholder="john@example.com" /&gt;
-&lt;x-aura::input type="password" name="password" placeholder="Enter password" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::input name="email" wire:model="email" placeholder="john@example.com" />
+<x-aura::input type="password" name="password" placeholder="Enter password" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Input Sizes -->
@@ -53,9 +53,9 @@ state([
                 <x-aura::input size="lg" placeholder="Large input (lg)" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::input size="sm" placeholder="Small input (sm)" /&gt;
-&lt;x-aura::input size="md" placeholder="Medium input (md)" /&gt;
-&lt;x-aura::input size="lg" placeholder="Large input (lg)" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::input size="sm" placeholder="Small input (sm)" />
+<x-aura::input size="md" placeholder="Medium input (md)" />
+<x-aura::input size="lg" placeholder="Large input (lg)" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Inputs with Icons -->
@@ -87,14 +87,14 @@ state([
                 </x-aura::input>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::input placeholder="Search users..."&gt;
-    &lt;x-slot:icon&gt;&lt;svg class="w-4 h-4" .../&gt;&lt;/x-slot:icon&gt;
-&lt;/x-aura::input&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::input placeholder="Search users...">
+    <x-slot:icon><svg class="w-4 h-4" .../></x-slot:icon>
+</x-aura::input>
 
-&lt;x-aura::input placeholder="0.00"&gt;
-    &lt;x-slot:icon&gt;&lt;span class="text-xs font-bold font-mono"&gt;$&lt;/span&gt;&lt;/x-slot:icon&gt;
-    &lt;x-slot:iconTrailing&gt;&lt;span class="text-xs font-semibold"&gt;USD&lt;/span&gt;&lt;/x-slot:iconTrailing&gt;
-&lt;/x-aura::input&gt;</x-slot:codeSlot>
+<x-aura::input placeholder="0.00">
+    <x-slot:icon><span class="text-xs font-bold font-mono">$</span></x-slot:icon>
+    <x-slot:iconTrailing><span class="text-xs font-semibold">USD</span></x-slot:iconTrailing>
+</x-aura::input>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 4. Validation & Invalid State -->
@@ -105,8 +105,8 @@ state([
                 <x-aura::error message="Please enter a valid email address." />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::input value="invalid-email" invalid /&gt;
-&lt;x-aura::error message="Please enter a valid email address." /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::input value="invalid-email" invalid />
+<x-aura::error message="Please enter a valid email address." />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 5. Disabled State -->
@@ -116,6 +116,6 @@ state([
                 <x-aura::input value="system.admin@acme.internal" disabled />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::input value="system.admin@acme.internal" disabled /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::input value="system.admin@acme.internal" disabled />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

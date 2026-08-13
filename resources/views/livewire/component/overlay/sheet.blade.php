@@ -28,9 +28,9 @@ class extends Component {};
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::sheet name="filters" side="right" title="Filter Records"&gt;
-    &lt;p&gt;Sheet content...&lt;/p&gt;
-&lt;/x-aura::sheet&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::sheet name="filters" side="right" title="Filter Records">
+    <p>Sheet content...</p>
+</x-aura::sheet>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Right Slide-Out Filter Sheet -->
@@ -66,16 +66,16 @@ class extends Component {};
                 </x-aura::sheet>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::button x-on:click="$dispatch('open-sheet', 'filter-sheet')"&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::button x-on:click="$dispatch('open-sheet', 'filter-sheet')">
     Open Filter Sheet
-&lt;/x-aura::button&gt;
+</x-aura::button>
 
-&lt;x-aura::sheet name="filter-sheet" side="right" maxWidth="md" title="Filter Products"&gt;
-    &lt;x-aura::select :options="['All Categories', 'Audio', 'Keyboards']" /&gt;
-    &lt;x-slot:footer&gt;
-        &lt;x-aura::button variant="primary" size="sm"&gt;Apply Filters&lt;/x-aura::button&gt;
-    &lt;/x-slot:footer&gt;
-&lt;/x-aura::sheet&gt;</x-slot:codeSlot>
+<x-aura::sheet name="filter-sheet" side="right" maxWidth="md" title="Filter Products">
+    <x-aura::select :options="['All Categories', 'Audio', 'Keyboards']" />
+    <x-slot:footer>
+        <x-aura::button variant="primary" size="sm">Apply Filters</x-aura::button>
+    </x-slot:footer>
+</x-aura::sheet>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Left Slide-Out Navigation Drawer -->
@@ -97,15 +97,15 @@ class extends Component {};
                 </x-aura::sheet>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::button x-on:click="$dispatch('open-sheet', 'nav-sheet')"&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::button x-on:click="$dispatch('open-sheet', 'nav-sheet')">
     Open Nav Drawer
-&lt;/x-aura::button&gt;
+</x-aura::button>
 
-&lt;x-aura::sheet name="nav-sheet" side="left" maxWidth="xs" title="Navigation"&gt;
-    &lt;ul class="space-y-1"&gt;
-        &lt;li&gt;&lt;a href="/components"&gt;Overview&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/x-aura::sheet&gt;</x-slot:codeSlot>
+<x-aura::sheet name="nav-sheet" side="left" maxWidth="xs" title="Navigation">
+    <ul class="space-y-1">
+        <li><a href="/components">Overview</a></li>
+    </ul>
+</x-aura::sheet>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Bottom Mobile Action Sheet -->
@@ -142,11 +142,11 @@ class extends Component {};
                 </x-aura::sheet>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::sheet name="bottom-sheet" side="bottom" title="Share Document"&gt;
-    &lt;div class="grid grid-cols-4 gap-3"&gt;
-        &lt;button&gt;Copy Link&lt;/button&gt;
-    &lt;/div&gt;
-&lt;/x-aura::sheet&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::sheet name="bottom-sheet" side="bottom" title="Share Document">
+    <div class="grid grid-cols-4 gap-3">
+        <button>Copy Link</button>
+    </div>
+</x-aura::sheet>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 4. Top Notification Bar Sheet -->
@@ -168,8 +168,8 @@ class extends Component {};
                 </x-aura::sheet>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::sheet name="top-sheet" side="top" title="System Maintenance"&gt;
-    &lt;p class="text-xs text-amber-700"&gt;Save drafts before 01:50 UTC.&lt;/p&gt;
-&lt;/x-aura::sheet&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::sheet name="top-sheet" side="top" title="System Maintenance">
+    <p class="text-xs text-amber-700">Save drafts before 01:50 UTC.</p>
+</x-aura::sheet>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

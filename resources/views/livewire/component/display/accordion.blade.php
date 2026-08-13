@@ -24,9 +24,9 @@ title('Accordion - Aura Wire');
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::accordion default="faq-1"&gt;
-    &lt;x-aura::accordion.item name="faq-1" title="Question Title"&gt;Content...&lt;/x-aura::accordion.item&gt;
-&lt;/x-aura::accordion&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::accordion default="faq-1">
+    <x-aura::accordion.item name="faq-1" title="Question Title">Content...</x-aura::accordion.item>
+</x-aura::accordion>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Standard FAQ Accordion -->
@@ -44,14 +44,14 @@ title('Accordion - Aura Wire');
                 </x-aura::accordion.item>
             </x-aura::accordion>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::accordion default="faq-1"&gt;
-    &lt;x-aura::accordion.item name="faq-1" title="What is AuraWire?"&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::accordion default="faq-1">
+    <x-aura::accordion.item name="faq-1" title="What is AuraWire?">
         AuraWire is a sleek Blade component library.
-    &lt;/x-aura::accordion.item&gt;
-    &lt;x-aura::accordion.item name="faq-2" title="How do I install it?"&gt;
+    </x-aura::accordion.item>
+    <x-aura::accordion.item name="faq-2" title="How do I install it?">
         Install via Composer.
-    &lt;/x-aura::accordion.item&gt;
-&lt;/x-aura::accordion&gt;</x-slot:codeSlot>
+    </x-aura::accordion.item>
+</x-aura::accordion>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Multiple Expand Accordion -->
@@ -69,10 +69,10 @@ title('Accordion - Aura Wire');
                 </x-aura::accordion.item>
             </x-aura::accordion>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::accordion multiple :default="['opt-1', 'opt-2']"&gt;
-    &lt;x-aura::accordion.item name="opt-1" title="Notification Preferences"&gt;...&lt;/x-aura::accordion.item&gt;
-    &lt;x-aura::accordion.item name="opt-2" title="Security & Auth"&gt;...&lt;/x-aura::accordion.item&gt;
-&lt;/x-aura::accordion&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::accordion multiple :default="['opt-1', 'opt-2']">
+    <x-aura::accordion.item name="opt-1" title="Notification Preferences">...</x-aura::accordion.item>
+    <x-aura::accordion.item name="opt-2" title="Security & Auth">...</x-aura::accordion.item>
+</x-aura::accordion>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Accordion with Category Icons -->
@@ -87,9 +87,9 @@ title('Accordion - Aura Wire');
                 </x-aura::accordion.item>
             </x-aura::accordion>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::accordion&gt;
-    &lt;x-aura::accordion.item name="sec-1" icon="lock" title="Password Controls"&gt;...&lt;/x-aura::accordion.item&gt;
-    &lt;x-aura::accordion.item name="sec-2" icon="bell" title="Email Notifications"&gt;...&lt;/x-aura::accordion.item&gt;
-&lt;/x-aura::accordion&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::accordion>
+    <x-aura::accordion.item name="sec-1" icon="lock" title="Password Controls">...</x-aura::accordion.item>
+    <x-aura::accordion.item name="sec-2" icon="bell" title="Email Notifications">...</x-aura::accordion.item>
+</x-aura::accordion>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

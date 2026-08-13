@@ -28,7 +28,7 @@ class extends Component {};
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code">
-        <x-slot:codeSlot>&lt;x-aura::kicker&gt;Category Name&lt;/x-aura::kicker&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::kicker>Category Name</x-aura::kicker>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Standard Section Kicker -->
@@ -39,8 +39,8 @@ class extends Component {};
                 <x-aura::heading level="2" size="lg">Aura Wire Design System</x-aura::heading>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::kicker&gt;FEATURED PACKAGE&lt;/x-aura::kicker&gt;
-&lt;x-aura::heading level="2" size="lg"&gt;Aura Wire Design System&lt;/x-aura::heading&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::kicker>FEATURED PACKAGE</x-aura::kicker>
+<x-aura::heading level="2" size="lg">Aura Wire Design System</x-aura::heading>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Sidebar & Group Section Kickers -->
@@ -65,8 +65,8 @@ class extends Component {};
                 </div>
             </x-aura::card>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::kicker class="text-[10px]"&gt;MAIN NAVIGATION&lt;/x-aura::kicker&gt;
-&lt;x-aura::kicker class="text-[10px]"&gt;PROJECT LABELS&lt;/x-aura::kicker&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::kicker class="text-[10px]">MAIN NAVIGATION</x-aura::kicker>
+<x-aura::kicker class="text-[10px]">PROJECT LABELS</x-aura::kicker>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Badge & Icon Accent Kickers -->
@@ -84,10 +84,10 @@ class extends Component {};
                 </x-aura::badge>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::badge variant="subtle" size="sm"&gt;
-    &lt;x-aura::icon name="sparkles" size="xs" class="mr-1 inline-block" /&gt;
-    &lt;span&gt;NEW RELEASE v2.0&lt;/span&gt;
-&lt;/x-aura::badge&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::badge variant="subtle" size="sm">
+    <x-aura::icon name="sparkles" size="xs" class="mr-1 inline-block" />
+    <span>NEW RELEASE v2.0</span>
+</x-aura::badge>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 4. Hero Banner Section Header -->
@@ -105,11 +105,11 @@ class extends Component {};
                 </x-aura::subheading>
             </x-aura::card>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::kicker class="text-indigo-600 font-bold tracking-widest"&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::kicker class="text-indigo-600 font-bold tracking-widest">
     ENTERPRISE DEPLOYMENTS
-&lt;/x-aura::kicker&gt;
-&lt;x-aura::heading level="1" size="display-lg"&gt;
+</x-aura::kicker>
+<x-aura::heading level="1" size="display-lg">
     Scale your infrastructure without friction
-&lt;/x-aura::heading&gt;</x-slot:codeSlot>
+</x-aura::heading>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

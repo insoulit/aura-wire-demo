@@ -24,7 +24,7 @@ title('Separator - Aura Wire');
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::separator label="OR" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::separator label="OR" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- Divider Showcase -->
@@ -36,9 +36,9 @@ title('Separator - Aura Wire');
                     <x-aura::text size="sm" class="text-zinc-500">Bottom Content Section</x-aura::text>
                 </div>
             </x-slot:preview>
-            <x-slot:codeSlot>&lt;x-aura::text size="sm"&gt;Top Content Section&lt;/x-aura::text&gt;
-&lt;x-aura::separator label="OR" /&gt;
-&lt;x-aura::text size="sm"&gt;Bottom Content Section&lt;/x-aura::text&gt;</x-slot:codeSlot>
+            <x-slot:codeSlot>@verbatim<x-aura::text size="sm">Top Content Section</x-aura::text>
+<x-aura::separator label="OR" />
+<x-aura::text size="sm">Bottom Content Section</x-aura::text>@endverbatim</x-slot:codeSlot>
         </x-aura::code>
     
 
@@ -51,9 +51,9 @@ title('Separator - Aura Wire');
                     <x-aura::text size="sm" class="text-zinc-500">Section B</x-aura::text>
                 </div>
             </x-slot:preview>
-            <x-slot:codeSlot>&lt;x-aura::text size="sm"&gt;Section A&lt;/x-aura::text&gt;
-&lt;x-aura::separator /&gt;
-&lt;x-aura::text size="sm"&gt;Section B&lt;/x-aura::text&gt;</x-slot:codeSlot>
+            <x-slot:codeSlot>@verbatim<x-aura::text size="sm">Section A</x-aura::text>
+<x-aura::separator />
+<x-aura::text size="sm">Section B</x-aura::text>@endverbatim</x-slot:codeSlot>
         </x-aura::code>
     
 </div>

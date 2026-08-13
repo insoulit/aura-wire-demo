@@ -24,7 +24,7 @@ title('Installation & Setup Guide - Aura Wire');
 
     <!-- Installation Command Syntax -->
     <x-aura::code variant="dark" title="Composer Installation" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>composer require insoulit/aura-wire</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatimcomposer require insoulit/aura-wire@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- Requirements Card -->
@@ -93,7 +93,7 @@ title('Installation & Setup Guide - Aura Wire');
             </div>
             <x-aura::text size="sm" variant="subtle" class="py-3 block">Run the composer require command in your Laravel root directory:</x-aura::text>
             <x-aura::code class="w-full" language="bash" active="code" :showTabs="false">
-                <x-slot:codeSlot>composer require insoulit/aura-wire</x-slot:codeSlot>
+                <x-slot:codeSlot>@verbatimcomposer require insoulit/aura-wire@endverbatim</x-slot:codeSlot>
             </x-aura::code>
         </x-aura::card>
 
@@ -108,7 +108,7 @@ title('Installation & Setup Guide - Aura Wire');
             </div>
             <x-aura::text size="sm" variant="subtle" class="py-3 block">Publish the configuration and Blade components using Artisan:</x-aura::text>
             <x-aura::code class="w-full" language="bash" active="code" :showTabs="false">
-                <x-slot:codeSlot>php artisan vendor:publish --tag="aura-wire-config"</x-slot:codeSlot>
+                <x-slot:codeSlot>@verbatimphp artisan vendor:publish --tag="aura-wire-config"@endverbatim</x-slot:codeSlot>
             </x-aura::code>
         </x-aura::card>
 
@@ -123,10 +123,10 @@ title('Installation & Setup Guide - Aura Wire');
             </div>
             <x-aura::text size="sm" variant="subtle" class="py-3 block">Ensure your <code class="text-zinc-900 dark:text-white font-mono font-semibold">tailwind.config.js</code> or CSS includes vendor component views:</x-aura::text>
             <x-aura::code class="w-full" language="javascript" active="code" :showTabs="false">
-                <x-slot:codeSlot>content: [
+                <x-slot:codeSlot>@verbatimcontent: [
     './resources/**/*.blade.php',
     './vendor/insoulit/aura-wire/resources/views/**/*.blade.php',
-],</x-slot:codeSlot>
+],@endverbatim</x-slot:codeSlot>
             </x-aura::code>
         </x-aura::card>
 
@@ -147,19 +147,19 @@ title('Installation & Setup Guide - Aura Wire');
                 <div class="space-y-1.5">
                     <div class="text-xs font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">A. Google Fonts Import (&lt;head&gt;)</div>
                     <x-aura::code class="w-full" language="html" active="code" :showTabs="false">
-                        <x-slot:codeSlot>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
-&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
-&lt;link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400..800;1,400..800&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"&gt;</x-slot:codeSlot>
+                        <x-slot:codeSlot>@verbatim<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">@endverbatim</x-slot:codeSlot>
                     </x-aura::code>
                 </div>
 
                 <div class="space-y-1.5">
                     <div class="text-xs font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">Approach 1: Tailwind CSS v4 (<code class="font-mono text-indigo-500 lowercase">resources/css/app.css</code>)</div>
                     <x-aura::code class="w-full" language="css" active="code" :showTabs="false">
-                        <x-slot:codeSlot>@theme {
+                        <x-slot:codeSlot>@verbatim@theme {
   --font-sans: 'Plus Jakarta Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
-}</x-slot:codeSlot>
+}@endverbatim</x-slot:codeSlot>
                     </x-aura::code>
                 </div>
 
@@ -172,7 +172,7 @@ title('Installation & Setup Guide - Aura Wire');
                 <div class="space-y-1.5">
                     <div class="text-xs font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">Approach 2: Tailwind CSS v3 (<code class="font-mono text-indigo-500 lowercase">tailwind.config.js</code>)</div>
                     <x-aura::code class="w-full" language="javascript" active="code" :showTabs="false">
-                        <x-slot:codeSlot>module.exports = {
+                        <x-slot:codeSlot>@verbatimmodule.exports = {
   theme: {
     extend: {
       fontFamily: {
@@ -181,7 +181,7 @@ title('Installation & Setup Guide - Aura Wire');
       },
     },
   },
-}</x-slot:codeSlot>
+}@endverbatim</x-slot:codeSlot>
                     </x-aura::code>
                 </div>
             </div>
@@ -201,7 +201,7 @@ title('Installation & Setup Guide - Aura Wire');
                 <div class="space-y-1.5">
                     <div class="text-xs font-semibold text-zinc-600 dark:text-zinc-400 uppercase tracking-wider">Standard Blade Prefix Syntax</div>
                     <x-aura::code class="w-full" language="html" active="code" :showTabs="false">
-                        <x-slot:codeSlot>&lt;x-aura::button variant="primary"&gt;&lt;span&gt;Create&lt;/span&gt;&lt;/x-aura::button&gt;</x-slot:codeSlot>
+                        <x-slot:codeSlot>@verbatim<x-aura::button variant="primary"><span>Create</span></x-aura::button>@endverbatim</x-slot:codeSlot>
                     </x-aura::code>
                 </div>
             </div>

@@ -24,7 +24,7 @@ title('Progress Bar - Aura Wire');
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::progress-bar :value="75" variant="primary" size="md" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::progress-bar :value="75" variant="primary" size="md" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Color Variants -->
@@ -64,10 +64,10 @@ title('Progress Bar - Aura Wire');
                 </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::progress-bar percent="75" variant="default" size="md" /&gt;
-&lt;x-aura::progress-bar percent="100" variant="emerald" size="md" /&gt;
-&lt;x-aura::progress-bar percent="85" variant="amber" size="md" /&gt;
-&lt;x-aura::progress-bar percent="96" variant="danger" size="md" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::progress-bar percent="75" variant="default" size="md" />
+<x-aura::progress-bar percent="100" variant="emerald" size="md" />
+<x-aura::progress-bar percent="85" variant="amber" size="md" />
+<x-aura::progress-bar percent="96" variant="danger" size="md" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Sizes -->
@@ -90,8 +90,8 @@ title('Progress Bar - Aura Wire');
                 </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::progress-bar percent="40" size="sm" /&gt;
-&lt;x-aura::progress-bar percent="65" size="md" /&gt;
-&lt;x-aura::progress-bar percent="85" size="lg" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::progress-bar percent="40" size="sm" />
+<x-aura::progress-bar percent="65" size="md" />
+<x-aura::progress-bar percent="85" size="lg" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

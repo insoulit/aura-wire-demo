@@ -81,7 +81,7 @@ class extends Component {
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::numbered-list :items="$items" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::numbered-list :items="$items" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Rich Media List with Images & Actions -->
@@ -91,22 +91,22 @@ class extends Component {
                 <x-aura::numbered-list :items="$mediaItems" variant="media" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::numbered-list :items="[
+        <x-slot:codeSlot>@verbatim<x-aura::numbered-list :items="[
     [
-        'title' =&gt; 'Aura Headphones Pro',
-        'subtitle' =&gt; 'Wireless Noise Canceling • $299',
-        'description' =&gt; 'Premium spatial audio with active noise cancellation.',
-        'image' =&gt; 'https://images.unsplash.com/...',
-        'badge' =&gt; 'Top Seller',
+        'title' => 'Aura Headphones Pro',
+        'subtitle' => 'Wireless Noise Canceling • $299',
+        'description' => 'Premium spatial audio with active noise cancellation.',
+        'image' => 'https://images.unsplash.com/...',
+        'badge' => 'Top Seller',
     ],
     [
-        'title' =&gt; 'Minimalist Mechanical Keyboard',
-        'subtitle' =&gt; 'Hot-swappable Switches • $149',
-        'description' =&gt; 'Anodized aluminum chassis with custom linear switches.',
-        'image' =&gt; 'https://images.unsplash.com/...',
-        'badge' =&gt; 'New Arrival',
+        'title' => 'Minimalist Mechanical Keyboard',
+        'subtitle' => 'Hot-swappable Switches • $149',
+        'description' => 'Anodized aluminum chassis with custom linear switches.',
+        'image' => 'https://images.unsplash.com/...',
+        'badge' => 'New Arrival',
     ],
-]" variant="media" /&gt;</x-slot:codeSlot>
+]" variant="media" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Card Grid List with Images -->
@@ -116,10 +116,10 @@ class extends Component {
                 <x-aura::numbered-list :items="$gridCards" variant="grid" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::numbered-list :items="[
-    ['title' =&gt; 'Design System Tokens', 'subtitle' =&gt; 'Color palettes and typography.', 'image' =&gt; 'https://...', 'badge' =&gt; 'Phase 1'],
-    ['title' =&gt; 'Component Library', 'subtitle' =&gt; '40+ production-ready components.', 'image' =&gt; 'https://...', 'badge' =&gt; 'Phase 2'],
-]" variant="grid" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::numbered-list :items="[
+    ['title' => 'Design System Tokens', 'subtitle' => 'Color palettes and typography.', 'image' => 'https://...', 'badge' => 'Phase 1'],
+    ['title' => 'Component Library', 'subtitle' => '40+ production-ready components.', 'image' => 'https://...', 'badge' => 'Phase 2'],
+]" variant="grid" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. Process Step Bar -->
@@ -129,11 +129,11 @@ class extends Component {
                 <x-aura::numbered-list :items="$stepItems" variant="steps" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::numbered-list :items="[
-    ['title' =&gt; 'Install Package', 'subtitle' =&gt; 'composer require insoulit/aura-wire'],
-    ['title' =&gt; 'Publish Assets', 'subtitle' =&gt; 'php artisan aura-wire:install'],
-    ['title' =&gt; 'Build Features', 'subtitle' =&gt; 'Use &lt;x-aura::*&gt; tags in views'],
-]" variant="steps" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::numbered-list :items="[
+    ['title' => 'Install Package', 'subtitle' => 'composer require insoulit/aura-wire'],
+    ['title' => 'Publish Assets', 'subtitle' => 'php artisan aura-wire:install'],
+    ['title' => 'Build Features', 'subtitle' => 'Use <x-aura::*> tags in views'],
+]" variant="steps" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 4. Compact User Avatar List -->
@@ -143,9 +143,9 @@ class extends Component {
                 <x-aura::numbered-list :items="$userAvatars" variant="compact" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::numbered-list :items="[
-    ['title' =&gt; 'Alex Kovacs', 'subtitle' =&gt; 'Lead Product Designer', 'image' =&gt; 'https://...', 'badge' =&gt; 'Admin'],
-    ['title' =&gt; 'Sarah Chen', 'subtitle' =&gt; 'Senior Frontend Architect', 'image' =&gt; 'https://...', 'badge' =&gt; 'Maintainer'],
-]" variant="compact" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::numbered-list :items="[
+    ['title' => 'Alex Kovacs', 'subtitle' => 'Lead Product Designer', 'image' => 'https://...', 'badge' => 'Admin'],
+    ['title' => 'Sarah Chen', 'subtitle' => 'Senior Frontend Architect', 'image' => 'https://...', 'badge' => 'Maintainer'],
+]" variant="compact" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

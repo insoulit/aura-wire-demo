@@ -28,10 +28,10 @@ class extends Component {};
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::navbar&gt;
-    &lt;x-slot:brand&gt;Logo&lt;/x-slot:brand&gt;
-    &lt;x-slot:actions&gt;Actions&lt;/x-slot:actions&gt;
-&lt;/x-aura::navbar&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::navbar>
+    <x-slot:brand>Logo</x-slot:brand>
+    <x-slot:actions>Actions</x-slot:actions>
+</x-aura::navbar>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Default Workspace Application Navbar -->
@@ -67,25 +67,25 @@ class extends Component {};
                 </x-aura::navbar>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::navbar&gt;
-    &lt;x-slot name="brandSlot"&gt;
-        &lt;div class="flex items-center gap-2.5"&gt;
-            &lt;x-aura::icon name="sparkles" size="xs" /&gt;
-            &lt;span class="font-bold text-sm"&gt;Aura Workspace&lt;/span&gt;
-        &lt;/div&gt;
-    &lt;/x-slot&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::navbar>
+    <x-slot name="brandSlot">
+        <div class="flex items-center gap-2.5">
+            <x-aura::icon name="sparkles" size="xs" />
+            <span class="font-bold text-sm">Aura Workspace</span>
+        </div>
+    </x-slot>
 
-    &lt;x-slot name="navigation"&gt;
-        &lt;x-aura::header.item href="#" active&gt;Overview&lt;/x-aura::header.item&gt;
-        &lt;x-aura::header.item href="#"&gt;Projects&lt;/x-aura::header.item&gt;
-        &lt;x-aura::header.item href="#"&gt;Analytics&lt;/x-aura::header.item&gt;
-    &lt;/x-slot&gt;
+    <x-slot name="navigation">
+        <x-aura::header.item href="#" active>Overview</x-aura::header.item>
+        <x-aura::header.item href="#">Projects</x-aura::header.item>
+        <x-aura::header.item href="#">Analytics</x-aura::header.item>
+    </x-slot>
 
-    &lt;x-slot name="actions"&gt;
-        &lt;x-aura::input placeholder="Search... (⌘K)" icon="search" size="sm" /&gt;
-        &lt;x-aura::avatar src="..." size="sm" /&gt;
-    &lt;/x-slot&gt;
-&lt;/x-aura::navbar&gt;</x-slot:codeSlot>
+    <x-slot name="actions">
+        <x-aura::input placeholder="Search... (⌘K)" icon="search" size="sm" />
+        <x-aura::avatar src="..." size="sm" />
+    </x-slot>
+</x-aura::navbar>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Dark Theme Developer Platform Navbar -->
@@ -116,21 +116,21 @@ class extends Component {};
                 </x-aura::navbar>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::navbar class="!bg-zinc-900 !border-zinc-800 !text-white"&gt;
-    &lt;x-slot name="brandSlot"&gt;
-        &lt;span class="font-mono font-black text-white"&gt;&amp;lt;AURA/&amp;gt;&lt;/span&gt;
-        &lt;x-aura::badge variant="positive" size="xs"&gt;OPERATIONAL&lt;/x-aura::badge&gt;
-    &lt;/x-slot&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::navbar class="!bg-zinc-900 !border-zinc-800 !text-white">
+    <x-slot name="brandSlot">
+        <span class="font-mono font-black text-white">&lt;AURA/&gt;</span>
+        <x-aura::badge variant="positive" size="xs">OPERATIONAL</x-aura::badge>
+    </x-slot>
 
-    &lt;x-slot name="navigation"&gt;
-        &lt;x-aura::header.item href="#" active variant="dark"&gt;Documentation&lt;/x-aura::header.item&gt;
-        &lt;x-aura::header.item href="#" variant="dark"&gt;API Reference&lt;/x-aura::header.item&gt;
-    &lt;/x-slot&gt;
+    <x-slot name="navigation">
+        <x-aura::header.item href="#" active variant="dark">Documentation</x-aura::header.item>
+        <x-aura::header.item href="#" variant="dark">API Reference</x-aura::header.item>
+    </x-slot>
 
-    &lt;x-slot name="actions"&gt;
-        &lt;x-aura::button variant="secondary" size="sm"&gt;Console Login&lt;/x-aura::button&gt;
-    &lt;/x-slot&gt;
-&lt;/x-aura::navbar&gt;</x-slot:codeSlot>
+    <x-slot name="actions">
+        <x-aura::button variant="secondary" size="sm">Console Login</x-aura::button>
+    </x-slot>
+</x-aura::navbar>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 3. E-Commerce Storefront Top Navbar -->
@@ -162,20 +162,20 @@ class extends Component {};
                 </x-aura::navbar>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::navbar&gt;
-    &lt;x-slot name="brandSlot"&gt;
-        &lt;span class="font-extrabold tracking-widest uppercase"&gt;AURA STORE&lt;/span&gt;
-    &lt;/x-slot&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::navbar>
+    <x-slot name="brandSlot">
+        <span class="font-extrabold tracking-widest uppercase">AURA STORE</span>
+    </x-slot>
 
-    &lt;x-slot name="navigation"&gt;
-        &lt;x-aura::header.item href="#" active&gt;New Arrivals&lt;/x-aura::header.item&gt;
-        &lt;x-aura::header.item href="#"&gt;Men&lt;/x-aura::header.item&gt;
-    &lt;/x-slot&gt;
+    <x-slot name="navigation">
+        <x-aura::header.item href="#" active>New Arrivals</x-aura::header.item>
+        <x-aura::header.item href="#">Men</x-aura::header.item>
+    </x-slot>
 
-    &lt;x-slot name="actions"&gt;
-        &lt;x-aura::button variant="primary" size="sm" icon="shopping-bag"&gt;Cart (3)&lt;/x-aura::button&gt;
-    &lt;/x-slot&gt;
-&lt;/x-aura::navbar&gt;</x-slot:codeSlot>
+    <x-slot name="actions">
+        <x-aura::button variant="primary" size="sm" icon="shopping-bag">Cart (3)</x-aura::button>
+    </x-slot>
+</x-aura::navbar>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 4. Minimal Product Landing Page Navbar -->
@@ -204,18 +204,18 @@ class extends Component {};
                 </x-aura::navbar>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::navbar&gt;
-    &lt;x-slot name="brandSlot"&gt;acme.inc&lt;/x-slot&gt;
+        <x-slot:codeSlot>@verbatim<x-aura::navbar>
+    <x-slot name="brandSlot">acme.inc</x-slot>
 
-    &lt;x-slot name="navigation"&gt;
-        &lt;x-aura::header.item href="#"&gt;Features&lt;/x-aura::header.item&gt;
-        &lt;x-aura::header.item href="#"&gt;Pricing&lt;/x-aura::header.item&gt;
-    &lt;/x-slot&gt;
+    <x-slot name="navigation">
+        <x-aura::header.item href="#">Features</x-aura::header.item>
+        <x-aura::header.item href="#">Pricing</x-aura::header.item>
+    </x-slot>
 
-    &lt;x-slot name="actions"&gt;
-        &lt;x-aura::button variant="ghost" size="sm"&gt;Sign In&lt;/x-aura::button&gt;
-        &lt;x-aura::button variant="primary" size="sm"&gt;Get Started&lt;/x-aura::button&gt;
-    &lt;/x-slot&gt;
-&lt;/x-aura::navbar&gt;</x-slot:codeSlot>
+    <x-slot name="actions">
+        <x-aura::button variant="ghost" size="sm">Sign In</x-aura::button>
+        <x-aura::button variant="primary" size="sm">Get Started</x-aura::button>
+    </x-slot>
+</x-aura::navbar>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

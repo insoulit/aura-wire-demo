@@ -26,7 +26,7 @@ state(['remember' => true]);
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::checkbox wire:model="remember" label="Remember me" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::checkbox wire:model="remember" label="Remember me" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
     <x-aura::code class="w-full" title="Checkbox Input">
         <x-slot:preview>
@@ -34,6 +34,6 @@ state(['remember' => true]);
                 <x-aura::checkbox wire:model="remember" label="Remember me on this browser" />
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::checkbox wire:model="remember" label="Remember me" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::checkbox wire:model="remember" label="Remember me" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>
