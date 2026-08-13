@@ -1,9 +1,20 @@
 <?php
 
-use function Livewire\Volt\{layout, title};
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
+use Livewire\Volt\Component;
 
-layout('livewire.layout.component');
-title('Skeleton - Aura Wire');
+new 
+#[Layout('livewire.layout.component')] 
+#[Title('Skeleton - Aura Wire')] 
+class extends Component {
+    public bool $isLoading = true;
+
+    public function toggleLoading(): void
+    {
+        $this->isLoading = !$this->isLoading;
+    }
+};
 
 ?>
 
@@ -17,43 +28,170 @@ title('Skeleton - Aura Wire');
             </div>
             <x-aura::heading level="1" size="xl">Skeleton</x-aura::heading>
             <x-aura::subheading size="md">
-                Animated pulsing skeleton placeholders for loading content lines, avatars, buttons, and cards.
+                Animated pulsing placeholders for text lines, avatars, buttons, cards, and complex layout content during async data fetching.
             </x-aura::subheading>
         </div>
     </x-aura::card>
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
-        <x-slot:codeSlot>&lt;x-aura::skeleton variant="text" class="w-48 h-4" /&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::skeleton variant="text" width="60%" />
+<x-aura::skeleton variant="avatar" />
+<x-aura::skeleton variant="button" />
+<x-aura::skeleton variant="card" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 1. Text & Avatar Shimmers -->
-    <x-aura::code class="w-full" title="1. Profile Header Loading State">
+    <!-- 1. Interactive Skeleton Toggle Demo -->
+    <x-aura::code class="w-full" title="1. Interactive Async Content Loading State">
         <x-slot:preview>
-            <x-aura::card class="flex items-center gap-4 w-full max-w-md p-4">
-                <x-aura::skeleton variant="avatar" />
-                <div class="space-y-2 flex-1">
+            <div class="w-full max-w-md space-y-4">
+                <div class="flex items-center justify-between">
+                    <x-aura::text size="xs" variant="subtle" weight="medium">Status: {{ $isLoading ? 'Loading Content...' : 'Data Loaded' }}</x-aura::text>
+                    <x-aura::button variant="secondary" size="xs" wire:click="toggleLoading">
+                        <x-aura::icon name="refresh-cw" size="xs" class="{{ $isLoading ? 'animate-spin' : '' }}" />
+                        <span>{{ $isLoading ? 'Show Loaded Content' : 'Simulate Loading' }}</span>
+                    </x-aura::button>
+                </div>
+
+                <x-aura::card class="p-5">
+                    @if ($isLoading)
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3.5">
+                                <x-aura::skeleton variant="avatar" class="w-10 h-10 shrink-0" />
+                                <div class="space-y-2 flex-1 min-w-0">
+                                    <x-aura::skeleton variant="text" class="h-4 w-36 rounded-md" />
+                                    <x-aura::skeleton variant="text" class="h-3 w-28 rounded-md" />
+                                </div>
+                            </div>
+                            <div class="p-4 rounded-xl border border-zinc-200/80 dark:border-zinc-800 space-y-2.5 bg-zinc-50/50 dark:bg-zinc-900/30">
+                                <x-aura::skeleton variant="text" class="h-3.5 w-44 rounded-md" />
+                                <x-aura::skeleton variant="text" class="h-3 w-full rounded-md" />
+                            </div>
+                            <div class="flex items-center justify-between pt-1">
+                                <x-aura::skeleton variant="badge" class="w-16 h-5" />
+                                <x-aura::skeleton variant="button" class="w-20 h-7 rounded-lg shrink-0" />
+                            </div>
+                        </div>
+                    @else
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3.5">
+                                <x-aura::avatar initials="AK" size="md" class="shrink-0" />
+                                <div class="min-w-0 space-y-0.5">
+                                    <x-aura::heading level="3" size="sm" class="leading-tight">Alex Kovacs</x-aura::heading>
+                                    <x-aura::text size="xs" variant="subtle" class="leading-tight">Senior Product Architect</x-aura::text>
+                                </div>
+                            </div>
+                            <div class="p-4 rounded-xl bg-zinc-100/70 dark:bg-zinc-800/50 border border-zinc-200/60 dark:border-zinc-700/50 space-y-1.5">
+                                <x-aura::text size="xs" weight="semibold" class="text-zinc-900 dark:text-white leading-tight">Quarterly Analytics Report</x-aura::text>
+                                <x-aura::text size="xs" variant="subtle" class="leading-normal">Real-time metrics and revenue performance breakdown across active workspaces.</x-aura::text>
+                            </div>
+                            <div class="flex items-center justify-between pt-0.5">
+                                <x-aura::badge variant="positive" size="sm">Completed</x-aura::badge>
+                                <x-aura::button variant="primary" size="xs">
+                                    <span>View Report</span>
+                                </x-aura::button>
+                            </div>
+                        </div>
+                    @endif
+                </x-aura::card>
+            </div>
+        </x-slot:preview>
+        <x-slot:codeSlot>@verbatim<div class="space-y-4">
+    <div class="flex items-center gap-3.5">
+        <x-aura::skeleton variant="avatar" class="w-10 h-10 shrink-0" />
+        <div class="space-y-2 flex-1">
+            <x-aura::skeleton variant="text" class="h-4 w-36" />
+            <x-aura::skeleton variant="text" class="h-3 w-28" />
+        </div>
+    </div>
+
+    <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 space-y-2.5">
+        <x-aura::skeleton variant="text" class="h-3.5 w-44" />
+        <x-aura::skeleton variant="text" class="h-3 w-full" />
+    </div>
+
+    <div class="flex items-center justify-between pt-1">
+        <x-aura::skeleton variant="badge" class="w-16 h-5" />
+        <x-aura::skeleton variant="button" class="w-20 h-7 rounded-lg" />
+    </div>
+</div>@endverbatim</x-slot:codeSlot>
+    </x-aura::code>
+
+    <!-- 2. Skeleton Variants -->
+    <x-aura::code class="w-full" title="2. Built-in Variant Styles">
+        <x-slot:preview>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl">
+                <!-- Text Lines -->
+                <div class="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200/80 dark:border-zinc-800 space-y-2.5">
+                    <x-aura::text size="xs" weight="bold" class="text-zinc-500 uppercase tracking-wider">Text Variant</x-aura::text>
+                    <x-aura::skeleton variant="text" width="100%" />
+                    <x-aura::skeleton variant="text" width="80%" />
                     <x-aura::skeleton variant="text" width="60%" />
+                </div>
+
+                <!-- Avatar -->
+                <div class="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200/80 dark:border-zinc-800 space-y-3">
+                    <x-aura::text size="xs" weight="bold" class="text-zinc-500 uppercase tracking-wider">Avatar Variant</x-aura::text>
+                    <div class="flex items-center gap-3">
+                        <x-aura::skeleton variant="avatar" class="w-8 h-8" />
+                        <x-aura::skeleton variant="avatar" class="w-10 h-10" />
+                        <x-aura::skeleton variant="avatar" class="w-12 h-12" />
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200/80 dark:border-zinc-800 space-y-3">
+                    <x-aura::text size="xs" weight="bold" class="text-zinc-500 uppercase tracking-wider">Button Variant</x-aura::text>
+                    <div class="flex items-center gap-2">
+                        <x-aura::skeleton variant="button" class="w-20 h-8" />
+                        <x-aura::skeleton variant="button" class="w-28 h-10" />
+                    </div>
+                </div>
+
+                <!-- Card Block -->
+                <div class="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200/80 dark:border-zinc-800 space-y-3">
+                    <x-aura::text size="xs" weight="bold" class="text-zinc-500 uppercase tracking-wider">Card Variant</x-aura::text>
+                    <x-aura::skeleton variant="card" class="h-20 w-full" />
+                </div>
+            </div>
+        </x-slot:preview>
+        <x-slot:codeSlot>@verbatim<x-aura::skeleton variant="text" width="100%" />
+<x-aura::skeleton variant="avatar" class="w-10 h-10" />
+<x-aura::skeleton variant="button" class="w-24 h-9" />
+<x-aura::skeleton variant="card" class="h-24 w-full" />@endverbatim</x-slot:codeSlot>
+    </x-aura::code>
+
+    <!-- 3. List & Table Skeleton Loading -->
+    <x-aura::code class="w-full" title="3. List Feed &amp; Table Row Skeletons">
+        <x-slot:preview>
+            <div class="w-full max-w-xl space-y-3">
+                @for ($i = 0; $i < 3; $i++)
+                    <div class="p-3.5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 flex items-center justify-between gap-4 shadow-2xs">
+                        <div class="flex items-center gap-3 min-w-0 flex-1">
+                            <x-aura::skeleton variant="avatar" class="w-8 h-8 shrink-0" />
+                            <div class="space-y-1.5 flex-1 min-w-0">
+                                <x-aura::skeleton variant="text" width="65%" />
+                                <x-aura::skeleton variant="text" width="40%" />
+                            </div>
+                        </div>
+                        <x-aura::skeleton variant="button" class="w-16 h-7 shrink-0" />
+                    </div>
+                @endfor
+            </div>
+        </x-slot:preview>
+        <x-slot:codeSlot>@verbatim<div class="space-y-3">
+    @for ($i = 0; $i < 3; $i++)
+        <div class="p-3.5 rounded-xl border border-zinc-200 flex items-center justify-between gap-4">
+            <div class="flex items-center gap-3 flex-1">
+                <x-aura::skeleton variant="avatar" class="w-8 h-8" />
+                <div class="space-y-1.5 flex-1">
+                    <x-aura::skeleton variant="text" width="65%" />
                     <x-aura::skeleton variant="text" width="40%" />
                 </div>
-            </x-aura::card>
-        </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::skeleton variant="avatar" /&gt;
-&lt;x-aura::skeleton variant="text" width="60%" /&gt;
-&lt;x-aura::skeleton variant="text" width="40%" /&gt;</x-slot:codeSlot>
-    </x-aura::code>
-
-    <!-- 2. Card Skeleton -->
-    <x-aura::code class="w-full" title="2. Content Card Skeleton Loader">
-        <x-slot:preview>
-            <x-aura::card class="w-full max-w-md p-5 space-y-4">
-                <x-aura::skeleton variant="card" />
-                <x-aura::skeleton variant="text" width="80%" />
-                <x-aura::skeleton variant="button" />
-            </x-aura::card>
-        </x-slot:preview>
-        <x-slot:codeSlot>&lt;x-aura::skeleton variant="card" /&gt;
-&lt;x-aura::skeleton variant="text" width="80%" /&gt;
-&lt;x-aura::skeleton variant="button" /&gt;</x-slot:codeSlot>
+            </div>
+            <x-aura::skeleton variant="button" class="w-16 h-7" />
+        </div>
+    @endfor
+</div>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>
