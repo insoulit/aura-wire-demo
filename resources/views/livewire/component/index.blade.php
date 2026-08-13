@@ -33,7 +33,7 @@ title('Component Directory - Aura Wire');
                 <x-aura::badge variant="neutral">4 Components</x-aura::badge>
             </div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 [&>:nth-child(3n+1):last-child]:lg:col-span-3 [&>:nth-child(3n+2):last-child]:lg:col-span-2 [&>:nth-child(2n+1):last-child]:sm:max-lg:col-span-2">
             <x-aura::card href="/components/heading">
                 <x-aura::heading level="3" size="sm">Heading</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::heading&gt;</x-aura::text>
@@ -68,7 +68,7 @@ title('Component Directory - Aura Wire');
                 <x-aura::badge variant="neutral">7 Components</x-aura::badge>
             </div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 [&>:nth-child(3n+1):last-child]:lg:col-span-3 [&>:nth-child(3n+2):last-child]:lg:col-span-2 [&>:nth-child(2n+1):last-child]:sm:max-lg:col-span-2">
             <x-aura::card href="/components/container">
                 <x-aura::heading level="3" size="sm">Container</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::container&gt;</x-aura::text>
@@ -118,7 +118,7 @@ title('Component Directory - Aura Wire');
                 <x-aura::badge variant="neutral">4 Components</x-aura::badge>
             </div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 [&>:nth-child(3n+1):last-child]:lg:col-span-3 [&>:nth-child(3n+2):last-child]:lg:col-span-2 [&>:nth-child(2n+1):last-child]:sm:max-lg:col-span-2">
             <x-aura::card href="/components/button">
                 <x-aura::heading level="3" size="sm">Button</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::button&gt;</x-aura::text>
@@ -153,7 +153,7 @@ title('Component Directory - Aura Wire');
                 <x-aura::badge variant="neutral">15 Components</x-aura::badge>
             </div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 [&>:nth-child(3n+1):last-child]:lg:col-span-3 [&>:nth-child(3n+2):last-child]:lg:col-span-2 [&>:nth-child(2n+1):last-child]:sm:max-lg:col-span-2">
             <x-aura::card href="/components/input">
                 <x-aura::heading level="3" size="sm">Input</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::input&gt;</x-aura::text>
@@ -243,7 +243,7 @@ title('Component Directory - Aura Wire');
                 <x-aura::badge variant="neutral">18 Components</x-aura::badge>
             </div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 [&>:nth-child(3n+1):last-child]:lg:col-span-3 [&>:nth-child(3n+2):last-child]:lg:col-span-2 [&>:nth-child(2n+1):last-child]:sm:max-lg:col-span-2">
             <x-aura::card href="/components/accordion">
                 <x-aura::heading level="3" size="sm">Accordion</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::accordion&gt;</x-aura::text>
@@ -348,7 +348,7 @@ title('Component Directory - Aura Wire');
                 <x-aura::badge variant="neutral">3 Components</x-aura::badge>
             </div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 [&>:nth-child(3n+1):last-child]:lg:col-span-3 [&>:nth-child(3n+2):last-child]:lg:col-span-2 [&>:nth-child(2n+1):last-child]:sm:max-lg:col-span-2">
             <x-aura::card href="/components/breadcrumb">
                 <x-aura::heading level="3" size="sm">Breadcrumb</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::breadcrumb&gt;</x-aura::text>
@@ -378,7 +378,7 @@ title('Component Directory - Aura Wire');
                 <x-aura::badge variant="neutral">8 Components</x-aura::badge>
             </div>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 [&>:nth-child(3n+1):last-child]:lg:col-span-3 [&>:nth-child(3n+2):last-child]:lg:col-span-2 [&>:nth-child(2n+1):last-child]:sm:max-lg:col-span-2">
             <x-aura::card href="/components/alert">
                 <x-aura::heading level="3" size="sm">Alert</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::alert&gt;</x-aura::text>
