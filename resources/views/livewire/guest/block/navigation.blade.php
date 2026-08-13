@@ -19,17 +19,17 @@ class extends Component {};
                 <x-aura::kicker>Design Blocks</x-aura::kicker>
                 <x-aura::heading level="1" size="lg">Footer</x-aura::heading>
             </div>
-            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" class="shrink-0 gap-1.5">
-                <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 shrink-0" />
+            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" >
+                <x-aura::icon name="arrow-left"  size="xs" />
                 <span>Back</span>
             </x-aura::button>
         </div>
     </div>
 
     <!-- 1. Header Navbar Block -->
-    <x-aura::code class="w-full" title="1. Responsive Application Header Navbar">
+    <x-aura::code  title="1. Responsive Application Header Navbar">
         <x-slot:preview>
-            <x-aura::card class="p-3.5 sm:p-4 w-full border border-zinc-200 dark:border-zinc-800">
+            <x-aura::card >
                 <div class="flex items-center justify-between gap-3 sm:gap-4">
                     <!-- Brand & Desktop Navigation -->
                     <div class="flex items-center gap-4 sm:gap-6 min-w-0">
@@ -37,7 +37,7 @@ class extends Component {};
                             <div class="h-8 w-8 rounded-lg bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 flex items-center justify-center font-bold font-mono text-xs shadow-2xs shrink-0">
                                 AW
                             </div>
-                            <x-aura::heading level="3" size="sm" class="tracking-tight whitespace-nowrap">Aura Wire</x-aura::heading>
+                            <x-aura::heading level="3" size="sm" >Aura Wire</x-aura::heading>
                         </div>
                         <nav class="hidden lg:flex items-center gap-5 text-xs font-medium text-zinc-500 dark:text-zinc-400 shrink-0">
                             <a href="/guest#design-block" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Components</a>
@@ -52,9 +52,9 @@ class extends Component {};
                         <div class="hidden xl:block w-36 shrink-0">
                             <x-aura::input placeholder="Search..." icon="search" size="sm" />
                         </div>
-                        <x-aura::button variant="subtle" size="sm" class="hidden sm:inline-flex shrink-0">Sign In</x-aura::button>
-                        <x-aura::button variant="primary" size="sm" class="shrink-0">Get Started</x-aura::button>
-                        <x-aura::icon-button icon="menu" variant="ghost" size="sm" class="lg:hidden shrink-0" label="Toggle navigation menu" />
+                        <x-aura::button variant="subtle" size="sm" >Sign In</x-aura::button>
+                        <x-aura::button variant="primary" size="sm" >Get Started</x-aura::button>
+                        <x-aura::icon-button icon="menu" variant="ghost" size="sm"  label="Toggle navigation menu" />
                     </div>
                 </div>
             </x-aura::card>
@@ -83,9 +83,9 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. Multi-Column Footer Block -->
-    <x-aura::code class="w-full" title="2. Application Multi-Column Footer">
+    <x-aura::code  title="2. Application Multi-Column Footer">
         <x-slot:preview>
-            <x-aura::card class="p-8 w-full space-y-8 border border-zinc-200 dark:border-zinc-800">
+            <x-aura::card >
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <!-- Brand Column -->
                     <div class="space-y-3 md:col-span-1">
@@ -95,7 +95,7 @@ class extends Component {};
                             </div>
                             <x-aura::heading level="3" size="sm">Aura Wire</x-aura::heading>
                         </div>
-                        <x-aura::text variant="subtle" size="xs" class="leading-relaxed">
+                        <x-aura::text variant="subtle" size="xs" >
                             Crafting production-ready UI components for the modern Laravel Livewire ecosystem.
                         </x-aura::text>
                         <div class="pt-1">
@@ -105,7 +105,7 @@ class extends Component {};
 
                     <!-- Column 2: Product -->
                     <div class="space-y-2.5">
-                        <x-aura::heading level="4" size="xxs" class="text-zinc-400">PRODUCT</x-aura::heading>
+                        <x-aura::heading level="4" size="xxs" >PRODUCT</x-aura::heading>
                         <ul class="space-y-2 text-xs text-zinc-500 dark:text-zinc-400">
                             <li><a href="/guest#design-block" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Component Catalog</a></li>
                             <li><a href="/guest#design-block" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Design Blocks</a></li>
@@ -116,7 +116,7 @@ class extends Component {};
 
                     <!-- Column 3: Resources -->
                     <div class="space-y-2.5">
-                        <x-aura::heading level="4" size="xxs" class="text-zinc-400">RESOURCES</x-aura::heading>
+                        <x-aura::heading level="4" size="xxs" >RESOURCES</x-aura::heading>
                         <ul class="space-y-2 text-xs text-zinc-500 dark:text-zinc-400">
                             <li><a href="/component/installation" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Documentation</a></li>
                             <li><a href="https://github.com" target="_blank" class="hover:text-zinc-900 dark:hover:text-white transition-colors">GitHub Repository</a></li>
@@ -127,7 +127,7 @@ class extends Component {};
 
                     <!-- Column 4: Legal -->
                     <div class="space-y-2.5">
-                        <x-aura::heading level="4" size="xxs" class="text-zinc-400">LEGAL &amp; COMPLIANCE</x-aura::heading>
+                        <x-aura::heading level="4" size="xxs" >LEGAL &amp; COMPLIANCE</x-aura::heading>
                         <ul class="space-y-2 text-xs text-zinc-500 dark:text-zinc-400">
                             <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Privacy Policy</a></li>
                             <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Terms of Service</a></li>

@@ -9,7 +9,7 @@ title('Product Card - Aura Wire');
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Display</x-aura::kicker>
@@ -23,12 +23,12 @@ title('Product Card - Aura Wire');
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::product-card title="Headphones" price="$199" badge="Popular" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. E-Commerce Product Card -->
-    <x-aura::code class="w-full" title="1. E-Commerce Product Showcase Card">
+    <x-aura::code  title="1. E-Commerce Product Showcase Card">
         <x-slot:preview>
             <div class="w-full max-w-sm">
                 <x-aura::product-card
@@ -56,7 +56,7 @@ title('Product Card - Aura Wire');
     </x-aura::code>
 
     <!-- 2. Dual Product Grid -->
-    <x-aura::code class="w-full" title="2. E-Commerce Product Grid Showcase">
+    <x-aura::code  title="2. E-Commerce Product Grid Showcase">
         <x-slot:preview>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl">
                 <x-aura::product-card

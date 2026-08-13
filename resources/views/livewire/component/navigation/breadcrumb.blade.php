@@ -31,7 +31,7 @@ class extends Component {
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Navigation</x-aura::kicker>
@@ -45,12 +45,12 @@ class extends Component {
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::breadcrumb :items="['Home' => '/', 'Docs' => '/docs', 'Breadcrumb' => '#']" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Separators Variety -->
-    <x-aura::code class="w-full" title="1. Separator Varieties (Chevron, Slash, Dot, Arrow)">
+    <x-aura::code  title="1. Separator Varieties (Chevron, Slash, Dot, Arrow)">
         <x-slot:preview>
             <div class="space-y-5 w-full">
                 <div class="space-y-1">
@@ -92,7 +92,7 @@ class extends Component {
     </x-aura::code>
 
     <!-- 2. Rectangular Panel Box vs Pill-Shaped Badges -->
-    <x-aura::code class="w-full" title="2. Rectangular Panel Container vs Circular Pill Badges">
+    <x-aura::code  title="2. Rectangular Panel Container vs Circular Pill Badges">
         <x-slot:preview>
             <div class="space-y-6 w-full">
                 <div class="space-y-2">
@@ -114,7 +114,7 @@ class extends Component {
     </x-aura::code>
 
     <!-- 3. Deep Nested Trail with Home Icon -->
-    <x-aura::code class="w-full" title="3. Deep Navigation Trail with Home Icon">
+    <x-aura::code  title="3. Deep Navigation Trail with Home Icon">
         <x-slot:preview>
             <div class="w-full">
                 <x-aura::breadcrumb :items="$deepItems" :homeIcon="true" separator="chevron" />

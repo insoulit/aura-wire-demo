@@ -13,7 +13,7 @@ class extends Component {};
 
 <div class="w-full max-w-4xl mx-auto space-y-10">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Typography</x-aura::kicker>
@@ -32,7 +32,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 1. Standard Section Subheading -->
-    <x-aura::code class="w-full" title="1. Standard Section Subheading">
+    <x-aura::code  title="1. Standard Section Subheading">
         <x-slot:preview>
             <div class="space-y-2 text-center flex flex-col items-center w-full">
                 <x-aura::heading level="2" size="md">Dashboard Analytics</x-aura::heading>
@@ -48,7 +48,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. Hero Section Header Pattern -->
-    <x-aura::code class="w-full" title="2. Hero Section Header Pattern">
+    <x-aura::code  title="2. Hero Section Header Pattern">
         <x-slot:preview>
             <div class="p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/60 space-y-4 text-center flex flex-col items-center w-full">
                 <x-aura::kicker>PRODUCTIVITY PLATFORM</x-aura::kicker>
@@ -76,7 +76,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 3. Custom HTML Tags (as="h2", as="p", as="span") -->
-    <x-aura::code class="w-full" title="3. Custom HTML Element Types (as prop)">
+    <x-aura::code  title="3. Custom HTML Element Types (as prop)">
         <x-slot:preview>
             <div class="space-y-4 w-full">
                 <x-aura::card class="p-4 space-y-1">
@@ -107,7 +107,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 4. Card & Panel Header Descriptions -->
-    <x-aura::code class="w-full" title="4. Card &amp; Panel Header Descriptions">
+    <x-aura::code  title="4. Card &amp; Panel Header Descriptions">
         <x-slot:preview>
             <x-aura::card class="p-6 space-y-6 w-full">
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-4">

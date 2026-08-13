@@ -13,7 +13,7 @@ class extends Component {};
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Action</x-aura::kicker>
@@ -27,7 +27,7 @@ class extends Component {};
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::action.group>
     <x-aura::button variant="subtle">Day</x-aura::button>
     <x-aura::button variant="subtle">Week</x-aura::button>
@@ -35,7 +35,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 1. Horizontal Segmented Control -->
-    <x-aura::code class="w-full" title="1. Horizontal Segmented Controls">
+    <x-aura::code  title="1. Horizontal Segmented Controls">
         <x-slot:preview>
             <div class="flex flex-col items-center gap-6">
                 <!-- Default Refined Group -->
@@ -71,7 +71,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. Rich Icon Toolbar Group -->
-    <x-aura::code class="w-full" title="2. Icon Action Toolbar Group">
+    <x-aura::code  title="2. Icon Action Toolbar Group">
         <x-slot:preview>
             <div class="flex flex-wrap items-center justify-center gap-4">
                 <x-aura::action.group shape="compact">
@@ -91,7 +91,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 3. Vertical Button Group -->
-    <x-aura::code class="w-full" title="3. Vertical Stacked Button Group">
+    <x-aura::code  title="3. Vertical Stacked Button Group">
         <x-slot:preview>
             <div class="flex items-center justify-center py-2">
                 <x-aura::action.group vertical shape="compact">

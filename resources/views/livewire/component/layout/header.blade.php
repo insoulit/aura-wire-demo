@@ -13,7 +13,7 @@ class extends Component {};
 
 <div class="w-full max-w-5xl mx-auto space-y-12">
     <!-- Header Page Intro -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Layout</x-aura::kicker>
@@ -27,7 +27,7 @@ class extends Component {};
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::header>
     <x-slot:brand>Logo</x-slot:brand>
     <x-slot:actions>Actions</x-slot:actions>
@@ -35,7 +35,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 1. SaaS Workspace Application Header -->
-    <x-aura::code class="w-full" title="1. SaaS Workspace Application Header">
+    <x-aura::code  title="1. SaaS Workspace Application Header">
         <x-slot:preview>
             <div class="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100/60 dark:bg-zinc-950 p-3">
                 <x-aura::header :sticky="false" variant="bordered" class="rounded-xl">
@@ -86,7 +86,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. E-Commerce Store Header -->
-    <x-aura::code class="w-full" title="2. E-Commerce Storefront Header">
+    <x-aura::code  title="2. E-Commerce Storefront Header">
         <x-slot:preview>
             <div class="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-3">
                 <x-aura::header :sticky="false" variant="default" class="rounded-xl">
@@ -127,7 +127,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 3. Minimal Marketing Header -->
-    <x-aura::code class="w-full" title="3. Minimal Landing Page Header">
+    <x-aura::code  title="3. Minimal Landing Page Header">
         <x-slot:preview>
             <div class="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 p-3">
                 <x-aura::header :sticky="false" variant="minimal" class="rounded-xl">
@@ -162,7 +162,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 4. Custom Mobile Navigation Sheet Drawer -->
-    <x-aura::code class="w-full" title="4. Custom Mobile Navigation Sheet Drawer">
+    <x-aura::code  title="4. Custom Mobile Navigation Sheet Drawer">
         <x-slot:preview>
             <div class="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100/60 dark:bg-zinc-950 p-3 space-y-3">
                 <x-aura::header :sticky="false" :responsive="false" variant="bordered" class="rounded-xl">

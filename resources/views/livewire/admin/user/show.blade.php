@@ -35,7 +35,7 @@ class extends Component {
         </div>
         <div class="flex items-center gap-2">
             <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm">
-                <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 mr-1" />
+                <x-aura::icon name="arrow-left"  size="xs" />
                 <span>Back</span>
             </x-aura::button>
         </div>
@@ -48,7 +48,7 @@ class extends Component {
                 <x-aura::avatar :initials="$user['initials']" size="md" />
                 <div>
                     <div class="flex items-center gap-2">
-                        <x-aura::heading level="2" size="xs" class="font-bold text-zinc-900 dark:text-white">{{ $user['name'] }}</x-aura::heading>
+                        <x-aura::heading level="2" size="xs" >{{ $user['name'] }}</x-aura::heading>
                         <x-aura::badge :variant="$user['role_variant']" size="sm">{{ $user['role'] }}</x-aura::badge>
                     </div>
                     <x-aura::text variant="subtle" size="xs">{{ $user['email'] }}</x-aura::text>
@@ -92,7 +92,7 @@ class extends Component {
         <x-slot:footer>
             <div class="flex items-center justify-center w-full">
                 <x-aura::button href="/admin/users/edit" wire:navigate variant="primary" size="sm">
-                    <x-aura::icon name="edit" class="w-3.5 h-3.5 mr-1" />
+                    <x-aura::icon name="edit"  size="xs" />
                     <span>Edit</span>
                 </x-aura::button>
             </div>

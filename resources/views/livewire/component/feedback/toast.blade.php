@@ -13,7 +13,7 @@ class extends Component {};
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Feedback</x-aura::kicker>
@@ -27,12 +27,12 @@ class extends Component {};
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::toast variant="success" title="Changes Saved" message="Profile updated." />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Status Varieties (Success, Warning, Danger, Info) -->
-    <x-aura::code class="w-full" title="1. Status Toast Varieties">
+    <x-aura::code  title="1. Status Toast Varieties">
         <x-slot:preview>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                 <x-aura::toast variant="success" title="Project Published" description="Your project has been deployed to production environment (us-east-1)." />
@@ -48,7 +48,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. Subtle & Neutral Card Toasts with Action Links -->
-    <x-aura::code class="w-full" title="2. Subtle & Neutral Card Toasts with Action Links">
+    <x-aura::code  title="2. Subtle & Neutral Card Toasts with Action Links">
         <x-slot:preview>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                 <x-aura::toast variant="subtle" title="New Message Received" description="Alex Rivera sent 3 new attachments in #design-system.">
@@ -86,7 +86,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 3. Live Interactive Toast Stack Trigger Demo -->
-    <x-aura::code class="w-full" title="3. Live Interactive Toast Stack Trigger Demo">
+    <x-aura::code  title="3. Live Interactive Toast Stack Trigger Demo">
         <x-slot:preview>
             <div
                 x-data="{

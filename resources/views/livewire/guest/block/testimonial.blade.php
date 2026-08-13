@@ -19,44 +19,44 @@ class extends Component {};
                 <x-aura::kicker>Design Blocks</x-aura::kicker>
                 <x-aura::heading level="1" size="lg">Testimonial</x-aura::heading>
             </div>
-            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" class="shrink-0 gap-1.5">
-                <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 shrink-0" />
+            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" >
+                <x-aura::icon name="arrow-left"  size="xs" />
                 <span>Back</span>
             </x-aura::button>
         </div>
     </div>
 
     <!-- Testimonial Block Preview -->
-    <x-aura::code class="w-full" title="Customer Review &amp; Social Proof Block">
+    <x-aura::code  title="Customer Review &amp; Social Proof Block">
         <x-slot:preview>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-                <x-aura::card class="space-y-4 p-6 border border-zinc-200 dark:border-zinc-800">
+                <x-aura::card >
                     <div class="flex items-center gap-1 text-amber-400 text-sm select-none">
                         ★★★★★
                     </div>
-                    <x-aura::text variant="subtle" size="sm" class="italic leading-relaxed">
+                    <x-aura::text variant="subtle" size="sm" >
                         "Aura Wire has cut our UI development time in half. The components are extremely well crafted and responsive across all device breakpoints."
                     </x-aura::text>
                     <div class="flex items-center gap-3 pt-2">
                         <x-aura::avatar initials="JD" status="online" size="sm" />
                         <div>
-                            <x-aura::heading level="4" size="xs" class="text-zinc-900 dark:text-white">Jane Doe</x-aura::heading>
+                            <x-aura::heading level="4" size="xs" >Jane Doe</x-aura::heading>
                             <x-aura::text variant="subtle" size="xs">CTO at TechCorp</x-aura::text>
                         </div>
                     </div>
                 </x-aura::card>
 
-                <x-aura::card class="space-y-4 p-6 border border-zinc-200 dark:border-zinc-800">
+                <x-aura::card >
                     <div class="flex items-center gap-1 text-amber-400 text-sm select-none">
                         ★★★★★
                     </div>
-                    <x-aura::text variant="subtle" size="sm" class="italic leading-relaxed">
+                    <x-aura::text variant="subtle" size="sm" >
                         "The cleanest Blade component library available for TALL stack developers. Worth every single penny for production applications."
                     </x-aura::text>
                     <div class="flex items-center gap-3 pt-2">
                         <x-aura::avatar initials="MS" status="online" size="sm" />
                         <div>
-                            <x-aura::heading level="4" size="xs" class="text-zinc-900 dark:text-white">Marcus Smith</x-aura::heading>
+                            <x-aura::heading level="4" size="xs" >Marcus Smith</x-aura::heading>
                             <x-aura::text variant="subtle" size="xs">Lead Engineer at SaaSify</x-aura::text>
                         </div>
                     </div>

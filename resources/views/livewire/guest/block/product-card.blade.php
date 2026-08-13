@@ -19,24 +19,24 @@ class extends Component {};
                 <x-aura::kicker>Design Blocks</x-aura::kicker>
                 <x-aura::heading level="1" size="lg">Product Card</x-aura::heading>
             </div>
-            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" class="shrink-0 gap-1.5">
-                <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 shrink-0" />
+            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" >
+                <x-aura::icon name="arrow-left"  size="xs" />
                 <span>Back</span>
             </x-aura::button>
         </div>
     </div>
 
     <!-- 1. E-Commerce Masterpiece Product Block -->
-    <x-aura::code class="w-full" title="1. Premium E-Commerce Product Card Block">
+    <x-aura::code  title="1. Premium E-Commerce Product Card Block">
         <x-slot:preview>
             <div class="w-full max-w-md mx-auto">
-                <x-aura::card class="overflow-hidden p-0 border border-zinc-200 dark:border-zinc-800 shadow-md transition-all duration-300 hover:shadow-xl">
+                <x-aura::card >
                     <!-- Image Showcase Area -->
                     <div class="relative w-full h-56 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-950 flex items-center justify-center p-6 group">
-                        <x-aura::badge variant="positive" size="sm" class="absolute top-3 left-3 shadow-sm font-bold">
+                        <x-aura::badge variant="positive" size="sm" >
                             Save $50 (15% OFF)
                         </x-aura::badge>
-                        <x-aura::icon-button icon="heart" variant="ghost" size="sm" class="absolute top-3 right-3 text-white backdrop-blur-md" label="Save wishlist" />
+                        <x-aura::icon-button icon="heart" variant="ghost" size="sm"  label="Save wishlist" />
                         <div class="w-28 h-28 rounded-2xl bg-zinc-800/80 border border-zinc-700/50 flex items-center justify-center text-zinc-300 shadow-2xl group-hover:scale-105 transition-transform duration-300">
                             <svg class="w-14 h-14 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
                         </div>
@@ -77,7 +77,7 @@ class extends Component {};
                                 <span class="text-2xl font-black font-mono tracking-tight text-zinc-900 dark:text-white">$299.00</span>
                                 <span class="text-xs line-through text-zinc-400 font-mono ml-1.5">$349.00</span>
                             </div>
-                            <x-aura::button variant="primary" size="md" class="shadow-sm">
+                            <x-aura::button variant="primary" size="md" >
                                 <x-slot name="icon">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
                                 </x-slot>
@@ -112,10 +112,10 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. Dual Product Grid Showcase -->
-    <x-aura::code class="w-full" title="2. Grid Comparison Layout">
+    <x-aura::code  title="2. Grid Comparison Layout">
         <x-slot:preview>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-3xl">
-                <x-aura::card class="space-y-4">
+                <x-aura::card >
                     <div class="flex items-center justify-between">
                         <x-aura::badge variant="neutral" size="sm">Workspace</x-aura::badge>
                         <x-aura::badge variant="positive" size="sm">Popular</x-aura::badge>
@@ -130,7 +130,7 @@ class extends Component {};
                     </div>
                 </x-aura::card>
 
-                <x-aura::card class="space-y-4">
+                <x-aura::card >
                     <div class="flex items-center justify-between">
                         <x-aura::badge variant="neutral" size="sm">Office</x-aura::badge>
                         <x-aura::badge variant="warning" size="sm">Low Stock</x-aura::badge>

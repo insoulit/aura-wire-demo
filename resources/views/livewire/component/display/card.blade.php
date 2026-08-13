@@ -13,7 +13,7 @@ class extends Component {};
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Display</x-aura::kicker>
@@ -27,7 +27,7 @@ class extends Component {};
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::card class="p-6 space-y-4">
     <x-aura::heading level="3" size="md">Card Title</x-aura::heading>
     <x-aura::text size="sm">Card body content goes here.</x-aura::text>
@@ -35,7 +35,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 1. Standard Header & Footer Card -->
-    <x-aura::code class="w-full" title="1. Standard Header & Action Footer Card">
+    <x-aura::code  title="1. Standard Header & Action Footer Card">
         <x-slot:preview>
             <div class="w-full max-w-lg">
                 <x-aura::card title="Project Statistics" description="Real-time traffic and performance metrics.">
@@ -68,7 +68,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. Metric KPI Cards Grid -->
-    <x-aura::code class="w-full" title="2. Metric KPI Dashboard Cards">
+    <x-aura::code  title="2. Metric KPI Dashboard Cards">
         <x-slot:preview>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
                 <!-- KPI 1 -->
@@ -114,7 +114,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 3. User Profile Card Pattern -->
-    <x-aura::code class="w-full" title="3. User Profile & Account Status Card">
+    <x-aura::code  title="3. User Profile & Account Status Card">
         <x-slot:preview>
             <div class="w-full max-w-md">
                 <x-aura::card>
@@ -149,7 +149,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 4. Featured Card with Floating Badge -->
-    <x-aura::code class="w-full" title="4. Featured Card with Floating Badge">
+    <x-aura::code  title="4. Featured Card with Floating Badge">
         <x-slot:preview>
             <div class="w-full max-w-md relative pt-3">
                 <x-aura::card class="border-2 border-indigo-500 shadow-xl relative">

@@ -13,7 +13,7 @@ class extends Component {};
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card>
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Action</x-aura::kicker>
@@ -27,12 +27,12 @@ class extends Component {};
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code">
         <x-slot:codeSlot>@verbatim<x-aura::button variant="primary" size="md" icon="sparkles">Action</x-aura::button>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Variants -->
-    <x-aura::code class="w-full" title="1. Button Variants">
+    <x-aura::code title="1. Button Variants">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-3">
                 <x-aura::button variant="primary">Primary</x-aura::button>
@@ -56,7 +56,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. Sizes -->
-    <x-aura::code class="w-full" title="2. Button Sizes (xs, sm, md, lg)">
+    <x-aura::code title="2. Button Sizes (xs, sm, md, lg)">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-3">
                 <x-aura::button variant="primary" size="xs">Extra Small (xs)</x-aura::button>
@@ -72,7 +72,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 3. Leading & Trailing Icons -->
-    <x-aura::code class="w-full" title="3. Buttons with Icons">
+    <x-aura::code title="3. Buttons with Icons">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-3">
                 <x-aura::button variant="primary" icon="plus">
@@ -106,7 +106,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 4. Pill & Circular Buttons -->
-    <x-aura::code class="w-full" title="4. Pill &amp; Circular Buttons">
+    <x-aura::code title="4. Pill &amp; Circular Buttons">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-3">
                 <x-aura::button variant="primary" pill>Pill Primary</x-aura::button>
@@ -126,7 +126,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 5. Square Icon Buttons -->
-    <x-aura::code class="w-full" title="5. Square Icon Buttons">
+    <x-aura::code title="5. Square Icon Buttons">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-3">
                 <x-aura::button variant="primary" square size="xs" icon="pencil" />
@@ -141,7 +141,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 6. Disabled & Loading States -->
-    <x-aura::code class="w-full" title="6. Disabled &amp; Loading States">
+    <x-aura::code title="6. Disabled &amp; Loading States">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-3">
                 <x-aura::button variant="primary" disabled>Primary Disabled</x-aura::button>
@@ -156,20 +156,24 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 7. Real-World Action Card Patterns -->
-    <x-aura::code class="w-full" title="7. Real-World Action Card Patterns">
+    <x-aura::code title="7. Real-World Action Card Patterns">
         <x-slot:preview>
             <div class="w-full space-y-4">
                 <!-- Save / Cancel Toolbar -->
-                <x-aura::card class="p-4 bg-zinc-50/80 dark:bg-zinc-900/60 flex items-center justify-between gap-4">
-                    <div>
-                        <p class="text-sm font-semibold text-zinc-900 dark:text-white">Unsaved Changes</p>
-                        <p class="text-xs text-zinc-500">You have unsaved form modifications.</p>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <x-aura::button variant="ghost" size="sm">Discard</x-aura::button>
-                        <x-aura::button variant="primary" size="sm">Save Changes</x-aura::button>
-                    </div>
-                </x-aura::card>
+                <div class="p-4 bg-zinc-50/80 dark:bg-zinc-900/60 rounded-2xl border border-zinc-200 dark:border-zinc-800">
+                    <x-aura::card>
+                        <div class="flex items-center justify-between gap-4">
+                            <div>
+                                <p class="text-sm font-semibold text-zinc-900 dark:text-white">Unsaved Changes</p>
+                                <p class="text-xs text-zinc-500">You have unsaved form modifications.</p>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <x-aura::button variant="secondary" size="sm">Cancel</x-aura::button>
+                                <x-aura::button variant="primary" size="sm">Save Changes</x-aura::button>
+                            </div>
+                        </div>
+                    </x-aura::card>
+                </div>
 
                 <!-- Destructive Confirm Action Bar -->
                 <div class="p-4 rounded-xl border border-red-200 dark:border-red-900/50 bg-red-50/50 dark:bg-red-950/20 flex items-center justify-between gap-4">

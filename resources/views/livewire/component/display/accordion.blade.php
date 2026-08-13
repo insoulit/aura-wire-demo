@@ -9,7 +9,7 @@ title('Accordion - Aura Wire');
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Display</x-aura::kicker>
@@ -23,14 +23,14 @@ title('Accordion - Aura Wire');
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::accordion default="faq-1">
     <x-aura::accordion.item name="faq-1" title="Question Title">Content...</x-aura::accordion.item>
 </x-aura::accordion>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Standard FAQ Accordion -->
-    <x-aura::code class="w-full" title="1. Standard FAQ Accordion (Single Expand)">
+    <x-aura::code  title="1. Standard FAQ Accordion (Single Expand)">
         <x-slot:preview>
             <x-aura::accordion default="faq-1" class="w-full">
                 <x-aura::accordion.item name="faq-1" title="What is AuraWire?">
@@ -55,7 +55,7 @@ title('Accordion - Aura Wire');
     </x-aura::code>
 
     <!-- 2. Multiple Expand Accordion -->
-    <x-aura::code class="w-full" title="2. Multiple Simultaneous Open Items">
+    <x-aura::code  title="2. Multiple Simultaneous Open Items">
         <x-slot:preview>
             <x-aura::accordion multiple :default="['opt-1', 'opt-2']" class="w-full">
                 <x-aura::accordion.item name="opt-1" title="Notification Preferences">
@@ -76,7 +76,7 @@ title('Accordion - Aura Wire');
     </x-aura::code>
 
     <!-- 3. Accordion with Category Icons -->
-    <x-aura::code class="w-full" title="3. Accordion Items with Category Icons">
+    <x-aura::code  title="3. Accordion Items with Category Icons">
         <x-slot:preview>
             <x-aura::accordion class="w-full">
                 <x-aura::accordion.item name="sec-1" icon="lock" title="Password & Security Controls">

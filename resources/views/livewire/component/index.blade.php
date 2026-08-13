@@ -10,7 +10,7 @@ title('Component Directory - Aura Wire');
 
 <div class="w-full space-y-12">
     <!-- Header Banner -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Component Directory</x-aura::kicker>

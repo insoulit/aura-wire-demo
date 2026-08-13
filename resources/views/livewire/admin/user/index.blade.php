@@ -116,20 +116,20 @@ class extends Component {
                 <x-aura::kicker>Administration</x-aura::kicker>
                 <x-aura::heading level="1" size="lg">User Management</x-aura::heading>
             </div>
-            <x-aura::button href="/admin/users/create" wire:navigate variant="primary" size="sm" class="shrink-0 gap-1">
-                <x-aura::icon name="plus" class="w-3.5 h-3.5 shrink-0" />
+            <x-aura::button href="/admin/users/create" wire:navigate variant="primary" size="sm" >
+                <x-aura::icon name="plus"  size="xs" />
                 <span>Create</span>
             </x-aura::button>
         </div>
     </div>
 
     <!-- Ultra-Clean Unified Table Card -->
-    <x-aura::card class="p-0 overflow-hidden">
+    <x-aura::card >
         <x-slot:header>
             <div class="flex flex-col sm:flex-row items-center justify-between gap-4 w-full">
                 <div class="flex items-center gap-3 w-full sm:w-auto">
-                    <x-aura::input wire:model.live="search" placeholder="Search by name or email..." class="w-full sm:w-72" size="sm" />
-                    <x-aura::select wire:model.live="role" size="sm" class="w-40">
+                    <x-aura::input wire:model.live="search" placeholder="Search by name or email..."  size="sm" />
+                    <x-aura::select wire:model.live="role" size="sm" >
                         <option value="all">All Roles</option>
                         <option value="admin">Admins</option>
                         <option value="dev">Developers</option>
@@ -147,7 +147,7 @@ class extends Component {
                     <x-aura::table.column>Role</x-aura::table.column>
                     <x-aura::table.column>Status</x-aura::table.column>
                     <x-aura::table.column>Joined Date</x-aura::table.column>
-                    <x-aura::table.column class="text-right">Actions</x-aura::table.column>
+                    <x-aura::table.column >Actions</x-aura::table.column>
                 </x-aura::table.row>
             </x-aura::table.header>
             <x-aura::table.body>
@@ -157,15 +157,15 @@ class extends Component {
                             <div class="flex items-center gap-3">
                                 <x-aura::avatar :initials="$user['initials']" size="sm" />
                                 <div>
-                                    <x-aura::heading level="3" size="xs" class="font-semibold text-zinc-900 dark:text-white">{{ $user['name'] }}</x-aura::heading>
+                                    <x-aura::heading level="3" size="xs" >{{ $user['name'] }}</x-aura::heading>
                                     <x-aura::text variant="subtle" size="xs">{{ $user['email'] }}</x-aura::text>
                                 </div>
                             </div>
                         </x-aura::table.cell>
                         <x-aura::table.cell><x-aura::badge :variant="$user['role_variant']" size="sm">{{ $user['role_label'] }}</x-aura::badge></x-aura::table.cell>
                         <x-aura::table.cell><x-aura::badge :variant="$user['status_variant']" size="sm">{{ $user['status'] }}</x-aura::badge></x-aura::table.cell>
-                        <x-aura::table.cell class="text-xs text-zinc-500">{{ $user['joined'] }}</x-aura::table.cell>
-                        <x-aura::table.cell class="text-right">
+                        <x-aura::table.cell >{{ $user['joined'] }}</x-aura::table.cell>
+                        <x-aura::table.cell >
                             <div class="flex items-center justify-end gap-1.5">
                                 <x-aura::icon-button icon="show" variant="subtle" size="sm" shape="circle" label="View User" href="/admin/users/show" wire:navigate />
                                 <x-aura::icon-button icon="edit" variant="subtle" size="sm" shape="circle" label="Edit User" href="/admin/users/edit" wire:navigate />
@@ -175,7 +175,7 @@ class extends Component {
                     </x-aura::table.row>
                 @empty
                     <x-aura::table.row>
-                        <x-aura::table.cell colspan="5" class="text-center py-8 text-zinc-500 dark:text-zinc-400">
+                        <x-aura::table.cell colspan="5" >
                             No registered user accounts match your filter criteria.
                         </x-aura::table.cell>
                     </x-aura::table.row>
@@ -191,7 +191,7 @@ class extends Component {
 
                 <div class="flex items-center gap-1.5">
                     <button type="button" wire:click="previousPage" @disabled($currentPage <= 1) class="p-1.5 rounded-full text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 disabled:opacity-40 disabled:cursor-not-allowed transition-colors" aria-label="Previous Page">
-                        <x-aura::icon name="chevron-left" class="w-4 h-4" />
+                        <x-aura::icon name="chevron-left"  size="xs" />
                     </button>
 
                     @for ($i = 1; $i <= $totalPages; $i++)
@@ -201,7 +201,7 @@ class extends Component {
                     @endfor
 
                     <button type="button" wire:click="nextPage({{ $totalPages }})" @disabled($currentPage >= $totalPages) class="p-1.5 rounded-full text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 disabled:opacity-40 disabled:cursor-not-allowed transition-colors" aria-label="Next Page">
-                        <x-aura::icon name="chevron-right" class="w-4 h-4" />
+                        <x-aura::icon name="chevron-right"  size="xs" />
                     </button>
                 </div>
             </div>
@@ -212,7 +212,7 @@ class extends Component {
     <x-aura::modal name="delete-user-modal" variant="centered" maxWidth="sm">
         <div class="flex flex-col items-center text-center space-y-3">
             <div class="w-12 h-12 rounded-2xl bg-red-100 dark:bg-red-950/60 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-800/60 flex items-center justify-center shrink-0 shadow-xs">
-                <x-aura::icon name="trash" class="w-6 h-6" />
+                <x-aura::icon name="trash"  size="md" />
             </div>
             
             <div class="space-y-1">
@@ -225,10 +225,10 @@ class extends Component {
 
         <x-slot:footer>
             <div class="grid grid-cols-2 gap-3 w-full">
-                <x-aura::button variant="secondary" size="sm" class="w-full justify-center" x-on:click="$dispatch('close-modal', 'delete-user-modal')">
+                <x-aura::button variant="secondary" size="sm"  x-on:click="$dispatch('close-modal', 'delete-user-modal')">
                     Cancel
                 </x-aura::button>
-                <x-aura::button variant="danger" size="sm" class="w-full justify-center" x-on:click="$dispatch('close-modal', 'delete-user-modal')">
+                <x-aura::button variant="danger" size="sm"  x-on:click="$dispatch('close-modal', 'delete-user-modal')">
                     Delete
                 </x-aura::button>
             </div>

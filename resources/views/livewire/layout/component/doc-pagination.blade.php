@@ -99,7 +99,7 @@ new class extends Component {
                 @if ($prevPage)
                     <a href="{{ $prevPage['url'] }}" wire:navigate class="group flex flex-col p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 bg-white dark:bg-zinc-900/50 transition-all shadow-2xs h-full justify-center">
                         <span class="text-[11px] font-semibold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider flex items-center gap-1.5 mb-1 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors">
-                            <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 transition-transform group-hover:-translate-x-0.5" />
+                            <x-aura::icon name="arrow-left"  size="xs" />
                             Previous
                         </span>
                         <span class="text-sm font-bold text-zinc-900 dark:text-white group-hover:text-zinc-600 dark:group-hover:text-zinc-300">
@@ -114,7 +114,7 @@ new class extends Component {
                     <a href="{{ $nextPage['url'] }}" wire:navigate class="group flex flex-col items-end p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-600 bg-white dark:bg-zinc-900/50 transition-all shadow-2xs h-full justify-center">
                         <span class="text-[11px] font-semibold text-zinc-400 dark:text-zinc-500 uppercase tracking-wider flex items-center gap-1.5 mb-1 group-hover:text-zinc-900 dark:group-hover:text-white transition-colors">
                             Next
-                            <x-aura::icon name="arrow-right" class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
+                            <x-aura::icon name="arrow-right"  size="xs" />
                         </span>
                         <span class="text-sm font-bold text-zinc-900 dark:text-white group-hover:text-zinc-600 dark:group-hover:text-zinc-300">
                             {{ $nextPage['title'] }}

@@ -24,12 +24,14 @@ class extends Component {
     <div class="space-y-1">
         <div class="flex items-center justify-between gap-4">
             <x-aura::heading level="1" size="lg">Change Profile Picture</x-aura::heading>
-            <x-aura::button variant="secondary" size="sm" href="/dashboard" wire:navigate class="shrink-0">
-                <x-aura::icon name="arrow-left" class="w-4 h-4 mr-1.5 shrink-0 inline-block text-zinc-900 dark:text-white" />
-                <span>Back</span>
-            </x-aura::button>
+            <div class="shrink-0">
+                <x-aura::button variant="secondary" size="sm" href="/dashboard" wire:navigate>
+                    <x-aura::icon name="arrow-left" size="xs" />
+                    <span>Back</span>
+                </x-aura::button>
+            </div>
         </div>
-        <x-aura::subheading size="xs" class="text-zinc-500 dark:text-zinc-400">
+        <x-aura::subheading size="xs">
             Upload and crop your profile avatar for team recognition.
         </x-aura::subheading>
     </div>
@@ -50,7 +52,7 @@ class extends Component {
                     <x-aura::text variant="subtle" size="xs">alex.kovacs@example.com</x-aura::text>
                 </div>
             </div>
-            <x-aura::text variant="subtle" size="xs" class="font-medium">JPG, PNG or GIF (max 5MB)</x-aura::text>
+            <x-aura::text variant="subtle" size="xs">JPG, PNG or GIF (max 5MB)</x-aura::text>
         </div>
 
         <form wire:submit="save" class="space-y-6">

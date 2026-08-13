@@ -9,7 +9,7 @@ title('Badge - Aura Wire');
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Display</x-aura::kicker>
@@ -23,12 +23,12 @@ title('Badge - Aura Wire');
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::badge variant="positive" size="sm">Active</x-aura::badge>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Color Variants -->
-    <x-aura::code class="w-full" title="1. Color & Intent Variants">
+    <x-aura::code  title="1. Color & Intent Variants">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-3">
                 <x-aura::badge variant="neutral">Neutral</x-aura::badge>
@@ -46,7 +46,7 @@ title('Badge - Aura Wire');
     </x-aura::code>
 
     <!-- 2. Badge Sizes -->
-    <x-aura::code class="w-full" title="2. Badge Sizes (sm, md, lg)">
+    <x-aura::code  title="2. Badge Sizes (sm, md, lg)">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-3">
                 <x-aura::badge variant="positive" size="sm">Small (sm)</x-aura::badge>
@@ -60,7 +60,7 @@ title('Badge - Aura Wire');
     </x-aura::code>
 
     <!-- 3. Badges with Icons -->
-    <x-aura::code class="w-full" title="3. Badges with Icons & Dot Indicators">
+    <x-aura::code  title="3. Badges with Icons & Dot Indicators">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-3">
                 <x-aura::badge variant="positive">
@@ -92,7 +92,7 @@ title('Badge - Aura Wire');
     </x-aura::code>
 
     <!-- 4. Real-World Status Table Pattern -->
-    <x-aura::code class="w-full" title="4. Real-World Data Table Status Badges">
+    <x-aura::code  title="4. Real-World Data Table Status Badges">
         <x-slot:preview>
             <div class="w-full space-y-2">
                 <x-aura::card class="p-3 bg-zinc-50/50 dark:bg-zinc-900/50 flex items-center justify-between">
@@ -115,7 +115,7 @@ title('Badge - Aura Wire');
     </x-aura::code>
 
     <!-- 5. Badge Shapes (Pill & Rounded) -->
-    <x-aura::code class="w-full" title="5. Badge Shapes (Pill & Rounded)">
+    <x-aura::code  title="5. Badge Shapes (Pill & Rounded)">
         <x-slot:preview>
             <div class="flex flex-wrap gap-3 items-center">
                 <x-aura::badge pill variant="neutral">Pill Shape (Default)</x-aura::badge>

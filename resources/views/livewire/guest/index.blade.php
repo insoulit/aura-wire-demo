@@ -22,12 +22,12 @@ class extends Component {};
         <div class="space-y-6 max-w-3xl mx-auto flex flex-col items-center">
             <x-aura::kicker>Guest Portal &amp; Showcase</x-aura::kicker>
 
-            <x-aura::heading level="1" size="display-sm" class="tracking-tight text-zinc-900 dark:text-white">
+            <x-aura::heading level="1" size="display-sm" >
                 Ready to Use <br class="hidden sm:block" />
                 Blocks &amp; Templates
             </x-aura::heading>
 
-            <x-aura::subheading class="max-w-xl mx-auto text-base">
+            <x-aura::subheading >
                 Copy-paste composite design blocks with live previews, or explore complete end-to-end full page application templates.
             </x-aura::subheading>
 
@@ -47,7 +47,7 @@ class extends Component {};
             <div class="w-6 h-10 rounded-full border-2 border-zinc-400 dark:border-zinc-600 flex justify-center p-1.5 group-hover:border-zinc-900 dark:group-hover:border-white transition-colors shadow-2xs">
                 <div class="w-1.5 h-2.5 bg-zinc-400 dark:bg-zinc-600 rounded-full group-hover:bg-zinc-900 dark:group-hover:bg-white transition-colors"></div>
             </div>
-            <x-aura::text size="xs" variant="subtle" class="font-medium tracking-wider uppercase text-[11px] group-hover:text-zinc-900 dark:group-hover:text-white transition-colors">
+            <x-aura::text size="xs" variant="subtle" >
                 Scroll Down
             </x-aura::text>
         </a>
@@ -72,18 +72,18 @@ class extends Component {};
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
             <!-- BLOCK 1: Product Card -->
-            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+            <x-aura::card >
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="shopping-bag" class="w-5 h-5" />
+                                <x-aura::icon name="shopping-bag"  size="sm" />
                             </div>
                             <x-aura::badge variant="subtle" size="sm">E-Commerce</x-aura::badge>
                         </div>
 
                         <div class="space-y-2">
-                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                            <x-aura::heading level="3" size="sm" >
                                 Product Card
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
@@ -93,7 +93,7 @@ class extends Component {};
                     </div>
 
                     <div>
-                        <x-aura::button variant="primary" size="md" href="/guest/block/product-card" class="w-full justify-center" icon-trailing="arrow-right">
+                        <x-aura::button variant="primary" size="md" href="/guest/block/product-card"  icon-trailing="arrow-right">
                             Explore Block
                         </x-aura::button>
                     </div>
@@ -101,18 +101,18 @@ class extends Component {};
             </x-aura::card>
 
             <!-- BLOCK 2: Pricing Tier Cards -->
-            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+            <x-aura::card >
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="sparkles" class="w-5 h-5" />
+                                <x-aura::icon name="sparkles"  size="sm" />
                             </div>
                             <x-aura::badge variant="subtle" size="sm">SaaS</x-aura::badge>
                         </div>
 
                         <div class="space-y-2">
-                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                            <x-aura::heading level="3" size="sm" >
                                 Pricing Tier Cards
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
@@ -122,7 +122,7 @@ class extends Component {};
                     </div>
 
                     <div>
-                        <x-aura::button variant="primary" size="md" href="/guest/block/pricing" class="w-full justify-center" icon-trailing="arrow-right">
+                        <x-aura::button variant="primary" size="md" href="/guest/block/pricing"  icon-trailing="arrow-right">
                             Explore Block
                         </x-aura::button>
                     </div>
@@ -130,18 +130,18 @@ class extends Component {};
             </x-aura::card>
 
             <!-- BLOCK 3: Dashboard Widgets -->
-            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+            <x-aura::card >
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="bar-chart-3" class="w-5 h-5" />
+                                <x-aura::icon name="bar-chart-3"  size="sm" />
                             </div>
                             <x-aura::badge variant="subtle" size="sm">Analytics</x-aura::badge>
                         </div>
 
                         <div class="space-y-2">
-                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                            <x-aura::heading level="3" size="sm" >
                                 Dashboard Widgets
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
@@ -151,7 +151,7 @@ class extends Component {};
                     </div>
 
                     <div>
-                        <x-aura::button variant="primary" size="md" href="/guest/block/dashboard" class="w-full justify-center" icon-trailing="arrow-right">
+                        <x-aura::button variant="primary" size="md" href="/guest/block/dashboard"  icon-trailing="arrow-right">
                             Explore Block
                         </x-aura::button>
                     </div>
@@ -159,18 +159,18 @@ class extends Component {};
             </x-aura::card>
 
             <!-- BLOCK 4: Auth & Security -->
-            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+            <x-aura::card >
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="shield-check" class="w-5 h-5" />
+                                <x-aura::icon name="shield-check"  size="sm" />
                             </div>
                             <x-aura::badge variant="subtle" size="sm">Security</x-aura::badge>
                         </div>
 
                         <div class="space-y-2">
-                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                            <x-aura::heading level="3" size="sm" >
                                 Auth &amp; Security
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
@@ -180,7 +180,7 @@ class extends Component {};
                     </div>
 
                     <div>
-                        <x-aura::button variant="primary" size="md" href="/guest/block/auth" class="w-full justify-center" icon-trailing="arrow-right">
+                        <x-aura::button variant="primary" size="md" href="/guest/block/auth"  icon-trailing="arrow-right">
                             Explore Block
                         </x-aura::button>
                     </div>
@@ -188,18 +188,18 @@ class extends Component {};
             </x-aura::card>
 
             <!-- BLOCK 5: User Profile -->
-            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+            <x-aura::card >
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="user" class="w-5 h-5" />
+                                <x-aura::icon name="user"  size="sm" />
                             </div>
                             <x-aura::badge variant="subtle" size="sm">Account</x-aura::badge>
                         </div>
 
                         <div class="space-y-2">
-                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                            <x-aura::heading level="3" size="sm" >
                                 User Profile
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
@@ -209,7 +209,7 @@ class extends Component {};
                     </div>
 
                     <div>
-                        <x-aura::button variant="primary" size="md" href="/guest/block/profile" class="w-full justify-center" icon-trailing="arrow-right">
+                        <x-aura::button variant="primary" size="md" href="/guest/block/profile"  icon-trailing="arrow-right">
                             Explore Block
                         </x-aura::button>
                     </div>
@@ -217,18 +217,18 @@ class extends Component {};
             </x-aura::card>
 
             <!-- BLOCK 6: Hero Header -->
-            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+            <x-aura::card >
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="layout" class="w-5 h-5" />
+                                <x-aura::icon name="layout"  size="sm" />
                             </div>
                             <x-aura::badge variant="subtle" size="sm">Landing</x-aura::badge>
                         </div>
 
                         <div class="space-y-2">
-                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                            <x-aura::heading level="3" size="sm" >
                                 Hero Header
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
@@ -238,7 +238,7 @@ class extends Component {};
                     </div>
 
                     <div>
-                        <x-aura::button variant="primary" size="md" href="/guest/block/hero" class="w-full justify-center" icon-trailing="arrow-right">
+                        <x-aura::button variant="primary" size="md" href="/guest/block/hero"  icon-trailing="arrow-right">
                             Explore Block
                         </x-aura::button>
                     </div>
@@ -246,18 +246,18 @@ class extends Component {};
             </x-aura::card>
 
             <!-- BLOCK 7: Feature Grid -->
-            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+            <x-aura::card >
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="grid" class="w-5 h-5" />
+                                <x-aura::icon name="grid"  size="sm" />
                             </div>
                             <x-aura::badge variant="subtle" size="sm">Features</x-aura::badge>
                         </div>
 
                         <div class="space-y-2">
-                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                            <x-aura::heading level="3" size="sm" >
                                 Feature Grid
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
@@ -267,7 +267,7 @@ class extends Component {};
                     </div>
 
                     <div>
-                        <x-aura::button variant="primary" size="md" href="/guest/block/feature" class="w-full justify-center" icon-trailing="arrow-right">
+                        <x-aura::button variant="primary" size="md" href="/guest/block/feature"  icon-trailing="arrow-right">
                             Explore Block
                         </x-aura::button>
                     </div>
@@ -275,18 +275,18 @@ class extends Component {};
             </x-aura::card>
 
             <!-- BLOCK 8: CTA Banner -->
-            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+            <x-aura::card >
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="zap" class="w-5 h-5" />
+                                <x-aura::icon name="zap"  size="sm" />
                             </div>
                             <x-aura::badge variant="subtle" size="sm">Conversion</x-aura::badge>
                         </div>
 
                         <div class="space-y-2">
-                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                            <x-aura::heading level="3" size="sm" >
                                 CTA Banner
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
@@ -296,7 +296,7 @@ class extends Component {};
                     </div>
 
                     <div>
-                        <x-aura::button variant="primary" size="md" href="/guest/block/cta" class="w-full justify-center" icon-trailing="arrow-right">
+                        <x-aura::button variant="primary" size="md" href="/guest/block/cta"  icon-trailing="arrow-right">
                             Explore Block
                         </x-aura::button>
                     </div>
@@ -304,18 +304,18 @@ class extends Component {};
             </x-aura::card>
 
             <!-- BLOCK 9: Testimonial -->
-            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+            <x-aura::card >
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="heart" class="w-5 h-5" />
+                                <x-aura::icon name="heart"  size="sm" />
                             </div>
                             <x-aura::badge variant="subtle" size="sm">Reviews</x-aura::badge>
                         </div>
 
                         <div class="space-y-2">
-                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                            <x-aura::heading level="3" size="sm" >
                                 Testimonial
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
@@ -325,7 +325,7 @@ class extends Component {};
                     </div>
 
                     <div>
-                        <x-aura::button variant="primary" size="md" href="/guest/block/testimonial" class="w-full justify-center" icon-trailing="arrow-right">
+                        <x-aura::button variant="primary" size="md" href="/guest/block/testimonial"  icon-trailing="arrow-right">
                             Explore Block
                         </x-aura::button>
                     </div>
@@ -333,18 +333,18 @@ class extends Component {};
             </x-aura::card>
 
             <!-- BLOCK 10: Modal -->
-            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+            <x-aura::card >
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="layers" class="w-5 h-5" />
+                                <x-aura::icon name="layers"  size="sm" />
                             </div>
                             <x-aura::badge variant="subtle" size="sm">Overlay</x-aura::badge>
                         </div>
 
                         <div class="space-y-2">
-                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                            <x-aura::heading level="3" size="sm" >
                                 Modal
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
@@ -354,7 +354,7 @@ class extends Component {};
                     </div>
 
                     <div>
-                        <x-aura::button variant="primary" size="md" href="/guest/block/modal" class="w-full justify-center" icon-trailing="arrow-right">
+                        <x-aura::button variant="primary" size="md" href="/guest/block/modal"  icon-trailing="arrow-right">
                             Explore Block
                         </x-aura::button>
                     </div>
@@ -362,18 +362,18 @@ class extends Component {};
             </x-aura::card>
 
             <!-- BLOCK 11: Slide Over -->
-            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+            <x-aura::card >
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="sidebar" class="w-5 h-5" />
+                                <x-aura::icon name="sidebar"  size="sm" />
                             </div>
                             <x-aura::badge variant="subtle" size="sm">Drawer</x-aura::badge>
                         </div>
 
                         <div class="space-y-2">
-                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                            <x-aura::heading level="3" size="sm" >
                                 Slide Over
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
@@ -383,7 +383,7 @@ class extends Component {};
                     </div>
 
                     <div>
-                        <x-aura::button variant="primary" size="md" href="/guest/block/slide-over" class="w-full justify-center" icon-trailing="arrow-right">
+                        <x-aura::button variant="primary" size="md" href="/guest/block/slide-over"  icon-trailing="arrow-right">
                             Explore Block
                         </x-aura::button>
                     </div>
@@ -391,18 +391,18 @@ class extends Component {};
             </x-aura::card>
 
             <!-- BLOCK 12: Timeline -->
-            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+            <x-aura::card >
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="clock" class="w-5 h-5" />
+                                <x-aura::icon name="clock"  size="sm" />
                             </div>
                             <x-aura::badge variant="subtle" size="sm">Activity</x-aura::badge>
                         </div>
 
                         <div class="space-y-2">
-                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                            <x-aura::heading level="3" size="sm" >
                                 Timeline
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
@@ -412,7 +412,7 @@ class extends Component {};
                     </div>
 
                     <div>
-                        <x-aura::button variant="primary" size="md" href="/guest/block/timeline" class="w-full justify-center" icon-trailing="arrow-right">
+                        <x-aura::button variant="primary" size="md" href="/guest/block/timeline"  icon-trailing="arrow-right">
                             Explore Block
                         </x-aura::button>
                     </div>
@@ -420,18 +420,18 @@ class extends Component {};
             </x-aura::card>
 
             <!-- BLOCK 13: Empty State -->
-            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+            <x-aura::card >
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="folder-open" class="w-5 h-5" />
+                                <x-aura::icon name="folder-open"  size="sm" />
                             </div>
                             <x-aura::badge variant="subtle" size="sm">States</x-aura::badge>
                         </div>
 
                         <div class="space-y-2">
-                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                            <x-aura::heading level="3" size="sm" >
                                 Empty State
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
@@ -441,7 +441,7 @@ class extends Component {};
                     </div>
 
                     <div>
-                        <x-aura::button variant="primary" size="md" href="/guest/block/empty-state" class="w-full justify-center" icon-trailing="arrow-right">
+                        <x-aura::button variant="primary" size="md" href="/guest/block/empty-state"  icon-trailing="arrow-right">
                             Explore Block
                         </x-aura::button>
                     </div>
@@ -449,18 +449,18 @@ class extends Component {};
             </x-aura::card>
 
             <!-- BLOCK 14: FAQ Accordion -->
-            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+            <x-aura::card >
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="help-circle" class="w-5 h-5" />
+                                <x-aura::icon name="help-circle"  size="sm" />
                             </div>
                             <x-aura::badge variant="subtle" size="sm">Support</x-aura::badge>
                         </div>
 
                         <div class="space-y-2">
-                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                            <x-aura::heading level="3" size="sm" >
                                 FAQ Accordion
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
@@ -470,7 +470,7 @@ class extends Component {};
                     </div>
 
                     <div>
-                        <x-aura::button variant="primary" size="md" href="/guest/block/faq" class="w-full justify-center" icon-trailing="arrow-right">
+                        <x-aura::button variant="primary" size="md" href="/guest/block/faq"  icon-trailing="arrow-right">
                             Explore Block
                         </x-aura::button>
                     </div>
@@ -478,18 +478,18 @@ class extends Component {};
             </x-aura::card>
 
             <!-- BLOCK 15: Footer -->
-            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+            <x-aura::card >
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="compass" class="w-5 h-5" />
+                                <x-aura::icon name="compass"  size="sm" />
                             </div>
                             <x-aura::badge variant="subtle" size="sm">Structure</x-aura::badge>
                         </div>
 
                         <div class="space-y-2">
-                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                            <x-aura::heading level="3" size="sm" >
                                 Footer
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
@@ -499,7 +499,7 @@ class extends Component {};
                     </div>
 
                     <div>
-                        <x-aura::button variant="primary" size="md" href="/guest/block/navigation" class="w-full justify-center" icon-trailing="arrow-right">
+                        <x-aura::button variant="primary" size="md" href="/guest/block/navigation"  icon-trailing="arrow-right">
                             Explore Block
                         </x-aura::button>
                     </div>
@@ -528,17 +528,17 @@ class extends Component {};
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
             <!-- TEMPLATE 1: E-Commerce Storefront -->
-            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+            <x-aura::card >
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <div class="h-11 w-11 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center font-bold shadow-2xs">
-                                <x-aura::icon name="shopping-bag" class="w-5 h-5" />
+                                <x-aura::icon name="shopping-bag"  size="sm" />
                             </div>
                         </div>
 
                         <div class="space-y-2">
-                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                            <x-aura::heading level="3" size="sm" >
                                 E-Commerce Storefront
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
@@ -548,7 +548,7 @@ class extends Component {};
                     </div>
 
                     <div>
-                        <x-aura::button variant="primary" size="md" href="/guest/template/ecommerce" class="w-full justify-center" icon-trailing="arrow-right">
+                        <x-aura::button variant="primary" size="md" href="/guest/template/ecommerce"  icon-trailing="arrow-right">
                             View Template
                         </x-aura::button>
                     </div>
@@ -556,17 +556,17 @@ class extends Component {};
             </x-aura::card>
 
             <!-- TEMPLATE 2: Personal Portfolio -->
-            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+            <x-aura::card >
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <div class="h-11 w-11 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center font-bold shadow-2xs">
-                                <x-aura::icon name="palette" class="w-5 h-5" />
+                                <x-aura::icon name="palette"  size="sm" />
                             </div>
                         </div>
 
                         <div class="space-y-2">
-                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                            <x-aura::heading level="3" size="sm" >
                                 Personal Portfolio
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
@@ -576,7 +576,7 @@ class extends Component {};
                     </div>
 
                     <div>
-                        <x-aura::button variant="primary" size="md" href="/guest/template/portfolio" class="w-full justify-center" icon-trailing="arrow-right">
+                        <x-aura::button variant="primary" size="md" href="/guest/template/portfolio"  icon-trailing="arrow-right">
                             View Template
                         </x-aura::button>
                     </div>
@@ -584,17 +584,17 @@ class extends Component {};
             </x-aura::card>
 
             <!-- TEMPLATE 3: Restaurant & Dining -->
-            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+            <x-aura::card >
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <div class="h-11 w-11 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center font-bold shadow-2xs">
-                                <x-aura::icon name="utensils" class="w-5 h-5" />
+                                <x-aura::icon name="utensils"  size="sm" />
                             </div>
                         </div>
 
                         <div class="space-y-2">
-                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                            <x-aura::heading level="3" size="sm" >
                                 Restaurant &amp; Dining
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
@@ -604,7 +604,7 @@ class extends Component {};
                     </div>
 
                     <div>
-                        <x-aura::button variant="primary" size="md" href="/guest/template/restaurant" class="w-full justify-center" icon-trailing="arrow-right">
+                        <x-aura::button variant="primary" size="md" href="/guest/template/restaurant"  icon-trailing="arrow-right">
                             View Template
                         </x-aura::button>
                     </div>
@@ -612,17 +612,17 @@ class extends Component {};
             </x-aura::card>
 
             <!-- TEMPLATE 4: SaaS Application -->
-            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+            <x-aura::card >
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <div class="h-11 w-11 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center font-bold shadow-2xs">
-                                <x-aura::icon name="rocket" class="w-5 h-5" />
+                                <x-aura::icon name="rocket"  size="sm" />
                             </div>
                         </div>
 
                         <div class="space-y-2">
-                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                            <x-aura::heading level="3" size="sm" >
                                 SaaS Application
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
@@ -632,7 +632,7 @@ class extends Component {};
                     </div>
 
                     <div>
-                        <x-aura::button variant="primary" size="md" href="/guest/template/saas" class="w-full justify-center" icon-trailing="arrow-right">
+                        <x-aura::button variant="primary" size="md" href="/guest/template/saas"  icon-trailing="arrow-right">
                             View Template
                         </x-aura::button>
                     </div>
@@ -640,17 +640,17 @@ class extends Component {};
             </x-aura::card>
 
             <!-- TEMPLATE 5: Creative Agency -->
-            <x-aura::card class="h-full hover:border-zinc-400 dark:hover:border-zinc-600 transition-all group p-6">
+            <x-aura::card >
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <div class="h-11 w-11 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center font-bold shadow-2xs">
-                                <x-aura::icon name="zap" class="w-5 h-5" />
+                                <x-aura::icon name="zap"  size="sm" />
                             </div>
                         </div>
 
                         <div class="space-y-2">
-                            <x-aura::heading level="3" size="sm" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
+                            <x-aura::heading level="3" size="sm" >
                                 Creative Agency
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
@@ -660,7 +660,7 @@ class extends Component {};
                     </div>
 
                     <div>
-                        <x-aura::button variant="primary" size="md" href="/guest/template/agency" class="w-full justify-center" icon-trailing="arrow-right">
+                        <x-aura::button variant="primary" size="md" href="/guest/template/agency"  icon-trailing="arrow-right">
                             View Template
                         </x-aura::button>
                     </div>

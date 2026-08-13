@@ -19,26 +19,26 @@ class extends Component {};
                 <x-aura::kicker>Design Blocks</x-aura::kicker>
                 <x-aura::heading level="1" size="lg">Dashboard Widgets</x-aura::heading>
             </div>
-            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" class="shrink-0 gap-1.5">
-                <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 shrink-0" />
+            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" >
+                <x-aura::icon name="arrow-left"  size="xs" />
                 <span>Back</span>
             </x-aura::button>
         </div>
     </div>
 
     <!-- Dashboard Widgets Block -->
-    <x-aura::code class="w-full" title="Analytics &amp; Server Health Dashboard Block">
+    <x-aura::code  title="Analytics &amp; Server Health Dashboard Block">
         <x-slot:preview>
             <div class="space-y-6 w-full">
                 <!-- 3 Metric Summary Cards -->
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <x-aura::card class="space-y-2">
+                    <x-aura::card >
                         <x-aura::kicker>Gross Monthly Sales</x-aura::kicker>
                         <p class="text-2xl font-black font-mono tracking-tight text-zinc-900 dark:text-white">$84,120.00</p>
                         <x-aura::tag variant="success" size="sm">+18.4%</x-aura::tag>
                     </x-aura::card>
 
-                    <x-aura::card class="space-y-2">
+                    <x-aura::card >
                         <x-aura::kicker>Active Team Members</x-aura::kicker>
                         <p class="text-2xl font-black font-mono tracking-tight text-zinc-900 dark:text-white">42 Active</p>
                         <div class="flex items-center gap-1.5 pt-1">
@@ -48,7 +48,7 @@ class extends Component {};
                         </div>
                     </x-aura::card>
 
-                    <x-aura::card class="space-y-2">
+                    <x-aura::card >
                         <x-aura::kicker>Cluster Infrastructure</x-aura::kicker>
                         <p class="text-2xl font-black font-mono tracking-tight text-zinc-900 dark:text-white">99.98% SLA</p>
                         <x-aura::tag variant="success" size="sm">Operational</x-aura::tag>

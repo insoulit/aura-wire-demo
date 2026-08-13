@@ -53,7 +53,7 @@ class extends Component {
         </div>
         <div class="flex items-center gap-2">
             <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm">
-                <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 mr-1" />
+                <x-aura::icon name="arrow-left"  size="xs" />
                 <span>Back</span>
             </x-aura::button>
         </div>
@@ -122,7 +122,7 @@ class extends Component {
                     </x-aura::button>
 
                     <x-aura::button type="submit" variant="primary" size="sm">
-                        <x-aura::icon name="plus" class="w-3.5 h-3.5 mr-1" />
+                        <x-aura::icon name="plus"  size="xs" />
                         <span>Create</span>
                     </x-aura::button>
                 </div>

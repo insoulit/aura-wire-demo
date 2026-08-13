@@ -34,13 +34,13 @@ class extends Component {
     <div class="rounded-3xl bg-zinc-100/90 dark:bg-zinc-900 text-zinc-900 dark:text-white p-8 md:p-12 relative overflow-hidden border border-zinc-200/80 dark:border-zinc-800 shadow-sm">
         <div class="max-w-2xl space-y-4">
             <div class="inline-flex items-center gap-2">
-                <x-aura::kicker class="text-zinc-500">🍽️ L'AURA BISTRO &amp; GRILL</x-aura::kicker>
+                <x-aura::kicker >🍽️ L'AURA BISTRO &amp; GRILL</x-aura::kicker>
                 <x-aura::badge variant="neutral" size="sm">★ 4.9 Michelin Recommended</x-aura::badge>
             </div>
-            <x-aura::heading level="1" size="display-md" class="text-zinc-900 dark:text-white">
+            <x-aura::heading level="1" size="display-md" >
                 Artisanal Culinary Craft &amp; Fine Dining
             </x-aura::heading>
-            <x-aura::subheading class="text-zinc-600 dark:text-zinc-400 text-base">
+            <x-aura::subheading >
                 Fresh seasonal ingredients, wood-fired specialties, and curated organic wine pairings served in a cozy modern atmosphere.
             </x-aura::subheading>
             <div class="pt-2 flex flex-wrap gap-3">
@@ -73,7 +73,7 @@ class extends Component {
         <!-- Menu Item Cards -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Item 1 -->
-            <x-aura::card class="flex flex-col justify-between hover:border-zinc-900 dark:hover:border-white transition-all border border-zinc-200 dark:border-zinc-800">
+            <x-aura::card >
                 <div class="space-y-3">
                     <div class="flex items-center justify-between">
                         <x-aura::heading level="3" size="sm">Truffle Wild Mushroom Arancini</x-aura::heading>
@@ -88,7 +88,7 @@ class extends Component {
             </x-aura::card>
 
             <!-- Item 2 -->
-            <x-aura::card class="flex flex-col justify-between hover:border-zinc-900 dark:hover:border-white transition-all border border-zinc-200 dark:border-zinc-800">
+            <x-aura::card >
                 <div class="space-y-3">
                     <div class="flex items-center justify-between">
                         <x-aura::heading level="3" size="sm">Wood-Fired Ribeye Steak</x-aura::heading>

@@ -19,17 +19,17 @@ class extends Component {};
                 <x-aura::kicker>Design Blocks</x-aura::kicker>
                 <x-aura::heading level="1" size="lg">CTA Banners</x-aura::heading>
             </div>
-            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" class="shrink-0 gap-1.5">
-                <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 shrink-0" />
+            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" >
+                <x-aura::icon name="arrow-left"  size="xs" />
                 <span>Back</span>
             </x-aura::button>
         </div>
     </div>
 
     <!-- 1. Promotional CTA Banner -->
-    <x-aura::code class="w-full" title="1. High-Converting Promotional CTA Banner">
+    <x-aura::code  title="1. High-Converting Promotional CTA Banner">
         <x-slot:preview>
-            <x-aura::card class="p-8 w-full border border-zinc-200 dark:border-zinc-800">
+            <x-aura::card >
                 <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                     <div class="space-y-3 max-w-xl">
                         <div class="flex items-center gap-2">
@@ -44,8 +44,8 @@ class extends Component {};
                         </div>
                     </div>
                     <div class="flex items-center gap-3 shrink-0 w-full sm:w-auto">
-                        <x-aura::button variant="subtle" size="md" class="w-full sm:w-auto">Learn More</x-aura::button>
-                        <x-aura::button variant="primary" size="md" class="w-full sm:w-auto">Get Started</x-aura::button>
+                        <x-aura::button variant="subtle" size="md" >Learn More</x-aura::button>
+                        <x-aura::button variant="primary" size="md" >Get Started</x-aura::button>
                     </div>
                 </div>
             </x-aura::card>
@@ -70,9 +70,9 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. Newsletter CTA Banner -->
-    <x-aura::code class="w-full" title="2. Newsletter Subscription CTA Card">
+    <x-aura::code  title="2. Newsletter Subscription CTA Card">
         <x-slot:preview>
-            <x-aura::card class="p-8 w-full border border-zinc-200 dark:border-zinc-800 text-center flex flex-col items-center justify-center space-y-4">
+            <x-aura::card >
                 <div class="space-y-1.5 max-w-lg mx-auto">
                     <x-aura::heading level="2" size="md">Join 10,000+ Laravel Developers</x-aura::heading>
                     <x-aura::text variant="subtle" size="sm">
@@ -83,7 +83,7 @@ class extends Component {};
                     <div class="flex-1 w-full">
                         <x-aura::input placeholder="Enter your work email..." icon="mail" />
                     </div>
-                    <x-aura::button variant="primary" size="md" class="w-full sm:w-auto shrink-0">
+                    <x-aura::button variant="primary" size="md" >
                         Subscribe
                     </x-aura::button>
                 </div>

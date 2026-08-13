@@ -9,7 +9,7 @@ title('Tag - Aura Wire');
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Display</x-aura::kicker>
@@ -23,12 +23,12 @@ title('Tag - Aura Wire');
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::tag variant="primary" shape="rounded" size="md">Label</x-aura::tag>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Variants -->
-    <x-aura::code class="w-full" title="1. Color Variants">
+    <x-aura::code  title="1. Color Variants">
         <x-slot:preview>
             <div class="flex flex-wrap gap-2.5 items-center">
                 <x-aura::tag variant="default">Default Tag</x-aura::tag>
@@ -46,7 +46,7 @@ title('Tag - Aura Wire');
     </x-aura::code>
 
     <!-- 2. Sizes -->
-    <x-aura::code class="w-full" title="2. Sizes (with Enhanced X-Axis Padding)">
+    <x-aura::code  title="2. Sizes (with Enhanced X-Axis Padding)">
         <x-slot:preview>
             <div class="flex flex-wrap gap-3 items-center">
                 <x-aura::tag size="sm" variant="primary">Small (sm: px-3)</x-aura::tag>
@@ -60,7 +60,7 @@ title('Tag - Aura Wire');
     </x-aura::code>
 
     <!-- 3. Removable / Filter Tags -->
-    <x-aura::code class="w-full" title="3. Removable Active Filter Tags">
+    <x-aura::code  title="3. Removable Active Filter Tags">
         <x-slot:preview>
             <div class="flex flex-wrap gap-2.5 items-center">
                 <x-aura::tag variant="default" class="gap-1.5 pr-2">
@@ -88,7 +88,7 @@ title('Tag - Aura Wire');
     </x-aura::code>
 
     <!-- 4. Shapes (Pill & Rounded) -->
-    <x-aura::code class="w-full" title="4. Tag Shapes (Pill & Rounded)">
+    <x-aura::code  title="4. Tag Shapes (Pill & Rounded)">
         <x-slot:preview>
             <div class="flex flex-wrap gap-3 items-center">
                 <x-aura::tag pill variant="primary">Pill Shape (Default)</x-aura::tag>

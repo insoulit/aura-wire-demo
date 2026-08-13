@@ -13,7 +13,7 @@ class extends Component {};
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Display</x-aura::kicker>
@@ -27,12 +27,12 @@ class extends Component {};
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::empty-state icon="folder-open" title="No Projects Found" description="Get started by creating a new project." />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Standard Empty State with Primary Action -->
-    <x-aura::code class="w-full" title="1. Standard No Data State">
+    <x-aura::code  title="1. Standard No Data State">
         <x-slot:preview>
             <div class="w-full max-w-xl">
                 <x-aura::empty-state 
@@ -66,7 +66,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. Search No Results State -->
-    <x-aura::code class="w-full" title="2. Search No Matching Results State">
+    <x-aura::code  title="2. Search No Matching Results State">
         <x-slot:preview>
             <div class="w-full max-w-xl">
                 <x-aura::empty-state 
@@ -90,7 +90,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 3. Inbox Empty State -->
-    <x-aura::code class="w-full" title="3. Empty Inbox / Messages State">
+    <x-aura::code  title="3. Empty Inbox / Messages State">
         <x-slot:preview>
             <div class="w-full max-w-xl">
                 <x-aura::empty-state 

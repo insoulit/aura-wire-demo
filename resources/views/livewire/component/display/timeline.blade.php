@@ -13,7 +13,7 @@ new class extends Component {
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Display</x-aura::kicker>
@@ -27,12 +27,12 @@ new class extends Component {
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::timeline :items="$events" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Deployment & Release History Timeline -->
-    <x-aura::code class="w-full" title="1. Deployment & Release History">
+    <x-aura::code  title="1. Deployment & Release History">
         <x-slot:preview>
             <x-aura::timeline class="w-full">
                 <x-aura::timeline.item title="v1.5.0 Released to Production" time="Just now" variant="solid" description="Deployed 11 new UI components to the insoulit/aura-wire suite." />
@@ -50,7 +50,7 @@ new class extends Component {
     </x-aura::code>
 
     <!-- 2. Package Shipping & Delivery Tracker -->
-    <x-aura::code class="w-full" title="2. Package Shipping & Delivery Tracker">
+    <x-aura::code  title="2. Package Shipping & Delivery Tracker">
         <x-slot:preview>
             <x-aura::timeline class="w-full">
                 <x-aura::timeline.item title="Package Delivered" time="02:15 PM" variant="solid" description="Signed for by receiver at front desk. Tracking ID: #TRK-89210." />
@@ -68,7 +68,7 @@ new class extends Component {
     </x-aura::code>
 
     <!-- 3. Security & Account Audit Log -->
-    <x-aura::code class="w-full" title="3. Security Audit & Access History">
+    <x-aura::code  title="3. Security Audit & Access History">
         <x-slot:preview>
             <x-aura::timeline class="w-full">
                 <x-aura::timeline.item title="Two-Factor Authentication Enabled" time="1 hour ago" variant="solid" description="Authenticator app 2FA configured for user account." />
@@ -84,7 +84,7 @@ new class extends Component {
     </x-aura::code>
 
     <!-- 4. Timeline with Custom Action Slots -->
-    <x-aura::code class="w-full" title="4. Timeline with Custom Action Slots">
+    <x-aura::code  title="4. Timeline with Custom Action Slots">
         <x-slot:preview>
             <x-aura::timeline class="w-full">
                 <x-aura::timeline.item title="Database Migration Completed" time="Just now" variant="solid" description="Migrated 24 tables without downtime.">

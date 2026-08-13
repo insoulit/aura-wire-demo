@@ -13,7 +13,7 @@ class extends Component {};
 
 <div class="w-full max-w-5xl mx-auto space-y-12">
     <!-- Navbar Page Intro -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Layout</x-aura::kicker>
@@ -27,7 +27,7 @@ class extends Component {};
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::navbar>
     <x-slot:brand>Logo</x-slot:brand>
     <x-slot:actions>Actions</x-slot:actions>
@@ -35,7 +35,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 1. Default Workspace Application Navbar -->
-    <x-aura::code class="w-full" title="1. Default Workspace Application Navbar">
+    <x-aura::code  title="1. Default Workspace Application Navbar">
         <x-slot:preview>
             <div class="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100/60 dark:bg-zinc-950 p-3">
                 <x-aura::navbar class="rounded-xl border border-zinc-200/80 dark:border-zinc-800/80">
@@ -89,7 +89,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. Dark Theme Developer Platform Navbar -->
-    <x-aura::code class="w-full" title="2. Dark Theme Developer Platform Navbar">
+    <x-aura::code  title="2. Dark Theme Developer Platform Navbar">
         <x-slot:preview>
             <div class="w-full rounded-2xl border border-zinc-800 bg-zinc-950 p-3">
                 <x-aura::navbar class="rounded-xl !bg-zinc-900 !border-zinc-800 !text-white">
@@ -134,7 +134,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 3. E-Commerce Storefront Top Navbar -->
-    <x-aura::code class="w-full" title="3. E-Commerce Storefront Top Navbar">
+    <x-aura::code  title="3. E-Commerce Storefront Top Navbar">
         <x-slot:preview>
             <div class="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-3">
                 <x-aura::navbar class="rounded-xl">
@@ -179,7 +179,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 4. Minimal Product Landing Page Navbar -->
-    <x-aura::code class="w-full" title="4. Minimal Landing Page Navbar">
+    <x-aura::code  title="4. Minimal Landing Page Navbar">
         <x-slot:preview>
             <div class="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 p-3">
                 <x-aura::navbar class="rounded-xl border border-zinc-200/60 dark:border-zinc-800/60">

@@ -32,18 +32,18 @@ class extends Component {
         <!-- Hero Header Content -->
         <div class="text-center space-y-6 max-w-4xl mx-auto">
             <div class="inline-flex items-center gap-2">
-                <x-aura::kicker class="text-zinc-500">⚡ CLOUD PLATFORM v2.4</x-aura::kicker>
+                <x-aura::kicker >⚡ CLOUD PLATFORM v2.4</x-aura::kicker>
                 <x-aura::badge variant="neutral" size="sm">99.99% Uptime SLA</x-aura::badge>
             </div>
 
-            <x-aura::heading level="1" size="display-lg" class="tracking-tight text-zinc-900 dark:text-white">
+            <x-aura::heading level="1" size="display-lg" >
             Accelerate your Application Workflow with <br class="hidden sm:block" />
             <span class="text-zinc-500 dark:text-zinc-400">
                 Realtime Cloud Analytics
             </span>
         </x-aura::heading>
 
-            <x-aura::subheading class="max-w-2xl mx-auto text-lg">
+            <x-aura::subheading >
                 Monitor API latencies, server error rates, and user events across multi-region infrastructure with instant alert notifications.
             </x-aura::subheading>
 
@@ -55,17 +55,17 @@ class extends Component {
             <!-- Social Proof & Team Avatars -->
             <div class="flex items-center justify-center gap-3 pt-4 text-xs text-zinc-500 dark:text-zinc-400">
                 <div class="flex -space-x-2 overflow-hidden">
-                    <x-aura::avatar initials="JD" size="sm" class="ring-2 ring-white dark:ring-zinc-900" />
-                    <x-aura::avatar initials="AS" size="sm" class="ring-2 ring-white dark:ring-zinc-900" />
-                    <x-aura::avatar initials="MK" size="sm" class="ring-2 ring-white dark:ring-zinc-900" />
-                    <x-aura::avatar initials="SL" size="sm" class="ring-2 ring-white dark:ring-zinc-900" />
+                    <x-aura::avatar initials="JD" size="sm"  />
+                    <x-aura::avatar initials="AS" size="sm"  />
+                    <x-aura::avatar initials="MK" size="sm"  />
+                    <x-aura::avatar initials="SL" size="sm"  />
                 </div>
                 <span>Trusted by over <strong class="text-zinc-900 dark:text-white font-semibold">12,000+</strong> dev teams worldwide</span>
             </div>
         </div>
 
         <!-- SaaS Hero Visual Dashboard Mockup Card -->
-        <x-aura::card class="p-6 md:p-8 bg-zinc-950 text-white border-2 border-zinc-800 shadow-2xl rounded-3xl relative overflow-hidden">
+        <x-aura::card >
             <div class="space-y-6">
                 <!-- Top Toolbar Mockup -->
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-zinc-800">
@@ -79,8 +79,8 @@ class extends Component {
                         <span class="text-xs font-mono text-zinc-400">live-cluster-production-us-east.aura</span>
                     </div>
                     <div class="flex items-center gap-2">
-                        <x-aura::badge variant="neutral" size="sm" class="bg-emerald-950 text-emerald-300 border-emerald-800">● 1.2M Req / sec</x-aura::badge>
-                        <x-aura::badge variant="subtle" size="sm" class="bg-zinc-900 text-zinc-300 border-zinc-700">Latency: 14ms</x-aura::badge>
+                        <x-aura::badge variant="neutral" size="sm" >● 1.2M Req / sec</x-aura::badge>
+                        <x-aura::badge variant="subtle" size="sm" >Latency: 14ms</x-aura::badge>
                     </div>
                 </div>
 
@@ -116,9 +116,9 @@ class extends Component {
 
     <!-- Core Platform Highlights Grid -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <x-aura::card class="p-6 space-y-3 border border-zinc-200 dark:border-zinc-800">
+        <x-aura::card >
             <div class="h-10 w-10 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center shadow-2xs">
-                <x-aura::icon name="zap" class="w-5 h-5" />
+                <x-aura::icon name="zap"  size="sm" />
             </div>
             <x-aura::heading level="3" size="sm">Sub-Millisecond Tracing</x-aura::heading>
             <x-aura::text variant="subtle" size="xs">
@@ -126,9 +126,9 @@ class extends Component {
             </x-aura::text>
         </x-aura::card>
 
-        <x-aura::card class="p-6 space-y-3 border border-zinc-200 dark:border-zinc-800">
+        <x-aura::card >
             <div class="h-10 w-10 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center shadow-2xs">
-                <x-aura::icon name="shield-check" class="w-5 h-5" />
+                <x-aura::icon name="shield-check"  size="sm" />
             </div>
             <x-aura::heading level="3" size="sm">SOC2 Type II Certified</x-aura::heading>
             <x-aura::text variant="subtle" size="xs">
@@ -136,9 +136,9 @@ class extends Component {
             </x-aura::text>
         </x-aura::card>
 
-        <x-aura::card class="p-6 space-y-3 border border-zinc-200 dark:border-zinc-800">
+        <x-aura::card >
             <div class="h-10 w-10 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center shadow-2xs">
-                <x-aura::icon name="bell" class="w-5 h-5" />
+                <x-aura::icon name="bell"  size="sm" />
             </div>
             <x-aura::heading level="3" size="sm">Instant Alert Webhooks</x-aura::heading>
             <x-aura::text variant="subtle" size="xs">
@@ -163,11 +163,11 @@ class extends Component {
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Starter Plan Card -->
-            <x-aura::card class="flex flex-col justify-between p-6 hover:border-zinc-900 dark:hover:border-white transition-all border border-zinc-200 dark:border-zinc-800">
+            <x-aura::card >
                 <div class="space-y-4">
                     <div>
                         <x-aura::badge variant="subtle" size="sm">Starter</x-aura::badge>
-                        <x-aura::heading level="3" size="md" class="mt-2">Developer</x-aura::heading>
+                        <x-aura::heading level="3" size="md" >Developer</x-aura::heading>
                         <x-aura::text variant="subtle" size="xs">Essential monitoring for side projects.</x-aura::text>
                     </div>
 
@@ -178,33 +178,33 @@ class extends Component {
 
                     <div class="space-y-2 pt-2 border-t border-zinc-100 dark:border-zinc-800 text-xs">
                         <div class="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                            <x-aura::icon name="check" class="w-4 h-4 text-emerald-500 shrink-0" />
+                            <x-aura::icon name="check"  size="xs" />
                             <span>100,000 Events / month</span>
                         </div>
                         <div class="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                            <x-aura::icon name="check" class="w-4 h-4 text-emerald-500 shrink-0" />
+                            <x-aura::icon name="check"  size="xs" />
                             <span>3 Team Members</span>
                         </div>
                         <div class="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                            <x-aura::icon name="check" class="w-4 h-4 text-emerald-500 shrink-0" />
+                            <x-aura::icon name="check"  size="xs" />
                             <span>7-Day Log Retention</span>
                         </div>
                     </div>
                 </div>
                 <div class="pt-6">
-                    <x-aura::button variant="secondary" size="md" class="w-full justify-center">Get Started Free</x-aura::button>
+                    <x-aura::button variant="secondary" size="md" >Get Started Free</x-aura::button>
                 </div>
             </x-aura::card>
 
             <!-- Pro Featured Plan Card -->
-            <x-aura::card class="flex flex-col justify-between p-6 border-2 border-zinc-900 dark:border-white shadow-xl relative">
+            <x-aura::card >
                 <div class="absolute -top-3 left-1/2 -translate-x-1/2">
                     <x-aura::badge variant="neutral" size="sm">Most Popular</x-aura::badge>
                 </div>
                 <div class="space-y-4">
                     <div>
                         <x-aura::badge variant="neutral" size="sm">Pro Suite</x-aura::badge>
-                        <x-aura::heading level="3" size="md" class="mt-2">Growth Team</x-aura::heading>
+                        <x-aura::heading level="3" size="md" >Growth Team</x-aura::heading>
                         <x-aura::text variant="subtle" size="xs">Advanced insights for scaling startups.</x-aura::text>
                     </div>
 
@@ -215,34 +215,34 @@ class extends Component {
 
                     <div class="space-y-2 pt-2 border-t border-zinc-100 dark:border-zinc-800 text-xs">
                         <div class="flex items-center gap-2 font-semibold text-zinc-900 dark:text-white">
-                            <x-aura::icon name="check" class="w-4 h-4 text-emerald-500 shrink-0" />
+                            <x-aura::icon name="check"  size="xs" />
                             <span>2,500,000 Events / month</span>
                         </div>
                         <div class="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                            <x-aura::icon name="check" class="w-4 h-4 text-emerald-500 shrink-0" />
+                            <x-aura::icon name="check"  size="xs" />
                             <span>15 Team Members</span>
                         </div>
                         <div class="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                            <x-aura::icon name="check" class="w-4 h-4 text-emerald-500 shrink-0" />
+                            <x-aura::icon name="check"  size="xs" />
                             <span>30-Day Log Retention</span>
                         </div>
                         <div class="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                            <x-aura::icon name="check" class="w-4 h-4 text-emerald-500 shrink-0" />
+                            <x-aura::icon name="check"  size="xs" />
                             <span>Slack &amp; Webhook Alerts</span>
                         </div>
                     </div>
                 </div>
                 <div class="pt-6">
-                    <x-aura::button variant="primary" size="md" class="w-full justify-center">Start 14-Day Free Trial</x-aura::button>
+                    <x-aura::button variant="primary" size="md" >Start 14-Day Free Trial</x-aura::button>
                 </div>
             </x-aura::card>
 
             <!-- Enterprise Plan Card -->
-            <x-aura::card class="flex flex-col justify-between p-6 hover:border-zinc-900 dark:hover:border-white transition-all border border-zinc-200 dark:border-zinc-800">
+            <x-aura::card >
                 <div class="space-y-4">
                     <div>
                         <x-aura::badge variant="subtle" size="sm">Enterprise</x-aura::badge>
-                        <x-aura::heading level="3" size="md" class="mt-2">Scale &amp; Security</x-aura::heading>
+                        <x-aura::heading level="3" size="md" >Scale &amp; Security</x-aura::heading>
                         <x-aura::text variant="subtle" size="xs">Dedicated infrastructure &amp; custom SLAs.</x-aura::text>
                     </div>
 
@@ -252,25 +252,25 @@ class extends Component {
 
                     <div class="space-y-2 pt-2 border-t border-zinc-100 dark:border-zinc-800 text-xs">
                         <div class="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                            <x-aura::icon name="check" class="w-4 h-4 text-emerald-500 shrink-0" />
+                            <x-aura::icon name="check"  size="xs" />
                             <span>Unlimited Volume</span>
                         </div>
                         <div class="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                            <x-aura::icon name="check" class="w-4 h-4 text-emerald-500 shrink-0" />
+                            <x-aura::icon name="check"  size="xs" />
                             <span>Unlimited Team Seats</span>
                         </div>
                         <div class="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                            <x-aura::icon name="check" class="w-4 h-4 text-emerald-500 shrink-0" />
+                            <x-aura::icon name="check"  size="xs" />
                             <span>365-Day Retention</span>
                         </div>
                         <div class="flex items-center gap-2 text-zinc-700 dark:text-zinc-300">
-                            <x-aura::icon name="check" class="w-4 h-4 text-emerald-500 shrink-0" />
+                            <x-aura::icon name="check"  size="xs" />
                             <span>Dedicated Account Manager</span>
                         </div>
                     </div>
                 </div>
                 <div class="pt-6">
-                    <x-aura::button variant="outline" size="md" class="w-full justify-center" icon-trailing="arrow-right">Contact Sales</x-aura::button>
+                    <x-aura::button variant="outline" size="md"  icon-trailing="arrow-right">Contact Sales</x-aura::button>
                 </div>
             </x-aura::card>
         </div>

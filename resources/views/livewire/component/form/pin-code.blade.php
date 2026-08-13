@@ -9,7 +9,7 @@ title('PIN Code - Aura Wire');
 
 <div class="w-full max-w-3xl mx-auto space-y-6 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Form Controls</x-aura::kicker>
@@ -23,12 +23,12 @@ title('PIN Code - Aura Wire');
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::pin-code length="4" wire:model="otp" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     {{-- Default PIN Code (4 digits) --}}
-    <x-aura::code class="w-full" title="Default 4-Digit Verification Code">
+    <x-aura::code  title="Default 4-Digit Verification Code">
         <x-slot:preview>
             <div class="space-y-3">
                 <x-aura::label>Enter Security Code</x-aura::label>
@@ -40,7 +40,7 @@ title('PIN Code - Aura Wire');
     </x-aura::code>
 
     {{-- 6-Digit PIN Code & Sizes --}}
-    <x-aura::code class="w-full" title="6-Digit Code & Size Variations">
+    <x-aura::code  title="6-Digit Code & Size Variations">
         <x-slot:preview>
             <div class="space-y-6">
                 <div>
@@ -62,7 +62,7 @@ title('PIN Code - Aura Wire');
     </x-aura::code>
 
     {{-- Invalid State --}}
-    <x-aura::code class="w-full" title="Invalid State">
+    <x-aura::code  title="Invalid State">
         <x-slot:preview>
             <div class="space-y-2 text-center flex flex-col items-center">
                 <x-aura::pin-code length="4" :invalid="true" />

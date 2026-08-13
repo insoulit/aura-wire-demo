@@ -115,7 +115,7 @@ class extends Component {
             <x-slot:footer>
                 <div class="flex items-center justify-end w-full">
                     <x-aura::button type="submit" variant="primary" size="sm">
-                        <x-aura::icon name="save" class="w-3.5 h-3.5 mr-1" />
+                        <x-aura::icon name="save"  size="xs" />
                         <span>Save</span>
                     </x-aura::button>
                 </div>

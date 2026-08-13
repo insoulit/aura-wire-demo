@@ -9,7 +9,7 @@ title('Tabs - Aura Wire');
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Overlay</x-aura::kicker>
@@ -23,14 +23,14 @@ title('Tabs - Aura Wire');
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::tab default="profile">
     <x-aura::tab.item name="profile" label="Profile">Content...</x-aura::tab.item>
 </x-aura::tab>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Standard Tabs -->
-    <x-aura::code class="w-full" title="1. Standard Horizontal Tabs">
+    <x-aura::code  title="1. Standard Horizontal Tabs">
         <x-slot:preview>
             <div class="w-full">
                 <x-aura::tab active="overview">
@@ -50,7 +50,7 @@ title('Tabs - Aura Wire');
     </x-aura::code>
 
     <!-- 2. Tabs with Icons -->
-    <x-aura::code class="w-full" title="2. Icon Navigation Tabs">
+    <x-aura::code  title="2. Icon Navigation Tabs">
         <x-slot:preview>
             <div class="w-full">
                 <x-aura::tab active="account">

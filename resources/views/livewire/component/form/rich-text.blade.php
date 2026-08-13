@@ -14,7 +14,7 @@ state([
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Form Controls</x-aura::kicker>
@@ -28,12 +28,12 @@ state([
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::rich-text wire:model="content" label="Article Body" placeholder="Write content..." />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Interactive Livewire Bindings -->
-    <x-aura::code class="w-full" title="1. Interactive Livewire Model Binding">
+    <x-aura::code  title="1. Interactive Livewire Model Binding">
         <x-slot:preview>
             <div class="w-full space-y-4">
                 <x-aura::field label="Article Body" hint="Format article content using the rich text toolbar">
@@ -58,7 +58,7 @@ state([
     </x-aura::code>
 
     <!-- 2. Toolbar Variants & Compact Mode -->
-    <x-aura::code class="w-full" title="2. Compact Toolbar Mode">
+    <x-aura::code  title="2. Compact Toolbar Mode">
         <x-slot:preview>
             <div class="w-full space-y-4">
                 <x-aura::field label="Quick Comment" hint="Simplified toolbar for comments and quick notes">
@@ -70,7 +70,7 @@ state([
     </x-aura::code>
 
     <!-- 3. Validation Error & Disabled States -->
-    <x-aura::code class="w-full" title="3. Validation Error & Disabled States">
+    <x-aura::code  title="3. Validation Error & Disabled States">
         <x-slot:preview>
             <div class="w-full space-y-6">
                 <x-aura::field label="Description with Validation Error" error="The description field is required.">

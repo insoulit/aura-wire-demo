@@ -13,7 +13,7 @@ class extends Component {};
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Overlay</x-aura::kicker>
@@ -27,14 +27,14 @@ class extends Component {};
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::sheet name="filters" side="right" title="Filter Records">
     <p>Sheet content...</p>
 </x-aura::sheet>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Right Slide-Out Filter Sheet -->
-    <x-aura::code class="w-full" title="1. Right Slide-Out Filter Sheet (side='right')">
+    <x-aura::code  title="1. Right Slide-Out Filter Sheet (side='right')">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-3">
                 <x-aura::button variant="primary" x-on:click="$dispatch('open-sheet', 'filter-sheet')">
@@ -79,7 +79,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. Left Slide-Out Navigation Drawer -->
-    <x-aura::code class="w-full" title="2. Left Navigation Drawer (side='left')">
+    <x-aura::code  title="2. Left Navigation Drawer (side='left')">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-3">
                 <x-aura::button variant="secondary" x-on:click="$dispatch('open-sheet', 'nav-sheet')">
@@ -109,7 +109,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 3. Bottom Mobile Action Sheet -->
-    <x-aura::code class="w-full" title="3. Bottom Mobile Action Sheet (side='bottom')">
+    <x-aura::code  title="3. Bottom Mobile Action Sheet (side='bottom')">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-3">
                 <x-aura::button variant="outline" x-on:click="$dispatch('open-sheet', 'bottom-sheet')">
@@ -150,7 +150,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 4. Top Notification Bar Sheet -->
-    <x-aura::code class="w-full" title="4. Top Notification Sheet (side='top')">
+    <x-aura::code  title="4. Top Notification Sheet (side='top')">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-3">
                 <x-aura::button variant="subtle" x-on:click="$dispatch('open-sheet', 'top-sheet')">

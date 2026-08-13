@@ -9,7 +9,7 @@
 
         <!-- Main Content Area -->
         <div class="flex-1 flex flex-col min-w-0">
-            <x-aura::main class="p-6 md:p-8">
+            <x-aura::main >
                 {{ $slot }}
             </x-aura::main>
 

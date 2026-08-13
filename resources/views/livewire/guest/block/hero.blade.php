@@ -19,27 +19,27 @@ class extends Component {};
                 <x-aura::kicker>Design Blocks</x-aura::kicker>
                 <x-aura::heading level="1" size="lg">Hero Header</x-aura::heading>
             </div>
-            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" class="shrink-0 gap-1.5">
-                <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 shrink-0" />
+            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" >
+                <x-aura::icon name="arrow-left"  size="xs" />
                 <span>Back</span>
             </x-aura::button>
         </div>
     </div>
 
     <!-- Hero Header Block Preview -->
-    <x-aura::code class="w-full" title="Landing Page Hero Header Block">
+    <x-aura::code  title="Landing Page Hero Header Block">
         <x-slot:preview>
             <div class="w-full py-8 text-center space-y-4 flex flex-col items-center justify-center">
                 <x-aura::kicker>Next-Gen Component Library</x-aura::kicker>
-                <x-aura::heading level="1" size="xl" class="max-w-2xl leading-tight">
+                <x-aura::heading level="1" size="xl" >
                     Build Stunning Web Interfaces in Seconds
                 </x-aura::heading>
-                <x-aura::subheading size="md" class="max-w-lg">
+                <x-aura::subheading size="md" >
                     Production-ready, ultra-accessible Blade &amp; Livewire components crafted for modern Laravel applications.
                 </x-aura::subheading>
                 <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 pt-2 w-full sm:w-auto max-w-xs sm:max-w-none">
-                    <x-aura::button variant="primary" size="md" class="w-full sm:w-auto">Get Started Free</x-aura::button>
-                    <x-aura::button variant="outline" size="md" class="w-full sm:w-auto">Explore Components</x-aura::button>
+                    <x-aura::button variant="primary" size="md" >Get Started Free</x-aura::button>
+                    <x-aura::button variant="outline" size="md" >Explore Components</x-aura::button>
                 </div>
             </div>
         </x-slot:preview>

@@ -13,7 +13,7 @@ class extends Component {};
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Feedback</x-aura::kicker>
@@ -27,12 +27,12 @@ class extends Component {};
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::alert variant="info" title="System Notice">Maintenance scheduled.</x-aura::alert>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Status Alerts -->
-    <x-aura::code class="w-full" title="1. Status Alerts (subtle layout)">
+    <x-aura::code  title="1. Status Alerts (subtle layout)">
         <x-slot:preview>
             <div class="space-y-4 w-full">
                 <x-aura::alert variant="info" title="System Update Scheduled" description="Server maintenance is planned for tonight at 02:00 UTC." dismissible />
@@ -48,7 +48,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. Left-Accent Alerts -->
-    <x-aura::code class="w-full" title="2. Left-Accent Border Layout (layout='left-accent')">
+    <x-aura::code  title="2. Left-Accent Border Layout (layout='left-accent')">
         <x-slot:preview>
             <div class="space-y-4 w-full">
                 <x-aura::alert layout="left-accent" variant="info" title="New Feature Unlocked" description="You can now invite guest reviewers directly to your workspace.">
@@ -72,7 +72,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 3. Announcement Banner Layout -->
-    <x-aura::code class="w-full" title="3. Product Announcement Layout (layout='announcement')">
+    <x-aura::code  title="3. Product Announcement Layout (layout='announcement')">
         <x-slot:preview>
             <div class="w-full">
                 <x-aura::alert layout="announcement" badge="NEW" title="Aura Wire v2.4.0 Released" description="Introducing responsive sheet drawers, custom toast stacks, and centered modal popups.">

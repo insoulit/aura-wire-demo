@@ -9,7 +9,7 @@ title('Body - Aura Wire');
 
 <div class="w-full max-w-3xl mx-auto space-y-6 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Layout</x-aura::kicker>
@@ -23,11 +23,11 @@ title('Body - Aura Wire');
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::body>Page content</x-aura::body>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <x-aura::code class="w-full" title="Root Page Body Layout Component">
+    <x-aura::code  title="Root Page Body Layout Component">
         <x-slot:preview>
             <div class="w-full border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-100 dark:bg-zinc-950 p-4 text-center">
                 <div class="text-xs font-mono text-zinc-500 dark:text-zinc-400">

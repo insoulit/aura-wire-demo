@@ -13,7 +13,7 @@ class extends Component {};
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Navigation</x-aura::kicker>
@@ -27,12 +27,12 @@ class extends Component {};
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::pagination :currentPage="2" :totalPages="8" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Numbered Window Pagination (Text vs Icon-Only) -->
-    <x-aura::code class="w-full" title="1. Standard Numbered Window Pagination (Text vs Icon-Only)">
+    <x-aura::code  title="1. Standard Numbered Window Pagination (Text vs Icon-Only)">
         <x-slot:preview>
             <div class="space-y-6 w-full">
                 <div class="space-y-2">
@@ -54,7 +54,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. Contained Card Footer Bar -->
-    <x-aura::code class="w-full" title="2. Contained Card Footer Bar">
+    <x-aura::code  title="2. Contained Card Footer Bar">
         <x-slot:preview>
             <div class="w-full">
                 <x-aura::pagination :page="2" :totalPages="8" :total="80" :perPage="10" variant="card" />
@@ -64,7 +64,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 3. Circular Pill Buttons Group in 3 Alignment Positions (Start, Center, End) -->
-    <x-aura::code class="w-full" title="3. Circular Pill Buttons Group (3 Alignment Positions: Start, Center, End)">
+    <x-aura::code  title="3. Circular Pill Buttons Group (3 Alignment Positions: Start, Center, End)">
         <x-slot:preview>
             <div class="space-y-5 w-full">
                 <div class="space-y-1">
@@ -94,7 +94,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 4. Simple Previous / Next with Page Label -->
-    <x-aura::code class="w-full" title="4. Simple Previous / Next with Page Counter">
+    <x-aura::code  title="4. Simple Previous / Next with Page Counter">
         <x-slot:preview>
             <div class="w-full">
                 <x-aura::pagination :page="3" :totalPages="10" variant="simple" />
@@ -104,7 +104,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 5. Compact Icon Controls -->
-    <x-aura::code class="w-full" title="5. Compact Icon Controls">
+    <x-aura::code  title="5. Compact Icon Controls">
         <x-slot:preview>
             <div class="w-full flex justify-center">
                 <x-aura::pagination :page="5" :totalPages="15" variant="compact" shape="circle" />

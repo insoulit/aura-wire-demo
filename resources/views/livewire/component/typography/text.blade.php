@@ -13,7 +13,7 @@ class extends Component {};
 
 <div class="w-full max-w-4xl mx-auto space-y-10">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Typography</x-aura::kicker>
@@ -32,7 +32,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 1. Text Color Variants -->
-    <x-aura::code class="w-full" title="1. Text Color Variants">
+    <x-aura::code  title="1. Text Color Variants">
         <x-slot:preview>
             <div class="space-y-2.5 w-full">
                 <x-aura::text size="md" variant="default">Default Primary Body Text</x-aura::text>
@@ -52,7 +52,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. Text Sizes (xs, sm, md, lg) -->
-    <x-aura::code class="w-full" title="2. Text Size Scales (xs, sm, md, lg)">
+    <x-aura::code  title="2. Text Size Scales (xs, sm, md, lg)">
         <x-slot:preview>
             <div class="space-y-3 w-full">
                 <x-aura::text size="lg">Large Text (18px) — Used for lead paragraphs and hero callouts.</x-aura::text>
@@ -68,7 +68,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 3. Monospace & Code Strings -->
-    <x-aura::code class="w-full" title="3. Monospace Code &amp; Key Strings">
+    <x-aura::code  title="3. Monospace Code &amp; Key Strings">
         <x-slot:preview>
             <x-aura::card class="p-4 space-y-2 font-mono text-xs w-full">
                 <div class="flex items-center justify-between">
@@ -86,7 +86,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 4. Real-World Article / Paragraph Block -->
-    <x-aura::code class="w-full" title="4. Real-World Article Paragraph Block">
+    <x-aura::code  title="4. Real-World Article Paragraph Block">
         <x-slot:preview>
             <x-aura::card class="p-6 space-y-2.5 w-full">
                 <x-aura::heading level="3" size="sm">Getting Started with Livewire Components</x-aura::heading>

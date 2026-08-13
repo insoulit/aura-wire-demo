@@ -27,12 +27,14 @@ class extends Component {
     <div class="space-y-1">
         <div class="flex items-center justify-between gap-4">
             <x-aura::heading level="1" size="lg">Change Email Address</x-aura::heading>
-            <x-aura::button variant="secondary" size="sm" href="/dashboard" wire:navigate class="shrink-0">
-                <x-aura::icon name="arrow-left" class="w-4 h-4 mr-1.5 shrink-0 inline-block text-zinc-900 dark:text-white" />
-                <span>Back</span>
-            </x-aura::button>
+            <div class="shrink-0">
+                <x-aura::button variant="secondary" size="sm" href="/dashboard" wire:navigate>
+                    <x-aura::icon name="arrow-left" size="xs" />
+                    <span>Back</span>
+                </x-aura::button>
+            </div>
         </div>
-        <x-aura::subheading size="xs" class="text-zinc-500 dark:text-zinc-400">
+        <x-aura::subheading size="xs">
             Update your primary login and notification email address.
         </x-aura::subheading>
     </div>
@@ -58,7 +60,7 @@ class extends Component {
 
         <form wire:submit="updateEmail" class="space-y-5">
             <x-aura::field label="Current Email Address">
-                <x-aura::input wire:model="currentEmail" disabled readonly class="opacity-75 cursor-not-allowed" />
+                <x-aura::input wire:model="currentEmail" disabled readonly />
             </x-aura::field>
 
             <x-aura::field label="New Email Address" hint="Must be a valid email address you have access to." required>

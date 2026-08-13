@@ -66,7 +66,7 @@ with([
 
 <div class="w-full max-w-4xl mx-auto space-y-12 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Data Display</x-aura::kicker>
@@ -80,12 +80,12 @@ with([
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::table :headers="$headers" :rows="$rows" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. User Management Directory Table (with Show, Edit, Delete Actions) -->
-    <x-aura::code class="w-full" title="1. User Management Directory Table">
+    <x-aura::code  title="1. User Management Directory Table">
         <x-slot:preview>
             <div class="w-full">
                 <x-aura::table>
@@ -164,7 +164,7 @@ with([
     </x-aura::code>
 
     <!-- 2. Orders & Transactions Log Table -->
-    <x-aura::code class="w-full" title="2. Orders & Transactions Log Table">
+    <x-aura::code  title="2. Orders & Transactions Log Table">
         <x-slot:preview>
             <div class="w-full">
                 <x-aura::table>
@@ -220,7 +220,7 @@ with([
     </x-aura::code>
 
     <!-- 3. Project Tasks & Issue Tracker Table -->
-    <x-aura::code class="w-full" title="3. Project Task Tracker with Progress Indicators">
+    <x-aura::code  title="3. Project Task Tracker with Progress Indicators">
         <x-slot:preview>
             <div class="w-full">
                 <x-aura::table>
@@ -277,7 +277,7 @@ with([
     </x-aura::code>
 
     <!-- 4. Striped API Keys & Security Tokens Table -->
-    <x-aura::code class="w-full" title="4. Alternating Striped API Keys Table">
+    <x-aura::code  title="4. Alternating Striped API Keys Table">
         <x-slot:preview>
             <div class="w-full">
                 <x-aura::table :striped="true">
@@ -336,7 +336,7 @@ with([
     </x-aura::code>
 
     <!-- 5. Table with Footer Totals Summary -->
-    <x-aura::code class="w-full" title="5. Invoice Summary Table with Footer Row">
+    <x-aura::code  title="5. Invoice Summary Table with Footer Row">
         <x-slot:preview>
             <div class="w-full">
                 <x-aura::table>

@@ -9,7 +9,7 @@ title('Code - Aura Wire');
 
 <div class="w-full max-w-3xl mx-auto space-y-6 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Display</x-aura::kicker>
@@ -23,14 +23,14 @@ title('Code - Aura Wire');
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::code title="Example Code" language="blade">...</x-aura::code>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <x-aura::code class="w-full" title="Code Block Component">
+    <x-aura::code  title="Code Block Component">
         <x-slot:preview>
             <div class="w-full">
-                <x-aura::code class="w-full" title="Example Code Block" language="blade">
+                <x-aura::code  title="Example Code Block" language="blade">
                     <x-slot:preview>
                         <x-aura::button variant="primary">Click Me</x-aura::button>
                     </x-slot:preview>

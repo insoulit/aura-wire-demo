@@ -13,7 +13,7 @@ new class extends Component {
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Overlay</x-aura::kicker>
@@ -27,12 +27,12 @@ new class extends Component {
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::command shortcut="meta.k" placeholder="Type a command..." />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Command Palette Modal Trigger -->
-    <x-aura::code class="w-full" title="1. Keyboard Trigger & Global Modal Palette">
+    <x-aura::code  title="1. Keyboard Trigger & Global Modal Palette">
         <x-slot:preview>
             <div class="flex flex-col items-center gap-4 py-6">
                 <button

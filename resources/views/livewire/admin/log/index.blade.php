@@ -112,12 +112,12 @@ class extends Component {
                 <x-aura::heading level="1" size="lg">System Logs &amp; Activity</x-aura::heading>
             </div>
             <div class="flex items-center gap-2">
-                <x-aura::button variant="secondary" size="sm" class="shrink-0 gap-1">
-                    <x-aura::icon name="download" class="w-3.5 h-3.5 shrink-0" />
+                <x-aura::button variant="secondary" size="sm" >
+                    <x-aura::icon name="download"  size="xs" />
                     <span>Export CSV</span>
                 </x-aura::button>
-                <x-aura::button variant="danger" size="sm" class="shrink-0 gap-1" x-on:click="$dispatch('open-modal', 'clear-logs-modal')">
-                    <x-aura::icon name="trash" class="w-3.5 h-3.5 shrink-0" />
+                <x-aura::button variant="danger" size="sm"  x-on:click="$dispatch('open-modal', 'clear-logs-modal')">
+                    <x-aura::icon name="trash"  size="xs" />
                     <span>Clear Logs</span>
                 </x-aura::button>
             </div>
@@ -125,19 +125,19 @@ class extends Component {
     </div>
 
     <!-- Unified Logs Datatable Card -->
-    <x-aura::card class="p-0 overflow-hidden">
+    <x-aura::card >
         <x-slot:header>
             <div class="flex flex-col sm:flex-row items-center justify-between gap-3 p-4 border-b border-zinc-100 dark:border-zinc-800">
                 <div class="relative w-full sm:w-72">
-                    <x-aura::input wire:model.live.debounce.250ms="search" placeholder="Search logs or trace details..." size="sm" class="pl-9">
+                    <x-aura::input wire:model.live.debounce.250ms="search" placeholder="Search logs or trace details..." size="sm" >
                         <x-slot:icon>
-                            <x-aura::icon name="search" class="w-4 h-4 text-zinc-400" />
+                            <x-aura::icon name="search"  size="xs" />
                         </x-slot:icon>
                     </x-aura::input>
                 </div>
 
                 <div class="flex items-center gap-2 w-full sm:w-auto">
-                    <x-aura::select wire:model.live="level" size="sm" class="w-full sm:w-36">
+                    <x-aura::select wire:model.live="level" size="sm" >
                         <option value="all">All Levels</option>
                         <option value="info">INFO</option>
                         <option value="notice">NOTICE</option>
@@ -152,35 +152,35 @@ class extends Component {
         <x-aura::table>
             <x-aura::table.header>
                 <x-aura::table.row>
-                    <x-aura::table.column class="w-36 text-sm">Timestamp</x-aura::table.column>
-                    <x-aura::table.column class="w-28 text-sm">Level</x-aura::table.column>
-                    <x-aura::table.column class="w-28 text-sm">Env</x-aura::table.column>
-                    <x-aura::table.column class="text-sm">Message</x-aura::table.column>
-                    <x-aura::table.column class="text-right w-24 text-sm">Action</x-aura::table.column>
+                    <x-aura::table.column >Timestamp</x-aura::table.column>
+                    <x-aura::table.column >Level</x-aura::table.column>
+                    <x-aura::table.column >Env</x-aura::table.column>
+                    <x-aura::table.column >Message</x-aura::table.column>
+                    <x-aura::table.column >Action</x-aura::table.column>
                 </x-aura::table.row>
             </x-aura::table.header>
             <x-aura::table.body>
                 @forelse ($logs as $log)
                     <x-aura::table.row>
-                        <x-aura::table.cell class="text-sm font-mono text-zinc-600 dark:text-zinc-400 whitespace-nowrap">
+                        <x-aura::table.cell >
                             {{ $log['time'] }}
                         </x-aura::table.cell>
                         <x-aura::table.cell>
                             <x-aura::badge :variant="$log['variant']" size="md">{{ $log['level'] }}</x-aura::badge>
                         </x-aura::table.cell>
-                        <x-aura::table.cell class="text-sm text-zinc-600 dark:text-zinc-400 font-medium">
+                        <x-aura::table.cell >
                             {{ $log['env'] }}
                         </x-aura::table.cell>
-                        <x-aura::table.cell class="font-mono text-sm text-zinc-800 dark:text-zinc-200 truncate max-w-md">
+                        <x-aura::table.cell >
                             {{ $log['message'] }}
                         </x-aura::table.cell>
-                        <x-aura::table.cell class="text-right whitespace-nowrap">
+                        <x-aura::table.cell >
                             <x-aura::icon-button icon="show" variant="subtle" size="sm" shape="circle" label="View Log Details" href="/admin/logs/show" wire:navigate />
                         </x-aura::table.cell>
                     </x-aura::table.row>
                 @empty
                     <x-aura::table.row>
-                        <x-aura::table.cell colspan="5" class="text-center py-8 text-zinc-500 dark:text-zinc-400">
+                        <x-aura::table.cell colspan="5" >
                             No log events match your filter criteria.
                         </x-aura::table.cell>
                     </x-aura::table.row>
@@ -196,7 +196,7 @@ class extends Component {
 
                 <div class="flex items-center gap-1.5">
                     <button type="button" wire:click="previousPage" @disabled($currentPage <= 1) class="p-1.5 rounded-full text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 disabled:opacity-40 disabled:cursor-not-allowed transition-colors" aria-label="Previous Page">
-                        <x-aura::icon name="chevron-left" class="w-4 h-4" />
+                        <x-aura::icon name="chevron-left"  size="xs" />
                     </button>
 
                     @for ($i = 1; $i <= $totalPages; $i++)
@@ -206,7 +206,7 @@ class extends Component {
                     @endfor
 
                     <button type="button" wire:click="nextPage({{ $totalPages }})" @disabled($currentPage >= $totalPages) class="p-1.5 rounded-full text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 disabled:opacity-40 disabled:cursor-not-allowed transition-colors" aria-label="Next Page">
-                        <x-aura::icon name="chevron-right" class="w-4 h-4" />
+                        <x-aura::icon name="chevron-right"  size="xs" />
                     </button>
                 </div>
             </div>
@@ -217,7 +217,7 @@ class extends Component {
     <x-aura::modal name="clear-logs-modal" variant="centered" maxWidth="sm">
         <div class="flex flex-col items-center text-center space-y-3">
             <div class="w-12 h-12 rounded-2xl bg-red-100 dark:bg-red-950/60 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-800/60 flex items-center justify-center shrink-0 shadow-xs">
-                <x-aura::icon name="trash" class="w-6 h-6" />
+                <x-aura::icon name="trash"  size="md" />
             </div>
             
             <div class="space-y-1">
@@ -230,10 +230,10 @@ class extends Component {
 
         <x-slot:footer>
             <div class="grid grid-cols-2 gap-3 w-full">
-                <x-aura::button variant="secondary" size="sm" class="w-full justify-center" x-on:click="$dispatch('close-modal', 'clear-logs-modal')">
+                <x-aura::button variant="secondary" size="sm"  x-on:click="$dispatch('close-modal', 'clear-logs-modal')">
                     Cancel
                 </x-aura::button>
-                <x-aura::button variant="danger" size="sm" class="w-full justify-center" x-on:click="$dispatch('close-modal', 'clear-logs-modal')">
+                <x-aura::button variant="danger" size="sm"  x-on:click="$dispatch('close-modal', 'clear-logs-modal')">
                     Clear Logs
                 </x-aura::button>
             </div>

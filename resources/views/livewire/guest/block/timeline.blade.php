@@ -19,17 +19,17 @@ class extends Component {};
                 <x-aura::kicker>Design Blocks</x-aura::kicker>
                 <x-aura::heading level="1" size="lg">Timeline</x-aura::heading>
             </div>
-            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" class="shrink-0 gap-1.5">
-                <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 shrink-0" />
+            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" >
+                <x-aura::icon name="arrow-left"  size="xs" />
                 <span>Back</span>
             </x-aura::button>
         </div>
     </div>
 
     <!-- Timeline Block Preview -->
-    <x-aura::code class="w-full" title="Deployment &amp; Activity Log Stream Block">
+    <x-aura::code  title="Deployment &amp; Activity Log Stream Block">
         <x-slot:preview>
-            <x-aura::card class="p-6 w-full space-y-5 border border-zinc-200 dark:border-zinc-800">
+            <x-aura::card >
                 <div class="flex items-center justify-between">
                     <x-aura::kicker>System Activity Stream</x-aura::kicker>
                     <x-aura::tag variant="subtle" size="sm">Live Feed</x-aura::tag>
@@ -40,8 +40,8 @@ class extends Component {};
                     <div class="relative space-y-1">
                         <span class="absolute -left-[30px] top-1 h-2.5 w-2.5 rounded-full bg-zinc-900 dark:bg-white ring-4 ring-white dark:ring-zinc-900"></span>
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                            <x-aura::heading level="3" size="sm" class="text-zinc-900 dark:text-white">v2.4.0 Deployed to Production</x-aura::heading>
-                            <x-aura::text variant="subtle" size="xs" class="font-mono">12 min ago</x-aura::text>
+                            <x-aura::heading level="3" size="sm" >v2.4.0 Deployed to Production</x-aura::heading>
+                            <x-aura::text variant="subtle" size="xs" >12 min ago</x-aura::text>
                         </div>
                         <x-aura::text variant="subtle" size="xs">
                             Triggered by Alex Morgan via GitHub Webhook deployment pipeline.
@@ -52,8 +52,8 @@ class extends Component {};
                     <div class="relative space-y-1">
                         <span class="absolute -left-[30px] top-1 h-2.5 w-2.5 rounded-full bg-zinc-400 dark:bg-zinc-600 ring-4 ring-white dark:ring-zinc-900"></span>
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                            <x-aura::heading level="3" size="sm" class="text-zinc-900 dark:text-white">SSL Certificate Auto-Renewed</x-aura::heading>
-                            <x-aura::text variant="subtle" size="xs" class="font-mono">2 hours ago</x-aura::text>
+                            <x-aura::heading level="3" size="sm" >SSL Certificate Auto-Renewed</x-aura::heading>
+                            <x-aura::text variant="subtle" size="xs" >2 hours ago</x-aura::text>
                         </div>
                         <x-aura::text variant="subtle" size="xs">
                             Let's Encrypt automated verification completed for domain *.aurawire.dev.
@@ -64,8 +64,8 @@ class extends Component {};
                     <div class="relative space-y-1">
                         <span class="absolute -left-[30px] top-1 h-2.5 w-2.5 rounded-full bg-zinc-400 dark:bg-zinc-600 ring-4 ring-white dark:ring-zinc-900"></span>
                         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                            <x-aura::heading level="3" size="sm" class="text-zinc-900 dark:text-white">Database Snapshot Backup</x-aura::heading>
-                            <x-aura::text variant="subtle" size="xs" class="font-mono">Yesterday at 04:00 AM</x-aura::text>
+                            <x-aura::heading level="3" size="sm" >Database Snapshot Backup</x-aura::heading>
+                            <x-aura::text variant="subtle" size="xs" >Yesterday at 04:00 AM</x-aura::text>
                         </div>
                         <x-aura::text variant="subtle" size="xs">
                             Automated backup snapshot archived to primary S3 storage bucket (4.2 GB).

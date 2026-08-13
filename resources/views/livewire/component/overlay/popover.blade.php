@@ -13,7 +13,7 @@ new class extends Component {
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Overlay</x-aura::kicker>
@@ -27,7 +27,7 @@ new class extends Component {
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::popover>
     <x-slot:trigger><x-aura::button>Open Popover</x-aura::button></x-slot:trigger>
     <div class="p-4">Popover Content</div>
@@ -35,7 +35,7 @@ new class extends Component {
     </x-aura::code>
 
     <!-- 1. Multiple Popovers Toolbar Example -->
-    <x-aura::code class="w-full" title="1. Multiple Popovers in Action Bar Toolbar">
+    <x-aura::code  title="1. Multiple Popovers in Action Bar Toolbar">
         <x-slot:preview>
             <div class="w-full flex flex-wrap items-center justify-center gap-3 py-6 pb-48">
                 <!-- Popover 1: Filter Options -->
@@ -138,7 +138,7 @@ new class extends Component {
     </x-aura::code>
 
     <!-- 2. Alignment Showcase (Left, Center, Right) -->
-    <x-aura::code class="w-full" title="2. Alignment Variations (Left, Center, Right)">
+    <x-aura::code  title="2. Alignment Variations (Left, Center, Right)">
         <x-slot:preview>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full py-6 pb-48 text-center">
                 <!-- Left Aligned -->
@@ -187,7 +187,7 @@ new class extends Component {
     </x-aura::code>
 
     <!-- 3. User Profile Card Popover -->
-    <x-aura::code class="w-full" title="3. User Avatar Profile Card Popover">
+    <x-aura::code  title="3. User Avatar Profile Card Popover">
         <x-slot:preview>
             <div class="flex items-center justify-center py-6 pb-48">
                 <x-aura::popover align="right" width="80">

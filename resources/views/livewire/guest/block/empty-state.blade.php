@@ -19,19 +19,19 @@ class extends Component {};
                 <x-aura::kicker>Design Blocks</x-aura::kicker>
                 <x-aura::heading level="1" size="lg">Empty State</x-aura::heading>
             </div>
-            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" class="shrink-0 gap-1.5">
-                <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 shrink-0" />
+            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" >
+                <x-aura::icon name="arrow-left"  size="xs" />
                 <span>Back</span>
             </x-aura::button>
         </div>
     </div>
 
     <!-- Empty State Block Preview -->
-    <x-aura::code class="w-full" title="First-Time Onboarding Empty State Block">
+    <x-aura::code  title="First-Time Onboarding Empty State Block">
         <x-slot:preview>
-            <x-aura::card class="w-full p-6 sm:p-12 text-center flex flex-col items-center justify-center space-y-4 border border-zinc-200 dark:border-zinc-800">
+            <x-aura::card >
                 <div class="w-14 h-14 rounded-2xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-600 dark:text-zinc-300 shadow-2xs">
-                    <x-aura::icon name="folder-open" class="w-7 h-7" />
+                    <x-aura::icon name="folder-open"  />
                 </div>
                 <div class="space-y-1.5 max-w-md">
                     <x-aura::heading level="2" size="md">No Projects Created Yet</x-aura::heading>

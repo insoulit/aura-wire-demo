@@ -19,15 +19,15 @@ class extends Component {};
                 <x-aura::kicker>Design Blocks</x-aura::kicker>
                 <x-aura::heading level="1" size="lg">User Profile</x-aura::heading>
             </div>
-            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" class="shrink-0 gap-1.5">
-                <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 shrink-0" />
+            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" >
+                <x-aura::icon name="arrow-left"  size="xs" />
                 <span>Back</span>
             </x-aura::button>
         </div>
     </div>
 
     <!-- User Profile Block Preview -->
-    <x-aura::code class="w-full" title="Account Settings &amp; Profile Summary Block">
+    <x-aura::code  title="Account Settings &amp; Profile Summary Block">
         <x-slot:preview>
             <div class="w-full max-w-xl mx-auto">
                 <x-aura::card title="Public Profile Information" description="Update your account details and public avatar.">

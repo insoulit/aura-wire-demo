@@ -6,20 +6,20 @@ new class extends Component {};
 
 ?>
 
-<x-aura::footer class="mt-8">
+<x-aura::footer >
     <x-slot name="brand">
         <a href="/" class="flex items-center gap-2.5 group">
-            <x-aura::icon-button icon="sparkles" variant="primary" size="sm" class="rounded-xl group-hover:scale-105 transition-transform pointer-events-none" />
+            <x-aura::icon-button icon="sparkles" variant="primary" size="sm"  />
             <x-aura::text size="sm" weight="bold">Aura Wire</x-aura::text>
         </a>
     </x-slot>
 
-    <x-aura::text size="sm" weight="medium" as="a" href="/components" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Components</x-aura::text>
-    <x-aura::text size="sm" weight="medium" as="a" href="/components/installation" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Installation</x-aura::text>
-    <x-aura::text size="sm" weight="medium" as="a" href="/components/icon" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Icons (1000+)</x-aura::text>
-    <x-aura::text size="sm" weight="medium" as="a" href="https://packagist.org/packages/insoulit/aura-wire" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-900 dark:hover:text-white transition-colors inline-flex items-center gap-1">
+    <x-aura::text size="sm" weight="medium" as="a" href="/components" >Components</x-aura::text>
+    <x-aura::text size="sm" weight="medium" as="a" href="/components/installation" >Installation</x-aura::text>
+    <x-aura::text size="sm" weight="medium" as="a" href="/components/icon" >Icons (1000+)</x-aura::text>
+    <x-aura::text size="sm" weight="medium" as="a" href="https://packagist.org/packages/insoulit/aura-wire" target="_blank" rel="noopener noreferrer" >
         <span>Packagist</span>
-        <x-aura::icon name="external-link" size="xs" class="text-zinc-400 inline-block" />
+        <x-aura::icon name="external-link" size="xs"  />
     </x-aura::text>
 
     <x-slot name="bottom">

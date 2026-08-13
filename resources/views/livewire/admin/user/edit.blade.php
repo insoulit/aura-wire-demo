@@ -39,7 +39,7 @@ class extends Component {
         </div>
         <div class="flex items-center gap-2">
             <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm">
-                <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 mr-1" />
+                <x-aura::icon name="arrow-left"  size="xs" />
                 <span>Back</span>
             </x-aura::button>
         </div>
@@ -57,7 +57,7 @@ class extends Component {
             <div class="space-y-5 pt-2">
 
                 <!-- Avatar & Identity Preview -->
-                <x-aura::card class="flex items-center gap-4 p-4 bg-zinc-50/80 dark:bg-zinc-800/50">
+                <x-aura::card >
                     <x-aura::avatar initials="AK" size="md" />
                     <div>
                         <div class="font-bold text-zinc-900 dark:text-white text-sm">Alex Kovacs</div>
@@ -117,7 +117,7 @@ class extends Component {
     </form>
 
     <!-- Danger Zone Card -->
-    <x-aura::card title="Account Security & Access" class="border-red-200 dark:border-red-900/40">
+    <x-aura::card title="Account Security & Access" >
         <div class="space-y-4">
             <div class="flex items-center justify-between gap-4 py-2 border-b border-zinc-100 dark:border-zinc-800">
                 <div>
@@ -141,7 +141,7 @@ class extends Component {
     <x-aura::modal name="delete-user-modal" variant="centered" maxWidth="sm">
         <div class="flex flex-col items-center text-center space-y-3">
             <div class="w-12 h-12 rounded-2xl bg-red-100 dark:bg-red-950/60 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-800/60 flex items-center justify-center shrink-0 shadow-xs">
-                <x-aura::icon name="trash" class="w-6 h-6" />
+                <x-aura::icon name="trash"  size="md" />
             </div>
             
             <div class="space-y-1">
@@ -154,10 +154,10 @@ class extends Component {
 
         <x-slot:footer>
             <div class="grid grid-cols-2 gap-3 w-full">
-                <x-aura::button variant="secondary" size="sm" class="w-full justify-center" x-on:click="$dispatch('close-modal', 'delete-user-modal')">
+                <x-aura::button variant="secondary" size="sm"  x-on:click="$dispatch('close-modal', 'delete-user-modal')">
                     Cancel
                 </x-aura::button>
-                <x-aura::button variant="danger" size="sm" class="w-full justify-center" x-on:click="$dispatch('close-modal', 'delete-user-modal')">
+                <x-aura::button variant="danger" size="sm"  x-on:click="$dispatch('close-modal', 'delete-user-modal')">
                     Delete
                 </x-aura::button>
             </div>

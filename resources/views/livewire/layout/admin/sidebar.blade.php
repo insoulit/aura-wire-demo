@@ -13,8 +13,8 @@ new class extends Component {};
                 A
             </div>
             <div>
-                <x-aura::heading level="1" size="xs" class="group-hover:text-zinc-600 dark:group-hover:text-zinc-300 font-extrabold tracking-tight">Aura Wire</x-aura::heading>
-                <x-aura::text size="xs" variant="subtle" class="text-[11px]">Admin Console</x-aura::text>
+                <x-aura::heading level="1" size="xs" >Aura Wire</x-aura::heading>
+                <x-aura::text size="xs" variant="subtle" >Admin Console</x-aura::text>
             </div>
         </a>
     </x-slot:header>
@@ -22,7 +22,7 @@ new class extends Component {};
     <x-aura::sidebar.heading>Core</x-aura::sidebar.heading>
     <x-aura::sidebar.item href="/admin" :active="request()->is('admin')">
         <x-slot:icon>
-            <x-aura::icon name="layout-dashboard" class="w-4 h-4 text-zinc-900 dark:text-white" />
+            <x-aura::icon name="layout-dashboard"  size="xs" />
         </x-slot:icon>
         Dashboard
     </x-aura::sidebar.item>
@@ -30,19 +30,19 @@ new class extends Component {};
     <x-aura::sidebar.heading>System</x-aura::sidebar.heading>
     <x-aura::sidebar.item href="/admin/users" :active="request()->is('admin/users*')">
         <x-slot:icon>
-            <x-aura::icon name="users" class="w-4 h-4 text-zinc-900 dark:text-white" />
+            <x-aura::icon name="users"  size="xs" />
         </x-slot:icon>
         Users
     </x-aura::sidebar.item>
     <x-aura::sidebar.item href="/admin/logs" :active="request()->is('admin/logs*')">
         <x-slot:icon>
-            <x-aura::icon name="file-text" class="w-4 h-4 text-zinc-900 dark:text-white" />
+            <x-aura::icon name="file-text"  size="xs" />
         </x-slot:icon>
         Logs
     </x-aura::sidebar.item>
     <x-aura::sidebar.item href="/admin/setting" :active="request()->is('admin/setting*')">
         <x-slot:icon>
-            <x-aura::icon name="settings" class="w-4 h-4 text-zinc-900 dark:text-white" />
+            <x-aura::icon name="settings"  size="xs" />
         </x-slot:icon>
         Settings
     </x-aura::sidebar.item>
@@ -51,25 +51,25 @@ new class extends Component {};
         <x-aura::sidebar.heading>Portals</x-aura::sidebar.heading>
         <x-aura::sidebar.item href="/components" :active="request()->is('components*')" badge="Docs">
             <x-slot:icon>
-                <x-aura::icon name="layers" class="w-4 h-4 text-zinc-900 dark:text-white" />
+                <x-aura::icon name="layers"  size="xs" />
             </x-slot:icon>
             Components
         </x-aura::sidebar.item>
         <x-aura::sidebar.item href="/guest" :active="request()->is('guest*')">
             <x-slot:icon>
-                <x-aura::icon name="globe" class="w-4 h-4 text-zinc-900 dark:text-white" />
+                <x-aura::icon name="globe"  size="xs" />
             </x-slot:icon>
             Guest
         </x-aura::sidebar.item>
         <x-aura::sidebar.item href="/dashboard" :active="request()->is('dashboard*')">
             <x-slot:icon>
-                <x-aura::icon name="user" class="w-4 h-4 text-zinc-900 dark:text-white" />
+                <x-aura::icon name="user"  size="xs" />
             </x-slot:icon>
             User
         </x-aura::sidebar.item>
         <x-aura::sidebar.item href="/admin" :active="false">
             <x-slot:icon>
-                <x-aura::icon name="shield-check" class="w-4 h-4 text-zinc-900 dark:text-white" />
+                <x-aura::icon name="shield-check"  size="xs" />
             </x-slot:icon>
             Admin
         </x-aura::sidebar.item>

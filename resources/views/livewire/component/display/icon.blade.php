@@ -95,7 +95,7 @@ class extends Component {
 
 <div class="w-full max-w-5xl mx-auto space-y-12">
     <!-- Header Page Intro -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Display</x-aura::kicker>
@@ -109,7 +109,7 @@ class extends Component {
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::icon name="sparkles" size="md" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
@@ -124,7 +124,7 @@ class extends Component {
     </x-aura::card>
 
     <!-- Interactive Icon Grid Gallery -->
-    <x-aura::code class="w-full" title="Icon Explorer (Click to Copy)">
+    <x-aura::code  title="Icon Explorer (Click to Copy)">
         <x-slot:preview>
             <div class="space-y-8 w-full">
                 <!-- Icon Grid -->
@@ -212,7 +212,7 @@ class extends Component {
     </x-aura::code>
 
     <!-- 2. Sizes Variety -->
-    <x-aura::code class="w-full" title="Icon Scale Variants (xs, sm, md, lg, xl)">
+    <x-aura::code  title="Icon Scale Variants (xs, sm, md, lg, xl)">
         <x-slot:preview>
             <div class="flex flex-wrap items-center justify-center gap-8 w-full py-4">
                 <div class="flex flex-col items-center gap-2">

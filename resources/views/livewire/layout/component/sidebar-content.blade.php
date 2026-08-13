@@ -32,7 +32,7 @@ new class extends Component {
 
     <!-- Start Section -->
     <div class="space-y-1">
-        <x-aura::kicker class="px-2 text-[11px] font-bold uppercase tracking-wider text-zinc-400">Start</x-aura::kicker>
+        <x-aura::kicker >Start</x-aura::kicker>
         <ul class="space-y-0.5 font-medium text-xs sm:text-sm">
             <li>
                 <a href="/components" class="flex items-center gap-2.5 px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold shadow-2xs' : 'text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/60' }}">

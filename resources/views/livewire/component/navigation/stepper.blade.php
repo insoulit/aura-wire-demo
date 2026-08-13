@@ -29,7 +29,7 @@ new class extends Component {
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Navigation</x-aura::kicker>
@@ -43,12 +43,12 @@ new class extends Component {
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::stepper :steps="$steps" :currentStep="$currentStep" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Interactive Livewire Stepper Form -->
-    <x-aura::code class="w-full" title="1. Interactive Livewire Multi-step Form Wizard">
+    <x-aura::code  title="1. Interactive Livewire Multi-step Form Wizard">
         <x-slot:preview>
             <div class="w-full space-y-6 py-2">
                 <x-aura::stepper :active="$currentStep" class="w-full">
@@ -105,7 +105,7 @@ new class extends Component {
     </x-aura::code>
 
     <!-- 2. Order Checkout Stepper -->
-    <x-aura::code class="w-full" title="2. E-Commerce Order Processing Pipeline">
+    <x-aura::code  title="2. E-Commerce Order Processing Pipeline">
         <x-slot:preview>
             <x-aura::stepper active="3" class="w-full py-4">
                 <x-aura::stepper.step step="1" title="Cart Review" description="2 items in cart" status="completed" />
@@ -123,7 +123,7 @@ new class extends Component {
     </x-aura::code>
 
     <!-- 3. Identity Verification & KYC Pipeline -->
-    <x-aura::code class="w-full" title="3. User Identity Verification (KYC) Workflow">
+    <x-aura::code  title="3. User Identity Verification (KYC) Workflow">
         <x-slot:preview>
             <x-aura::stepper active="2" class="w-full py-4">
                 <x-aura::stepper.step step="1" title="Personal Details" description="Name & DOB" status="completed" />

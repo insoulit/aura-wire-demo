@@ -20,7 +20,7 @@ class extends Component {
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Display</x-aura::kicker>
@@ -34,7 +34,7 @@ class extends Component {
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::skeleton variant="text" width="60%" />
 <x-aura::skeleton variant="avatar" />
 <x-aura::skeleton variant="button" />
@@ -42,7 +42,7 @@ class extends Component {
     </x-aura::code>
 
     <!-- 1. Interactive Skeleton Toggle Demo -->
-    <x-aura::code class="w-full" title="1. Interactive Async Content Loading State">
+    <x-aura::code  title="1. Interactive Async Content Loading State">
         <x-slot:preview>
             <div class="w-full max-w-md space-y-4">
                 <div class="flex items-center justify-between">
@@ -118,7 +118,7 @@ class extends Component {
     </x-aura::code>
 
     <!-- 2. Skeleton Variants -->
-    <x-aura::code class="w-full" title="2. Built-in Variant Styles">
+    <x-aura::code  title="2. Built-in Variant Styles">
         <x-slot:preview>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl">
                 <!-- Text Lines -->
@@ -162,7 +162,7 @@ class extends Component {
     </x-aura::code>
 
     <!-- 3. List & Table Skeleton Loading -->
-    <x-aura::code class="w-full" title="3. List Feed &amp; Table Row Skeletons">
+    <x-aura::code  title="3. List Feed &amp; Table Row Skeletons">
         <x-slot:preview>
             <div class="w-full max-w-xl space-y-3">
                 @for ($i = 0; $i < 3; $i++)

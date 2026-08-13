@@ -13,7 +13,7 @@ class extends Component {};
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Action</x-aura::kicker>
@@ -27,12 +27,12 @@ class extends Component {};
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::icon-button icon="pencil" variant="subtle" size="md" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. General Action Variants (Diverse Icons) -->
-    <x-aura::code class="w-full" title="1. Icon Button Variants">
+    <x-aura::code  title="1. Icon Button Variants">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-4">
                 <x-aura::icon-button icon="pencil" variant="primary" label="Primary Edit" />
@@ -53,7 +53,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. Destructive & Delete Icon Buttons -->
-    <x-aura::code class="w-full" title="2. Destructive &amp; Delete Actions (Red Icon on Hover)">
+    <x-aura::code  title="2. Destructive &amp; Delete Actions (Red Icon on Hover)">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-4">
                 <x-aura::icon-button icon="trash-2" variant="danger" label="Hover Red Delete (Default)" />
@@ -73,7 +73,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 3. Shapes (Circle vs Square) -->
-    <x-aura::code class="w-full" title="3. Shapes (Circle vs Square)">
+    <x-aura::code  title="3. Shapes (Circle vs Square)">
         <x-slot:preview>
             <div class="space-y-4">
                 <div class="flex items-center gap-3">
@@ -100,7 +100,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 4. Sizes -->
-    <x-aura::code class="w-full" title="4. Proportional Sizes (xs, sm, md, lg, xl)">
+    <x-aura::code  title="4. Proportional Sizes (xs, sm, md, lg, xl)">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-4">
                 <x-aura::icon-button icon="bell" size="xs" variant="secondary" label="Extra Small" />
@@ -118,7 +118,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 5. Real-World Table & Toolbar Actions -->
-    <x-aura::code class="w-full" title="5. Real-World Table Actions">
+    <x-aura::code  title="5. Real-World Table Actions">
         <x-slot:preview>
             <x-aura::card class="w-full p-4 flex items-center justify-between">
                 <div>

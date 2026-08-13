@@ -39,8 +39,8 @@ class extends Component {
                 <x-aura::heading level="1" size="lg">Admin Dashboard</x-aura::heading>
             </div>
             <div class="flex items-center gap-2">
-                <x-aura::button href="/admin/users" wire:navigate variant="primary" size="sm" class="shrink-0 gap-1">
-                    <x-aura::icon name="users" class="w-3.5 h-3.5 shrink-0" />
+                <x-aura::button href="/admin/users" wire:navigate variant="primary" size="sm" >
+                    <x-aura::icon name="users"  size="xs" />
                     <span>Manage Users</span>
                 </x-aura::button>
             </div>
@@ -50,19 +50,19 @@ class extends Component {
     <!-- Metrics Cards Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
         <x-aura::stat title="Total Users" value="30" trend="+14% month" trendDirection="up">
-            <x-slot:icon><x-aura::icon name="users" class="w-4 h-4 text-zinc-900 dark:text-white" /></x-slot:icon>
+            <x-slot:icon><x-aura::icon name="users"  size="xs" /></x-slot:icon>
         </x-aura::stat>
 
         <x-aura::stat title="System Logs" value="24" trend="0 Errors" trendDirection="neutral">
-            <x-slot:icon><x-aura::icon name="activity" class="w-4 h-4 text-zinc-900 dark:text-white" /></x-slot:icon>
+            <x-slot:icon><x-aura::icon name="activity"  size="xs" /></x-slot:icon>
         </x-aura::stat>
 
         <x-aura::stat title="Package Mode" value="@dev" trend="aura-wire" trendDirection="neutral">
-            <x-slot:icon><x-aura::icon name="box" class="w-4 h-4 text-zinc-900 dark:text-white" /></x-slot:icon>
+            <x-slot:icon><x-aura::icon name="box"  size="xs" /></x-slot:icon>
         </x-aura::stat>
 
         <x-aura::stat title="PHP &amp; Volt" value="v8.3+" trend="Volt v1.11" trendDirection="up">
-            <x-slot:icon><x-aura::icon name="terminal" class="w-4 h-4 text-zinc-900 dark:text-white" /></x-slot:icon>
+            <x-slot:icon><x-aura::icon name="terminal"  size="xs" /></x-slot:icon>
         </x-aura::stat>
     </div>
 
@@ -90,7 +90,7 @@ class extends Component {
                 <div class="flex items-center justify-end w-full">
                     <x-aura::button href="/admin/users" wire:navigate variant="ghost" size="xs">
                         <span>View All Users</span>
-                        <x-aura::icon name="chevron-right" class="w-3.5 h-3.5 ml-1" />
+                        <x-aura::icon name="chevron-right"  size="xs" />
                     </x-aura::button>
                 </div>
             </x-slot:footer>
@@ -102,7 +102,7 @@ class extends Component {
                 @foreach ($recentLogs as $log)
                     <div class="py-3 flex items-center justify-between gap-3">
                         <div class="flex items-center gap-2.5 min-w-0">
-                            <x-aura::badge :variant="$log['variant']" size="sm" class="shrink-0">{{ $log['level'] }}</x-aura::badge>
+                            <x-aura::badge :variant="$log['variant']" size="sm" >{{ $log['level'] }}</x-aura::badge>
                             <span class="font-mono text-xs text-zinc-800 dark:text-zinc-200 truncate">{{ $log['message'] }}</span>
                         </div>
                         <span class="text-[11px] font-mono text-zinc-400 shrink-0">{{ $log['time'] }}</span>
@@ -114,7 +114,7 @@ class extends Component {
                 <div class="flex items-center justify-end w-full">
                     <x-aura::button href="/admin/logs" wire:navigate variant="ghost" size="xs">
                         <span>View All Logs</span>
-                        <x-aura::icon name="chevron-right" class="w-3.5 h-3.5 ml-1" />
+                        <x-aura::icon name="chevron-right"  size="xs" />
                     </x-aura::button>
                 </div>
             </x-slot:footer>

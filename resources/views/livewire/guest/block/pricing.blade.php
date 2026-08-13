@@ -19,19 +19,19 @@ class extends Component {};
                 <x-aura::kicker>Design Blocks</x-aura::kicker>
                 <x-aura::heading level="1" size="lg">Pricing Cards</x-aura::heading>
             </div>
-            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" class="shrink-0 gap-1.5">
-                <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 shrink-0" />
+            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" >
+                <x-aura::icon name="arrow-left"  size="xs" />
                 <span>Back</span>
             </x-aura::button>
         </div>
     </div>
 
     <!-- Pricing Block Preview -->
-    <x-aura::code class="w-full" title="3-Tier SaaS Pricing Block">
+    <x-aura::code  title="3-Tier SaaS Pricing Block">
         <x-slot:preview>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full items-stretch">
                 <!-- Tier 1: Starter -->
-                <x-aura::card class="flex flex-col justify-between p-6 space-y-6">
+                <x-aura::card >
                     <div class="space-y-4">
                         <div class="space-y-1">
                             <x-aura::kicker>For Individuals</x-aura::kicker>
@@ -59,18 +59,18 @@ class extends Component {};
                         </ul>
                     </div>
                     <div class="pt-3">
-                        <x-aura::button variant="outline" size="md" class="w-full justify-center">Get Started</x-aura::button>
+                        <x-aura::button variant="outline" size="md" >Get Started</x-aura::button>
                     </div>
                 </x-aura::card>
 
                 <!-- Tier 2: Pro (Featured) -->
-                <x-aura::card class="flex flex-col justify-between p-6 space-y-6 relative border-2 border-indigo-500 shadow-xl ring-4 ring-indigo-500/10">
-                    <x-aura::badge variant="positive" size="sm" class="absolute -top-3 right-6 z-10 shadow-md bg-indigo-600 text-white font-bold">
+                <x-aura::card >
+                    <x-aura::badge variant="positive" size="sm" >
                         MOST POPULAR
                     </x-aura::badge>
                     <div class="space-y-4">
                         <div class="space-y-1">
-                            <x-aura::kicker class="text-indigo-500 font-bold">For Growing Teams</x-aura::kicker>
+                            <x-aura::kicker >For Growing Teams</x-aura::kicker>
                             <h3 class="text-xl font-bold text-zinc-900 dark:text-white">Pro Plan</h3>
                             <p class="text-xs text-zinc-500">Advanced collaboration &amp; full power access.</p>
                         </div>
@@ -99,12 +99,12 @@ class extends Component {};
                         </ul>
                     </div>
                     <div class="pt-3">
-                        <x-aura::button variant="primary" size="md" class="w-full justify-center shadow-md">Upgrade to Pro</x-aura::button>
+                        <x-aura::button variant="primary" size="md" >Upgrade to Pro</x-aura::button>
                     </div>
                 </x-aura::card>
 
                 <!-- Tier 3: Enterprise -->
-                <x-aura::card class="flex flex-col justify-between p-6 space-y-6">
+                <x-aura::card >
                     <div class="space-y-4">
                         <div class="space-y-1">
                             <x-aura::kicker>For Organizations</x-aura::kicker>
@@ -132,7 +132,7 @@ class extends Component {};
                         </ul>
                     </div>
                     <div class="pt-3">
-                        <x-aura::button variant="secondary" size="md" class="w-full justify-center">Contact Sales</x-aura::button>
+                        <x-aura::button variant="secondary" size="md" >Contact Sales</x-aura::button>
                     </div>
                 </x-aura::card>
             </div>

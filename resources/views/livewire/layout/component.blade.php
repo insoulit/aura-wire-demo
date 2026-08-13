@@ -6,16 +6,20 @@
     <div class="flex-1 flex flex-col justify-between">
         <livewire:layout.shared.header />
 
-        <x-aura::container class="flex-1 flex gap-0 lg:gap-8 items-stretch">
-            <!-- Component Navigation Sidebar -->
-            <livewire:layout.component.sidebar />
+        <x-aura::container>
+            <div class="flex-1 flex gap-0 lg:gap-8 items-stretch min-w-0">
+                <!-- Component Navigation Sidebar -->
+                <livewire:layout.component.sidebar />
 
-            <!-- Main Component Page Content Slot -->
-            <x-aura::main :container="false" class="my-auto">
-                {{ $slot }}
-                
-                <livewire:layout.component.doc-pagination />
-            </x-aura::main>
+                <!-- Main Component Page Content Slot -->
+                <div class="flex-1 min-w-0 my-auto">
+                    <x-aura::main :container="false">
+                        {{ $slot }}
+                        
+                        <livewire:layout.component.doc-pagination />
+                    </x-aura::main>
+                </div>
+            </div>
         </x-aura::container>
     </div>
 

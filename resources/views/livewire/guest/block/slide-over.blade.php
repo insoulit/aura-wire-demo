@@ -19,15 +19,15 @@ class extends Component {};
                 <x-aura::kicker>Design Blocks</x-aura::kicker>
                 <x-aura::heading level="1" size="lg">Slide Overs</x-aura::heading>
             </div>
-            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" class="shrink-0 gap-1.5">
-                <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 shrink-0" />
+            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" >
+                <x-aura::icon name="arrow-left"  size="xs" />
                 <span>Back</span>
             </x-aura::button>
         </div>
     </div>
 
     <!-- 1. Live Interactive Slide-Over Panel -->
-    <x-aura::code class="w-full" title="1. Live Interactive Side Sheet Drawers">
+    <x-aura::code  title="1. Live Interactive Side Sheet Drawers">
         <x-slot:preview>
             <div class="p-8 w-full border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-50/50 dark:bg-zinc-900/40 text-center flex flex-col items-center justify-center space-y-4">
                 <div class="space-y-1 max-w-md">
@@ -67,12 +67,12 @@ class extends Component {};
                 <!-- Left Drawer Sheet -->
                 <x-aura::sheet name="left-drawer-demo" side="left" title="Navigation Drawer" description="Quick access menu for mobile navigation." maxWidth="sm">
                     <div class="space-y-3 py-2 text-left">
-                        <x-aura::button variant="subtle" size="sm" class="w-full justify-start gap-2" href="/guest#design-block">
-                            <x-aura::icon name="home" class="w-4 h-4" />
+                        <x-aura::button variant="subtle" size="sm"  href="/guest#design-block">
+                            <x-aura::icon name="home"  size="xs" />
                             <span>Guest Home</span>
                         </x-aura::button>
-                        <x-aura::button variant="subtle" size="sm" class="w-full justify-start gap-2" href="/guest/block/feature">
-                            <x-aura::icon name="layout" class="w-4 h-4" />
+                        <x-aura::button variant="subtle" size="sm"  href="/guest/block/feature">
+                            <x-aura::icon name="layout"  size="xs" />
                             <span>Feature Grid</span>
                         </x-aura::button>
                     </div>

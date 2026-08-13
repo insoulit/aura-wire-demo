@@ -9,7 +9,7 @@ title('Stat Card - Aura Wire');
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Display</x-aura::kicker>
@@ -23,12 +23,12 @@ title('Stat Card - Aura Wire');
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::stat label="Total Revenue" value="$48,290" trend="+14.2%" trendDirection="up" icon="trending-up" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Stat Cards Grid -->
-    <x-aura::code class="w-full" title="1. Dashboard Metric KPI Cards">
+    <x-aura::code  title="1. Dashboard Metric KPI Cards">
         <x-slot:preview>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
                 <x-aura::stat label="Total Revenue" value="$48,290" trend="+14.2%" trendDirection="up" description="vs previous month" icon="trending-up" />
@@ -42,7 +42,7 @@ title('Stat Card - Aura Wire');
     </x-aura::code>
 
     <!-- 2. Trend Status Variants -->
-    <x-aura::code class="w-full" title="2. Trend Directions (up, down, neutral)">
+    <x-aura::code  title="2. Trend Directions (up, down, neutral)">
         <x-slot:preview>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
                 <x-aura::stat label="Growth Rate" value="+28.4%" trend="+5.2%" trendDirection="up" />

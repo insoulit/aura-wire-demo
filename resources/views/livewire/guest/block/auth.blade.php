@@ -19,18 +19,18 @@ class extends Component {};
                 <x-aura::kicker>Design Blocks</x-aura::kicker>
                 <x-aura::heading level="1" size="lg">Auth &amp; Security</x-aura::heading>
             </div>
-            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" class="shrink-0 gap-1.5">
-                <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 shrink-0" />
+            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" >
+                <x-aura::icon name="arrow-left"  size="xs" />
                 <span>Back</span>
             </x-aura::button>
         </div>
     </div>
 
     <!-- Login Block Preview -->
-    <x-aura::code class="w-full" title="Sign-In &amp; Security Authentication Block">
+    <x-aura::code  title="Sign-In &amp; Security Authentication Block">
         <x-slot:preview>
             <div class="w-full max-w-md mx-auto">
-                <x-aura::card class="p-8 space-y-6 shadow-xl">
+                <x-aura::card >
                     <div class="space-y-2 text-center">
                         <div class="w-12 h-12 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 text-indigo-600 dark:text-indigo-400 mx-auto flex items-center justify-center font-black text-xl border border-indigo-200 dark:border-indigo-800">
                             A
@@ -57,7 +57,7 @@ class extends Component {};
                             <a href="#" class="text-indigo-600 dark:text-indigo-400 font-semibold hover:underline">Forgot password?</a>
                         </div>
 
-                        <x-aura::button variant="primary" size="md" class="w-full justify-center shadow-md">
+                        <x-aura::button variant="primary" size="md" >
                             Sign In to Account
                         </x-aura::button>
                     </form>

@@ -10,8 +10,12 @@ new class extends Component {};
     <x-slot name="brand">
         <a href="/" class="flex items-center gap-2.5 sm:gap-3.5 group min-w-0">
             <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center font-extrabold text-base sm:text-lg shadow-xs group-hover:scale-105 transition-all duration-200 ring-1 ring-zinc-900/10 dark:ring-white/20 shrink-0">
-                <x-aura::icon name="sparkles" size="sm" class="sm:hidden text-white dark:text-zinc-900" />
-                <x-aura::icon name="sparkles" size="md" class="hidden sm:block text-white dark:text-zinc-900" />
+                <div class="sm:hidden">
+                    <x-aura::icon name="sparkles" size="sm" />
+                </div>
+                <div class="hidden sm:block">
+                    <x-aura::icon name="sparkles" size="md" />
+                </div>
             </div>
             <div class="flex flex-col justify-center min-w-0">
                 <div class="flex items-center gap-1.5 sm:gap-2">
@@ -45,7 +49,7 @@ new class extends Component {};
         @endif
 
         <div class="hidden md:inline-flex">
-            <x-aura::button variant="outline" size="md" icon="package" href="https://packagist.org/packages/insoulit/aura-wire" target="_blank" rel="noopener noreferrer" class="rounded-lg">
+            <x-aura::button variant="outline" size="md" icon="package" href="https://packagist.org/packages/insoulit/aura-wire" target="_blank" rel="noopener noreferrer">
                 Packagist
             </x-aura::button>
         </div>

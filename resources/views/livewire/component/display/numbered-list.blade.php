@@ -66,7 +66,7 @@ class extends Component {
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Display</x-aura::kicker>
@@ -80,12 +80,12 @@ class extends Component {
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::numbered-list :items="$items" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Rich Media List with Images & Actions -->
-    <x-aura::code class="w-full" title="1. Rich Media List (with Thumbnails & Actions)">
+    <x-aura::code  title="1. Rich Media List (with Thumbnails & Actions)">
         <x-slot:preview>
             <div class="w-full max-w-2xl">
                 <x-aura::numbered-list :items="$mediaItems" variant="media" />
@@ -110,7 +110,7 @@ class extends Component {
     </x-aura::code>
 
     <!-- 2. Card Grid List with Images -->
-    <x-aura::code class="w-full" title="2. Two-Column Card Grid List">
+    <x-aura::code  title="2. Two-Column Card Grid List">
         <x-slot:preview>
             <div class="w-full max-w-2xl">
                 <x-aura::numbered-list :items="$gridCards" variant="grid" />
@@ -123,7 +123,7 @@ class extends Component {
     </x-aura::code>
 
     <!-- 3. Process Step Bar -->
-    <x-aura::code class="w-full" title="3. Horizontal Process Steps Bar">
+    <x-aura::code  title="3. Horizontal Process Steps Bar">
         <x-slot:preview>
             <div class="w-full max-w-2xl">
                 <x-aura::numbered-list :items="$stepItems" variant="steps" />
@@ -137,7 +137,7 @@ class extends Component {
     </x-aura::code>
 
     <!-- 4. Compact User Avatar List -->
-    <x-aura::code class="w-full" title="4. Compact Row List with Avatars">
+    <x-aura::code  title="4. Compact Row List with Avatars">
         <x-slot:preview>
             <div class="w-full max-w-2xl">
                 <x-aura::numbered-list :items="$userAvatars" variant="compact" />

@@ -13,7 +13,7 @@ class extends Component {};
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Overlay</x-aura::kicker>
@@ -27,14 +27,14 @@ class extends Component {};
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::modal name="create-user" title="Create User">
     <p>Modal body content...</p>
 </x-aura::modal>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Standard Confirmation Modal -->
-    <x-aura::code class="w-full" title="1. Standard Form & Confirmation Modal">
+    <x-aura::code  title="1. Standard Form & Confirmation Modal">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-3">
                 <x-aura::button variant="primary" x-on:click="$dispatch('open-modal', 'demo-modal')">
@@ -68,7 +68,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. Centered Success Alert Modal -->
-    <x-aura::code class="w-full" title="2. Centered Icon Alert Modal (variant='centered')">
+    <x-aura::code  title="2. Centered Icon Alert Modal (variant='centered')">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-3">
                 <x-aura::button variant="subtle" x-on:click="$dispatch('open-modal', 'success-modal')">
@@ -90,7 +90,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 3. Destructive Danger Confirm Modal -->
-    <x-aura::code class="w-full" title="3. Destructive Action Modal (variant='danger')">
+    <x-aura::code  title="3. Destructive Action Modal (variant='danger')">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-3">
                 <x-aura::button variant="danger" x-on:click="$dispatch('open-modal', 'delete-modal')">
@@ -120,7 +120,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 4. Wide Form Modal (maxWidth='2xl') -->
-    <x-aura::code class="w-full" title="4. Large Form Modal (maxWidth='2xl')">
+    <x-aura::code  title="4. Large Form Modal (maxWidth='2xl')">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-3">
                 <x-aura::button variant="outline" x-on:click="$dispatch('open-modal', 'wide-modal')">

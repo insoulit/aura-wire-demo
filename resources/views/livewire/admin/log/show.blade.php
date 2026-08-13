@@ -33,7 +33,7 @@ class extends Component {
         </div>
         <div class="flex items-center gap-2">
             <x-aura::button href="/admin/logs" wire:navigate variant="secondary" size="sm">
-                <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 mr-1" />
+                <x-aura::icon name="arrow-left"  size="xs" />
                 <span>Back</span>
             </x-aura::button>
         </div>
@@ -46,7 +46,7 @@ class extends Component {
                 <x-aura::badge :variant="$log['variant']" size="sm">{{ $log['level'] }}</x-aura::badge>
                 <div>
                     <div class="flex items-center gap-2">
-                        <x-aura::heading level="2" size="xs" class="font-bold font-mono text-zinc-900 dark:text-white">{{ $log['timestamp'] }}</x-aura::heading>
+                        <x-aura::heading level="2" size="xs" >{{ $log['timestamp'] }}</x-aura::heading>
                     </div>
                     <x-aura::text variant="subtle" size="xs">Environment: {{ $log['env'] }}</x-aura::text>
                 </div>
@@ -81,7 +81,7 @@ class extends Component {
         <x-slot:footer>
             <div class="flex items-center justify-center w-full">
                 <x-aura::button href="/admin/logs" wire:navigate variant="secondary" size="sm">
-                    <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 mr-1" />
+                    <x-aura::icon name="arrow-left"  size="xs" />
                     <span>Return to Logs</span>
                 </x-aura::button>
             </div>

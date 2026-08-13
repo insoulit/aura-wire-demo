@@ -13,7 +13,7 @@ class extends Component {};
 
 <div class="w-full max-w-4xl mx-auto space-y-10">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Typography</x-aura::kicker>
@@ -32,7 +32,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 1. Heading Levels (H1 - H6) -->
-    <x-aura::code class="w-full" title="1. Semantic Heading Levels (H1 to H6)">
+    <x-aura::code  title="1. Semantic Heading Levels (H1 to H6)">
         <x-slot:preview>
             <div class="space-y-3 w-full">
                 <x-aura::heading level="1" size="xl">Level 1 (H1) Heading</x-aura::heading>
@@ -51,7 +51,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. Display Title Scales -->
-    <x-aura::code class="w-full" title="2. Display Title Scales for Hero Sections">
+    <x-aura::code  title="2. Display Title Scales for Hero Sections">
         <x-slot:preview>
             <div class="space-y-4 w-full">
                 <x-aura::heading level="1" size="display-2xl">Display 2XL Title</x-aura::heading>
@@ -65,7 +65,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 3. Font Weights -->
-    <x-aura::code class="w-full" title="3. Custom Font Weights">
+    <x-aura::code  title="3. Custom Font Weights">
         <x-slot:preview>
             <div class="space-y-2 w-full">
                 <x-aura::heading level="2" size="md" weight="normal">Normal Weight Heading</x-aura::heading>
@@ -81,7 +81,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 4. Real-World Dashboard Header Pattern -->
-    <x-aura::code class="w-full" title="4. Real-World Dashboard Section Header">
+    <x-aura::code  title="4. Real-World Dashboard Section Header">
         <x-slot:preview>
             <x-aura::card class="p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 w-full">
                 <div class="space-y-1">

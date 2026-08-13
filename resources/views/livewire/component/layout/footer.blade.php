@@ -13,7 +13,7 @@ class extends Component {};
 
 <div class="w-full max-w-5xl mx-auto space-y-12">
     <!-- Header Page Intro -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Layout</x-aura::kicker>
@@ -27,7 +27,7 @@ class extends Component {};
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::footer>
     <x-slot:brand>Brand Content</x-slot:brand>
     <x-slot:bottom>Copyright Content</x-slot:bottom>
@@ -35,7 +35,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 1. Simple Application Footer -->
-    <x-aura::code class="w-full" title="1. Simple Application Footer">
+    <x-aura::code  title="1. Simple Application Footer">
         <x-slot:preview>
             <div class="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100/60 dark:bg-zinc-950 p-3">
                 <x-aura::footer class="rounded-xl border border-zinc-200/80 dark:border-zinc-800/80">
@@ -83,7 +83,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. Multi-Column Corporate SaaS Footer -->
-    <x-aura::code class="w-full" title="2. Multi-Column Corporate SaaS Footer">
+    <x-aura::code  title="2. Multi-Column Corporate SaaS Footer">
         <x-slot:preview>
             <div class="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 space-y-8">
                 <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
@@ -167,7 +167,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 3. Dark Theme Developer Platform Footer -->
-    <x-aura::code class="w-full" title="3. Dark Theme Developer Platform Footer">
+    <x-aura::code  title="3. Dark Theme Developer Platform Footer">
         <x-slot:preview>
             <div class="w-full rounded-2xl border border-zinc-800 bg-zinc-950 p-3">
                 <x-aura::footer class="rounded-xl !bg-zinc-900 !border-zinc-800 !text-zinc-300">
@@ -209,7 +209,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 4. E-Commerce Storefront Footer with Newsletter -->
-    <x-aura::code class="w-full" title="4. E-Commerce Storefront Footer with Newsletter">
+    <x-aura::code  title="4. E-Commerce Storefront Footer with Newsletter">
         <x-slot:preview>
             <div class="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 p-6 space-y-8">
                 <!-- Newsletter Section -->

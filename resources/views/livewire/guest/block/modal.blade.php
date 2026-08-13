@@ -19,15 +19,15 @@ class extends Component {};
                 <x-aura::kicker>Design Blocks</x-aura::kicker>
                 <x-aura::heading level="1" size="lg">Modal</x-aura::heading>
             </div>
-            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" class="shrink-0 gap-1.5">
-                <x-aura::icon name="arrow-left" class="w-3.5 h-3.5 shrink-0" />
+            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" >
+                <x-aura::icon name="arrow-left"  size="xs" />
                 <span>Back</span>
             </x-aura::button>
         </div>
     </div>
 
     <!-- 1. Interactive Trigger Modals -->
-    <x-aura::code class="w-full" title="1. Live Interactive Overlay Modals">
+    <x-aura::code  title="1. Live Interactive Overlay Modals">
         <x-slot:preview>
             <div class="p-8 w-full border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-50/50 dark:bg-zinc-900/40 text-center flex flex-col items-center justify-center space-y-4">
                 <div class="space-y-1 max-w-md">
@@ -98,14 +98,14 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. Clean Modal Dialog Card Layout Preview -->
-    <x-aura::code class="w-full" title="2. Modal Card Dialog Structure">
+    <x-aura::code  title="2. Modal Card Dialog Structure">
         <x-slot:preview>
             <div class="w-full max-w-lg mx-auto">
-                <x-aura::card class="p-6 space-y-5 shadow-xl border border-zinc-200 dark:border-zinc-800">
+                <x-aura::card >
                     <div class="flex items-start justify-between gap-4 border-b border-zinc-100 dark:border-zinc-800 pb-4">
                         <div class="flex items-center gap-3">
                             <div class="h-10 w-10 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shrink-0">
-                                <x-aura::icon name="key" class="w-5 h-5" />
+                                <x-aura::icon name="key"  size="sm" />
                             </div>
                             <div>
                                 <x-aura::heading level="3" size="sm">Create Access Token</x-aura::heading>

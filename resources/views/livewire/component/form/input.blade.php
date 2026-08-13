@@ -14,7 +14,7 @@ state([
 
 <div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs w-full">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Form Controls</x-aura::kicker>
@@ -28,12 +28,12 @@ state([
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" class="w-full">
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
         <x-slot:codeSlot>@verbatim<x-aura::input wire:model="email" placeholder="Enter email address" icon="mail" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Standard Input Types -->
-    <x-aura::code class="w-full" title="1. Standard Input Types">
+    <x-aura::code  title="1. Standard Input Types">
         <x-slot:preview>
             <div class="w-full max-w-md space-y-4">
                 <x-aura::input name="email" wire:model="email" placeholder="john@example.com" value="alex@example.com" />
@@ -45,7 +45,7 @@ state([
     </x-aura::code>
 
     <!-- 2. Input Sizes -->
-    <x-aura::code class="w-full" title="2. Input Sizes (sm, md, lg)">
+    <x-aura::code  title="2. Input Sizes (sm, md, lg)">
         <x-slot:preview>
             <div class="w-full max-w-md space-y-4">
                 <x-aura::input size="sm" placeholder="Small input (sm)" />
@@ -59,7 +59,7 @@ state([
     </x-aura::code>
 
     <!-- 3. Inputs with Icons -->
-    <x-aura::code class="w-full" title="3. Inputs with Prefix & Suffix Icons">
+    <x-aura::code  title="3. Inputs with Prefix & Suffix Icons">
         <x-slot:preview>
             <div class="w-full max-w-md space-y-4">
                 <!-- Search Input with Search Icon -->
@@ -98,7 +98,7 @@ state([
     </x-aura::code>
 
     <!-- 4. Validation & Invalid State -->
-    <x-aura::code class="w-full" title="4. Validation Error & Invalid State">
+    <x-aura::code  title="4. Validation Error & Invalid State">
         <x-slot:preview>
             <div class="w-full max-w-md space-y-4">
                 <x-aura::input value="invalid-email" invalid placeholder="Email address" />
@@ -110,7 +110,7 @@ state([
     </x-aura::code>
 
     <!-- 5. Disabled State -->
-    <x-aura::code class="w-full" title="5. Disabled State">
+    <x-aura::code  title="5. Disabled State">
         <x-slot:preview>
             <div class="w-full max-w-md space-y-4">
                 <x-aura::input value="system.admin@acme.internal" disabled />

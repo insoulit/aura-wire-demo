@@ -13,7 +13,7 @@ class extends Component {};
 
 <div class="w-full max-w-4xl mx-auto space-y-10">
     <!-- Header -->
-    <x-aura::card class="p-6 sm:p-8 bg-white/60 dark:bg-zinc-900/50 backdrop-blur-md shadow-xs">
+    <x-aura::card >
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Typography</x-aura::kicker>
@@ -32,7 +32,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 1. Standard Section Kicker -->
-    <x-aura::code class="w-full" title="1. Standard Section Header Kicker">
+    <x-aura::code  title="1. Standard Section Header Kicker">
         <x-slot:preview>
             <div class="space-y-1 text-center flex flex-col items-center w-full">
                 <x-aura::kicker>FEATURED PACKAGE</x-aura::kicker>
@@ -44,7 +44,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. Sidebar & Group Section Kickers -->
-    <x-aura::code class="w-full" title="2. Sidebar &amp; Group Section Kickers">
+    <x-aura::code  title="2. Sidebar &amp; Group Section Kickers">
         <x-slot:preview>
             <x-aura::card class="w-64 p-4 space-y-3">
                 <div class="space-y-1">
@@ -70,7 +70,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 3. Badge & Icon Accent Kickers -->
-    <x-aura::code class="w-full" title="3. Badge &amp; Icon Accent Kickers">
+    <x-aura::code  title="3. Badge &amp; Icon Accent Kickers">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-4">
                 <x-aura::badge variant="subtle" size="sm">
@@ -91,7 +91,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 4. Hero Banner Section Header -->
-    <x-aura::code class="w-full" title="4. Hero Banner Section Header">
+    <x-aura::code  title="4. Hero Banner Section Header">
         <x-slot:preview>
             <x-aura::card class="p-8 bg-zinc-50/80 dark:bg-zinc-900/60 text-center flex flex-col items-center space-y-3 w-full">
                 <x-aura::kicker class="text-indigo-600 dark:text-indigo-400 font-bold tracking-widest">
