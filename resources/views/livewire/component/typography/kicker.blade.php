@@ -44,7 +44,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. Sidebar & Group Section Kickers -->
-    <x-aura::code  title="2. Sidebar &amp; Group Section Kickers">
+    <x-aura::code  title="2. Sidebar & Group Section Kickers">
         <x-slot:preview>
             <x-aura::card>
                 <div class="space-y-1">
@@ -70,7 +70,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 3. Badge & Icon Accent Kickers -->
-    <x-aura::code  title="3. Badge &amp; Icon Accent Kickers">
+    <x-aura::code  title="3. Badge & Icon Accent Kickers">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-4">
                 <x-aura::badge variant="subtle" size="sm">

@@ -162,7 +162,7 @@ class extends Component {
     </x-aura::code>
 
     <!-- 3. List & Table Skeleton Loading -->
-    <x-aura::code  title="3. List Feed &amp; Table Row Skeletons">
+    <x-aura::code  title="3. List Feed & Table Row Skeletons">
         <x-slot:preview>
             <div class="w-full max-w-xl space-y-3">
                 @for ($i = 0; $i < 3; $i++)

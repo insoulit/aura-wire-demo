@@ -106,7 +106,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 4. Pill & Circular Buttons -->
-    <x-aura::code title="4. Pill &amp; Circular Buttons">
+    <x-aura::code title="4. Pill & Circular Buttons">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-3">
                 <x-aura::button variant="primary" pill>Pill Primary</x-aura::button>
@@ -141,7 +141,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 6. Disabled & Loading States -->
-    <x-aura::code title="6. Disabled &amp; Loading States">
+    <x-aura::code title="6. Disabled & Loading States">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-3">
                 <x-aura::button variant="primary" disabled>Primary Disabled</x-aura::button>

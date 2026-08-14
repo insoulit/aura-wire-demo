@@ -53,7 +53,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. Destructive & Delete Icon Buttons -->
-    <x-aura::code  title="2. Destructive &amp; Delete Actions (Red Icon on Hover)">
+    <x-aura::code  title="2. Destructive & Delete Actions (Red Icon on Hover)">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-4">
                 <x-aura::icon-button icon="trash-2" variant="danger" label="Hover Red Delete (Default)" />

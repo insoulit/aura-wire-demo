@@ -68,7 +68,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 3. Monospace & Code Strings -->
-    <x-aura::code  title="3. Monospace Code &amp; Key Strings">
+    <x-aura::code  title="3. Monospace Code & Key Strings">
         <x-slot:preview>
             <x-aura::card>
                 <div class="flex items-center justify-between">

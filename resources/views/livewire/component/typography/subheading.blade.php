@@ -48,97 +48,144 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 2. Hero Section Header Pattern -->
-    <x-aura::code  title="2. Hero Section Header Pattern">
+    <x-aura::code title="2. Hero Section Header Pattern">
         <x-slot:preview>
             <div class="p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/60 space-y-4 text-center flex flex-col items-center w-full">
-                <x-aura::kicker>PRODUCTIVITY PLATFORM</x-aura::kicker>
-                <x-aura::heading level="1" size="display-lg" >
-                    Build faster with modern Blade components
-                </x-aura::heading>
-                <x-aura::subheading>
-                    Aura Wire provides unstyled, accessible Livewire design primitives designed to elevate your developer workflow.
-                </x-aura::subheading>
+                <div class="space-y-3 max-w-xl flex flex-col items-center">
+                    <x-aura::kicker>PRODUCTIVITY PLATFORM</x-aura::kicker>
+                    <x-aura::heading level="1" size="display-lg">
+                        Build faster with modern Blade components
+                    </x-aura::heading>
+                    <x-aura::subheading size="lg">
+                        Aura Wire provides unstyled, accessible Livewire design primitives designed to elevate your developer workflow.
+                    </x-aura::subheading>
+                </div>
                 <div class="pt-2 flex items-center gap-3">
-                    <x-aura::button variant="primary" pill icon-trailing="arrow-right">Get Started</x-aura::button>
-                    <x-aura::button variant="ghost" pill>Documentation</x-aura::button>
+                    <x-aura::button variant="primary" iconTrailing="arrow-right">Get Started</x-aura::button>
+                    <x-aura::button variant="ghost">Documentation</x-aura::button>
                 </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<div class="text-center flex flex-col items-center space-y-3">
-    <x-aura::kicker>PRODUCTIVITY PLATFORM</x-aura::kicker>
-    <x-aura::heading level="1" size="display-lg">
-        Build faster with modern Blade components
-    </x-aura::heading>
-    <x-aura::subheading>
-        Aura Wire provides unstyled, accessible Livewire design primitives designed to elevate your developer workflow.
-    </x-aura::subheading>
+        <x-slot:codeSlot>@verbatim<div class="p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/60 space-y-4 text-center flex flex-col items-center">
+    <div class="space-y-3 max-w-xl flex flex-col items-center">
+        <x-aura::kicker>PRODUCTIVITY PLATFORM</x-aura::kicker>
+        <x-aura::heading level="1" size="display-lg">
+            Build faster with modern Blade components
+        </x-aura::heading>
+        <x-aura::subheading size="lg">
+            Aura Wire provides unstyled, accessible Livewire design primitives designed to elevate your developer workflow.
+        </x-aura::subheading>
+    </div>
+    <div class="pt-2 flex items-center gap-3">
+        <x-aura::button variant="primary" iconTrailing="arrow-right">Get Started</x-aura::button>
+        <x-aura::button variant="ghost">Documentation</x-aura::button>
+    </div>
 </div>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 3. Custom HTML Tags (as="h2", as="p", as="span") -->
-    <x-aura::code  title="3. Custom HTML Element Types (as prop)">
-        <x-slot:preview>
-            <div class="space-y-4 w-full">
-                <x-aura::card>
-                    <p class="text-xs font-mono font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">as="p" (Default paragraph tag)</p>
-                    <x-aura::subheading as="p">
-                        Standard paragraph lead text for descriptive body content.
-                    </x-aura::subheading>
-                </x-aura::card>
-
-                <x-aura::card>
-                    <p class="text-xs font-mono font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">as="h2" (Semantic H2 heading element)</p>
-                    <x-aura::subheading as="h2">
-                        Subheading rendered as a semantic level-2 header tag for search engines.
-                    </x-aura::subheading>
-                </x-aura::card>
-
-                <x-aura::card>
-                    <p class="text-xs font-mono font-bold text-zinc-500 dark:text-zinc-400 uppercase tracking-wider">as="span" (Inline span element)</p>
-                    <x-aura::subheading as="span">
-                        Inline subheading element for flexible inline container integration.
-                    </x-aura::subheading>
-                </x-aura::card>
-            </div>
-        </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::subheading as="p">Standard paragraph lead text.</x-aura::subheading>
-<x-aura::subheading as="h2">Semantic level-2 header tag.</x-aura::subheading>
-<x-aura::subheading as="span">Inline subheading element.</x-aura::subheading>@endverbatim</x-slot:codeSlot>
-    </x-aura::code>
-
-    <!-- 4. Card & Panel Header Descriptions -->
-    <x-aura::code  title="4. Card &amp; Panel Header Descriptions">
+    <!-- 3. Size Scales & Custom HTML Elements -->
+    <x-aura::code title="3. Size Scales & HTML Elements (as prop)">
         <x-slot:preview>
             <x-aura::card>
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-4">
-                    <div>
-                        <x-aura::heading level="3" size="sm">Security &amp; Authentication</x-aura::heading>
-                        <x-aura::subheading>
-                            Manage two-factor authentication and active login sessions.
+                <div class="space-y-4 w-full">
+                    <div class="space-y-1">
+                        <div class="flex items-center gap-2">
+                            <x-aura::badge variant="neutral" size="sm">size="lg"</x-aura::badge>
+                            <x-aura::badge variant="subtle" size="sm">as="p"</x-aura::badge>
+                        </div>
+                        <x-aura::subheading size="lg">
+                            Large subheading (18px) — Ideal for hero lead summaries and landing sections.
                         </x-aura::subheading>
                     </div>
-                    <x-aura::button variant="secondary" size="sm">Manage Sessions</x-aura::button>
-                </div>
 
-                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                    <div>
-                        <x-aura::heading level="3" size="sm">API Webhooks</x-aura::heading>
-                        <x-aura::subheading>
-                            Receive real-time HTTP callbacks when events occur in your account.
+                    <div class="space-y-1 border-t border-zinc-200 dark:border-zinc-800 pt-3">
+                        <div class="flex items-center gap-2">
+                            <x-aura::badge variant="neutral" size="sm">size="md"</x-aura::badge>
+                            <x-aura::badge variant="subtle" size="sm">as="p" (Default)</x-aura::badge>
+                        </div>
+                        <x-aura::subheading size="md">
+                            Medium subheading (16px) — Standard section subtitle and feature descriptions.
                         </x-aura::subheading>
                     </div>
-                    <x-aura::button variant="primary" size="sm" icon="plus"><span>Create</span></x-aura::button>
+
+                    <div class="space-y-1 border-t border-zinc-200 dark:border-zinc-800 pt-3">
+                        <div class="flex items-center gap-2">
+                            <x-aura::badge variant="neutral" size="sm">size="sm"</x-aura::badge>
+                            <x-aura::badge variant="subtle" size="sm">as="span"</x-aura::badge>
+                        </div>
+                        <x-aura::subheading size="sm" as="span">
+                            Small subheading (14px) — Compact card subtitles, widget descriptions, and inline text.
+                        </x-aura::subheading>
+                    </div>
                 </div>
             </x-aura::card>
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<div class="flex items-center justify-between gap-4">
-    <div>
-        <x-aura::heading level="3" size="sm">Security &amp; Authentication</x-aura::heading>
-        <x-aura::subheading>
-            Manage two-factor authentication and active login sessions.
-        </x-aura::subheading>
+        <x-slot:codeSlot>@verbatim{{-- Large lead subheading --}}
+<x-aura::subheading size="lg">Large hero lead description.</x-aura::subheading>
+
+{{-- Default medium subheading --}}
+<x-aura::subheading size="md">Standard section subtitle.</x-aura::subheading>
+
+{{-- Compact small subheading rendered as span --}}
+<x-aura::subheading size="sm" as="span">Compact inline description.</x-aura::subheading>
+
+{{-- Semantic H2 subheading for SEO --}}
+<x-aura::subheading as="h2">Semantic H2 subheading tag.</x-aura::subheading>@endverbatim</x-slot:codeSlot>
+    </x-aura::code>
+
+    <!-- 4. Card & Panel Header Descriptions -->
+    <x-aura::code title="4. Card & Panel Header Descriptions">
+        <x-slot:preview>
+            <x-aura::card>
+                <div class="divide-y divide-zinc-200 dark:divide-zinc-800 space-y-4 w-full">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4">
+                        <div class="space-y-0.5">
+                            <x-aura::heading level="3" size="sm">Security & Authentication</x-aura::heading>
+                            <x-aura::subheading size="sm">
+                                Manage two-factor authentication and active login sessions.
+                            </x-aura::subheading>
+                        </div>
+                        <div class="shrink-0">
+                            <x-aura::button variant="secondary" size="sm">Manage Sessions</x-aura::button>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4">
+                        <div class="space-y-0.5">
+                            <x-aura::heading level="3" size="sm">API Webhooks</x-aura::heading>
+                            <x-aura::subheading size="sm">
+                                Receive real-time HTTP callbacks when events occur in your account.
+                            </x-aura::subheading>
+                        </div>
+                        <div class="shrink-0">
+                            <x-aura::button variant="primary" size="sm" icon="plus"><span>Create</span></x-aura::button>
+                        </div>
+                    </div>
+                </div>
+            </x-aura::card>
+        </x-slot:preview>
+        <x-slot:codeSlot>@verbatim<x-aura::card>
+    <div class="divide-y divide-zinc-200 dark:divide-zinc-800 space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4">
+            <div class="space-y-0.5">
+                <x-aura::heading level="3" size="sm">Security & Authentication</x-aura::heading>
+                <x-aura::subheading size="sm">
+                    Manage two-factor authentication and active login sessions.
+                </x-aura::subheading>
+            </div>
+            <x-aura::button variant="secondary" size="sm">Manage Sessions</x-aura::button>
+        </div>
+
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-4">
+            <div class="space-y-0.5">
+                <x-aura::heading level="3" size="sm">API Webhooks</x-aura::heading>
+                <x-aura::subheading size="sm">
+                    Receive real-time HTTP callbacks when events occur in your account.
+                </x-aura::subheading>
+            </div>
+            <x-aura::button variant="primary" size="sm" icon="plus"><span>Create</span></x-aura::button>
+        </div>
     </div>
-    <x-aura::button variant="secondary" size="sm">Manage Sessions</x-aura::button>
-</div>@endverbatim</x-slot:codeSlot>
+</x-aura::card>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

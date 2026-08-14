@@ -81,25 +81,32 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 4. Real-World Dashboard Header Pattern -->
-    <x-aura::code  title="4. Real-World Dashboard Section Header">
+    <x-aura::code title="4. Real-World Dashboard Section Header">
         <x-slot:preview>
             <x-aura::card>
-                <div class="space-y-1">
-                    <x-aura::heading level="2" size="md">Project Settings &amp; Security</x-aura::heading>
-                    <x-aura::subheading>Manage API tokens, environment keys, and deployment webhooks.</x-aura::subheading>
-                </div>
-                <div class="flex items-center gap-2">
-                    <x-aura::button variant="secondary" size="sm">Audit Log</x-aura::button>
-                    <x-aura::button variant="primary" size="sm" icon="plus"><span>Create</span></x-aura::button>
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <div class="space-y-1">
+                        <x-aura::heading level="2" size="md">Project Settings & Security</x-aura::heading>
+                        <x-aura::subheading>Manage API tokens, environment keys, and deployment webhooks.</x-aura::subheading>
+                    </div>
+                    <div class="flex items-center gap-2 shrink-0">
+                        <x-aura::button variant="secondary" size="sm">Audit Log</x-aura::button>
+                        <x-aura::button variant="primary" size="sm" icon="plus"><span>Create</span></x-aura::button>
+                    </div>
                 </div>
             </x-aura::card>
         </x-slot:preview>
         <x-slot:codeSlot>@verbatim<x-aura::card>
-    <div class="space-y-1">
-        <x-aura::heading level="2" size="md">Project Settings &amp; Security</x-aura::heading>
-        <x-aura::subheading>Manage API tokens and deployment webhooks.</x-aura::subheading>
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div class="space-y-1">
+            <x-aura::heading level="2" size="md">Project Settings & Security</x-aura::heading>
+            <x-aura::subheading>Manage API tokens and deployment webhooks.</x-aura::subheading>
+        </div>
+        <div class="flex items-center gap-2 shrink-0">
+            <x-aura::button variant="secondary" size="sm">Audit Log</x-aura::button>
+            <x-aura::button variant="primary" size="sm" icon="plus"><span>Create</span></x-aura::button>
+        </div>
     </div>
-    <x-aura::button variant="primary" size="sm" icon="plus"><span>Create</span></x-aura::button>
 </x-aura::card>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>
