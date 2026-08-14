@@ -17,7 +17,7 @@ class extends Component {};
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Typography</x-aura::kicker>
-                <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
+                <x-aura::badge variant="subtle" size="md">Component</x-aura::badge>
             </div>
             <x-aura::heading level="1" size="xl">Subheading</x-aura::heading>
             <x-aura::subheading size="md">
@@ -36,7 +36,7 @@ class extends Component {};
         <x-slot:preview>
             <div class="space-y-2 text-center flex flex-col items-center w-full">
                 <x-aura::heading level="2" size="md">Dashboard Analytics</x-aura::heading>
-                <x-aura::subheading size="sm" >
+                <x-aura::subheading size="md" >
                     Monitor your key performance metrics, revenue growth, and active project statistics in real time.
                 </x-aura::subheading>
             </div>
@@ -90,8 +90,8 @@ class extends Component {};
                 <div class="space-y-4 w-full">
                     <div class="space-y-1">
                         <div class="flex items-center gap-2">
-                            <x-aura::badge variant="neutral" size="sm">size="lg"</x-aura::badge>
-                            <x-aura::badge variant="subtle" size="sm">as="p"</x-aura::badge>
+                            <x-aura::badge variant="neutral" size="md">size="lg"</x-aura::badge>
+                            <x-aura::badge variant="subtle" size="md">as="p"</x-aura::badge>
                         </div>
                         <x-aura::subheading size="lg">
                             Large subheading (18px) — Ideal for hero lead summaries and landing sections.
@@ -100,8 +100,8 @@ class extends Component {};
 
                     <div class="space-y-1 border-t border-zinc-200 dark:border-zinc-800 pt-3">
                         <div class="flex items-center gap-2">
-                            <x-aura::badge variant="neutral" size="sm">size="md"</x-aura::badge>
-                            <x-aura::badge variant="subtle" size="sm">as="p" (Default)</x-aura::badge>
+                            <x-aura::badge variant="neutral" size="md">size="md"</x-aura::badge>
+                            <x-aura::badge variant="subtle" size="md">as="p" (Default)</x-aura::badge>
                         </div>
                         <x-aura::subheading size="md">
                             Medium subheading (16px) — Standard section subtitle and feature descriptions.
@@ -110,8 +110,8 @@ class extends Component {};
 
                     <div class="space-y-1 border-t border-zinc-200 dark:border-zinc-800 pt-3">
                         <div class="flex items-center gap-2">
-                            <x-aura::badge variant="neutral" size="sm">size="sm"</x-aura::badge>
-                            <x-aura::badge variant="subtle" size="sm">as="span"</x-aura::badge>
+                            <x-aura::badge variant="neutral" size="md">size="sm"</x-aura::badge>
+                            <x-aura::badge variant="subtle" size="md">as="span"</x-aura::badge>
                         </div>
                         <x-aura::subheading size="sm" as="span">
                             Small subheading (14px) — Compact card subtitles, widget descriptions, and inline text.
