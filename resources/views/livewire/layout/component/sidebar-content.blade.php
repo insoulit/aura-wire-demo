@@ -6,19 +6,19 @@ new class extends Component {
     public function with(): array
     {
         $activeGroup = 'none';
-        if (request()->is('components/heading', 'components/subheading', 'components/kicker', 'components/text')) {
+        if (request()->is('components/kicker', 'components/heading', 'components/subheading', 'components/text')) {
             $activeGroup = 'typography';
-        } elseif (request()->is('components/button', 'components/button-group', 'components/icon-button', 'components/link', 'components/dropdown')) {
+        } elseif (request()->is('components/button', 'components/icon-button', 'components/button-group', 'components/link', 'components/dropdown')) {
             $activeGroup = 'actions';
-        } elseif (request()->is('components/input', 'components/textarea', 'components/select', 'components/checkbox', 'components/radio', 'components/switch', 'components/field', 'components/label', 'components/file-upload', 'components/pin-code', 'components/rich-text', 'components/error', 'components/combobox', 'components/date-picker', 'components/rating')) {
+        } elseif (request()->is('components/field', 'components/label', 'components/error', 'components/input', 'components/textarea', 'components/rich-text', 'components/pin-code', 'components/select', 'components/combobox', 'components/date-picker', 'components/checkbox', 'components/radio', 'components/switch', 'components/rating', 'components/file-upload')) {
             $activeGroup = 'form';
-        } elseif (request()->is('components/avatar', 'components/badge', 'components/card', 'components/code', 'components/empty-state', 'components/numbered-list', 'components/list', 'components/product-card', 'components/progress-bar', 'components/separator', 'components/table', 'components/tabs', 'components/tag', 'components/accordion', 'components/stat', 'components/skeleton', 'components/timeline')) {
+        } elseif (request()->is('components/card', 'components/product-card', 'components/stat', 'components/badge', 'components/tag', 'components/avatar', 'components/list', 'components/numbered-list', 'components/table', 'components/tabs', 'components/accordion', 'components/timeline', 'components/code', 'components/separator', 'components/progress-bar', 'components/skeleton', 'components/empty-state')) {
             $activeGroup = 'display';
-        } elseif (request()->is('components/alert', 'components/modal', 'components/sheet', 'components/spinner', 'components/toast', 'components/banner', 'components/tooltip', 'components/popover', 'components/command')) {
+        } elseif (request()->is('components/alert', 'components/banner', 'components/toast', 'components/modal', 'components/sheet', 'components/command', 'components/popover', 'components/tooltip', 'components/spinner')) {
             $activeGroup = 'feedback';
-        } elseif (request()->is('components/breadcrumb', 'components/pagination', 'components/stepper')) {
+        } elseif (request()->is('components/breadcrumb', 'components/stepper', 'components/pagination')) {
             $activeGroup = 'navigation';
-        } elseif (request()->is('components/header', 'components/sidebar', 'components/main', 'components/navbar', 'components/footer')) {
+        } elseif (request()->is('components/body', 'components/container', 'components/header', 'components/navbar', 'components/sidebar', 'components/main', 'components/footer')) {
             $activeGroup = 'layout';
         }
 
@@ -32,7 +32,7 @@ new class extends Component {
 
     <!-- Start Section -->
     <div class="space-y-1">
-        <x-aura::kicker >Start</x-aura::kicker>
+        <x-aura::kicker>Start</x-aura::kicker>
         <ul class="space-y-0.5 font-medium text-xs sm:text-sm">
             <li>
                 <a href="/components" class="flex items-center gap-2.5 px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold shadow-2xs' : 'text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/60' }}">
@@ -63,7 +63,7 @@ new class extends Component {
 
     <!-- 1. Typography Dropdown -->
     @php
-        $isTypographyActive = request()->is('components/heading', 'components/subheading', 'components/kicker', 'components/text');
+        $isTypographyActive = request()->is('components/kicker', 'components/heading', 'components/subheading', 'components/text');
     @endphp
     <div class="space-y-0.5">
         <button
@@ -86,16 +86,16 @@ new class extends Component {
             </svg>
         </button>
         <ul x-show="openGroup === 'typography'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 py-1 text-xs sm:text-sm">
+            <li><a href="/components/kicker" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/kicker') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Kicker</a></li>
             <li><a href="/components/heading" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/heading') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Heading</a></li>
             <li><a href="/components/subheading" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/subheading') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Subheading</a></li>
-            <li><a href="/components/kicker" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/kicker') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Kicker</a></li>
             <li><a href="/components/text" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/text') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Text</a></li>
         </ul>
     </div>
 
     <!-- 2. Actions Dropdown -->
     @php
-        $isActionsActive = request()->is('components/button', 'components/button-group', 'components/icon-button', 'components/link', 'components/dropdown');
+        $isActionsActive = request()->is('components/button', 'components/icon-button', 'components/button-group', 'components/link', 'components/dropdown');
     @endphp
     <div class="space-y-0.5">
         <button
@@ -119,8 +119,8 @@ new class extends Component {
         </button>
         <ul x-show="openGroup === 'actions'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 py-1 text-xs sm:text-sm">
             <li><a href="/components/button" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/button') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Button</a></li>
-            <li><a href="/components/button-group" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/button-group') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Group</a></li>
             <li><a href="/components/icon-button" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/icon-button') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Icon Button</a></li>
+            <li><a href="/components/button-group" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/button-group') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Group</a></li>
             <li><a href="/components/link" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/link') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Link</a></li>
             <li><a href="/components/dropdown" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/dropdown') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Dropdown</a></li>
         </ul>
@@ -128,7 +128,7 @@ new class extends Component {
 
     <!-- 3. Form Controls Dropdown -->
     @php
-        $isFormActive = request()->is('components/input', 'components/textarea', 'components/select', 'components/checkbox', 'components/radio', 'components/switch', 'components/field', 'components/label', 'components/file-upload', 'components/pin-code', 'components/rich-text', 'components/error', 'components/combobox', 'components/date-picker', 'components/rating');
+        $isFormActive = request()->is('components/field', 'components/label', 'components/error', 'components/input', 'components/textarea', 'components/rich-text', 'components/pin-code', 'components/select', 'components/combobox', 'components/date-picker', 'components/checkbox', 'components/radio', 'components/switch', 'components/rating', 'components/file-upload');
     @endphp
     <div class="space-y-0.5">
         <button
@@ -151,27 +151,27 @@ new class extends Component {
             </svg>
         </button>
         <ul x-show="openGroup === 'form'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 py-1 text-xs sm:text-sm">
+            <li><a href="/components/field" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/field') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Field</a></li>
+            <li><a href="/components/label" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/label') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Label</a></li>
+            <li><a href="/components/error" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/error') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Error</a></li>
             <li><a href="/components/input" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/input') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Input</a></li>
             <li><a href="/components/textarea" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/textarea') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Textarea</a></li>
+            <li><a href="/components/rich-text" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/rich-text') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Rich Text</a></li>
+            <li><a href="/components/pin-code" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/pin-code') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Pin</a></li>
             <li><a href="/components/select" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/select') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Select</a></li>
             <li><a href="/components/combobox" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/combobox') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Combobox</a></li>
             <li><a href="/components/date-picker" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/date-picker') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Date Picker</a></li>
-            <li><a href="/components/rating" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/rating') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Rating</a></li>
             <li><a href="/components/checkbox" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/checkbox') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Checkbox</a></li>
             <li><a href="/components/radio" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/radio') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Radio</a></li>
             <li><a href="/components/switch" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/switch') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Switch</a></li>
-            <li><a href="/components/field" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/field') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Field</a></li>
-            <li><a href="/components/label" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/label') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Label</a></li>
+            <li><a href="/components/rating" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/rating') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Rating</a></li>
             <li><a href="/components/file-upload" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/file-upload') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Upload</a></li>
-            <li><a href="/components/pin-code" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/pin-code') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Pin</a></li>
-            <li><a href="/components/rich-text" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/rich-text') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Rich Text</a></li>
-            <li><a href="/components/error" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/error') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Error</a></li>
         </ul>
     </div>
 
     <!-- 4. Display Dropdown -->
     @php
-        $isDisplayActive = request()->is('components/avatar', 'components/badge', 'components/card', 'components/code', 'components/empty-state', 'components/numbered-list', 'components/list', 'components/product-card', 'components/progress-bar', 'components/separator', 'components/table', 'components/tabs', 'components/tag', 'components/accordion', 'components/stat', 'components/skeleton', 'components/timeline');
+        $isDisplayActive = request()->is('components/card', 'components/product-card', 'components/stat', 'components/badge', 'components/tag', 'components/avatar', 'components/list', 'components/numbered-list', 'components/table', 'components/tabs', 'components/accordion', 'components/timeline', 'components/code', 'components/separator', 'components/progress-bar', 'components/skeleton', 'components/empty-state');
     @endphp
     <div class="space-y-0.5">
         <button
@@ -194,29 +194,29 @@ new class extends Component {
             </svg>
         </button>
         <ul x-show="openGroup === 'display'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 py-1 text-xs sm:text-sm">
-            <li><a href="/components/accordion" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/accordion') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Accordion</a></li>
-            <li><a href="/components/avatar" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/avatar') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Avatar</a></li>
-            <li><a href="/components/badge" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/badge') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Badge</a></li>
             <li><a href="/components/card" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/card') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Card</a></li>
-            <li><a href="/components/code" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/code') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Code</a></li>
-            <li><a href="/components/empty-state" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/empty-state') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Empty</a></li>
-            <li><a href="/components/numbered-list" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/numbered-list') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Numbered List</a></li>
-            <li><a href="/components/list" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/list') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">List</a></li>
             <li><a href="/components/product-card" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/product-card') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Product Card</a></li>
-            <li><a href="/components/progress-bar" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/progress-bar') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Progress</a></li>
-            <li><a href="/components/separator" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/separator') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Separator</a></li>
-            <li><a href="/components/skeleton" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/skeleton') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Skeleton</a></li>
             <li><a href="/components/stat" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/stat') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Stat Card</a></li>
+            <li><a href="/components/badge" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/badge') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Badge</a></li>
+            <li><a href="/components/tag" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/tag') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Tag</a></li>
+            <li><a href="/components/avatar" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/avatar') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Avatar</a></li>
+            <li><a href="/components/list" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/list') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">List</a></li>
+            <li><a href="/components/numbered-list" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/numbered-list') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Numbered List</a></li>
             <li><a href="/components/table" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/table') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Table</a></li>
             <li><a href="/components/tabs" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/tabs') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Tabs</a></li>
-            <li><a href="/components/tag" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/tag') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Tag</a></li>
+            <li><a href="/components/accordion" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/accordion') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Accordion</a></li>
             <li><a href="/components/timeline" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/timeline') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Timeline</a></li>
+            <li><a href="/components/code" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/code') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Code</a></li>
+            <li><a href="/components/separator" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/separator') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Separator</a></li>
+            <li><a href="/components/progress-bar" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/progress-bar') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Progress</a></li>
+            <li><a href="/components/skeleton" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/skeleton') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Skeleton</a></li>
+            <li><a href="/components/empty-state" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/empty-state') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Empty</a></li>
         </ul>
     </div>
 
     <!-- 5. Feedback Dropdown -->
     @php
-        $isFeedbackActive = request()->is('components/alert', 'components/modal', 'components/sheet', 'components/spinner', 'components/toast', 'components/banner', 'components/tooltip', 'components/popover', 'components/command');
+        $isFeedbackActive = request()->is('components/alert', 'components/banner', 'components/toast', 'components/modal', 'components/sheet', 'components/command', 'components/popover', 'components/tooltip', 'components/spinner');
     @endphp
     <div class="space-y-0.5">
         <button
@@ -240,19 +240,20 @@ new class extends Component {
         </button>
         <ul x-show="openGroup === 'feedback'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 py-1 text-xs sm:text-sm">
             <li><a href="/components/alert" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/alert') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Alert</a></li>
-            <li><a href="/components/command" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/command') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Command</a></li>
-            <li><a href="/components/modal" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/modal') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Modal</a></li>
-            <li><a href="/components/popover" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/popover') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Popover</a></li>
-            <li><a href="/components/sheet" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/sheet') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Sheet</a></li>
-            <li><a href="/components/spinner" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/spinner') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Spinner</a></li>
+            <li><a href="/components/banner" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/banner') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Banner</a></li>
             <li><a href="/components/toast" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/toast') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Toast</a></li>
+            <li><a href="/components/modal" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/modal') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Modal</a></li>
+            <li><a href="/components/sheet" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/sheet') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Sheet</a></li>
+            <li><a href="/components/command" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/command') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Command</a></li>
+            <li><a href="/components/popover" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/popover') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Popover</a></li>
             <li><a href="/components/tooltip" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/tooltip') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Tooltip</a></li>
+            <li><a href="/components/spinner" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/spinner') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Spinner</a></li>
         </ul>
     </div>
 
     <!-- 6. Navigation Dropdown -->
     @php
-        $isNavActive = request()->is('components/breadcrumb', 'components/pagination', 'components/stepper');
+        $isNavActive = request()->is('components/breadcrumb', 'components/stepper', 'components/pagination');
     @endphp
     <div class="space-y-0.5">
         <button
@@ -276,14 +277,14 @@ new class extends Component {
         </button>
         <ul x-show="openGroup === 'navigation'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 py-1 text-xs sm:text-sm">
             <li><a href="/components/breadcrumb" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/breadcrumb') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Breadcrumb</a></li>
-            <li><a href="/components/pagination" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/pagination') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Pagination</a></li>
             <li><a href="/components/stepper" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/stepper') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Stepper</a></li>
+            <li><a href="/components/pagination" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/pagination') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Pagination</a></li>
         </ul>
     </div>
 
     <!-- 7. Layout Dropdown -->
     @php
-        $isLayoutActive = request()->is('components/container', 'components/body', 'components/header', 'components/sidebar', 'components/main', 'components/navbar', 'components/footer');
+        $isLayoutActive = request()->is('components/body', 'components/container', 'components/header', 'components/navbar', 'components/sidebar', 'components/main', 'components/footer');
     @endphp
     <div class="space-y-0.5">
         <button
@@ -306,12 +307,12 @@ new class extends Component {
             </svg>
         </button>
         <ul x-show="openGroup === 'layout'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 py-1 text-xs sm:text-sm">
-            <li><a href="/components/container" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/container') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Container</a></li>
             <li><a href="/components/body" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/body') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Body</a></li>
+            <li><a href="/components/container" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/container') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Container</a></li>
             <li><a href="/components/header" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/header') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Header</a></li>
+            <li><a href="/components/navbar" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/navbar') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Navbar</a></li>
             <li><a href="/components/sidebar" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/sidebar') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Sidebar</a></li>
             <li><a href="/components/main" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/main') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Main</a></li>
-            <li><a href="/components/navbar" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/navbar') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Navbar</a></li>
             <li><a href="/components/footer" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/footer') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Footer</a></li>
         </ul>
     </div>

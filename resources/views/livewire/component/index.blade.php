@@ -34,6 +34,11 @@ title('Component Directory - Aura Wire');
             </div>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 [&>:nth-child(3n+1):last-child]:lg:col-span-3 [&>:nth-child(3n+2):last-child]:lg:col-span-2 [&>:nth-child(2n+1):last-child]:sm:max-lg:col-span-2">
+            <x-aura::card href="/components/kicker">
+                <x-aura::heading level="3" size="sm">Kicker</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::kicker&gt;</x-aura::text>
+            </x-aura::card>
+
             <x-aura::card href="/components/heading">
                 <x-aura::heading level="3" size="sm">Heading</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::heading&gt;</x-aura::text>
@@ -42,11 +47,6 @@ title('Component Directory - Aura Wire');
             <x-aura::card href="/components/subheading">
                 <x-aura::heading level="3" size="sm">Subheading</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::subheading&gt;</x-aura::text>
-            </x-aura::card>
-
-            <x-aura::card href="/components/kicker">
-                <x-aura::heading level="3" size="sm">Kicker</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::kicker&gt;</x-aura::text>
             </x-aura::card>
 
             <x-aura::card href="/components/text">
@@ -73,14 +73,14 @@ title('Component Directory - Aura Wire');
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::button&gt;</x-aura::text>
             </x-aura::card>
 
-            <x-aura::card href="/components/button-group">
-                <x-aura::heading level="3" size="sm">Button Group</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::button.group&gt;</x-aura::text>
-            </x-aura::card>
-
             <x-aura::card href="/components/icon-button">
                 <x-aura::heading level="3" size="sm">Icon Button</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::icon-button&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/button-group">
+                <x-aura::heading level="3" size="sm">Button Group</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::button.group&gt;</x-aura::text>
             </x-aura::card>
 
             <x-aura::card href="/components/link">
@@ -107,6 +107,21 @@ title('Component Directory - Aura Wire');
             </div>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 [&>:nth-child(3n+1):last-child]:lg:col-span-3 [&>:nth-child(3n+2):last-child]:lg:col-span-2 [&>:nth-child(2n+1):last-child]:sm:max-lg:col-span-2">
+            <x-aura::card href="/components/field">
+                <x-aura::heading level="3" size="sm">Field</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::field&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/label">
+                <x-aura::heading level="3" size="sm">Label</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::label&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/error">
+                <x-aura::heading level="3" size="sm">Error</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::error&gt;</x-aura::text>
+            </x-aura::card>
+
             <x-aura::card href="/components/input">
                 <x-aura::heading level="3" size="sm">Input</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::input&gt;</x-aura::text>
@@ -115,6 +130,16 @@ title('Component Directory - Aura Wire');
             <x-aura::card href="/components/textarea">
                 <x-aura::heading level="3" size="sm">Textarea</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::textarea&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/rich-text">
+                <x-aura::heading level="3" size="sm">Rich Text</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::rich-text&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/pin-code">
+                <x-aura::heading level="3" size="sm">Pin Code</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::pin-code&gt;</x-aura::text>
             </x-aura::card>
 
             <x-aura::card href="/components/select">
@@ -132,11 +157,6 @@ title('Component Directory - Aura Wire');
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::date-picker&gt;</x-aura::text>
             </x-aura::card>
 
-            <x-aura::card href="/components/rating">
-                <x-aura::heading level="3" size="sm">Rating</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::rating&gt;</x-aura::text>
-            </x-aura::card>
-
             <x-aura::card href="/components/checkbox">
                 <x-aura::heading level="3" size="sm">Checkbox</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::checkbox&gt;</x-aura::text>
@@ -152,34 +172,14 @@ title('Component Directory - Aura Wire');
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::switch&gt;</x-aura::text>
             </x-aura::card>
 
-            <x-aura::card href="/components/field">
-                <x-aura::heading level="3" size="sm">Field</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::field&gt;</x-aura::text>
-            </x-aura::card>
-
-            <x-aura::card href="/components/label">
-                <x-aura::heading level="3" size="sm">Label</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::label&gt;</x-aura::text>
+            <x-aura::card href="/components/rating">
+                <x-aura::heading level="3" size="sm">Rating</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::rating&gt;</x-aura::text>
             </x-aura::card>
 
             <x-aura::card href="/components/file-upload">
                 <x-aura::heading level="3" size="sm">File Upload</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::file-upload&gt;</x-aura::text>
-            </x-aura::card>
-
-            <x-aura::card href="/components/pin-code">
-                <x-aura::heading level="3" size="sm">Pin Code</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::pin-code&gt;</x-aura::text>
-            </x-aura::card>
-
-            <x-aura::card href="/components/rich-text">
-                <x-aura::heading level="3" size="sm">Rich Text</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::rich-text&gt;</x-aura::text>
-            </x-aura::card>
-
-            <x-aura::card href="/components/error">
-                <x-aura::heading level="3" size="sm">Error</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::error&gt;</x-aura::text>
             </x-aura::card>
         </div>
     </section>
@@ -196,44 +196,9 @@ title('Component Directory - Aura Wire');
             </div>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 [&>:nth-child(3n+1):last-child]:lg:col-span-3 [&>:nth-child(3n+2):last-child]:lg:col-span-2 [&>:nth-child(2n+1):last-child]:sm:max-lg:col-span-2">
-            <x-aura::card href="/components/accordion">
-                <x-aura::heading level="3" size="sm">Accordion</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::accordion&gt;</x-aura::text>
-            </x-aura::card>
-
-            <x-aura::card href="/components/avatar">
-                <x-aura::heading level="3" size="sm">Avatar</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::avatar&gt;</x-aura::text>
-            </x-aura::card>
-
-            <x-aura::card href="/components/badge">
-                <x-aura::heading level="3" size="sm">Badge</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::badge&gt;</x-aura::text>
-            </x-aura::card>
-
             <x-aura::card href="/components/card">
                 <x-aura::heading level="3" size="sm">Card</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::card&gt;</x-aura::text>
-            </x-aura::card>
-
-            <x-aura::card href="/components/code">
-                <x-aura::heading level="3" size="sm">Code</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::code&gt;</x-aura::text>
-            </x-aura::card>
-
-            <x-aura::card href="/components/empty-state">
-                <x-aura::heading level="3" size="sm">Empty State</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::empty-state&gt;</x-aura::text>
-            </x-aura::card>
-
-            <x-aura::card href="/components/numbered-list">
-                <x-aura::heading level="3" size="sm">Numbered List</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::numbered-list&gt;</x-aura::text>
-            </x-aura::card>
-
-            <x-aura::card href="/components/list">
-                <x-aura::heading level="3" size="sm">List</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::list&gt;</x-aura::text>
             </x-aura::card>
 
             <x-aura::card href="/components/product-card">
@@ -241,24 +206,39 @@ title('Component Directory - Aura Wire');
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::product-card&gt;</x-aura::text>
             </x-aura::card>
 
-            <x-aura::card href="/components/progress-bar">
-                <x-aura::heading level="3" size="sm">Progress Bar</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::progress-bar&gt;</x-aura::text>
-            </x-aura::card>
-
-            <x-aura::card href="/components/separator">
-                <x-aura::heading level="3" size="sm">Separator</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::separator&gt;</x-aura::text>
-            </x-aura::card>
-
-            <x-aura::card href="/components/skeleton">
-                <x-aura::heading level="3" size="sm">Skeleton</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::skeleton&gt;</x-aura::text>
-            </x-aura::card>
-
             <x-aura::card href="/components/stat">
                 <x-aura::heading level="3" size="sm">Stat Card</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::stat&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/badge">
+                <x-aura::heading level="3" size="sm">Badge</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::badge&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/tag">
+                <x-aura::heading level="3" size="sm">Tag</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::tag&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/avatar">
+                <x-aura::heading level="3" size="sm">Avatar</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::avatar&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/icon">
+                <x-aura::heading level="3" size="sm">Icon (Lucide)</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::icon&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/list">
+                <x-aura::heading level="3" size="sm">List</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::list&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/numbered-list">
+                <x-aura::heading level="3" size="sm">Numbered List</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::numbered-list&gt;</x-aura::text>
             </x-aura::card>
 
             <x-aura::card href="/components/table">
@@ -271,9 +251,9 @@ title('Component Directory - Aura Wire');
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::tab&gt;</x-aura::text>
             </x-aura::card>
 
-            <x-aura::card href="/components/tag">
-                <x-aura::heading level="3" size="sm">Tag</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::tag&gt;</x-aura::text>
+            <x-aura::card href="/components/accordion">
+                <x-aura::heading level="3" size="sm">Accordion</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::accordion&gt;</x-aura::text>
             </x-aura::card>
 
             <x-aura::card href="/components/timeline">
@@ -281,9 +261,29 @@ title('Component Directory - Aura Wire');
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::timeline&gt;</x-aura::text>
             </x-aura::card>
 
-            <x-aura::card href="/components/icon">
-                <x-aura::heading level="3" size="sm">Icon (Lucide)</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::icon&gt;</x-aura::text>
+            <x-aura::card href="/components/code">
+                <x-aura::heading level="3" size="sm">Code</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::code&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/separator">
+                <x-aura::heading level="3" size="sm">Separator</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::separator&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/progress-bar">
+                <x-aura::heading level="3" size="sm">Progress Bar</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::progress-bar&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/skeleton">
+                <x-aura::heading level="3" size="sm">Skeleton</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::skeleton&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/empty-state">
+                <x-aura::heading level="3" size="sm">Empty State</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::empty-state&gt;</x-aura::text>
             </x-aura::card>
         </div>
     </section>
@@ -310,9 +310,9 @@ title('Component Directory - Aura Wire');
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::banner&gt;</x-aura::text>
             </x-aura::card>
 
-            <x-aura::card href="/components/command">
-                <x-aura::heading level="3" size="sm">Command Palette</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::command&gt;</x-aura::text>
+            <x-aura::card href="/components/toast">
+                <x-aura::heading level="3" size="sm">Toast</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::toast&gt;</x-aura::text>
             </x-aura::card>
 
             <x-aura::card href="/components/modal">
@@ -320,29 +320,29 @@ title('Component Directory - Aura Wire');
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::modal&gt;</x-aura::text>
             </x-aura::card>
 
-            <x-aura::card href="/components/popover">
-                <x-aura::heading level="3" size="sm">Popover</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::popover&gt;</x-aura::text>
-            </x-aura::card>
-
             <x-aura::card href="/components/sheet">
                 <x-aura::heading level="3" size="sm">Sheet Drawer</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::sheet&gt;</x-aura::text>
             </x-aura::card>
 
-            <x-aura::card href="/components/spinner">
-                <x-aura::heading level="3" size="sm">Spinner</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::spinner&gt;</x-aura::text>
+            <x-aura::card href="/components/command">
+                <x-aura::heading level="3" size="sm">Command Palette</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::command&gt;</x-aura::text>
             </x-aura::card>
 
-            <x-aura::card href="/components/toast">
-                <x-aura::heading level="3" size="sm">Toast</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::toast&gt;</x-aura::text>
+            <x-aura::card href="/components/popover">
+                <x-aura::heading level="3" size="sm">Popover</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::popover&gt;</x-aura::text>
             </x-aura::card>
 
             <x-aura::card href="/components/tooltip">
                 <x-aura::heading level="3" size="sm">Tooltip</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::tooltip&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/spinner">
+                <x-aura::heading level="3" size="sm">Spinner</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::spinner&gt;</x-aura::text>
             </x-aura::card>
         </div>
     </section>
@@ -364,14 +364,14 @@ title('Component Directory - Aura Wire');
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::breadcrumb&gt;</x-aura::text>
             </x-aura::card>
 
-            <x-aura::card href="/components/pagination">
-                <x-aura::heading level="3" size="sm">Pagination</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::pagination&gt;</x-aura::text>
-            </x-aura::card>
-
             <x-aura::card href="/components/stepper">
                 <x-aura::heading level="3" size="sm">Stepper</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::stepper&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/pagination">
+                <x-aura::heading level="3" size="sm">Pagination</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::pagination&gt;</x-aura::text>
             </x-aura::card>
         </div>
     </section>
@@ -388,19 +388,24 @@ title('Component Directory - Aura Wire');
             </div>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 [&>:nth-child(3n+1):last-child]:lg:col-span-3 [&>:nth-child(3n+2):last-child]:lg:col-span-2 [&>:nth-child(2n+1):last-child]:sm:max-lg:col-span-2">
-            <x-aura::card href="/components/container">
-                <x-aura::heading level="3" size="sm">Container</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::container&gt;</x-aura::text>
-            </x-aura::card>
-
             <x-aura::card href="/components/body">
                 <x-aura::heading level="3" size="sm">Body</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::body&gt;</x-aura::text>
             </x-aura::card>
 
+            <x-aura::card href="/components/container">
+                <x-aura::heading level="3" size="sm">Container</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::container&gt;</x-aura::text>
+            </x-aura::card>
+
             <x-aura::card href="/components/header">
                 <x-aura::heading level="3" size="sm">Header</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::header&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/navbar">
+                <x-aura::heading level="3" size="sm">Navbar</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::navbar&gt;</x-aura::text>
             </x-aura::card>
 
             <x-aura::card href="/components/sidebar">
@@ -411,11 +416,6 @@ title('Component Directory - Aura Wire');
             <x-aura::card href="/components/main">
                 <x-aura::heading level="3" size="sm">Main</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::main&gt;</x-aura::text>
-            </x-aura::card>
-
-            <x-aura::card href="/components/navbar">
-                <x-aura::heading level="3" size="sm">Navbar</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::navbar&gt;</x-aura::text>
             </x-aura::card>
 
             <x-aura::card href="/components/footer">
