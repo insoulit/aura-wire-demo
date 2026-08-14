@@ -43,23 +43,25 @@ new class extends Component {
 
             // 4. Display
             ['title' => 'Card', 'url' => '/components/card'],
-            ['title' => 'Stat Card', 'url' => '/components/stat'],
-            ['title' => 'Badge', 'url' => '/components/badge'],
-            ['title' => 'Tag', 'url' => '/components/tag'],
-            ['title' => 'Avatar', 'url' => '/components/avatar'],
-            ['title' => 'List', 'url' => '/components/list'],
-            ['title' => 'Numbered List', 'url' => '/components/numbered-list'],
-            ['title' => 'Table', 'url' => '/components/table'],
             ['title' => 'Tabs', 'url' => '/components/tabs'],
             ['title' => 'Accordion', 'url' => '/components/accordion'],
-            ['title' => 'Timeline', 'url' => '/components/timeline'],
-            ['title' => 'Code', 'url' => '/components/code'],
+            ['title' => 'Avatar', 'url' => '/components/avatar'],
+            ['title' => 'Badge', 'url' => '/components/badge'],
+            ['title' => 'Tag', 'url' => '/components/tag'],
             ['title' => 'Separator', 'url' => '/components/separator'],
             ['title' => 'Progress Bar', 'url' => '/components/progress-bar'],
             ['title' => 'Skeleton', 'url' => '/components/skeleton'],
             ['title' => 'Empty State', 'url' => '/components/empty-state'],
 
-            // 5. Feedback
+            // 5. Data
+            ['title' => 'Table', 'url' => '/components/table'],
+            ['title' => 'Stat Card', 'url' => '/components/stat'],
+            ['title' => 'Timeline', 'url' => '/components/timeline'],
+            ['title' => 'Code', 'url' => '/components/code'],
+            ['title' => 'List', 'url' => '/components/list'],
+            ['title' => 'Numbered List', 'url' => '/components/numbered-list'],
+
+            // 6. Feedback
             ['title' => 'Alert', 'url' => '/components/alert'],
             ['title' => 'Banner', 'url' => '/components/banner'],
             ['title' => 'Toast', 'url' => '/components/toast'],
@@ -70,12 +72,12 @@ new class extends Component {
             ['title' => 'Tooltip', 'url' => '/components/tooltip'],
             ['title' => 'Spinner', 'url' => '/components/spinner'],
 
-            // 6. Navigation
+            // 7. Navigation
             ['title' => 'Breadcrumb', 'url' => '/components/breadcrumb'],
             ['title' => 'Stepper', 'url' => '/components/stepper'],
             ['title' => 'Pagination', 'url' => '/components/pagination'],
 
-            // 7. Layout
+            // 8. Layout
             ['title' => 'Body', 'url' => '/components/body'],
             ['title' => 'Container', 'url' => '/components/container'],
             ['title' => 'Header', 'url' => '/components/header'],
