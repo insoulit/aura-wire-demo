@@ -17,11 +17,11 @@ class extends Component {};
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
                 <x-aura::kicker>Typography</x-aura::kicker>
-                <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
+                <x-aura::badge variant="subtle" size="md">Component</x-aura::badge>
             </div>
             <x-aura::heading level="1" size="xl">Kicker</x-aura::heading>
             <x-aura::subheading size="md">
-                Uppercase category labels and subheader kickers placed above primary section titles to establish visual context.
+                Uppercase category labels and eyebrow headers placed above primary section titles to establish clear visual context and hierarchy.
             </x-aura::subheading>
         </div>
     </x-aura::card>
@@ -32,84 +32,123 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 1. Standard Section Kicker -->
-    <x-aura::code  title="1. Standard Section Header Kicker">
+    <x-aura::code title="1. Standard Section Header Kicker">
         <x-slot:preview>
             <div class="space-y-1 text-center flex flex-col items-center w-full">
                 <x-aura::kicker>FEATURED PACKAGE</x-aura::kicker>
                 <x-aura::heading level="2" size="lg">Aura Wire Design System</x-aura::heading>
+                <x-aura::subheading size="sm">
+                    Production-ready Blade &amp; Livewire design primitives with zero build step required.
+                </x-aura::subheading>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::kicker>FEATURED PACKAGE</x-aura::kicker>
-<x-aura::heading level="2" size="lg">Aura Wire Design System</x-aura::heading>@endverbatim</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<div class="space-y-1 text-center">
+    <x-aura::kicker>FEATURED PACKAGE</x-aura::kicker>
+    <x-aura::heading level="2" size="lg">Aura Wire Design System</x-aura::heading>
+    <x-aura::subheading size="sm">
+        Production-ready Blade & Livewire design primitives with zero build step required.
+    </x-aura::subheading>
+</div>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 2. Sidebar & Group Section Kickers -->
-    <x-aura::code  title="2. Sidebar & Group Section Kickers">
+    <!-- 2. Sidebar & Navigation Group Labels -->
+    <x-aura::code title="2. Sidebar & Navigation Group Labels">
         <x-slot:preview>
             <x-aura::card>
-                <div class="space-y-1">
-                    <x-aura::kicker>MAIN NAVIGATION</x-aura::kicker>
-                    <ul class="space-y-1 text-xs text-zinc-700 dark:text-zinc-300 font-medium">
-                        <li class="px-2 py-1 rounded bg-zinc-100 dark:bg-zinc-800 font-bold">Dashboard</li>
-                        <li class="px-2 py-1">Analytics</li>
-                        <li class="px-2 py-1">Settings</li>
-                    </ul>
-                </div>
+                <div class="space-y-4 w-full">
+                    <div class="space-y-1.5">
+                        <x-aura::kicker>MAIN NAVIGATION</x-aura::kicker>
+                        <ul class="space-y-0.5 text-sm font-medium">
+                            <li class="px-2.5 py-1.5 rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white font-semibold">Dashboard</li>
+                            <li class="px-2.5 py-1.5 rounded-md text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white">Analytics</li>
+                            <li class="px-2.5 py-1.5 rounded-md text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white">Reports</li>
+                        </ul>
+                    </div>
 
-                <div class="space-y-1 pt-2 border-t border-zinc-200 dark:border-zinc-800">
-                    <x-aura::kicker>PROJECT LABELS</x-aura::kicker>
-                    <div class="flex flex-wrap gap-1.5 pt-1">
-                        <x-aura::badge variant="outline" size="xs">Production</x-aura::badge>
-                        <x-aura::badge variant="subtle" size="xs">Staging</x-aura::badge>
+                    <div class="space-y-1.5 border-t border-zinc-200 dark:border-zinc-800 pt-3">
+                        <x-aura::kicker>ACCOUNT &amp; SETTINGS</x-aura::kicker>
+                        <ul class="space-y-0.5 text-sm font-medium">
+                            <li class="px-2.5 py-1.5 rounded-md text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white">Profile Preferences</li>
+                            <li class="px-2.5 py-1.5 rounded-md text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white">Security Keys</li>
+                        </ul>
                     </div>
                 </div>
             </x-aura::card>
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::kicker>MAIN NAVIGATION</x-aura::kicker>
-<x-aura::kicker>PROJECT LABELS</x-aura::kicker>@endverbatim</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<div class="space-y-1.5">
+    <x-aura::kicker>MAIN NAVIGATION</x-aura::kicker>
+    <ul class="space-y-0.5 text-sm">
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/analytics">Analytics</a></li>
+    </ul>
+</div>
+
+<div class="space-y-1.5">
+    <x-aura::kicker>ACCOUNT & SETTINGS</x-aura::kicker>
+    <ul class="space-y-0.5 text-sm">
+        <li><a href="/settings">Profile Preferences</a></li>
+    </ul>
+</div>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 3. Badge & Icon Accent Kickers -->
-    <x-aura::code  title="3. Badge & Icon Accent Kickers">
+    <!-- 3. Kickers with Status Indicators & Icons -->
+    <x-aura::code title="3. Kickers with Status Indicators & Icons">
         <x-slot:preview>
-            <div class="flex flex-wrap items-center gap-4">
-                <x-aura::badge variant="subtle" size="sm">
-                    <x-aura::icon name="sparkles" size="xs"  />
-                    <span>NEW RELEASE v2.0</span>
-                </x-aura::badge>
+            <div class="flex flex-wrap items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse inline-block"></span>
+                    <x-aura::kicker>SYSTEM OPERATIONAL</x-aura::kicker>
+                </div>
 
-                <x-aura::badge variant="subtle" size="sm">
-                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse mr-1 inline-block"></span>
-                    <span>LIVE MONITORING</span>
-                </x-aura::badge>
+                <div class="flex items-center gap-1.5">
+                    <x-aura::icon name="sparkles" size="xs" />
+                    <x-aura::kicker>RELEASE v2.0</x-aura::kicker>
+                </div>
+
+                <div class="flex items-center gap-1.5">
+                    <x-aura::icon name="shield-check" size="xs" />
+                    <x-aura::kicker>SOC-2 COMPLIANT</x-aura::kicker>
+                </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::badge variant="subtle" size="sm">
-    <x-aura::icon name="sparkles" size="xs"  />
-    <span>NEW RELEASE v2.0</span>
-</x-aura::badge>@endverbatim</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim{{-- Kicker with live status pulse --}}
+<div class="flex items-center gap-2">
+    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+    <x-aura::kicker>SYSTEM OPERATIONAL</x-aura::kicker>
+</div>
+
+{{-- Kicker with accent icon --}}
+<div class="flex items-center gap-1.5">
+    <x-aura::icon name="sparkles" size="xs" />
+    <x-aura::kicker>RELEASE v2.0</x-aura::kicker>
+</div>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 4. Hero Banner Section Header -->
-    <x-aura::code  title="4. Hero Banner Section Header">
+    <x-aura::code title="4. Hero Banner Section Header">
         <x-slot:preview>
             <x-aura::card>
-                <x-aura::kicker>
-                    ENTERPRISE DEPLOYMENTS
-                </x-aura::kicker>
-                <x-aura::heading level="1" size="display-lg">
-                    Scale your infrastructure without friction
-                </x-aura::heading>
-                <x-aura::subheading size="sm" >
-                    Global multi-region cloud servers with automated load balancing.
-                </x-aura::subheading>
+                <div class="space-y-3 max-w-2xl">
+                    <x-aura::kicker>ENTERPRISE DEPLOYMENTS</x-aura::kicker>
+                    <x-aura::heading level="1" size="display-lg">
+                        Scale your infrastructure without friction
+                    </x-aura::heading>
+                    <x-aura::subheading size="md">
+                        Global multi-region cloud servers with automated load balancing, zero downtime rollouts, and SOC-2 verified security.
+                    </x-aura::subheading>
+                </div>
             </x-aura::card>
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::kicker>
-    ENTERPRISE DEPLOYMENTS
-</x-aura::kicker>
-<x-aura::heading level="1" size="display-lg">
-    Scale your infrastructure without friction
-</x-aura::heading>@endverbatim</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::card>
+    <div class="space-y-3 max-w-2xl">
+        <x-aura::kicker>ENTERPRISE DEPLOYMENTS</x-aura::kicker>
+        <x-aura::heading level="1" size="display-lg">
+            Scale your infrastructure without friction
+        </x-aura::heading>
+        <x-aura::subheading size="md">
+            Global multi-region cloud servers with automated load balancing.
+        </x-aura::subheading>
+    </div>
+</x-aura::card>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>
