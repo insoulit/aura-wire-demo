@@ -43,7 +43,6 @@ new class extends Component {
 
             // 4. Display
             ['title' => 'Card', 'url' => '/components/card'],
-            ['title' => 'Product Card', 'url' => '/components/product-card'],
             ['title' => 'Stat Card', 'url' => '/components/stat'],
             ['title' => 'Badge', 'url' => '/components/badge'],
             ['title' => 'Tag', 'url' => '/components/tag'],

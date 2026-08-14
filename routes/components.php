@@ -46,7 +46,6 @@ Volt::route('/components/separator', 'component.display.separator')->name('compo
 Volt::route('/components/empty-state', 'component.display.empty-state')->name('component.empty-state');
 Volt::route('/components/numbered-list', 'component.display.numbered-list')->name('component.numbered-list');
 Volt::route('/components/list', 'component.display.list')->name('component.list');
-Volt::route('/components/product-card', 'component.display.product-card')->name('component.product-card');
 Volt::route('/components/progress-bar', 'component.display.progress-bar')->name('component.progress-bar');
 Volt::route('/components/icon', 'component.display.icon')->name('component.icon');
 Volt::route('/components/accordion', 'component.display.accordion')->name('component.accordion');
