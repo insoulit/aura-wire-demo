@@ -16,6 +16,7 @@ new class extends Component {
             ['title' => 'Button', 'url' => '/components/button'],
             ['title' => 'Button Group', 'url' => '/components/button-group'],
             ['title' => 'Icon Button', 'url' => '/components/icon-button'],
+            ['title' => 'Link', 'url' => '/components/link'],
             ['title' => 'Input', 'url' => '/components/input'],
             ['title' => 'Textarea', 'url' => '/components/textarea'],
             ['title' => 'Select', 'url' => '/components/select'],
