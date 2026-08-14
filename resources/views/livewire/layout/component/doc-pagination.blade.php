@@ -12,6 +12,7 @@ new class extends Component {
 
             // 1. Typography
             ['title' => 'Kicker', 'url' => '/components/kicker'],
+            ['title' => 'Display', 'url' => '/components/display'],
             ['title' => 'Heading', 'url' => '/components/heading'],
             ['title' => 'Subheading', 'url' => '/components/subheading'],
             ['title' => 'Text', 'url' => '/components/text'],

@@ -7,9 +7,10 @@ Volt::route('/components', 'component.index')->name('component.index');
 Volt::route('/components/installation', 'component.installation')->name('component.installation');
 
 // Typography Group
+Volt::route('/components/kicker', 'component.typography.kicker')->name('component.kicker');
+Volt::route('/components/display', 'component.typography.display')->name('component.display');
 Volt::route('/components/heading', 'component.typography.heading')->name('component.heading');
 Volt::route('/components/subheading', 'component.typography.subheading')->name('component.subheading');
-Volt::route('/components/kicker', 'component.typography.kicker')->name('component.kicker');
 Volt::route('/components/text', 'component.typography.text')->name('component.text');
 
 // Button Group

@@ -30,13 +30,18 @@ title('Component Directory - Aura Wire');
             </div>
             <x-aura::heading level="2" size="md">Typography</x-aura::heading>
             <div class="ml-auto">
-                <x-aura::badge variant="neutral">4 Components</x-aura::badge>
+                <x-aura::badge variant="neutral">5 Components</x-aura::badge>
             </div>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 [&>:nth-child(3n+1):last-child]:lg:col-span-3 [&>:nth-child(3n+2):last-child]:lg:col-span-2 [&>:nth-child(2n+1):last-child]:sm:max-lg:col-span-2">
             <x-aura::card href="/components/kicker">
                 <x-aura::heading level="3" size="sm">Kicker</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::kicker&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/display">
+                <x-aura::heading level="3" size="sm">Display</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::display&gt;</x-aura::text>
             </x-aura::card>
 
             <x-aura::card href="/components/heading">

@@ -6,7 +6,7 @@ new class extends Component {
     public function with(): array
     {
         $activeGroup = 'none';
-        if (request()->is('components/kicker', 'components/heading', 'components/subheading', 'components/text')) {
+        if (request()->is('components/kicker', 'components/display', 'components/heading', 'components/subheading', 'components/text')) {
             $activeGroup = 'typography';
         } elseif (request()->is('components/button', 'components/icon-button', 'components/button-group', 'components/link', 'components/dropdown')) {
             $activeGroup = 'actions';
@@ -63,7 +63,7 @@ new class extends Component {
 
     <!-- 1. Typography Dropdown -->
     @php
-        $isTypographyActive = request()->is('components/kicker', 'components/heading', 'components/subheading', 'components/text');
+        $isTypographyActive = request()->is('components/kicker', 'components/display', 'components/heading', 'components/subheading', 'components/text');
     @endphp
     <div class="space-y-0.5">
         <button
@@ -87,6 +87,7 @@ new class extends Component {
         </button>
         <ul x-show="openGroup === 'typography'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 py-1 text-xs sm:text-sm">
             <li><a href="/components/kicker" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/kicker') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Kicker</a></li>
+            <li><a href="/components/display" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/display') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Display</a></li>
             <li><a href="/components/heading" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/heading') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Heading</a></li>
             <li><a href="/components/subheading" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/subheading') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Subheading</a></li>
             <li><a href="/components/text" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/text') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Text</a></li>
