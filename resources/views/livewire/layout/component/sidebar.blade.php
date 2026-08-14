@@ -8,8 +8,10 @@ new class extends Component {};
 
 <div>
     <!-- Desktop Sidebar -->
-    <aside class="w-60 shrink-0 hidden lg:block border-r border-zinc-200 dark:border-zinc-800/80 pr-6 space-y-4 text-sm sticky top-20 min-h-full overflow-y-auto scrollbar-thin">
-        <livewire:layout.component.sidebar-content />
+    <aside class="w-60 shrink-0 hidden lg:block border-r border-zinc-200 dark:border-zinc-800/80 pr-6 h-full">
+        <div class="sticky top-20 space-y-4 text-sm overflow-y-auto scrollbar-none max-h-[calc(100vh-6rem)]">
+            <livewire:layout.component.sidebar-content />
+        </div>
     </aside>
 
     <!-- Mobile Sidebar Drawer Sheet -->

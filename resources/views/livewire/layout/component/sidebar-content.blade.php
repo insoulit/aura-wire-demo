@@ -85,7 +85,7 @@ new class extends Component {
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
         </button>
-        <ul x-show="openGroup === 'typography'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 my-1 text-xs sm:text-sm">
+        <ul x-show="openGroup === 'typography'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 py-1 text-xs sm:text-sm">
             <li><a href="/components/heading" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/heading') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Heading</a></li>
             <li><a href="/components/subheading" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/subheading') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Subheading</a></li>
             <li><a href="/components/kicker" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/kicker') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Kicker</a></li>
@@ -117,7 +117,7 @@ new class extends Component {
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
         </button>
-        <ul x-show="openGroup === 'actions'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 my-1 text-xs sm:text-sm">
+        <ul x-show="openGroup === 'actions'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 py-1 text-xs sm:text-sm">
             <li><a href="/components/button" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/button') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Button</a></li>
             <li><a href="/components/button-group" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/button-group') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Group</a></li>
             <li><a href="/components/icon-button" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/icon-button') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Icon Button</a></li>
@@ -150,7 +150,7 @@ new class extends Component {
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
         </button>
-        <ul x-show="openGroup === 'form'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 my-1 text-xs sm:text-sm">
+        <ul x-show="openGroup === 'form'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 py-1 text-xs sm:text-sm">
             <li><a href="/components/input" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/input') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Input</a></li>
             <li><a href="/components/textarea" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/textarea') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Textarea</a></li>
             <li><a href="/components/select" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/select') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Select</a></li>
@@ -193,7 +193,7 @@ new class extends Component {
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
         </button>
-        <ul x-show="openGroup === 'display'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 my-1 text-xs sm:text-sm">
+        <ul x-show="openGroup === 'display'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 py-1 text-xs sm:text-sm">
             <li><a href="/components/accordion" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/accordion') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Accordion</a></li>
             <li><a href="/components/avatar" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/avatar') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Avatar</a></li>
             <li><a href="/components/badge" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/badge') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Badge</a></li>
@@ -238,7 +238,7 @@ new class extends Component {
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
         </button>
-        <ul x-show="openGroup === 'feedback'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 my-1 text-xs sm:text-sm">
+        <ul x-show="openGroup === 'feedback'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 py-1 text-xs sm:text-sm">
             <li><a href="/components/alert" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/alert') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Alert</a></li>
             <li><a href="/components/command" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/command') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Command</a></li>
             <li><a href="/components/modal" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/modal') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Modal</a></li>
@@ -274,7 +274,7 @@ new class extends Component {
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
         </button>
-        <ul x-show="openGroup === 'navigation'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 my-1 text-xs sm:text-sm">
+        <ul x-show="openGroup === 'navigation'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 py-1 text-xs sm:text-sm">
             <li><a href="/components/breadcrumb" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/breadcrumb') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Breadcrumb</a></li>
             <li><a href="/components/pagination" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/pagination') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Pagination</a></li>
             <li><a href="/components/stepper" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/stepper') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Stepper</a></li>
@@ -305,7 +305,7 @@ new class extends Component {
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
             </svg>
         </button>
-        <ul x-show="openGroup === 'layout'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 my-1 text-xs sm:text-sm">
+        <ul x-show="openGroup === 'layout'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 py-1 text-xs sm:text-sm">
             <li><a href="/components/container" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/container') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Container</a></li>
             <li><a href="/components/body" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/body') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Body</a></li>
             <li><a href="/components/header" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/header') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Header</a></li>
