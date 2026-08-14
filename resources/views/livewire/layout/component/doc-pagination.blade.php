@@ -55,7 +55,7 @@ new class extends Component {
 
             // 5. Data
             ['title' => 'Table', 'url' => '/components/table'],
-            ['title' => 'Stat Card', 'url' => '/components/stat'],
+            ['title' => 'Stat', 'url' => '/components/stat'],
             ['title' => 'Timeline', 'url' => '/components/timeline'],
             ['title' => 'Code', 'url' => '/components/code'],
             ['title' => 'List', 'url' => '/components/list'],

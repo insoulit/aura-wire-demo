@@ -271,7 +271,7 @@ title('Component Directory - Aura Wire');
             </x-aura::card>
 
             <x-aura::card href="/components/stat">
-                <x-aura::heading level="3" size="sm">Stat Card</x-aura::heading>
+                <x-aura::heading level="3" size="sm">Stat</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::stat&gt;</x-aura::text>
             </x-aura::card>
 
