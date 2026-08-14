@@ -17,6 +17,7 @@ Volt::route('/components/button', 'component.button.index')->name('component.but
 Volt::route('/components/button-group', 'component.button.group')->name('component.button-group');
 Volt::route('/components/icon-button', 'component.button.icon-button')->name('component.icon-button');
 Volt::route('/components/button-icon', 'component.button.icon-button')->name('component.button-icon');
+Volt::route('/components/link', 'component.button.link')->name('component.link');
 
 // Form Controls Group
 Volt::route('/components/input', 'component.form.input')->name('component.input');

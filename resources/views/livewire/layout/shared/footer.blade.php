@@ -6,24 +6,25 @@ new class extends Component {};
 
 ?>
 
-<x-aura::footer >
+<x-aura::footer>
     <x-slot name="brand">
         <a href="/" class="flex items-center gap-2.5 group">
-            <x-aura::icon-button icon="sparkles" variant="primary" size="sm"  />
-            <x-aura::text size="sm" weight="bold">Aura Wire</x-aura::text>
+            <div class="p-1.5 rounded-lg bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 shadow-xs flex items-center justify-center">
+                <x-aura::icon name="sparkles" size="xs" />
+            </div>
+            <span class="font-bold text-zinc-900 dark:text-white text-sm tracking-tight">Aura Wire</span>
         </a>
     </x-slot>
 
-    <x-aura::text size="sm" weight="medium" as="a" href="/components" >Components</x-aura::text>
-    <x-aura::text size="sm" weight="medium" as="a" href="/components/installation" >Installation</x-aura::text>
-    <x-aura::text size="sm" weight="medium" as="a" href="/components/icon" >Icons (1000+)</x-aura::text>
-    <x-aura::text size="sm" weight="medium" as="a" href="https://packagist.org/packages/insoulit/aura-wire" target="_blank" rel="noopener noreferrer" >
-        <span>Packagist</span>
-        <x-aura::icon name="external-link" size="xs"  />
-    </x-aura::text>
+    <x-aura::link href="/components">Components</x-aura::link>
+    <x-aura::link href="/components/installation">Installation</x-aura::link>
+    <x-aura::link href="/components/icon">Icons (1000+)</x-aura::link>
+    <x-aura::link href="https://packagist.org/packages/insoulit/aura-wire" target="_blank">Packagist</x-aura::link>
 
     <x-slot name="bottom">
-        <x-aura::text size="xs" variant="subtle">&copy; {{ date('Y') }} Aura Wire. Built with Laravel &amp; Livewire Volt.</x-aura::text>
-        <x-aura::text size="xs" variant="subtle">Laravel v{{ app()->version() }}</x-aura::text>
+        <span>&copy; {{ date('Y') }} Aura Wire. Built with Laravel &amp; Livewire Volt.</span>
+        <div class="flex items-center gap-4 text-xs">
+            <span class="font-mono">Laravel v{{ app()->version() }}</span>
+        </div>
     </x-slot>
 </x-aura::footer>

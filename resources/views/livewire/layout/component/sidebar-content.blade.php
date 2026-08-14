@@ -8,7 +8,7 @@ new class extends Component {
         $activeGroup = 'none';
         if (request()->is('components/heading', 'components/subheading', 'components/kicker', 'components/text')) {
             $activeGroup = 'typography';
-        } elseif (request()->is('components/button', 'components/button-group', 'components/icon-button', 'components/dropdown')) {
+        } elseif (request()->is('components/button', 'components/button-group', 'components/icon-button', 'components/link', 'components/dropdown')) {
             $activeGroup = 'actions';
         } elseif (request()->is('components/input', 'components/textarea', 'components/select', 'components/checkbox', 'components/radio', 'components/switch', 'components/field', 'components/label', 'components/file-upload', 'components/pin-code', 'components/rich-text', 'components/error', 'components/combobox', 'components/date-picker', 'components/rating')) {
             $activeGroup = 'form';
@@ -95,7 +95,7 @@ new class extends Component {
 
     <!-- 2. Actions Dropdown -->
     @php
-        $isActionsActive = request()->is('components/button', 'components/button-group', 'components/icon-button', 'components/dropdown');
+        $isActionsActive = request()->is('components/button', 'components/button-group', 'components/icon-button', 'components/link', 'components/dropdown');
     @endphp
     <div class="space-y-0.5">
         <button
@@ -121,6 +121,7 @@ new class extends Component {
             <li><a href="/components/button" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/button') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Button</a></li>
             <li><a href="/components/button-group" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/button-group') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Group</a></li>
             <li><a href="/components/icon-button" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/icon-button') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Icon Button</a></li>
+            <li><a href="/components/link" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/link') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Link</a></li>
             <li><a href="/components/dropdown" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/dropdown') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Dropdown</a></li>
         </ul>
     </div>
