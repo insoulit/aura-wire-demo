@@ -284,10 +284,6 @@ title('Component Directory - Aura Wire');
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::list&gt;</x-aura::text>
             </x-aura::card>
 
-            <x-aura::card href="/components/product-card">
-                <x-aura::heading level="3" size="sm">Product Card</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::product-card&gt;</x-aura::text>
-            </x-aura::card>
 
             <x-aura::card href="/components/progress-bar">
                 <x-aura::heading level="3" size="sm">Progress Bar</x-aura::heading>

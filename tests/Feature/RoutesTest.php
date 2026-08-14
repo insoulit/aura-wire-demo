@@ -44,7 +44,7 @@ it('returns a successful 200 response for all component and portal page links', 
     'Separator Component' => '/components/separator',
     'Empty State Component' => '/components/empty-state',
     'Numbered List Component' => '/components/numbered-list',
-    'Product Card Component' => '/components/product-card',
+
     'Progress Bar Component' => '/components/progress-bar',
     'Breadcrumbs Component' => '/components/breadcrumb',
     'Pagination Component' => '/components/pagination',
