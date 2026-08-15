@@ -6,8 +6,8 @@ new class extends Component {};
 
 ?>
 
-<section class="max-w-6xl mx-auto px-4 space-y-10 pt-16 sm:pt-24">
-    <div class="text-center max-w-xl mx-auto">
+<section class="max-w-6xl mx-auto px-4 space-y-12 pt-16 sm:pt-24">
+    <div class="text-center max-w-xl mx-auto space-y-2">
         <x-aura::kicker>Layout Architectures</x-aura::kicker>
         <x-aura::heading level="2" size="xl">Application Layouts</x-aura::heading>
         <x-aura::subheading size="md">
@@ -18,25 +18,43 @@ new class extends Component {};
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
         <!-- Portal 1: Guest Portal -->
-        <div class="flex flex-col justify-between h-full group transition-all duration-200">
+        <div class="flex flex-col justify-between h-full group transition-all duration-300 hover:-translate-y-1">
             <x-aura::card>
                 <div class="space-y-4">
                     <!-- Card Header -->
                     <div class="flex items-center justify-between">
-                        <div class="group-hover:scale-105 transition-transform pointer-events-none">
+                        <div class="relative group-hover:scale-110 transition-transform duration-300 pointer-events-none">
+                            <div class="absolute inset-0 bg-zinc-400/20 dark:bg-zinc-500/10 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             <x-aura::icon-button icon="globe" variant="secondary" size="lg" />
                         </div>
                         <x-aura::badge variant="subtle" size="sm">Public</x-aura::badge>
                     </div>
 
-                    <!-- Mini Visual Layout Skeleton Diagram (100px height) -->
-                    <div class="p-3 rounded-lg bg-zinc-100/70 dark:bg-zinc-950/60 border border-zinc-200/60 dark:border-zinc-800/80 space-y-2 select-none h-[100px] flex flex-col justify-between">
-                        <div class="h-3 rounded bg-zinc-300 dark:bg-zinc-700/80 w-full flex items-center justify-between px-2 shrink-0">
-                            <x-aura::skeleton height="6px" width="32px" />
-                            <x-aura::skeleton height="6px" width="48px" />
+                    <!-- Mini Visual Layout Skeleton — Guest (centered hero content) -->
+                    <div class="relative overflow-hidden p-3 rounded-xl bg-gradient-to-b from-zinc-50 to-zinc-100/80 dark:from-zinc-950/80 dark:to-zinc-900/60 border border-zinc-200/70 dark:border-zinc-800/80 select-none h-[120px] flex flex-col gap-1.5 transition-all duration-300 group-hover:border-zinc-400/50 dark:group-hover:border-zinc-600/40 group-hover:shadow-[0_0_20px_-4px_rgba(0,0,0,0.1)] dark:group-hover:shadow-[0_0_20px_-4px_rgba(255,255,255,0.06)]">
+                        <!-- Accent glow -->
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-16 h-8 bg-zinc-400/10 dark:bg-zinc-500/8 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <!-- Navbar -->
+                        <div class="h-3.5 rounded-md bg-zinc-200/90 dark:bg-zinc-800/90 w-full flex items-center justify-between px-2 shrink-0">
+                            <x-aura::skeleton height="5px" width="28px" />
+                            <div class="flex gap-1">
+                                <x-aura::skeleton height="5px" width="20px" />
+                                <x-aura::skeleton height="5px" width="20px" />
+                                <x-aura::skeleton height="5px" width="20px" />
+                            </div>
                         </div>
-                        <div class="h-14 rounded-md bg-zinc-200/80 dark:bg-zinc-800/60 border border-dashed border-zinc-300 dark:border-zinc-700/60 flex items-center justify-center font-mono text-[10px]">
-                            <x-aura::text size="xs" variant="subtle">Guest Layout</x-aura::text>
+                        <!-- Hero content area -->
+                        <div class="flex-1 flex flex-col items-center justify-center gap-1.5 px-4">
+                            <x-aura::skeleton height="6px" width="64px" />
+                            <x-aura::skeleton height="4px" width="96px" />
+                            <div class="flex gap-1.5 mt-1">
+                                <div class="h-3 w-10 rounded-sm bg-zinc-900 dark:bg-white"></div>
+                                <div class="h-3 w-10 rounded-sm bg-zinc-300 dark:bg-zinc-700"></div>
+                            </div>
+                        </div>
+                        <!-- Footer -->
+                        <div class="h-2.5 rounded-md bg-zinc-200/60 dark:bg-zinc-800/50 w-full shrink-0 flex items-center justify-center">
+                            <x-aura::skeleton height="3px" width="40px" />
                         </div>
                     </div>
 
@@ -60,31 +78,55 @@ new class extends Component {};
         </div>
 
         <!-- Portal 2: User Workspace -->
-        <div class="flex flex-col justify-between h-full group transition-all duration-200">
+        <div class="flex flex-col justify-between h-full group transition-all duration-300 hover:-translate-y-1">
             <x-aura::card>
                 <div class="space-y-4">
                     <!-- Card Header -->
                     <div class="flex items-center justify-between">
-                        <div class="group-hover:scale-105 transition-transform pointer-events-none">
+                        <div class="relative group-hover:scale-110 transition-transform duration-300 pointer-events-none">
+                            <div class="absolute inset-0 bg-zinc-400/20 dark:bg-zinc-500/10 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             <x-aura::icon-button icon="user" variant="secondary" size="lg" />
                         </div>
                         <x-aura::badge variant="subtle" size="sm">Member</x-aura::badge>
                     </div>
 
-                    <!-- Mini Visual Layout Skeleton Diagram (100px height) -->
-                    <div class="p-3 rounded-lg bg-zinc-100/70 dark:bg-zinc-950/60 border border-zinc-200/60 dark:border-zinc-800/80 space-y-2 select-none h-[100px] flex flex-col justify-between">
-                        <div class="h-3 rounded bg-zinc-300 dark:bg-zinc-700/80 w-full flex items-center justify-between px-2 shrink-0">
-                            <x-aura::skeleton height="6px" width="40px" />
-                            <x-aura::skeleton height="6px" width="16px" />
-                        </div>
-                        <div class="grid grid-cols-2 gap-1.5 h-14">
-                            <div class="rounded-md bg-zinc-200/80 dark:bg-zinc-800/60 p-1.5 flex flex-col justify-between">
-                                <x-aura::skeleton height="6px" width="24px" />
-                                <x-aura::skeleton height="12px" width="32px" />
+                    <!-- Mini Visual Layout Skeleton — User (dashboard with stats) -->
+                    <div class="relative overflow-hidden p-3 rounded-xl bg-gradient-to-b from-zinc-50 to-zinc-100/80 dark:from-zinc-950/80 dark:to-zinc-900/60 border border-zinc-200/70 dark:border-zinc-800/80 select-none h-[120px] flex flex-col gap-1.5 transition-all duration-300 group-hover:border-zinc-400/50 dark:group-hover:border-zinc-600/40 group-hover:shadow-[0_0_20px_-4px_rgba(0,0,0,0.1)] dark:group-hover:shadow-[0_0_20px_-4px_rgba(255,255,255,0.06)]">
+                        <!-- Accent glow -->
+                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-16 h-8 bg-zinc-400/10 dark:bg-zinc-500/8 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <!-- Header bar -->
+                        <div class="h-3.5 rounded-md bg-zinc-200/90 dark:bg-zinc-800/90 w-full flex items-center justify-between px-2 shrink-0">
+                            <x-aura::skeleton height="5px" width="36px" />
+                            <div class="flex items-center gap-1">
+                                <x-aura::skeleton height="5px" width="14px" />
+                                <div class="w-3 h-3 rounded-full bg-zinc-300 dark:bg-zinc-700"></div>
                             </div>
-                            <div class="rounded-md bg-zinc-200/80 dark:bg-zinc-800/60 p-1.5 flex flex-col justify-between">
-                                <x-aura::skeleton height="6px" width="24px" />
-                                <x-aura::skeleton height="12px" width="32px" />
+                        </div>
+                        <!-- Stat cards row -->
+                        <div class="grid grid-cols-3 gap-1.5 shrink-0">
+                            <div class="rounded-md bg-zinc-200/80 dark:bg-zinc-800/60 p-1.5 flex flex-col justify-between gap-0.5">
+                                <x-aura::skeleton height="4px" width="16px" />
+                                <x-aura::skeleton height="8px" width="20px" />
+                            </div>
+                            <div class="rounded-md bg-zinc-300/80 dark:bg-zinc-700/40 border border-zinc-400/60 dark:border-zinc-600/40 p-1.5 flex flex-col justify-between gap-0.5">
+                                <x-aura::skeleton height="4px" width="16px" />
+                                <x-aura::skeleton height="8px" width="20px" />
+                            </div>
+                            <div class="rounded-md bg-zinc-200/80 dark:bg-zinc-800/60 p-1.5 flex flex-col justify-between gap-0.5">
+                                <x-aura::skeleton height="4px" width="16px" />
+                                <x-aura::skeleton height="8px" width="20px" />
+                            </div>
+                        </div>
+                        <!-- Content area with table rows -->
+                        <div class="flex-1 rounded-md bg-zinc-200/50 dark:bg-zinc-800/40 p-1.5 flex flex-col gap-1 justify-start overflow-hidden">
+                            <div class="flex items-center gap-1">
+                                <x-aura::skeleton height="4px" width="100%" />
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <x-aura::skeleton height="4px" width="80%" />
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <x-aura::skeleton height="4px" width="60%" />
                             </div>
                         </div>
                     </div>
@@ -109,33 +151,59 @@ new class extends Component {};
         </div>
 
         <!-- Portal 3: Admin Console -->
-        <div class="flex flex-col justify-between h-full group transition-all duration-200">
+        <div class="flex flex-col justify-between h-full group transition-all duration-300 hover:-translate-y-1">
             <x-aura::card>
                 <div class="space-y-4">
                     <!-- Card Header -->
                     <div class="flex items-center justify-between">
-                        <div class="group-hover:scale-105 transition-transform pointer-events-none">
+                        <div class="relative group-hover:scale-110 transition-transform duration-300 pointer-events-none">
+                            <div class="absolute inset-0 bg-zinc-400/20 dark:bg-zinc-500/10 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             <x-aura::icon-button icon="shield-check" variant="primary" size="lg" />
                         </div>
                         <x-aura::badge variant="primary" size="sm">Admin</x-aura::badge>
                     </div>
 
-                    <!-- Mini Visual Layout Skeleton Diagram (100px height) -->
-                    <div class="p-3 rounded-lg bg-zinc-100/70 dark:bg-zinc-950/60 border border-zinc-200/60 dark:border-zinc-800/80 flex gap-2 h-[100px] select-none">
+                    <!-- Mini Visual Layout Skeleton — Admin (sidebar + header + content) -->
+                    <div class="relative overflow-hidden p-3 rounded-xl bg-gradient-to-b from-zinc-50 to-zinc-100/80 dark:from-zinc-950/80 dark:to-zinc-900/60 border border-zinc-200/70 dark:border-zinc-800/80 flex gap-2 h-[120px] select-none transition-all duration-300 group-hover:border-zinc-400/50 dark:group-hover:border-zinc-600/40 group-hover:shadow-[0_0_20px_-4px_rgba(0,0,0,0.1)] dark:group-hover:shadow-[0_0_20px_-4px_rgba(255,255,255,0.06)]">
+                        <!-- Accent glow -->
+                        <div class="absolute -top-4 -left-2 w-12 h-8 bg-zinc-400/10 dark:bg-zinc-500/8 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         <!-- Mini Sidebar -->
-                        <div class="w-7 rounded-md bg-zinc-900 dark:bg-zinc-800 p-1.5 flex flex-col gap-1.5 shrink-0 justify-start">
-                            <x-aura::skeleton height="6px" />
-                            <x-aura::skeleton height="4px" />
-                            <x-aura::skeleton height="4px" />
-                            <x-aura::skeleton height="4px" />
-                        </div>
-                        <!-- Mini Main -->
-                        <div class="flex-1 flex flex-col justify-between gap-2">
-                            <div class="h-3 rounded bg-zinc-200 dark:bg-zinc-800 w-full flex items-center px-1 shrink-0">
-                                <x-aura::skeleton height="4px" width="32px" />
+                        <div class="w-8 rounded-lg bg-zinc-900 dark:bg-zinc-800 p-1.5 flex flex-col gap-1.5 shrink-0 justify-start">
+                            <div class="w-full h-3 rounded-sm bg-zinc-600/30 dark:bg-zinc-500/30 flex items-center justify-center">
+                                <x-aura::skeleton height="4px" width="12px" />
                             </div>
-                            <div class="flex-1 rounded-md bg-zinc-200/80 dark:bg-zinc-800/60 border border-dashed border-zinc-300 dark:border-zinc-700/60 flex items-center justify-center font-mono text-[10px]">
-                                <x-aura::text size="xs" variant="subtle">Admin Layout</x-aura::text>
+                            <div class="w-full h-0.5 rounded bg-zinc-700/50 my-0.5"></div>
+                            <x-aura::skeleton height="4px" />
+                            <x-aura::skeleton height="4px" />
+                            <x-aura::skeleton height="4px" />
+                            <div class="mt-auto">
+                                <x-aura::skeleton height="4px" width="16px" />
+                            </div>
+                        </div>
+                        <!-- Mini Main Area -->
+                        <div class="flex-1 flex flex-col gap-1.5">
+                            <!-- Top bar -->
+                            <div class="h-3.5 rounded-md bg-zinc-200/90 dark:bg-zinc-800/90 w-full flex items-center justify-between px-1.5 shrink-0">
+                                <x-aura::skeleton height="4px" width="28px" />
+                                <div class="flex items-center gap-1">
+                                    <div class="w-2 h-2 rounded-full bg-zinc-400 dark:bg-zinc-500"></div>
+                                    <x-aura::skeleton height="4px" width="12px" />
+                                </div>
+                            </div>
+                            <!-- Content grid -->
+                            <div class="flex-1 grid grid-cols-2 gap-1.5">
+                                <div class="rounded-md bg-zinc-200/80 dark:bg-zinc-800/60 p-1.5 flex flex-col gap-1">
+                                    <x-aura::skeleton height="4px" width="20px" />
+                                    <div class="flex-1 rounded-sm bg-zinc-300/60 dark:bg-zinc-700/40"></div>
+                                </div>
+                                <div class="rounded-md bg-zinc-200/80 dark:bg-zinc-800/60 p-1.5 flex flex-col gap-1">
+                                    <x-aura::skeleton height="4px" width="20px" />
+                                    <div class="flex-1 flex flex-col gap-0.5 justify-end">
+                                        <div class="h-1 rounded-full bg-zinc-900/40 dark:bg-white/30 w-3/4"></div>
+                                        <div class="h-1 rounded-full bg-zinc-300/60 dark:bg-zinc-700/40 w-1/2"></div>
+                                        <div class="h-1 rounded-full bg-zinc-300/60 dark:bg-zinc-700/40 w-full"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
