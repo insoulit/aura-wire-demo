@@ -1,9 +1,16 @@
 <?php
 
-it('renders user workspace dashboard', function () {
+it('renders user workspace dashboard on /user', function () {
+    $response = $this->get('/user');
+
+    $response->assertStatus(200)
+        ->assertSee('Welcome back', false);
+});
+
+it('redirects legacy /dashboard to /user', function () {
     $response = $this->get('/dashboard');
 
-    $response->assertStatus(200);
+    $response->assertRedirect('/user');
 });
 
 it('renders user profile management view', function () {

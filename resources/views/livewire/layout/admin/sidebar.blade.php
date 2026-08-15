@@ -61,7 +61,7 @@ new class extends Component {};
             </x-slot:icon>
             Guest
         </x-aura::sidebar.item>
-        <x-aura::sidebar.item href="/dashboard" :active="request()->is('dashboard*')">
+        <x-aura::sidebar.item href="/user" :active="request()->is('user*')">
             <x-slot:icon>
                 <x-aura::icon name="user"  size="xs" />
             </x-slot:icon>

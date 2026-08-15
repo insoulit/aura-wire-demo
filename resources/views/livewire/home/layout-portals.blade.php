@@ -142,7 +142,7 @@ new class extends Component {};
 
                 <x-slot:footer>
                     <div class="w-full">
-                        <x-aura::button variant="primary" size="md" iconTrailing="arrow-right" href="/dashboard">
+                        <x-aura::button variant="primary" size="md" iconTrailing="arrow-right" href="/user">
                             Launch User
                         </x-aura::button>
                     </div>

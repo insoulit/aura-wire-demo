@@ -13,7 +13,7 @@ it('returns a successful 200 response for all component, portal, design block, a
     'Home Page' => '/',
 
     // User Portal & Workspace
-    'User Workspace Dashboard' => '/dashboard',
+    'User Workspace Dashboard' => '/user',
     'User Profile Settings' => '/user/profile',
     'User Avatar Upload' => '/user/avatar',
     'User Email Change' => '/user/email',

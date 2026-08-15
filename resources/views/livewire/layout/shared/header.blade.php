@@ -32,7 +32,7 @@ new class extends Component {};
 
     <x-aura::header.item href="/components" icon="layers" :active="request()->is('components*')">Components</x-aura::header.item>
     <x-aura::header.item href="/guest" icon="globe" :active="request()->is('guest*')">Guest</x-aura::header.item>
-    <x-aura::header.item href="/dashboard" icon="user" :active="request()->is('dashboard*')">User</x-aura::header.item>
+    <x-aura::header.item href="/user" icon="user" :active="request()->is('user*')">User</x-aura::header.item>
     <x-aura::header.item href="/admin" icon="shield-check" :active="request()->is('admin*')">Admin</x-aura::header.item>
 
     <x-slot name="actions">

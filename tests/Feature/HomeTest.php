@@ -24,6 +24,6 @@ it('includes quick links to all 3 application layout portals', function () {
 
     $response->assertStatus(200)
         ->assertSee('href="/guest"', false)
-        ->assertSee('href="/dashboard"', false)
+        ->assertSee('href="/user"', false)
         ->assertSee('href="/admin"', false);
 });

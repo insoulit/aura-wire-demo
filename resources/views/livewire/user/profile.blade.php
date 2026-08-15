@@ -28,7 +28,7 @@ class extends Component {
         <div class="flex items-center justify-between gap-4">
             <x-aura::heading level="1" size="lg">Profile Info</x-aura::heading>
             <div class="shrink-0">
-                <x-aura::button variant="secondary" size="sm" href="/dashboard" wire:navigate>
+                <x-aura::button variant="secondary" size="sm" href="/user" wire:navigate>
                     <x-aura::icon name="arrow-left" size="xs" />
                     <span>Back</span>
                 </x-aura::button>
