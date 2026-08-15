@@ -1,11 +1,15 @@
 <?php
 
-use function Livewire\Volt\{layout, title, state};
+use Livewire\Volt\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-layout('livewire.layout.component');
-title('Switch - Aura Wire');
-
-state(['enabled' => false]);
+new 
+#[Layout('livewire.layout.component')] 
+#[Title('Switch - Aura Wire')] 
+class extends Component {
+    public bool $enabled = false;
+};
 
 ?>
 

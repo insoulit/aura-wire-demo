@@ -1,9 +1,13 @@
 <?php
 
-use function Livewire\Volt\{layout, title};
+use Livewire\Volt\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-layout('livewire.layout.component');
-title('Accordion - Aura Wire');
+new 
+#[Layout('livewire.layout.component')] 
+#[Title('Accordion - Aura Wire')] 
+class extends Component {};
 
 ?>
 
@@ -32,17 +36,19 @@ title('Accordion - Aura Wire');
     <!-- 1. Standard FAQ Accordion -->
     <x-aura::code  title="1. Standard FAQ Accordion (Single Expand)">
         <x-slot:preview>
-            <x-aura::accordion default="faq-1" class="w-full">
-                <x-aura::accordion.item name="faq-1" title="What is AuraWire?">
-                    AuraWire is a sleek Blade and Livewire component library crafted with high-contrast monochrome design foundation.
-                </x-aura::accordion.item>
-                <x-aura::accordion.item name="faq-2" title="How do I install it into my project?">
-                    Install via Composer using <code class="text-xs bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded">composer require insoulit/aura-wire</code> and publish configuration assets.
-                </x-aura::accordion.item>
-                <x-aura::accordion.item name="faq-3" title="Does it support Dark Mode?">
-                    Yes, dark mode is supported out of the box with automatic class or media strategy options.
-                </x-aura::accordion.item>
-            </x-aura::accordion>
+            <div class="w-full">
+                <x-aura::accordion default="faq-1">
+                    <x-aura::accordion.item name="faq-1" title="What is AuraWire?">
+                        AuraWire is a sleek Blade and Livewire component library crafted with high-contrast monochrome design foundation.
+                    </x-aura::accordion.item>
+                    <x-aura::accordion.item name="faq-2" title="How do I install it into my project?">
+                        Install via Composer using <code class="text-xs bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded">composer require insoulit/aura-wire</code> and publish configuration assets.
+                    </x-aura::accordion.item>
+                    <x-aura::accordion.item name="faq-3" title="Does it support Dark Mode?">
+                        Yes, dark mode is supported out of the box with automatic class or media strategy options.
+                    </x-aura::accordion.item>
+                </x-aura::accordion>
+            </div>
         </x-slot:preview>
         <x-slot:codeSlot>@verbatim<x-aura::accordion default="faq-1">
     <x-aura::accordion.item name="faq-1" title="What is AuraWire?">
@@ -57,17 +63,19 @@ title('Accordion - Aura Wire');
     <!-- 2. Multiple Expand Accordion -->
     <x-aura::code  title="2. Multiple Simultaneous Open Items">
         <x-slot:preview>
-            <x-aura::accordion multiple :default="['opt-1', 'opt-2']" class="w-full">
-                <x-aura::accordion.item name="opt-1" title="Notification Preferences">
-                    Receive instant push notifications and weekly email digests.
-                </x-aura::accordion.item>
-                <x-aura::accordion.item name="opt-2" title="Security & Authentication">
-                    Two-Factor Authentication (2FA) is enabled for your account.
-                </x-aura::accordion.item>
-                <x-aura::accordion.item name="opt-3" title="API Access Tokens">
-                    Manage secret keys and application access scopes.
-                </x-aura::accordion.item>
-            </x-aura::accordion>
+            <div class="w-full">
+                <x-aura::accordion multiple :default="['opt-1', 'opt-2']">
+                    <x-aura::accordion.item name="opt-1" title="Notification Preferences">
+                        Receive instant push notifications and weekly email digests.
+                    </x-aura::accordion.item>
+                    <x-aura::accordion.item name="opt-2" title="Security & Authentication">
+                        Two-Factor Authentication (2FA) is enabled for your account.
+                    </x-aura::accordion.item>
+                    <x-aura::accordion.item name="opt-3" title="API Access Tokens">
+                        Manage secret keys and application access scopes.
+                    </x-aura::accordion.item>
+                </x-aura::accordion>
+            </div>
         </x-slot:preview>
         <x-slot:codeSlot>@verbatim<x-aura::accordion multiple :default="['opt-1', 'opt-2']">
     <x-aura::accordion.item name="opt-1" title="Notification Preferences">...</x-aura::accordion.item>
@@ -78,14 +86,16 @@ title('Accordion - Aura Wire');
     <!-- 3. Accordion with Category Icons -->
     <x-aura::code  title="3. Accordion Items with Category Icons">
         <x-slot:preview>
-            <x-aura::accordion class="w-full">
-                <x-aura::accordion.item name="sec-1" icon="lock" title="Password & Security Controls">
-                    Update your master password and active session tokens.
-                </x-aura::accordion.item>
-                <x-aura::accordion.item name="sec-2" icon="bell" title="Email & Webhooks Notifications">
-                    Configure webhooks endpoints and alert escalation levels.
-                </x-aura::accordion.item>
-            </x-aura::accordion>
+            <div class="w-full">
+                <x-aura::accordion>
+                    <x-aura::accordion.item name="sec-1" icon="lock" title="Password & Security Controls">
+                        Update your master password and active session tokens.
+                    </x-aura::accordion.item>
+                    <x-aura::accordion.item name="sec-2" icon="bell" title="Email & Webhooks Notifications">
+                        Configure webhooks endpoints and alert escalation levels.
+                    </x-aura::accordion.item>
+                </x-aura::accordion>
+            </div>
         </x-slot:preview>
         <x-slot:codeSlot>@verbatim<x-aura::accordion>
     <x-aura::accordion.item name="sec-1" icon="lock" title="Password Controls">...</x-aura::accordion.item>

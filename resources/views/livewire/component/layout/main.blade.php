@@ -1,9 +1,13 @@
 <?php
 
-use function Livewire\Volt\{layout, title};
+use Livewire\Volt\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-layout('livewire.layout.component');
-title('Main - Aura Wire');
+new 
+#[Layout('livewire.layout.component')] 
+#[Title('Main - Aura Wire')] 
+class extends Component {};
 
 ?>
 
@@ -32,7 +36,7 @@ title('Main - Aura Wire');
         <x-slot:preview>
             <div class="w-full border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-100 dark:bg-zinc-950 p-4 h-48 flex">
                 <x-aura::main alignX="center" alignY="center">
-                    <x-aura::text size="sm" >Centered Content (X &amp; Y)</x-aura::text>
+                    <x-aura::text size="sm">Centered Content (X &amp; Y)</x-aura::text>
                 </x-aura::main>
             </div>
         </x-slot:preview>
@@ -46,12 +50,12 @@ title('Main - Aura Wire');
         <x-slot:preview>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
                 <div class="border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-100 dark:bg-zinc-950 p-4 h-36 flex">
-                    <x-aura::main alignX="start" alignY="start" :container="false" class="h-full">
+                    <x-aura::main alignX="start" alignY="start" :container="false">
                         <x-aura::badge variant="neutral">alignX="start" alignY="start"</x-aura::badge>
                     </x-aura::main>
                 </div>
                 <div class="border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-100 dark:bg-zinc-950 p-4 h-36 flex">
-                    <x-aura::main alignX="end" alignY="end" :container="false" class="h-full">
+                    <x-aura::main alignX="end" alignY="end" :container="false">
                         <x-aura::badge variant="primary">alignX="end" alignY="end"</x-aura::badge>
                     </x-aura::main>
                 </div>

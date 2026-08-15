@@ -1,14 +1,16 @@
 <?php
 
-use function Livewire\Volt\{layout, title, state};
+use Livewire\Volt\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-layout('livewire.layout.component');
-title('Input - Aura Wire');
-
-state([
-    'email' => 'alex@example.com',
-    'search' => '',
-]);
+new 
+#[Layout('livewire.layout.component')] 
+#[Title('Input - Aura Wire')] 
+class extends Component {
+    public string $email = 'alex@example.com';
+    public string $search = '';
+};
 
 ?>
 

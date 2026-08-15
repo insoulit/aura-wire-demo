@@ -16,7 +16,7 @@ class extends Component {};
     <x-aura::card>
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
-                <x-aura::kicker>Overlay</x-aura::kicker>
+                <x-aura::kicker>Feedback</x-aura::kicker>
                 <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
             </div>
             <x-aura::heading level="1" size="xl">Modal</x-aura::heading>

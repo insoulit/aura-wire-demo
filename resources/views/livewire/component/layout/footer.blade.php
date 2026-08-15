@@ -38,32 +38,34 @@ class extends Component {};
     <x-aura::code  title="1. Simple Application Footer">
         <x-slot:preview>
             <div class="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100/60 dark:bg-zinc-950 p-3">
-                <x-aura::footer class="rounded-xl border border-zinc-200/80 dark:border-zinc-800/80">
-                    <x-slot name="brand">
-                        <div class="flex items-center gap-2.5">
-                            <div class="p-1.5 rounded-lg bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 shadow-xs flex items-center justify-center">
-                                <x-aura::icon name="sparkles" size="xs" />
+                <div class="rounded-xl overflow-hidden shadow-xs">
+                    <x-aura::footer variant="bordered">
+                        <x-slot name="brand">
+                            <div class="flex items-center gap-2.5">
+                                <div class="p-1.5 rounded-lg bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 shadow-xs flex items-center justify-center">
+                                    <x-aura::icon name="sparkles" size="xs" />
+                                </div>
+                                <span class="font-bold text-zinc-900 dark:text-white text-sm tracking-tight">Aura Wire</span>
                             </div>
-                            <span class="font-bold text-zinc-900 dark:text-white text-sm tracking-tight">Aura Wire</span>
-                        </div>
-                    </x-slot>
+                        </x-slot>
 
-                    <a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Documentation</a>
-                    <a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">GitHub</a>
-                    <a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">License</a>
-                    <a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Privacy Policy</a>
+                        <a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Documentation</a>
+                        <a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">GitHub</a>
+                        <a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">License</a>
+                        <a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Privacy Policy</a>
 
-                    <x-slot name="bottom">
-                        <span>&copy; {{ date('Y') }} Insoulit. All rights reserved.</span>
-                        <div class="flex items-center gap-4 text-xs">
-                            <span class="font-mono">v1.5.0</span>
-                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                        </div>
-                    </x-slot>
-                </x-aura::footer>
+                        <x-slot name="bottom">
+                            <span>&copy; {{ date('Y') }} Insoulit. All rights reserved.</span>
+                            <div class="flex items-center gap-4 text-xs">
+                                <span class="font-mono">v1.5.0</span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                            </div>
+                        </x-slot>
+                    </x-aura::footer>
+                </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::footer>
+        <x-slot:codeSlot>@verbatim<x-aura::footer variant="bordered">
     <x-slot name="brand">
         <div class="flex items-center gap-2.5">
             <x-aura::icon name="sparkles" size="xs" />
@@ -170,30 +172,32 @@ class extends Component {};
     <x-aura::code  title="3. Dark Theme Developer Platform Footer">
         <x-slot:preview>
             <div class="w-full rounded-2xl border border-zinc-800 bg-zinc-950 p-3">
-                <x-aura::footer class="rounded-xl !bg-zinc-900 !border-zinc-800 !text-zinc-300">
-                    <x-slot name="brand">
-                        <div class="flex items-center gap-3">
-                            <span class="font-black text-white tracking-wider text-sm font-mono">&lt;AURA/&gt;</span>
-                            <x-aura::badge variant="positive" size="xs">SYSTEM OPERATIONAL</x-aura::badge>
-                        </div>
-                    </x-slot>
+                <div class="rounded-xl overflow-hidden shadow-xs">
+                    <x-aura::footer variant="dark">
+                        <x-slot name="brand">
+                            <div class="flex items-center gap-3">
+                                <span class="font-black text-white tracking-wider text-sm font-mono">&lt;AURA/&gt;</span>
+                                <x-aura::badge variant="positive" size="xs">SYSTEM OPERATIONAL</x-aura::badge>
+                            </div>
+                        </x-slot>
 
-                    <a href="#" class="hover:text-white transition-colors">API Docs</a>
-                    <a href="#" class="hover:text-white transition-colors">Status</a>
-                    <a href="#" class="hover:text-white transition-colors">GitHub</a>
-                    <a href="#" class="hover:text-white transition-colors">Security</a>
+                        <a href="#" class="hover:text-white transition-colors">API Docs</a>
+                        <a href="#" class="hover:text-white transition-colors">Status</a>
+                        <a href="#" class="hover:text-white transition-colors">GitHub</a>
+                        <a href="#" class="hover:text-white transition-colors">Security</a>
 
-                    <x-slot name="bottom">
-                        <span class="text-zinc-400">&copy; {{ date('Y') }} Aura Developer Platform Inc.</span>
-                        <div class="flex items-center gap-3 text-xs">
-                            <span class="font-mono text-zinc-400">US-EAST-1</span>
-                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                        </div>
-                    </x-slot>
-                </x-aura::footer>
+                        <x-slot name="bottom">
+                            <span class="text-zinc-400">&copy; {{ date('Y') }} Aura Developer Platform Inc.</span>
+                            <div class="flex items-center gap-3 text-xs">
+                                <span class="font-mono text-zinc-400">US-EAST-1</span>
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                            </div>
+                        </x-slot>
+                    </x-aura::footer>
+                </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::footer class="!bg-zinc-900 !border-zinc-800 !text-zinc-300">
+        <x-slot:codeSlot>@verbatim<x-aura::footer variant="dark">
     <x-slot name="brand">
         <span class="font-mono font-black text-white">&lt;AURA/&gt;</span>
         <x-aura::badge variant="positive" size="xs">OPERATIONAL</x-aura::badge>
@@ -219,50 +223,55 @@ class extends Component {};
                         <p class="text-xs text-zinc-500 dark:text-zinc-400">Get 15% off your first order plus weekly exclusive arrivals.</p>
                     </div>
                     <div class="flex items-center gap-2 w-full md:w-auto">
-                        <x-aura::input placeholder="Enter your email" icon="mail" size="sm" class="w-full md:w-64" />
-                        <x-aura::button variant="primary" size="sm" class="shrink-0">Subscribe</x-aura::button>
+                        <div class="w-full md:w-64">
+                            <x-aura::input placeholder="Enter your email" icon="mail" size="sm" />
+                        </div>
+                        <div class="shrink-0">
+                            <x-aura::button variant="primary" size="sm">Subscribe</x-aura::button>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Footer Main Row -->
-                <x-aura::footer class="rounded-xl border border-zinc-200/80 dark:border-zinc-800/80">
-                    <x-slot name="brand">
-                        <span class="font-extrabold text-zinc-900 dark:text-white text-base tracking-widest uppercase font-sans">AURA STORE</span>
-                    </x-slot>
+                <div class="rounded-xl overflow-hidden shadow-xs">
+                    <x-aura::footer variant="bordered">
+                        <x-slot name="brand">
+                            <span class="font-extrabold text-zinc-900 dark:text-white text-base tracking-widest uppercase font-sans">AURA STORE</span>
+                        </x-slot>
 
-                    <a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Track Order</a>
-                    <a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Shipping &amp; Returns</a>
-                    <a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Store Locator</a>
-                    <a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Contact Support</a>
+                        <a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Track Order</a>
+                        <a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Shipping &amp; Returns</a>
+                        <a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Store Locator</a>
+                        <a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Contact Support</a>
 
-                    <x-slot name="bottom">
-                        <span>&copy; {{ date('Y') }} AURA STORE. All rights reserved.</span>
-                        <div class="flex items-center gap-2 font-mono text-[10px] uppercase text-zinc-400">
-                            <span>VISA</span>
-                            <span>•</span>
-                            <span>MASTERCARD</span>
-                            <span>•</span>
-                            <span>PAYPAL</span>
-                            <span>•</span>
-                            <span>APPLE PAY</span>
-                        </div>
-                    </x-slot>
-                </x-aura::footer>
+                        <x-slot name="bottom">
+                            <span>&copy; {{ date('Y') }} AURA STORE. All rights reserved.</span>
+                            <div class="flex items-center gap-2 font-mono text-[10px] uppercase text-zinc-400">
+                                <span>VISA</span>
+                                <span>•</span>
+                                <span>MASTERCARD</span>
+                                <span>•</span>
+                                <span>PAYPAL</span>
+                                <span>•</span>
+                                <span>APPLE PAY</span>
+                            </div>
+                        </x-slot>
+                    </x-aura::footer>
+                </div>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<div class="p-6 rounded-xl bg-white border border-zinc-200 flex justify-between gap-6">
-    <div>
-        <h4 class="text-sm font-bold">Subscribe to our newsletter</h4>
-    </div>
-    <div class="flex gap-2">
-        <x-aura::input placeholder="Enter your email" size="sm" />
-        <x-aura::button variant="primary" size="sm">Subscribe</x-aura::button>
-    </div>
-</div>
+        <x-slot:codeSlot>@verbatim<x-aura::footer variant="bordered">
+    <x-slot name="brand">
+        <span class="font-extrabold tracking-widest uppercase">AURA STORE</span>
+    </x-slot>
 
-<x-aura::footer brand="AURA STORE">
     <a href="#">Track Order</a>
-    <a href="#">Shipping &amp; Returns</a>
+    <a href="#">Shipping</a>
+    <a href="#">Contact Support</a>
+
+    <x-slot name="bottom">
+        <span>&copy; {{ date('Y') }} AURA STORE. All rights reserved.</span>
+    </x-slot>
 </x-aura::footer>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

@@ -1,66 +1,73 @@
 <?php
 
-use function Livewire\Volt\{layout, title, with};
+use Livewire\Volt\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-layout('livewire.layout.component');
-title('Table - Aura Wire');
+new 
+#[Layout('livewire.layout.component')] 
+#[Title('Table - Aura Wire')] 
+class extends Component {
+    public function with(): array
+    {
+        return [
+            'users' => [
+                [
+                    'name' => 'Alex Morgan',
+                    'email' => 'alex.morgan@example.com',
+                    'role' => 'Lead Frontend Engineer',
+                    'department' => 'Engineering',
+                    'status' => 'Active',
+                    'avatar' => 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80',
+                ],
+                [
+                    'name' => 'Sarah Chen',
+                    'email' => 'sarah.chen@example.com',
+                    'role' => 'Senior UI/UX Designer',
+                    'department' => 'Design',
+                    'status' => 'Active',
+                    'avatar' => 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80',
+                ],
+                [
+                    'name' => 'Marcus Vance',
+                    'email' => 'marcus.vance@example.com',
+                    'role' => 'DevOps Architect',
+                    'department' => 'Infrastructure',
+                    'status' => 'Offline',
+                    'avatar' => 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80',
+                ],
+                [
+                    'name' => 'Elena Rostova',
+                    'email' => 'elena.r@example.com',
+                    'role' => 'Product Manager',
+                    'department' => 'Product',
+                    'status' => 'Away',
+                    'avatar' => 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&auto=format&fit=crop&q=80',
+                ],
+            ],
 
-with([
-    'users' => [
-        [
-            'name' => 'Alex Morgan',
-            'email' => 'alex.morgan@example.com',
-            'role' => 'Lead Frontend Engineer',
-            'department' => 'Engineering',
-            'status' => 'Active',
-            'avatar' => 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80',
-        ],
-        [
-            'name' => 'Sarah Chen',
-            'email' => 'sarah.chen@example.com',
-            'role' => 'Senior UI/UX Designer',
-            'department' => 'Design',
-            'status' => 'Active',
-            'avatar' => 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80',
-        ],
-        [
-            'name' => 'Marcus Vance',
-            'email' => 'marcus.vance@example.com',
-            'role' => 'DevOps Architect',
-            'department' => 'Infrastructure',
-            'status' => 'Offline',
-            'avatar' => 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80',
-        ],
-        [
-            'name' => 'Elena Rostova',
-            'email' => 'elena.r@example.com',
-            'role' => 'Product Manager',
-            'department' => 'Product',
-            'status' => 'Away',
-            'avatar' => 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&auto=format&fit=crop&q=80',
-        ],
-    ],
+            'orders' => [
+                ['id' => 'ORD-9482', 'customer' => 'TechCorp Inc.', 'date' => 'Aug 06, 2026', 'amount' => '$1,450.00', 'payment' => 'Credit Card', 'status' => 'Paid'],
+                ['id' => 'ORD-9483', 'customer' => 'Acme Logistics', 'date' => 'Aug 05, 2026', 'amount' => '$890.50', 'payment' => 'PayPal', 'status' => 'Paid'],
+                ['id' => 'ORD-9484', 'customer' => 'Starlight Media', 'date' => 'Aug 05, 2026', 'amount' => '$3,200.00', 'payment' => 'Wire Transfer', 'status' => 'Pending'],
+                ['id' => 'ORD-9485', 'customer' => 'Nexus Global', 'date' => 'Aug 04, 2026', 'amount' => '$420.00', 'payment' => 'Credit Card', 'status' => 'Failed'],
+            ],
 
-    'orders' => [
-        ['id' => 'ORD-9482', 'customer' => 'TechCorp Inc.', 'date' => 'Aug 06, 2026', 'amount' => '$1,450.00', 'payment' => 'Credit Card', 'status' => 'Paid'],
-        ['id' => 'ORD-9483', 'customer' => 'Acme Logistics', 'date' => 'Aug 05, 2026', 'amount' => '$890.50', 'payment' => 'PayPal', 'status' => 'Paid'],
-        ['id' => 'ORD-9484', 'customer' => 'Starlight Media', 'date' => 'Aug 05, 2026', 'amount' => '$3,200.00', 'payment' => 'Wire Transfer', 'status' => 'Pending'],
-        ['id' => 'ORD-9485', 'customer' => 'Nexus Global', 'date' => 'Aug 04, 2026', 'amount' => '$420.00', 'payment' => 'Credit Card', 'status' => 'Failed'],
-    ],
+            'tasks' => [
+                ['task' => 'Design System Tokens Audit', 'project' => 'Aura Wire Core', 'progress' => 85, 'priority' => 'High', 'assignee' => 'Sarah C.'],
+                ['task' => 'Laravel Livewire 3 Integration', 'project' => 'Aura Package', 'progress' => 100, 'priority' => 'Critical', 'assignee' => 'Alex M.'],
+                ['task' => 'Documentation & Showcase Pages', 'project' => 'Demo Site', 'progress' => 60, 'priority' => 'Medium', 'assignee' => 'Elena R.'],
+                ['task' => 'CI/CD Pipeline Automation', 'project' => 'DevOps System', 'progress' => 30, 'priority' => 'Low', 'assignee' => 'Marcus V.'],
+            ],
 
-    'tasks' => [
-        ['task' => 'Design System Tokens Audit', 'project' => 'Aura Wire Core', 'progress' => 85, 'priority' => 'High', 'assignee' => 'Sarah C.'],
-        ['task' => 'Laravel Livewire 3 Integration', 'project' => 'Aura Package', 'progress' => 100, 'priority' => 'Critical', 'assignee' => 'Alex M.'],
-        ['task' => 'Documentation & Showcase Pages', 'project' => 'Demo Site', 'progress' => 60, 'priority' => 'Medium', 'assignee' => 'Elena R.'],
-        ['task' => 'CI/CD Pipeline Automation', 'project' => 'DevOps System', 'progress' => 30, 'priority' => 'Low', 'assignee' => 'Marcus V.'],
-    ],
-
-    'apiKeys' => [
-        ['name' => 'Production Webhook Secret', 'token' => 'sk_live_9f83...4a12', 'created' => 'Jul 12, 2026', 'lastUsed' => '2 mins ago', 'status' => 'Active'],
-        ['name' => 'Staging Environment Key', 'token' => 'sk_test_3b11...88ee', 'created' => 'Jun 28, 2026', 'lastUsed' => 'Yesterday', 'status' => 'Active'],
-        ['name' => 'Legacy V1 Mobile Token', 'token' => 'sk_live_1a90...99cc', 'created' => 'Jan 15, 2026', 'lastUsed' => '30 days ago', 'status' => 'Revoked'],
-    ],
-]);
+            'apiKeys' => [
+                ['name' => 'Production Webhook Secret', 'token' => 'sk_live_9f83...4a12', 'created' => 'Jul 12, 2026', 'lastUsed' => '2 mins ago', 'status' => 'Active'],
+                ['name' => 'Staging Environment Key', 'token' => 'sk_test_3b11...88ee', 'created' => 'Jun 28, 2026', 'lastUsed' => 'Yesterday', 'status' => 'Active'],
+                ['name' => 'Legacy V1 Mobile Token', 'token' => 'sk_live_1a90...99cc', 'created' => 'Jan 15, 2026', 'lastUsed' => '30 days ago', 'status' => 'Revoked'],
+            ],
+        ];
+    }
+};
 
 ?>
 
@@ -69,7 +76,7 @@ with([
     <x-aura::card>
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
-                <x-aura::kicker>Data Display</x-aura::kicker>
+                <x-aura::kicker>Data</x-aura::kicker>
                 <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
             </div>
             <x-aura::heading level="1" size="xl">Table</x-aura::heading>
@@ -81,7 +88,16 @@ with([
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
-        <x-slot:codeSlot>@verbatim<x-aura::table :headers="$headers" :rows="$rows" />@endverbatim</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::table>
+    <x-slot:header>
+        <x-aura::table.column>Name</x-aura::table.column>
+        <x-aura::table.column align="right">Actions</x-aura::table.column>
+    </x-slot:header>
+    <x-aura::table.row>
+        <x-aura::table.cell>John Doe</x-aura::table.cell>
+        <x-aura::table.cell align="right"><x-aura::button size="xs">View</x-aura::button></x-aura::table.cell>
+    </x-aura::table.row>
+</x-aura::table>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. User Management Directory Table (with Show, Edit, Delete Actions) -->
@@ -93,7 +109,7 @@ with([
                         <x-aura::table.column>Member</x-aura::table.column>
                         <x-aura::table.column>Role & Dept</x-aura::table.column>
                         <x-aura::table.column>Status</x-aura::table.column>
-                        <x-aura::table.column class="text-right">Actions</x-aura::table.column>
+                        <x-aura::table.column align="right">Actions</x-aura::table.column>
                     </x-slot:header>
 
                     @foreach($users as $user)
@@ -120,7 +136,7 @@ with([
                                     <x-aura::badge variant="neutral" size="sm">Offline</x-aura::badge>
                                 @endif
                             </x-aura::table.cell>
-                            <x-aura::table.cell class="text-right">
+                            <x-aura::table.cell align="right">
                                 <div class="flex items-center justify-end gap-1.5">
                                     <x-aura::icon-button icon="show" variant="subtle" size="sm" shape="circle" label="View User" />
                                     <x-aura::icon-button icon="edit" variant="subtle" size="sm" shape="circle" label="Edit User" />
@@ -137,7 +153,7 @@ with([
         <x-aura::table.column>Member</x-aura::table.column>
         <x-aura::table.column>Role</x-aura::table.column>
         <x-aura::table.column>Status</x-aura::table.column>
-        <x-aura::table.column class="text-right">Actions</x-aura::table.column>
+        <x-aura::table.column align="right">Actions</x-aura::table.column>
     </x-slot:header>
 
     <x-aura::table.row>
@@ -152,11 +168,11 @@ with([
         </x-aura::table.cell>
         <x-aura::table.cell>Lead Developer</x-aura::table.cell>
         <x-aura::table.cell><x-aura::badge variant="positive">Active</x-aura::badge></x-aura::table.cell>
-        <x-aura::table.cell class="text-right">
+        <x-aura::table.cell align="right">
             <div class="flex items-center justify-end gap-1.5">
                 <x-aura::icon-button icon="show" variant="subtle" size="sm" shape="circle" />
                 <x-aura::icon-button icon="edit" variant="subtle" size="sm" shape="circle" />
-                <x-aura::icon-button icon="delete" variant="subtle" size="sm" shape="circle"  />
+                <x-aura::icon-button icon="delete" variant="subtle" size="sm" shape="circle" />
             </div>
         </x-aura::table.cell>
     </x-aura::table.row>
@@ -175,16 +191,26 @@ with([
                         <x-aura::table.column>Payment</x-aura::table.column>
                         <x-aura::table.column>Amount</x-aura::table.column>
                         <x-aura::table.column>Status</x-aura::table.column>
-                        <x-aura::table.column class="text-right">Action</x-aura::table.column>
+                        <x-aura::table.column align="right">Action</x-aura::table.column>
                     </x-slot:header>
 
                     @foreach($orders as $order)
                         <x-aura::table.row>
-                            <x-aura::table.cell class="font-mono font-bold text-xs text-indigo-600 dark:text-indigo-400">{{ $order['id'] }}</x-aura::table.cell>
-                            <x-aura::table.cell class="font-semibold text-zinc-900 dark:text-white">{{ $order['customer'] }}</x-aura::table.cell>
-                            <x-aura::table.cell class="text-xs text-zinc-500 dark:text-zinc-400">{{ $order['date'] }}</x-aura::table.cell>
-                            <x-aura::table.cell class="text-xs text-zinc-600 dark:text-zinc-300">{{ $order['payment'] }}</x-aura::table.cell>
-                            <x-aura::table.cell class="font-bold text-zinc-900 dark:text-white">{{ $order['amount'] }}</x-aura::table.cell>
+                            <x-aura::table.cell>
+                                <span class="font-mono font-bold text-xs text-indigo-600 dark:text-indigo-400">{{ $order['id'] }}</span>
+                            </x-aura::table.cell>
+                            <x-aura::table.cell>
+                                <span class="font-semibold text-zinc-900 dark:text-white">{{ $order['customer'] }}</span>
+                            </x-aura::table.cell>
+                            <x-aura::table.cell>
+                                <span class="text-xs text-zinc-500 dark:text-zinc-400">{{ $order['date'] }}</span>
+                            </x-aura::table.cell>
+                            <x-aura::table.cell>
+                                <span class="text-xs text-zinc-600 dark:text-zinc-300">{{ $order['payment'] }}</span>
+                            </x-aura::table.cell>
+                            <x-aura::table.cell>
+                                <span class="font-bold text-zinc-900 dark:text-white">{{ $order['amount'] }}</span>
+                            </x-aura::table.cell>
                             <x-aura::table.cell>
                                 @if ($order['status'] === 'Paid')
                                     <x-aura::badge variant="positive" size="sm">Paid</x-aura::badge>
@@ -194,7 +220,7 @@ with([
                                     <x-aura::badge variant="negative" size="sm">Failed</x-aura::badge>
                                 @endif
                             </x-aura::table.cell>
-                            <x-aura::table.cell class="text-right">
+                            <x-aura::table.cell align="right">
                                 <x-aura::icon-button icon="show" variant="ghost" size="sm" shape="circle" label="View Receipt" />
                             </x-aura::table.cell>
                         </x-aura::table.row>
@@ -211,9 +237,9 @@ with([
     </x-slot:header>
 
     <x-aura::table.row>
-        <x-aura::table.cell class="font-mono">ORD-9482</x-aura::table.cell>
+        <x-aura::table.cell><span class="font-mono">ORD-9482</span></x-aura::table.cell>
         <x-aura::table.cell>TechCorp Inc.</x-aura::table.cell>
-        <x-aura::table.cell class="font-bold">$1,450.00</x-aura::table.cell>
+        <x-aura::table.cell><span class="font-bold">$1,450.00</span></x-aura::table.cell>
         <x-aura::table.cell><x-aura::badge variant="positive">Paid</x-aura::badge></x-aura::table.cell>
     </x-aura::table.row>
 </x-aura::table>@endverbatim</x-slot:codeSlot>
@@ -228,14 +254,18 @@ with([
                         <x-aura::table.column>Task Title</x-aura::table.column>
                         <x-aura::table.column>Project</x-aura::table.column>
                         <x-aura::table.column>Priority</x-aura::table.column>
-                        <x-aura::table.column class="w-48">Completion</x-aura::table.column>
+                        <x-aura::table.column>Completion</x-aura::table.column>
                         <x-aura::table.column>Assignee</x-aura::table.column>
                     </x-slot:header>
 
                     @foreach($tasks as $task)
                         <x-aura::table.row>
-                            <x-aura::table.cell class="font-bold text-zinc-900 dark:text-white">{{ $task['task'] }}</x-aura::table.cell>
-                            <x-aura::table.cell class="text-xs text-zinc-500 dark:text-zinc-400 font-medium">{{ $task['project'] }}</x-aura::table.cell>
+                            <x-aura::table.cell>
+                                <span class="font-bold text-zinc-900 dark:text-white">{{ $task['task'] }}</span>
+                            </x-aura::table.cell>
+                            <x-aura::table.cell>
+                                <span class="text-xs text-zinc-500 dark:text-zinc-400 font-medium">{{ $task['project'] }}</span>
+                            </x-aura::table.cell>
                             <x-aura::table.cell>
                                 @if ($task['priority'] === 'Critical')
                                     <x-aura::badge variant="negative" size="sm">Critical</x-aura::badge>
@@ -246,14 +276,16 @@ with([
                                 @endif
                             </x-aura::table.cell>
                             <x-aura::table.cell>
-                                <div class="space-y-1">
+                                <div class="w-48 space-y-1">
                                     <div class="flex items-center justify-between text-xs font-bold">
                                         <span class="text-zinc-600 dark:text-zinc-400">{{ $task['progress'] }}%</span>
                                     </div>
                                     <x-aura::progress-bar :value="$task['progress']" size="xs" variant="{{ $task['progress'] === 100 ? 'positive' : 'indigo' }}" />
                                 </div>
                             </x-aura::table.cell>
-                            <x-aura::table.cell class="font-semibold text-xs text-zinc-700 dark:text-zinc-300">{{ $task['assignee'] }}</x-aura::table.cell>
+                            <x-aura::table.cell>
+                                <span class="font-semibold text-xs text-zinc-700 dark:text-zinc-300">{{ $task['assignee'] }}</span>
+                            </x-aura::table.cell>
                         </x-aura::table.row>
                     @endforeach
                 </x-aura::table>
@@ -267,10 +299,10 @@ with([
     </x-slot:header>
 
     <x-aura::table.row>
-        <x-aura::table.cell class="font-bold">Design Tokens Audit</x-aura::table.cell>
+        <x-aura::table.cell><span class="font-bold">Design Tokens Audit</span></x-aura::table.cell>
         <x-aura::table.cell><x-aura::badge variant="warning">High</x-aura::badge></x-aura::table.cell>
         <x-aura::table.cell>
-            <x-aura::progress-bar :value="85" size="xs" />
+            <div class="w-48"><x-aura::progress-bar :value="85" size="xs" /></div>
         </x-aura::table.cell>
     </x-aura::table.row>
 </x-aura::table>@endverbatim</x-slot:codeSlot>
@@ -287,17 +319,23 @@ with([
                         <x-aura::table.column>Created Date</x-aura::table.column>
                         <x-aura::table.column>Last Active</x-aura::table.column>
                         <x-aura::table.column>Status</x-aura::table.column>
-                        <x-aura::table.column class="text-right">Actions</x-aura::table.column>
+                        <x-aura::table.column align="right">Actions</x-aura::table.column>
                     </x-slot:header>
 
                     @foreach($apiKeys as $key)
                         <x-aura::table.row>
-                            <x-aura::table.cell class="font-bold text-zinc-900 dark:text-white">{{ $key['name'] }}</x-aura::table.cell>
+                            <x-aura::table.cell>
+                                <span class="font-bold text-zinc-900 dark:text-white">{{ $key['name'] }}</span>
+                            </x-aura::table.cell>
                             <x-aura::table.cell>
                                 <code class="px-2 py-1 rounded bg-zinc-100 dark:bg-zinc-800 text-xs font-mono text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">{{ $key['token'] }}</code>
                             </x-aura::table.cell>
-                            <x-aura::table.cell class="text-xs text-zinc-500 dark:text-zinc-400">{{ $key['created'] }}</x-aura::table.cell>
-                            <x-aura::table.cell class="text-xs text-zinc-500 dark:text-zinc-400">{{ $key['lastUsed'] }}</x-aura::table.cell>
+                            <x-aura::table.cell>
+                                <span class="text-xs text-zinc-500 dark:text-zinc-400">{{ $key['created'] }}</span>
+                            </x-aura::table.cell>
+                            <x-aura::table.cell>
+                                <span class="text-xs text-zinc-500 dark:text-zinc-400">{{ $key['lastUsed'] }}</span>
+                            </x-aura::table.cell>
                             <x-aura::table.cell>
                                 @if ($key['status'] === 'Active')
                                     <x-aura::badge variant="positive" size="sm">Active</x-aura::badge>
@@ -305,7 +343,7 @@ with([
                                     <x-aura::badge variant="negative" size="sm">Revoked</x-aura::badge>
                                 @endif
                             </x-aura::table.cell>
-                            <x-aura::table.cell class="text-right">
+                            <x-aura::table.cell align="right">
                                 <div class="flex items-center justify-end gap-1.5">
                                     <x-aura::icon-button icon="show" variant="subtle" size="sm" shape="circle" label="View Token Details" />
                                     <x-aura::icon-button icon="delete" variant="subtle-danger" size="sm" shape="circle" label="Revoke Key" />
@@ -321,15 +359,15 @@ with([
         <x-aura::table.column>Key Name</x-aura::table.column>
         <x-aura::table.column>Token</x-aura::table.column>
         <x-aura::table.column>Status</x-aura::table.column>
-        <x-aura::table.column class="text-right">Actions</x-aura::table.column>
+        <x-aura::table.column align="right">Actions</x-aura::table.column>
     </x-slot:header>
 
     <x-aura::table.row>
-        <x-aura::table.cell class="font-bold">Production Secret</x-aura::table.cell>
+        <x-aura::table.cell><span class="font-bold">Production Secret</span></x-aura::table.cell>
         <x-aura::table.cell><code class="px-2 py-1 font-mono">sk_live_9f83...</code></x-aura::table.cell>
         <x-aura::table.cell><x-aura::badge variant="positive">Active</x-aura::badge></x-aura::table.cell>
-        <x-aura::table.cell class="text-right">
-            <x-aura::icon-button icon="delete" variant="subtle" size="sm" shape="circle"  />
+        <x-aura::table.cell align="right">
+            <x-aura::icon-button icon="delete" variant="subtle" size="sm" shape="circle" />
         </x-aura::table.cell>
     </x-aura::table.row>
 </x-aura::table>@endverbatim</x-slot:codeSlot>
@@ -342,23 +380,31 @@ with([
                 <x-aura::table>
                     <x-slot:header>
                         <x-aura::table.column>Item Description</x-aura::table.column>
-                        <x-aura::table.column class="text-center">Qty</x-aura::table.column>
-                        <x-aura::table.column class="text-right">Unit Price</x-aura::table.column>
-                        <x-aura::table.column class="text-right">Subtotal</x-aura::table.column>
+                        <x-aura::table.column align="center">Qty</x-aura::table.column>
+                        <x-aura::table.column align="right">Unit Price</x-aura::table.column>
+                        <x-aura::table.column align="right">Subtotal</x-aura::table.column>
                     </x-slot:header>
 
                     <x-aura::table.row>
-                        <x-aura::table.cell class="font-semibold text-zinc-900 dark:text-white">Aura UI Pro License (Unlimited Teams)</x-aura::table.cell>
-                        <x-aura::table.cell class="text-center">1</x-aura::table.cell>
-                        <x-aura::table.cell class="text-right">$299.00</x-aura::table.cell>
-                        <x-aura::table.cell class="text-right font-bold">$299.00</x-aura::table.cell>
+                        <x-aura::table.cell>
+                            <span class="font-semibold text-zinc-900 dark:text-white">Aura UI Pro License (Unlimited Teams)</span>
+                        </x-aura::table.cell>
+                        <x-aura::table.cell align="center">1</x-aura::table.cell>
+                        <x-aura::table.cell align="right">$299.00</x-aura::table.cell>
+                        <x-aura::table.cell align="right">
+                            <span class="font-bold">$299.00</span>
+                        </x-aura::table.cell>
                     </x-aura::table.row>
 
                     <x-aura::table.row>
-                        <x-aura::table.cell class="font-semibold text-zinc-900 dark:text-white">Custom Domain SSL Certificate setup</x-aura::table.cell>
-                        <x-aura::table.cell class="text-center">2</x-aura::table.cell>
-                        <x-aura::table.cell class="text-right">$49.00</x-aura::table.cell>
-                        <x-aura::table.cell class="text-right font-bold">$98.00</x-aura::table.cell>
+                        <x-aura::table.cell>
+                            <span class="font-semibold text-zinc-900 dark:text-white">Custom Domain SSL Certificate setup</span>
+                        </x-aura::table.cell>
+                        <x-aura::table.cell align="center">2</x-aura::table.cell>
+                        <x-aura::table.cell align="right">$49.00</x-aura::table.cell>
+                        <x-aura::table.cell align="right">
+                            <span class="font-bold">$98.00</span>
+                        </x-aura::table.cell>
                     </x-aura::table.row>
 
                     <x-slot:footer>
@@ -373,14 +419,14 @@ with([
         <x-slot:codeSlot>@verbatim<x-aura::table>
     <x-slot:header>
         <x-aura::table.column>Item Description</x-aura::table.column>
-        <x-aura::table.column class="text-center">Qty</x-aura::table.column>
-        <x-aura::table.column class="text-right">Subtotal</x-aura::table.column>
+        <x-aura::table.column align="center">Qty</x-aura::table.column>
+        <x-aura::table.column align="right">Subtotal</x-aura::table.column>
     </x-slot:header>
 
     <x-aura::table.row>
         <x-aura::table.cell>Aura UI Pro License</x-aura::table.cell>
-        <x-aura::table.cell class="text-center">1</x-aura::table.cell>
-        <x-aura::table.cell class="text-right font-bold">$299.00</x-aura::table.cell>
+        <x-aura::table.cell align="center">1</x-aura::table.cell>
+        <x-aura::table.cell align="right"><span class="font-bold">$299.00</span></x-aura::table.cell>
     </x-aura::table.row>
 
     <x-slot:footer>

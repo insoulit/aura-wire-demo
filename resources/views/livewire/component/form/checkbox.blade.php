@@ -1,11 +1,15 @@
 <?php
 
-use function Livewire\Volt\{layout, title, state};
+use Livewire\Volt\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-layout('livewire.layout.component');
-title('Checkbox - Aura Wire');
-
-state(['remember' => true]);
+new 
+#[Layout('livewire.layout.component')] 
+#[Title('Checkbox - Aura Wire')] 
+class extends Component {
+    public bool $remember = true;
+};
 
 ?>
 

@@ -1,27 +1,27 @@
 <?php
 
 use Livewire\Volt\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-new class extends Component {
+new 
+#[Layout('livewire.layout.component')] 
+#[Title('Stepper - Aura Wire')] 
+class extends Component {
     public int $currentStep = 2;
 
-    public function nextStep()
+    public function nextStep(): void
     {
         if ($this->currentStep < 4) {
             $this->currentStep++;
         }
     }
 
-    public function previousStep()
+    public function previousStep(): void
     {
         if ($this->currentStep > 1) {
             $this->currentStep--;
         }
-    }
-
-    public function rendering($view)
-    {
-        $view->layout('livewire.layout.component')->title('Stepper - Aura Wire');
     }
 };
 

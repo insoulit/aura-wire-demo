@@ -1,9 +1,13 @@
 <?php
 
-use function Livewire\Volt\{layout, title};
+use Livewire\Volt\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-layout('livewire.layout.component');
-title('Tag - Aura Wire');
+new 
+#[Layout('livewire.layout.component')] 
+#[Title('Tag - Aura Wire')] 
+class extends Component {};
 
 ?>
 
@@ -63,23 +67,23 @@ title('Tag - Aura Wire');
     <x-aura::code  title="3. Removable Active Filter Tags">
         <x-slot:preview>
             <div class="flex flex-wrap gap-2.5 items-center">
-                <x-aura::tag variant="default" class="gap-1.5 pr-2">
+                <x-aura::tag variant="default">
                     <span>Category: Design</span>
                     <button type="button" class="hover:bg-zinc-200 dark:hover:bg-zinc-700 rounded-full p-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
                 </x-aura::tag>
 
-                <x-aura::tag variant="primary" class="gap-1.5 pr-2">
+                <x-aura::tag variant="primary">
                     <span>Framework: Laravel</span>
                     <button type="button" class="hover:bg-zinc-700 dark:hover:bg-zinc-200 rounded-full p-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
                 </x-aura::tag>
 
-                <x-aura::tag variant="success" class="gap-1.5 pr-2">
+                <x-aura::tag variant="success">
                     <span>Status: Published</span>
                     <button type="button" class="hover:bg-emerald-200 dark:hover:bg-emerald-900 rounded-full p-0.5"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
                 </x-aura::tag>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::tag variant="primary" class="gap-1.5 pr-2">
+        <x-slot:codeSlot>@verbatim<x-aura::tag variant="primary">
     <span>Framework: Laravel</span>
     <button type="button" class="hover:bg-zinc-700 rounded-full p-0.5">
         <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>

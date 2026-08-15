@@ -1,9 +1,13 @@
 <?php
 
-use function Livewire\Volt\{layout, title};
+use Livewire\Volt\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-layout('livewire.layout.component');
-title('Component Directory - Aura Wire');
+new 
+#[Layout('livewire.layout.component')] 
+#[Title('Component Directory - Aura Wire')] 
+class extends Component {};
 
 ?>
 

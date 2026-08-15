@@ -1,11 +1,15 @@
 <?php
 
-use function Livewire\Volt\{layout, title, state};
+use Livewire\Volt\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-layout('livewire.layout.component');
-title('Radio - Aura Wire');
-
-state(['plan' => 'pro']);
+new 
+#[Layout('livewire.layout.component')] 
+#[Title('Radio - Aura Wire')] 
+class extends Component {
+    public string $plan = 'pro';
+};
 
 ?>
 

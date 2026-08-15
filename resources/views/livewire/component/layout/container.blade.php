@@ -1,9 +1,13 @@
 <?php
 
-use function Livewire\Volt\{layout, title};
+use Livewire\Volt\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-layout('livewire.layout.component');
-title('Container - Aura Wire');
+new 
+#[Layout('livewire.layout.component')] 
+#[Title('Container - Aura Wire')] 
+class extends Component {};
 
 ?>
 
@@ -24,15 +28,19 @@ title('Container - Aura Wire');
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
-        <x-slot:codeSlot>@verbatim<x-aura::container size="7xl" class="py-8">Page content</x-aura::container>@endverbatim</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::container size="7xl">
+    <!-- Page content -->
+</x-aura::container>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 1. Default Container (7xl) -->
     <x-aura::code  title="1. Default Container (size='7xl')">
         <x-slot:preview>
             <div class="w-full border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-100 dark:bg-zinc-950 p-4">
-                <x-aura::container size="sm" class="bg-white dark:bg-zinc-900 rounded-lg p-4 border border-zinc-200 dark:border-zinc-800 text-center">
-                    <x-aura::text size="sm" >Container Content (sm size)</x-aura::text>
+                <x-aura::container size="sm">
+                    <div class="bg-white dark:bg-zinc-900 rounded-lg p-4 border border-zinc-200 dark:border-zinc-800 text-center">
+                        <x-aura::text size="sm">Container Content (sm size)</x-aura::text>
+                    </div>
                 </x-aura::container>
             </div>
         </x-slot:preview>
@@ -45,15 +53,24 @@ title('Container - Aura Wire');
     <x-aura::code  title="2. Custom Container Sizes (sm to 7xl)">
         <x-slot:preview>
             <div class="space-y-4 w-full">
-                <x-aura::container size="md" class="bg-zinc-100 dark:bg-zinc-900 rounded-lg p-3 border border-zinc-200 dark:border-zinc-800 text-center">
-                    <x-aura::text size="xs">size="md" (max-w-md)</x-aura::text>
+                <x-aura::container size="md">
+                    <div class="bg-zinc-100 dark:bg-zinc-900 rounded-lg p-3 border border-zinc-200 dark:border-zinc-800 text-center">
+                        <x-aura::text size="xs">size="md" (max-w-md)</x-aura::text>
+                    </div>
                 </x-aura::container>
-                <x-aura::container size="xl" class="bg-zinc-100 dark:bg-zinc-900 rounded-lg p-3 border border-zinc-200 dark:border-zinc-800 text-center">
-                    <x-aura::text size="xs">size="xl" (max-w-xl)</x-aura::text>
+                <x-aura::container size="xl">
+                    <div class="bg-zinc-100 dark:bg-zinc-900 rounded-lg p-3 border border-zinc-200 dark:border-zinc-800 text-center">
+                        <x-aura::text size="xs">size="xl" (max-w-xl)</x-aura::text>
+                    </div>
                 </x-aura::container>
             </div>
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::container size="md"> ... </x-aura::container>
-<x-aura::container size="xl"> ... </x-aura::container>@endverbatim</x-slot:codeSlot>
+        <x-slot:codeSlot>@verbatim<x-aura::container size="md">
+    <div>Medium container content</div>
+</x-aura::container>
+
+<x-aura::container size="xl">
+    <div>Extra large container content</div>
+</x-aura::container>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>

@@ -154,9 +154,9 @@ class extends Component {};
                 <div class="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800">
                     <div class="flex items-center gap-2 text-sm">
                         <x-aura::link href="#" variant="subtle" size="sm">Home</x-aura::link>
-                        <x-aura::icon name="chevron-right" size="xs" class="text-zinc-400" />
+                        <span class="text-zinc-400"><x-aura::icon name="chevron-right" size="xs" /></span>
                         <x-aura::link href="#" variant="subtle" size="sm">Components</x-aura::link>
-                        <x-aura::icon name="chevron-right" size="xs" class="text-zinc-400" />
+                        <span class="text-zinc-400"><x-aura::icon name="chevron-right" size="xs" /></span>
                         <x-aura::text size="sm" weight="semibold">Link</x-aura::text>
                     </div>
                 </div>

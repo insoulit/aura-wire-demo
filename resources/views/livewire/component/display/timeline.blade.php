@@ -1,13 +1,13 @@
 <?php
 
 use Livewire\Volt\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-new class extends Component {
-    public function rendering($view)
-    {
-        $view->layout('livewire.layout.component')->title('Timeline - Aura Wire');
-    }
-};
+new 
+#[Layout('livewire.layout.component')] 
+#[Title('Timeline - Aura Wire')] 
+class extends Component {};
 
 ?>
 
@@ -16,7 +16,7 @@ new class extends Component {
     <x-aura::card>
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
-                <x-aura::kicker>Display</x-aura::kicker>
+                <x-aura::kicker>Data</x-aura::kicker>
                 <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
             </div>
             <x-aura::heading level="1" size="xl">Timeline</x-aura::heading>

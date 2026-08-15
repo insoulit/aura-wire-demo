@@ -1,14 +1,16 @@
 <?php
 
-use function Livewire\Volt\{layout, title, state};
+use Livewire\Volt\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-layout('livewire.layout.component');
-title('Rich Text - Aura Wire');
-
-state([
-    'content' => '<h3>Welcome to Aura Wire Rich Text</h3><p>This is a <strong>rich text editor</strong> built directly into the component package. It supports <em>formatting</em>, lists, headings, blockquotes, and links with <code>wire:model</code> reactivity!</p><ul><li>Zero external dependencies</li><li>Full dark mode support</li><li>Seamless Livewire &amp; Alpine.js integration</li></ul>',
-    'compactContent' => '<p>Quick feedback or comment here...</p>',
-]);
+new 
+#[Layout('livewire.layout.component')] 
+#[Title('Rich Text - Aura Wire')] 
+class extends Component {
+    public string $content = '<h3>Welcome to Aura Wire Rich Text</h3><p>This is a <strong>rich text editor</strong> built directly into the component package. It supports <em>formatting</em>, lists, headings, blockquotes, and links with <code>wire:model</code> reactivity!</p><ul><li>Zero external dependencies</li><li>Full dark mode support</li><li>Seamless Livewire &amp; Alpine.js integration</li></ul>';
+    public string $compactContent = '<p>Quick feedback or comment here...</p>';
+};
 
 ?>
 

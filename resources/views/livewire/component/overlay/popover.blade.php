@@ -1,13 +1,13 @@
 <?php
 
 use Livewire\Volt\Component;
+use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 
-new class extends Component {
-    public function rendering($view)
-    {
-        $view->layout('livewire.layout.component')->title('Popover - Aura Wire');
-    }
-};
+new 
+#[Layout('livewire.layout.component')] 
+#[Title('Popover - Aura Wire')] 
+class extends Component {};
 
 ?>
 
@@ -16,7 +16,7 @@ new class extends Component {
     <x-aura::card>
         <div class="space-y-2 max-w-2xl">
             <div class="flex items-center gap-2.5">
-                <x-aura::kicker>Overlay</x-aura::kicker>
+                <x-aura::kicker>Feedback</x-aura::kicker>
                 <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
             </div>
             <x-aura::heading level="1" size="xl">Popover</x-aura::heading>
@@ -89,15 +89,21 @@ new class extends Component {
 
                     <div class="space-y-2">
                         <h4 class="text-xs font-bold text-zinc-900 dark:text-white uppercase tracking-wider border-b border-zinc-100 dark:border-zinc-800 pb-2">Select Export Format</h4>
-                        <x-aura::button variant="secondary" size="xs" class="w-full justify-start" icon="file-spreadsheet">
-                            Export as CSV (.csv)
-                        </x-aura::button>
-                        <x-aura::button variant="secondary" size="xs" class="w-full justify-start" icon="file-text">
-                            Export as PDF (.pdf)
-                        </x-aura::button>
-                        <x-aura::button variant="secondary" size="xs" class="w-full justify-start" icon="code">
-                            Export as JSON (.json)
-                        </x-aura::button>
+                        <div class="w-full text-left">
+                            <x-aura::button variant="secondary" size="xs" :block="true" icon="file-spreadsheet">
+                                Export as CSV (.csv)
+                            </x-aura::button>
+                        </div>
+                        <div class="w-full text-left">
+                            <x-aura::button variant="secondary" size="xs" :block="true" icon="file-text">
+                                Export as PDF (.pdf)
+                            </x-aura::button>
+                        </div>
+                        <div class="w-full text-left">
+                            <x-aura::button variant="secondary" size="xs" :block="true" icon="code">
+                                Export as JSON (.json)
+                            </x-aura::button>
+                        </div>
                     </div>
                 </x-aura::popover>
             </div>
@@ -131,7 +137,7 @@ new class extends Component {
             <x-aura::button variant="primary" size="sm">Export Data</x-aura::button>
         </x-slot:trigger>
         <div class="space-y-2">
-            <x-aura::button variant="secondary" size="xs" class="w-full">Export CSV</x-aura::button>
+            <x-aura::button variant="secondary" size="xs" :block="true">Export CSV</x-aura::button>
         </div>
     </x-aura::popover>
 </div>@endverbatim</x-slot:codeSlot>
@@ -216,9 +222,13 @@ new class extends Component {
                             <p><strong>Role:</strong> Senior UX Architect</p>
                             <p><strong>Location:</strong> San Francisco, CA</p>
                         </div>
-                        <div class="pt-1 flex gap-2">
-                            <x-aura::button variant="primary" size="xs" class="w-full">View Full Profile</x-aura::button>
-                            <x-aura::button variant="secondary" size="xs" class="w-full">Message</x-aura::button>
+                        <div class="pt-1 flex gap-2 w-full">
+                            <div class="w-1/2">
+                                <x-aura::button variant="primary" size="xs" :block="true">View Full Profile</x-aura::button>
+                            </div>
+                            <div class="w-1/2">
+                                <x-aura::button variant="secondary" size="xs" :block="true">Message</x-aura::button>
+                            </div>
                         </div>
                     </div>
                 </x-aura::popover>
@@ -233,7 +243,7 @@ new class extends Component {
     </x-slot:trigger>
     <div class="space-y-4">
         <!-- Profile Header & Info -->
-        <x-aura::button variant="primary" size="xs" class="w-full">View Full Profile</x-aura::button>
+        <x-aura::button variant="primary" size="xs" :block="true">View Full Profile</x-aura::button>
     </div>
 </x-aura::popover>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
