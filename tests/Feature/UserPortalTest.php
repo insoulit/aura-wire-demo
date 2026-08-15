@@ -4,7 +4,8 @@ it('renders user workspace dashboard on /user', function () {
     $response = $this->get('/user');
 
     $response->assertStatus(200)
-        ->assertSee('Welcome back', false);
+        ->assertSee('Alex Kovacs', false)
+        ->assertSee('Profile Info', false);
 });
 
 it('redirects legacy /dashboard to /user', function () {
