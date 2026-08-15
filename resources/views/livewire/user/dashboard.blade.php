@@ -13,31 +13,29 @@ class extends Component {};
 
 <div class="max-w-5xl mx-auto space-y-8 pb-16">
 
-    <!-- 1. Hero Banner Card (Compact Top Cockpit) -->
+    <!-- 1. Hero Banner Card -->
     <x-aura::card>
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-5">
-            <div class="flex items-center gap-4 min-w-0">
-                <div class="relative shrink-0">
-                    <x-aura::avatar 
-                        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=160&auto=format&fit=crop&q=80" 
-                        initials="AK" 
-                        size="md" 
-                        status="online" 
-                    />
+        <div class="flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-6">
+            <div class="relative shrink-0">
+                <x-aura::avatar 
+                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=160&auto=format&fit=crop&q=80" 
+                    initials="AK" 
+                    size="lg" 
+                    status="online" 
+                />
+            </div>
+            <div class="space-y-1 min-w-0">
+                <div class="flex flex-wrap items-center gap-2">
+                    <x-aura::badge variant="neutral" size="sm">👋 Welcome Back</x-aura::badge>
+                    <x-aura::badge variant="subtle" size="sm">User Account</x-aura::badge>
+                    <x-aura::badge variant="positive" size="sm">Active</x-aura::badge>
                 </div>
-                <div class="space-y-1 min-w-0">
-                    <div class="flex flex-wrap items-center gap-2">
-                        <x-aura::badge variant="neutral" size="sm">👋 Welcome Back</x-aura::badge>
-                        <x-aura::badge variant="subtle" size="sm">User Account</x-aura::badge>
-                        <x-aura::badge variant="positive" size="sm">Active</x-aura::badge>
-                    </div>
-                    <x-aura::heading level="1" size="lg">
-                        Welcome back, Alex Kovacs
-                    </x-aura::heading>
-                    <x-aura::text variant="subtle" size="sm">
-                        Select a dedicated user module card below to update your account profile, manage security settings, or explore system portals.
-                    </x-aura::text>
-                </div>
+                <x-aura::heading level="1" size="lg">
+                    Welcome back, Alex Kovacs
+                </x-aura::heading>
+                <x-aura::text variant="subtle" size="sm">
+                    Select a dedicated user module card below to update your account profile, manage security settings, or explore system portals.
+                </x-aura::text>
             </div>
         </div>
     </x-aura::card>
