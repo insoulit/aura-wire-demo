@@ -81,7 +81,7 @@ class extends Component {};
                                 <x-slot name="icon">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
                                 </x-slot>
-                                Add to Cart
+                                <span>Add</span>
                             </x-aura::button>
                         </div>
                     </div>
@@ -105,7 +105,7 @@ class extends Component {};
         &lt;!-- Price &amp; Action CTA --&gt;
         &lt;div class="pt-2 flex items-center justify-between"&gt;
             &lt;span class="text-2xl font-black font-mono"&gt;$299.00&lt;/span&gt;
-            &lt;x-aura::button variant="primary" size="md"&gt;Add to Cart&lt;/x-aura::button&gt;
+            &lt;x-aura::button variant="primary" size="md"&gt;Add&lt;/x-aura::button&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/x-aura::card&gt;</x-slot>
@@ -126,7 +126,7 @@ class extends Component {};
                     </div>
                     <div class="flex items-center justify-between pt-2 border-t border-zinc-100 dark:border-zinc-800">
                         <span class="text-xl font-bold font-mono text-zinc-900 dark:text-white">$649.00</span>
-                        <x-aura::button variant="secondary" size="sm">View Details</x-aura::button>
+                        <x-aura::button variant="secondary" size="sm"><span>View</span></x-aura::button>
                     </div>
                 </x-aura::card>
 
@@ -141,7 +141,7 @@ class extends Component {};
                     </div>
                     <div class="flex items-center justify-between pt-2 border-t border-zinc-100 dark:border-zinc-800">
                         <span class="text-xl font-bold font-mono text-zinc-900 dark:text-white">$389.00</span>
-                        <x-aura::button variant="primary" size="sm">Buy Now</x-aura::button>
+                        <x-aura::button variant="primary" size="sm"><span>Buy</span></x-aura::button>
                     </div>
                 </x-aura::card>
             </div>

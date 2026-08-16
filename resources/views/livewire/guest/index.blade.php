@@ -13,41 +13,42 @@ class extends Component {};
 
 <div class="w-full max-w-6xl space-y-16 py-2">
 
-    <!-- Hero Header Section (Full Height with Mouse Scroll Down Icon) -->
-    <section class="min-h-[calc(100vh-10rem)] flex flex-col justify-between items-center py-4 text-center max-w-4xl mx-auto w-full">
-        <!-- Top Empty Spacer for Vertical Centering -->
-        <div></div>
-
+    <!-- Hero Header Section (Vertically Centered with Mouse Scroll Down Icon) -->
+    <section class="min-h-[calc(100vh-8rem)] flex flex-col justify-center items-center py-6 text-center max-w-4xl mx-auto w-full space-y-8">
+        
         <!-- Hero Main Content -->
         <div class="space-y-6 max-w-3xl mx-auto flex flex-col items-center">
-            <x-aura::kicker>Guest Portal &amp; Showcase</x-aura::kicker>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200/80 dark:border-zinc-700/60 shadow-2xs">
+                <x-aura::badge variant="neutral" size="sm">Showcase</x-aura::badge>
+                <x-aura::text size="xs" variant="subtle" weight="medium">Blocks &amp; Templates</x-aura::text>
+            </div>
 
-            <x-aura::heading level="1" size="display-sm" >
+            <x-aura::heading level="1" size="display-md">
                 Ready to Use <br class="hidden sm:block" />
                 Blocks &amp; Templates
             </x-aura::heading>
 
-            <x-aura::subheading >
+            <x-aura::subheading size="lg">
                 Copy-paste composite design blocks with live previews, or explore complete end-to-end full page application templates.
             </x-aura::subheading>
 
             <!-- Quick Jump Section Buttons -->
             <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
-                <x-aura::button variant="primary" size="md" href="#design-block" icon-trailing="arrow-right">
-                    1. Design Block (5) &darr;
+                <x-aura::button variant="primary" size="lg" href="#design-block" icon="layers">
+                    <span>Blocks</span>
                 </x-aura::button>
-                <x-aura::button variant="secondary" size="md" href="#full-template" icon-trailing="arrow-right">
-                    2. Full Template (5) &darr;
+                <x-aura::button variant="secondary" size="lg" href="#full-template" icon="globe">
+                    <span>Templates</span>
                 </x-aura::button>
             </div>
         </div>
 
         <!-- Mouse Scroll Down Icon Indicator -->
-        <a href="#design-block" class="flex flex-col items-center gap-2 animate-bounce cursor-pointer group pt-6">
-            <div class="w-6 h-10 rounded-full border-2 border-zinc-400 dark:border-zinc-600 flex justify-center p-1.5 group-hover:border-zinc-900 dark:group-hover:border-white transition-colors shadow-2xs">
-                <div class="w-1.5 h-2.5 bg-zinc-400 dark:bg-zinc-600 rounded-full group-hover:bg-zinc-900 dark:group-hover:bg-white transition-colors"></div>
+        <a href="#design-block" class="pt-6 flex flex-col items-center gap-2 text-zinc-400 hover:text-zinc-900 dark:text-zinc-500 dark:hover:text-white transition-colors cursor-pointer group select-none">
+            <div class="w-6 h-10 rounded-full border-2 border-zinc-300 dark:border-zinc-700 flex justify-center p-1.5 group-hover:border-zinc-900 dark:group-hover:border-white transition-colors shadow-2xs">
+                <div class="w-1.5 h-2.5 bg-zinc-400 dark:bg-zinc-500 rounded-full group-hover:bg-zinc-900 dark:group-hover:bg-white transition-all animate-bounce"></div>
             </div>
-            <x-aura::text size="xs" variant="subtle" >
+            <x-aura::text size="xs" variant="subtle">
                 Scroll Down
             </x-aura::text>
         </a>
@@ -94,7 +95,7 @@ class extends Component {};
 
                     <div>
                         <x-aura::button variant="primary" size="md" href="/guest/block/product-card"  icon-trailing="arrow-right">
-                            Explore Block
+                            <span>Explore</span>
                         </x-aura::button>
                     </div>
                 </div>
@@ -123,7 +124,7 @@ class extends Component {};
 
                     <div>
                         <x-aura::button variant="primary" size="md" href="/guest/block/pricing"  icon-trailing="arrow-right">
-                            Explore Block
+                            <span>Explore</span>
                         </x-aura::button>
                     </div>
                 </div>
@@ -152,7 +153,7 @@ class extends Component {};
 
                     <div>
                         <x-aura::button variant="primary" size="md" href="/guest/block/dashboard"  icon-trailing="arrow-right">
-                            Explore Block
+                            <span>Explore</span>
                         </x-aura::button>
                     </div>
                 </div>
@@ -181,7 +182,7 @@ class extends Component {};
 
                     <div>
                         <x-aura::button variant="primary" size="md" href="/guest/block/auth"  icon-trailing="arrow-right">
-                            Explore Block
+                            <span>Explore</span>
                         </x-aura::button>
                     </div>
                 </div>
@@ -210,7 +211,7 @@ class extends Component {};
 
                     <div>
                         <x-aura::button variant="primary" size="md" href="/guest/block/profile"  icon-trailing="arrow-right">
-                            Explore Block
+                            <span>Explore</span>
                         </x-aura::button>
                     </div>
                 </div>
@@ -239,7 +240,7 @@ class extends Component {};
 
                     <div>
                         <x-aura::button variant="primary" size="md" href="/guest/block/hero"  icon-trailing="arrow-right">
-                            Explore Block
+                            <span>Explore</span>
                         </x-aura::button>
                     </div>
                 </div>
@@ -268,7 +269,7 @@ class extends Component {};
 
                     <div>
                         <x-aura::button variant="primary" size="md" href="/guest/block/feature"  icon-trailing="arrow-right">
-                            Explore Block
+                            <span>Explore</span>
                         </x-aura::button>
                     </div>
                 </div>
@@ -297,7 +298,7 @@ class extends Component {};
 
                     <div>
                         <x-aura::button variant="primary" size="md" href="/guest/block/cta"  icon-trailing="arrow-right">
-                            Explore Block
+                            <span>Explore</span>
                         </x-aura::button>
                     </div>
                 </div>
@@ -326,7 +327,7 @@ class extends Component {};
 
                     <div>
                         <x-aura::button variant="primary" size="md" href="/guest/block/testimonial"  icon-trailing="arrow-right">
-                            Explore Block
+                            <span>Explore</span>
                         </x-aura::button>
                     </div>
                 </div>
@@ -355,7 +356,7 @@ class extends Component {};
 
                     <div>
                         <x-aura::button variant="primary" size="md" href="/guest/block/modal"  icon-trailing="arrow-right">
-                            Explore Block
+                            <span>Explore</span>
                         </x-aura::button>
                     </div>
                 </div>
@@ -384,7 +385,7 @@ class extends Component {};
 
                     <div>
                         <x-aura::button variant="primary" size="md" href="/guest/block/slide-over"  icon-trailing="arrow-right">
-                            Explore Block
+                            <span>Explore</span>
                         </x-aura::button>
                     </div>
                 </div>
@@ -413,7 +414,7 @@ class extends Component {};
 
                     <div>
                         <x-aura::button variant="primary" size="md" href="/guest/block/timeline"  icon-trailing="arrow-right">
-                            Explore Block
+                            <span>Explore</span>
                         </x-aura::button>
                     </div>
                 </div>
@@ -442,7 +443,7 @@ class extends Component {};
 
                     <div>
                         <x-aura::button variant="primary" size="md" href="/guest/block/empty-state"  icon-trailing="arrow-right">
-                            Explore Block
+                            <span>Explore</span>
                         </x-aura::button>
                     </div>
                 </div>
@@ -471,7 +472,7 @@ class extends Component {};
 
                     <div>
                         <x-aura::button variant="primary" size="md" href="/guest/block/faq"  icon-trailing="arrow-right">
-                            Explore Block
+                            <span>Explore</span>
                         </x-aura::button>
                     </div>
                 </div>
@@ -500,7 +501,7 @@ class extends Component {};
 
                     <div>
                         <x-aura::button variant="primary" size="md" href="/guest/block/navigation"  icon-trailing="arrow-right">
-                            Explore Block
+                            <span>Explore</span>
                         </x-aura::button>
                     </div>
                 </div>
@@ -549,7 +550,7 @@ class extends Component {};
 
                     <div>
                         <x-aura::button variant="primary" size="md" href="/guest/template/ecommerce"  icon-trailing="arrow-right">
-                            View Template
+                            <span>Explore</span>
                         </x-aura::button>
                     </div>
                 </div>
@@ -577,7 +578,7 @@ class extends Component {};
 
                     <div>
                         <x-aura::button variant="primary" size="md" href="/guest/template/portfolio"  icon-trailing="arrow-right">
-                            View Template
+                            <span>Explore</span>
                         </x-aura::button>
                     </div>
                 </div>
@@ -605,7 +606,7 @@ class extends Component {};
 
                     <div>
                         <x-aura::button variant="primary" size="md" href="/guest/template/restaurant"  icon-trailing="arrow-right">
-                            View Template
+                            <span>Explore</span>
                         </x-aura::button>
                     </div>
                 </div>
@@ -633,7 +634,7 @@ class extends Component {};
 
                     <div>
                         <x-aura::button variant="primary" size="md" href="/guest/template/saas"  icon-trailing="arrow-right">
-                            View Template
+                            <span>Explore</span>
                         </x-aura::button>
                     </div>
                 </div>
@@ -661,7 +662,7 @@ class extends Component {};
 
                     <div>
                         <x-aura::button variant="primary" size="md" href="/guest/template/agency"  icon-trailing="arrow-right">
-                            View Template
+                            <span>Explore</span>
                         </x-aura::button>
                     </div>
                 </div>

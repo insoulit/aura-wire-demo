@@ -59,7 +59,7 @@ class extends Component {};
                         </ul>
                     </div>
                     <div class="pt-3">
-                        <x-aura::button variant="outline" size="md" >Get Started</x-aura::button>
+                        <x-aura::button variant="outline" size="md" ><span>Start</span></x-aura::button>
                     </div>
                 </x-aura::card>
 
@@ -99,7 +99,7 @@ class extends Component {};
                         </ul>
                     </div>
                     <div class="pt-3">
-                        <x-aura::button variant="primary" size="md" >Upgrade to Pro</x-aura::button>
+                        <x-aura::button variant="primary" size="md" ><span>Upgrade</span></x-aura::button>
                     </div>
                 </x-aura::card>
 
@@ -132,7 +132,7 @@ class extends Component {};
                         </ul>
                     </div>
                     <div class="pt-3">
-                        <x-aura::button variant="secondary" size="md" >Contact Sales</x-aura::button>
+                        <x-aura::button variant="secondary" size="md" ><span>Contact</span></x-aura::button>
                     </div>
                 </x-aura::card>
             </div>

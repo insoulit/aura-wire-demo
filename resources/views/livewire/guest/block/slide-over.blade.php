@@ -36,10 +36,10 @@ class extends Component {};
                 </div>
                 <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
                     <x-aura::button variant="primary" size="md" x-data x-on:click="$dispatch('open-sheet', 'right-drawer-demo')">
-                        Open Right Slide Over
+                        <span>Filters</span>
                     </x-aura::button>
                     <x-aura::button variant="subtle" size="md" x-data x-on:click="$dispatch('open-sheet', 'left-drawer-demo')">
-                        Open Left Slide Over
+                        <span>Menu</span>
                     </x-aura::button>
                 </div>
 
@@ -59,8 +59,8 @@ class extends Component {};
                         </x-aura::field>
                     </div>
                     <x-slot:footer>
-                        <x-aura::button variant="subtle" size="sm" x-on:click="open = false">Cancel</x-aura::button>
-                        <x-aura::button variant="primary" size="md">Apply Filters</x-aura::button>
+                        <x-aura::button variant="subtle" size="sm" x-on:click="open = false"><span>Cancel</span></x-aura::button>
+                        <x-aura::button variant="primary" size="md"><span>Apply</span></x-aura::button>
                     </x-slot:footer>
                 </x-aura::sheet>
 
@@ -69,11 +69,11 @@ class extends Component {};
                     <div class="space-y-3 py-2 text-left">
                         <x-aura::button variant="subtle" size="sm"  href="/guest#design-block">
                             <x-aura::icon name="home"  size="xs" />
-                            <span>Guest Home</span>
+                            <span>Home</span>
                         </x-aura::button>
                         <x-aura::button variant="subtle" size="sm"  href="/guest/block/feature">
                             <x-aura::icon name="layout"  size="xs" />
-                            <span>Feature Grid</span>
+                            <span>Features</span>
                         </x-aura::button>
                     </div>
                 </x-aura::sheet>

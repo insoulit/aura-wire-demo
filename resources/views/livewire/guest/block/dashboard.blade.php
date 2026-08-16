@@ -74,8 +74,8 @@ class extends Component {};
                         </div>
                     </div>
                     <x-slot name="footer">
-                        <x-aura::button variant="subtle" size="sm">System Logs</x-aura::button>
-                        <x-aura::button variant="primary" size="sm">Scale Node</x-aura::button>
+                        <x-aura::button variant="subtle" size="sm"><span>Logs</span></x-aura::button>
+                        <x-aura::button variant="primary" size="sm"><span>Scale</span></x-aura::button>
                     </x-slot>
                 </x-aura::card>
             </div>

@@ -52,8 +52,8 @@ class extends Component {};
                         <div class="hidden xl:block w-36 shrink-0">
                             <x-aura::input placeholder="Search..." icon="search" size="sm" />
                         </div>
-                        <x-aura::button variant="subtle" size="sm" >Sign In</x-aura::button>
-                        <x-aura::button variant="primary" size="sm" >Get Started</x-aura::button>
+                        <x-aura::button variant="subtle" size="sm" ><span>Login</span></x-aura::button>
+                        <x-aura::button variant="primary" size="sm" ><span>Start</span></x-aura::button>
                         <x-aura::icon-button icon="menu" variant="ghost" size="sm"  label="Toggle navigation menu" />
                     </div>
                 </div>

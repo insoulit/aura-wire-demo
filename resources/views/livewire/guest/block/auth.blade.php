@@ -58,7 +58,7 @@ class extends Component {};
                         </div>
 
                         <x-aura::button variant="primary" size="md" >
-                            Sign In to Account
+                            <span>Login</span>
                         </x-aura::button>
                     </form>
                 </x-aura::card>

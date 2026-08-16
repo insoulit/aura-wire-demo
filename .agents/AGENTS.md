@@ -1,5 +1,6 @@
 # Workspace Rules
 
+- **Button Labeling**: Always try to keep button labels to a single word (e.g. `Create`, `Save`, `Back`, `Cancel`, `Blocks`, `Templates`, `Delete`, `Export`). If not possible, keep it short in two words. Always prefer a single word.
 - **Create Button Labeling**: Create buttons must always be named with the single word `Create` (e.g. `<span>Create</span>`). Never append the model or entity name at the end.
 - **Volt Component Attribute Formatting**: Always declare Volt component class attributes (`#[Layout(...)]`, `#[Title(...)]`) on separate lines before `class extends Component {`:
   ```php

@@ -39,8 +39,8 @@ class extends Component {};
                                 <h4 class="text-sm font-bold text-zinc-900 dark:text-white">Alex Morgan</h4>
                                 <p class="text-xs text-zinc-500">Lead Systems Architect • PNG, JPG up to 5MB</p>
                                 <div class="flex items-center gap-2 pt-1">
-                                    <x-aura::button variant="outline" size="xs">Change Photo</x-aura::button>
-                                    <x-aura::button variant="ghost" size="xs">Remove</x-aura::button>
+                                    <x-aura::button variant="outline" size="xs"><span>Change</span></x-aura::button>
+                                    <x-aura::button variant="ghost" size="xs"><span>Remove</span></x-aura::button>
                                 </div>
                             </div>
                         </div>
@@ -65,8 +65,8 @@ class extends Component {};
                     </div>
 
                     <x-slot name="footer">
-                        <x-aura::button variant="ghost" size="sm">Cancel</x-aura::button>
-                        <x-aura::button variant="primary" size="sm">Save Profile</x-aura::button>
+                        <x-aura::button variant="ghost" size="sm"><span>Cancel</span></x-aura::button>
+                        <x-aura::button variant="primary" size="sm"><span>Save</span></x-aura::button>
                     </x-slot>
                 </x-aura::card>
             </div>

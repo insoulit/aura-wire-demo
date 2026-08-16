@@ -38,8 +38,8 @@ class extends Component {};
                     Production-ready, ultra-accessible Blade &amp; Livewire components crafted for modern Laravel applications.
                 </x-aura::subheading>
                 <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 pt-2 w-full sm:w-auto max-w-xs sm:max-w-none">
-                    <x-aura::button variant="primary" size="md" >Get Started Free</x-aura::button>
-                    <x-aura::button variant="outline" size="md" >Explore Components</x-aura::button>
+                    <x-aura::button variant="primary" size="md" ><span>Start</span></x-aura::button>
+                    <x-aura::button variant="outline" size="md" ><span>Components</span></x-aura::button>
                 </div>
             </div>
         </x-slot:preview>

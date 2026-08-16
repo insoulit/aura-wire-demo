@@ -44,8 +44,8 @@ class extends Component {};
                         </div>
                     </div>
                     <div class="flex items-center gap-3 shrink-0 w-full sm:w-auto">
-                        <x-aura::button variant="subtle" size="md" >Learn More</x-aura::button>
-                        <x-aura::button variant="primary" size="md" >Get Started</x-aura::button>
+                        <x-aura::button variant="subtle" size="md" ><span>Explore</span></x-aura::button>
+                        <x-aura::button variant="primary" size="md" ><span>Start</span></x-aura::button>
                     </div>
                 </div>
             </x-aura::card>

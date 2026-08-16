@@ -37,12 +37,12 @@ class extends Component {};
                 <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
                     <!-- Form Modal Trigger -->
                     <x-aura::button variant="primary" size="md" x-data x-on:click="$dispatch('open-modal', 'create-key-demo-modal')">
-                        Open Form Modal
+                        <span>Create</span>
                     </x-aura::button>
 
                     <!-- Destructive Modal Trigger -->
                     <x-aura::button variant="danger" size="md" x-data x-on:click="$dispatch('open-modal', 'delete-project-demo-modal')">
-                        Open Danger Modal
+                        <span>Delete</span>
                     </x-aura::button>
                 </div>
 
@@ -61,7 +61,7 @@ class extends Component {};
                         </x-aura::field>
                     </div>
                     <x-slot:footer>
-                        <x-aura::button variant="subtle" size="sm" x-on:click="open = false">Cancel</x-aura::button>
+                        <x-aura::button variant="subtle" size="sm" x-on:click="open = false"><span>Cancel</span></x-aura::button>
                         <x-aura::button variant="primary" size="sm"><span>Create</span></x-aura::button>
                     </x-slot:footer>
                 </x-aura::modal>
@@ -72,8 +72,8 @@ class extends Component {};
                         Target: production-us-east-1
                     </div>
                     <x-slot:footer>
-                        <x-aura::button variant="subtle" size="sm" x-on:click="open = false">Cancel</x-aura::button>
-                        <x-aura::button variant="danger" size="sm">Confirm Deletion</x-aura::button>
+                        <x-aura::button variant="subtle" size="sm" x-on:click="open = false"><span>Cancel</span></x-aura::button>
+                        <x-aura::button variant="danger" size="sm"><span>Delete</span></x-aura::button>
                     </x-slot:footer>
                 </x-aura::modal>
             </div>
