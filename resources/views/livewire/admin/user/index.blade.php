@@ -19,6 +19,9 @@ class extends Component {
     public int $perPage = 6;
     public int $page = 1;
 
+    public array $selected = [];
+    public bool $selectAll = false;
+
     public array $visibleColumns = [
         'role' => true,
         'status' => true,
@@ -28,22 +31,53 @@ class extends Component {
     public function updatingSearch(): void
     {
         $this->page = 1;
+        $this->resetSelection();
     }
 
     public function updatingRole(): void
     {
         $this->page = 1;
+        $this->resetSelection();
     }
 
     public function updatingStatus(): void
     {
         $this->page = 1;
+        $this->resetSelection();
+    }
+
+    public function updatedSelectAll($value): void
+    {
+        if ($value) {
+            $data = $this->with();
+            $this->selected = $data['users']->pluck('id')->map(fn($id) => (string) $id)->toArray();
+        } else {
+            $this->selected = [];
+        }
     }
 
     public function resetFilters(): void
     {
         $this->reset(['search', 'role', 'status']);
+        $this->resetSelection();
         $this->page = 1;
+    }
+
+    public function resetSelection(): void
+    {
+        $this->selected = [];
+        $this->selectAll = false;
+    }
+
+    public function deleteSelected(): void
+    {
+        // Bulk delete demonstration hook
+        $this->resetSelection();
+    }
+
+    public function exportSelected(): void
+    {
+        // Bulk export demonstration hook
     }
 
     public function sortBy(string $field): void
@@ -55,17 +89,20 @@ class extends Component {
             $this->sortDirection = 'asc';
         }
         $this->page = 1;
+        $this->resetSelection();
     }
 
     public function setPage(int $pageNumber): void
     {
         $this->page = $pageNumber;
+        $this->resetSelection();
     }
 
     public function nextPage(int $totalPages): void
     {
         if ($this->page < $totalPages) {
             $this->page++;
+            $this->resetSelection();
         }
     }
 
@@ -73,6 +110,7 @@ class extends Component {
     {
         if ($this->page > 1) {
             $this->page--;
+            $this->resetSelection();
         }
     }
 
@@ -176,57 +214,85 @@ class extends Component {
     <!-- Ultra Clean Unified Table Card -->
     <x-aura::card :divided="false">
         <x-slot:header>
-            <x-aura::flex align="center" justify="between" gap="3" :wrap="true" class="w-full">
-                <x-aura::flex align="center" gap="2.5" :wrap="true" class="w-full sm:w-auto">
-                    <div class="w-full sm:w-60">
-                        <x-aura::input wire:model.live.debounce.250ms="search" placeholder="Search users..." icon="search" size="sm" />
-                    </div>
-                    <div class="w-full sm:w-36">
-                        <x-aura::select wire:model.live="role" size="sm">
-                            <option value="all">All Roles</option>
-                            <option value="admin">Admins</option>
-                            <option value="dev">Developers</option>
-                            <option value="member">Members</option>
-                        </x-aura::select>
-                    </div>
-                    <div class="w-full sm:w-36">
-                        <x-aura::select wire:model.live="status" size="sm">
-                            <option value="all">All Statuses</option>
-                            <option value="Active">Active</option>
-                            <option value="Pending">Pending</option>
-                            <option value="Inactive">Inactive</option>
-                        </x-aura::select>
-                    </div>
+            @if (count($selected) > 0)
+                <x-aura::flex align="center" justify="between" gap="3" class="w-full bg-zinc-100/90 dark:bg-zinc-800/90 px-4 py-2 rounded-xl border border-zinc-200/80 dark:border-zinc-700/80">
+                    <x-aura::flex align="center" gap="2.5">
+                        <x-aura::badge variant="neutral" size="sm">
+                            {{ count($selected) }} Selected
+                        </x-aura::badge>
+                        <x-aura::text variant="subtle" size="sm">of {{ $totalCount }} total</x-aura::text>
+                    </x-aura::flex>
 
-                    @if ($search !== '' || $role !== 'all' || $status !== 'all')
-                        <x-aura::button wire:click="resetFilters" variant="subtle" size="sm">
-                            <x-aura::icon name="x" size="xs" />
-                            <span>Reset</span>
+                    <x-aura::flex align="center" gap="2">
+                        <x-aura::button wire:click="exportSelected" variant="secondary" size="sm">
+                            <x-aura::icon name="download" size="xs" />
+                            <span>Export</span>
                         </x-aura::button>
-                    @endif
+                        <x-aura::button x-on:click="$dispatch('open-modal', 'bulk-delete-modal')" variant="danger" size="sm">
+                            <x-aura::icon name="trash" size="xs" />
+                            <span>Delete</span>
+                        </x-aura::button>
+                        <x-aura::button wire:click="resetSelection" variant="ghost" size="sm">
+                            <span>Deselect</span>
+                        </x-aura::button>
+                    </x-aura::flex>
                 </x-aura::flex>
+            @else
+                <x-aura::flex align="center" justify="between" gap="3" :wrap="true" class="w-full">
+                    <x-aura::flex align="center" gap="2.5" :wrap="true" class="w-full sm:w-auto">
+                        <div class="w-full sm:w-60">
+                            <x-aura::input wire:model.live.debounce.250ms="search" placeholder="Search users..." icon="search" size="sm" />
+                        </div>
+                        <div class="w-full sm:w-36">
+                            <x-aura::select wire:model.live="role" size="sm">
+                                <option value="all">All Roles</option>
+                                <option value="admin">Admins</option>
+                                <option value="dev">Developers</option>
+                                <option value="member">Members</option>
+                            </x-aura::select>
+                        </div>
+                        <div class="w-full sm:w-36">
+                            <x-aura::select wire:model.live="status" size="sm">
+                                <option value="all">All Statuses</option>
+                                <option value="Active">Active</option>
+                                <option value="Pending">Pending</option>
+                                <option value="Inactive">Inactive</option>
+                            </x-aura::select>
+                        </div>
 
-                <div wire:ignore.self>
-                    <x-aura::dropdown align="right" width="48">
-                        <x-slot:trigger>
-                            <x-aura::button type="button" variant="secondary" size="sm">
-                                <x-aura::icon name="columns" size="xs" />
-                                <span>Columns</span>
+                        @if ($search !== '' || $role !== 'all' || $status !== 'all')
+                            <x-aura::button wire:click="resetFilters" variant="subtle" size="sm">
+                                <x-aura::icon name="x" size="xs" />
+                                <span>Reset</span>
                             </x-aura::button>
-                        </x-slot:trigger>
+                        @endif
+                    </x-aura::flex>
 
-                        <x-aura::dropdown.header>Columns</x-aura::dropdown.header>
-                        <x-aura::dropdown.checkbox wire:model.live="visibleColumns.role" label="Role" />
-                        <x-aura::dropdown.checkbox wire:model.live="visibleColumns.status" label="Status" />
-                        <x-aura::dropdown.checkbox wire:model.live="visibleColumns.joined" label="Joined Date" />
-                    </x-aura::dropdown>
-                </div>
-            </x-aura::flex>
+                    <div wire:ignore.self>
+                        <x-aura::dropdown align="right" width="48">
+                            <x-slot:trigger>
+                                <x-aura::button type="button" variant="secondary" size="sm">
+                                    <x-aura::icon name="columns" size="xs" />
+                                    <span>Columns</span>
+                                </x-aura::button>
+                            </x-slot:trigger>
+
+                            <x-aura::dropdown.header>Columns</x-aura::dropdown.header>
+                            <x-aura::dropdown.checkbox wire:model.live="visibleColumns.role" label="Role" />
+                            <x-aura::dropdown.checkbox wire:model.live="visibleColumns.status" label="Status" />
+                            <x-aura::dropdown.checkbox wire:model.live="visibleColumns.joined" label="Joined Date" />
+                        </x-aura::dropdown>
+                    </div>
+                </x-aura::flex>
+            @endif
         </x-slot:header>
 
         <x-aura::table borderless="true">
             <x-aura::table.header>
                 <x-aura::table.row>
+                    <x-aura::table.column class="w-10">
+                        <x-aura::checkbox wire:model.live="selectAll" aria-label="Select All" />
+                    </x-aura::table.column>
                     <x-aura::table.column sortable wire:click="sortBy('name')" :sorted="$sortField === 'name' ? $sortDirection : null">User</x-aura::table.column>
                     @if ($visibleColumns['role'] ?? true)
                         <x-aura::table.column sortable wire:click="sortBy('role')" :sorted="$sortField === 'role' ? $sortDirection : null">Role</x-aura::table.column>
@@ -242,7 +308,10 @@ class extends Component {
             </x-aura::table.header>
             <x-aura::table.body>
                 @forelse ($users as $user)
-                    <x-aura::table.row>
+                    <x-aura::table.row :class="in_array((string)$user['id'], $selected) ? 'bg-zinc-100/60 dark:bg-zinc-800/40' : ''">
+                        <x-aura::table.cell class="w-10">
+                            <x-aura::checkbox wire:model.live="selected" value="{{ (string)$user['id'] }}" aria-label="Select row" />
+                        </x-aura::table.cell>
                         <x-aura::table.cell>
                             <x-aura::flex align="center" gap="3">
                                 <x-aura::avatar :initials="$user['initials']" size="sm" />
@@ -281,7 +350,7 @@ class extends Component {
                     </x-aura::table.row>
                 @empty
                     <x-aura::table.row>
-                        <x-aura::table.cell :colspan="2 + count(array_filter($visibleColumns))">
+                        <x-aura::table.cell :colspan="3 + count(array_filter($visibleColumns))">
                             <x-aura::empty-state 
                                 icon="users" 
                                 title="No users found" 
@@ -303,7 +372,7 @@ class extends Component {
         </x-slot:footer>
     </x-aura::card>
 
-    <!-- Delete Confirmation Modal -->
+    <!-- Delete Single User Confirmation Modal -->
     <x-aura::modal 
         name="delete-user-modal" 
         variant="danger" 
@@ -315,10 +384,32 @@ class extends Component {
     >
         <x-slot:footer>
             <div class="grid grid-cols-2 gap-3 w-full">
-                <x-aura::button variant="secondary" size="sm" x-on:click="$dispatch('close-modal', 'delete-user-modal')">
+                <x-aura::button variant="secondary" size="sm" block="true" x-on:click="$dispatch('close-modal', 'delete-user-modal')">
                     Cancel
                 </x-aura::button>
-                <x-aura::button variant="danger" size="sm" x-on:click="$dispatch('close-modal', 'delete-user-modal')">
+                <x-aura::button variant="danger" size="sm" block="true" x-on:click="$dispatch('close-modal', 'delete-user-modal')">
+                    Delete
+                </x-aura::button>
+            </div>
+        </x-slot:footer>
+    </x-aura::modal>
+
+    <!-- Bulk Delete Confirmation Modal -->
+    <x-aura::modal 
+        name="bulk-delete-modal" 
+        variant="danger" 
+        centered="true"
+        icon="trash"
+        title="Delete Selected Users?" 
+        description="This action will permanently delete all selected user accounts, active sessions, and permissions. This cannot be undone."
+        maxWidth="sm"
+    >
+        <x-slot:footer>
+            <div class="grid grid-cols-2 gap-3 w-full">
+                <x-aura::button variant="secondary" size="sm" block="true" x-on:click="$dispatch('close-modal', 'bulk-delete-modal')">
+                    Cancel
+                </x-aura::button>
+                <x-aura::button variant="danger" size="sm" block="true" wire:click="deleteSelected" x-on:click="$dispatch('close-modal', 'bulk-delete-modal')">
                     Delete
                 </x-aura::button>
             </div>
