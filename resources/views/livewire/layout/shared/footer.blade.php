@@ -24,7 +24,7 @@ new class extends Component {};
     <x-slot name="bottom">
         <span>&copy; {{ date('Y') }} Aura Wire. Built with Laravel &amp; Livewire Volt.</span>
         <div class="flex items-center gap-4 text-xs">
-            <span class="font-mono">Laravel v{{ app()->version() }}</span>
+            <span class="font-mono">Laravel &amp; Livewire</span>
         </div>
     </x-slot>
 </x-aura::footer>

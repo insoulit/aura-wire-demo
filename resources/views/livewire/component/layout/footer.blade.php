@@ -57,7 +57,7 @@ class extends Component {};
                         <x-slot name="bottom">
                             <span>&copy; {{ date('Y') }} Insoulit. All rights reserved.</span>
                             <div class="flex items-center gap-4 text-xs">
-                                <span class="font-mono">v1.5.0</span>
+                                <span class="font-mono">Laravel &amp; Livewire</span>
                                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
                             </div>
                         </x-slot>
@@ -79,7 +79,7 @@ class extends Component {};
 
     <x-slot name="bottom">
         <span>&copy; {{ date('Y') }} Insoulit. All rights reserved.</span>
-        <span class="font-mono">v1.5.0</span>
+        <span class="font-mono">Laravel &amp; Livewire</span>
     </x-slot>
 </x-aura::footer>@endverbatim</x-slot:codeSlot>
     </x-aura::code>

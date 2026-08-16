@@ -35,14 +35,14 @@ class extends Component {};
     <x-aura::code  title="1. Deployment & Release History">
         <x-slot:preview>
             <x-aura::timeline>
-                <x-aura::timeline.item title="v1.5.0 Released to Production" time="Just now" variant="solid" description="Deployed 11 new UI components to the insoulit/aura-wire suite." />
+                <x-aura::timeline.item title="Package Released to Production" time="Just now" variant="solid" description="Deployed 11 new UI components to the insoulit/aura-wire suite." />
                 <x-aura::timeline.item title="Pull Request #42 Merged" time="15 mins ago" variant="subtle" description="Approved and merged into main branch by @lead-dev." />
                 <x-aura::timeline.item title="Automated Test Suite Passed" time="30 mins ago" variant="solid" description="71 Pest tests passed with 220 assertions and 0 errors." />
                 <x-aura::timeline.item title="Build Compiled Successfully" time="45 mins ago" variant="subtle" description="Vite production bundle compiled in 1.28s." />
             </x-aura::timeline>
         </x-slot:preview>
         <x-slot:codeSlot>@verbatim<x-aura::timeline>
-    <x-aura::timeline.item title="v1.5.0 Released to Production" time="Just now" variant="solid" description="Deployed 11 new UI components." />
+    <x-aura::timeline.item title="Package Released to Production" time="Just now" variant="solid" description="Deployed 11 new UI components." />
     <x-aura::timeline.item title="Pull Request #42 Merged" time="15 mins ago" variant="subtle" description="Approved by @lead-dev." />
     <x-aura::timeline.item title="Automated Test Suite Passed" time="30 mins ago" variant="solid" description="71 Pest tests passed." />
     <x-aura::timeline.item title="Build Compiled" time="45 mins ago" variant="subtle" />
