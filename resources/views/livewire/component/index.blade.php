@@ -11,33 +11,33 @@ class extends Component {};
 
 ?>
 
-<div class="w-full space-y-12">
+<x-aura::stack gap="12" class="w-full">
     <!-- Header Banner -->
     <x-aura::card>
-        <div class="space-y-2 max-w-2xl">
-            <div class="flex items-center gap-2.5">
+        <x-aura::stack gap="2" class="max-w-2xl">
+            <x-aura::flex align="center" gap="2.5">
                 <x-aura::kicker>Component Directory</x-aura::kicker>
                 <x-aura::badge variant="subtle" size="sm">Documentation</x-aura::badge>
-            </div>
+            </x-aura::flex>
             <x-aura::heading level="1" size="xl">Component Suite</x-aura::heading>
             <x-aura::subheading size="md">
                 Browse through individual standalone documentation pages for every component registered by Aura Wire, organized by category.
             </x-aura::subheading>
-        </div>
+        </x-aura::stack>
     </x-aura::card>
 
     <!-- Category 1: Typography -->
-    <section class="space-y-4">
-        <div class="flex items-center gap-2 border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
-            <div class="text-zinc-900 dark:text-white">
-                <x-aura::icon name="type" size="sm" />
-            </div>
-            <x-aura::heading level="2" size="md">Typography</x-aura::heading>
-            <div class="ml-auto">
-                <x-aura::badge variant="neutral">5 Components</x-aura::badge>
-            </div>
+    <x-aura::stack gap="4">
+        <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
+            <x-aura::flex align="center" justify="between" gap="2">
+                <x-aura::flex align="center" gap="2">
+                    <x-aura::icon name="type" size="sm" />
+                    <x-aura::heading level="2" size="md">Typography</x-aura::heading>
+                </x-aura::flex>
+                <x-aura::badge variant="neutral" size="sm">5 Components</x-aura::badge>
+            </x-aura::flex>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 [&>:nth-child(3n+1):last-child]:lg:col-span-3 [&>:nth-child(3n+2):last-child]:lg:col-span-2 [&>:nth-child(2n+1):last-child]:sm:max-lg:col-span-2">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <x-aura::card href="/components/kicker">
                 <x-aura::heading level="3" size="sm">Kicker</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::kicker&gt;</x-aura::text>
@@ -63,20 +63,20 @@ class extends Component {};
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::text&gt;</x-aura::text>
             </x-aura::card>
         </div>
-    </section>
+    </x-aura::stack>
 
     <!-- Category 2: Action -->
-    <section class="space-y-4">
-        <div class="flex items-center gap-2 border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
-            <div class="text-zinc-900 dark:text-white">
-                <x-aura::icon name="mouse-pointer" size="sm" />
-            </div>
-            <x-aura::heading level="2" size="md">Action</x-aura::heading>
-            <div class="ml-auto">
-                <x-aura::badge variant="neutral">5 Components</x-aura::badge>
-            </div>
+    <x-aura::stack gap="4">
+        <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
+            <x-aura::flex align="center" justify="between" gap="2">
+                <x-aura::flex align="center" gap="2">
+                    <x-aura::icon name="mouse-pointer" size="sm" />
+                    <x-aura::heading level="2" size="md">Action</x-aura::heading>
+                </x-aura::flex>
+                <x-aura::badge variant="neutral" size="sm">5 Components</x-aura::badge>
+            </x-aura::flex>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 [&>:nth-child(3n+1):last-child]:lg:col-span-3 [&>:nth-child(3n+2):last-child]:lg:col-span-2 [&>:nth-child(2n+1):last-child]:sm:max-lg:col-span-2">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <x-aura::card href="/components/button">
                 <x-aura::heading level="3" size="sm">Button</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::button&gt;</x-aura::text>
@@ -102,20 +102,20 @@ class extends Component {};
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::dropdown&gt;</x-aura::text>
             </x-aura::card>
         </div>
-    </section>
+    </x-aura::stack>
 
     <!-- Category 3: Form -->
-    <section class="space-y-4">
-        <div class="flex items-center gap-2 border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
-            <div class="text-zinc-900 dark:text-white">
-                <x-aura::icon name="edit-3" size="sm" />
-            </div>
-            <x-aura::heading level="2" size="md">Form</x-aura::heading>
-            <div class="ml-auto">
-                <x-aura::badge variant="neutral">15 Components</x-aura::badge>
-            </div>
+    <x-aura::stack gap="4">
+        <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
+            <x-aura::flex align="center" justify="between" gap="2">
+                <x-aura::flex align="center" gap="2">
+                    <x-aura::icon name="edit-3" size="sm" />
+                    <x-aura::heading level="2" size="md">Form</x-aura::heading>
+                </x-aura::flex>
+                <x-aura::badge variant="neutral" size="sm">15 Components</x-aura::badge>
+            </x-aura::flex>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 [&>:nth-child(3n+1):last-child]:lg:col-span-3 [&>:nth-child(3n+2):last-child]:lg:col-span-2 [&>:nth-child(2n+1):last-child]:sm:max-lg:col-span-2">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <x-aura::card href="/components/field">
                 <x-aura::heading level="3" size="sm">Field</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::field&gt;</x-aura::text>
@@ -191,20 +191,20 @@ class extends Component {};
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::file-upload&gt;</x-aura::text>
             </x-aura::card>
         </div>
-    </section>
+    </x-aura::stack>
 
     <!-- Category 4: Display -->
-    <section class="space-y-4">
-        <div class="flex items-center gap-2 border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
-            <div class="text-zinc-900 dark:text-white">
-                <x-aura::icon name="monitor" size="sm" />
-            </div>
-            <x-aura::heading level="2" size="md">Display</x-aura::heading>
-            <div class="ml-auto">
-                <x-aura::badge variant="neutral">11 Components</x-aura::badge>
-            </div>
+    <x-aura::stack gap="4">
+        <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
+            <x-aura::flex align="center" justify="between" gap="2">
+                <x-aura::flex align="center" gap="2">
+                    <x-aura::icon name="monitor" size="sm" />
+                    <x-aura::heading level="2" size="md">Display</x-aura::heading>
+                </x-aura::flex>
+                <x-aura::badge variant="neutral" size="sm">11 Components</x-aura::badge>
+            </x-aura::flex>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 [&>:nth-child(3n+1):last-child]:lg:col-span-3 [&>:nth-child(3n+2):last-child]:lg:col-span-2 [&>:nth-child(2n+1):last-child]:sm:max-lg:col-span-2">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <x-aura::card href="/components/card">
                 <x-aura::heading level="3" size="sm">Card</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::card&gt;</x-aura::text>
@@ -260,20 +260,20 @@ class extends Component {};
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::empty-state&gt;</x-aura::text>
             </x-aura::card>
         </div>
-    </section>
+    </x-aura::stack>
 
     <!-- Category 5: Data -->
-    <section class="space-y-4">
-        <div class="flex items-center gap-2 border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
-            <div class="text-zinc-900 dark:text-white">
-                <x-aura::icon name="database" size="sm" />
-            </div>
-            <x-aura::heading level="2" size="md">Data</x-aura::heading>
-            <div class="ml-auto">
-                <x-aura::badge variant="neutral">6 Components</x-aura::badge>
-            </div>
+    <x-aura::stack gap="4">
+        <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
+            <x-aura::flex align="center" justify="between" gap="2">
+                <x-aura::flex align="center" gap="2">
+                    <x-aura::icon name="database" size="sm" />
+                    <x-aura::heading level="2" size="md">Data</x-aura::heading>
+                </x-aura::flex>
+                <x-aura::badge variant="neutral" size="sm">6 Components</x-aura::badge>
+            </x-aura::flex>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 [&>:nth-child(3n+1):last-child]:lg:col-span-3 [&>:nth-child(3n+2):last-child]:lg:col-span-2 [&>:nth-child(2n+1):last-child]:sm:max-lg:col-span-2">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <x-aura::card href="/components/table">
                 <x-aura::heading level="3" size="sm">Table</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::table&gt;</x-aura::text>
@@ -304,20 +304,20 @@ class extends Component {};
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::numbered-list&gt;</x-aura::text>
             </x-aura::card>
         </div>
-    </section>
+    </x-aura::stack>
 
     <!-- Category 6: Feedback -->
-    <section class="space-y-4">
-        <div class="flex items-center gap-2 border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
-            <div class="text-zinc-900 dark:text-white">
-                <x-aura::icon name="bell" size="sm" />
-            </div>
-            <x-aura::heading level="2" size="md">Feedback</x-aura::heading>
-            <div class="ml-auto">
-                <x-aura::badge variant="neutral">9 Components</x-aura::badge>
-            </div>
+    <x-aura::stack gap="4">
+        <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
+            <x-aura::flex align="center" justify="between" gap="2">
+                <x-aura::flex align="center" gap="2">
+                    <x-aura::icon name="bell" size="sm" />
+                    <x-aura::heading level="2" size="md">Feedback</x-aura::heading>
+                </x-aura::flex>
+                <x-aura::badge variant="neutral" size="sm">9 Components</x-aura::badge>
+            </x-aura::flex>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 [&>:nth-child(3n+1):last-child]:lg:col-span-3 [&>:nth-child(3n+2):last-child]:lg:col-span-2 [&>:nth-child(2n+1):last-child]:sm:max-lg:col-span-2">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <x-aura::card href="/components/alert">
                 <x-aura::heading level="3" size="sm">Alert</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::alert&gt;</x-aura::text>
@@ -363,20 +363,20 @@ class extends Component {};
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::spinner&gt;</x-aura::text>
             </x-aura::card>
         </div>
-    </section>
+    </x-aura::stack>
 
     <!-- Category 7: Navigation -->
-    <section class="space-y-4">
-        <div class="flex items-center gap-2 border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
-            <div class="text-zinc-900 dark:text-white">
-                <x-aura::icon name="navigation" size="sm" />
-            </div>
-            <x-aura::heading level="2" size="md">Navigation</x-aura::heading>
-            <div class="ml-auto">
-                <x-aura::badge variant="neutral">3 Components</x-aura::badge>
-            </div>
+    <x-aura::stack gap="4">
+        <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
+            <x-aura::flex align="center" justify="between" gap="2">
+                <x-aura::flex align="center" gap="2">
+                    <x-aura::icon name="navigation" size="sm" />
+                    <x-aura::heading level="2" size="md">Navigation</x-aura::heading>
+                </x-aura::flex>
+                <x-aura::badge variant="neutral" size="sm">3 Components</x-aura::badge>
+            </x-aura::flex>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 [&>:nth-child(3n+1):last-child]:lg:col-span-3 [&>:nth-child(3n+2):last-child]:lg:col-span-2 [&>:nth-child(2n+1):last-child]:sm:max-lg:col-span-2">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <x-aura::card href="/components/breadcrumb">
                 <x-aura::heading level="3" size="sm">Breadcrumb</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::breadcrumb&gt;</x-aura::text>
@@ -392,20 +392,20 @@ class extends Component {};
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::pagination&gt;</x-aura::text>
             </x-aura::card>
         </div>
-    </section>
+    </x-aura::stack>
 
     <!-- Category 8: Layout -->
-    <section class="space-y-4">
-        <div class="flex items-center gap-2 border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
-            <div class="text-zinc-900 dark:text-white">
-                <x-aura::icon name="layout" size="sm" />
-            </div>
-            <x-aura::heading level="2" size="md">Layout</x-aura::heading>
-            <div class="ml-auto">
-                <x-aura::badge variant="neutral">7 Components</x-aura::badge>
-            </div>
+    <x-aura::stack gap="4">
+        <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
+            <x-aura::flex align="center" justify="between" gap="2">
+                <x-aura::flex align="center" gap="2">
+                    <x-aura::icon name="layout" size="sm" />
+                    <x-aura::heading level="2" size="md">Layout</x-aura::heading>
+                </x-aura::flex>
+                <x-aura::badge variant="neutral" size="sm">7 Components</x-aura::badge>
+            </x-aura::flex>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 [&>:nth-child(3n+1):last-child]:lg:col-span-3 [&>:nth-child(3n+2):last-child]:lg:col-span-2 [&>:nth-child(2n+1):last-child]:sm:max-lg:col-span-2">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <x-aura::card href="/components/body">
                 <x-aura::heading level="3" size="sm">Body</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::body&gt;</x-aura::text>
@@ -441,6 +441,5 @@ class extends Component {};
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::footer&gt;</x-aura::text>
             </x-aura::card>
         </div>
-    </section>
-
-</div>
+    </x-aura::stack>
+</x-aura::stack>

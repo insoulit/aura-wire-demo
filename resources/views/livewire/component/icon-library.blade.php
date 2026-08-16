@@ -93,35 +93,37 @@ class extends Component {
 
 ?>
 
-<div class="w-full max-w-5xl mx-auto space-y-12">
+<x-aura::stack gap="10" class="w-full max-w-5xl mx-auto py-2">
     <!-- Header Page Intro -->
     <x-aura::card>
-        <div class="space-y-2 max-w-2xl">
-            <div class="flex items-center gap-2.5">
+        <x-aura::stack gap="2" class="max-w-2xl">
+            <x-aura::flex align="center" gap="2.5">
                 <x-aura::kicker>Start</x-aura::kicker>
                 <x-aura::badge variant="subtle" size="sm">Search &amp; Copy</x-aura::badge>
-            </div>
+            </x-aura::flex>
             <x-aura::heading level="1" size="xl">Icon Library</x-aura::heading>
             <x-aura::subheading size="md">
                 Browse and search all Lucide SVG icons natively integrated into Aura Wire. Click any icon card to copy its Blade tag syntax instantly.
             </x-aura::subheading>
-        </div>
+        </x-aura::stack>
     </x-aura::card>
 
     <!-- Search & Filter Bar -->
     <x-aura::card>
-        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <x-aura::input wire:model.live.debounce.150ms="search" placeholder="Search Lucide icons... (e.g. user, bell, chart, arrow)" icon="search" class="w-full sm:w-96" />
-            <div class="flex items-center gap-2 text-xs text-zinc-500 font-mono">
-                <span>Page {{ $page }} of {{ max(1, $this->totalPages) }} ({{ number_format($this->totalFilteredCount) }} icons found)</span>
+        <x-aura::flex align="center" justify="between" gap="4" class="flex-col sm:flex-row w-full">
+            <div class="w-full sm:w-96">
+                <x-aura::input wire:model.live.debounce.150ms="search" placeholder="Search Lucide icons... (e.g. user, bell, chart, arrow)" icon="search" size="sm" />
             </div>
-        </div>
+            <x-aura::text variant="mono" size="sm" variant="subtle">
+                Page {{ $page }} of {{ max(1, $this->totalPages) }} ({{ number_format($this->totalFilteredCount) }} icons found)
+            </x-aura::text>
+        </x-aura::flex>
     </x-aura::card>
 
     <!-- Interactive Icon Grid Gallery -->
     <x-aura::code title="Icon Explorer (Click to Copy)">
         <x-slot:preview>
-            <div class="space-y-8 w-full">
+            <x-aura::stack gap="8" class="w-full">
                 <!-- Icon Grid -->
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5 w-full">
                     @forelse ($this->icons as $iconName)
@@ -143,66 +145,70 @@ class extends Component {
                             </div>
                         </div>
                     @empty
-                        <div class="col-span-full p-12 text-center text-zinc-500 space-y-2">
-                            <x-aura::icon name="search-x" size="lg" />
-                            <p class="font-medium text-sm">No icons found matching "<span class="font-mono text-zinc-800 dark:text-zinc-200">{{ $search }}</span>"</p>
-                            <p class="text-xs text-zinc-400">Try searching for broader terms like <code class="font-mono">user</code>, <code class="font-mono">mail</code>, <code class="font-mono">arrow</code>, or <code class="font-mono">file</code>.</p>
+                        <div class="col-span-full py-4">
+                            <x-aura::empty-state 
+                                icon="search"
+                                title="No icons found"
+                                description="Try searching for broader terms like user, mail, arrow, or file."
+                            />
                         </div>
                     @endforelse
                 </div>
 
                 <!-- Circular Pagination Bar -->
                 @if ($this->totalPages > 1)
-                    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-zinc-200 dark:border-zinc-800/80 w-full">
-                        <div class="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400">
-                            Showing <span class="font-bold text-zinc-900 dark:text-white">{{ (($page - 1) * $perPage) + 1 }}</span> to <span class="font-bold text-zinc-900 dark:text-white">{{ min($page * $perPage, $this->totalFilteredCount) }}</span> of <span class="font-bold text-zinc-900 dark:text-white">{{ number_format($this->totalFilteredCount) }}</span> icons
-                        </div>
+                    <div class="pt-6 border-t border-zinc-200 dark:border-zinc-800/80 w-full">
+                        <x-aura::flex align="center" justify="between" gap="4" class="flex-col sm:flex-row w-full">
+                            <x-aura::text size="sm" variant="subtle">
+                                Showing <span class="font-bold text-zinc-900 dark:text-white">{{ (($page - 1) * $perPage) + 1 }}</span> to <span class="font-bold text-zinc-900 dark:text-white">{{ min($page * $perPage, $this->totalFilteredCount) }}</span> of <span class="font-bold text-zinc-900 dark:text-white">{{ number_format($this->totalFilteredCount) }}</span> icons
+                            </x-aura::text>
 
-                        <div class="flex items-center gap-1.5">
-                            {{-- Circular Previous Button --}}
-                            <x-aura::icon-button wire:click="previousPage" icon="chevron-left" shape="circle" variant="secondary" size="sm" :disabled="$page <= 1" label="Previous Page" />
+                            <x-aura::flex align="center" gap="1.5">
+                                {{-- Circular Previous Button --}}
+                                <x-aura::icon-button wire:click="previousPage" icon="chevron-left" shape="circle" variant="secondary" size="sm" :disabled="$page <= 1" label="Previous" />
 
-                            @php
-                                $start = max(1, $page - 2);
-                                $end = min($this->totalPages, $page + 2);
-                            @endphp
+                                @php
+                                    $start = max(1, $page - 2);
+                                    $end = min($this->totalPages, $page + 2);
+                                @endphp
 
-                            @if ($start > 1)
-                                <button type="button" wire:click="setPage(1)" class="w-8 h-8 rounded-full text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 font-medium text-xs flex items-center justify-center transition-all">1</button>
-                                @if ($start > 2)
-                                    <span class="px-1 text-xs text-zinc-400">...</span>
+                                @if ($start > 1)
+                                    <button type="button" wire:click="setPage(1)" class="w-8 h-8 rounded-full text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 font-medium text-xs flex items-center justify-center transition-all">1</button>
+                                    @if ($start > 2)
+                                        <span class="px-1 text-xs text-zinc-400">...</span>
+                                    @endif
                                 @endif
-                            @endif
 
-                            @for ($p = $start; $p <= $end; $p++)
-                                @if ($page === $p)
-                                    <span class="w-8 h-8 rounded-full bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold text-xs flex items-center justify-center shadow-xs">
-                                        {{ $p }}
-                                    </span>
-                                @else
-                                    <button type="button" wire:click="setPage({{ $p }})" class="w-8 h-8 rounded-full text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 font-medium text-xs flex items-center justify-center transition-all">
-                                        {{ $p }}
-                                    </button>
+                                @for ($p = $start; $p <= $end; $p++)
+                                    @if ($page === $p)
+                                        <span class="w-8 h-8 rounded-full bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold text-xs flex items-center justify-center shadow-xs">
+                                            {{ $p }}
+                                        </span>
+                                    @else
+                                        <button type="button" wire:click="setPage({{ $p }})" class="w-8 h-8 rounded-full text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 font-medium text-xs flex items-center justify-center transition-all">
+                                            {{ $p }}
+                                        </button>
+                                    @endif
+                                @endfor
+
+                                @if ($end < $this->totalPages)
+                                    @if ($end < $this->totalPages - 1)
+                                        <span class="px-1 text-xs text-zinc-400">...</span>
+                                    @endif
+                                    <button type="button" wire:click="setPage({{ $this->totalPages }})" class="w-8 h-8 rounded-full text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 font-medium text-xs flex items-center justify-center transition-all">{{ $this->totalPages }}</button>
                                 @endif
-                            @endfor
 
-                            @if ($end < $this->totalPages)
-                                @if ($end < $this->totalPages - 1)
-                                    <span class="px-1 text-xs text-zinc-400">...</span>
-                                @endif
-                                <button type="button" wire:click="setPage({{ $this->totalPages }})" class="w-8 h-8 rounded-full text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 font-medium text-xs flex items-center justify-center transition-all">{{ $this->totalPages }}</button>
-                            @endif
-
-                            {{-- Circular Next Button --}}
-                            <x-aura::icon-button wire:click="nextPage" icon="chevron-right" shape="circle" variant="secondary" size="sm" :disabled="$page >= $this->totalPages" label="Next Page" />
-                        </div>
+                                {{-- Circular Next Button --}}
+                                <x-aura::icon-button wire:click="nextPage" icon="chevron-right" shape="circle" variant="secondary" size="sm" :disabled="$page >= $this->totalPages" label="Next" />
+                            </x-aura::flex>
+                        </x-aura::flex>
                     </div>
                 @endif
-            </div>
+            </x-aura::stack>
         </x-slot:preview>
         <x-slot:codeSlot>@verbatim<x-aura::icon name="sparkles" size="md" />
 <x-aura::icon name="search" size="sm" />
 <x-aura::icon name="heart" />
 <x-aura::icon name="user" size="lg" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
-</div>
+</x-aura::stack>
