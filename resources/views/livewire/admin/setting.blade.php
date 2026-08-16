@@ -32,11 +32,11 @@ class extends Component {
 
 ?>
 
-<div class="w-full max-w-3xl mx-auto space-y-6 py-4">
+<div class="w-full max-w-3xl mx-auto space-y-4 py-2">
 
     <!-- Top Header -->
     <div class="space-y-1">
-        <div class="flex items-center justify-between gap-4">
+        <x-aura::flex align="center" justify="between" gap="4">
             <div>
                 <x-aura::kicker>Administration</x-aura::kicker>
                 <x-aura::heading level="1" size="lg">Admin Settings</x-aura::heading>
@@ -46,8 +46,8 @@ class extends Component {
                     <span>Back</span>
                 </x-aura::button>
             </div>
-        </div>
-        <x-aura::subheading size="xs">
+        </x-aura::flex>
+        <x-aura::subheading size="sm">
             Manage global portal identity, theme preferences, and automation controls.
         </x-aura::subheading>
     </div>
@@ -59,7 +59,7 @@ class extends Component {
     @endif
 
     <!-- Settings Form -->
-    <form wire:submit.prevent="save" class="space-y-6">
+    <form wire:submit.prevent="save" class="space-y-4">
 
         <!-- 1. General Configuration Card -->
         <x-aura::card title="General Configuration" description="Manage portal title, administrator email, and visual theme tokens.">
@@ -124,11 +124,11 @@ class extends Component {
             </div>
 
             <x-slot:footer>
-                <div class="flex items-center justify-end w-full">
+                <x-aura::flex align="center" justify="end" class="w-full">
                     <x-aura::button type="submit" variant="primary" size="sm" icon="save">
                         <span>Save</span>
                     </x-aura::button>
-                </div>
+                </x-aura::flex>
             </x-slot:footer>
         </x-aura::card>
 

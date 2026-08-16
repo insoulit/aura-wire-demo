@@ -34,41 +34,39 @@ class extends Component {
 <div class="w-full max-w-3xl mx-auto space-y-3">
 
     <!-- Top Header -->
-    <div class="flex items-center justify-between gap-4 px-1">
+    <x-aura::flex align="center" justify="between" gap="4" class="px-1">
         <div>
             <x-aura::kicker>Administration</x-aura::kicker>
             <x-aura::heading level="1" size="lg">User Profile</x-aura::heading>
         </div>
-        <div class="flex items-center gap-2">
+        <x-aura::flex align="center" gap="2">
             <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm">
                 <x-aura::icon name="arrow-left" size="xs" />
                 <span>Back</span>
             </x-aura::button>
-        </div>
-    </div>
+        </x-aura::flex>
+    </x-aura::flex>
 
     <!-- Unified Profile Card -->
     <x-aura::card>
         <!-- Profile Header Banner -->
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-zinc-100 dark:border-zinc-800">
-            <div class="flex items-center gap-4">
+        <x-aura::flex align="center" justify="between" gap="4" class="pb-6 border-b border-zinc-100 dark:border-zinc-800 flex-col sm:flex-row">
+            <x-aura::flex align="center" gap="4">
                 <x-aura::avatar :initials="$user['initials']" size="lg" />
                 <div class="space-y-1">
-                    <div class="flex items-center gap-2 flex-wrap">
+                    <x-aura::flex align="center" gap="2" :wrap="true">
                         <x-aura::heading level="2" size="sm">{{ $user['name'] }}</x-aura::heading>
                         <x-aura::badge :variant="$user['role'] === 'admin' ? 'neutral' : 'subtle'" size="sm">
                             {{ $user['role_label'] }}
                         </x-aura::badge>
-                    </div>
+                    </x-aura::flex>
                     <x-aura::text variant="subtle" size="sm">{{ $user['email'] }}</x-aura::text>
                 </div>
-            </div>
-            <div class="flex items-center gap-2">
-                <x-aura::badge :variant="$user['status'] === 'Active' ? 'neutral' : 'subtle'" size="sm">
-                    {{ $user['status'] }}
-                </x-aura::badge>
-            </div>
-        </div>
+            </x-aura::flex>
+            <x-aura::badge :variant="$user['status'] === 'Active' ? 'neutral' : 'subtle'" size="sm">
+                {{ $user['status'] }}
+            </x-aura::badge>
+        </x-aura::flex>
 
         <!-- Specifications & Details -->
         <x-aura::table borderless="true">
@@ -145,12 +143,12 @@ class extends Component {
         </x-aura::table>
 
         <x-slot:footer>
-            <div class="flex items-center justify-center w-full">
+            <x-aura::center class="w-full">
                 <x-aura::button href="/admin/users/edit?id={{ $user['id'] }}" wire:navigate variant="primary" size="sm">
                     <x-aura::icon name="pencil" size="xs" />
                     <span>Edit</span>
                 </x-aura::button>
-            </div>
+            </x-aura::center>
         </x-slot:footer>
     </x-aura::card>
 

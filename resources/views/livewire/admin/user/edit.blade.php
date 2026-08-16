@@ -56,18 +56,18 @@ class extends Component {
 <div class="w-full max-w-3xl mx-auto space-y-3">
 
     <!-- Header with Back Button -->
-    <div class="flex items-center justify-between gap-4 px-1">
+    <x-aura::flex align="center" justify="between" gap="4" class="px-1">
         <div>
             <x-aura::kicker>Administration</x-aura::kicker>
             <x-aura::heading level="1" size="lg">Edit User</x-aura::heading>
         </div>
-        <div class="flex items-center gap-2">
+        <x-aura::flex align="center" gap="2">
             <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm">
                 <x-aura::icon name="arrow-left" size="xs" />
                 <span>Back</span>
             </x-aura::button>
-        </div>
-    </div>
+        </x-aura::flex>
+    </x-aura::flex>
 
     @if ($saved)
         <div class="fixed bottom-5 right-5 z-50">
@@ -81,13 +81,13 @@ class extends Component {
             <div class="space-y-5 pt-2">
 
                 <!-- Avatar & Identity Preview -->
-                <div class="flex items-center gap-4 p-4 rounded-xl bg-zinc-50/80 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60">
+                <x-aura::flex align="center" gap="4" class="p-4 rounded-xl bg-zinc-50/80 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60">
                     <x-aura::avatar :initials="$initials" size="md" />
                     <div>
                         <div class="font-bold text-zinc-900 dark:text-white text-sm">{{ $name }}</div>
                         <div class="text-sm text-zinc-500 dark:text-zinc-400">{{ $email }}</div>
                     </div>
-                </div>
+                </x-aura::flex>
 
                 <!-- Full Name & Email -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -122,12 +122,12 @@ class extends Component {
             </div>
 
             <x-slot:footer>
-                <div class="flex items-center justify-between w-full">
+                <x-aura::flex align="center" justify="between" class="w-full">
                     <x-aura::button href="/admin/users/show?id={{ $userId }}" wire:navigate variant="secondary" size="sm">
                         View
                     </x-aura::button>
 
-                    <div class="flex items-center gap-2">
+                    <x-aura::flex align="center" gap="2">
                         <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm">
                             Cancel
                         </x-aura::button>
@@ -136,15 +136,15 @@ class extends Component {
                             <x-aura::icon name="check" size="xs" />
                             <span>Save</span>
                         </x-aura::button>
-                    </div>
-                </div>
+                    </x-aura::flex>
+                </x-aura::flex>
             </x-slot:footer>
         </x-aura::card>
     </form>
 
     <!-- Danger Zone Card -->
     <x-aura::card title="Danger Zone" description="Irreversible actions for this user account.">
-        <div class="flex items-center justify-between gap-4 py-1">
+        <x-aura::flex align="center" justify="between" gap="4" class="py-1">
             <div>
                 <div class="font-semibold text-sm text-red-600 dark:text-red-400">Delete Account</div>
                 <div class="text-sm text-zinc-500 dark:text-zinc-400">Permanently remove this user account and active access.</div>
@@ -152,12 +152,12 @@ class extends Component {
             <x-aura::button variant="danger" size="sm" type="button" x-on:click="$dispatch('open-modal', 'delete-user-modal')">
                 Delete
             </x-aura::button>
-        </div>
+        </x-aura::flex>
     </x-aura::card>
 
     <!-- Delete Confirmation Modal -->
     <x-aura::modal name="delete-user-modal" variant="centered" maxWidth="sm">
-        <div class="flex flex-col items-center text-center space-y-3">
+        <x-aura::center direction="col" gap="3" class="text-center">
             <div class="w-12 h-12 rounded-2xl bg-red-100 dark:bg-red-950/60 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-800/60 flex items-center justify-center shrink-0 shadow-xs">
                 <x-aura::icon name="trash" size="md" />
             </div>
@@ -168,7 +168,7 @@ class extends Component {
                     This action will permanently delete this user profile, active sessions, and permissions. This cannot be undone.
                 </p>
             </div>
-        </div>
+        </x-aura::center>
 
         <x-slot:footer>
             <div class="grid grid-cols-2 gap-3 w-full">

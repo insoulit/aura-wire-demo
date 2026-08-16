@@ -3,36 +3,39 @@
 use Livewire\Volt\Component;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
+use Livewire\WithPagination;
 
 new 
 #[Layout('livewire.layout.admin')] 
-#[Title('Users — Admin Panel | Aura Wire')] 
+#[Title('User Management — Admin Panel | Aura Wire')] 
 class extends Component {
+    use WithPagination;
+
     public string $search = '';
     public string $role = 'all';
+    public int $perPage = 6;
     public int $page = 1;
-    public int $perPage = 8;
 
-    public function updatedSearch(): void
+    public function updatingSearch(): void
     {
         $this->page = 1;
     }
 
-    public function updatedRole(): void
+    public function updatingRole(): void
     {
         $this->page = 1;
     }
 
-    public function resetFilters(): void
+    public function setPage(int $pageNumber): void
     {
-        $this->search = '';
-        $this->role = 'all';
-        $this->page = 1;
+        $this->page = $pageNumber;
     }
 
-    public function setPage(int $page): void
+    public function nextPage(int $totalPages): void
     {
-        $this->page = max(1, $page);
+        if ($this->page < $totalPages) {
+            $this->page++;
+        }
     }
 
     public function previousPage(): void
@@ -42,11 +45,9 @@ class extends Component {
         }
     }
 
-    public function nextPage(int $maxPages): void
+    public function deleteUser(int $id): void
     {
-        if ($this->page < $maxPages) {
-            $this->page++;
-        }
+        // Demonstration hook
     }
 
     public function with(): array
@@ -118,12 +119,12 @@ class extends Component {
 
     <!-- Top Header -->
     <div class="space-y-1 px-1">
-        <div class="flex items-center justify-between gap-4">
+        <x-aura::flex align="center" justify="between" gap="4">
             <div>
                 <x-aura::kicker>Administration</x-aura::kicker>
                 <x-aura::heading level="1" size="lg">Users</x-aura::heading>
             </div>
-            <div class="flex items-center gap-2">
+            <x-aura::flex align="center" gap="2">
                 <x-aura::button variant="secondary" size="sm">
                     <x-aura::icon name="arrow-down-tray" size="xs" />
                     <span>Export</span>
@@ -132,15 +133,15 @@ class extends Component {
                     <x-aura::icon name="plus" size="xs" />
                     <span>Create</span>
                 </x-aura::button>
-            </div>
-        </div>
+            </x-aura::flex>
+        </x-aura::flex>
     </div>
 
     <!-- Ultra Clean Unified Table Card -->
     <x-aura::card>
         <x-slot:header>
-            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 w-full">
-                <div class="flex items-center gap-3 w-full sm:w-auto">
+            <x-aura::flex align="center" justify="between" gap="4" class="w-full flex-col sm:flex-row">
+                <x-aura::flex align="center" gap="3" class="w-full sm:w-auto">
                     <div class="w-full sm:w-64">
                         <x-aura::input wire:model.live.debounce.250ms="search" placeholder="Search users..." icon="search" size="sm" />
                     </div>
@@ -150,11 +151,11 @@ class extends Component {
                         <option value="dev">Developers</option>
                         <option value="member">Members</option>
                     </x-aura::select>
-                </div>
+                </x-aura::flex>
                 <x-aura::badge variant="neutral" size="sm">
                     {{ $totalCount }} Registered {{ $totalCount === 1 ? 'Account' : 'Accounts' }}
                 </x-aura::badge>
-            </div>
+            </x-aura::flex>
         </x-slot:header>
 
         <x-aura::table borderless="true">
@@ -171,13 +172,13 @@ class extends Component {
                 @forelse ($users as $user)
                     <x-aura::table.row>
                         <x-aura::table.cell>
-                            <div class="flex items-center gap-3">
+                            <x-aura::flex align="center" gap="3">
                                 <x-aura::avatar :initials="$user['initials']" size="sm" />
                                 <div>
                                     <x-aura::heading level="3" size="xs">{{ $user['name'] }}</x-aura::heading>
                                     <x-aura::text variant="subtle" size="sm">{{ $user['email'] }}</x-aura::text>
                                 </div>
-                            </div>
+                            </x-aura::flex>
                         </x-aura::table.cell>
                         <x-aura::table.cell>
                             <x-aura::badge :variant="$user['role'] === 'admin' ? 'neutral' : 'subtle'" size="sm">
@@ -203,13 +204,13 @@ class extends Component {
                 @empty
                     <x-aura::table.row>
                         <x-aura::table.cell colspan="5">
-                            <div class="flex flex-col items-center justify-center py-10 text-center space-y-2">
+                            <x-aura::center direction="col" gap="2" class="py-10 text-center">
                                 <div class="w-10 h-10 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-500 flex items-center justify-center">
                                     <x-aura::icon name="users" size="sm" />
                                 </div>
                                 <x-aura::heading level="4" size="sm">No users found</x-aura::heading>
                                 <x-aura::text variant="subtle" size="sm">No user accounts match your search or filter criteria.</x-aura::text>
-                            </div>
+                            </x-aura::center>
                         </x-aura::table.cell>
                     </x-aura::table.row>
                 @endforelse
@@ -217,7 +218,7 @@ class extends Component {
         </x-aura::table>
 
         <x-slot:footer>
-            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 w-full">
+            <x-aura::flex align="center" justify="between" gap="4" class="w-full flex-col sm:flex-row">
                 <div class="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400">
                     Showing <span class="font-bold text-zinc-900 dark:text-white">{{ $totalCount ? (($currentPage - 1) * $perPage) + 1 : 0 }}</span> to <span class="font-bold text-zinc-900 dark:text-white">{{ min($currentPage * $perPage, $totalCount) }}</span> of <span class="font-bold text-zinc-900 dark:text-white">{{ $totalCount }}</span> items
                 </div>
@@ -237,7 +238,7 @@ class extends Component {
                         <x-aura::icon name="chevron-right" size="xs" />
                     </button>
                 </x-aura::flex>
-            </div>
+            </x-aura::flex>
         </x-slot:footer>
     </x-aura::card>
 

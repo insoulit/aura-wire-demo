@@ -46,17 +46,17 @@ class extends Component {
 <div class="w-full max-w-3xl mx-auto space-y-3">
 
     <!-- Header with Back Button -->
-    <div class="flex items-center justify-between gap-4 px-1">
+    <x-aura::flex align="center" justify="between" gap="4" class="px-1">
         <div>
             <x-aura::kicker>Administration</x-aura::kicker>
             <x-aura::heading level="1" size="lg">Create User</x-aura::heading>
         </div>
-        <div class="flex items-center gap-2">
+        <x-aura::flex align="center" gap="2">
             <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm" icon="arrow-left">
                 Back
             </x-aura::button>
-        </div>
-    </div>
+        </x-aura::flex>
+    </x-aura::flex>
 
     @if ($saved)
         <div class="fixed bottom-5 right-5 z-50">
@@ -115,7 +115,7 @@ class extends Component {
             </div>
 
             <x-slot:footer>
-                <div class="flex items-center justify-between w-full">
+                <x-aura::flex align="center" justify="between" class="w-full">
                     <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm">
                         Cancel
                     </x-aura::button>
@@ -124,7 +124,7 @@ class extends Component {
                         <x-aura::icon name="plus" size="xs" />
                         <span>Create</span>
                     </x-aura::button>
-                </div>
+                </x-aura::flex>
             </x-slot:footer>
         </x-aura::card>
     </form>
