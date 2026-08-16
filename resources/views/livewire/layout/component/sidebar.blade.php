@@ -16,8 +16,8 @@ new class extends Component {};
 
     <!-- Mobile Sidebar Drawer Sheet -->
     <x-aura::sheet name="components-mobile-sidebar" side="left" title="Component Library">
-        <div class="space-y-4 text-sm pt-2">
+        <x-aura::stack gap="4" class="text-sm pt-2">
             <livewire:layout.component.sidebar-content />
-        </div>
+        </x-aura::stack>
     </x-aura::sheet>
 </div>

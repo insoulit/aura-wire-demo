@@ -13,8 +13,8 @@ new class extends Component {};
                 A
             </div>
             <div>
-                <x-aura::heading level="1" size="xs" >Aura Wire</x-aura::heading>
-                <x-aura::text size="xs" variant="subtle" >Admin Console</x-aura::text>
+                <x-aura::heading level="1" size="xs">Aura Wire</x-aura::heading>
+                <x-aura::text size="xs" variant="subtle">Admin Console</x-aura::text>
             </div>
         </a>
     </x-slot:header>
@@ -22,7 +22,7 @@ new class extends Component {};
     <x-aura::sidebar.heading>Core</x-aura::sidebar.heading>
     <x-aura::sidebar.item href="/admin" :active="request()->is('admin')">
         <x-slot:icon>
-            <x-aura::icon name="layout-dashboard"  size="xs" />
+            <x-aura::icon name="layout-dashboard" size="xs" />
         </x-slot:icon>
         Dashboard
     </x-aura::sidebar.item>
@@ -30,19 +30,19 @@ new class extends Component {};
     <x-aura::sidebar.heading>System</x-aura::sidebar.heading>
     <x-aura::sidebar.item href="/admin/users" :active="request()->is('admin/users*')">
         <x-slot:icon>
-            <x-aura::icon name="users"  size="xs" />
+            <x-aura::icon name="users" size="xs" />
         </x-slot:icon>
         Users
     </x-aura::sidebar.item>
     <x-aura::sidebar.item href="/admin/logs" :active="request()->is('admin/logs*')">
         <x-slot:icon>
-            <x-aura::icon name="file-text"  size="xs" />
+            <x-aura::icon name="file-text" size="xs" />
         </x-slot:icon>
         Logs
     </x-aura::sidebar.item>
     <x-aura::sidebar.item href="/admin/setting" :active="request()->is('admin/setting*')">
         <x-slot:icon>
-            <x-aura::icon name="settings"  size="xs" />
+            <x-aura::icon name="settings" size="xs" />
         </x-slot:icon>
         Settings
     </x-aura::sidebar.item>
@@ -51,40 +51,40 @@ new class extends Component {};
         <x-aura::sidebar.heading>Portals</x-aura::sidebar.heading>
         <x-aura::sidebar.item href="/components" :active="request()->is('components*')" badge="Docs">
             <x-slot:icon>
-                <x-aura::icon name="layers"  size="xs" />
+                <x-aura::icon name="layers" size="xs" />
             </x-slot:icon>
             Components
         </x-aura::sidebar.item>
         <x-aura::sidebar.item href="/guest" :active="request()->is('guest*')">
             <x-slot:icon>
-                <x-aura::icon name="globe"  size="xs" />
+                <x-aura::icon name="globe" size="xs" />
             </x-slot:icon>
             Guest
         </x-aura::sidebar.item>
         <x-aura::sidebar.item href="/user" :active="request()->is('user*')">
             <x-slot:icon>
-                <x-aura::icon name="user"  size="xs" />
+                <x-aura::icon name="user" size="xs" />
             </x-slot:icon>
             User
         </x-aura::sidebar.item>
         <x-aura::sidebar.item href="/admin" :active="false">
             <x-slot:icon>
-                <x-aura::icon name="shield-check"  size="xs" />
+                <x-aura::icon name="shield-check" size="xs" />
             </x-slot:icon>
             Admin
         </x-aura::sidebar.item>
     </div>
 
     <x-slot:footer>
-        <div class="space-y-3">
-            <div class="flex items-center justify-between">
+        <x-aura::stack gap="3">
+            <x-aura::flex align="center" justify="between">
                 <span class="text-xs font-semibold text-zinc-500 dark:text-zinc-400">Theme Mode</span>
                 <x-theme-switcher />
-            </div>
-            <div class="flex items-center justify-between text-xs pt-2 border-t border-zinc-100 dark:border-zinc-800">
+            </x-aura::flex>
+            <x-aura::flex align="center" justify="between" class="pt-2 border-t border-zinc-100 dark:border-zinc-800">
                 <x-aura::text size="xs" variant="subtle">DDEV Local</x-aura::text>
                 <x-aura::badge variant="negative">Admin</x-aura::badge>
-            </div>
-        </div>
+            </x-aura::flex>
+        </x-aura::stack>
     </x-slot:footer>
 </x-aura::sidebar>

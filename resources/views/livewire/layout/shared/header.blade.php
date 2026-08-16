@@ -50,7 +50,7 @@ new class extends Component {};
 
         <div class="hidden md:inline-flex">
             <x-aura::button variant="outline" size="md" icon="package" href="https://packagist.org/packages/insoulit/aura-wire" target="_blank" rel="noopener noreferrer">
-                Packagist
+                <span>Packagist</span>
             </x-aura::button>
         </div>
         <div class="hidden md:inline-flex">
