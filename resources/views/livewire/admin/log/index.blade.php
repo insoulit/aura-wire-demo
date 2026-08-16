@@ -236,7 +236,7 @@ class extends Component {
                         @endif
                     </x-aura::flex>
 
-                    <div wire:ignore.self>
+                    <div wire:ignore.self class="w-full sm:w-auto flex justify-center sm:justify-end">
                         <x-aura::dropdown align="right" width="48">
                             <x-slot:trigger>
                                 <x-aura::button type="button" variant="secondary" size="sm">
@@ -261,17 +261,17 @@ class extends Component {
                     <x-aura::table.column class="w-10">
                         <x-aura::checkbox size="xs" wire:model.live="selectAll" aria-label="Select All" />
                     </x-aura::table.column>
-                    <x-aura::table.column sortable wire:click="sortBy('time')" :sorted="$sortField === 'time' ? $sortDirection : null">Timestamp</x-aura::table.column>
+                    <x-aura::table.column nowrap="true" sortable wire:click="sortBy('time')" :sorted="$sortField === 'time' ? $sortDirection : null">Timestamp</x-aura::table.column>
                     @if ($visibleColumns['level'] ?? true)
-                        <x-aura::table.column sortable wire:click="sortBy('level')" :sorted="$sortField === 'level' ? $sortDirection : null">Level</x-aura::table.column>
+                        <x-aura::table.column nowrap="true" sortable wire:click="sortBy('level')" :sorted="$sortField === 'level' ? $sortDirection : null">Level</x-aura::table.column>
                     @endif
                     @if ($visibleColumns['env'] ?? true)
-                        <x-aura::table.column sortable wire:click="sortBy('env')" :sorted="$sortField === 'env' ? $sortDirection : null">Environment</x-aura::table.column>
+                        <x-aura::table.column nowrap="true" sortable wire:click="sortBy('env')" :sorted="$sortField === 'env' ? $sortDirection : null">Environment</x-aura::table.column>
                     @endif
                     @if ($visibleColumns['message'] ?? true)
                         <x-aura::table.column sortable wire:click="sortBy('message')" :sorted="$sortField === 'message' ? $sortDirection : null">Message</x-aura::table.column>
                     @endif
-                    <x-aura::table.column align="right">Actions</x-aura::table.column>
+                    <x-aura::table.column nowrap="true" align="right">Actions</x-aura::table.column>
                 </x-aura::table.row>
             </x-aura::table.header>
             <x-aura::table.body>
@@ -280,25 +280,25 @@ class extends Component {
                         <x-aura::table.cell class="w-10">
                             <x-aura::checkbox size="xs" wire:model.live="selected" value="{{ (string)$log['id'] }}" aria-label="Select row" />
                         </x-aura::table.cell>
-                        <x-aura::table.cell>
+                        <x-aura::table.cell nowrap="true">
                             <x-aura::text variant="mono" size="sm">{{ $log['time'] }}</x-aura::text>
                         </x-aura::table.cell>
                         @if ($visibleColumns['level'] ?? true)
-                            <x-aura::table.cell>
+                            <x-aura::table.cell nowrap="true">
                                 <x-aura::badge :variant="$log['variant']" size="sm">{{ $log['level'] }}</x-aura::badge>
                             </x-aura::table.cell>
                         @endif
                         @if ($visibleColumns['env'] ?? true)
-                            <x-aura::table.cell>
+                            <x-aura::table.cell nowrap="true">
                                 <x-aura::text size="sm">{{ $log['env'] }}</x-aura::text>
                             </x-aura::table.cell>
                         @endif
                         @if ($visibleColumns['message'] ?? true)
-                            <x-aura::table.cell>
-                                <x-aura::text size="sm">{{ $log['message'] }}</x-aura::text>
+                            <x-aura::table.cell truncate="true">
+                                <x-aura::text size="sm" truncate="true">{{ $log['message'] }}</x-aura::text>
                             </x-aura::table.cell>
                         @endif
-                        <x-aura::table.cell align="right">
+                        <x-aura::table.cell nowrap="true" align="right">
                             <x-aura::icon-button icon="show" variant="subtle" size="sm" shape="circle" label="View" href="/admin/logs/show" wire:navigate />
                         </x-aura::table.cell>
                     </x-aura::table.row>

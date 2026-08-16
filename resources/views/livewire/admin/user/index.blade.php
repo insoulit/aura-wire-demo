@@ -268,7 +268,7 @@ class extends Component {
                         @endif
                     </x-aura::flex>
 
-                    <div wire:ignore.self>
+                    <div wire:ignore.self class="w-full sm:w-auto flex justify-center sm:justify-end">
                         <x-aura::dropdown align="right" width="48">
                             <x-slot:trigger>
                                 <x-aura::button type="button" variant="secondary" size="sm">
