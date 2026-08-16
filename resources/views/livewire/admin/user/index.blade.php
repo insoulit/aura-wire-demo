@@ -13,8 +13,17 @@ class extends Component {
 
     public string $search = '';
     public string $role = 'all';
+    public string $status = 'all';
+    public string $sortField = 'name';
+    public string $sortDirection = 'asc';
     public int $perPage = 6;
     public int $page = 1;
+
+    public array $visibleColumns = [
+        'role' => true,
+        'status' => true,
+        'joined' => true,
+    ];
 
     public function updatingSearch(): void
     {
@@ -23,6 +32,28 @@ class extends Component {
 
     public function updatingRole(): void
     {
+        $this->page = 1;
+    }
+
+    public function updatingStatus(): void
+    {
+        $this->page = 1;
+    }
+
+    public function resetFilters(): void
+    {
+        $this->reset(['search', 'role', 'status']);
+        $this->page = 1;
+    }
+
+    public function sortBy(string $field): void
+    {
+        if ($this->sortField === $field) {
+            $this->sortDirection = $this->sortDirection === 'asc' ? 'desc' : 'asc';
+        } else {
+            $this->sortField = $field;
+            $this->sortDirection = 'asc';
+        }
         $this->page = 1;
     }
 
@@ -91,18 +122,23 @@ class extends Component {
                 str_contains(strtolower($user['email']), strtolower($this->search));
             
             $matchesRole = $this->role === 'all' || $user['role'] === $this->role;
+            $matchesStatus = $this->status === 'all' || $user['status'] === $this->status;
 
-            return $matchesSearch && $matchesRole;
+            return $matchesSearch && $matchesRole && $matchesStatus;
         });
 
-        $totalCount = $filtered->count();
+        $sorted = $this->sortDirection === 'desc' 
+            ? $filtered->sortByDesc($this->sortField) 
+            : $filtered->sortBy($this->sortField);
+
+        $totalCount = $sorted->count();
         $totalPages = max(1, (int) ceil($totalCount / $this->perPage));
         
         if ($this->page > $totalPages) {
             $this->page = $totalPages;
         }
 
-        $paginatedUsers = $filtered->slice(($this->page - 1) * $this->perPage, $this->perPage);
+        $paginatedUsers = $sorted->slice(($this->page - 1) * $this->perPage, $this->perPage);
 
         return [
             'users' => $paginatedUsers,
@@ -126,7 +162,7 @@ class extends Component {
             </div>
             <x-aura::flex align="center" gap="2">
                 <x-aura::button variant="secondary" size="sm">
-                    <x-aura::icon name="arrow-down-tray" size="xs" />
+                    <x-aura::icon name="download" size="xs" />
                     <span>Export</span>
                 </x-aura::button>
                 <x-aura::button href="/admin/users/create" wire:navigate variant="primary" size="sm">
@@ -138,33 +174,69 @@ class extends Component {
     </div>
 
     <!-- Ultra Clean Unified Table Card -->
-    <x-aura::card>
+    <x-aura::card :divided="false">
         <x-slot:header>
-            <x-aura::flex align="center" justify="between" gap="4" class="w-full flex-col sm:flex-row">
-                <x-aura::flex align="center" gap="3" class="w-full sm:w-auto">
-                    <div class="w-full sm:w-64">
+            <x-aura::flex align="center" justify="between" gap="3" :wrap="true" class="w-full">
+                <x-aura::flex align="center" gap="2.5" :wrap="true" class="w-full sm:w-auto">
+                    <div class="w-full sm:w-60">
                         <x-aura::input wire:model.live.debounce.250ms="search" placeholder="Search users..." icon="search" size="sm" />
                     </div>
-                    <x-aura::select wire:model.live="role" size="sm">
-                        <option value="all">All Roles</option>
-                        <option value="admin">Admins</option>
-                        <option value="dev">Developers</option>
-                        <option value="member">Members</option>
-                    </x-aura::select>
+                    <div class="w-full sm:w-36">
+                        <x-aura::select wire:model.live="role" size="sm">
+                            <option value="all">All Roles</option>
+                            <option value="admin">Admins</option>
+                            <option value="dev">Developers</option>
+                            <option value="member">Members</option>
+                        </x-aura::select>
+                    </div>
+                    <div class="w-full sm:w-36">
+                        <x-aura::select wire:model.live="status" size="sm">
+                            <option value="all">All Statuses</option>
+                            <option value="Active">Active</option>
+                            <option value="Pending">Pending</option>
+                            <option value="Inactive">Inactive</option>
+                        </x-aura::select>
+                    </div>
+
+                    @if ($search !== '' || $role !== 'all' || $status !== 'all')
+                        <x-aura::button wire:click="resetFilters" variant="subtle" size="sm">
+                            <x-aura::icon name="x" size="xs" />
+                            <span>Reset</span>
+                        </x-aura::button>
+                    @endif
                 </x-aura::flex>
-                <x-aura::badge variant="neutral" size="sm">
-                    {{ $totalCount }} Registered {{ $totalCount === 1 ? 'Account' : 'Accounts' }}
-                </x-aura::badge>
+
+                <div wire:ignore.self>
+                    <x-aura::dropdown align="right" width="48">
+                        <x-slot:trigger>
+                            <x-aura::button type="button" variant="secondary" size="sm">
+                                <x-aura::icon name="columns" size="xs" />
+                                <span>Columns</span>
+                            </x-aura::button>
+                        </x-slot:trigger>
+
+                        <x-aura::dropdown.header>Columns</x-aura::dropdown.header>
+                        <x-aura::dropdown.checkbox wire:model.live="visibleColumns.role" label="Role" />
+                        <x-aura::dropdown.checkbox wire:model.live="visibleColumns.status" label="Status" />
+                        <x-aura::dropdown.checkbox wire:model.live="visibleColumns.joined" label="Joined Date" />
+                    </x-aura::dropdown>
+                </div>
             </x-aura::flex>
         </x-slot:header>
 
         <x-aura::table borderless="true">
             <x-aura::table.header>
                 <x-aura::table.row>
-                    <x-aura::table.column>User</x-aura::table.column>
-                    <x-aura::table.column>Role</x-aura::table.column>
-                    <x-aura::table.column>Status</x-aura::table.column>
-                    <x-aura::table.column>Joined Date</x-aura::table.column>
+                    <x-aura::table.column sortable wire:click="sortBy('name')" :sorted="$sortField === 'name' ? $sortDirection : null">User</x-aura::table.column>
+                    @if ($visibleColumns['role'] ?? true)
+                        <x-aura::table.column sortable wire:click="sortBy('role')" :sorted="$sortField === 'role' ? $sortDirection : null">Role</x-aura::table.column>
+                    @endif
+                    @if ($visibleColumns['status'] ?? true)
+                        <x-aura::table.column sortable wire:click="sortBy('status')" :sorted="$sortField === 'status' ? $sortDirection : null">Status</x-aura::table.column>
+                    @endif
+                    @if ($visibleColumns['joined'] ?? true)
+                        <x-aura::table.column sortable wire:click="sortBy('joined')" :sorted="$sortField === 'joined' ? $sortDirection : null">Joined Date</x-aura::table.column>
+                    @endif
                     <x-aura::table.column align="right">Actions</x-aura::table.column>
                 </x-aura::table.row>
             </x-aura::table.header>
@@ -180,19 +252,25 @@ class extends Component {
                                 </div>
                             </x-aura::flex>
                         </x-aura::table.cell>
-                        <x-aura::table.cell>
-                            <x-aura::badge :variant="$user['role'] === 'admin' ? 'neutral' : 'subtle'" size="sm">
-                                {{ $user['role_label'] }}
-                            </x-aura::badge>
-                        </x-aura::table.cell>
-                        <x-aura::table.cell>
-                            <x-aura::badge :variant="$user['status'] === 'Active' ? 'neutral' : 'subtle'" size="sm">
-                                {{ $user['status'] }}
-                            </x-aura::badge>
-                        </x-aura::table.cell>
-                        <x-aura::table.cell>
-                            <x-aura::text size="sm">{{ $user['joined'] }}</x-aura::text>
-                        </x-aura::table.cell>
+                        @if ($visibleColumns['role'] ?? true)
+                            <x-aura::table.cell>
+                                <x-aura::badge :variant="$user['role'] === 'admin' ? 'neutral' : 'subtle'" size="sm">
+                                    {{ $user['role_label'] }}
+                                </x-aura::badge>
+                            </x-aura::table.cell>
+                        @endif
+                        @if ($visibleColumns['status'] ?? true)
+                            <x-aura::table.cell>
+                                <x-aura::badge :variant="$user['status'] === 'Active' ? 'neutral' : 'subtle'" size="sm">
+                                    {{ $user['status'] }}
+                                </x-aura::badge>
+                            </x-aura::table.cell>
+                        @endif
+                        @if ($visibleColumns['joined'] ?? true)
+                            <x-aura::table.cell>
+                                <x-aura::text size="sm">{{ $user['joined'] }}</x-aura::text>
+                            </x-aura::table.cell>
+                        @endif
                         <x-aura::table.cell align="right">
                             <x-aura::flex align="center" justify="end" gap="1.5">
                                 <x-aura::icon-button icon="show" variant="subtle" size="sm" shape="circle" label="View" href="/admin/users/show?id={{ $user['id'] }}" wire:navigate />
@@ -203,7 +281,7 @@ class extends Component {
                     </x-aura::table.row>
                 @empty
                     <x-aura::table.row>
-                        <x-aura::table.cell colspan="5">
+                        <x-aura::table.cell :colspan="2 + count(array_filter($visibleColumns))">
                             <x-aura::center direction="col" gap="2" class="py-10 text-center">
                                 <div class="w-10 h-10 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-500 flex items-center justify-center">
                                     <x-aura::icon name="users" size="sm" />
