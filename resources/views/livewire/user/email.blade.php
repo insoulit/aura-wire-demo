@@ -21,11 +21,11 @@ class extends Component {
 
 ?>
 
-<div class="max-w-2xl mx-auto space-y-6 py-4">
+<x-aura::stack gap="6" class="max-w-2xl mx-auto py-4">
 
     <!-- Top Header -->
-    <div class="space-y-1">
-        <div class="flex items-center justify-between gap-4">
+    <x-aura::stack gap="1">
+        <x-aura::flex align="center" justify="between" gap="4">
             <x-aura::heading level="1" size="lg">Change Email Address</x-aura::heading>
             <div class="shrink-0">
                 <x-aura::button variant="secondary" size="sm" href="/user" wire:navigate>
@@ -33,11 +33,11 @@ class extends Component {
                     <span>Back</span>
                 </x-aura::button>
             </div>
-        </div>
-        <x-aura::subheading size="xs">
+        </x-aura::flex>
+        <x-aura::subheading size="sm">
             Update your primary login and notification email address.
         </x-aura::subheading>
-    </div>
+    </x-aura::stack>
 
     @if($sent)
         <x-aura::banner variant="dark" dismissible="true">
@@ -47,34 +47,39 @@ class extends Component {
 
     <!-- Email Form Card -->
     <x-aura::card>
-        <div class="flex items-center justify-between mb-6">
-            <div class="flex items-center gap-4">
+        <x-aura::flex align="center" justify="between" class="mb-6">
+            <x-aura::flex align="center" gap="4">
                 <x-aura::avatar initials="AK" size="lg" />
                 <div>
                     <x-aura::heading level="2" size="sm">Alex Kovacs</x-aura::heading>
-                    <x-aura::text variant="subtle" size="xs">alex.kovacs@example.com</x-aura::text>
+                    <x-aura::text variant="subtle" size="sm">alex.kovacs@example.com</x-aura::text>
                 </div>
-            </div>
+            </x-aura::flex>
             <x-aura::badge variant="neutral" size="sm">Primary Address</x-aura::badge>
-        </div>
+        </x-aura::flex>
 
-        <form wire:submit="updateEmail" class="space-y-5">
-            <x-aura::field label="Current Email Address">
-                <x-aura::input wire:model="currentEmail" disabled readonly />
-            </x-aura::field>
+        <form wire:submit="updateEmail">
+            <x-aura::stack gap="5">
+                <x-aura::field label="Current Email Address">
+                    <x-aura::input wire:model="currentEmail" size="sm" disabled readonly />
+                </x-aura::field>
 
-            <x-aura::field label="New Email Address" hint="Must be a valid email address you have access to." required>
-                <x-aura::input wire:model="newEmail" type="email" placeholder="alex.new@example.com" required />
-            </x-aura::field>
+                <x-aura::field label="New Email Address" hint="Must be a valid email address you have access to." required>
+                    <x-aura::input wire:model="newEmail" type="email" placeholder="alex.new@example.com" size="sm" required />
+                </x-aura::field>
 
-            <x-aura::field label="Current Password Confirmation" hint="Required to confirm security changes." required>
-                <x-aura::input wire:model="confirmPassword" type="password" placeholder="••••••••" required />
-            </x-aura::field>
+                <x-aura::field label="Current Password Confirmation" hint="Required to confirm security changes." required>
+                    <x-aura::input wire:model="confirmPassword" type="password" placeholder="••••••••" size="sm" required />
+                </x-aura::field>
 
-            <div class="pt-2 flex justify-end">
-                <x-aura::button variant="primary" size="md" type="submit">Update Email &amp; Send Code</x-aura::button>
-            </div>
+                <x-aura::flex align="center" justify="end" class="pt-2">
+                    <x-aura::button variant="primary" size="sm" type="submit">
+                        <x-aura::icon name="mail" size="xs" />
+                        <span>Update</span>
+                    </x-aura::button>
+                </x-aura::flex>
+            </x-aura::stack>
         </form>
     </x-aura::card>
 
-</div>
+</x-aura::stack>

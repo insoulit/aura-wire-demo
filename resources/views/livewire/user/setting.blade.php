@@ -24,11 +24,11 @@ class extends Component {
 
 ?>
 
-<div class="max-w-2xl mx-auto space-y-6 py-4">
+<x-aura::stack gap="6" class="max-w-2xl mx-auto py-4">
 
     <!-- Top Header -->
-    <div class="space-y-1">
-        <div class="flex items-center justify-between gap-4">
+    <x-aura::stack gap="1">
+        <x-aura::flex align="center" justify="between" gap="4">
             <x-aura::heading level="1" size="lg">Account &amp; Workspace Settings</x-aura::heading>
             <div class="shrink-0">
                 <x-aura::button variant="secondary" size="sm" href="/user" wire:navigate>
@@ -36,11 +36,11 @@ class extends Component {
                     <span>Back</span>
                 </x-aura::button>
             </div>
-        </div>
-        <x-aura::subheading size="xs">
+        </x-aura::flex>
+        <x-aura::subheading size="sm">
             Manage your personal profile, 2FA security, notification preferences, and team defaults.
         </x-aura::subheading>
-    </div>
+    </x-aura::stack>
 
     @if($saved)
         <x-aura::banner variant="dark" dismissible="true">
@@ -50,65 +50,70 @@ class extends Component {
 
     <!-- Main Settings Form Card -->
     <x-aura::card>
-        <div class="flex items-center justify-between mb-6">
-            <div class="flex items-center gap-4">
+        <x-aura::flex align="center" justify="between" class="mb-6">
+            <x-aura::flex align="center" gap="4">
                 <x-aura::avatar initials="AK" size="lg" />
                 <div>
                     <x-aura::heading level="2" size="sm">Alex Kovacs</x-aura::heading>
-                    <x-aura::text variant="subtle" size="xs">alex.kovacs@example.com</x-aura::text>
+                    <x-aura::text variant="subtle" size="sm">alex.kovacs@example.com</x-aura::text>
                 </div>
-            </div>
+            </x-aura::flex>
             <x-aura::badge variant="positive" size="sm">Active Account</x-aura::badge>
-        </div>
+        </x-aura::flex>
 
-        <form wire:submit="save" class="space-y-6">
-            <!-- Inputs Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <x-aura::field label="First Name" required>
-                    <x-aura::input wire:model="firstName" placeholder="Enter first name" required />
-                </x-aura::field>
+        <form wire:submit="save">
+            <x-aura::stack gap="6">
+                <!-- Inputs Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <x-aura::field label="First Name" required>
+                        <x-aura::input wire:model="firstName" placeholder="Enter first name" size="sm" required />
+                    </x-aura::field>
 
-                <x-aura::field label="Last Name" required>
-                    <x-aura::input wire:model="lastName" placeholder="Enter last name" required />
-                </x-aura::field>
+                    <x-aura::field label="Last Name" required>
+                        <x-aura::input wire:model="lastName" placeholder="Enter last name" size="sm" required />
+                    </x-aura::field>
 
-                <x-aura::field label="Email Address" required hint="Used for login &amp; security alerts">
-                    <x-aura::input type="email" wire:model="email" placeholder="email@example.com" required />
-                </x-aura::field>
+                    <x-aura::field label="Email Address" required hint="Used for login &amp; security alerts">
+                        <x-aura::input type="email" wire:model="email" placeholder="email@example.com" size="sm" required />
+                    </x-aura::field>
 
-                <x-aura::field label="Timezone &amp; Region">
-                    <x-aura::select wire:model="timezone">
-                        <option value="UTC">UTC (Coordinated Universal Time)</option>
-                        <option value="EST">EST (Eastern Standard Time)</option>
-                        <option value="CET">CET (Central European Time)</option>
-                    </x-aura::select>
-                </x-aura::field>
-            </div>
-
-            <!-- Bio Textarea -->
-            <x-aura::field label="Bio &amp; Summary" hint="Brief summary shown on team project lead cards">
-                <x-aura::textarea wire:model="bio" rows="3" placeholder="Tell us about your role and expertise..." />
-            </x-aura::field>
-
-            <!-- 2FA Security Switch -->
-            <div class="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-800/40 border border-zinc-200 dark:border-zinc-700/60">
-                <x-aura::switch wire:model="twoFactor" label="Two Factor Authentication (2FA)" description="Require an authentication code when signing into your workspace." />
-            </div>
-
-            <!-- Notifications Checkboxes -->
-            <div class="pt-2 space-y-3">
-                <x-aura::heading level="2" size="xs">Notification Preferences</x-aura::heading>
-                <div class="space-y-3">
-                    <x-aura::checkbox label="Project Activity Summaries" description="Receive a weekly digest of project progress and team updates." checked />
-                    <x-aura::checkbox label="Security &amp; Sign in Alerts" description="Get immediate email notifications when new devices log into your account." checked />
+                    <x-aura::field label="Timezone &amp; Region">
+                        <x-aura::select wire:model="timezone" size="sm">
+                            <option value="UTC">UTC (Coordinated Universal Time)</option>
+                            <option value="EST">EST (Eastern Standard Time)</option>
+                            <option value="CET">CET (Central European Time)</option>
+                        </x-aura::select>
+                    </x-aura::field>
                 </div>
-            </div>
 
-            <!-- Submit Button -->
-            <div class="pt-2 flex justify-end">
-                <x-aura::button variant="primary" size="md" type="submit">Save</x-aura::button>
-            </div>
+                <!-- Bio Textarea -->
+                <x-aura::field label="Bio &amp; Summary" hint="Brief summary shown on team project lead cards">
+                    <x-aura::textarea wire:model="bio" rows="3" placeholder="Tell us about your role and expertise..." />
+                </x-aura::field>
+
+                <!-- 2FA Security Switch -->
+                <div class="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-800/40 border border-zinc-200 dark:border-zinc-700/60">
+                    <x-aura::switch wire:model="twoFactor" label="Two Factor Authentication (2FA)" description="Require an authentication code when signing into your workspace." size="sm" />
+                </div>
+
+                <!-- Notifications Checkboxes -->
+                <x-aura::stack gap="3" class="pt-2">
+                    <x-aura::heading level="2" size="xs">Notification Preferences</x-aura::heading>
+                    <x-aura::stack gap="3">
+                        <x-aura::checkbox label="Project Activity Summaries" description="Receive a weekly digest of project progress and team updates." size="sm" checked />
+                        <x-aura::checkbox label="Security &amp; Sign in Alerts" description="Get immediate email notifications when new devices log into your account." size="sm" checked />
+                    </x-aura::stack>
+                </x-aura::stack>
+
+                <!-- Submit Button -->
+                <x-aura::flex align="center" justify="end" class="pt-2">
+                    <x-aura::button variant="primary" size="sm" type="submit">
+                        <x-aura::icon name="check" size="xs" />
+                        <span>Save</span>
+                    </x-aura::button>
+                </x-aura::flex>
+            </x-aura::stack>
         </form>
     </x-aura::card>
 
-</div>
+</x-aura::stack>
