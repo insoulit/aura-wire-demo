@@ -81,6 +81,8 @@ it('returns a successful 200 response for all component, portal, design block, a
     // Component Suite Index & Setup Guide
     'Component Directory' => '/components',
     'Installation Guide' => '/components/installation',
+    'Icon Library Page' => '/components/icon-library',
+    'Icons Alias' => '/components/icons',
 
     // Typography Components
     'Kicker Component' => '/components/kicker',
@@ -120,12 +122,12 @@ it('returns a successful 200 response for all component, portal, design block, a
     'Accordion Component' => '/components/accordion',
     'Avatar Component' => '/components/avatar',
     'Badge Component' => '/components/badge',
+    'Icon Component' => '/components/icon',
     'Tag Component' => '/components/tag',
     'Separator Component' => '/components/separator',
     'Progress Bar Component' => '/components/progress-bar',
     'Skeleton Component' => '/components/skeleton',
     'Empty State Component' => '/components/empty-state',
-    'Icon Library Component' => '/components/icon',
 
     // Data Components
     'Table Component' => '/components/table',

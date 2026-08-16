@@ -12,7 +12,7 @@ new class extends Component {
             $activeGroup = 'actions';
         } elseif (request()->is('components/field', 'components/label', 'components/error', 'components/input', 'components/textarea', 'components/rich-text', 'components/pin-code', 'components/select', 'components/combobox', 'components/date-picker', 'components/checkbox', 'components/radio', 'components/switch', 'components/rating', 'components/file-upload')) {
             $activeGroup = 'form';
-        } elseif (request()->is('components/card', 'components/tabs', 'components/accordion', 'components/avatar', 'components/badge', 'components/tag', 'components/separator', 'components/progress-bar', 'components/skeleton', 'components/empty-state')) {
+        } elseif (request()->is('components/card', 'components/tabs', 'components/accordion', 'components/avatar', 'components/badge', 'components/icon', 'components/tag', 'components/separator', 'components/progress-bar', 'components/skeleton', 'components/empty-state')) {
             $activeGroup = 'display';
         } elseif (request()->is('components/table', 'components/stat', 'components/timeline', 'components/code', 'components/list', 'components/numbered-list')) {
             $activeGroup = 'data';
@@ -49,12 +49,9 @@ new class extends Component {
                 </a>
             </li>
             <li>
-                <a href="/components/icon" class="flex items-center justify-between px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/icon') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold shadow-2xs' : 'text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/60' }}">
-                    <div class="flex items-center gap-2.5">
-                        <svg class="w-4 h-4 shrink-0 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
-                        Icon library
-                    </div>
-                    <span class="px-1.5 py-0.5 text-[10px] font-mono font-bold uppercase rounded bg-indigo-100 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300">1000+</span>
+                <a href="/components/icon-library" class="flex items-center gap-2.5 px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/icon-library', 'components/icons') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold shadow-2xs' : 'text-zinc-700 dark:text-zinc-300 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/60' }}">
+                    <svg class="w-4 h-4 shrink-0 text-zinc-500 dark:text-zinc-400 {{ request()->is('components/icon-library', 'components/icons') ? 'text-white dark:text-zinc-900' : '' }}" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                    Icon library
                 </a>
             </li>
         </ul>
@@ -174,7 +171,7 @@ new class extends Component {
 
     <!-- 4. Display Dropdown -->
     @php
-        $isDisplayActive = request()->is('components/card', 'components/tabs', 'components/accordion', 'components/avatar', 'components/badge', 'components/tag', 'components/separator', 'components/progress-bar', 'components/skeleton', 'components/empty-state');
+        $isDisplayActive = request()->is('components/card', 'components/tabs', 'components/accordion', 'components/avatar', 'components/badge', 'components/icon', 'components/tag', 'components/separator', 'components/progress-bar', 'components/skeleton', 'components/empty-state');
     @endphp
     <div class="space-y-0.5">
         <button
@@ -202,6 +199,7 @@ new class extends Component {
             <li><a href="/components/accordion" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/accordion') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Accordion</a></li>
             <li><a href="/components/avatar" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/avatar') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Avatar</a></li>
             <li><a href="/components/badge" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/badge') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Badge</a></li>
+            <li><a href="/components/icon" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/icon') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Icon</a></li>
             <li><a href="/components/tag" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/tag') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Tag</a></li>
             <li><a href="/components/separator" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/separator') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Separator</a></li>
             <li><a href="/components/progress-bar" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/progress-bar') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Progress</a></li>

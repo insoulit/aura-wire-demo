@@ -30,7 +30,7 @@ class extends Component {};
 
                 <div class="max-w-lg mx-auto">
                     <x-aura::subheading size="md">
-                        Copy paste composite design blocks with live previews, or explore complete end-to-end full page application templates.
+                        Copy paste composite design blocks with live previews, or explore complete end to end full page application templates.
                     </x-aura::subheading>
                 </div>
             </div>
@@ -484,14 +484,14 @@ class extends Component {};
     </div>
 
     <!-- ========================================================================= -->
-    <!-- SECTION 2: FULL TEMPLATE (5 End-to-End Application Templates) -->
+    <!-- SECTION 2: FULL TEMPLATE (5 End to End Application Templates) -->
     <!-- ========================================================================= -->
     <div id="full-template" class="space-y-8 scroll-mt-24 pt-8 sm:pt-12">
         <!-- Section 2 Header -->
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div class="space-y-1">
                 <x-aura::heading level="2" size="lg">Full Template</x-aura::heading>
-                <x-aura::subheading>Explore complete end-to-end page layout templates built with Aura Wire components.</x-aura::subheading>
+                <x-aura::subheading>Explore complete end to end page layout templates built with Aura Wire components.</x-aura::subheading>
             </div>
             <div class="flex items-center gap-3">
                 <x-aura::badge variant="subtle" size="sm">5 Templates</x-aura::badge>

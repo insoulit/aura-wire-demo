@@ -201,7 +201,7 @@ class extends Component {};
             </div>
             <x-aura::heading level="2" size="md">Display</x-aura::heading>
             <div class="ml-auto">
-                <x-aura::badge variant="neutral">10 Components</x-aura::badge>
+                <x-aura::badge variant="neutral">11 Components</x-aura::badge>
             </div>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 [&>:nth-child(3n+1):last-child]:lg:col-span-3 [&>:nth-child(3n+2):last-child]:lg:col-span-2 [&>:nth-child(2n+1):last-child]:sm:max-lg:col-span-2">
@@ -228,6 +228,11 @@ class extends Component {};
             <x-aura::card href="/components/badge">
                 <x-aura::heading level="3" size="sm">Badge</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::badge&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/icon">
+                <x-aura::heading level="3" size="sm">Icon</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::icon&gt;</x-aura::text>
             </x-aura::card>
 
             <x-aura::card href="/components/tag">

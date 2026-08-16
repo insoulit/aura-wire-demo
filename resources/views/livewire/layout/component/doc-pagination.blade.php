@@ -8,7 +8,7 @@ new class extends Component {
         $docsPages = [
             ['title' => 'Overview', 'url' => '/components'],
             ['title' => 'Installation', 'url' => '/components/installation'],
-            ['title' => 'Icon library', 'url' => '/components/icon'],
+            ['title' => 'Icon library', 'url' => '/components/icon-library'],
 
             // 1. Typography
             ['title' => 'Kicker', 'url' => '/components/kicker'],
@@ -47,6 +47,7 @@ new class extends Component {
             ['title' => 'Accordion', 'url' => '/components/accordion'],
             ['title' => 'Avatar', 'url' => '/components/avatar'],
             ['title' => 'Badge', 'url' => '/components/badge'],
+            ['title' => 'Icon', 'url' => '/components/icon'],
             ['title' => 'Tag', 'url' => '/components/tag'],
             ['title' => 'Separator', 'url' => '/components/separator'],
             ['title' => 'Progress Bar', 'url' => '/components/progress-bar'],

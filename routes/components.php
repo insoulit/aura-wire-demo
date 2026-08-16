@@ -5,6 +5,8 @@ use Livewire\Volt\Volt;
 // Component Showcase Index & Installation
 Volt::route('/components', 'component.index')->name('component.index');
 Volt::route('/components/installation', 'component.installation')->name('component.installation');
+Volt::route('/components/icon-library', 'component.icon-library')->name('component.icon-library');
+Volt::route('/components/icons', 'component.icon-library')->name('component.icons');
 
 // Typography Group
 Volt::route('/components/kicker', 'component.typography.kicker')->name('component.kicker');
