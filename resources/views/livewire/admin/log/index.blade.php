@@ -246,9 +246,9 @@ class extends Component {
                             </x-slot:trigger>
 
                             <x-aura::dropdown.header>Columns</x-aura::dropdown.header>
-                            <x-aura::dropdown.checkbox wire:model.live="visibleColumns.level" label="Level" />
-                            <x-aura::dropdown.checkbox wire:model.live="visibleColumns.env" label="Environment" />
-                            <x-aura::dropdown.checkbox wire:model.live="visibleColumns.message" label="Message" />
+                            <x-aura::dropdown.checkbox size="xs" wire:model.live="visibleColumns.level" label="Level" />
+                            <x-aura::dropdown.checkbox size="xs" wire:model.live="visibleColumns.env" label="Environment" />
+                            <x-aura::dropdown.checkbox size="xs" wire:model.live="visibleColumns.message" label="Message" />
                         </x-aura::dropdown>
                     </div>
                 </x-aura::flex>
@@ -259,7 +259,7 @@ class extends Component {
             <x-aura::table.header>
                 <x-aura::table.row>
                     <x-aura::table.column class="w-10">
-                        <x-aura::checkbox wire:model.live="selectAll" aria-label="Select All" />
+                        <x-aura::checkbox size="xs" wire:model.live="selectAll" aria-label="Select All" />
                     </x-aura::table.column>
                     <x-aura::table.column sortable wire:click="sortBy('time')" :sorted="$sortField === 'time' ? $sortDirection : null">Timestamp</x-aura::table.column>
                     @if ($visibleColumns['level'] ?? true)
@@ -278,7 +278,7 @@ class extends Component {
                 @forelse ($logs as $log)
                     <x-aura::table.row :class="in_array((string)$log['id'], $selected) ? 'bg-zinc-100/60 dark:bg-zinc-800/40' : ''">
                         <x-aura::table.cell class="w-10">
-                            <x-aura::checkbox wire:model.live="selected" value="{{ (string)$log['id'] }}" aria-label="Select row" />
+                            <x-aura::checkbox size="xs" wire:model.live="selected" value="{{ (string)$log['id'] }}" aria-label="Select row" />
                         </x-aura::table.cell>
                         <x-aura::table.cell>
                             <x-aura::text variant="mono" size="sm">{{ $log['time'] }}</x-aura::text>

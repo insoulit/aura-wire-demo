@@ -278,9 +278,9 @@ class extends Component {
                             </x-slot:trigger>
 
                             <x-aura::dropdown.header>Columns</x-aura::dropdown.header>
-                            <x-aura::dropdown.checkbox wire:model.live="visibleColumns.role" label="Role" />
-                            <x-aura::dropdown.checkbox wire:model.live="visibleColumns.status" label="Status" />
-                            <x-aura::dropdown.checkbox wire:model.live="visibleColumns.joined" label="Joined Date" />
+                            <x-aura::dropdown.checkbox size="xs" wire:model.live="visibleColumns.role" label="Role" />
+                            <x-aura::dropdown.checkbox size="xs" wire:model.live="visibleColumns.status" label="Status" />
+                            <x-aura::dropdown.checkbox size="xs" wire:model.live="visibleColumns.joined" label="Joined Date" />
                         </x-aura::dropdown>
                     </div>
                 </x-aura::flex>
@@ -291,7 +291,7 @@ class extends Component {
             <x-aura::table.header>
                 <x-aura::table.row>
                     <x-aura::table.column class="w-10">
-                        <x-aura::checkbox wire:model.live="selectAll" aria-label="Select All" />
+                        <x-aura::checkbox size="xs" wire:model.live="selectAll" aria-label="Select All" />
                     </x-aura::table.column>
                     <x-aura::table.column sortable wire:click="sortBy('name')" :sorted="$sortField === 'name' ? $sortDirection : null">User</x-aura::table.column>
                     @if ($visibleColumns['role'] ?? true)
@@ -310,7 +310,7 @@ class extends Component {
                 @forelse ($users as $user)
                     <x-aura::table.row :class="in_array((string)$user['id'], $selected) ? 'bg-zinc-100/60 dark:bg-zinc-800/40' : ''">
                         <x-aura::table.cell class="w-10">
-                            <x-aura::checkbox wire:model.live="selected" value="{{ (string)$user['id'] }}" aria-label="Select row" />
+                            <x-aura::checkbox size="xs" wire:model.live="selected" value="{{ (string)$user['id'] }}" aria-label="Select row" />
                         </x-aura::table.cell>
                         <x-aura::table.cell>
                             <x-aura::flex align="center" gap="3">
