@@ -9,9 +9,11 @@
 
         <!-- Main Content Area -->
         <div class="flex-1 flex flex-col min-w-0">
-            <x-aura::main >
-                {{ $slot }}
-            </x-aura::main>
+            <div class="flex-1 min-h-screen flex flex-col">
+                <x-aura::main>
+                    {{ $slot }}
+                </x-aura::main>
+            </div>
 
             <livewire:layout.shared.footer />
         </div>
