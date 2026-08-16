@@ -282,13 +282,11 @@ class extends Component {
                 @empty
                     <x-aura::table.row>
                         <x-aura::table.cell :colspan="2 + count(array_filter($visibleColumns))">
-                            <x-aura::center direction="col" gap="2" class="py-10 text-center">
-                                <div class="w-10 h-10 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-500 flex items-center justify-center">
-                                    <x-aura::icon name="users" size="sm" />
-                                </div>
-                                <x-aura::heading level="4" size="sm">No users found</x-aura::heading>
-                                <x-aura::text variant="subtle" size="sm">No user accounts match your search or filter criteria.</x-aura::text>
-                            </x-aura::center>
+                            <x-aura::empty-state 
+                                icon="users" 
+                                title="No users found" 
+                                description="No user accounts match your search or filter criteria." 
+                            />
                         </x-aura::table.cell>
                     </x-aura::table.row>
                 @endforelse
@@ -296,27 +294,12 @@ class extends Component {
         </x-aura::table>
 
         <x-slot:footer>
-            <x-aura::flex align="center" justify="between" gap="4" class="w-full flex-col sm:flex-row">
-                <div class="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400">
-                    Showing <span class="font-bold text-zinc-900 dark:text-white">{{ $totalCount ? (($currentPage - 1) * $perPage) + 1 : 0 }}</span> to <span class="font-bold text-zinc-900 dark:text-white">{{ min($currentPage * $perPage, $totalCount) }}</span> of <span class="font-bold text-zinc-900 dark:text-white">{{ $totalCount }}</span> items
-                </div>
-
-                <x-aura::flex align="center" gap="1.5">
-                    <button type="button" wire:click="previousPage" @disabled($currentPage <= 1) class="p-1.5 rounded-full text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 disabled:opacity-40 disabled:cursor-not-allowed transition-colors" aria-label="Previous Page">
-                        <x-aura::icon name="chevron-left" size="xs" />
-                    </button>
-
-                    @for ($i = 1; $i <= $totalPages; $i++)
-                        <button type="button" wire:click="setPage({{ $i }})" class="w-8 h-8 rounded-full text-xs font-semibold transition-all {{ $i === $currentPage ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 shadow-xs' : 'text-zinc-600 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800' }}">
-                            {{ $i }}
-                        </button>
-                    @endfor
-
-                    <button type="button" wire:click="nextPage({{ $totalPages }})" @disabled($currentPage >= $totalPages) class="p-1.5 rounded-full text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 disabled:opacity-40 disabled:cursor-not-allowed transition-colors" aria-label="Next Page">
-                        <x-aura::icon name="chevron-right" size="xs" />
-                    </button>
-                </x-aura::flex>
-            </x-aura::flex>
+            <x-aura::pagination 
+                :page="$currentPage" 
+                :totalPages="$totalPages" 
+                :total="$totalCount" 
+                :perPage="$perPage" 
+            />
         </x-slot:footer>
     </x-aura::card>
 

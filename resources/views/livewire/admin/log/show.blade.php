@@ -25,66 +25,105 @@ class extends Component {
 
 <div class="w-full max-w-3xl mx-auto space-y-3">
 
-    <!-- Header with Back Button -->
-    <div class="flex items-center justify-between gap-4 px-1">
+    <!-- Top Header -->
+    <x-aura::flex align="center" justify="between" gap="4" class="px-1">
         <div>
             <x-aura::kicker>Administration</x-aura::kicker>
-            <x-aura::heading level="1" size="lg">Log Event Details</x-aura::heading>
+            <x-aura::heading level="1" size="lg">Log Details</x-aura::heading>
         </div>
-        <div class="flex items-center gap-2">
+        <x-aura::flex align="center" gap="2">
             <x-aura::button href="/admin/logs" wire:navigate variant="secondary" size="sm">
-                <x-aura::icon name="arrow-left"  size="xs" />
+                <x-aura::icon name="arrow-left" size="xs" />
                 <span>Back</span>
             </x-aura::button>
-        </div>
-    </div>
+        </x-aura::flex>
+    </x-aura::flex>
 
-    <!-- Simple & Clean Log Summary Card -->
+    <!-- Unified Log Event Card -->
     <x-aura::card>
-        <div class="flex items-center justify-between gap-4">
-            <div class="flex items-center gap-4">
+        <!-- Log Summary Header -->
+        <x-aura::flex align="center" justify="between" gap="4" class="pb-6 border-b border-zinc-100 dark:border-zinc-800 flex-col sm:flex-row">
+            <x-aura::flex align="center" gap="3.5">
                 <x-aura::badge :variant="$log['variant']" size="sm">{{ $log['level'] }}</x-aura::badge>
-                <div>
-                    <div class="flex items-center gap-2">
-                        <x-aura::heading level="2" size="xs" >{{ $log['timestamp'] }}</x-aura::heading>
-                    </div>
-                    <x-aura::text variant="subtle" size="xs">Environment: {{ $log['env'] }}</x-aura::text>
+                <div class="space-y-0.5">
+                    <x-aura::heading level="2" size="sm">{{ $log['timestamp'] }}</x-aura::heading>
+                    <x-aura::text variant="subtle" size="sm">Environment: {{ $log['env'] }}</x-aura::text>
                 </div>
-            </div>
-            <x-aura::badge variant="neutral" size="sm">Log Event #{{ $log['id'] }}</x-aura::badge>
-        </div>
-    </x-aura::card>
+            </x-aura::flex>
+            <x-aura::badge variant="neutral" size="sm">Event #{{ $log['id'] }}</x-aura::badge>
+        </x-aura::flex>
 
-    <!-- Log Payload & Stack Trace Details Card -->
-    <x-aura::card title="Event Payload & Execution Trace">
-        <div class="space-y-4 text-xs">
-            <div class="py-2.5 border-b border-zinc-100 dark:border-zinc-800">
-                <span class="font-medium text-zinc-500 dark:text-zinc-400">Log Message</span>
-                <p class="font-mono text-xs font-semibold text-zinc-900 dark:text-white mt-1 p-3 rounded-lg bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200/80 dark:border-zinc-800">
-                    {{ $log['message'] }}
-                </p>
-            </div>
-            <div class="py-2.5 border-b border-zinc-100 dark:border-zinc-800 flex items-center justify-between">
-                <span class="font-medium text-zinc-500 dark:text-zinc-400">Client IP Address</span>
-                <span class="font-mono text-zinc-800 dark:text-zinc-200">{{ $log['ip'] }}</span>
-            </div>
-            <div class="py-2.5 border-b border-zinc-100 dark:border-zinc-800 flex items-center justify-between">
-                <span class="font-medium text-zinc-500 dark:text-zinc-400">Execution Environment &bull; Context</span>
-                <span class="font-mono text-zinc-800 dark:text-zinc-200">{{ $log['context'] }}</span>
-            </div>
-            <div class="pt-2">
-                <span class="font-medium text-zinc-500 dark:text-zinc-400">Stack Trace Payload</span>
-                <pre class="font-mono text-[11px] p-3.5 rounded-xl bg-zinc-900 text-zinc-200 mt-1.5 border border-zinc-800 overflow-x-auto whitespace-pre-wrap leading-relaxed">{{ $log['trace'] }}</pre>
-            </div>
-        </div>
+        <!-- Specifications & Trace Details Table -->
+        <x-aura::table borderless="true">
+            <x-aura::table.body>
+                <x-aura::table.row>
+                    <x-aura::table.cell>
+                        <x-aura::text variant="subtle" size="sm">Event Identifier</x-aura::text>
+                    </x-aura::table.cell>
+                    <x-aura::table.cell align="right">
+                        <x-aura::text variant="mono" size="sm">LOG-{{ str_pad($log['id'], 5, '0', STR_PAD_LEFT) }}</x-aura::text>
+                    </x-aura::table.cell>
+                </x-aura::table.row>
+                <x-aura::table.row>
+                    <x-aura::table.cell>
+                        <x-aura::text variant="subtle" size="sm">Severity Level</x-aura::text>
+                    </x-aura::table.cell>
+                    <x-aura::table.cell align="right">
+                        <x-aura::badge :variant="$log['variant']" size="sm">{{ $log['level'] }}</x-aura::badge>
+                    </x-aura::table.cell>
+                </x-aura::table.row>
+                <x-aura::table.row>
+                    <x-aura::table.cell>
+                        <x-aura::text variant="subtle" size="sm">Environment</x-aura::text>
+                    </x-aura::table.cell>
+                    <x-aura::table.cell align="right">
+                        <x-aura::text size="sm">{{ $log['env'] }}</x-aura::text>
+                    </x-aura::table.cell>
+                </x-aura::table.row>
+                <x-aura::table.row>
+                    <x-aura::table.cell>
+                        <x-aura::text variant="subtle" size="sm">Client IP Address</x-aura::text>
+                    </x-aura::table.cell>
+                    <x-aura::table.cell align="right">
+                        <x-aura::text variant="mono" size="sm">{{ $log['ip'] }}</x-aura::text>
+                    </x-aura::table.cell>
+                </x-aura::table.row>
+                <x-aura::table.row>
+                    <x-aura::table.cell>
+                        <x-aura::text variant="subtle" size="sm">Execution Context</x-aura::text>
+                    </x-aura::table.cell>
+                    <x-aura::table.cell align="right">
+                        <x-aura::text size="sm">{!! $log['context'] !!}</x-aura::text>
+                    </x-aura::table.cell>
+                </x-aura::table.row>
+                <x-aura::table.row>
+                    <x-aura::table.cell colspan="2">
+                        <div class="space-y-1.5 pt-2">
+                            <x-aura::text variant="subtle" size="sm">Log Message</x-aura::text>
+                            <p class="font-mono text-sm font-semibold text-zinc-900 dark:text-white p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200/80 dark:border-zinc-800">
+                                {{ $log['message'] }}
+                            </p>
+                        </div>
+                    </x-aura::table.cell>
+                </x-aura::table.row>
+                <x-aura::table.row>
+                    <x-aura::table.cell colspan="2">
+                        <div class="space-y-1.5 pt-2">
+                            <x-aura::text variant="subtle" size="sm">Stack Trace Payload</x-aura::text>
+                            <pre class="font-mono text-xs p-3.5 rounded-xl bg-zinc-900 text-zinc-200 border border-zinc-800 overflow-x-auto whitespace-pre-wrap leading-relaxed">{{ $log['trace'] }}</pre>
+                        </div>
+                    </x-aura::table.cell>
+                </x-aura::table.row>
+            </x-aura::table.body>
+        </x-aura::table>
 
         <x-slot:footer>
-            <div class="flex items-center justify-center w-full">
+            <x-aura::center class="w-full">
                 <x-aura::button href="/admin/logs" wire:navigate variant="secondary" size="sm">
-                    <x-aura::icon name="arrow-left"  size="xs" />
-                    <span>Return to Logs</span>
+                    <x-aura::icon name="arrow-left" size="xs" />
+                    <span>Back</span>
                 </x-aura::button>
-            </div>
+            </x-aura::center>
         </x-slot:footer>
     </x-aura::card>
 
