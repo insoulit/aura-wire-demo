@@ -35,9 +35,9 @@ class extends Component {
                 <x-aura::kicker>Data</x-aura::kicker>
                 <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
             </div>
-            <x-aura::heading level="1" size="xl">List (Un-numbered)</x-aura::heading>
+            <x-aura::heading level="1" size="xl">List</x-aura::heading>
             <x-aura::subheading size="md">
-                Clean un-numbered list components supporting media rows, compact list groups, cards, and minimalist layout.
+                Clean list components supporting media rows, compact list groups, cards, and minimalist layout.
             </x-aura::subheading>
         </div>
     </x-aura::card>
@@ -47,8 +47,8 @@ class extends Component {
         <x-slot:codeSlot>@verbatim<x-aura::list :items="$items" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 1. Un-numbered Media List -->
-    <x-aura::code  title="1. Un-numbered Media List">
+    <!-- 1. Media List -->
+    <x-aura::code title="1. Media List">
         <x-slot:preview>
             <div class="w-full max-w-2xl">
                 <x-aura::list :items="$features" variant="media" />
@@ -61,8 +61,8 @@ class extends Component {
 ]" variant="media" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 2. Un-numbered Compact List Group -->
-    <x-aura::code  title="2. Un-numbered Compact List Group">
+    <!-- 2. Compact List Group -->
+    <x-aura::code title="2. Compact List Group">
         <x-slot:preview>
             <div class="w-full max-w-2xl">
                 <x-aura::list :items="$compactList" variant="compact" />
@@ -75,8 +75,8 @@ class extends Component {
 ]" variant="compact" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 3. Un-numbered Card List -->
-    <x-aura::code  title="3. Un-numbered Card List">
+    <!-- 3. Card List -->
+    <x-aura::code title="3. Card List">
         <x-slot:preview>
             <div class="w-full max-w-2xl">
                 <x-aura::list :items="$features" variant="card" />
