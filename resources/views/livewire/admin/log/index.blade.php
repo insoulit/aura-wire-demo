@@ -214,20 +214,15 @@ class extends Component {
     </x-aura::card>
 
     <!-- Clear Logs Modal -->
-    <x-aura::modal name="clear-logs-modal" variant="centered" maxWidth="sm">
-        <x-aura::center direction="col" gap="3" class="text-center">
-            <div class="w-12 h-12 rounded-2xl bg-red-100 dark:bg-red-950/60 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-800/60 flex items-center justify-center shrink-0 shadow-xs">
-                <x-aura::icon name="trash" size="md" />
-            </div>
-            
-            <div class="space-y-1">
-                <h3 class="text-base font-bold text-zinc-900 dark:text-white tracking-tight">Clear System Logs?</h3>
-                <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
-                    This will clear all cached event stream logs and exception records from active memory. Archived files on disk will not be affected.
-                </p>
-            </div>
-        </x-aura::center>
-
+    <x-aura::modal 
+        name="clear-logs-modal" 
+        variant="danger" 
+        centered="true"
+        icon="trash"
+        title="Clear System Logs?" 
+        description="This will clear all cached event stream logs and exception records from active memory. Archived files on disk will not be affected."
+        maxWidth="sm"
+    >
         <x-slot:footer>
             <div class="grid grid-cols-2 gap-3 w-full">
                 <x-aura::button variant="secondary" size="sm" x-on:click="$dispatch('close-modal', 'clear-logs-modal')">
