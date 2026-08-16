@@ -193,11 +193,11 @@ class extends Component {
                             <x-aura::text size="sm">{{ $user['joined'] }}</x-aura::text>
                         </x-aura::table.cell>
                         <x-aura::table.cell align="right">
-                            <div class="flex items-center justify-end gap-1.5">
+                            <x-aura::flex align="center" justify="end" gap="1.5">
                                 <x-aura::icon-button icon="show" variant="subtle" size="sm" shape="circle" label="View" href="/admin/users/show?id={{ $user['id'] }}" wire:navigate />
                                 <x-aura::icon-button icon="edit" variant="subtle" size="sm" shape="circle" label="Edit" href="/admin/users/edit?id={{ $user['id'] }}" wire:navigate />
                                 <x-aura::icon-button icon="delete" variant="subtle-danger" size="sm" shape="circle" label="Delete" x-on:click="$dispatch('open-modal', 'delete-user-modal')" />
-                            </div>
+                            </x-aura::flex>
                         </x-aura::table.cell>
                     </x-aura::table.row>
                 @empty
@@ -222,7 +222,7 @@ class extends Component {
                     Showing <span class="font-bold text-zinc-900 dark:text-white">{{ $totalCount ? (($currentPage - 1) * $perPage) + 1 : 0 }}</span> to <span class="font-bold text-zinc-900 dark:text-white">{{ min($currentPage * $perPage, $totalCount) }}</span> of <span class="font-bold text-zinc-900 dark:text-white">{{ $totalCount }}</span> items
                 </div>
 
-                <div class="flex items-center gap-1.5">
+                <x-aura::flex align="center" gap="1.5">
                     <button type="button" wire:click="previousPage" @disabled($currentPage <= 1) class="p-1.5 rounded-full text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 disabled:opacity-40 disabled:cursor-not-allowed transition-colors" aria-label="Previous Page">
                         <x-aura::icon name="chevron-left" size="xs" />
                     </button>
@@ -236,7 +236,7 @@ class extends Component {
                     <button type="button" wire:click="nextPage({{ $totalPages }})" @disabled($currentPage >= $totalPages) class="p-1.5 rounded-full text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 disabled:opacity-40 disabled:cursor-not-allowed transition-colors" aria-label="Next Page">
                         <x-aura::icon name="chevron-right" size="xs" />
                     </button>
-                </div>
+                </x-aura::flex>
             </div>
         </x-slot:footer>
     </x-aura::card>

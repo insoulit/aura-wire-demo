@@ -312,7 +312,7 @@ new class extends Component {
 
     <!-- 7. Layout Dropdown -->
     @php
-        $isLayoutActive = request()->is('components/body', 'components/container', 'components/header', 'components/navbar', 'components/sidebar', 'components/main', 'components/footer');
+        $isLayoutActive = request()->is('components/body', 'components/container', 'components/flex', 'components/center', 'components/stack', 'components/header', 'components/navbar', 'components/sidebar', 'components/main', 'components/footer');
     @endphp
     <div class="space-y-0.5">
         <button
@@ -335,8 +335,11 @@ new class extends Component {
             </svg>
         </button>
         <ul x-show="openGroup === 'layout'" x-transition class="space-y-0.5 font-medium pl-2.5 border-l border-zinc-200 dark:border-zinc-800/80 ml-2 py-1 text-xs sm:text-sm">
-            <li><a href="/components/body" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/body') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Body</a></li>
             <li><a href="/components/container" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/container') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Container</a></li>
+            <li><a href="/components/flex" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/flex') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Flex</a></li>
+            <li><a href="/components/center" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/center') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Center</a></li>
+            <li><a href="/components/stack" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/stack') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Stack</a></li>
+            <li><a href="/components/body" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/body') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Body</a></li>
             <li><a href="/components/header" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/header') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Header</a></li>
             <li><a href="/components/navbar" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/navbar') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Navbar</a></li>
             <li><a href="/components/sidebar" class="block px-2.5 py-1.5 rounded-md transition-colors {{ request()->is('components/sidebar') ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-semibold shadow-2xs' : 'text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800/50' }}">Sidebar</a></li>
