@@ -49,12 +49,11 @@ class extends Component {
     <div class="flex items-center justify-between gap-4 px-1">
         <div>
             <x-aura::kicker>Administration</x-aura::kicker>
-            <x-aura::heading level="1" size="lg">Create New User</x-aura::heading>
+            <x-aura::heading level="1" size="lg">Create User</x-aura::heading>
         </div>
         <div class="flex items-center gap-2">
-            <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm">
-                <x-aura::icon name="arrow-left"  size="xs" />
-                <span>Back</span>
+            <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm" icon="arrow-left">
+                Back
             </x-aura::button>
         </div>
     </div>
@@ -122,7 +121,7 @@ class extends Component {
                     </x-aura::button>
 
                     <x-aura::button type="submit" variant="primary" size="sm">
-                        <x-aura::icon name="plus"  size="xs" />
+                        <x-aura::icon name="plus" size="xs" />
                         <span>Create</span>
                     </x-aura::button>
                 </div>

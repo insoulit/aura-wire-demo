@@ -8,91 +8,146 @@ new
 #[Layout('livewire.layout.admin')] 
 #[Title('User Profile — Admin Panel | Aura Wire')] 
 class extends Component {
-    public array $user = [
-        'id' => 1001,
-        'name' => 'Alex Kovacs',
-        'email' => 'alex.k@example.com',
-        'initials' => 'AK',
-        'role' => 'Administrator',
-        'role_variant' => 'positive',
-        'status' => 'Active',
-        'status_variant' => 'neutral',
-        'joined' => 'August 1, 2026',
-        'last_login' => '12 minutes ago (192.168.1.45)',
-        'two_factor' => 'Enabled',
-    ];
+    public int $userId = 1;
+    public array $user = [];
+
+    public function mount(): void
+    {
+        $id = (int) request()->query('id', 1);
+        $this->userId = $id;
+
+        $allUsers = [
+            1 => ['id' => 1, 'name' => 'Alex Kovacs', 'email' => 'alex.k@example.com', 'initials' => 'AK', 'role' => 'admin', 'role_label' => 'Administrator', 'status' => 'Active', 'joined' => 'August 1, 2026', 'last_login' => '12 minutes ago (192.168.1.45)', 'two_factor' => 'Enabled'],
+            2 => ['id' => 2, 'name' => 'Jane Doe', 'email' => 'jane.doe@example.com', 'initials' => 'JD', 'role' => 'dev', 'role_label' => 'Developer', 'status' => 'Active', 'joined' => 'July 28, 2026', 'last_login' => '2 hours ago (192.168.1.50)', 'two_factor' => 'Enabled'],
+            3 => ['id' => 3, 'name' => 'Marcus Smith', 'email' => 'marcus@example.com', 'initials' => 'MS', 'role' => 'member', 'role_label' => 'Member', 'status' => 'Pending', 'joined' => 'July 15, 2026', 'last_login' => 'Never', 'two_factor' => 'Disabled'],
+            4 => ['id' => 4, 'name' => 'Sarah Lee', 'email' => 'sarah.lee@example.com', 'initials' => 'SL', 'role' => 'member', 'role_label' => 'Member', 'status' => 'Inactive', 'joined' => 'June 10, 2026', 'last_login' => '3 weeks ago', 'two_factor' => 'Disabled'],
+            5 => ['id' => 5, 'name' => 'David Chen', 'email' => 'david.chen@example.com', 'initials' => 'DC', 'role' => 'dev', 'role_label' => 'Developer', 'status' => 'Active', 'joined' => 'June 2, 2026', 'last_login' => 'Yesterday', 'two_factor' => 'Enabled'],
+            6 => ['id' => 6, 'name' => 'Emily Watson', 'email' => 'emily.w@example.com', 'initials' => 'EW', 'role' => 'admin', 'role_label' => 'Administrator', 'status' => 'Active', 'joined' => 'May 25, 2026', 'last_login' => '1 hour ago', 'two_factor' => 'Enabled'],
+        ];
+
+        $this->user = $allUsers[$id] ?? $allUsers[1];
+    }
 };
 
 ?>
 
 <div class="w-full max-w-3xl mx-auto space-y-3">
 
-    <!-- Header with Back & Edit Buttons -->
+    <!-- Top Header -->
     <div class="flex items-center justify-between gap-4 px-1">
         <div>
-            <x-aura::kicker>User Profile</x-aura::kicker>
-            <x-aura::heading level="1" size="lg">{{ $user['name'] }}</x-aura::heading>
+            <x-aura::kicker>Administration</x-aura::kicker>
+            <x-aura::heading level="1" size="lg">User Profile</x-aura::heading>
         </div>
         <div class="flex items-center gap-2">
             <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm">
-                <x-aura::icon name="arrow-left"  size="xs" />
+                <x-aura::icon name="arrow-left" size="xs" />
                 <span>Back</span>
             </x-aura::button>
         </div>
     </div>
 
-    <!-- Simple & Clean User Profile Card -->
+    <!-- Unified Profile Card -->
     <x-aura::card>
-        <div class="flex items-center justify-between gap-4">
+        <!-- Profile Header Banner -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-zinc-100 dark:border-zinc-800">
             <div class="flex items-center gap-4">
-                <x-aura::avatar :initials="$user['initials']" size="md" />
-                <div>
-                    <div class="flex items-center gap-2">
-                        <x-aura::heading level="2" size="xs" >{{ $user['name'] }}</x-aura::heading>
-                        <x-aura::badge :variant="$user['role_variant']" size="sm">{{ $user['role'] }}</x-aura::badge>
+                <x-aura::avatar :initials="$user['initials']" size="lg" />
+                <div class="space-y-1">
+                    <div class="flex items-center gap-2 flex-wrap">
+                        <x-aura::heading level="2" size="sm">{{ $user['name'] }}</x-aura::heading>
+                        <x-aura::badge :variant="$user['role'] === 'admin' ? 'neutral' : 'subtle'" size="sm">
+                            {{ $user['role_label'] }}
+                        </x-aura::badge>
                     </div>
-                    <x-aura::text variant="subtle" size="xs">{{ $user['email'] }}</x-aura::text>
+                    <x-aura::text variant="subtle" size="sm">{{ $user['email'] }}</x-aura::text>
                 </div>
             </div>
-            <x-aura::badge :variant="$user['status_variant']" size="sm">{{ $user['status'] }}</x-aura::badge>
-        </div>
-    </x-aura::card>
-
-   
-
-    <!-- Account Details Table Card -->
-    <x-aura::card title="Account Specification & Security">
-        <div class="divide-y divide-zinc-100 dark:divide-zinc-800 text-xs">
-            <div class="py-3 flex items-center justify-between">
-                <span class="font-medium text-zinc-500 dark:text-zinc-400">Full Name</span>
-                <span class="font-semibold text-zinc-900 dark:text-white">{{ $user['name'] }}</span>
-            </div>
-            <div class="py-3 flex items-center justify-between">
-                <span class="font-medium text-zinc-500 dark:text-zinc-400">Primary Email Address</span>
-                <span class="font-semibold text-zinc-900 dark:text-white">{{ $user['email'] }}</span>
-            </div>
-            <div class="py-3 flex items-center justify-between">
-                <span class="font-medium text-zinc-500 dark:text-zinc-400">Access Level / Role</span>
-                <x-aura::badge :variant="$user['role_variant']" size="sm">{{ $user['role'] }}</x-aura::badge>
-            </div>
-            <div class="py-3 flex items-center justify-between">
-                <span class="font-medium text-zinc-500 dark:text-zinc-400">Account Status</span>
-                <x-aura::badge :variant="$user['status_variant']" size="sm">{{ $user['status'] }}</x-aura::badge>
-            </div>
-            <div class="py-3 flex items-center justify-between">
-                <span class="font-medium text-zinc-500 dark:text-zinc-400">Two Factor Authentication</span>
-                <span class="font-semibold text-emerald-600 dark:text-emerald-400">{{ $user['two_factor'] }} (TOTP Authenticator)</span>
-            </div>
-            <div class="py-3 flex items-center justify-between">
-                <span class="font-medium text-zinc-500 dark:text-zinc-400">Account Created</span>
-                <span class="text-zinc-700 dark:text-zinc-300">{{ $user['joined'] }}</span>
+            <div class="flex items-center gap-2">
+                <x-aura::badge :variant="$user['status'] === 'Active' ? 'neutral' : 'subtle'" size="sm">
+                    {{ $user['status'] }}
+                </x-aura::badge>
             </div>
         </div>
+
+        <!-- Specifications & Details -->
+        <x-aura::table borderless="true">
+            <x-aura::table.body>
+                <x-aura::table.row>
+                    <x-aura::table.cell>
+                        <x-aura::text variant="subtle" size="sm">User Identifier</x-aura::text>
+                    </x-aura::table.cell>
+                    <x-aura::table.cell align="right">
+                        <x-aura::text variant="mono" size="sm">USR-{{ str_pad($user['id'], 4, '0', STR_PAD_LEFT) }}</x-aura::text>
+                    </x-aura::table.cell>
+                </x-aura::table.row>
+                <x-aura::table.row>
+                    <x-aura::table.cell>
+                        <x-aura::text variant="subtle" size="sm">Full Name</x-aura::text>
+                    </x-aura::table.cell>
+                    <x-aura::table.cell align="right">
+                        <x-aura::text size="sm" weight="semibold">{{ $user['name'] }}</x-aura::text>
+                    </x-aura::table.cell>
+                </x-aura::table.row>
+                <x-aura::table.row>
+                    <x-aura::table.cell>
+                        <x-aura::text variant="subtle" size="sm">Email Address</x-aura::text>
+                    </x-aura::table.cell>
+                    <x-aura::table.cell align="right">
+                        <x-aura::text size="sm">{{ $user['email'] }}</x-aura::text>
+                    </x-aura::table.cell>
+                </x-aura::table.row>
+                <x-aura::table.row>
+                    <x-aura::table.cell>
+                        <x-aura::text variant="subtle" size="sm">Access Level</x-aura::text>
+                    </x-aura::table.cell>
+                    <x-aura::table.cell align="right">
+                        <x-aura::badge :variant="$user['role'] === 'admin' ? 'neutral' : 'subtle'" size="sm">
+                            {{ $user['role_label'] }}
+                        </x-aura::badge>
+                    </x-aura::table.cell>
+                </x-aura::table.row>
+                <x-aura::table.row>
+                    <x-aura::table.cell>
+                        <x-aura::text variant="subtle" size="sm">Account Status</x-aura::text>
+                    </x-aura::table.cell>
+                    <x-aura::table.cell align="right">
+                        <x-aura::badge :variant="$user['status'] === 'Active' ? 'neutral' : 'subtle'" size="sm">
+                            {{ $user['status'] }}
+                        </x-aura::badge>
+                    </x-aura::table.cell>
+                </x-aura::table.row>
+                <x-aura::table.row>
+                    <x-aura::table.cell>
+                        <x-aura::text variant="subtle" size="sm">Two Factor Authentication</x-aura::text>
+                    </x-aura::table.cell>
+                    <x-aura::table.cell align="right">
+                        <x-aura::text size="sm">{{ $user['two_factor'] }} (TOTP Authenticator)</x-aura::text>
+                    </x-aura::table.cell>
+                </x-aura::table.row>
+                <x-aura::table.row>
+                    <x-aura::table.cell>
+                        <x-aura::text variant="subtle" size="sm">Last Login</x-aura::text>
+                    </x-aura::table.cell>
+                    <x-aura::table.cell align="right">
+                        <x-aura::text size="sm">{{ $user['last_login'] }}</x-aura::text>
+                    </x-aura::table.cell>
+                </x-aura::table.row>
+                <x-aura::table.row>
+                    <x-aura::table.cell>
+                        <x-aura::text variant="subtle" size="sm">Date Registered</x-aura::text>
+                    </x-aura::table.cell>
+                    <x-aura::table.cell align="right">
+                        <x-aura::text size="sm">{{ $user['joined'] }}</x-aura::text>
+                    </x-aura::table.cell>
+                </x-aura::table.row>
+            </x-aura::table.body>
+        </x-aura::table>
 
         <x-slot:footer>
             <div class="flex items-center justify-center w-full">
-                <x-aura::button href="/admin/users/edit" wire:navigate variant="primary" size="sm">
-                    <x-aura::icon name="edit"  size="xs" />
+                <x-aura::button href="/admin/users/edit?id={{ $user['id'] }}" wire:navigate variant="primary" size="sm">
+                    <x-aura::icon name="pencil" size="xs" />
                     <span>Edit</span>
                 </x-aura::button>
             </div>

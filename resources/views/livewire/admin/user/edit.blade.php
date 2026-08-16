@@ -8,11 +8,35 @@ new
 #[Layout('livewire.layout.admin')] 
 #[Title('Edit User — Admin Panel | Aura Wire')] 
 class extends Component {
+    public int $userId = 1;
     public string $name = 'Alex Kovacs';
     public string $email = 'alex.k@example.com';
+    public string $initials = 'AK';
     public string $role = 'admin';
     public string $status = 'Active';
     public bool $saved = false;
+
+    public function mount(): void
+    {
+        $id = (int) request()->query('id', 1);
+        $this->userId = $id;
+
+        $allUsers = [
+            1 => ['id' => 1, 'name' => 'Alex Kovacs', 'email' => 'alex.k@example.com', 'initials' => 'AK', 'role' => 'admin', 'status' => 'Active'],
+            2 => ['id' => 2, 'name' => 'Jane Doe', 'email' => 'jane.doe@example.com', 'initials' => 'JD', 'role' => 'dev', 'status' => 'Active'],
+            3 => ['id' => 3, 'name' => 'Marcus Smith', 'email' => 'marcus@example.com', 'initials' => 'MS', 'role' => 'member', 'status' => 'Pending'],
+            4 => ['id' => 4, 'name' => 'Sarah Lee', 'email' => 'sarah.lee@example.com', 'initials' => 'SL', 'role' => 'member', 'status' => 'Inactive'],
+            5 => ['id' => 5, 'name' => 'David Chen', 'email' => 'david.chen@example.com', 'initials' => 'DC', 'role' => 'dev', 'status' => 'Active'],
+            6 => ['id' => 6, 'name' => 'Emily Watson', 'email' => 'emily.w@example.com', 'initials' => 'EW', 'role' => 'admin', 'status' => 'Active'],
+        ];
+
+        $u = $allUsers[$id] ?? $allUsers[1];
+        $this->name = $u['name'];
+        $this->email = $u['email'];
+        $this->initials = $u['initials'];
+        $this->role = $u['role'];
+        $this->status = $u['status'];
+    }
 
     public function update(): void
     {
@@ -35,11 +59,11 @@ class extends Component {
     <div class="flex items-center justify-between gap-4 px-1">
         <div>
             <x-aura::kicker>Administration</x-aura::kicker>
-            <x-aura::heading level="1" size="lg">Edit User Profile</x-aura::heading>
+            <x-aura::heading level="1" size="lg">Edit User</x-aura::heading>
         </div>
         <div class="flex items-center gap-2">
             <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm">
-                <x-aura::icon name="arrow-left"  size="xs" />
+                <x-aura::icon name="arrow-left" size="xs" />
                 <span>Back</span>
             </x-aura::button>
         </div>
@@ -47,7 +71,7 @@ class extends Component {
 
     @if ($saved)
         <div class="fixed bottom-5 right-5 z-50">
-            <x-aura::toast variant="neutral" title="Changes Saved" description="User details for {{ $name }} updated successfully." />
+            <x-aura::toast variant="neutral" title="Changes Saved" description="User details updated successfully." />
         </div>
     @endif
 
@@ -57,13 +81,13 @@ class extends Component {
             <div class="space-y-5 pt-2">
 
                 <!-- Avatar & Identity Preview -->
-                <x-aura::card >
-                    <x-aura::avatar initials="AK" size="md" />
+                <div class="flex items-center gap-4 p-4 rounded-xl bg-zinc-50/80 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60">
+                    <x-aura::avatar :initials="$initials" size="md" />
                     <div>
-                        <div class="font-bold text-zinc-900 dark:text-white text-sm">Alex Kovacs</div>
-                        <div class="text-xs text-zinc-500">ID #1001 &bull; Member since Aug 2026</div>
+                        <div class="font-bold text-zinc-900 dark:text-white text-sm">{{ $name }}</div>
+                        <div class="text-sm text-zinc-500 dark:text-zinc-400">{{ $email }}</div>
                     </div>
-                </x-aura::card>
+                </div>
 
                 <!-- Full Name & Email -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -80,13 +104,13 @@ class extends Component {
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <x-aura::field label="Account Role" required error="{{ $errors->first('role') }}">
                         <x-aura::select wire:model="role" size="sm">
-                            <option value="admin">Administrator</option>
-                            <option value="dev">Developer</option>
                             <option value="member">Member</option>
+                            <option value="dev">Developer</option>
+                            <option value="admin">Administrator</option>
                         </x-aura::select>
                     </x-aura::field>
 
-                    <x-aura::field label="Account Status" required error="{{ $errors->first('status') }}">
+                    <x-aura::field label="Status" required error="{{ $errors->first('status') }}">
                         <x-aura::select wire:model="status" size="sm">
                             <option value="Active">Active</option>
                             <option value="Pending">Pending Verification</option>
@@ -99,15 +123,17 @@ class extends Component {
 
             <x-slot:footer>
                 <div class="flex items-center justify-between w-full">
-                    <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm">
-                        Cancel
+                    <x-aura::button href="/admin/users/show?id={{ $userId }}" wire:navigate variant="secondary" size="sm">
+                        View
                     </x-aura::button>
 
                     <div class="flex items-center gap-2">
-                        <x-aura::button href="/admin/users/show" wire:navigate variant="subtle" size="sm">
-                            View Profile
+                        <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm">
+                            Cancel
                         </x-aura::button>
+
                         <x-aura::button type="submit" variant="primary" size="sm">
+                            <x-aura::icon name="check" size="xs" />
                             <span>Save</span>
                         </x-aura::button>
                     </div>
@@ -117,23 +143,15 @@ class extends Component {
     </form>
 
     <!-- Danger Zone Card -->
-    <x-aura::card title="Account Security & Access" >
-        <div class="space-y-4">
-            <div class="flex items-center justify-between gap-4 py-2 border-b border-zinc-100 dark:border-zinc-800">
-                <div>
-                    <div class="font-semibold text-xs text-zinc-900 dark:text-white">Reset Password</div>
-                    <div class="text-xs text-zinc-500">Send a password reset link to user's email address.</div>
-                </div>
-                <x-aura::button variant="secondary" size="xs">Send Reset Link</x-aura::button>
+    <x-aura::card title="Danger Zone" description="Irreversible actions for this user account.">
+        <div class="flex items-center justify-between gap-4 py-1">
+            <div>
+                <div class="font-semibold text-sm text-red-600 dark:text-red-400">Delete Account</div>
+                <div class="text-sm text-zinc-500 dark:text-zinc-400">Permanently remove this user account and active access.</div>
             </div>
-
-            <div class="flex items-center justify-between gap-4 py-2">
-                <div>
-                    <div class="font-semibold text-xs text-red-600 dark:text-red-400">Delete Account</div>
-                    <div class="text-xs text-zinc-500">Permanently remove this user account and active access.</div>
-                </div>
-                <x-aura::button variant="danger" size="xs" type="button" x-on:click="$dispatch('open-modal', 'delete-user-modal')">Delete User</x-aura::button>
-            </div>
+            <x-aura::button variant="danger" size="sm" type="button" x-on:click="$dispatch('open-modal', 'delete-user-modal')">
+                Delete
+            </x-aura::button>
         </div>
     </x-aura::card>
 
@@ -141,12 +159,12 @@ class extends Component {
     <x-aura::modal name="delete-user-modal" variant="centered" maxWidth="sm">
         <div class="flex flex-col items-center text-center space-y-3">
             <div class="w-12 h-12 rounded-2xl bg-red-100 dark:bg-red-950/60 text-red-600 dark:text-red-400 border border-red-200 dark:border-red-800/60 flex items-center justify-center shrink-0 shadow-xs">
-                <x-aura::icon name="trash"  size="md" />
+                <x-aura::icon name="trash" size="md" />
             </div>
             
             <div class="space-y-1">
                 <h3 class="text-base font-bold text-zinc-900 dark:text-white tracking-tight">Delete User Account?</h3>
-                <p class="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                <p class="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
                     This action will permanently delete this user profile, active sessions, and permissions. This cannot be undone.
                 </p>
             </div>
@@ -154,10 +172,10 @@ class extends Component {
 
         <x-slot:footer>
             <div class="grid grid-cols-2 gap-3 w-full">
-                <x-aura::button variant="secondary" size="sm"  x-on:click="$dispatch('close-modal', 'delete-user-modal')">
+                <x-aura::button variant="secondary" size="sm" x-on:click="$dispatch('close-modal', 'delete-user-modal')">
                     Cancel
                 </x-aura::button>
-                <x-aura::button variant="danger" size="sm"  x-on:click="$dispatch('close-modal', 'delete-user-modal')">
+                <x-aura::button variant="danger" size="sm" x-on:click="$dispatch('close-modal', 'delete-user-modal')">
                     Delete
                 </x-aura::button>
             </div>

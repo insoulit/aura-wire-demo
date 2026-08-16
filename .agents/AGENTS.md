@@ -18,3 +18,5 @@
   ```
 - **No Tailwind CSS Classes on Component Tags**: When using component tags while designing anything, do not apply any Tailwind CSS `class="..."` attributes directly on the component tag itself. Keep component tags clean using only their native props.
 - **No Hyphens in Text & Headings**: Avoid using hyphens between words in UI copy, titles, headings, and descriptions (e.g. prefer `End to End Security` over `End-to-End Security`, `Real time` over `Real-time`).
+- **Text Sizing**: Prefer text size `sm` (`size="sm"`, `text-sm`) over `xs` (`size="xs"`, `text-xs`) for secondary text, emails, subtitles, metadata, list specifications, and descriptions.
+
