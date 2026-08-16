@@ -30,7 +30,7 @@ class extends Component {};
 
                 <div class="max-w-lg mx-auto">
                     <x-aura::subheading size="md">
-                        Copy-paste composite design blocks with live previews, or explore complete end-to-end full page application templates.
+                        Copy paste composite design blocks with live previews, or explore complete end-to-end full page application templates.
                     </x-aura::subheading>
                 </div>
             </div>
@@ -80,9 +80,7 @@ class extends Component {};
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="shopping-bag"  size="sm" />
-                            </div>
+                            <x-aura::icon name="shopping-bag" variant="subtle" size="lg" />
                             <x-aura::badge variant="subtle" size="sm">E-Commerce</x-aura::badge>
                         </div>
 
@@ -109,9 +107,7 @@ class extends Component {};
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="sparkles"  size="sm" />
-                            </div>
+                            <x-aura::icon name="sparkles" variant="subtle" size="lg" />
                             <x-aura::badge variant="subtle" size="sm">SaaS</x-aura::badge>
                         </div>
 
@@ -138,9 +134,7 @@ class extends Component {};
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="bar-chart-3"  size="sm" />
-                            </div>
+                            <x-aura::icon name="bar-chart-3" variant="subtle" size="lg" />
                             <x-aura::badge variant="subtle" size="sm">Analytics</x-aura::badge>
                         </div>
 
@@ -167,9 +161,7 @@ class extends Component {};
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="shield-check"  size="sm" />
-                            </div>
+                            <x-aura::icon name="shield-check" variant="subtle" size="lg" />
                             <x-aura::badge variant="subtle" size="sm">Security</x-aura::badge>
                         </div>
 
@@ -196,9 +188,7 @@ class extends Component {};
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="user"  size="sm" />
-                            </div>
+                            <x-aura::icon name="user" variant="subtle" size="lg" />
                             <x-aura::badge variant="subtle" size="sm">Account</x-aura::badge>
                         </div>
 
@@ -225,9 +215,7 @@ class extends Component {};
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="layout"  size="sm" />
-                            </div>
+                            <x-aura::icon name="layout" variant="subtle" size="lg" />
                             <x-aura::badge variant="subtle" size="sm">Landing</x-aura::badge>
                         </div>
 
@@ -254,9 +242,7 @@ class extends Component {};
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="grid"  size="sm" />
-                            </div>
+                            <x-aura::icon name="grid" variant="subtle" size="lg" />
                             <x-aura::badge variant="subtle" size="sm">Features</x-aura::badge>
                         </div>
 
@@ -283,9 +269,7 @@ class extends Component {};
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="zap"  size="sm" />
-                            </div>
+                            <x-aura::icon name="zap" variant="subtle" size="lg" />
                             <x-aura::badge variant="subtle" size="sm">Conversion</x-aura::badge>
                         </div>
 
@@ -312,9 +296,7 @@ class extends Component {};
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="heart"  size="sm" />
-                            </div>
+                            <x-aura::icon name="heart" variant="subtle" size="lg" />
                             <x-aura::badge variant="subtle" size="sm">Reviews</x-aura::badge>
                         </div>
 
@@ -341,9 +323,7 @@ class extends Component {};
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="layers"  size="sm" />
-                            </div>
+                            <x-aura::icon name="layers" variant="subtle" size="lg" />
                             <x-aura::badge variant="subtle" size="sm">Overlay</x-aura::badge>
                         </div>
 
@@ -370,9 +350,7 @@ class extends Component {};
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="sidebar"  size="sm" />
-                            </div>
+                            <x-aura::icon name="sidebar" variant="subtle" size="lg" />
                             <x-aura::badge variant="subtle" size="sm">Drawer</x-aura::badge>
                         </div>
 
@@ -399,9 +377,7 @@ class extends Component {};
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="clock"  size="sm" />
-                            </div>
+                            <x-aura::icon name="clock" variant="subtle" size="lg" />
                             <x-aura::badge variant="subtle" size="sm">Activity</x-aura::badge>
                         </div>
 
@@ -428,9 +404,7 @@ class extends Component {};
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="folder-open"  size="sm" />
-                            </div>
+                            <x-aura::icon name="folder-open" variant="subtle" size="lg" />
                             <x-aura::badge variant="subtle" size="sm">States</x-aura::badge>
                         </div>
 
@@ -457,9 +431,7 @@ class extends Component {};
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="help-circle"  size="sm" />
-                            </div>
+                            <x-aura::icon name="help-circle" variant="subtle" size="lg" />
                             <x-aura::badge variant="subtle" size="sm">Support</x-aura::badge>
                         </div>
 
@@ -486,9 +458,7 @@ class extends Component {};
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <div class="h-11 w-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shadow-2xs">
-                                <x-aura::icon name="compass"  size="sm" />
-                            </div>
+                            <x-aura::icon name="compass" variant="subtle" size="lg" />
                             <x-aura::badge variant="subtle" size="sm">Structure</x-aura::badge>
                         </div>
 
@@ -536,9 +506,7 @@ class extends Component {};
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <div class="h-11 w-11 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center font-bold shadow-2xs">
-                                <x-aura::icon name="shopping-bag"  size="sm" />
-                            </div>
+                            <x-aura::icon name="shopping-bag" variant="subtle" size="lg" />
                         </div>
 
                         <div class="space-y-2">
@@ -564,9 +532,7 @@ class extends Component {};
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <div class="h-11 w-11 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center font-bold shadow-2xs">
-                                <x-aura::icon name="palette"  size="sm" />
-                            </div>
+                            <x-aura::icon name="palette" variant="subtle" size="lg" />
                         </div>
 
                         <div class="space-y-2">
@@ -592,9 +558,7 @@ class extends Component {};
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <div class="h-11 w-11 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center font-bold shadow-2xs">
-                                <x-aura::icon name="utensils"  size="sm" />
-                            </div>
+                            <x-aura::icon name="utensils" variant="subtle" size="lg" />
                         </div>
 
                         <div class="space-y-2">
@@ -620,9 +584,7 @@ class extends Component {};
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <div class="h-11 w-11 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center font-bold shadow-2xs">
-                                <x-aura::icon name="rocket"  size="sm" />
-                            </div>
+                            <x-aura::icon name="rocket" variant="subtle" size="lg" />
                         </div>
 
                         <div class="space-y-2">
@@ -648,9 +610,7 @@ class extends Component {};
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
-                            <div class="h-11 w-11 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center font-bold shadow-2xs">
-                                <x-aura::icon name="zap"  size="sm" />
-                            </div>
+                            <x-aura::icon name="zap" variant="subtle" size="lg" />
                         </div>
 
                         <div class="space-y-2">

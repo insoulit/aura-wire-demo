@@ -243,4 +243,70 @@ class extends Component {
 <x-aura::icon name="star" size="lg" />
 <x-aura::icon name="star" size="xl" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
+
+    <!-- 3. Container Variants -->
+    <x-aura::code  title="Container Box Variants (Subtle, Primary, Success, Warning, Danger, Info, Outline)">
+        <x-slot:preview>
+            <div class="flex flex-wrap items-center justify-center gap-6 w-full py-4">
+                <div class="flex flex-col items-center gap-2">
+                    <x-aura::icon name="layers" variant="subtle" size="lg" />
+                    <span class="text-xs text-zinc-500 font-mono">subtle</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <x-aura::icon name="zap" variant="primary" size="lg" />
+                    <span class="text-xs text-zinc-500 font-mono">primary</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <x-aura::icon name="check" variant="success" size="lg" />
+                    <span class="text-xs text-zinc-500 font-mono">success</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <x-aura::icon name="alert-triangle" variant="warning" size="lg" />
+                    <span class="text-xs text-zinc-500 font-mono">warning</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <x-aura::icon name="trash-2" variant="danger" size="lg" />
+                    <span class="text-xs text-zinc-500 font-mono">danger</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <x-aura::icon name="info" variant="info" size="lg" />
+                    <span class="text-xs text-zinc-500 font-mono">info</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <x-aura::icon name="compass" variant="outline" size="lg" />
+                    <span class="text-xs text-zinc-500 font-mono">outline</span>
+                </div>
+            </div>
+        </x-slot:preview>
+        <x-slot:codeSlot>@verbatim<x-aura::icon name="layers" variant="subtle" size="lg" />
+<x-aura::icon name="zap" variant="primary" size="lg" />
+<x-aura::icon name="check" variant="success" size="lg" />
+<x-aura::icon name="alert-triangle" variant="warning" size="lg" />
+<x-aura::icon name="trash-2" variant="danger" size="lg" />
+<x-aura::icon name="info" variant="info" size="lg" />
+<x-aura::icon name="compass" variant="outline" size="lg" />@endverbatim</x-slot:codeSlot>
+    </x-aura::code>
+
+    <!-- 4. Container Shapes -->
+    <x-aura::code  title="Container Box Shapes (Rounded, Circle, Square)">
+        <x-slot:preview>
+            <div class="flex flex-wrap items-center justify-center gap-8 w-full py-4">
+                <div class="flex flex-col items-center gap-2">
+                    <x-aura::icon name="sparkles" variant="subtle" size="lg" shape="rounded" />
+                    <span class="text-xs text-zinc-500 font-mono">rounded</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <x-aura::icon name="sparkles" variant="subtle" size="lg" shape="circle" />
+                    <span class="text-xs text-zinc-500 font-mono">circle</span>
+                </div>
+                <div class="flex flex-col items-center gap-2">
+                    <x-aura::icon name="sparkles" variant="subtle" size="lg" shape="square" />
+                    <span class="text-xs text-zinc-500 font-mono">square</span>
+                </div>
+            </div>
+        </x-slot:preview>
+        <x-slot:codeSlot>@verbatim<x-aura::icon name="sparkles" variant="subtle" size="lg" shape="rounded" />
+<x-aura::icon name="sparkles" variant="subtle" size="lg" shape="circle" />
+<x-aura::icon name="sparkles" variant="subtle" size="lg" shape="square" />@endverbatim</x-slot:codeSlot>
+    </x-aura::code>
 </div>
