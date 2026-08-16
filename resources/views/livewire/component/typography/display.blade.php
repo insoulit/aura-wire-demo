@@ -11,19 +11,19 @@ class extends Component {};
 
 ?>
 
-<div class="w-full max-w-4xl mx-auto space-y-10">
+<x-aura::stack gap="10" class="w-full max-w-4xl mx-auto py-2">
     <!-- Header -->
     <x-aura::card>
-        <div class="space-y-2 max-w-2xl">
-            <div class="flex items-center gap-2.5">
+        <x-aura::stack gap="2" class="max-w-2xl">
+            <x-aura::flex align="center" gap="2.5">
                 <x-aura::kicker>Typography</x-aura::kicker>
                 <x-aura::badge variant="subtle" size="md">Component</x-aura::badge>
-            </div>
+            </x-aura::flex>
             <x-aura::heading level="1" size="xl">Display</x-aura::heading>
             <x-aura::subheading size="md">
                 High-impact display typography designed for hero headlines, billboard marketing banners, giant KPI metrics, and landing sections.
             </x-aura::subheading>
-        </div>
+        </x-aura::stack>
     </x-aura::card>
 
     <!-- Component Syntax -->
@@ -155,4 +155,4 @@ class extends Component {};
     </div>
 </div>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
-</div>
+</x-aura::stack>

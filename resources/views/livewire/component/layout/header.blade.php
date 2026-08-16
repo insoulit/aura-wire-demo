@@ -11,19 +11,19 @@ class extends Component {};
 
 ?>
 
-<div class="w-full max-w-5xl mx-auto space-y-12">
+<x-aura::stack gap="10" class="w-full max-w-4xl mx-auto py-2">
     <!-- Header Page Intro -->
     <x-aura::card>
-        <div class="space-y-2 max-w-2xl">
-            <div class="flex items-center gap-2.5">
+        <x-aura::stack gap="2" class="max-w-2xl">
+            <x-aura::flex align="center" gap="2.5">
                 <x-aura::kicker>Layout</x-aura::kicker>
                 <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
-            </div>
+            </x-aura::flex>
             <x-aura::heading level="1" size="xl">Header</x-aura::heading>
             <x-aura::subheading size="md">
                 Flexible, responsive application headers and navigation bars. Supports brand logos, search bars, navigation items, notifications, and user action triggers.
             </x-aura::subheading>
-        </div>
+        </x-aura::stack>
     </x-aura::card>
 
     <!-- Component Syntax -->
@@ -256,4 +256,4 @@ class extends Component {};
     </div>
 </x-aura::sheet>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
-</div>
+</x-aura::stack>

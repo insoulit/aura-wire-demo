@@ -11,19 +11,19 @@ class extends Component {};
 
 ?>
 
-<div class="w-full max-w-4xl mx-auto space-y-10 flex flex-col items-center justify-center">
+<x-aura::stack gap="10" class="w-full max-w-4xl mx-auto py-2">
     <!-- Header -->
     <x-aura::card>
-        <div class="space-y-2 max-w-2xl">
-            <div class="flex items-center gap-2.5">
+        <x-aura::stack gap="2" class="max-w-2xl">
+            <x-aura::flex align="center" gap="2.5">
                 <x-aura::kicker>Action</x-aura::kicker>
                 <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
-            </div>
+            </x-aura::flex>
             <x-aura::heading level="1" size="xl">Link</x-aura::heading>
             <x-aura::subheading size="md">
                 Lightweight inline navigation links with variant styling, auto detected external indicators, optional icons, and configurable underline behavior.
             </x-aura::subheading>
-        </div>
+        </x-aura::stack>
     </x-aura::card>
 
     <!-- Component Syntax -->
@@ -212,4 +212,4 @@ class extends Component {};
 {{-- External link (auto-detects target="_blank") --}}
 <x-aura::link href="https://github.com" target="_blank" variant="primary">GitHub</x-aura::link>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
-</div>
+</x-aura::stack>

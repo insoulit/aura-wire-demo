@@ -74,16 +74,16 @@ class extends Component {
 <div class="w-full max-w-4xl mx-auto space-y-12 flex flex-col items-center justify-center">
     <!-- Header -->
     <x-aura::card>
-        <div class="space-y-2 max-w-2xl">
-            <div class="flex items-center gap-2.5">
+        <x-aura::stack gap="2" class="max-w-2xl">
+            <x-aura::flex align="center" gap="2.5">
                 <x-aura::kicker>Data</x-aura::kicker>
                 <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
-            </div>
+            </x-aura::flex>
             <x-aura::heading level="1" size="xl">Table</x-aura::heading>
             <x-aura::subheading size="md">
                 Production-grade data tables supporting avatars, status badges, progress indicators, action toolbars, and striped layout.
             </x-aura::subheading>
-        </div>
+        </x-aura::stack>
     </x-aura::card>
 
     <!-- Component Syntax -->
