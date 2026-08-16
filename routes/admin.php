@@ -3,7 +3,7 @@
 use Livewire\Volt\Volt;
 
 // Admin Portal Console Routes
-Volt::route('/admin', 'admin.dashboard')->name('admin.dashboard');
+Volt::route('/admin', 'admin.index')->name('admin.index');
 Volt::route('/admin/users', 'admin.user.index')->name('admin.users');
 Volt::route('/admin/users/create', 'admin.user.create')->name('admin.users.create');
 Volt::route('/admin/users/edit', 'admin.user.edit')->name('admin.users.edit');
