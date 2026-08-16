@@ -6,29 +6,29 @@ new class extends Component {};
 
 ?>
 
-<section class="max-w-6xl mx-auto px-4 space-y-12 pt-16 sm:pt-24">
-    <div class="text-center max-w-xl mx-auto space-y-2">
+<x-aura::stack gap="12" class="max-w-6xl mx-auto px-4 pt-16 sm:pt-24">
+    <x-aura::stack gap="2" class="text-center max-w-xl mx-auto">
         <x-aura::kicker>Layout Architectures</x-aura::kicker>
         <x-aura::heading level="2" size="xl">Application Layouts</x-aura::heading>
         <x-aura::subheading size="md">
             Interactive layout environment templates built with Aura Wire components.
         </x-aura::subheading>
-    </div>
+    </x-aura::stack>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
         <!-- Portal 1: Guest Portal -->
         <div class="flex flex-col justify-between h-full group transition-all duration-300 hover:-translate-y-1">
             <x-aura::card>
-                <div class="space-y-4">
+                <x-aura::stack gap="4">
                     <!-- Card Header -->
-                    <div class="flex items-center justify-between">
+                    <x-aura::flex align="center" justify="between">
                         <div class="relative group-hover:scale-110 transition-transform duration-300 pointer-events-none">
                             <div class="absolute inset-0 bg-zinc-400/20 dark:bg-zinc-500/10 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             <x-aura::icon-button icon="globe" variant="secondary" size="lg" />
                         </div>
                         <x-aura::badge variant="subtle" size="sm">Public</x-aura::badge>
-                    </div>
+                    </x-aura::flex>
 
                     <!-- Mini Visual Layout Skeleton — Guest (centered hero content) -->
                     <div class="relative overflow-hidden p-3 rounded-xl bg-gradient-to-b from-zinc-50 to-zinc-100/80 dark:from-zinc-950/80 dark:to-zinc-900/60 border border-zinc-200/70 dark:border-zinc-800/80 select-none h-[120px] flex flex-col gap-1.5 transition-all duration-300 group-hover:border-zinc-400/50 dark:group-hover:border-zinc-600/40 group-hover:shadow-[0_0_20px_-4px_rgba(0,0,0,0.1)] dark:group-hover:shadow-[0_0_20px_-4px_rgba(255,255,255,0.06)]">
@@ -59,20 +59,19 @@ new class extends Component {};
                     </div>
 
                     <!-- Info -->
-                    <div class="space-y-1.5">
+                    <x-aura::stack gap="1.5">
                         <x-aura::heading level="3" size="sm">Guest</x-aura::heading>
                         <x-aura::text variant="subtle" size="sm">
-                            Public-facing portal layout for landing pages, marketing features, and authentication screens.
+                            Public facing portal layout for landing pages, marketing features, and authentication screens.
                         </x-aura::text>
-                    </div>
-                </div>
+                    </x-aura::stack>
+                </x-aura::stack>
 
                 <x-slot:footer>
-                    <div class="w-full">
-                        <x-aura::button variant="primary" size="md" iconTrailing="arrow-right" href="/guest">
-                            Explore Guest
-                        </x-aura::button>
-                    </div>
+                    <x-aura::button variant="primary" size="md" block="true" href="/guest">
+                        <span>Explore</span>
+                        <x-aura::icon name="arrow-right" size="xs" />
+                    </x-aura::button>
                 </x-slot:footer>
             </x-aura::card>
         </div>
@@ -80,15 +79,15 @@ new class extends Component {};
         <!-- Portal 2: User Workspace -->
         <div class="flex flex-col justify-between h-full group transition-all duration-300 hover:-translate-y-1">
             <x-aura::card>
-                <div class="space-y-4">
+                <x-aura::stack gap="4">
                     <!-- Card Header -->
-                    <div class="flex items-center justify-between">
+                    <x-aura::flex align="center" justify="between">
                         <div class="relative group-hover:scale-110 transition-transform duration-300 pointer-events-none">
                             <div class="absolute inset-0 bg-zinc-400/20 dark:bg-zinc-500/10 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             <x-aura::icon-button icon="user" variant="secondary" size="lg" />
                         </div>
                         <x-aura::badge variant="subtle" size="sm">Member</x-aura::badge>
-                    </div>
+                    </x-aura::flex>
 
                     <!-- Mini Visual Layout Skeleton — User (dashboard with stats) -->
                     <div class="relative overflow-hidden p-3 rounded-xl bg-gradient-to-b from-zinc-50 to-zinc-100/80 dark:from-zinc-950/80 dark:to-zinc-900/60 border border-zinc-200/70 dark:border-zinc-800/80 select-none h-[120px] flex flex-col gap-1.5 transition-all duration-300 group-hover:border-zinc-400/50 dark:group-hover:border-zinc-600/40 group-hover:shadow-[0_0_20px_-4px_rgba(0,0,0,0.1)] dark:group-hover:shadow-[0_0_20px_-4px_rgba(255,255,255,0.06)]">
@@ -132,20 +131,19 @@ new class extends Component {};
                     </div>
 
                     <!-- Info -->
-                    <div class="space-y-1.5">
+                    <x-aura::stack gap="1.5">
                         <x-aura::heading level="3" size="sm">User</x-aura::heading>
                         <x-aura::text variant="subtle" size="sm">
                             Authenticated member workspace layout featuring a header navbar, status badges, and project metrics.
                         </x-aura::text>
-                    </div>
-                </div>
+                    </x-aura::stack>
+                </x-aura::stack>
 
                 <x-slot:footer>
-                    <div class="w-full">
-                        <x-aura::button variant="primary" size="md" iconTrailing="arrow-right" href="/user">
-                            Launch User
-                        </x-aura::button>
-                    </div>
+                    <x-aura::button variant="primary" size="md" block="true" href="/user">
+                        <span>Launch</span>
+                        <x-aura::icon name="arrow-right" size="xs" />
+                    </x-aura::button>
                 </x-slot:footer>
             </x-aura::card>
         </div>
@@ -153,15 +151,15 @@ new class extends Component {};
         <!-- Portal 3: Admin Console -->
         <div class="flex flex-col justify-between h-full group transition-all duration-300 hover:-translate-y-1">
             <x-aura::card>
-                <div class="space-y-4">
+                <x-aura::stack gap="4">
                     <!-- Card Header -->
-                    <div class="flex items-center justify-between">
+                    <x-aura::flex align="center" justify="between">
                         <div class="relative group-hover:scale-110 transition-transform duration-300 pointer-events-none">
                             <div class="absolute inset-0 bg-zinc-400/20 dark:bg-zinc-500/10 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             <x-aura::icon-button icon="shield-check" variant="primary" size="lg" />
                         </div>
                         <x-aura::badge variant="primary" size="sm">Admin</x-aura::badge>
-                    </div>
+                    </x-aura::flex>
 
                     <!-- Mini Visual Layout Skeleton — Admin (sidebar + header + content) -->
                     <div class="relative overflow-hidden p-3 rounded-xl bg-gradient-to-b from-zinc-50 to-zinc-100/80 dark:from-zinc-950/80 dark:to-zinc-900/60 border border-zinc-200/70 dark:border-zinc-800/80 flex gap-2 h-[120px] select-none transition-all duration-300 group-hover:border-zinc-400/50 dark:group-hover:border-zinc-600/40 group-hover:shadow-[0_0_20px_-4px_rgba(0,0,0,0.1)] dark:group-hover:shadow-[0_0_20px_-4px_rgba(255,255,255,0.06)]">
@@ -209,23 +207,22 @@ new class extends Component {};
                     </div>
 
                     <!-- Info -->
-                    <div class="space-y-1.5">
+                    <x-aura::stack gap="1.5">
                         <x-aura::heading level="3" size="sm">Admin</x-aura::heading>
                         <x-aura::text variant="subtle" size="sm">
                             System administrator console layout featuring a dedicated sidebar navigation, metrics, and health logs.
                         </x-aura::text>
-                    </div>
-                </div>
+                    </x-aura::stack>
+                </x-aura::stack>
 
                 <x-slot:footer>
-                    <div class="w-full">
-                        <x-aura::button variant="primary" size="md" iconTrailing="arrow-right" href="/admin">
-                            Access Admin
-                        </x-aura::button>
-                    </div>
+                    <x-aura::button variant="primary" size="md" block="true" href="/admin">
+                        <span>Access</span>
+                        <x-aura::icon name="arrow-right" size="xs" />
+                    </x-aura::button>
                 </x-slot:footer>
             </x-aura::card>
         </div>
 
     </div>
-</section>
+</x-aura::stack>

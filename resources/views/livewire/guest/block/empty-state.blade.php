@@ -11,10 +11,10 @@ class extends Component {};
 
 ?>
 
-<div class="w-full max-w-4xl mx-auto space-y-6 py-6">
+<x-aura::stack gap="6" class="w-full max-w-4xl mx-auto py-6">
     <!-- Top Header -->
-    <div class="space-y-1 px-1">
-        <div class="flex items-center justify-between gap-4">
+    <div class="px-1">
+        <x-aura::flex align="center" justify="between" gap="4">
             <div>
                 <x-aura::kicker>Design Blocks</x-aura::kicker>
                 <x-aura::heading level="1" size="lg">Empty State</x-aura::heading>
@@ -23,7 +23,7 @@ class extends Component {};
                 <x-aura::icon name="arrow-left"  size="xs" />
                 <span>Back</span>
             </x-aura::button>
-        </div>
+        </x-aura::flex>
     </div>
 
     <!-- Empty State Block Preview -->
@@ -59,4 +59,4 @@ class extends Component {};
     &lt;/x-aura::button&gt;
 &lt;/x-aura::card&gt;</x-slot>
     </x-aura::code>
-</div>
+</x-aura::stack>

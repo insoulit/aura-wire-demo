@@ -15,12 +15,13 @@ class extends Component {
 
 ?>
 
-<div class="w-full max-w-5xl space-y-12 py-6">
+<x-aura::stack gap="12" class="w-full max-w-5xl py-6">
     <!-- Breadcrumb & Status Top Bar -->
     <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-4">
         <div class="flex items-center gap-3">
-            <x-aura::button href="/guest#full-template" variant="subtle" size="sm" icon="arrow-left">
-                Back
+            <x-aura::button href="/guest#full-template" variant="subtle" size="sm">
+                <x-aura::icon name="arrow-left" size="xs" />
+                <span>Back</span>
             </x-aura::button>
             <span class="text-zinc-300 dark:text-zinc-700">/</span>
             <x-aura::badge variant="neutral" size="sm">Portfolio UI Kit</x-aura::badge>
@@ -151,4 +152,4 @@ class extends Component {
             </div>
         </x-slot:footer>
     </x-aura::card>
-</div>
+</x-aura::stack>

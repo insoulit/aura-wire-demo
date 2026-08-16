@@ -15,7 +15,7 @@ class extends Component {
 
 ?>
 
-<div class="w-full max-w-6xl space-y-10 py-6">
+<x-aura::stack gap="10" class="w-full max-w-6xl py-6">
     <!-- Navigation Breadcrumbs & Top Bar -->
     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-4">
         <x-aura::breadcrumb :items="[
@@ -159,4 +159,4 @@ class extends Component {
             </div>
         </div>
     </x-aura::card>
-</div>
+</x-aura::stack>

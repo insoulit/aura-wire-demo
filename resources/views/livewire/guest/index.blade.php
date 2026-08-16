@@ -11,7 +11,7 @@ class extends Component {};
 
 ?>
 
-<div class="w-full max-w-6xl space-y-16 py-2">
+<x-aura::stack gap="16" class="w-full max-w-6xl py-2">
 
     <!-- Hero Header Section (Vertically Centered with Mouse Scroll Down Icon) -->
     <section class="min-h-[calc(100vh-8rem)] flex flex-col justify-center items-center py-6 text-center max-w-4xl mx-auto w-full space-y-8">
@@ -633,4 +633,4 @@ class extends Component {};
 
         </div>
     </div>
-</div>
+</x-aura::stack>
