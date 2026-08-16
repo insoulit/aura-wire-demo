@@ -142,7 +142,7 @@ class extends Component {};
                         <div class="space-y-0.5">
                             <x-aura::heading level="3" size="sm">Security & Authentication</x-aura::heading>
                             <x-aura::subheading size="sm">
-                                Manage two-factor authentication and active login sessions.
+                                Manage two factor authentication and active login sessions.
                             </x-aura::subheading>
                         </div>
                         <div class="shrink-0">
@@ -154,7 +154,7 @@ class extends Component {};
                         <div class="space-y-0.5">
                             <x-aura::heading level="3" size="sm">API Webhooks</x-aura::heading>
                             <x-aura::subheading size="sm">
-                                Receive real-time HTTP callbacks when events occur in your account.
+                                Receive real time HTTP callbacks when events occur in your account.
                             </x-aura::subheading>
                         </div>
                         <div class="shrink-0">
@@ -170,7 +170,7 @@ class extends Component {};
             <div class="space-y-0.5">
                 <x-aura::heading level="3" size="sm">Security & Authentication</x-aura::heading>
                 <x-aura::subheading size="sm">
-                    Manage two-factor authentication and active login sessions.
+                    Manage two factor authentication and active login sessions.
                 </x-aura::subheading>
             </div>
             <x-aura::button variant="secondary" size="sm">Manage Sessions</x-aura::button>
@@ -180,7 +180,7 @@ class extends Component {};
             <div class="space-y-0.5">
                 <x-aura::heading level="3" size="sm">API Webhooks</x-aura::heading>
                 <x-aura::subheading size="sm">
-                    Receive real-time HTTP callbacks when events occur in your account.
+                    Receive real time HTTP callbacks when events occur in your account.
                 </x-aura::subheading>
             </div>
             <x-aura::button variant="primary" size="sm" icon="plus"><span>Create</span></x-aura::button>

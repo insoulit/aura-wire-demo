@@ -140,8 +140,8 @@ class extends Component {};
 </x-aura::navbar>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 3. E-Commerce Storefront Top Navbar -->
-    <x-aura::code  title="3. E-Commerce Storefront Top Navbar">
+    <!-- 3. E Commerce Storefront Top Navbar -->
+    <x-aura::code  title="3. E Commerce Storefront Top Navbar">
         <x-slot:preview>
             <div class="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-3">
                 <div class="rounded-xl overflow-hidden shadow-xs">

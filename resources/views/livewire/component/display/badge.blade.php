@@ -95,8 +95,8 @@ class extends Component {};
 </x-aura::badge>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 4. Real-World Status Table Pattern -->
-    <x-aura::code  title="4. Real-World Data Table Status Badges">
+    <!-- 4. Real World Status Table Pattern -->
+    <x-aura::code  title="4. Real World Data Table Status Badges">
         <x-slot:preview>
             <div class="w-full space-y-2">
                 <x-aura::card>

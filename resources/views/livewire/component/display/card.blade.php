@@ -38,7 +38,7 @@ class extends Component {};
     <x-aura::code  title="1. Standard Header & Action Footer Card">
         <x-slot:preview>
             <div class="w-full max-w-lg">
-                <x-aura::card title="Project Statistics" description="Real-time traffic and performance metrics.">
+                <x-aura::card title="Project Statistics" description="Real time traffic and performance metrics.">
                     <div class="space-y-3 py-1">
                         <div class="flex items-center justify-between text-sm">
                             <span class="text-zinc-500 dark:text-zinc-400">Total Unique Visitors</span>
@@ -56,7 +56,7 @@ class extends Component {};
                 </x-aura::card>
             </div>
         </x-slot:preview>
-        <x-slot name="codeSlot">&lt;x-aura::card title="Project Statistics" description="Real-time traffic metrics."&gt;
+        <x-slot name="codeSlot">&lt;x-aura::card title="Project Statistics" description="Real time traffic metrics."&gt;
     &lt;div class="flex justify-between text-sm"&gt;
         &lt;span&gt;Total Visitors&lt;/span&gt;
         &lt;span class="font-mono font-bold"&gt;128,450&lt;/span&gt;

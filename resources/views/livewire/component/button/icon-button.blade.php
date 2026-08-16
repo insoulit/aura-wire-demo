@@ -117,8 +117,8 @@ class extends Component {};
 <x-aura::icon-button icon="bell" size="xl" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 5. Real-World Table & Toolbar Actions -->
-    <x-aura::code  title="5. Real-World Table Actions">
+    <!-- 5. Real World Table & Toolbar Actions -->
+    <x-aura::code  title="5. Real World Table Actions">
         <x-slot:preview>
             <x-aura::card>
                 <div>

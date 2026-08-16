@@ -23,7 +23,7 @@ class extends Component {
             </div>
             <x-aura::heading level="1" size="xl">Switch</x-aura::heading>
             <x-aura::subheading size="md">
-                Interactive toggle switches for binary settings and real-time state preferences.
+                Interactive toggle switches for binary settings and real time state preferences.
             </x-aura::subheading>
         </div>
     </x-aura::card>

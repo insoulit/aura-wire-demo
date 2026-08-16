@@ -18,7 +18,7 @@ class extends Component {
             ],
             'deepItems' => [
                 ['label' => 'Dashboard', 'href' => '#'],
-                ['label' => 'E-Commerce Store', 'href' => '#'],
+                ['label' => 'E Commerce Store', 'href' => '#'],
                 ['label' => 'Product Catalog', 'href' => '#'],
                 ['label' => 'Audio & Headphones', 'href' => '#'],
                 ['label' => 'Aura Pro Wireless'],
@@ -122,7 +122,7 @@ class extends Component {
         </x-slot:preview>
         <x-slot:codeSlot>@verbatim<x-aura::breadcrumb :items="[
     ['label' => 'Dashboard', 'href' => '#'],
-    ['label' => 'E-Commerce Store', 'href' => '#'],
+    ['label' => 'E Commerce Store', 'href' => '#'],
     ['label' => 'Product Catalog', 'href' => '#'],
     ['label' => 'Audio & Headphones', 'href' => '#'],
     ['label' => 'Aura Pro Wireless'],

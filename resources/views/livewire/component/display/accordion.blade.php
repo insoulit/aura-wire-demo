@@ -69,7 +69,7 @@ class extends Component {};
                         Receive instant push notifications and weekly email digests.
                     </x-aura::accordion.item>
                     <x-aura::accordion.item name="opt-2" title="Security & Authentication">
-                        Two-Factor Authentication (2FA) is enabled for your account.
+                        Two Factor Authentication (2FA) is enabled for your account.
                     </x-aura::accordion.item>
                     <x-aura::accordion.item name="opt-3" title="API Access Tokens">
                         Manage secret keys and application access scopes.

@@ -21,7 +21,7 @@ class extends Component {};
             </div>
             <x-aura::heading level="1" size="xl">Link</x-aura::heading>
             <x-aura::subheading size="md">
-                Lightweight inline navigation links with variant styling, auto-detected external indicators, optional icons, and configurable underline behavior.
+                Lightweight inline navigation links with variant styling, auto detected external indicators, optional icons, and configurable underline behavior.
             </x-aura::subheading>
         </div>
     </x-aura::card>
@@ -80,7 +80,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 4. External Links -->
-    <x-aura::code title="4. External Links (Auto-Detected)">
+    <x-aura::code title="4. External Links (Auto Detected)">
         <x-slot:preview>
             <div class="flex flex-wrap items-center gap-6">
                 <x-aura::link href="https://github.com" target="_blank">GitHub</x-aura::link>
@@ -136,8 +136,8 @@ class extends Component {};
 <x-aura::link href="#" :disabled="true" variant="primary" icon="lock">Locked Feature</x-aura::link>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 8. Real-World Patterns -->
-    <x-aura::code title="8. Real-World Usage Patterns">
+    <!-- 8. Real World Patterns -->
+    <x-aura::code title="8. Real World Usage Patterns">
         <x-slot:preview>
             <div class="w-full space-y-6">
                 <!-- Inline Text Pattern -->

@@ -41,12 +41,12 @@ class extends Component {};
                                 Enterprise Access Control
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
-                                Role-based permissions, encrypted audit logging, and single sign-on integration built-in.
+                                Role-based permissions, encrypted audit logging, and single sign-on integration built in.
                             </x-aura::text>
                         </div>
                     </div>
                     <div class="pt-2">
-                        <x-aura::tag variant="success" size="sm">SOC-2 Ready</x-aura::tag>
+                        <x-aura::tag variant="success" size="sm">SOC 2 Ready</x-aura::tag>
                     </div>
                 </x-aura::card>
 
@@ -103,12 +103,12 @@ class extends Component {};
                     Enterprise Access Control
                 &lt;/x-aura::heading&gt;
                 &lt;x-aura::text variant="subtle" size="sm"&gt;
-                    Role-based permissions, encrypted audit logging, and SSO built-in.
+                    Role-based permissions, encrypted audit logging, and SSO built in.
                 &lt;/x-aura::text&gt;
             &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class="pt-2"&gt;
-            &lt;x-aura::tag variant="success" size="sm"&gt;SOC-2 Ready&lt;/x-aura::tag&gt;
+            &lt;x-aura::tag variant="success" size="sm"&gt;SOC 2 Ready&lt;/x-aura::tag&gt;
         &lt;/div&gt;
     &lt;/x-aura::card&gt;
 &lt;/div&gt;</x-slot>

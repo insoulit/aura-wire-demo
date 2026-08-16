@@ -21,7 +21,7 @@ class extends Component {};
             </div>
             <x-aura::heading level="1" size="xl">Pagination</x-aura::heading>
             <x-aura::subheading size="md">
-                Multi-purpose pagination components supporting numbered windows, icon-only navigation, circular pills, card footer bars, and alignment controls.
+                Multi-purpose pagination components supporting numbered windows, icon only navigation, circular pills, card footer bars, and alignment controls.
             </x-aura::subheading>
         </div>
     </x-aura::card>
@@ -31,8 +31,8 @@ class extends Component {};
         <x-slot:codeSlot>@verbatim<x-aura::pagination :currentPage="2" :totalPages="8" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 1. Numbered Window Pagination (Text vs Icon-Only) -->
-    <x-aura::code  title="1. Standard Numbered Window Pagination (Text vs Icon-Only)">
+    <!-- 1. Numbered Window Pagination (Text vs Icon Only) -->
+    <x-aura::code  title="1. Standard Numbered Window Pagination (Text vs Icon Only)">
         <x-slot:preview>
             <div class="space-y-6 w-full">
                 <div class="space-y-2">
@@ -41,7 +41,7 @@ class extends Component {};
                 </div>
 
                 <div class="space-y-2">
-                    <p class="text-xs font-bold text-zinc-500 uppercase tracking-wider">Icon-Only Triggers (:iconsOnly="true"):</p>
+                    <p class="text-xs font-bold text-zinc-500 uppercase tracking-wider">Icon Only Triggers (:iconsOnly="true"):</p>
                     <x-aura::pagination :page="4" :totalPages="12" :total="120" :perPage="10" variant="numbers" :iconsOnly="true" />
                 </div>
             </div>
@@ -49,7 +49,7 @@ class extends Component {};
         <x-slot:codeSlot>@verbatim<!-- Clean Text Previous / Next Buttons -->
 <x-aura::pagination :page="4" :totalPages="12" :total="120" :perPage="10" variant="numbers" />
 
-<!-- Icon-Only Previous / Next Triggers -->
+<!-- Icon Only Previous / Next Triggers -->
 <x-aura::pagination :page="4" :totalPages="12" :total="120" :perPage="10" variant="numbers" :iconsOnly="true" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 

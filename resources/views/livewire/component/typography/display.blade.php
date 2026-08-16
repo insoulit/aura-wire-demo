@@ -92,7 +92,7 @@ class extends Component {};
             <div class="space-y-3 w-full">
                 <div class="space-y-0.5">
                     <x-aura::badge variant="neutral" size="md">weight="black" (900)</x-aura::badge>
-                    <x-aura::display size="sm" weight="black">Ultra-Bold Black Weight Display</x-aura::display>
+                    <x-aura::display size="sm" weight="black">Ultra Bold Black Weight Display</x-aura::display>
                 </div>
                 <div class="space-y-0.5 border-t border-zinc-200 dark:border-zinc-800 pt-2">
                     <x-aura::badge variant="neutral" size="md">weight="extrabold" (800, Default)</x-aura::badge>
@@ -114,13 +114,13 @@ class extends Component {};
 <x-aura::display size="sm" weight="semibold">Semibold Weight Display</x-aura::display>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 4. Real-World Landing Page Hero Pattern -->
-    <x-aura::code title="4. Real-World Landing Page Hero Pattern">
+    <!-- 4. Real World Landing Page Hero Pattern -->
+    <x-aura::code title="4. Real World Landing Page Hero Pattern">
         <x-slot:preview>
             <div class="p-8 sm:p-12 rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/60 text-center flex flex-col items-center w-full">
                 <div class="space-y-4 max-w-2xl flex flex-col items-center">
                     <div class="flex items-center gap-2">
-                        <x-aura::kicker>NEXT-GEN LIVEWIRE PRIMITIVES</x-aura::kicker>
+                        <x-aura::kicker>NEXT GEN LIVEWIRE PRIMITIVES</x-aura::kicker>
                         <x-aura::badge variant="positive" size="md">v2.0</x-aura::badge>
                     </div>
                     <x-aura::display size="xl" :gradient="true">
@@ -139,7 +139,7 @@ class extends Component {};
         <x-slot:codeSlot>@verbatim<div class="p-8 sm:p-12 rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/60 text-center flex flex-col items-center">
     <div class="space-y-4 max-w-2xl flex flex-col items-center">
         <div class="flex items-center gap-2">
-            <x-aura::kicker>NEXT-GEN LIVEWIRE PRIMITIVES</x-aura::kicker>
+            <x-aura::kicker>NEXT GEN LIVEWIRE PRIMITIVES</x-aura::kicker>
             <x-aura::badge variant="positive" size="md">v2.0</x-aura::badge>
         </div>
         <x-aura::display size="xl" :gradient="true">

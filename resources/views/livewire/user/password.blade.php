@@ -75,7 +75,7 @@ class extends Component {
             </div>
 
             <div class="pt-3 space-y-3">
-                <x-aura::field label="4-Digit Security PIN" hint="Used for quick confirmation on sensitive workspace actions.">
+                <x-aura::field label="4 Digit Security PIN" hint="Used for quick confirmation on sensitive workspace actions.">
                     <x-aura::pin-code wire:model="pinCode" length="4" />
                 </x-aura::field>
             </div>

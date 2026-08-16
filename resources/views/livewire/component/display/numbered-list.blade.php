@@ -15,13 +15,13 @@ class extends Component {
                 [
                     'title' => 'Aura Headphones Pro',
                     'subtitle' => 'Wireless Noise Canceling • $299',
-                    'description' => 'Premium spatial audio with active noise cancellation and 30-hour battery life.',
+                    'description' => 'Premium spatial audio with active noise cancellation and 30 hour battery life.',
                     'image' => 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=200&auto=format&fit=crop&q=80',
                     'badge' => 'Top Seller',
                 ],
                 [
                     'title' => 'Minimalist Mechanical Keyboard',
-                    'subtitle' => 'Hot-swappable Switches • $149',
+                    'subtitle' => 'Hot swappable Switches • $149',
                     'description' => 'Anodized aluminum chassis with custom linear switches and RGB backlighting.',
                     'image' => 'https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=200&auto=format&fit=crop&q=80',
                     'badge' => 'New Arrival',
@@ -29,7 +29,7 @@ class extends Component {
                 [
                     'title' => 'Ergonomic Desk Monitor Arm',
                     'subtitle' => 'Heavy Duty Aluminum • $89',
-                    'description' => 'Full motion articulation supporting ultra-wide monitors up to 34 inches.',
+                    'description' => 'Full motion articulation supporting ultra wide monitors up to 34 inches.',
                     'image' => 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=200&auto=format&fit=crop&q=80',
                     'badge' => 'Featured',
                 ],
@@ -43,7 +43,7 @@ class extends Component {
                 ],
                 [
                     'title' => 'Component Library',
-                    'subtitle' => '40+ production-ready Blade & Livewire Volt components.',
+                    'subtitle' => '40+ production ready Blade & Livewire Volt components.',
                     'image' => 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=300&auto=format&fit=crop&q=80',
                     'badge' => 'Phase 2',
                 ],
@@ -101,7 +101,7 @@ class extends Component {
     ],
     [
         'title' => 'Minimalist Mechanical Keyboard',
-        'subtitle' => 'Hot-swappable Switches • $149',
+        'subtitle' => 'Hot swappable Switches • $149',
         'description' => 'Anodized aluminum chassis with custom linear switches.',
         'image' => 'https://images.unsplash.com/...',
         'badge' => 'New Arrival',
@@ -110,7 +110,7 @@ class extends Component {
     </x-aura::code>
 
     <!-- 2. Card Grid List with Images -->
-    <x-aura::code  title="2. Two-Column Card Grid List">
+    <x-aura::code  title="2. Two Column Card Grid List">
         <x-slot:preview>
             <div class="w-full max-w-2xl">
                 <x-aura::numbered-list :items="$gridCards" variant="grid" />
@@ -118,7 +118,7 @@ class extends Component {
         </x-slot:preview>
         <x-slot:codeSlot>@verbatim<x-aura::numbered-list :items="[
     ['title' => 'Design System Tokens', 'subtitle' => 'Color palettes and typography.', 'image' => 'https://...', 'badge' => 'Phase 1'],
-    ['title' => 'Component Library', 'subtitle' => '40+ production-ready components.', 'image' => 'https://...', 'badge' => 'Phase 2'],
+    ['title' => 'Component Library', 'subtitle' => '40+ production ready components.', 'image' => 'https://...', 'badge' => 'Phase 2'],
 ]" variant="grid" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 

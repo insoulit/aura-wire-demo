@@ -71,13 +71,13 @@ class extends Component {};
     <x-aura::code  title="3. Security Audit & Access History">
         <x-slot:preview>
             <x-aura::timeline>
-                <x-aura::timeline.item title="Two-Factor Authentication Enabled" time="1 hour ago" variant="solid" description="Authenticator app 2FA configured for user account." />
+                <x-aura::timeline.item title="Two Factor Authentication Enabled" time="1 hour ago" variant="solid" description="Authenticator app 2FA configured for user account." />
                 <x-aura::timeline.item title="New Production API Token Generated" time="3 hours ago" variant="subtle" description="Token created with read/write scopes for webhooks." />
                 <x-aura::timeline.item title="Password Changed Successfully" time="3 days ago" variant="subtle" description="Password updated from verified IP 192.168.1.1." />
             </x-aura::timeline>
         </x-slot:preview>
         <x-slot:codeSlot>@verbatim<x-aura::timeline>
-    <x-aura::timeline.item title="Two-Factor Authentication Enabled" time="1 hour ago" variant="solid" />
+    <x-aura::timeline.item title="Two Factor Authentication Enabled" time="1 hour ago" variant="solid" />
     <x-aura::timeline.item title="New API Token Generated" time="3 hours ago" variant="subtle" />
     <x-aura::timeline.item title="Password Changed" time="3 days ago" variant="subtle" />
 </x-aura::timeline>@endverbatim</x-slot:codeSlot>

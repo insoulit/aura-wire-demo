@@ -23,7 +23,7 @@ class extends Component {
             </div>
             <x-aura::heading level="1" size="xl">Select</x-aura::heading>
             <x-aura::subheading size="md">
-                Native option selection dropdowns supporting option arrays, key-value maps, and field validation.
+                Native option selection dropdowns supporting option arrays, key value maps, and field validation.
             </x-aura::subheading>
         </div>
     </x-aura::card>

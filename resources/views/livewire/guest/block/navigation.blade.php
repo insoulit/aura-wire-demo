@@ -96,7 +96,7 @@ class extends Component {};
                             <x-aura::heading level="3" size="sm">Aura Wire</x-aura::heading>
                         </div>
                         <x-aura::text variant="subtle" size="xs" >
-                            Crafting production-ready UI components for the modern Laravel Livewire ecosystem.
+                            Crafting production ready UI components for the modern Laravel Livewire ecosystem.
                         </x-aura::text>
                         <div class="pt-1">
                             <x-aura::tag variant="success" size="sm">Systems Operational</x-aura::tag>

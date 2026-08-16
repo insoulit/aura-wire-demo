@@ -80,11 +80,11 @@ class extends Component {};
             <div class="space-y-4 w-full">
                 <div class="space-y-1">
                     <x-aura::badge variant="subtle" size="md">size="xl" (20px / 24px)</x-aura::badge>
-                    <x-aura::text size="xl">Extra Large Text — High-emphasis lead intro and featured callouts.</x-aura::text>
+                    <x-aura::text size="xl">Extra Large Text — High emphasis lead intro and featured callouts.</x-aura::text>
                 </div>
                 <div class="space-y-1 border-t border-zinc-200 dark:border-zinc-800 pt-3">
                     <x-aura::badge variant="subtle" size="md">size="lg" (18px / 20px)</x-aura::badge>
-                    <x-aura::text size="lg">Large Text — Section lead paragraphs and sub-headlines.</x-aura::text>
+                    <x-aura::text size="lg">Large Text — Section lead paragraphs and sub headlines.</x-aura::text>
                 </div>
                 <div class="space-y-1 border-t border-zinc-200 dark:border-zinc-800 pt-3">
                     <x-aura::badge variant="subtle" size="md">size="md" (16px, Default)</x-aura::badge>
@@ -145,8 +145,8 @@ class extends Component {};
 </div>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 4. Real-World Metadata & Key-Value Card -->
-    <x-aura::code title="4. Real-World Metadata & Key-Value Card">
+    <!-- 4. Real World Metadata & Key Value Card -->
+    <x-aura::code title="4. Real World Metadata & Key Value Card">
         <x-slot:preview>
             <x-aura::card>
                 <div class="space-y-4 w-full">

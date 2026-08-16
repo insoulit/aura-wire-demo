@@ -80,8 +80,8 @@ class extends Component {};
 <x-aura::heading level="2" size="md" weight="extrabold">Extrabold Weight</x-aura::heading>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 4. Real-World Dashboard Header Pattern -->
-    <x-aura::code title="4. Real-World Dashboard Section Header">
+    <!-- 4. Real World Dashboard Header Pattern -->
+    <x-aura::code title="4. Real World Dashboard Section Header">
         <x-slot:preview>
             <x-aura::card>
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">

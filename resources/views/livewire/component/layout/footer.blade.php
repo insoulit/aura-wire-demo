@@ -212,8 +212,8 @@ class extends Component {};
 </x-aura::footer>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 4. E-Commerce Storefront Footer with Newsletter -->
-    <x-aura::code  title="4. E-Commerce Storefront Footer with Newsletter">
+    <!-- 4. E Commerce Storefront Footer with Newsletter -->
+    <x-aura::code  title="4. E Commerce Storefront Footer with Newsletter">
         <x-slot:preview>
             <div class="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950 p-6 space-y-8">
                 <!-- Newsletter Section -->

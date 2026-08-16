@@ -35,7 +35,7 @@ class extends Component {};
                     Build Stunning Web Interfaces in Seconds
                 </x-aura::heading>
                 <x-aura::subheading size="md" >
-                    Production-ready, ultra-accessible Blade &amp; Livewire components crafted for modern Laravel applications.
+                    Production ready, ultra-accessible Blade &amp; Livewire components crafted for modern Laravel applications.
                 </x-aura::subheading>
                 <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 pt-2 w-full sm:w-auto max-w-xs sm:max-w-none">
                     <x-aura::button variant="primary" size="md" ><span>Start</span></x-aura::button>
@@ -49,7 +49,7 @@ class extends Component {};
         Build Stunning Web Interfaces in Seconds
     &lt;/x-aura::heading&gt;
     &lt;x-aura::subheading size="md" class="max-w-lg"&gt;
-        Production-ready components for modern Laravel applications.
+        Production ready components for modern Laravel applications.
     &lt;/x-aura::subheading&gt;
     &lt;div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2 w-full sm:w-auto"&gt;
         &lt;x-aura::button variant="primary" size="md" class="w-full sm:w-auto"&gt;Get Started Free&lt;/x-aura::button&gt;

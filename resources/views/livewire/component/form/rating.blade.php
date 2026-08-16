@@ -21,7 +21,7 @@ class extends Component {};
             </div>
             <x-aura::heading level="1" size="xl">Rating</x-aura::heading>
             <x-aura::subheading size="md">
-                Monochrome star rating form controls and read-only star rating indicators with precise half-star support.
+                Monochrome star rating form controls and read only star rating indicators with precise half star support.
             </x-aura::subheading>
         </div>
     </x-aura::card>
@@ -42,8 +42,8 @@ class extends Component {};
         <x-slot:codeSlot>@verbatim<x-aura::rating rating="4" max="5" name="user_feedback" size="lg" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 2. Half-Star Read-Only Score -->
-    <x-aura::code  title="2. Precise Fractional Half-Star Rating (4.5 / 5.0)">
+    <!-- 2. Half Star Read-Only Score -->
+    <x-aura::code  title="2. Precise Fractional Half Star Rating (4.5 / 5.0)">
         <x-slot:preview>
             <div class="flex items-center gap-3">
                 <span class="text-2xl font-bold text-zinc-900 dark:text-white">4.5</span>
@@ -84,8 +84,8 @@ class extends Component {};
 <x-aura::rating rating="4.5" size="xl" readonly />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 4. 10-Point Scale Rating -->
-    <x-aura::code  title="4. 10-Point Scale Rating">
+    <!-- 4. 10 Point Scale Rating -->
+    <x-aura::code  title="4. 10 Point Scale Rating">
         <x-slot:preview>
             <div class="space-y-2">
                 <x-aura::label>NPS Recommendation Score (10 Stars)</x-aura::label>

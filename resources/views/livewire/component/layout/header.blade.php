@@ -89,8 +89,8 @@ class extends Component {};
 </x-aura::header>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 2. E-Commerce Store Header -->
-    <x-aura::code  title="2. E-Commerce Storefront Header">
+    <!-- 2. E Commerce Store Header -->
+    <x-aura::code  title="2. E Commerce Storefront Header">
         <x-slot:preview>
             <div class="w-full rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-3">
                 <div class="rounded-xl overflow-hidden shadow-xs">

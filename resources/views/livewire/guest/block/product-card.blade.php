@@ -26,8 +26,8 @@ class extends Component {};
         </div>
     </div>
 
-    <!-- 1. E-Commerce Masterpiece Product Block -->
-    <x-aura::code  title="1. Premium E-Commerce Product Card Block">
+    <!-- 1. E Commerce Masterpiece Product Block -->
+    <x-aura::code  title="1. Premium E Commerce Product Card Block">
         <x-slot:preview>
             <div class="w-full max-w-md mx-auto">
                 <x-aura::card >

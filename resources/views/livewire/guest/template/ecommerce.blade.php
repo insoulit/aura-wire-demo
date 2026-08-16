@@ -6,7 +6,7 @@ use Livewire\Attributes\Title;
 
 new 
 #[Layout('livewire.layout.app')] 
-#[Title('E-Commerce UI Kit — Guest Portal | Aura Wire')] 
+#[Title('E Commerce UI Kit — Guest Portal | Aura Wire')] 
 class extends Component {
     public string $search = '';
     public string $category = 'all';
@@ -20,7 +20,7 @@ class extends Component {
     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-4">
         <x-aura::breadcrumb :items="[
             ['label' => 'Back to Templates', 'href' => '/guest#full-template', 'icon' => 'arrow-left'],
-            ['label' => 'E-Commerce UI Kit']
+            ['label' => 'E Commerce UI Kit']
         ]" separator="slash" variant="pills" />
 
         <div class="flex items-center gap-3">
@@ -124,7 +124,7 @@ class extends Component {
                 <div>
                     <x-aura::kicker>Desk Setup</x-aura::kicker>
                     <x-aura::text weight="bold" size="lg">Compact Wireless Mechanical Keyboard</x-aura::text>
-                    <x-aura::text variant="subtle" size="xs">Custom hot-swappable switches with RGB.</x-aura::text>
+                    <x-aura::text variant="subtle" size="xs">Custom hot swappable switches with RGB.</x-aura::text>
                 </div>
                 <div class="flex items-center justify-between pt-2 border-t border-zinc-100 dark:border-zinc-800">
                     <div class="font-extrabold text-lg text-zinc-900 dark:text-white">$189.00</div>

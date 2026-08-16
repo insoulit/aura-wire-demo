@@ -32,7 +32,7 @@ class extends Component {};
     </x-aura::code>
 
     {{-- Default PIN Code (4 digits) --}}
-    <x-aura::code  title="Default 4-Digit Verification Code">
+    <x-aura::code  title="Default 4 Digit Verification Code">
         <x-slot:preview>
             <div class="space-y-3">
                 <x-aura::label>Enter Security Code</x-aura::label>

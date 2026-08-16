@@ -79,7 +79,7 @@ class extends Component {
                     <x-aura::rich-text value="" :invalid="true" placeholder="Field with validation error state..." />
                 </x-aura::field>
 
-                <x-aura::field label="Read-only / Disabled Editor">
+                <x-aura::field label="Read only / Disabled Editor">
                     <x-aura::rich-text value="<p>This editor content is <strong>disabled</strong> and locked from user editing.</p>" :disabled="true" minHeight="100px" />
                 </x-aura::field>
             </div>

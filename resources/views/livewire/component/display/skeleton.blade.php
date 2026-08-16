@@ -83,7 +83,7 @@ class extends Component {
                             </div>
                             <div class="p-4 rounded-xl bg-zinc-100/70 dark:bg-zinc-800/50 border border-zinc-200/60 dark:border-zinc-700/50 space-y-1.5">
                                 <x-aura::text size="xs" weight="semibold">Quarterly Analytics Report</x-aura::text>
-                                <x-aura::text size="xs" variant="subtle">Real-time metrics and revenue performance breakdown across active workspaces.</x-aura::text>
+                                <x-aura::text size="xs" variant="subtle">Real time metrics and revenue performance breakdown across active workspaces.</x-aura::text>
                             </div>
                             <div class="flex items-center justify-between pt-0.5">
                                 <x-aura::badge variant="positive" size="sm">Completed</x-aura::badge>
@@ -118,7 +118,7 @@ class extends Component {
     </x-aura::code>
 
     <!-- 2. Skeleton Variants -->
-    <x-aura::code  title="2. Built-in Variant Styles">
+    <x-aura::code  title="2. Built in Variant Styles">
         <x-slot:preview>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-2xl">
                 <!-- Text Lines -->

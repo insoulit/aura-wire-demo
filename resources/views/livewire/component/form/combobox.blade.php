@@ -65,8 +65,8 @@ class extends Component {};
 />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 2. Associative Key-Value Inline Options -->
-    <x-aura::code  title="2. Associative Key-Value Inline Options">
+    <!-- 2. Associative Key Value Inline Options -->
+    <x-aura::code  title="2. Associative Key Value Inline Options">
         <x-slot:preview>
             <div class="w-full max-w-sm py-4 pb-52">
                 <x-aura::combobox

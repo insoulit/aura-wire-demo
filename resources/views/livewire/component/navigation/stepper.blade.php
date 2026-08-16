@@ -48,7 +48,7 @@ class extends Component {
     </x-aura::code>
 
     <!-- 1. Interactive Livewire Stepper Form -->
-    <x-aura::code  title="1. Interactive Livewire Multi-step Form Wizard">
+    <x-aura::code  title="1. Interactive Livewire Multi step Form Wizard">
         <x-slot:preview>
             <div class="w-full space-y-6 py-2">
                 <x-aura::stepper :active="$currentStep" >
@@ -105,7 +105,7 @@ class extends Component {
     </x-aura::code>
 
     <!-- 2. Order Checkout Stepper -->
-    <x-aura::code  title="2. E-Commerce Order Processing Pipeline">
+    <x-aura::code  title="2. E Commerce Order Processing Pipeline">
         <x-slot:preview>
             <x-aura::stepper active="3" >
                 <x-aura::stepper.step step="1" title="Cart Review" description="2 items in cart" status="completed" />

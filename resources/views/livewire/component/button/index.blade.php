@@ -155,8 +155,8 @@ class extends Component {};
 <x-aura::button variant="outline" :loading="true">Syncing Data</x-aura::button>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 7. Real-World Action Card Patterns -->
-    <x-aura::code title="7. Real-World Action Card Patterns">
+    <!-- 7. Real World Action Card Patterns -->
+    <x-aura::code title="7. Real World Action Card Patterns">
         <x-slot:preview>
             <div class="w-full space-y-4">
                 <!-- Save / Cancel Toolbar -->

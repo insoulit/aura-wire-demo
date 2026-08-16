@@ -81,7 +81,7 @@ class extends Component {};
                     <div class="space-y-4">
                         <div class="flex items-center justify-between">
                             <x-aura::icon name="shopping-bag" variant="subtle" size="lg" />
-                            <x-aura::badge variant="subtle" size="sm">E-Commerce</x-aura::badge>
+                            <x-aura::badge variant="subtle" size="sm">E Commerce</x-aura::badge>
                         </div>
 
                         <div class="space-y-2">
@@ -170,7 +170,7 @@ class extends Component {};
                                 Auth &amp; Security
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
-                                High-security sign-in card with email icon prefix, password field, remember me checkbox, and submit action.
+                                High-security sign in card with email icon prefix, password field, remember me checkbox, and submit action.
                             </x-aura::text>
                         </div>
                     </div>
@@ -501,7 +501,7 @@ class extends Component {};
         <!-- Section 2 Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-            <!-- TEMPLATE 1: E-Commerce Storefront -->
+            <!-- TEMPLATE 1: E Commerce Storefront -->
             <x-aura::card >
                 <div class="h-full flex flex-col justify-between space-y-6">
                     <div class="space-y-4">
@@ -511,7 +511,7 @@ class extends Component {};
 
                         <div class="space-y-2">
                             <x-aura::heading level="3" size="sm" >
-                                E-Commerce Storefront
+                                E Commerce Storefront
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
                                 Product catalogs, filtering sidebars, shopping cart drawers, and checkout flow pages.

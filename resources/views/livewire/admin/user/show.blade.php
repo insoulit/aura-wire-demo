@@ -80,7 +80,7 @@ class extends Component {
                 <x-aura::badge :variant="$user['status_variant']" size="sm">{{ $user['status'] }}</x-aura::badge>
             </div>
             <div class="py-3 flex items-center justify-between">
-                <span class="font-medium text-zinc-500 dark:text-zinc-400">Two-Factor Authentication</span>
+                <span class="font-medium text-zinc-500 dark:text-zinc-400">Two Factor Authentication</span>
                 <span class="font-semibold text-emerald-600 dark:text-emerald-400">{{ $user['two_factor'] }} (TOTP Authenticator)</span>
             </div>
             <div class="py-3 flex items-center justify-between">

@@ -92,7 +92,7 @@ class extends Component {
 
             <!-- 2FA Security Switch -->
             <div class="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-800/40 border border-zinc-200 dark:border-zinc-700/60">
-                <x-aura::switch wire:model="twoFactor" label="Two-Factor Authentication (2FA)" description="Require an authentication code when signing into your workspace." />
+                <x-aura::switch wire:model="twoFactor" label="Two Factor Authentication (2FA)" description="Require an authentication code when signing into your workspace." />
             </div>
 
             <!-- Notifications Checkboxes -->
@@ -100,7 +100,7 @@ class extends Component {
                 <x-aura::heading level="2" size="xs">Notification Preferences</x-aura::heading>
                 <div class="space-y-3">
                     <x-aura::checkbox label="Project Activity Summaries" description="Receive a weekly digest of project progress and team updates." checked />
-                    <x-aura::checkbox label="Security &amp; Sign-in Alerts" description="Get immediate email notifications when new devices log into your account." checked />
+                    <x-aura::checkbox label="Security &amp; Sign in Alerts" description="Get immediate email notifications when new devices log into your account." checked />
                 </div>
             </div>
 

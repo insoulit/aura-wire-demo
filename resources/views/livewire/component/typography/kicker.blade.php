@@ -38,7 +38,7 @@ class extends Component {};
                 <x-aura::kicker>FEATURED PACKAGE</x-aura::kicker>
                 <x-aura::heading level="2" size="lg">Aura Wire Design System</x-aura::heading>
                 <x-aura::subheading size="sm">
-                    Production-ready Blade &amp; Livewire design primitives with zero build step required.
+                    Production ready Blade &amp; Livewire design primitives with zero build step required.
                 </x-aura::subheading>
             </div>
         </x-slot:preview>
@@ -46,7 +46,7 @@ class extends Component {};
     <x-aura::kicker>FEATURED PACKAGE</x-aura::kicker>
     <x-aura::heading level="2" size="lg">Aura Wire Design System</x-aura::heading>
     <x-aura::subheading size="sm">
-        Production-ready Blade & Livewire design primitives with zero build step required.
+        Production ready Blade & Livewire design primitives with zero build step required.
     </x-aura::subheading>
 </div>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
@@ -107,7 +107,7 @@ class extends Component {};
 
                 <div class="flex items-center gap-1.5">
                     <x-aura::icon name="shield-check" size="xs" />
-                    <x-aura::kicker>SOC-2 COMPLIANT</x-aura::kicker>
+                    <x-aura::kicker>SOC 2 COMPLIANT</x-aura::kicker>
                 </div>
             </div>
         </x-slot:preview>
@@ -134,7 +134,7 @@ class extends Component {};
                         Scale your infrastructure without friction
                     </x-aura::heading>
                     <x-aura::subheading size="md">
-                        Global multi-region cloud servers with automated load balancing, zero downtime rollouts, and SOC-2 verified security.
+                        Global multi-region cloud servers with automated load balancing, zero downtime rollouts, and SOC 2 verified security.
                     </x-aura::subheading>
                 </div>
             </x-aura::card>

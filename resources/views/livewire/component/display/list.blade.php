@@ -12,8 +12,8 @@ class extends Component {
     {
         return [
             'features' => [
-                ['title' => 'Tailwind CSS v4 Integration', 'subtitle' => 'Zero-config styling with dark mode and CSS variables.', 'image' => 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&auto=format&fit=crop&q=80', 'badge' => 'Core'],
-                ['title' => 'Livewire Volt Single-File Views', 'subtitle' => 'Unified component logic and Blade templating in one file.', 'image' => 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=100&auto=format&fit=crop&q=80', 'badge' => 'Blade'],
+                ['title' => 'Tailwind CSS v4 Integration', 'subtitle' => 'Zero config styling with dark mode and CSS variables.', 'image' => 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=100&auto=format&fit=crop&q=80', 'badge' => 'Core'],
+                ['title' => 'Livewire Volt Single File Views', 'subtitle' => 'Unified component logic and Blade templating in one file.', 'image' => 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=100&auto=format&fit=crop&q=80', 'badge' => 'Blade'],
                 ['title' => 'Polymorphic Component Engine', 'subtitle' => 'Flexible prop schemas for links, buttons, and custom slots.', 'image' => 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=100&auto=format&fit=crop&q=80', 'badge' => 'UI'],
             ],
             'compactList' => [
@@ -55,8 +55,8 @@ class extends Component {
             </div>
         </x-slot:preview>
         <x-slot:codeSlot>@verbatim<x-aura::list :items="[
-    ['title' => 'Tailwind CSS v4 Integration', 'subtitle' => 'Zero-config styling with dark mode.', 'image' => 'https://...', 'badge' => 'Core'],
-    ['title' => 'Livewire Volt Single-File Views', 'subtitle' => 'Unified component logic in one file.', 'image' => 'https://...', 'badge' => 'Blade'],
+    ['title' => 'Tailwind CSS v4 Integration', 'subtitle' => 'Zero config styling with dark mode.', 'image' => 'https://...', 'badge' => 'Core'],
+    ['title' => 'Livewire Volt Single File Views', 'subtitle' => 'Unified component logic in one file.', 'image' => 'https://...', 'badge' => 'Blade'],
     ['title' => 'Polymorphic Component Engine', 'subtitle' => 'Flexible prop schemas and slots.', 'image' => 'https://...', 'badge' => 'UI'],
 ]" variant="media" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
@@ -83,8 +83,8 @@ class extends Component {
             </div>
         </x-slot:preview>
         <x-slot:codeSlot>@verbatim<x-aura::list :items="[
-    ['title' => 'Tailwind CSS v4 Integration', 'subtitle' => 'Zero-config styling.'],
-    ['title' => 'Livewire Volt Single-File Views', 'subtitle' => 'Unified component logic.'],
+    ['title' => 'Tailwind CSS v4 Integration', 'subtitle' => 'Zero config styling.'],
+    ['title' => 'Livewire Volt Single File Views', 'subtitle' => 'Unified component logic.'],
 ]" variant="card" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 </div>
