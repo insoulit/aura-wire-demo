@@ -25,7 +25,7 @@ class extends Component {};
             </x-aura::subheading>
             <div class="pt-1">
                 <x-aura::button variant="secondary" size="sm" href="/components/icon-library" icon="search">
-                    <span>Browse</span>
+                    Browse
                 </x-aura::button>
             </div>
         </div>
