@@ -20,17 +20,20 @@ class extends Component {};
         <div class="space-y-6 max-w-3xl mx-auto flex flex-col items-center">
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200/80 dark:border-zinc-700/60 shadow-2xs">
                 <x-aura::badge variant="neutral" size="sm">Showcase</x-aura::badge>
-                <x-aura::text size="xs" variant="subtle" weight="medium">Blocks &amp; Templates</x-aura::text>
+                <x-aura::text size="xs" variant="subtle" weight="medium">Guest Portal</x-aura::text>
             </div>
 
-            <x-aura::heading level="1" size="display-md">
-                Ready to Use <br class="hidden sm:block" />
-                Blocks &amp; Templates
-            </x-aura::heading>
+            <div class="space-y-2 text-center max-w-xl mx-auto">
+                <x-aura::heading level="1" size="display-md">
+                    Blocks & Templates
+                </x-aura::heading>
 
-            <x-aura::subheading size="lg">
-                Copy-paste composite design blocks with live previews, or explore complete end-to-end full page application templates.
-            </x-aura::subheading>
+                <div class="max-w-lg mx-auto">
+                    <x-aura::subheading size="md">
+                        Copy-paste composite design blocks with live previews, or explore complete end-to-end full page application templates.
+                    </x-aura::subheading>
+                </div>
+            </div>
 
             <!-- Quick Jump Section Buttons -->
             <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
