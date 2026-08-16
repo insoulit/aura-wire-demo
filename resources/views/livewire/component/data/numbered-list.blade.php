@@ -84,8 +84,8 @@ class extends Component {
         <x-slot:codeSlot>@verbatim<x-aura::numbered-list :items="$items" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
-    <!-- 1. Rich Media List with Images & Actions -->
-    <x-aura::code  title="1. Rich Media List (with Thumbnails & Actions)">
+    <!-- 1. Media List with Thumbnails -->
+    <x-aura::code title="1. Media List with Thumbnails">
         <x-slot:preview>
             <div class="w-full max-w-2xl">
                 <x-aura::numbered-list :items="$mediaItems" variant="media" />
