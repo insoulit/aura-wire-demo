@@ -189,10 +189,10 @@ class extends Component {
 
 ?>
 
-<div class="w-full max-w-6xl mx-auto space-y-3">
+<x-aura::stack gap="3" class="w-full max-w-6xl mx-auto">
 
     <!-- Top Header -->
-    <div class="space-y-1 px-1">
+    <div class="px-1">
         <x-aura::flex align="center" justify="between" gap="4">
             <div>
                 <x-aura::kicker>Administration</x-aura::kicker>
@@ -416,4 +416,4 @@ class extends Component {
         </x-slot:footer>
     </x-aura::modal>
 
-</div>
+</x-aura::stack>

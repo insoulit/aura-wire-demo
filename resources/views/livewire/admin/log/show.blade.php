@@ -23,7 +23,7 @@ class extends Component {
 
 ?>
 
-<div class="w-full max-w-3xl mx-auto space-y-3">
+<x-aura::stack gap="3" class="w-full max-w-3xl mx-auto">
 
     <!-- Top Header -->
     <x-aura::flex align="center" justify="between" gap="4" class="px-1">
@@ -45,10 +45,10 @@ class extends Component {
         <x-aura::flex align="center" justify="between" gap="4" class="pb-6 border-b border-zinc-100 dark:border-zinc-800 flex-col sm:flex-row">
             <x-aura::flex align="center" gap="3.5">
                 <x-aura::badge :variant="$log['variant']" size="sm">{{ $log['level'] }}</x-aura::badge>
-                <div class="space-y-0.5">
+                <x-aura::stack gap="0.5">
                     <x-aura::heading level="2" size="sm">{{ $log['timestamp'] }}</x-aura::heading>
                     <x-aura::text variant="subtle" size="sm">Environment: {{ $log['env'] }}</x-aura::text>
-                </div>
+                </x-aura::stack>
             </x-aura::flex>
             <x-aura::badge variant="neutral" size="sm">Event #{{ $log['id'] }}</x-aura::badge>
         </x-aura::flex>
@@ -98,20 +98,20 @@ class extends Component {
                 </x-aura::table.row>
                 <x-aura::table.row>
                     <x-aura::table.cell colspan="2">
-                        <div class="space-y-1.5 pt-2">
+                        <x-aura::stack gap="1.5" class="pt-2">
                             <x-aura::text variant="subtle" size="sm">Log Message</x-aura::text>
                             <p class="font-mono text-sm font-semibold text-zinc-900 dark:text-white p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200/80 dark:border-zinc-800">
                                 {{ $log['message'] }}
                             </p>
-                        </div>
+                        </x-aura::stack>
                     </x-aura::table.cell>
                 </x-aura::table.row>
                 <x-aura::table.row>
                     <x-aura::table.cell colspan="2">
-                        <div class="space-y-1.5 pt-2">
+                        <x-aura::stack gap="1.5" class="pt-2">
                             <x-aura::text variant="subtle" size="sm">Stack Trace Payload</x-aura::text>
                             <pre class="font-mono text-xs p-3.5 rounded-xl bg-zinc-900 text-zinc-200 border border-zinc-800 overflow-x-auto whitespace-pre-wrap leading-relaxed">{{ $log['trace'] }}</pre>
-                        </div>
+                        </x-aura::stack>
                     </x-aura::table.cell>
                 </x-aura::table.row>
             </x-aura::table.body>
@@ -127,4 +127,4 @@ class extends Component {
         </x-slot:footer>
     </x-aura::card>
 
-</div>
+</x-aura::stack>

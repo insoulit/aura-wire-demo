@@ -43,7 +43,7 @@ class extends Component {
 
 ?>
 
-<div class="w-full max-w-3xl mx-auto space-y-3">
+<x-aura::stack gap="3" class="w-full max-w-3xl mx-auto">
 
     <!-- Header with Back Button -->
     <x-aura::flex align="center" justify="between" gap="4" class="px-1">
@@ -52,8 +52,9 @@ class extends Component {
             <x-aura::heading level="1" size="lg">Create User</x-aura::heading>
         </div>
         <x-aura::flex align="center" gap="2">
-            <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm" icon="arrow-left">
-                Back
+            <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm">
+                <x-aura::icon name="arrow-left" size="xs" />
+                <span>Back</span>
             </x-aura::button>
         </x-aura::flex>
     </x-aura::flex>
@@ -67,7 +68,7 @@ class extends Component {
     <!-- Create User Card Form -->
     <form wire:submit.prevent="save">
         <x-aura::card title="Account Details" description="Fill out the profile and security details to register a new user account.">
-            <div class="space-y-5 pt-2">
+            <x-aura::stack gap="5" class="pt-2">
 
                 <!-- Full Name & Email -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -112,12 +113,12 @@ class extends Component {
                     </x-aura::field>
                 </div>
 
-            </div>
+            </x-aura::stack>
 
             <x-slot:footer>
                 <x-aura::flex align="center" justify="between" class="w-full">
                     <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm">
-                        Cancel
+                        <span>Cancel</span>
                     </x-aura::button>
 
                     <x-aura::button type="submit" variant="primary" size="sm">
@@ -129,4 +130,4 @@ class extends Component {
         </x-aura::card>
     </form>
 
-</div>
+</x-aura::stack>
