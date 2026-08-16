@@ -37,7 +37,7 @@ class extends Component {
     </div>
 
     @if($uploaded)
-        <x-aura::banner variant="success" dismissible="true">
+        <x-aura::banner variant="dark" dismissible="true">
             New profile avatar image saved successfully!
         </x-aura::banner>
     @endif
@@ -60,7 +60,7 @@ class extends Component {
 
             <div class="pt-2 flex justify-between items-center">
                 <x-aura::button variant="secondary" size="sm" type="button" wire:click="$set('uploaded', false)">Remove Current Photo</x-aura::button>
-                <x-aura::button variant="primary" size="md" type="submit">Save Avatar Changes</x-aura::button>
+                <x-aura::button variant="primary" size="md" type="submit">Save</x-aura::button>
             </div>
         </form>
     </x-aura::card>

@@ -43,7 +43,7 @@ class extends Component {
     </div>
 
     @if($saved)
-        <x-aura::banner variant="success" dismissible="true">
+        <x-aura::banner variant="dark" dismissible="true">
             Account &amp; workspace settings updated successfully!
         </x-aura::banner>
     @endif
@@ -106,7 +106,7 @@ class extends Component {
 
             <!-- Submit Button -->
             <div class="pt-2 flex justify-end">
-                <x-aura::button variant="primary" size="md" type="submit">Save All Settings</x-aura::button>
+                <x-aura::button variant="primary" size="md" type="submit">Save</x-aura::button>
             </div>
         </form>
     </x-aura::card>

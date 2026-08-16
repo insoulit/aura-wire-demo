@@ -40,7 +40,7 @@ class extends Component {
     </div>
 
     @if($sent)
-        <x-aura::banner variant="success" dismissible="true">
+        <x-aura::banner variant="dark" dismissible="true">
             Verification email code sent to <strong>{{ $newEmail ?: 'new email' }}</strong>. Please check your inbox.
         </x-aura::banner>
     @endif

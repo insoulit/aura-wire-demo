@@ -47,7 +47,7 @@ class extends Component {
 
     @if ($saved)
         <div class="fixed bottom-5 right-5 z-50">
-            <x-aura::toast variant="success" title="Changes Saved" description="User details for {{ $name }} updated successfully." />
+            <x-aura::toast variant="neutral" title="Changes Saved" description="User details for {{ $name }} updated successfully." />
         </div>
     @endif
 
@@ -108,7 +108,7 @@ class extends Component {
                             View Profile
                         </x-aura::button>
                         <x-aura::button type="submit" variant="primary" size="sm">
-                            <span>Save Changes</span>
+                            <span>Save</span>
                         </x-aura::button>
                     </div>
                 </div>

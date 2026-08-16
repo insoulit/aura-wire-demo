@@ -41,7 +41,7 @@ class extends Component {
     </div>
 
     @if($saved)
-        <x-aura::banner variant="success" dismissible="true">
+        <x-aura::banner variant="dark" dismissible="true">
             Password credentials and security PIN updated successfully!
         </x-aura::banner>
     @endif

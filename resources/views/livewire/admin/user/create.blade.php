@@ -61,7 +61,7 @@ class extends Component {
 
     @if ($saved)
         <div class="fixed bottom-5 right-5 z-50">
-            <x-aura::toast variant="success" title="User Created" description="User account created successfully." />
+            <x-aura::toast variant="neutral" title="User Created" description="User account created successfully." />
         </div>
     @endif
 
