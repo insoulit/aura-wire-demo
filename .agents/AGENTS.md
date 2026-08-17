@@ -1,5 +1,6 @@
 # Workspace Rules
 
+- **Prioritize Aura Wire Components**: Always use Aura Wire package components (`<x-aura::*>`) for layouts, typography, actions, forms, displays, feedback, and navigation whenever possible instead of writing raw HTML elements with utility classes (e.g. prefer `<x-aura::flex>`, `<x-aura::stack>`, `<x-aura::text>`, `<x-aura::heading>`, `<x-aura::button>`, `<x-aura::link>`, `<x-aura::card>`, etc.).
 - **Button Labeling**: Always try to keep button labels to a single word (e.g. `Create`, `Save`, `Back`, `Cancel`, `Blocks`, `Templates`, `Delete`, `Export`). If not possible, keep it short in two words. Always prefer a single word.
 - **Create Button Labeling**: Create buttons must always be named with the single word `Create` (e.g. `Create`). Never append the model or entity name at the end.
 - **No Redundant `<span>` Inside Buttons**: Never wrap button text labels or link labels in redundant `<span>` tags (e.g. write `<x-aura::button>Create</x-aura::button>`, NOT `<x-aura::button><span>Create</span></x-aura::button>`), as Aura Wire components already manage slot wrapping and layout internally.
