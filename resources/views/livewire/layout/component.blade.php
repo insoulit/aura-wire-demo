@@ -11,7 +11,7 @@
 
         <x-aura::container>
 
-            <div class="flex-1 flex gap-0 lg:gap-8 items-stretch min-w-0">
+            <div class="flex-1 flex gap-0 lg:gap-6 items-stretch min-w-0">
 
                 <!-- Component Navigation Sidebar -->
                 <livewire:layout.component.sidebar />
