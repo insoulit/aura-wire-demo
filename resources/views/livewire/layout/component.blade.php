@@ -11,7 +11,7 @@
 
         <x-aura::container>
 
-            <x-aura::flex align="stretch" gap="none">
+            <x-aura::flex align="stretch" gap="xl">
 
                 <!-- Component Navigation Sidebar -->
                 <livewire:layout.component.sidebar />
@@ -29,9 +29,9 @@
 
         </x-aura::container>
 
-        <livewire:layout.shared.footer />
-
     </x-aura::flex>
+
+    <livewire:layout.shared.footer />
 
 </x-aura::body>
 

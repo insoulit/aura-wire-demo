@@ -8,7 +8,7 @@ new class extends Component {
         $docsPages = [
             ['title' => 'Overview', 'url' => '/components'],
             ['title' => 'Installation', 'url' => '/components/installation'],
-            ['title' => 'Icon library', 'url' => '/components/icon-library'],
+            ['title' => 'Icon Library', 'url' => '/components/icon-library'],
 
             // 1. Typography
             ['title' => 'Kicker', 'url' => '/components/kicker'],
@@ -110,44 +110,74 @@ new class extends Component {
 
 ?>
 
-<div class="w-full">
+<div class="w-full pt-12">
+
     @if ($prevPage || $nextPage)
-        <div class="w-full max-w-4xl mx-auto mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 items-stretch">
-            <div>
+
+        <x-aura::flex justify="between" align="stretch" gap="md">
+
+            <div class="flex-1">
+
                 @if ($prevPage)
-                    <a href="{{ $prevPage['url'] }}" wire:navigate class="group block h-full">
-                        <x-aura::card>
-                            <x-aura::stack gap="1">
-                                <x-aura::flex align="center" gap="1.5">
-                                    <x-aura::icon name="arrow-left" size="xs" />
-                                    <x-aura::text size="sm" variant="subtle">Previous</x-aura::text>
-                                </x-aura::flex>
-                                <x-aura::heading level="3" size="xs">
-                                    {{ $prevPage['title'] }}
-                                </x-aura::heading>
-                            </x-aura::stack>
-                        </x-aura::card>
-                    </a>
+
+                    <x-aura::card href="{{ $prevPage['url'] }}" wire:navigate>
+
+                        <x-aura::stack gap="1">
+
+                            <x-aura::flex align="center" gap="1.5">
+
+                                <x-aura::icon name="arrow-left" size="sm" />
+
+                                <x-aura::text size="sm" variant="subtle">
+                                    Previous
+                                </x-aura::text>
+
+                            </x-aura::flex>
+
+                            <x-aura::heading level="3" size="xs">
+                                {{ $prevPage['title'] }}
+                            </x-aura::heading>
+
+                        </x-aura::stack>
+
+                    </x-aura::card>
+
                 @endif
+
             </div>
 
-            <div class="sm:col-start-2 text-right">
+            <div class="flex-1">
+
                 @if ($nextPage)
-                    <a href="{{ $nextPage['url'] }}" wire:navigate class="group block h-full">
-                        <x-aura::card>
-                            <x-aura::stack gap="1" align="end">
-                                <x-aura::flex align="center" gap="1.5">
-                                    <x-aura::text size="sm" variant="subtle">Next</x-aura::text>
-                                    <x-aura::icon name="arrow-right" size="xs" />
-                                </x-aura::flex>
-                                <x-aura::heading level="3" size="xs">
-                                    {{ $nextPage['title'] }}
-                                </x-aura::heading>
-                            </x-aura::stack>
-                        </x-aura::card>
-                    </a>
+
+                    <x-aura::card href="{{ $nextPage['url'] }}" wire:navigate>
+
+                        <x-aura::stack gap="1" align="end">
+
+                            <x-aura::flex align="center" gap="1.5">
+
+                                <x-aura::text size="sm" variant="subtle">
+                                    Next
+                                </x-aura::text>
+
+                                <x-aura::icon name="arrow-right" size="sm" />
+
+                            </x-aura::flex>
+
+                            <x-aura::heading level="3" size="xs">
+                                {{ $nextPage['title'] }}
+                            </x-aura::heading>
+
+                        </x-aura::stack>
+
+                    </x-aura::card>
+
                 @endif
+
             </div>
-        </div>
+
+        </x-aura::flex>
+
     @endif
+
 </div>

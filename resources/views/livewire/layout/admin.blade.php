@@ -5,7 +5,7 @@
 
 <x-aura::body>
 
-    <div class="flex-1 flex min-h-screen">
+    <x-aura::flex align="stretch" gap="none">
 
         <!-- Admin Sidebar with Compact Portal Links & Theme Switcher -->
         <livewire:layout.admin.sidebar />
@@ -21,7 +21,7 @@
 
         </x-aura::flex>
 
-    </div>
+    </x-aura::flex>
 
 </x-aura::body>
 
