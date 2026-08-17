@@ -5,21 +5,21 @@
 
 <x-aura::body>
 
-    <x-aura::flex align="stretch" gap="none">
+    <x-aura::flex align="stretch" gap="none" class="flex-1 min-h-screen">
 
         <!-- Admin Sidebar with Compact Portal Links & Theme Switcher -->
         <livewire:layout.admin.sidebar />
 
         <!-- Main Content Area -->
-        <x-aura::flex direction="col" align="stretch" gap="none">
+        <x-aura::stack gap="none" class="flex-1 min-w-0">
 
-            <x-aura::main>
+            <x-aura::main class="min-h-screen">
                 {{ $slot }}
             </x-aura::main>
 
             <livewire:layout.shared.footer />
 
-        </x-aura::flex>
+        </x-aura::stack>
 
     </x-aura::flex>
 

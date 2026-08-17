@@ -5,19 +5,19 @@
 
 <x-aura::body>
 
-    <div class="flex-1 flex flex-col">
+    <x-aura::flex direction="col" align="stretch" gap="none" class="flex-1">
 
         <livewire:layout.shared.header />
 
         <x-aura::container>
 
-            <div class="flex-1 flex gap-0 lg:gap-6 items-stretch min-w-0">
+            <x-aura::flex align="stretch" gap="none" class="flex-1 lg:gap-6 min-w-0">
 
                 <!-- Component Navigation Sidebar -->
                 <livewire:layout.component.sidebar />
 
                 <!-- Main Component Page Content Slot -->
-                <div class="flex-1 min-w-0 w-full">
+                <x-aura::stack gap="none" class="flex-1 min-w-0 w-full">
 
                     <x-aura::main :container="false">
 
@@ -27,13 +27,13 @@
 
                     </x-aura::main>
 
-                </div>
+                </x-aura::stack>
 
-            </div>
+            </x-aura::flex>
 
         </x-aura::container>
 
-    </div>
+    </x-aura::flex>
 
     <livewire:layout.shared.footer />
 

@@ -110,7 +110,7 @@ new class extends Component {
 
 ?>
 
-<div class="w-full pt-12">
+<div class="w-full max-w-4xl mx-auto pt-10">
 
     @if ($prevPage || $nextPage)
 
