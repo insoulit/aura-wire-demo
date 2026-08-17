@@ -83,7 +83,7 @@ class extends Component {
                     <x-aura::icon name="code"  size="sm" />
                 </div>
                 <div>
-                    <x-aura::heading level="3" size="sm">Full-Stack Web Development</x-aura::heading>
+                    <x-aura::heading level="3" size="sm">Full Stack Web Development</x-aura::heading>
                     <x-aura::text variant="subtle" size="xs">
                         Laravel 12, Livewire Volt, and Tailwind CSS app engineering with 100% test coverage.
                     </x-aura::text>
@@ -97,7 +97,7 @@ class extends Component {
                     <x-aura::icon name="target"  size="sm" />
                 </div>
                 <div>
-                    <x-aura::heading level="3" size="sm">UI/UX Audit &amp; Optimization</x-aura::heading>
+                    <x-aura::heading level="3" size="sm">UI UX Audit and Optimization</x-aura::heading>
                     <x-aura::text variant="subtle" size="xs">
                         Conversion rate optimization, accessibility compliance audits, and user testing sessions.
                     </x-aura::text>

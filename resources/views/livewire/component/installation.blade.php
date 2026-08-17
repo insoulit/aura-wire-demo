@@ -216,7 +216,7 @@ class extends Component {};
                 <x-aura::text size="sm" variant="subtle">Render components using standard Blade prefix syntax <code class="text-zinc-900 dark:text-white font-mono font-semibold">&lt;x-aura::...&gt;</code>:</x-aura::text>
                 <div class="pt-1">
                     <x-aura::code language="html" active="code" :showTabs="false">
-                        <x-slot:codeSlot>@verbatim<x-aura::button variant="primary"><span>Create</span></x-aura::button>@endverbatim</x-slot:codeSlot>
+                        <x-slot:codeSlot>@verbatim<x-aura::button variant="primary">Create</x-aura::button>@endverbatim</x-slot:codeSlot>
                     </x-aura::code>
                 </div>
             </x-aura::stack>

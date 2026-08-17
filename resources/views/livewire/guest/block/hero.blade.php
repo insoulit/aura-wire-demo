@@ -12,49 +12,75 @@ class extends Component {};
 ?>
 
 <x-aura::stack gap="6" class="w-full max-w-4xl mx-auto py-6">
+
     <!-- Top Header -->
     <div class="px-1">
+
         <x-aura::flex align="center" justify="between" gap="4">
+
             <div>
+
                 <x-aura::kicker>Design Blocks</x-aura::kicker>
+
                 <x-aura::heading level="1" size="lg">Hero Header</x-aura::heading>
+
             </div>
-            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" >
-                <x-aura::icon name="arrow-left"  size="xs" />
-                <span>Back</span>
+
+            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" icon="arrow-left">
+                Back
             </x-aura::button>
+
         </x-aura::flex>
+
     </div>
 
     <!-- Hero Header Block Preview -->
-    <x-aura::code  title="Landing Page Hero Header Block">
+    <x-aura::code title="Landing Page Hero Header Block">
+
         <x-slot:preview>
+
             <div class="w-full py-8 text-center space-y-4 flex flex-col items-center justify-center">
-                <x-aura::kicker>Next-Gen Component Library</x-aura::kicker>
-                <x-aura::heading level="1" size="xl" >
+
+                <x-aura::kicker>Next Gen Component Library</x-aura::kicker>
+
+                <x-aura::heading level="1" size="xl">
                     Build Stunning Web Interfaces in Seconds
                 </x-aura::heading>
-                <x-aura::subheading size="md" >
-                    Production ready, ultra-accessible Blade &amp; Livewire components crafted for modern Laravel applications.
+
+                <x-aura::subheading size="md">
+                    Production ready, ultra accessible Blade and Livewire components crafted for modern Laravel applications.
                 </x-aura::subheading>
+
                 <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 pt-2 w-full sm:w-auto max-w-xs sm:max-w-none">
-                    <x-aura::button variant="primary" size="md" ><span>Start</span></x-aura::button>
-                    <x-aura::button variant="outline" size="md" ><span>Components</span></x-aura::button>
+
+                    <x-aura::button variant="primary" size="md">
+                        Start
+                    </x-aura::button>
+
+                    <x-aura::button variant="outline" size="md">
+                        Explore
+                    </x-aura::button>
+
                 </div>
+
             </div>
+
         </x-slot:preview>
-        <x-slot name="codeSlot">&lt;div class="w-full py-8 text-center space-y-4 flex flex-col items-center justify-center"&gt;
-    &lt;x-aura::kicker&gt;Next-Gen Component Library&lt;/x-aura::kicker&gt;
-    &lt;x-aura::heading level="1" size="xl" class="max-w-2xl"&gt;
+
+        <x-slot name="codeSlot">@verbatim<div class="w-full py-8 text-center space-y-4 flex flex-col items-center justify-center">
+    <x-aura::kicker>Next Gen Component Library</x-aura::kicker>
+    <x-aura::heading level="1" size="xl">
         Build Stunning Web Interfaces in Seconds
-    &lt;/x-aura::heading&gt;
-    &lt;x-aura::subheading size="md" class="max-w-lg"&gt;
+    </x-aura::heading>
+    <x-aura::subheading size="md">
         Production ready components for modern Laravel applications.
-    &lt;/x-aura::subheading&gt;
-    &lt;div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2 w-full sm:w-auto"&gt;
-        &lt;x-aura::button variant="primary" size="md" class="w-full sm:w-auto"&gt;Get Started Free&lt;/x-aura::button&gt;
-        &lt;x-aura::button variant="outline" size="md" class="w-full sm:w-auto"&gt;Explore Components&lt;/x-aura::button&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</x-slot>
+    </x-aura::subheading>
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2 w-full sm:w-auto">
+        <x-aura::button variant="primary" size="md">Start</x-aura::button>
+        <x-aura::button variant="outline" size="md">Explore</x-aura::button>
+    </div>
+</div>@endverbatim</x-slot>
+
     </x-aura::code>
+
 </x-aura::stack>
