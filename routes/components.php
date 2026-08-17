@@ -13,7 +13,11 @@ Volt::route('/components/kicker', 'component.typography.kicker')->name('componen
 Volt::route('/components/display', 'component.typography.display')->name('component.display');
 Volt::route('/components/heading', 'component.typography.heading')->name('component.heading');
 Volt::route('/components/subheading', 'component.typography.subheading')->name('component.subheading');
+Volt::route('/components/lead', 'component.typography.lead')->name('component.lead');
 Volt::route('/components/text', 'component.typography.text')->name('component.text');
+Volt::route('/components/blockquote', 'component.typography.blockquote')->name('component.blockquote');
+Volt::route('/components/inline-code', 'component.typography.inline-code')->name('component.inline-code');
+Volt::route('/components/kbd', 'component.typography.kbd')->name('component.kbd');
 
 // 2. Action Group
 Volt::route('/components/button', 'component.action.button')->name('component.button');

@@ -29,7 +29,7 @@ new class extends Component {};
     <x-aura::separator />
 
     <!-- 1. Typography Dropdown -->
-    <x-aura::sidebar.dropdown label="Typography" icon="type" :active="request()->is('components/kicker', 'components/display', 'components/heading', 'components/subheading', 'components/text')">
+    <x-aura::sidebar.dropdown label="Typography" icon="type" :active="request()->is('components/kicker', 'components/display', 'components/heading', 'components/subheading', 'components/lead', 'components/text', 'components/blockquote', 'components/inline-code', 'components/kbd')">
 
         <x-aura::sidebar.item href="/components/kicker" :active="request()->is('components/kicker')">
             Kicker
@@ -47,8 +47,24 @@ new class extends Component {};
             Subheading
         </x-aura::sidebar.item>
 
+        <x-aura::sidebar.item href="/components/lead" :active="request()->is('components/lead')">
+            Lead
+        </x-aura::sidebar.item>
+
         <x-aura::sidebar.item href="/components/text" :active="request()->is('components/text')">
             Text
+        </x-aura::sidebar.item>
+
+        <x-aura::sidebar.item href="/components/blockquote" :active="request()->is('components/blockquote')">
+            Blockquote
+        </x-aura::sidebar.item>
+
+        <x-aura::sidebar.item href="/components/inline-code" :active="request()->is('components/inline-code')">
+            Inline Code
+        </x-aura::sidebar.item>
+
+        <x-aura::sidebar.item href="/components/kbd" :active="request()->is('components/kbd')">
+            Keyboard (Kbd)
         </x-aura::sidebar.item>
 
     </x-aura::sidebar.dropdown>

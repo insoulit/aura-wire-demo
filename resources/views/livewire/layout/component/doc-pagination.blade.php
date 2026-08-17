@@ -15,7 +15,11 @@ new class extends Component {
             ['title' => 'Display', 'url' => '/components/display'],
             ['title' => 'Heading', 'url' => '/components/heading'],
             ['title' => 'Subheading', 'url' => '/components/subheading'],
+            ['title' => 'Lead', 'url' => '/components/lead'],
             ['title' => 'Text', 'url' => '/components/text'],
+            ['title' => 'Blockquote', 'url' => '/components/blockquote'],
+            ['title' => 'Inline Code', 'url' => '/components/inline-code'],
+            ['title' => 'Keyboard', 'url' => '/components/kbd'],
 
             // 2. Action
             ['title' => 'Button', 'url' => '/components/button'],

@@ -34,7 +34,7 @@ class extends Component {};
                     <x-aura::icon name="type" size="sm" />
                     <x-aura::heading level="2" size="md">Typography</x-aura::heading>
                 </x-aura::flex>
-                <x-aura::badge variant="neutral" size="sm">5 Components</x-aura::badge>
+                <x-aura::badge variant="neutral" size="sm">9 Components</x-aura::badge>
             </x-aura::flex>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -58,9 +58,29 @@ class extends Component {};
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::subheading&gt;</x-aura::text>
             </x-aura::card>
 
+            <x-aura::card href="/components/lead">
+                <x-aura::heading level="3" size="sm">Lead</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::lead&gt;</x-aura::text>
+            </x-aura::card>
+
             <x-aura::card href="/components/text">
                 <x-aura::heading level="3" size="sm">Text</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::text&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/blockquote">
+                <x-aura::heading level="3" size="sm">Blockquote</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::blockquote&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/inline-code">
+                <x-aura::heading level="3" size="sm">Inline Code</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::inline-code&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/kbd">
+                <x-aura::heading level="3" size="sm">Keyboard</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::kbd&gt;</x-aura::text>
             </x-aura::card>
         </div>
     </x-aura::stack>
