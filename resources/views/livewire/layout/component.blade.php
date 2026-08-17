@@ -5,31 +5,35 @@
 
 <x-aura::body>
 
-    <x-aura::flex direction="col" align="stretch" gap="none">
+    <div class="flex-1 flex flex-col">
 
         <livewire:layout.shared.header />
 
         <x-aura::container>
 
-            <x-aura::flex align="stretch" gap="xl">
+            <div class="flex-1 flex gap-0 lg:gap-8 items-stretch min-w-0">
 
                 <!-- Component Navigation Sidebar -->
                 <livewire:layout.component.sidebar />
 
                 <!-- Main Component Page Content Slot -->
-                <x-aura::main :container="false">
+                <div class="flex-1 min-w-0 w-full">
 
-                    {{ $slot }}
+                    <x-aura::main :container="false">
 
-                    <livewire:layout.component.doc-pagination />
+                        {{ $slot }}
 
-                </x-aura::main>
+                        <livewire:layout.component.doc-pagination />
 
-            </x-aura::flex>
+                    </x-aura::main>
+
+                </div>
+
+            </div>
 
         </x-aura::container>
 
-    </x-aura::flex>
+    </div>
 
     <livewire:layout.shared.footer />
 
