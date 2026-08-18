@@ -305,10 +305,6 @@ new class extends Component {};
             Center
         </x-aura::sidebar.item>
 
-        <x-aura::sidebar.item href="/components/stack" :active="request()->is('components/stack')">
-            Stack
-        </x-aura::sidebar.item>
-
         <x-aura::sidebar.item href="/components/body" :active="request()->is('components/body')">
             Body
         </x-aura::sidebar.item>

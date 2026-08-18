@@ -11,242 +11,286 @@ class extends Component {};
 
 ?>
 
-<x-aura::stack gap="10" class="w-full max-w-4xl mx-auto py-2">
+<x-aura::container gap="8" :padding="false">
 
     <!-- Header -->
-    <x-aura::card>
+    <x-aura::card size="full" gap="2">
 
-        <x-aura::stack gap="2" class="max-w-2xl">
+        <x-aura::flex align="center" gap="2.5">
 
-            <x-aura::flex align="center" gap="2.5">
+            <x-aura::kicker>
+                Typography
+            </x-aura::kicker>
 
-                <x-aura::kicker>Typography</x-aura::kicker>
+            <x-aura::badge variant="subtle" size="sm">
+                Component
+            </x-aura::badge>
 
-                <x-aura::badge variant="subtle" size="md">Component</x-aura::badge>
+        </x-aura::flex>
 
-            </x-aura::flex>
+        <x-aura::heading level="1" size="xl">
+            Display
+        </x-aura::heading>
 
-            <x-aura::heading level="1" size="xl">Display</x-aura::heading>
-
-            <x-aura::subheading size="md">
-                High impact display typography designed for hero headlines, billboard marketing banners, giant KPI metrics, and landing sections.
-            </x-aura::subheading>
-
-        </x-aura::stack>
+        <x-aura::subheading size="md">
+            High impact display typography designed for hero headlines, billboard marketing banners, giant KPI metrics, and landing sections.
+        </x-aura::subheading>
 
     </x-aura::card>
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code">
 
-        <x-slot:codeSlot>@verbatim<x-aura::display size="xl">Elevate Your Product</x-aura::display>@endverbatim</x-slot:codeSlot>
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::display size="xl">
+                    Elevate Your Product
+                </x-aura::display>
+            @endverbatim
+
+        </x-slot:codeSlot>
 
     </x-aura::code>
 
-    <!-- 1. Display Size Scales (2xl, xl, lg, md, sm) -->
-    <x-aura::code title="1. Display Size Scales (2xl, xl, lg, md, sm)">
+    <!-- 1. Display Size Scales -->
+    <x-aura::code title="1. Display Size Scales">
 
         <x-slot:preview>
 
-            <div class="space-y-4 w-full">
+            <x-aura::flex direction="col" align="start" class="w-full" gap="4">
 
-                <div class="space-y-1">
+                <x-aura::display size="2xl">
+                    Display 2XL
+                </x-aura::display>
 
-                    <x-aura::badge variant="subtle" size="md">size="2xl"</x-aura::badge>
+                <x-aura::display size="xl">
+                    Display XL
+                </x-aura::display>
 
-                    <x-aura::display size="2xl">Display 2XL Title</x-aura::display>
+                <x-aura::display size="lg">
+                    Display Large
+                </x-aura::display>
 
-                </div>
+                <x-aura::display size="md">
+                    Display Medium
+                </x-aura::display>
 
-                <div class="space-y-1 border-t border-zinc-200 dark:border-zinc-800 pt-3">
+                <x-aura::display size="sm">
+                    Display Small
+                </x-aura::display>
 
-                    <x-aura::badge variant="subtle" size="md">size="xl" (Default)</x-aura::badge>
-
-                    <x-aura::display size="xl">Display XL Title</x-aura::display>
-
-                </div>
-
-                <div class="space-y-1 border-t border-zinc-200 dark:border-zinc-800 pt-3">
-
-                    <x-aura::badge variant="subtle" size="md">size="lg"</x-aura::badge>
-
-                    <x-aura::display size="lg">Display Large Title</x-aura::display>
-
-                </div>
-
-                <div class="space-y-1 border-t border-zinc-200 dark:border-zinc-800 pt-3">
-
-                    <x-aura::badge variant="subtle" size="md">size="md"</x-aura::badge>
-
-                    <x-aura::display size="md">Display Medium Title</x-aura::display>
-
-                </div>
-
-                <div class="space-y-1 border-t border-zinc-200 dark:border-zinc-800 pt-3">
-
-                    <x-aura::badge variant="subtle" size="md">size="sm"</x-aura::badge>
-
-                    <x-aura::display size="sm">Display Small Title</x-aura::display>
-
-                </div>
-
-            </div>
+            </x-aura::flex>
 
         </x-slot:preview>
 
-        <x-slot:codeSlot>@verbatim<x-aura::display size="2xl">Display 2XL Title</x-aura::display>
+        <x-slot:codeSlot>
 
-<x-aura::display size="xl">Display XL Title</x-aura::display>
+            @verbatim
+                <x-aura::display size="2xl">
+                    Display 2XL
+                </x-aura::display>
 
-<x-aura::display size="lg">Display Large Title</x-aura::display>
+                <x-aura::display size="xl">
+                    Display XL
+                </x-aura::display>
 
-<x-aura::display size="md">Display Medium Title</x-aura::display>
+                <x-aura::display size="lg">
+                    Display Large
+                </x-aura::display>
 
-<x-aura::display size="sm">Display Small Title</x-aura::display>@endverbatim</x-slot:codeSlot>
+                <x-aura::display size="md">
+                    Display Medium
+                </x-aura::display>
+
+                <x-aura::display size="sm">
+                    Display Small
+                </x-aura::display>
+            @endverbatim
+
+        </x-slot:codeSlot>
 
     </x-aura::code>
 
-    <!-- 2. Gradient Headline -->
-    <x-aura::code title="2. Gradient Marketing Headlines">
+    <!-- 2. Monochrome Gradient Headlines -->
+    <x-aura::code title="2. Monochrome Gradient Headlines">
 
         <x-slot:preview>
 
-            <div class="space-y-4 w-full">
+            <x-aura::flex direction="col" align="start" class="w-full" gap="4">
 
                 <x-aura::display size="lg" :gradient="true">
                     Built for Modern Web Applications
                 </x-aura::display>
 
-                <x-aura::display size="md" :gradient="true" weight="black">
+                <x-aura::display size="md" gradient="subtle" weight="black">
                     Ship Faster with Aura Wire
                 </x-aura::display>
 
-            </div>
+                <x-aura::display size="sm" gradient="fade">
+                    The Modern Livewire Standard
+                </x-aura::display>
+
+            </x-aura::flex>
 
         </x-slot:preview>
 
-        <x-slot:codeSlot>@verbatim{{-- Gradient Display Headline --}}
-<x-aura::display size="lg" :gradient="true">
-    Built for Modern Web Applications
-</x-aura::display>
+        <x-slot:codeSlot>
 
-<x-aura::display size="md" :gradient="true" weight="black">
-    Ship Faster with Aura Wire
-</x-aura::display>@endverbatim</x-slot:codeSlot>
+            @verbatim
+                <x-aura::display size="lg" :gradient="true">
+                    Built for Modern Web Applications
+                </x-aura::display>
+
+                <x-aura::display size="md" gradient="subtle" weight="black">
+                    Ship Faster with Aura Wire
+                </x-aura::display>
+
+                <x-aura::display size="sm" gradient="fade">
+                    The Modern Livewire Standard
+                </x-aura::display>
+            @endverbatim
+
+        </x-slot:codeSlot>
 
     </x-aura::code>
 
-    <!-- 3. Font Weights -->
+    <!-- 3. Custom Font Weights -->
     <x-aura::code title="3. Custom Font Weights">
 
         <x-slot:preview>
 
-            <div class="space-y-3 w-full">
+            <x-aura::flex direction="col" align="start" class="w-full" gap="4">
 
-                <div class="space-y-0.5">
+                <x-aura::display size="sm" weight="black">
+                    Black 900 Weight Display
+                </x-aura::display>
 
-                    <x-aura::badge variant="neutral" size="md">weight="black" (900)</x-aura::badge>
+                <x-aura::display size="sm" weight="extrabold">
+                    Extrabold 800 Weight Display
+                </x-aura::display>
 
-                    <x-aura::display size="sm" weight="black">Ultra Bold Black Weight Display</x-aura::display>
+                <x-aura::display size="sm" weight="bold">
+                    Bold 700 Weight Display
+                </x-aura::display>
 
-                </div>
+                <x-aura::display size="sm" weight="semibold">
+                    Semibold 600 Weight Display
+                </x-aura::display>
 
-                <div class="space-y-0.5 border-t border-zinc-200 dark:border-zinc-800 pt-2">
-
-                    <x-aura::badge variant="neutral" size="md">weight="extrabold" (800, Default)</x-aura::badge>
-
-                    <x-aura::display size="sm" weight="extrabold">Extrabold Weight Display</x-aura::display>
-
-                </div>
-
-                <div class="space-y-0.5 border-t border-zinc-200 dark:border-zinc-800 pt-2">
-
-                    <x-aura::badge variant="neutral" size="md">weight="bold" (700)</x-aura::badge>
-
-                    <x-aura::display size="sm" weight="bold">Bold Weight Display</x-aura::display>
-
-                </div>
-
-                <div class="space-y-0.5 border-t border-zinc-200 dark:border-zinc-800 pt-2">
-
-                    <x-aura::badge variant="neutral" size="md">weight="semibold" (600)</x-aura::badge>
-
-                    <x-aura::display size="sm" weight="semibold">Semibold Weight Display</x-aura::display>
-
-                </div>
-
-            </div>
+            </x-aura::flex>
 
         </x-slot:preview>
 
-        <x-slot:codeSlot>@verbatim<x-aura::display size="sm" weight="black">Black Weight Display</x-aura::display>
+        <x-slot:codeSlot>
 
-<x-aura::display size="sm" weight="extrabold">Extrabold Weight Display</x-aura::display>
+            @verbatim
+                <x-aura::display size="sm" weight="black">
+                    Black 900 Weight Display
+                </x-aura::display>
 
-<x-aura::display size="sm" weight="bold">Bold Weight Display</x-aura::display>
+                <x-aura::display size="sm" weight="extrabold">
+                    Extrabold 800 Weight Display
+                </x-aura::display>
 
-<x-aura::display size="sm" weight="semibold">Semibold Weight Display</x-aura::display>@endverbatim</x-slot:codeSlot>
+                <x-aura::display size="sm" weight="bold">
+                    Bold 700 Weight Display
+                </x-aura::display>
+
+                <x-aura::display size="sm" weight="semibold">
+                    Semibold 600 Weight Display
+                </x-aura::display>
+            @endverbatim
+
+        </x-slot:codeSlot>
 
     </x-aura::code>
 
-    <!-- 4. Real World Landing Page Hero Pattern -->
-    <x-aura::code title="4. Real World Landing Page Hero Pattern">
+    <!-- 4. Real World Hero Pattern -->
+    <x-aura::code title="4. Real World Hero Pattern">
 
         <x-slot:preview>
 
-            <div class="p-8 sm:p-12 rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/60 text-center flex flex-col items-center w-full">
+            <x-aura::card size="2xl" gap="4">
 
-                <div class="space-y-4 max-w-2xl flex flex-col items-center">
+                <x-aura::flex align="center" gap="2">
 
-                    <div class="flex items-center gap-2">
+                    <x-aura::kicker>
+                        NEXT GEN LIVEWIRE PRIMITIVES
+                    </x-aura::kicker>
 
-                        <x-aura::kicker>NEXT GEN LIVEWIRE PRIMITIVES</x-aura::kicker>
+                    <x-aura::badge variant="subtle" size="sm">
+                        v2.0
+                    </x-aura::badge>
 
-                        <x-aura::badge variant="positive" size="md">v2.0</x-aura::badge>
+                </x-aura::flex>
 
-                    </div>
+                <x-aura::display size="lg" :gradient="true">
+                    The Developer Suite for Rapid UI Delivery
+                </x-aura::display>
 
-                    <x-aura::display size="xl" :gradient="true">
-                        The Developer Suite for Rapid UI Delivery
-                    </x-aura::display>
+                <x-aura::subheading size="md">
+                    Compose rich, accessible, full stack Laravel applications with beautifully orchestrated Blade components.
+                </x-aura::subheading>
 
-                    <x-aura::subheading size="lg">
-                        Compose rich, accessible, full stack Laravel applications with beautifully orchestrated Blade components.
-                    </x-aura::subheading>
+                <x-aura::flex align="center" gap="3">
 
-                </div>
+                    <x-aura::button variant="primary" iconTrailing="arrow-right">
+                        Explore
+                    </x-aura::button>
 
-                <div class="pt-6 flex flex-wrap items-center justify-center gap-3">
+                    <x-aura::button variant="ghost">
+                        Catalog
+                    </x-aura::button>
 
-                    <x-aura::button variant="primary" iconTrailing="arrow-right">Explore</x-aura::button>
+                </x-aura::flex>
 
-                    <x-aura::button variant="ghost">Catalog</x-aura::button>
-
-                </div>
-
-            </div>
+            </x-aura::card>
 
         </x-slot:preview>
 
-        <x-slot:codeSlot>@verbatim<div class="p-8 sm:p-12 rounded-3xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/60 text-center flex flex-col items-center">
-    <div class="space-y-4 max-w-2xl flex flex-col items-center">
-        <div class="flex items-center gap-2">
-            <x-aura::kicker>NEXT GEN LIVEWIRE PRIMITIVES</x-aura::kicker>
-            <x-aura::badge variant="positive" size="md">v2.0</x-aura::badge>
-        </div>
-        <x-aura::display size="xl" :gradient="true">
-            The Developer Suite for Rapid UI Delivery
-        </x-aura::display>
-        <x-aura::subheading size="lg">
-            Compose rich, accessible, full stack Laravel applications with beautifully orchestrated Blade components.
-        </x-aura::subheading>
-    </div>
-    <div class="pt-6 flex flex-wrap items-center justify-center gap-3">
-        <x-aura::button variant="primary" iconTrailing="arrow-right">Explore</x-aura::button>
-        <x-aura::button variant="ghost">Catalog</x-aura::button>
-    </div>
-</div>@endverbatim</x-slot:codeSlot>
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::card size="2xl" gap="4">
+
+                    <x-aura::flex align="center" gap="2">
+
+                        <x-aura::kicker>
+                            NEXT GEN LIVEWIRE PRIMITIVES
+                        </x-aura::kicker>
+
+                        <x-aura::badge variant="subtle" size="sm">
+                            v2.0
+                        </x-aura::badge>
+
+                    </x-aura::flex>
+
+                    <x-aura::display size="lg" :gradient="true">
+                        The Developer Suite for Rapid UI Delivery
+                    </x-aura::display>
+
+                    <x-aura::subheading size="md">
+                        Compose rich, accessible, full stack Laravel applications with beautifully orchestrated Blade components.
+                    </x-aura::subheading>
+
+                    <x-aura::flex align="center" gap="3">
+
+                        <x-aura::button variant="primary" iconTrailing="arrow-right">
+                            Explore
+                        </x-aura::button>
+
+                        <x-aura::button variant="ghost">
+                            Catalog
+                        </x-aura::button>
+
+                    </x-aura::flex>
+
+                </x-aura::card>
+            @endverbatim
+
+        </x-slot:codeSlot>
 
     </x-aura::code>
 
-</x-aura::stack>
+</x-aura::container>
