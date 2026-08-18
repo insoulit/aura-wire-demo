@@ -11,34 +11,30 @@ class extends Component {};
 
 ?>
 
-<x-aura::stack gap="10" class="w-full max-w-4xl mx-auto py-2">
+<x-aura::container gap="8">
 
     <!-- Header -->
-    <x-aura::card>
+    <x-aura::card size="full" gap="2">
 
-        <x-aura::stack gap="2" class="max-w-2xl">
+        <x-aura::flex align="center" gap="2.5">
 
-            <x-aura::flex align="center" gap="2.5">
+            <x-aura::kicker>
+                Typography
+            </x-aura::kicker>
 
-                <x-aura::kicker>
-                    Typography
-                </x-aura::kicker>
+            <x-aura::badge variant="subtle" size="sm">
+                Component
+            </x-aura::badge>
 
-                <x-aura::badge variant="subtle" size="sm">
-                    Component
-                </x-aura::badge>
+        </x-aura::flex>
 
-            </x-aura::flex>
+        <x-aura::heading level="1" size="xl">
+            Kicker
+        </x-aura::heading>
 
-            <x-aura::heading level="1" size="xl">
-                Kicker
-            </x-aura::heading>
-
-            <x-aura::subheading size="md">
-                Uppercase category labels, status indicators, and eyebrow headers placed above primary section titles to establish clear visual context and hierarchy.
-            </x-aura::subheading>
-
-        </x-aura::stack>
+        <x-aura::subheading size="md">
+            Uppercase category labels, status indicators, and eyebrow headers placed above primary section titles to establish clear visual context and hierarchy.
+        </x-aura::subheading>
 
     </x-aura::card>
 
@@ -188,7 +184,7 @@ class extends Component {};
 
         <x-slot:preview>
 
-            <x-aura::stack gap="4" class="w-full">
+            <div class="space-y-4 w-full">
 
                 <x-aura::flex align="center" gap="3">
 
@@ -238,7 +234,7 @@ class extends Component {};
 
                 </x-aura::flex>
 
-            </x-aura::stack>
+            </div>
 
         </x-slot:preview>
 
@@ -271,134 +267,118 @@ class extends Component {};
 
         <x-slot:preview>
 
-            <x-aura::stack gap="6" class="w-full">
+            <div class="space-y-6 w-full">
 
                 <!-- Hero Section Header Card -->
-                <x-aura::card>
+                <x-aura::card gap="4">
 
-                    <x-aura::stack gap="4" class="w-full">
+                    <div class="space-y-2 max-w-2xl">
 
-                        <x-aura::stack gap="2" class="max-w-2xl">
+                        <x-aura::kicker variant="default" icon="sparkles">
+                            ENTERPRISE PLATFORM
+                        </x-aura::kicker>
 
-                            <x-aura::kicker variant="default" icon="sparkles">
-                                ENTERPRISE PLATFORM
-                            </x-aura::kicker>
+                        <x-aura::heading level="2" size="display-lg">
+                            Scale your infrastructure without friction
+                        </x-aura::heading>
 
-                            <x-aura::heading level="2" size="display-lg">
-                                Scale your infrastructure without friction
-                            </x-aura::heading>
+                        <x-aura::subheading size="md">
+                            Global multi region cloud servers with automated load balancing, zero downtime rollouts, and SOC 2 verified security.
+                        </x-aura::subheading>
 
-                            <x-aura::subheading size="md">
-                                Global multi region cloud servers with automated load balancing, zero downtime rollouts, and SOC 2 verified security.
-                            </x-aura::subheading>
+                    </div>
 
-                        </x-aura::stack>
+                    <x-aura::flex align="center" gap="3">
 
-                        <x-aura::flex align="center" gap="3">
+                        <x-aura::button variant="primary" iconTrailing="arrow-right">
+                            Explore
+                        </x-aura::button>
 
-                            <x-aura::button variant="primary" iconTrailing="arrow-right">
-                                Explore
-                            </x-aura::button>
+                        <x-aura::button variant="ghost">
+                            Docs
+                        </x-aura::button>
 
-                            <x-aura::button variant="ghost">
-                                Docs
-                            </x-aura::button>
-
-                        </x-aura::flex>
-
-                    </x-aura::stack>
+                    </x-aura::flex>
 
                 </x-aura::card>
 
                 <!-- Navigation Sidebar Group -->
-                <x-aura::card>
+                <x-aura::card gap="3">
 
-                    <x-aura::stack gap="4" class="w-full">
+                    <x-aura::kicker variant="default" icon="layers">
+                        MAIN NAVIGATION
+                    </x-aura::kicker>
 
-                        <x-aura::stack gap="2">
+                    <div class="space-y-1">
 
-                            <x-aura::kicker variant="default" icon="layers">
-                                MAIN NAVIGATION
-                            </x-aura::kicker>
+                        <x-aura::flex align="center" justify="between" class="px-3 py-2 rounded-lg bg-zinc-100 dark:bg-zinc-800">
 
-                            <x-aura::stack gap="1">
+                            <x-aura::flex align="center" gap="2">
 
-                                <x-aura::flex align="center" justify="between" class="px-3 py-2 rounded-lg bg-zinc-100 dark:bg-zinc-800">
+                                <x-aura::icon name="home" size="sm" />
 
-                                    <x-aura::flex align="center" gap="2">
+                                <x-aura::text size="sm" weight="semibold">
+                                    Dashboard
+                                </x-aura::text>
 
-                                        <x-aura::icon name="home" size="sm" />
+                            </x-aura::flex>
 
-                                        <x-aura::text size="sm" weight="semibold">
-                                            Dashboard
-                                        </x-aura::text>
+                            <x-aura::badge variant="neutral" size="sm">
+                                Active
+                            </x-aura::badge>
 
-                                    </x-aura::flex>
+                        </x-aura::flex>
 
-                                    <x-aura::badge variant="neutral" size="sm">
-                                        Active
-                                    </x-aura::badge>
+                        <x-aura::flex align="center" gap="2" class="px-3 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800/60">
 
-                                </x-aura::flex>
+                            <x-aura::icon name="chart-bar" size="sm" />
 
-                                <x-aura::flex align="center" gap="2" class="px-3 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800/60">
+                            <x-aura::text size="sm">
+                                Analytics
+                            </x-aura::text>
 
-                                    <x-aura::icon name="chart-bar" size="sm" />
+                        </x-aura::flex>
 
-                                    <x-aura::text size="sm">
-                                        Analytics
-                                    </x-aura::text>
-
-                                </x-aura::flex>
-
-                            </x-aura::stack>
-
-                        </x-aura::stack>
-
-                    </x-aura::stack>
+                    </div>
 
                 </x-aura::card>
 
-            </x-aura::stack>
+            </div>
 
         </x-slot:preview>
 
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::card>
+                <x-aura::card gap="4">
 
-                    <x-aura::stack gap="4">
+                    <div class="space-y-2 max-w-2xl">
 
-                        <x-aura::stack gap="2" class="max-w-2xl">
+                        <x-aura::kicker variant="default" icon="sparkles">
+                            ENTERPRISE PLATFORM
+                        </x-aura::kicker>
 
-                            <x-aura::kicker variant="default" icon="sparkles">
-                                ENTERPRISE PLATFORM
-                            </x-aura::kicker>
+                        <x-aura::heading level="2" size="display-lg">
+                            Scale your infrastructure without friction
+                        </x-aura::heading>
 
-                            <x-aura::heading level="2" size="display-lg">
-                                Scale your infrastructure without friction
-                            </x-aura::heading>
+                        <x-aura::subheading size="md">
+                            Global multi region cloud servers with automated load balancing, zero downtime rollouts, and SOC 2 verified security.
+                        </x-aura::subheading>
 
-                            <x-aura::subheading size="md">
-                                Global multi region cloud servers with automated load balancing, zero downtime rollouts, and SOC 2 verified security.
-                            </x-aura::subheading>
+                    </div>
 
-                        </x-aura::stack>
+                    <x-aura::flex align="center" gap="3">
 
-                        <x-aura::flex align="center" gap="3">
+                        <x-aura::button variant="primary" iconTrailing="arrow-right">
+                            Explore
+                        </x-aura::button>
 
-                            <x-aura::button variant="primary" iconTrailing="arrow-right">
-                                Explore
-                            </x-aura::button>
+                        <x-aura::button variant="ghost">
+                            Docs
+                        </x-aura::button>
 
-                            <x-aura::button variant="ghost">
-                                Docs
-                            </x-aura::button>
-
-                        </x-aura::flex>
-
-                    </x-aura::stack>
+                    </x-aura::flex>
 
                 </x-aura::card>
             @endverbatim
@@ -407,5 +387,5 @@ class extends Component {};
 
     </x-aura::code>
 
-</x-aura::stack>
+</x-aura::container>
 
