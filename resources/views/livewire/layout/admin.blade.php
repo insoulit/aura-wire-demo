@@ -11,7 +11,7 @@
         <livewire:layout.admin.sidebar />
 
         <!-- Main Content Area -->
-        <x-aura::stack gap="none" class="flex-1 min-w-0">
+        <x-aura::flex direction="col" gap="none" class="flex-1 min-w-0">
 
             <x-aura::main class="min-h-screen">
                 {{ $slot }}
@@ -19,7 +19,7 @@
 
             <livewire:layout.shared.footer />
 
-        </x-aura::stack>
+        </x-aura::flex>
 
     </x-aura::flex>
 

@@ -18,7 +18,7 @@ new class extends Component {
 
 <x-aura::card title="System & Automation Controls" description="Manage view cache invalidation, debug logs, and maintenance state.">
     <form wire:submit.prevent="save">
-        <x-aura::stack gap="1" class="pt-1">
+        <x-aura::flex direction="col" gap="1" class="pt-1">
             @if ($saved)
                 <x-aura::banner variant="dark" dismissible="true">
                     System controls updated successfully!
@@ -49,7 +49,7 @@ new class extends Component {
                 description="Restrict non admin access and display 503 maintenance page." 
                 size="sm" 
             />
-        </x-aura::stack>
+        </x-aura::flex>
 
         <x-slot:footer>
             <x-aura::flex align="center" justify="end" class="w-full">

@@ -189,7 +189,7 @@ class extends Component {
 
 ?>
 
-<x-aura::stack gap="3" class="w-full max-w-6xl mx-auto">
+<x-aura::flex direction="col" gap="3" class="w-full max-w-6xl mx-auto">
 
     <!-- Top Header -->
     <div class="px-1">
@@ -416,4 +416,4 @@ class extends Component {
         </x-slot:footer>
     </x-aura::modal>
 
-</x-aura::stack>
+</x-aura::flex>

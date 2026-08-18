@@ -43,7 +43,7 @@ new class extends Component {
 ?>
 
 <x-aura::card>
-    <x-aura::stack gap="4">
+    <x-aura::flex direction="col" gap="4">
         <!-- Header with Period Toggles -->
         <x-aura::flex align="center" justify="between" gap="3" wrap="true">
             <div>
@@ -105,5 +105,5 @@ new class extends Component {
                 @endforeach
             </x-aura::flex>
         </div>
-    </x-aura::stack>
+    </x-aura::flex>
 </x-aura::card>

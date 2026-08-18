@@ -11,10 +11,10 @@ class extends Component {};
 
 ?>
 
-<x-aura::stack gap="10" class="w-full max-w-4xl mx-auto py-2">
+<x-aura::flex direction="col" gap="10" class="w-full max-w-4xl mx-auto py-2">
     <!-- Header -->
     <x-aura::card>
-        <x-aura::stack gap="2" class="max-w-2xl">
+        <x-aura::flex direction="col" gap="2" class="max-w-2xl">
             <x-aura::flex align="center" gap="2.5">
                 <x-aura::kicker>Display</x-aura::kicker>
                 <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
@@ -23,7 +23,7 @@ class extends Component {};
             <x-aura::subheading size="md">
                 Placeholder layouts for empty datasets, search resets, document creation, and zero-state screens using buttons and icons.
             </x-aura::subheading>
-        </x-aura::stack>
+        </x-aura::flex>
     </x-aura::card>
 
     <!-- Component Syntax -->
@@ -106,4 +106,4 @@ class extends Component {};
     description="All caught up! You have no unread notifications or messages in your queue."
 />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
-</x-aura::stack>
+</x-aura::flex>

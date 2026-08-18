@@ -93,10 +93,10 @@ class extends Component {
 
 ?>
 
-<x-aura::stack gap="10" class="w-full max-w-5xl mx-auto py-2">
+<x-aura::flex direction="col" gap="10" class="w-full max-w-5xl mx-auto py-2">
     <!-- Header Page Intro -->
     <x-aura::card>
-        <x-aura::stack gap="2" class="max-w-2xl">
+        <x-aura::flex direction="col" gap="2" class="max-w-2xl">
             <x-aura::flex align="center" gap="2.5">
                 <x-aura::kicker>Start</x-aura::kicker>
                 <x-aura::badge variant="subtle" size="sm">Search &amp; Copy</x-aura::badge>
@@ -105,7 +105,7 @@ class extends Component {
             <x-aura::subheading size="md">
                 Browse and search all Lucide SVG icons natively integrated into Aura Wire. Click any icon card to copy its Blade tag syntax instantly.
             </x-aura::subheading>
-        </x-aura::stack>
+        </x-aura::flex>
     </x-aura::card>
 
     <!-- Search & Filter Bar -->
@@ -123,7 +123,7 @@ class extends Component {
     <!-- Interactive Icon Grid Gallery -->
     <x-aura::code title="Icon Explorer (Click to Copy)">
         <x-slot:preview>
-            <x-aura::stack gap="8" class="w-full">
+            <x-aura::flex direction="col" gap="8" class="w-full">
                 <!-- Icon Grid -->
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5 w-full">
                     @forelse ($this->icons as $iconName)
@@ -204,11 +204,11 @@ class extends Component {
                         </x-aura::flex>
                     </div>
                 @endif
-            </x-aura::stack>
+            </x-aura::flex>
         </x-slot:preview>
         <x-slot:codeSlot>@verbatim<x-aura::icon name="sparkles" size="md" />
 <x-aura::icon name="search" size="sm" />
 <x-aura::icon name="heart" />
 <x-aura::icon name="user" size="lg" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
-</x-aura::stack>
+</x-aura::flex>

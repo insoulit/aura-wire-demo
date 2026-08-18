@@ -17,7 +17,7 @@
                 <livewire:layout.component.sidebar />
 
                 <!-- Main Component Page Content Slot -->
-                <x-aura::stack gap="none" class="flex-1 min-w-0 w-full">
+                <x-aura::flex direction="col" gap="none" class="flex-1 min-w-0 w-full">
 
                     <x-aura::main :container="false">
 
@@ -27,7 +27,7 @@
 
                     </x-aura::main>
 
-                </x-aura::stack>
+                </x-aura::flex>
 
             </x-aura::flex>
 

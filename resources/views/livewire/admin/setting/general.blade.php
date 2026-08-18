@@ -26,7 +26,7 @@ new class extends Component {
 
 <x-aura::card title="General Configuration" description="Manage portal title, administrator email, and visual theme tokens.">
     <form wire:submit.prevent="save">
-        <x-aura::stack gap="5" class="pt-2">
+        <x-aura::flex direction="col" gap="5" class="pt-2">
             @if ($saved)
                 <x-aura::banner variant="dark" dismissible="true">
                     General settings updated successfully!
@@ -60,7 +60,7 @@ new class extends Component {
                     </x-aura::select>
                 </x-aura::field>
             </div>
-        </x-aura::stack>
+        </x-aura::flex>
 
         <x-slot:footer>
             <x-aura::flex align="center" justify="end" class="w-full">

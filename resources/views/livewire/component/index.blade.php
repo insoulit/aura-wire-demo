@@ -11,10 +11,10 @@ class extends Component {};
 
 ?>
 
-<x-aura::stack gap="12" class="w-full">
+<x-aura::flex direction="col" gap="12" class="w-full">
     <!-- Header Banner -->
     <x-aura::card>
-        <x-aura::stack gap="2" class="max-w-2xl">
+        <x-aura::flex direction="col" gap="2" class="max-w-2xl">
             <x-aura::flex align="center" gap="2.5">
                 <x-aura::kicker>Component Directory</x-aura::kicker>
                 <x-aura::badge variant="subtle" size="sm">Documentation</x-aura::badge>
@@ -23,11 +23,11 @@ class extends Component {};
             <x-aura::subheading size="md">
                 Browse through individual standalone documentation pages for every component registered by Aura Wire, organized by category.
             </x-aura::subheading>
-        </x-aura::stack>
+        </x-aura::flex>
     </x-aura::card>
 
     <!-- Category 1: Typography -->
-    <x-aura::stack gap="4">
+    <x-aura::flex direction="col" gap="4">
         <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
             <x-aura::flex align="center" justify="between" gap="2">
                 <x-aura::flex align="center" gap="2">
@@ -83,10 +83,10 @@ class extends Component {};
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::kbd&gt;</x-aura::text>
             </x-aura::card>
         </div>
-    </x-aura::stack>
+    </x-aura::flex>
 
     <!-- Category 2: Action -->
-    <x-aura::stack gap="4">
+    <x-aura::flex direction="col" gap="4">
         <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
             <x-aura::flex align="center" justify="between" gap="2">
                 <x-aura::flex align="center" gap="2">
@@ -122,10 +122,10 @@ class extends Component {};
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::dropdown&gt;</x-aura::text>
             </x-aura::card>
         </div>
-    </x-aura::stack>
+    </x-aura::flex>
 
     <!-- Category 3: Form -->
-    <x-aura::stack gap="4">
+    <x-aura::flex direction="col" gap="4">
         <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
             <x-aura::flex align="center" justify="between" gap="2">
                 <x-aura::flex align="center" gap="2">
@@ -211,10 +211,10 @@ class extends Component {};
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::file-upload&gt;</x-aura::text>
             </x-aura::card>
         </div>
-    </x-aura::stack>
+    </x-aura::flex>
 
     <!-- Category 4: Display -->
-    <x-aura::stack gap="4">
+    <x-aura::flex direction="col" gap="4">
         <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
             <x-aura::flex align="center" justify="between" gap="2">
                 <x-aura::flex align="center" gap="2">
@@ -280,10 +280,10 @@ class extends Component {};
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::empty-state&gt;</x-aura::text>
             </x-aura::card>
         </div>
-    </x-aura::stack>
+    </x-aura::flex>
 
     <!-- Category 5: Data -->
-    <x-aura::stack gap="4">
+    <x-aura::flex direction="col" gap="4">
         <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
             <x-aura::flex align="center" justify="between" gap="2">
                 <x-aura::flex align="center" gap="2">
@@ -324,10 +324,10 @@ class extends Component {};
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::numbered-list&gt;</x-aura::text>
             </x-aura::card>
         </div>
-    </x-aura::stack>
+    </x-aura::flex>
 
     <!-- Category 6: Feedback -->
-    <x-aura::stack gap="4">
+    <x-aura::flex direction="col" gap="4">
         <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
             <x-aura::flex align="center" justify="between" gap="2">
                 <x-aura::flex align="center" gap="2">
@@ -383,10 +383,10 @@ class extends Component {};
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::spinner&gt;</x-aura::text>
             </x-aura::card>
         </div>
-    </x-aura::stack>
+    </x-aura::flex>
 
     <!-- Category 7: Navigation -->
-    <x-aura::stack gap="4">
+    <x-aura::flex direction="col" gap="4">
         <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
             <x-aura::flex align="center" justify="between" gap="2">
                 <x-aura::flex align="center" gap="2">
@@ -412,10 +412,10 @@ class extends Component {};
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::pagination&gt;</x-aura::text>
             </x-aura::card>
         </div>
-    </x-aura::stack>
+    </x-aura::flex>
 
     <!-- Category 8: Layout -->
-    <x-aura::stack gap="4">
+    <x-aura::flex direction="col" gap="4">
         <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
             <x-aura::flex align="center" justify="between" gap="2">
                 <x-aura::flex align="center" gap="2">
@@ -461,5 +461,5 @@ class extends Component {};
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::footer&gt;</x-aura::text>
             </x-aura::card>
         </div>
-    </x-aura::stack>
-</x-aura::stack>
+    </x-aura::flex>
+</x-aura::flex>

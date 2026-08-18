@@ -53,7 +53,7 @@ class extends Component {
 
 ?>
 
-<x-aura::stack gap="3" class="w-full max-w-3xl mx-auto">
+<x-aura::flex direction="col" gap="3" class="w-full max-w-3xl mx-auto">
 
     <!-- Header with Back Button -->
     <x-aura::flex align="center" justify="between" gap="4" class="px-1">
@@ -78,7 +78,7 @@ class extends Component {
     <!-- Edit User Card Form -->
     <form wire:submit.prevent="update">
         <x-aura::card title="Profile Information" description="Update user identity, role permissions, and access status.">
-            <x-aura::stack gap="5" class="pt-2">
+            <x-aura::flex direction="col" gap="5" class="pt-2">
 
                 <!-- Avatar & Identity Preview -->
                 <x-aura::flex align="center" gap="4" class="p-4 rounded-xl bg-zinc-50/80 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700/60">
@@ -119,7 +119,7 @@ class extends Component {
                     </x-aura::field>
                 </div>
 
-            </x-aura::stack>
+            </x-aura::flex>
 
             <x-slot:footer>
                 <x-aura::flex align="center" justify="between" class="w-full">
@@ -177,4 +177,4 @@ class extends Component {
         </x-slot:footer>
     </x-aura::modal>
 
-</x-aura::stack>
+</x-aura::flex>

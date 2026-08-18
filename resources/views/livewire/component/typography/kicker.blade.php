@@ -11,7 +11,7 @@ class extends Component {};
 
 ?>
 
-<x-aura::container  gap="8" :padding="false">
+<x-aura::container gap="8" :padding="false">
 
     <!-- Header -->
     <x-aura::card size="full" gap="2">
@@ -53,7 +53,7 @@ class extends Component {};
 
     </x-aura::code>
 
-    <!-- 1. Color & Intent Variants -->
+    <!-- 1. Color and Intent Variants -->
     <x-aura::code title="1. Color and Intent Variants">
 
         <x-slot:preview>
@@ -179,82 +179,49 @@ class extends Component {};
 
     </x-aura::code>
 
-    <!-- 3. Size Scales & Letter Spacing -->
+    <!-- 3. Size Scales and Letter Spacing -->
     <x-aura::code title="3. Size Scales and Letter Spacing">
 
         <x-slot:preview>
 
-            <x-aura::stack gap="4">
+            <x-aura::flex direction="col" align="start" class="w-full" gap="4">
 
-                <x-aura::flex align="center" gap="3">
+                <x-aura::kicker size="xs">
+                    MICRO EYEBROW HEADER
+                </x-aura::kicker>
 
-                    <x-aura::badge variant="neutral" size="sm">
-                        xs
-                    </x-aura::badge>
+                <x-aura::kicker size="sm">
+                    STANDARD SECTION KICKER
+                </x-aura::kicker>
 
-                    <x-aura::kicker size="xs" variant="default" tracking="widest">
-                        MICRO EYEBROW HEADER
-                    </x-aura::kicker>
+                <x-aura::kicker size="md">
+                    FEATURE HEADER CATEGORY
+                </x-aura::kicker>
 
-                </x-aura::flex>
+                <x-aura::kicker size="lg">
+                    HERO DISPLAY EYEBROW
+                </x-aura::kicker>
 
-                <x-aura::flex align="center" gap="3">
-
-                    <x-aura::badge variant="neutral" size="sm">
-                        sm
-                    </x-aura::badge>
-
-                    <x-aura::kicker size="sm" variant="default" tracking="widest">
-                        STANDARD SECTION KICKER
-                    </x-aura::kicker>
-
-                </x-aura::flex>
-
-                <x-aura::flex align="center" gap="3">
-
-                    <x-aura::badge variant="neutral" size="sm">
-                        md
-                    </x-aura::badge>
-
-                    <x-aura::kicker size="md" variant="default" tracking="widest">
-                        FEATURE HEADER CATEGORY
-                    </x-aura::kicker>
-
-                </x-aura::flex>
-
-                <x-aura::flex align="center" gap="3">
-
-                    <x-aura::badge variant="neutral" size="sm">
-                        lg
-                    </x-aura::badge>
-
-                    <x-aura::kicker size="lg" variant="default" tracking="widest">
-                        HERO DISPLAY EYEBROW
-                    </x-aura::kicker>
-
-                </x-aura::flex>
-
-            </x-aura::stack>
+            </x-aura::flex>
 
         </x-slot:preview>
-
 
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::kicker size="xs" variant="default">
+                <x-aura::kicker size="xs">
                     MICRO EYEBROW HEADER
                 </x-aura::kicker>
 
-                <x-aura::kicker size="sm" variant="default">
+                <x-aura::kicker size="sm">
                     STANDARD SECTION KICKER
                 </x-aura::kicker>
 
-                <x-aura::kicker size="md" variant="default">
+                <x-aura::kicker size="md">
                     FEATURE HEADER CATEGORY
                 </x-aura::kicker>
 
-                <x-aura::kicker size="lg" variant="default">
+                <x-aura::kicker size="lg">
                     HERO DISPLAY EYEBROW
                 </x-aura::kicker>
             @endverbatim
@@ -263,7 +230,7 @@ class extends Component {};
 
     </x-aura::code>
 
-    <!-- 4. Real World Section Headers -->
+    <!-- 4. Real World Hero and Card Headers -->
     <x-aura::code title="4. Real World Hero and Card Headers">
 
         <x-slot:preview>
@@ -297,8 +264,6 @@ class extends Component {};
             </x-aura::card>
 
         </x-slot:preview>
-
-
 
         <x-slot:codeSlot>
 
@@ -337,4 +302,3 @@ class extends Component {};
     </x-aura::code>
 
 </x-aura::container>
-

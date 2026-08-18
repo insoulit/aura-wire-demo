@@ -16,7 +16,7 @@ new class extends Component {};
 
                 <x-aura::icon name="sparkles" size="md" variant="dark" />
 
-                <x-aura::stack gap="none">
+                <x-aura::flex direction="col" gap="none">
 
                     <x-aura::heading level="1" size="xs" weight="extrabold">
                         Aura Wire
@@ -26,7 +26,7 @@ new class extends Component {};
                         Admin Console
                     </x-aura::text>
 
-                </x-aura::stack>
+                </x-aura::flex>
 
             </x-aura::flex>
 
@@ -82,7 +82,7 @@ new class extends Component {};
 
     <x-slot:footer>
 
-        <x-aura::stack gap="sm">
+        <x-aura::flex direction="col" gap="sm">
 
             <x-aura::flex align="center" justify="between">
 
@@ -108,7 +108,7 @@ new class extends Component {};
 
             </x-aura::flex>
 
-        </x-aura::stack>
+        </x-aura::flex>
 
     </x-slot:footer>
 

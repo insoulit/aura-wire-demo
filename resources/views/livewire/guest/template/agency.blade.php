@@ -16,7 +16,7 @@ class extends Component {
 
 ?>
 
-<x-aura::stack gap="16" class="w-full max-w-6xl py-6">
+<x-aura::flex direction="col" gap="16" class="w-full max-w-6xl py-6">
     <!-- Top Navigation Bar -->
     <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-4">
         <div class="flex items-center gap-3">
@@ -145,4 +145,4 @@ class extends Component {
             </div>
         </x-slot:footer>
     </x-aura::card>
-</x-aura::stack>
+</x-aura::flex>

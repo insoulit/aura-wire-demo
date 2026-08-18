@@ -31,7 +31,7 @@ class extends Component {
 
 ?>
 
-<x-aura::stack gap="3" class="w-full max-w-3xl mx-auto">
+<x-aura::flex direction="col" gap="3" class="w-full max-w-3xl mx-auto">
 
     <!-- Top Header -->
     <x-aura::flex align="center" justify="between" gap="4" class="px-1">
@@ -53,7 +53,7 @@ class extends Component {
         <x-aura::flex align="center" justify="between" gap="4" class="pb-6 border-b border-zinc-100 dark:border-zinc-800 flex-col sm:flex-row">
             <x-aura::flex align="center" gap="4">
                 <x-aura::avatar :initials="$user['initials']" size="lg" />
-                <x-aura::stack gap="1">
+                <x-aura::flex direction="col" gap="1">
                     <x-aura::flex align="center" gap="2" :wrap="true">
                         <x-aura::heading level="2" size="sm">{{ $user['name'] }}</x-aura::heading>
                         <x-aura::badge :variant="$user['role'] === 'admin' ? 'neutral' : 'subtle'" size="sm">
@@ -61,7 +61,7 @@ class extends Component {
                         </x-aura::badge>
                     </x-aura::flex>
                     <x-aura::text variant="subtle" size="sm">{{ $user['email'] }}</x-aura::text>
-                </x-aura::stack>
+                </x-aura::flex>
             </x-aura::flex>
             <x-aura::badge :variant="$user['status'] === 'Active' ? 'neutral' : 'subtle'" size="sm">
                 {{ $user['status'] }}
@@ -152,4 +152,4 @@ class extends Component {
         </x-slot:footer>
     </x-aura::card>
 
-</x-aura::stack>
+</x-aura::flex>

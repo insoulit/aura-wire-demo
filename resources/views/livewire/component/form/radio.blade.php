@@ -14,10 +14,10 @@ class extends Component {
 
 ?>
 
-<x-aura::stack gap="10" class="w-full max-w-4xl mx-auto py-2">
+<x-aura::flex direction="col" gap="10" class="w-full max-w-4xl mx-auto py-2">
     <!-- Header -->
     <x-aura::card>
-        <x-aura::stack gap="2" class="max-w-2xl">
+        <x-aura::flex direction="col" gap="2" class="max-w-2xl">
             <x-aura::flex align="center" gap="2.5">
                 <x-aura::kicker>Form Controls</x-aura::kicker>
                 <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
@@ -26,7 +26,7 @@ class extends Component {
             <x-aura::subheading size="md">
                 Exclusive single option radio buttons for selection lists, tier options, and preference choices.
             </x-aura::subheading>
-        </x-aura::stack>
+        </x-aura::flex>
     </x-aura::card>
 
     <!-- Component Syntax -->
@@ -37,28 +37,28 @@ class extends Component {
     <!-- 1. Basic Radio Group -->
     <x-aura::code title="1. Basic Radio Group">
         <x-slot:preview>
-            <x-aura::stack direction="col" gap="2.5" class="w-full max-w-sm mx-auto">
+            <x-aura::flex direction="col" direction="col" gap="2.5" class="w-full max-w-sm mx-auto">
                 <x-aura::radio wire:model.live="plan" value="free" label="Free Tier" />
                 <x-aura::radio wire:model.live="plan" value="pro" label="Pro Tier" />
                 <x-aura::radio wire:model.live="plan" value="enterprise" label="Enterprise" />
-            </x-aura::stack>
+            </x-aura::flex>
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::stack direction="col" gap="2.5">
+        <x-slot:codeSlot>@verbatim<x-aura::flex direction="col" direction="col" gap="2.5">
     <x-aura::radio wire:model="plan" value="free" label="Free Tier" />
     <x-aura::radio wire:model="plan" value="pro" label="Pro Tier" />
     <x-aura::radio wire:model="plan" value="enterprise" label="Enterprise" />
-</x-aura::stack>@endverbatim</x-slot:codeSlot>
+</x-aura::flex>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 2. Radio Sizes -->
     <x-aura::code title="2. Sizes">
         <x-slot:preview>
-            <x-aura::stack direction="col" gap="3" class="w-full max-w-sm mx-auto">
+            <x-aura::flex direction="col" direction="col" gap="3" class="w-full max-w-sm mx-auto">
                 <x-aura::radio name="size_demo" size="xs" label="Extra Small (xs)" :checked="true" />
                 <x-aura::radio name="size_demo" size="sm" label="Small (sm)" />
                 <x-aura::radio name="size_demo" size="md" label="Medium (md)" />
                 <x-aura::radio name="size_demo" size="lg" label="Large (lg)" />
-            </x-aura::stack>
+            </x-aura::flex>
         </x-slot:preview>
         <x-slot:codeSlot>@verbatim<x-aura::radio size="xs" label="Extra Small (xs)" :checked="true" />
 <x-aura::radio size="sm" label="Small (sm)" />
@@ -69,7 +69,7 @@ class extends Component {
     <!-- 3. With Description -->
     <x-aura::code title="3. With Description">
         <x-slot:preview>
-            <x-aura::stack direction="col" gap="3" class="w-full max-w-md mx-auto">
+            <x-aura::flex direction="col" direction="col" gap="3" class="w-full max-w-md mx-auto">
                 <x-aura::radio 
                     wire:model.live="shipping" 
                     value="standard" 
@@ -88,9 +88,9 @@ class extends Component {
                     label="Priority Overnight" 
                     description="Guaranteed morning delivery with dedicated support." 
                 />
-            </x-aura::stack>
+            </x-aura::flex>
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::stack direction="col" gap="3">
+        <x-slot:codeSlot>@verbatim<x-aura::flex direction="col" direction="col" gap="3">
     <x-aura::radio 
         wire:model="shipping" 
         value="standard" 
@@ -109,18 +109,18 @@ class extends Component {
         label="Priority Overnight" 
         description="Guaranteed morning delivery with dedicated support." 
     />
-</x-aura::stack>@endverbatim</x-slot:codeSlot>
+</x-aura::flex>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
 
     <!-- 4. Disabled States -->
     <x-aura::code title="4. Disabled States">
         <x-slot:preview>
-            <x-aura::stack direction="col" gap="3" class="w-full max-w-sm mx-auto">
+            <x-aura::flex direction="col" direction="col" gap="3" class="w-full max-w-sm mx-auto">
                 <x-aura::radio name="disabled_demo" label="Disabled Unchecked" :disabled="true" />
                 <x-aura::radio name="disabled_demo" label="Disabled Checked" :disabled="true" :checked="true" />
-            </x-aura::stack>
+            </x-aura::flex>
         </x-slot:preview>
         <x-slot:codeSlot>@verbatim<x-aura::radio label="Disabled Unchecked" :disabled="true" />
 <x-aura::radio label="Disabled Checked" :disabled="true" :checked="true" />@endverbatim</x-slot:codeSlot>
     </x-aura::code>
-</x-aura::stack>
+</x-aura::flex>

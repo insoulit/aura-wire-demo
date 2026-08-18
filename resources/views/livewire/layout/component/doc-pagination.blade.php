@@ -126,7 +126,7 @@ new class extends Component {
 
                     <x-aura::card href="{{ $prevPage['url'] }}" wire:navigate>
 
-                        <x-aura::stack gap="1">
+                        <x-aura::flex direction="col" gap="1">
 
                             <x-aura::flex align="center" gap="1.5">
 
@@ -142,7 +142,7 @@ new class extends Component {
                                 {{ $prevPage['title'] }}
                             </x-aura::heading>
 
-                        </x-aura::stack>
+                        </x-aura::flex>
 
                     </x-aura::card>
 
@@ -156,7 +156,7 @@ new class extends Component {
 
                     <x-aura::card href="{{ $nextPage['url'] }}" wire:navigate>
 
-                        <x-aura::stack gap="1" align="end">
+                        <x-aura::flex direction="col" gap="1" align="end">
 
                             <x-aura::flex align="center" gap="1.5">
 
@@ -172,7 +172,7 @@ new class extends Component {
                                 {{ $nextPage['title'] }}
                             </x-aura::heading>
 
-                        </x-aura::stack>
+                        </x-aura::flex>
 
                     </x-aura::card>
 

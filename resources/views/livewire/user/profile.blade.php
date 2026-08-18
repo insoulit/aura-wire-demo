@@ -21,10 +21,10 @@ class extends Component {
 
 ?>
 
-<x-aura::stack gap="6" class="max-w-2xl mx-auto py-4">
+<x-aura::flex direction="col" gap="6" class="max-w-2xl mx-auto py-4">
 
     <!-- Top Header -->
-    <x-aura::stack gap="1">
+    <x-aura::flex direction="col" gap="1">
         <x-aura::flex align="center" justify="between" gap="4">
             <x-aura::heading level="1" size="lg">Profile Info</x-aura::heading>
             <div class="shrink-0">
@@ -37,7 +37,7 @@ class extends Component {
         <x-aura::subheading size="sm">
             Manage your account display name, bio, and mobile contact number.
         </x-aura::subheading>
-    </x-aura::stack>
+    </x-aura::flex>
 
     @if($saved)
         <x-aura::banner variant="dark" dismissible="true">
@@ -61,7 +61,7 @@ class extends Component {
         </x-aura::flex>
 
         <form wire:submit="save">
-            <x-aura::stack gap="5">
+            <x-aura::flex direction="col" gap="5">
                 <x-aura::field label="Display Name" hint="Your full name visible across workspace modules." required>
                     <x-aura::input wire:model="name" placeholder="Enter display name" size="sm" required />
                 </x-aura::field>
@@ -80,8 +80,8 @@ class extends Component {
                         <span>Save</span>
                     </x-aura::button>
                 </x-aura::flex>
-            </x-aura::stack>
+            </x-aura::flex>
         </form>
     </x-aura::card>
 
-</x-aura::stack>
+</x-aura::flex>

@@ -11,10 +11,10 @@ class extends Component {};
 
 ?>
 
-<x-aura::stack gap="10" class="w-full max-w-4xl mx-auto py-2">
+<x-aura::flex direction="col" gap="10" class="w-full max-w-4xl mx-auto py-2">
     <!-- Header -->
     <x-aura::card>
-        <x-aura::stack gap="2" class="max-w-2xl">
+        <x-aura::flex direction="col" gap="2" class="max-w-2xl">
             <x-aura::flex align="center" gap="2.5">
                 <x-aura::kicker>Getting Started</x-aura::kicker>
                 <x-aura::badge variant="subtle" size="sm">Documentation</x-aura::badge>
@@ -23,7 +23,7 @@ class extends Component {};
             <x-aura::subheading size="md">
                 Install insoulit/aura-wire via Composer into your Laravel application and configure Plus Jakarta Sans typography.
             </x-aura::subheading>
-        </x-aura::stack>
+        </x-aura::flex>
     </x-aura::card>
 
     <!-- Installation Command Syntax -->
@@ -93,10 +93,10 @@ class extends Component {};
     </x-aura::card>
 
     <!-- Installation Steps -->
-    <x-aura::stack gap="6" class="w-full">
+    <x-aura::flex direction="col" gap="6" class="w-full">
         <!-- Step 1 -->
         <x-aura::card>
-            <x-aura::stack gap="4">
+            <x-aura::flex direction="col" gap="4">
                 <x-aura::flex align="center" justify="between" gap="3">
                     <x-aura::flex align="center" gap="3">
                         <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold text-xs shrink-0 shadow-2xs">1</span>
@@ -108,12 +108,12 @@ class extends Component {};
                 <x-aura::code language="bash" active="code" :showTabs="false">
                     <x-slot:codeSlot>@verbatimcomposer require insoulit/aura-wire@endverbatim</x-slot:codeSlot>
                 </x-aura::code>
-            </x-aura::stack>
+            </x-aura::flex>
         </x-aura::card>
 
         <!-- Step 2 -->
         <x-aura::card>
-            <x-aura::stack gap="4">
+            <x-aura::flex direction="col" gap="4">
                 <x-aura::flex align="center" justify="between" gap="3">
                     <x-aura::flex align="center" gap="3">
                         <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold text-xs shrink-0 shadow-2xs">2</span>
@@ -125,12 +125,12 @@ class extends Component {};
                 <x-aura::code language="bash" active="code" :showTabs="false">
                     <x-slot:codeSlot>@verbatimphp artisan vendor:publish --tag="aura-wire-config"@endverbatim</x-slot:codeSlot>
                 </x-aura::code>
-            </x-aura::stack>
+            </x-aura::flex>
         </x-aura::card>
 
         <!-- Step 3 -->
         <x-aura::card>
-            <x-aura::stack gap="4">
+            <x-aura::flex direction="col" gap="4">
                 <x-aura::flex align="center" justify="between" gap="3">
                     <x-aura::flex align="center" gap="3">
                         <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold text-xs shrink-0 shadow-2xs">3</span>
@@ -145,12 +145,12 @@ class extends Component {};
     './vendor/insoulit/aura-wire/resources/views/**/*.blade.php',
 ],@endverbatim</x-slot:codeSlot>
                 </x-aura::code>
-            </x-aura::stack>
+            </x-aura::flex>
         </x-aura::card>
 
         <!-- Step 4: Plus Jakarta Sans Font Integration -->
         <x-aura::card>
-            <x-aura::stack gap="4">
+            <x-aura::flex direction="col" gap="4">
                 <x-aura::flex align="center" justify="between" gap="3">
                     <x-aura::flex align="center" gap="3">
                         <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold text-xs shrink-0 shadow-2xs">4</span>
@@ -162,17 +162,17 @@ class extends Component {};
                     Include Google Fonts in your layout <code class="text-zinc-900 dark:text-white font-mono font-semibold">&lt;head&gt;</code> and configure Tailwind CSS using either approach below:
                 </x-aura::text>
 
-                <x-aura::stack gap="4" class="pt-1">
-                    <x-aura::stack gap="1.5">
+                <x-aura::flex direction="col" gap="4" class="pt-1">
+                    <x-aura::flex direction="col" gap="1.5">
                         <x-aura::text size="sm" weight="semibold">A. Google Fonts Import (&lt;head&gt;)</x-aura::text>
                         <x-aura::code language="html" active="code" :showTabs="false">
                             <x-slot:codeSlot>@verbatim<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400..800;1,400..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">@endverbatim</x-slot:codeSlot>
                         </x-aura::code>
-                    </x-aura::stack>
+                    </x-aura::flex>
 
-                    <x-aura::stack gap="1.5">
+                    <x-aura::flex direction="col" gap="1.5">
                         <x-aura::text size="sm" weight="semibold">Approach 1: Tailwind CSS v4 (<code class="font-mono text-zinc-600 dark:text-zinc-400 lowercase">resources/css/app.css</code>)</x-aura::text>
                         <x-aura::code language="css" active="code" :showTabs="false">
                             <x-slot:codeSlot>@verbatim@theme {
@@ -180,11 +180,11 @@ class extends Component {};
   --font-mono: 'JetBrains Mono', monospace;
 }@endverbatim</x-slot:codeSlot>
                         </x-aura::code>
-                    </x-aura::stack>
+                    </x-aura::flex>
 
                     <x-aura::separator />
 
-                    <x-aura::stack gap="1.5">
+                    <x-aura::flex direction="col" gap="1.5">
                         <x-aura::text size="sm" weight="semibold">Approach 2: Tailwind CSS v3 (<code class="font-mono text-zinc-600 dark:text-zinc-400 lowercase">tailwind.config.js</code>)</x-aura::text>
                         <x-aura::code language="javascript" active="code" :showTabs="false">
                             <x-slot:codeSlot>@verbatimmodule.exports = {
@@ -198,14 +198,14 @@ class extends Component {};
   },
 }@endverbatim</x-slot:codeSlot>
                         </x-aura::code>
-                    </x-aura::stack>
-                </x-aura::stack>
-            </x-aura::stack>
+                    </x-aura::flex>
+                </x-aura::flex>
+            </x-aura::flex>
         </x-aura::card>
 
         <!-- Step 5 -->
         <x-aura::card>
-            <x-aura::stack gap="4">
+            <x-aura::flex direction="col" gap="4">
                 <x-aura::flex align="center" justify="between" gap="3">
                     <x-aura::flex align="center" gap="3">
                         <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 font-bold text-xs shrink-0 shadow-2xs">5</span>
@@ -219,7 +219,7 @@ class extends Component {};
                         <x-slot:codeSlot>@verbatim<x-aura::button variant="primary">Create</x-aura::button>@endverbatim</x-slot:codeSlot>
                     </x-aura::code>
                 </div>
-            </x-aura::stack>
+            </x-aura::flex>
         </x-aura::card>
-    </x-aura::stack>
-</x-aura::stack>
+    </x-aura::flex>
+</x-aura::flex>

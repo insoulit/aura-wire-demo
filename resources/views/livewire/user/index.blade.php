@@ -11,7 +11,7 @@ class extends Component {};
 
 ?>
 
-<x-aura::stack gap="8" class="max-w-5xl mx-auto pb-16">
+<x-aura::flex direction="col" gap="8" class="max-w-5xl mx-auto pb-16">
 
     <!-- 1. Hero Banner Card -->
     <x-aura::card>
@@ -24,7 +24,7 @@ class extends Component {};
                     status="online" 
                 />
             </div>
-            <x-aura::stack gap="1" class="min-w-0">
+            <x-aura::flex direction="col" gap="1" class="min-w-0">
                 <x-aura::flex align="center" gap="2" :wrap="true">
                     <x-aura::badge variant="neutral" size="sm">👋 Welcome Back</x-aura::badge>
                     <x-aura::badge variant="subtle" size="sm">User Account</x-aura::badge>
@@ -36,12 +36,12 @@ class extends Component {};
                 <x-aura::text variant="subtle" size="sm">
                     Select a dedicated user module card below to update your account profile, manage security settings, or explore system portals.
                 </x-aura::text>
-            </x-aura::stack>
+            </x-aura::flex>
         </div>
     </x-aura::card>
 
     <!-- 2. Account & Security Module Cards Grid (Compact 3-Col Layout) -->
-    <x-aura::stack gap="3.5">
+    <x-aura::flex direction="col" gap="3.5">
         <div>
             <x-aura::heading level="2" size="sm">Account &amp; Security</x-aura::heading>
         </div>
@@ -56,14 +56,14 @@ class extends Component {};
                         </div>
                         <x-aura::badge variant="neutral" size="sm">Account</x-aura::badge>
                     </x-aura::flex>
-                    <x-aura::stack gap="1" class="flex-1">
+                    <x-aura::flex direction="col" gap="1" class="flex-1">
                         <x-aura::heading level="3" size="sm">
                             Profile Info
                         </x-aura::heading>
                         <x-aura::text variant="subtle" size="sm">
                             Update your display name, bio description, and mobile contact number.
                         </x-aura::text>
-                    </x-aura::stack>
+                    </x-aura::flex>
                     <div class="pt-2 flex items-center justify-between text-xs font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-white dark:group-hover:text-zinc-900 border-t border-zinc-100 dark:border-zinc-800/60 group-hover:border-white/20 dark:group-hover:border-zinc-900/20 transition-colors duration-200">
                         <span>Edit details</span>
                         <div class="w-6 h-6 rounded-full bg-zinc-50 dark:bg-zinc-800/80 group-hover:bg-white dark:group-hover:bg-zinc-900 group-hover:text-zinc-900 dark:group-hover:text-white flex items-center justify-center text-zinc-400 group-hover:translate-x-0.5 transition-all duration-200">
@@ -82,14 +82,14 @@ class extends Component {};
                         </div>
                         <x-aura::badge variant="neutral" size="sm">Media</x-aura::badge>
                     </x-aura::flex>
-                    <x-aura::stack gap="1" class="flex-1">
+                    <x-aura::flex direction="col" gap="1" class="flex-1">
                         <x-aura::heading level="3" size="sm">
                             Change Profile Picture
                         </x-aura::heading>
                         <x-aura::text variant="subtle" size="sm">
                             Upload a new profile avatar image file and crop preview.
                         </x-aura::text>
-                    </x-aura::stack>
+                    </x-aura::flex>
                     <div class="pt-2 flex items-center justify-between text-xs font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-white dark:group-hover:text-zinc-900 border-t border-zinc-100 dark:border-zinc-800/60 group-hover:border-white/20 dark:group-hover:border-zinc-900/20 transition-colors duration-200">
                         <span>Upload photo</span>
                         <div class="w-6 h-6 rounded-full bg-zinc-50 dark:bg-zinc-800/80 group-hover:bg-white dark:group-hover:bg-zinc-900 group-hover:text-zinc-900 dark:group-hover:text-white flex items-center justify-center text-zinc-400 group-hover:translate-x-0.5 transition-all duration-200">
@@ -108,14 +108,14 @@ class extends Component {};
                         </div>
                         <x-aura::badge variant="subtle" size="sm">Verification</x-aura::badge>
                     </x-aura::flex>
-                    <x-aura::stack gap="1" class="flex-1">
+                    <x-aura::flex direction="col" gap="1" class="flex-1">
                         <x-aura::heading level="3" size="sm">
                             Change Email Address
                         </x-aura::heading>
                         <x-aura::text variant="subtle" size="sm">
                             Update primary login email address and dispatch confirmation code.
                         </x-aura::text>
-                    </x-aura::stack>
+                    </x-aura::flex>
                     <div class="pt-2 flex items-center justify-between text-xs font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-white dark:group-hover:text-zinc-900 border-t border-zinc-100 dark:border-zinc-800/60 group-hover:border-white/20 dark:group-hover:border-zinc-900/20 transition-colors duration-200">
                         <span>Verify address</span>
                         <div class="w-6 h-6 rounded-full bg-zinc-50 dark:bg-zinc-800/80 group-hover:bg-white dark:group-hover:bg-zinc-900 group-hover:text-zinc-900 dark:group-hover:text-white flex items-center justify-center text-zinc-400 group-hover:translate-x-0.5 transition-all duration-200">
@@ -134,14 +134,14 @@ class extends Component {};
                         </div>
                         <x-aura::badge variant="neutral" size="sm">Security</x-aura::badge>
                     </x-aura::flex>
-                    <x-aura::stack gap="1" class="flex-1">
+                    <x-aura::flex direction="col" gap="1" class="flex-1">
                         <x-aura::heading level="3" size="sm">
                             Change Password &amp; Security PIN
                         </x-aura::heading>
                         <x-aura::text variant="subtle" size="sm">
                             Update login password credentials and configure 4 digit PIN code.
                         </x-aura::text>
-                    </x-aura::stack>
+                    </x-aura::flex>
                     <div class="pt-2 flex items-center justify-between text-xs font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-white dark:group-hover:text-zinc-900 border-t border-zinc-100 dark:border-zinc-800/60 group-hover:border-white/20 dark:group-hover:border-zinc-900/20 transition-colors duration-200">
                         <span>Manage security</span>
                         <div class="w-6 h-6 rounded-full bg-zinc-50 dark:bg-zinc-800/80 group-hover:bg-white dark:group-hover:bg-zinc-900 group-hover:text-zinc-900 dark:group-hover:text-white flex items-center justify-center text-zinc-400 group-hover:translate-x-0.5 transition-all duration-200">
@@ -161,14 +161,14 @@ class extends Component {};
                             </div>
                             <x-aura::badge variant="subtle" size="sm">Preferences</x-aura::badge>
                         </x-aura::flex>
-                        <x-aura::stack gap="1" class="flex-1">
+                        <x-aura::flex direction="col" gap="1" class="flex-1">
                             <x-aura::heading level="3" size="sm">
                                 Account &amp; Workspace Settings
                             </x-aura::heading>
                             <x-aura::text variant="subtle" size="sm">
                                 Configure system preferences, notification alerts, and theme preferences.
                             </x-aura::text>
-                        </x-aura::stack>
+                        </x-aura::flex>
                         <div class="pt-2 flex items-center justify-between text-xs font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-white dark:group-hover:text-zinc-900 border-t border-zinc-100 dark:border-zinc-800/60 group-hover:border-white/20 dark:group-hover:border-zinc-900/20 transition-colors duration-200">
                             <span>Configure</span>
                             <div class="w-6 h-6 rounded-full bg-zinc-50 dark:bg-zinc-800/80 group-hover:bg-white dark:group-hover:bg-zinc-900 group-hover:text-zinc-900 dark:group-hover:text-white flex items-center justify-center text-zinc-400 group-hover:translate-x-0.5 transition-all duration-200">
@@ -179,10 +179,10 @@ class extends Component {};
                 </x-aura::card>
             </div>
         </div>
-    </x-aura::stack>
+    </x-aura::flex>
 
     <!-- 3. System Portals Module Cards (3-Column Grid) -->
-    <x-aura::stack gap="3.5" class="pt-2">
+    <x-aura::flex direction="col" gap="3.5" class="pt-2">
         <div>
             <x-aura::heading level="2" size="sm">System Portals</x-aura::heading>
         </div>
@@ -197,14 +197,14 @@ class extends Component {};
                         </div>
                         <x-aura::badge variant="subtle" size="sm">30+ Ready</x-aura::badge>
                     </x-aura::flex>
-                    <x-aura::stack gap="1" class="flex-1">
+                    <x-aura::flex direction="col" gap="1" class="flex-1">
                         <x-aura::heading level="3" size="sm">
                             Component Directory
                         </x-aura::heading>
                         <x-aura::text variant="subtle" size="sm">
                             Explore and test all interactive Blade &amp; Livewire UI components.
                         </x-aura::text>
-                    </x-aura::stack>
+                    </x-aura::flex>
                     <div class="pt-2 flex items-center justify-between text-xs font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-white dark:group-hover:text-zinc-900 border-t border-zinc-100 dark:border-zinc-800/60 group-hover:border-white/20 dark:group-hover:border-zinc-900/20 transition-colors duration-200">
                         <span>Browse docs</span>
                         <div class="w-6 h-6 rounded-full bg-zinc-50 dark:bg-zinc-800/80 group-hover:bg-white dark:group-hover:bg-zinc-900 group-hover:text-zinc-900 dark:group-hover:text-white flex items-center justify-center text-zinc-400 group-hover:translate-x-0.5 transition-all duration-200">
@@ -223,14 +223,14 @@ class extends Component {};
                         </div>
                         <x-aura::badge variant="neutral" size="sm">Public</x-aura::badge>
                     </x-aura::flex>
-                    <x-aura::stack gap="1" class="flex-1">
+                    <x-aura::flex direction="col" gap="1" class="flex-1">
                         <x-aura::heading level="3" size="sm">
                             Guest Marketing Portal
                         </x-aura::heading>
                         <x-aura::text variant="subtle" size="sm">
                             Preview public landing page layout, feature showcase, and hero section.
                         </x-aura::text>
-                    </x-aura::stack>
+                    </x-aura::flex>
                     <div class="pt-2 flex items-center justify-between text-xs font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-white dark:group-hover:text-zinc-900 border-t border-zinc-100 dark:border-zinc-800/60 group-hover:border-white/20 dark:group-hover:border-zinc-900/20 transition-colors duration-200">
                         <span>Explore portal</span>
                         <div class="w-6 h-6 rounded-full bg-zinc-50 dark:bg-zinc-800/80 group-hover:bg-white dark:group-hover:bg-zinc-900 group-hover:text-zinc-900 dark:group-hover:text-white flex items-center justify-center text-zinc-400 group-hover:translate-x-0.5 transition-all duration-200">
@@ -249,14 +249,14 @@ class extends Component {};
                         </div>
                         <x-aura::badge variant="neutral" size="sm">Admin</x-aura::badge>
                     </x-aura::flex>
-                    <x-aura::stack gap="1" class="flex-1">
+                    <x-aura::flex direction="col" gap="1" class="flex-1">
                         <x-aura::heading level="3" size="sm">
                             Admin Control Console
                         </x-aura::heading>
                         <x-aura::text variant="subtle" size="sm">
                             Access administrative management, system statistics, and user directory table.
                         </x-aura::text>
-                    </x-aura::stack>
+                    </x-aura::flex>
                     <div class="pt-2 flex items-center justify-between text-xs font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-white dark:group-hover:text-zinc-900 border-t border-zinc-100 dark:border-zinc-800/60 group-hover:border-white/20 dark:group-hover:border-zinc-900/20 transition-colors duration-200">
                         <span>Launch console</span>
                         <div class="w-6 h-6 rounded-full bg-zinc-50 dark:bg-zinc-800/80 group-hover:bg-white dark:group-hover:bg-zinc-900 group-hover:text-zinc-900 dark:group-hover:text-white flex items-center justify-center text-zinc-400 group-hover:translate-x-0.5 transition-all duration-200">
@@ -266,6 +266,6 @@ class extends Component {};
                 </div>
             </x-aura::card>
         </div>
-    </x-aura::stack>
+    </x-aura::flex>
 
-</x-aura::stack>
+</x-aura::flex>

@@ -11,10 +11,10 @@ class extends Component {};
 
 ?>
 
-<x-aura::stack gap="10" class="w-full max-w-4xl mx-auto py-2">
+<x-aura::flex direction="col" gap="10" class="w-full max-w-4xl mx-auto py-2">
     <!-- Header -->
     <x-aura::card>
-        <x-aura::stack gap="2" class="max-w-2xl">
+        <x-aura::flex direction="col" gap="2" class="max-w-2xl">
             <x-aura::flex align="center" gap="2.5">
                 <x-aura::kicker>Layout</x-aura::kicker>
                 <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
@@ -23,7 +23,7 @@ class extends Component {};
             <x-aura::subheading size="md">
                 Collapsible vertical navigation sidebars with section groups, active state highlights, and icon items.
             </x-aura::subheading>
-        </x-aura::stack>
+        </x-aura::flex>
     </x-aura::card>
 
     <!-- Component Syntax -->
@@ -69,4 +69,4 @@ class extends Component {};
     <x-aura::sidebar.item href="#">Access Control</x-aura::sidebar.item>
 </x-aura::sidebar.dropdown>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
-</x-aura::stack>
+</x-aura::flex>

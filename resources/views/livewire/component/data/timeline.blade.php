@@ -11,10 +11,10 @@ class extends Component {};
 
 ?>
 
-<x-aura::stack gap="10" class="w-full max-w-4xl mx-auto py-2">
+<x-aura::flex direction="col" gap="10" class="w-full max-w-4xl mx-auto py-2">
     <!-- Header -->
     <x-aura::card>
-        <x-aura::stack gap="2" class="max-w-2xl">
+        <x-aura::flex direction="col" gap="2" class="max-w-2xl">
             <x-aura::flex align="center" gap="2.5">
                 <x-aura::kicker>Data</x-aura::kicker>
                 <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
@@ -23,7 +23,7 @@ class extends Component {};
             <x-aura::subheading size="md">
                 Chronological event history and activity timeline tracker with monochrome status badges, custom icons, and slot content.
             </x-aura::subheading>
-        </x-aura::stack>
+        </x-aura::flex>
     </x-aura::card>
 
     <!-- Component Syntax -->
@@ -112,4 +112,4 @@ class extends Component {};
     </x-aura::timeline.item>
 </x-aura::timeline>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
-</x-aura::stack>
+</x-aura::flex>

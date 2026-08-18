@@ -85,7 +85,6 @@ Volt::route('/components/stepper', 'component.navigation.stepper')->name('compon
 Volt::route('/components/container', 'component.layout.container')->name('component.container');
 Volt::route('/components/flex', 'component.layout.flex')->name('component.flex');
 Volt::route('/components/center', 'component.layout.center')->name('component.center');
-Volt::route('/components/stack', 'component.layout.stack')->name('component.stack');
 Volt::route('/components/body', 'component.layout.body')->name('component.body');
 Volt::route('/components/header', 'component.layout.header')->name('component.header');
 Volt::route('/components/sidebar', 'component.layout.sidebar')->name('component.sidebar');

@@ -11,12 +11,12 @@ class extends Component {};
 
 ?>
 
-<x-aura::stack gap="10" class="w-full max-w-4xl mx-auto py-2">
+<x-aura::flex direction="col" gap="10" class="w-full max-w-4xl mx-auto py-2">
 
     <!-- Header -->
     <x-aura::card>
 
-        <x-aura::stack gap="2" class="max-w-2xl">
+        <x-aura::flex direction="col" gap="2" class="max-w-2xl">
 
             <x-aura::flex align="center" gap="2.5">
 
@@ -32,7 +32,7 @@ class extends Component {};
                 Versatile body typography component supporting semantic color variants, font size scales, custom weights, line clamping, and monospace strings.
             </x-aura::subheading>
 
-        </x-aura::stack>
+        </x-aura::flex>
 
     </x-aura::card>
 
@@ -382,4 +382,4 @@ class extends Component {};
 
     </x-aura::code>
 
-</x-aura::stack>
+</x-aura::flex>

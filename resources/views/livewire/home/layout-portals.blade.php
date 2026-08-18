@@ -6,21 +6,21 @@ new class extends Component {};
 
 ?>
 
-<x-aura::stack gap="12" class="max-w-6xl mx-auto px-4 pt-16 sm:pt-24">
-    <x-aura::stack gap="2" class="text-center max-w-xl mx-auto">
+<x-aura::flex direction="col" gap="12" class="max-w-6xl mx-auto px-4 pt-16 sm:pt-24">
+    <x-aura::flex direction="col" gap="2" class="text-center max-w-xl mx-auto">
         <x-aura::kicker>Layout Architectures</x-aura::kicker>
         <x-aura::heading level="2" size="xl">Application Layouts</x-aura::heading>
         <x-aura::subheading size="md">
             Interactive layout environment templates built with Aura Wire components.
         </x-aura::subheading>
-    </x-aura::stack>
+    </x-aura::flex>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
         <!-- Portal 1: Guest Portal -->
         <div class="flex flex-col justify-between h-full group transition-all duration-300 hover:-translate-y-1">
             <x-aura::card>
-                <x-aura::stack gap="4">
+                <x-aura::flex direction="col" gap="4">
                     <!-- Card Header -->
                     <x-aura::flex align="center" justify="between">
                         <div class="relative group-hover:scale-110 transition-transform duration-300 pointer-events-none">
@@ -59,13 +59,13 @@ new class extends Component {};
                     </div>
 
                     <!-- Info -->
-                    <x-aura::stack gap="1.5">
+                    <x-aura::flex direction="col" gap="1.5">
                         <x-aura::heading level="3" size="sm">Guest</x-aura::heading>
                         <x-aura::text variant="subtle" size="sm">
                             Public facing portal layout for landing pages, marketing features, and authentication screens.
                         </x-aura::text>
-                    </x-aura::stack>
-                </x-aura::stack>
+                    </x-aura::flex>
+                </x-aura::flex>
 
                 <x-slot:footer>
                     <x-aura::button variant="primary" size="md" block="true" href="/guest">
@@ -79,7 +79,7 @@ new class extends Component {};
         <!-- Portal 2: User Workspace -->
         <div class="flex flex-col justify-between h-full group transition-all duration-300 hover:-translate-y-1">
             <x-aura::card>
-                <x-aura::stack gap="4">
+                <x-aura::flex direction="col" gap="4">
                     <!-- Card Header -->
                     <x-aura::flex align="center" justify="between">
                         <div class="relative group-hover:scale-110 transition-transform duration-300 pointer-events-none">
@@ -131,13 +131,13 @@ new class extends Component {};
                     </div>
 
                     <!-- Info -->
-                    <x-aura::stack gap="1.5">
+                    <x-aura::flex direction="col" gap="1.5">
                         <x-aura::heading level="3" size="sm">User</x-aura::heading>
                         <x-aura::text variant="subtle" size="sm">
                             Authenticated member workspace layout featuring a header navbar, status badges, and project metrics.
                         </x-aura::text>
-                    </x-aura::stack>
-                </x-aura::stack>
+                    </x-aura::flex>
+                </x-aura::flex>
 
                 <x-slot:footer>
                     <x-aura::button variant="primary" size="md" block="true" href="/user">
@@ -151,7 +151,7 @@ new class extends Component {};
         <!-- Portal 3: Admin Console -->
         <div class="flex flex-col justify-between h-full group transition-all duration-300 hover:-translate-y-1">
             <x-aura::card>
-                <x-aura::stack gap="4">
+                <x-aura::flex direction="col" gap="4">
                     <!-- Card Header -->
                     <x-aura::flex align="center" justify="between">
                         <div class="relative group-hover:scale-110 transition-transform duration-300 pointer-events-none">
@@ -207,13 +207,13 @@ new class extends Component {};
                     </div>
 
                     <!-- Info -->
-                    <x-aura::stack gap="1.5">
+                    <x-aura::flex direction="col" gap="1.5">
                         <x-aura::heading level="3" size="sm">Admin</x-aura::heading>
                         <x-aura::text variant="subtle" size="sm">
                             System administrator console layout featuring a dedicated sidebar navigation, metrics, and health logs.
                         </x-aura::text>
-                    </x-aura::stack>
-                </x-aura::stack>
+                    </x-aura::flex>
+                </x-aura::flex>
 
                 <x-slot:footer>
                     <x-aura::button variant="primary" size="md" block="true" href="/admin">
@@ -225,4 +225,4 @@ new class extends Component {};
         </div>
 
     </div>
-</x-aura::stack>
+</x-aura::flex>

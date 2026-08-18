@@ -11,7 +11,7 @@ class extends Component {};
 
 ?>
 
-<x-aura::stack gap="10" class="w-full max-w-4xl mx-auto py-2">
+<x-aura::flex direction="col" gap="10" class="w-full max-w-4xl mx-auto py-2">
     <!-- Header Page Intro -->
     <x-aura::card>
         <div class="space-y-4 max-w-2xl">
@@ -175,4 +175,4 @@ class extends Component {};
     </div>
 </x-aura::card>@endverbatim</x-slot:codeSlot>
     </x-aura::code>
-</x-aura::stack>
+</x-aura::flex>
