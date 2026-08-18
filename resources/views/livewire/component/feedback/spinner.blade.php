@@ -6,164 +6,203 @@ use Livewire\Attributes\Title;
 
 new 
 #[Layout('livewire.layout.component')] 
-#[Title('Spinner - Aura Wire')] 
+#[Title('Spinner — Aura Wire')] 
 class extends Component {};
 
 ?>
 
-<x-aura::flex direction="col" gap="10" class="w-full max-w-4xl mx-auto py-2">
+<x-aura::container gap="8" :padding="false">
+
     <!-- Header -->
-    <x-aura::card>
-        <x-aura::flex direction="col" gap="2" class="max-w-2xl">
-            <x-aura::flex align="center" gap="2.5">
-                <x-aura::kicker>Feedback</x-aura::kicker>
-                <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
-            </x-aura::flex>
-            <x-aura::heading level="1" size="xl">Spinner</x-aura::heading>
-            <x-aura::subheading size="md">
-                Animated loading indicators supporting circular rings, bouncing dots, pulsating bars, and radar pings.
-            </x-aura::subheading>
+    <x-aura::card size="full" gap="2">
+
+        <x-aura::flex align="center" gap="2.5">
+
+            <x-aura::kicker>
+                Feedback
+            </x-aura::kicker>
+
+            <x-aura::badge variant="subtle" size="sm">
+                Component
+            </x-aura::badge>
+
         </x-aura::flex>
+
+        <x-aura::heading level="1" size="xl">
+            Spinner
+        </x-aura::heading>
+
+        <x-aura::subheading size="md">
+            Animated loading indicators supporting circular rings, bouncing dots, pulsating bars, and radar pings.
+        </x-aura::subheading>
+
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
-        <x-slot:codeSlot>@verbatim<x-aura::spinner variant="ring" size="md" />@endverbatim</x-slot:codeSlot>
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code">
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::spinner variant="ring" size="md" />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
     </x-aura::code>
 
-    <!-- 1. Spinner Types (Ring, Dots, Bars, Ping) -->
-    <x-aura::code  title="1. Spinner Types (Ring, Dots, Bars, Ping)">
+    <!-- 1. Spinner Types -->
+    <x-aura::code title="1. Spinner Varieties">
+
         <x-slot:preview>
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full text-center">
-                <div class="p-5 rounded-2xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 flex flex-col items-center gap-3">
-                    <x-aura::spinner type="ring" size="lg" variant="primary" />
-                    <span class="text-xs font-bold text-zinc-600 dark:text-zinc-400">Ring (Default)</span>
-                </div>
 
-                <div class="p-5 rounded-2xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 flex flex-col items-center gap-3">
-                    <x-aura::spinner type="dots" size="lg" variant="primary" />
-                    <span class="text-xs font-bold text-zinc-600 dark:text-zinc-400">Bouncing Dots</span>
-                </div>
+            <x-aura::card size="2xl" gap="4">
 
-                <div class="p-5 rounded-2xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 flex flex-col items-center gap-3">
-                    <x-aura::spinner type="bars" size="lg" variant="primary" />
-                    <span class="text-xs font-bold text-zinc-600 dark:text-zinc-400">Equalizer Bars</span>
-                </div>
+                <x-aura::flex align="center" justify="around" class="w-full py-4">
 
-                <div class="p-5 rounded-2xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 flex flex-col items-center gap-3">
-                    <x-aura::spinner type="ping" size="lg" variant="primary" />
-                    <span class="text-xs font-bold text-zinc-600 dark:text-zinc-400">Radar Ping</span>
-                </div>
-            </div>
+                    <x-aura::flex direction="col" align="center" gap="2">
+
+                        <x-aura::spinner type="ring" size="lg" />
+
+                        <x-aura::text size="xs" variant="subtle">
+                            Ring
+                        </x-aura::text>
+
+                    </x-aura::flex>
+
+                    <x-aura::flex direction="col" align="center" gap="2">
+
+                        <x-aura::spinner type="dots" size="lg" />
+
+                        <x-aura::text size="xs" variant="subtle">
+                            Dots
+                        </x-aura::text>
+
+                    </x-aura::flex>
+
+                    <x-aura::flex direction="col" align="center" gap="2">
+
+                        <x-aura::spinner type="bars" size="lg" />
+
+                        <x-aura::text size="xs" variant="subtle">
+                            Bars
+                        </x-aura::text>
+
+                    </x-aura::flex>
+
+                    <x-aura::flex direction="col" align="center" gap="2">
+
+                        <x-aura::spinner type="ping" size="lg" />
+
+                        <x-aura::text size="xs" variant="subtle">
+                            Ping
+                        </x-aura::text>
+
+                    </x-aura::flex>
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<!-- Ring Spinner -->
-<x-aura::spinner type="ring" size="lg" variant="primary" />
 
-<!-- Bouncing Dots Loader -->
-<x-aura::spinner type="dots" variant="primary" />
+        <x-slot:codeSlot>
 
-<!-- Equalizer Bars Loader -->
-<x-aura::spinner type="bars" variant="primary" />
+            @verbatim
+                <x-aura::spinner type="ring" size="lg" />
 
-<!-- Radar Ping Loader -->
-<x-aura::spinner type="ping" size="lg" variant="primary" />@endverbatim</x-slot:codeSlot>
+                <x-aura::spinner type="dots" size="lg" />
+
+                <x-aura::spinner type="bars" size="lg" />
+
+                <x-aura::spinner type="ping" size="lg" />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
     </x-aura::code>
 
-    <!-- 2. Sizes Variety -->
-    <x-aura::code  title="2. Size Varieties (xs, sm, md, lg, xl)">
+    <!-- 2. Sizes -->
+    <x-aura::code title="2. Size Scale">
+
         <x-slot:preview>
-            <div class="flex flex-wrap items-center justify-center gap-6 w-full">
-                <div class="flex flex-col items-center gap-2">
-                    <x-aura::spinner size="xs" />
-                    <span class="text-xs text-zinc-500">xs</span>
-                </div>
-                <div class="flex flex-col items-center gap-2">
-                    <x-aura::spinner size="sm" />
-                    <span class="text-xs text-zinc-500">sm</span>
-                </div>
-                <div class="flex flex-col items-center gap-2">
-                    <x-aura::spinner size="md" />
-                    <span class="text-xs text-zinc-500">md</span>
-                </div>
-                <div class="flex flex-col items-center gap-2">
-                    <x-aura::spinner size="lg" />
-                    <span class="text-xs text-zinc-500">lg</span>
-                </div>
-                <div class="flex flex-col items-center gap-2">
-                    <x-aura::spinner size="xl" />
-                    <span class="text-xs text-zinc-500">xl</span>
-                </div>
-            </div>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex align="center" justify="around" class="w-full py-4">
+
+                    <x-aura::flex direction="col" align="center" gap="2">
+
+                        <x-aura::spinner size="xs" />
+
+                        <x-aura::text size="xs" variant="subtle">
+                            xs
+                        </x-aura::text>
+
+                    </x-aura::flex>
+
+                    <x-aura::flex direction="col" align="center" gap="2">
+
+                        <x-aura::spinner size="sm" />
+
+                        <x-aura::text size="xs" variant="subtle">
+                            sm
+                        </x-aura::text>
+
+                    </x-aura::flex>
+
+                    <x-aura::flex direction="col" align="center" gap="2">
+
+                        <x-aura::spinner size="md" />
+
+                        <x-aura::text size="xs" variant="subtle">
+                            md
+                        </x-aura::text>
+
+                    </x-aura::flex>
+
+                    <x-aura::flex direction="col" align="center" gap="2">
+
+                        <x-aura::spinner size="lg" />
+
+                        <x-aura::text size="xs" variant="subtle">
+                            lg
+                        </x-aura::text>
+
+                    </x-aura::flex>
+
+                    <x-aura::flex direction="col" align="center" gap="2">
+
+                        <x-aura::spinner size="xl" />
+
+                        <x-aura::text size="xs" variant="subtle">
+                            xl
+                        </x-aura::text>
+
+                    </x-aura::flex>
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::spinner size="xs" />
-<x-aura::spinner size="sm" />
-<x-aura::spinner size="md" />
-<x-aura::spinner size="lg" />
-<x-aura::spinner size="xl" />@endverbatim</x-slot:codeSlot>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::spinner size="xs" />
+
+                <x-aura::spinner size="sm" />
+
+                <x-aura::spinner size="md" />
+
+                <x-aura::spinner size="lg" />
+
+                <x-aura::spinner size="xl" />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
     </x-aura::code>
 
-    <!-- 3. Color Varieties -->
-    <x-aura::code  title="3. Color Varieties (Primary, Success, Warning, Danger, White)">
-        <x-slot:preview>
-            <div class="flex flex-wrap items-center justify-center gap-6 w-full">
-                <x-aura::spinner size="md" variant="default" />
-                <x-aura::spinner size="md" variant="primary" />
-                <x-aura::spinner size="md" variant="success" />
-                <x-aura::spinner size="md" variant="warning" />
-                <x-aura::spinner size="md" variant="danger" />
-
-                <div class="px-4 py-2 bg-zinc-900 rounded-xl flex items-center gap-2">
-                    <x-aura::spinner size="md" variant="white" />
-                    <span class="text-xs text-white font-medium">Dark Mode</span>
-                </div>
-            </div>
-        </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::spinner variant="default" />
-<x-aura::spinner variant="primary" />
-<x-aura::spinner variant="success" />
-<x-aura::spinner variant="warning" />
-<x-aura::spinner variant="danger" />
-<x-aura::spinner variant="white" />@endverbatim</x-slot:codeSlot>
-    </x-aura::code>
-
-    <!-- 4. Contextual Button & Card Loading Examples -->
-    <x-aura::code  title="4. Contextual Loading State Examples">
-        <x-slot:preview>
-            <div class="space-y-4 w-full max-w-xl">
-                <div class="flex flex-wrap items-center gap-3">
-                    <x-aura::button variant="primary" size="sm">
-                        <x-aura::spinner size="xs" variant="white" />
-                        Saving Changes...
-                    </x-aura::button>
-
-                    <x-aura::button variant="secondary" size="sm">
-                        <x-aura::spinner type="dots" size="xs" />
-                        Processing Order
-                    </x-aura::button>
-                </div>
-
-                {{-- Overlay Card Loading State --}}
-                <div class="relative p-5 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-2xs">
-                    <div class="flex items-center justify-between gap-4">
-                        <div class="space-y-0.5 min-w-0">
-                            <h4 class="text-sm font-bold text-zinc-900 dark:text-white">Monthly Analytics Sync</h4>
-                            <p class="text-xs text-zinc-500">Fetching latest event logs from server...</p>
-                        </div>
-                        <x-aura::spinner size="md" variant="primary" />
-                    </div>
-                </div>
-            </div>
-        </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<!-- Button with Ring Spinner -->
-<x-aura::button variant="primary" size="sm">
-    <x-aura::spinner size="xs" variant="white" />
-    Saving Changes...
-</x-aura::button>
-
-<!-- Button with Bouncing Dots -->
-<x-aura::button variant="secondary" size="sm">
-    <x-aura::spinner type="dots" size="xs" />
-    Processing Order
-</x-aura::button>@endverbatim</x-slot:codeSlot>
-    </x-aura::code>
-</x-aura::flex>
+</x-aura::container>

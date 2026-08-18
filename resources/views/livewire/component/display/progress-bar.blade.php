@@ -6,96 +6,126 @@ use Livewire\Attributes\Title;
 
 new 
 #[Layout('livewire.layout.component')] 
-#[Title('Progress Bar - Aura Wire')] 
+#[Title('Progress Bar — Aura Wire')] 
 class extends Component {};
 
 ?>
 
-<x-aura::flex direction="col" gap="10" class="w-full max-w-4xl mx-auto py-2">
+<x-aura::container gap="8" :padding="false">
+
     <!-- Header -->
-    <x-aura::card>
-        <x-aura::flex direction="col" gap="2" class="max-w-2xl">
-            <x-aura::flex align="center" gap="2.5">
-                <x-aura::kicker>Display</x-aura::kicker>
-                <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
-            </x-aura::flex>
-            <x-aura::heading level="1" size="xl">Progress Bar</x-aura::heading>
-            <x-aura::subheading size="md">
-                Visual progress indicators for file uploads, storage quota limits, onboarding steps, and system metrics.
-            </x-aura::subheading>
+    <x-aura::card size="full" gap="2">
+
+        <x-aura::flex align="center" gap="2.5">
+
+            <x-aura::kicker>
+                Display
+            </x-aura::kicker>
+
+            <x-aura::badge variant="subtle" size="sm">
+                Component
+            </x-aura::badge>
+
         </x-aura::flex>
+
+        <x-aura::heading level="1" size="xl">
+            Progress Bar
+        </x-aura::heading>
+
+        <x-aura::subheading size="md">
+            Visual progress indicators for file uploads, storage quota limits, and system metrics.
+        </x-aura::subheading>
+
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
-        <x-slot:codeSlot>@verbatim<x-aura::progress-bar :value="75" variant="primary" size="md" />@endverbatim</x-slot:codeSlot>
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code">
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::progress-bar percent="75" size="md" />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
     </x-aura::code>
 
-    <!-- 1. Color Variants -->
-    <x-aura::code  title="1. Color & Intent Variants">
+    <!-- 1. Progress Scale -->
+    <x-aura::code title="1. Progress Scale">
+
         <x-slot:preview>
-            <div class="w-full max-w-lg space-y-6">
-                <div>
-                    <div class="flex justify-between text-xs font-semibold mb-1">
-                        <span>Profile Completion (Default)</span>
-                        <span class="font-mono">75%</span>
-                    </div>
-                    <x-aura::progress-bar percent="75" variant="default" size="md" />
-                </div>
 
-                <div>
-                    <div class="flex justify-between text-xs font-semibold mb-1">
-                        <span>Database Sync (Emerald / Success)</span>
-                        <span class="font-mono text-emerald-600 dark:text-emerald-400">100%</span>
-                    </div>
-                    <x-aura::progress-bar percent="100" variant="emerald" size="md" />
-                </div>
+            <x-aura::card size="2xl" gap="4">
 
-                <div>
-                    <div class="flex justify-between text-xs font-semibold mb-1">
-                        <span>Storage Warning (Amber)</span>
-                        <span class="font-mono text-amber-600 dark:text-amber-400">85%</span>
-                    </div>
-                    <x-aura::progress-bar percent="85" variant="amber" size="md" />
-                </div>
+                <x-aura::flex direction="col" align="stretch" class="w-full" gap="4">
 
-                <div>
-                    <div class="flex justify-between text-xs font-semibold mb-1">
-                        <span>CPU Quota Exceeded (Danger / Red)</span>
-                        <span class="font-mono text-red-600 dark:text-red-400">96%</span>
-                    </div>
-                    <x-aura::progress-bar percent="96" variant="danger" size="md" />
-                </div>
-            </div>
+                    <x-aura::flex direction="col" align="stretch" gap="1">
+
+                        <x-aura::flex align="center" justify="between" class="w-full">
+
+                            <x-aura::text size="sm" weight="medium">
+                                Profile Completion
+                            </x-aura::text>
+
+                            <x-aura::text size="sm" variant="mono" weight="bold">
+                                75%
+                            </x-aura::text>
+
+                        </x-aura::flex>
+
+                        <x-aura::progress-bar percent="75" size="md" />
+
+                    </x-aura::flex>
+
+                    <x-aura::flex direction="col" align="stretch" gap="1">
+
+                        <x-aura::flex align="center" justify="between" class="w-full">
+
+                            <x-aura::text size="sm" weight="medium">
+                                Storage Quota
+                            </x-aura::text>
+
+                            <x-aura::text size="sm" variant="mono" weight="bold">
+                                40%
+                            </x-aura::text>
+
+                        </x-aura::flex>
+
+                        <x-aura::progress-bar percent="40" size="md" />
+
+                    </x-aura::flex>
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::progress-bar percent="75" variant="default" size="md" />
-<x-aura::progress-bar percent="100" variant="emerald" size="md" />
-<x-aura::progress-bar percent="85" variant="amber" size="md" />
-<x-aura::progress-bar percent="96" variant="danger" size="md" />@endverbatim</x-slot:codeSlot>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::flex direction="col" align="stretch" gap="1">
+
+                    <x-aura::flex align="center" justify="between" class="w-full">
+
+                        <x-aura::text size="sm" weight="medium">
+                            Profile Completion
+                        </x-aura::text>
+
+                        <x-aura::text size="sm" variant="mono" weight="bold">
+                            75%
+                        </x-aura::text>
+
+                    </x-aura::flex>
+
+                    <x-aura::progress-bar percent="75" size="md" />
+
+                </x-aura::flex>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
     </x-aura::code>
 
-    <!-- 2. Sizes -->
-    <x-aura::code  title="2. Progress Bar Sizes (sm, md, lg)">
-        <x-slot:preview>
-            <div class="w-full max-w-lg space-y-6">
-                <div>
-                    <span class="text-xs text-zinc-500 block mb-1">Small (sm)</span>
-                    <x-aura::progress-bar percent="40" size="sm" />
-                </div>
-
-                <div>
-                    <span class="text-xs text-zinc-500 block mb-1">Medium (md)</span>
-                    <x-aura::progress-bar percent="65" size="md" />
-                </div>
-
-                <div>
-                    <span class="text-xs text-zinc-500 block mb-1">Large (lg)</span>
-                    <x-aura::progress-bar percent="85" size="lg" />
-                </div>
-            </div>
-        </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::progress-bar percent="40" size="sm" />
-<x-aura::progress-bar percent="65" size="md" />
-<x-aura::progress-bar percent="85" size="lg" />@endverbatim</x-slot:codeSlot>
-    </x-aura::code>
-</x-aura::flex>
+</x-aura::container>

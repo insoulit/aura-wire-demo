@@ -6,65 +6,84 @@ use Livewire\Attributes\Title;
 
 new 
 #[Layout('livewire.layout.component')] 
-#[Title('Main - Aura Wire')] 
+#[Title('Main — Aura Wire')] 
 class extends Component {};
 
 ?>
 
-<x-aura::flex direction="col" gap="10" class="w-full max-w-4xl mx-auto py-2">
+<x-aura::container gap="8" :padding="false">
+
     <!-- Header -->
-    <x-aura::card>
-        <x-aura::flex direction="col" gap="2" class="max-w-2xl">
-            <x-aura::flex align="center" gap="2.5">
-                <x-aura::kicker>Layout</x-aura::kicker>
-                <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
-            </x-aura::flex>
-            <x-aura::heading level="1" size="xl">Main</x-aura::heading>
-            <x-aura::subheading size="md">
-                Main container layout area enforcing consistent padding, max-width boundary, and configurable X and Y axis alignment options (defaults to centered).
-            </x-aura::subheading>
+    <x-aura::card size="full" gap="2">
+
+        <x-aura::flex align="center" gap="2.5">
+
+            <x-aura::kicker>
+                Layout
+            </x-aura::kicker>
+
+            <x-aura::badge variant="subtle" size="sm">
+                Component
+            </x-aura::badge>
+
         </x-aura::flex>
+
+        <x-aura::heading level="1" size="xl">
+            Main
+        </x-aura::heading>
+
+        <x-aura::subheading size="md">
+            Main container layout area enforcing consistent padding, max width boundary, and configurable X and Y axis alignment options.
+        </x-aura::subheading>
+
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
-        <x-slot:codeSlot>@verbatim<x-aura::main alignX="center" alignY="center">Main content</x-aura::main>@endverbatim</x-slot:codeSlot>
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code">
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::main alignX="center" alignY="center">
+                    <!-- Main content -->
+                </x-aura::main>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
     </x-aura::code>
 
     <!-- 1. Default Centered Alignment -->
-    <x-aura::code  title="1. Default Centered Alignment (alignX='center' alignY='center')">
+    <x-aura::code title="1. Centered Alignment">
+
         <x-slot:preview>
-            <div class="w-full border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-100 dark:bg-zinc-950 p-4 h-48 flex">
-                <x-aura::main alignX="center" alignY="center">
-                    <x-aura::text size="sm">Centered Content (X &amp; Y)</x-aura::text>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::main alignX="center" alignY="center" :container="false">
+
+                    <x-aura::text size="sm">
+                        Centered Content (X and Y)
+                    </x-aura::text>
+
                 </x-aura::main>
-            </div>
+
+            </x-aura::card>
+
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::main alignX="center" alignY="center">
-    <x-aura::text size="sm">Centered content...</x-aura::text>
-</x-aura::main>@endverbatim</x-slot:codeSlot>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::main alignX="center" alignY="center">
+                    <x-aura::text size="sm">
+                        Centered Content (X and Y)
+                    </x-aura::text>
+                </x-aura::main>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
     </x-aura::code>
 
-    <!-- 2. Alignment Options -->
-    <x-aura::code  title="2. Custom X and Y Alignments (start, center, end)">
-        <x-slot:preview>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
-                <div class="border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-100 dark:bg-zinc-950 p-4 h-36 flex">
-                    <x-aura::main alignX="start" alignY="start" :container="false">
-                        <x-aura::badge variant="neutral">alignX="start" alignY="start"</x-aura::badge>
-                    </x-aura::main>
-                </div>
-                <div class="border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-100 dark:bg-zinc-950 p-4 h-36 flex">
-                    <x-aura::main alignX="end" alignY="end" :container="false">
-                        <x-aura::badge variant="primary">alignX="end" alignY="end"</x-aura::badge>
-                    </x-aura::main>
-                </div>
-            </div>
-        </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<!-- Top Left Alignment -->
-<x-aura::main alignX="start" alignY="start"> ... </x-aura::main>
-
-<!-- Bottom Right Alignment -->
-<x-aura::main alignX="end" alignY="end"> ... </x-aura::main>@endverbatim</x-slot:codeSlot>
-    </x-aura::code>
-</x-aura::flex>
+</x-aura::container>

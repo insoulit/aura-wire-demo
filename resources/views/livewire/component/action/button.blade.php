@@ -6,226 +6,409 @@ use Livewire\Attributes\Title;
 
 new 
 #[Layout('livewire.layout.component')] 
-#[Title('Button - Aura Wire')] 
+#[Title('Button — Aura Wire')] 
 class extends Component {};
 
 ?>
 
-<x-aura::flex direction="col" gap="10" class="w-full max-w-4xl mx-auto py-2">
+<x-aura::container gap="8" :padding="false">
+
     <!-- Header -->
-    <x-aura::card>
-        <x-aura::flex direction="col" gap="2" class="max-w-2xl">
-            <x-aura::flex align="center" gap="2.5">
-                <x-aura::kicker>Action</x-aura::kicker>
-                <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
-            </x-aura::flex>
-            <x-aura::heading level="1" size="xl">Button</x-aura::heading>
-            <x-aura::subheading size="md">
-                Versatile pill and circular square buttons for triggers, form submissions, icon actions, and interactive layout.
-            </x-aura::subheading>
+    <x-aura::card size="full" gap="2">
+
+        <x-aura::flex align="center" gap="2.5">
+
+            <x-aura::kicker>
+                Action
+            </x-aura::kicker>
+
+            <x-aura::badge variant="subtle" size="sm">
+                Component
+            </x-aura::badge>
+
         </x-aura::flex>
+
+        <x-aura::heading level="1" size="xl">
+            Button
+        </x-aura::heading>
+
+        <x-aura::subheading size="md">
+            Versatile interactive button component supporting semantic variants, size scales, leading and trailing icons, and loading states.
+        </x-aura::subheading>
+
     </x-aura::card>
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code">
-        <x-slot:codeSlot>@verbatim<x-aura::button variant="primary" size="md" icon="sparkles">Action</x-aura::button>@endverbatim</x-slot:codeSlot>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::button variant="primary" size="md">
+                    Create
+                </x-aura::button>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
     </x-aura::code>
 
     <!-- 1. Variants -->
     <x-aura::code title="1. Button Variants">
+
         <x-slot:preview>
-            <div class="flex flex-wrap items-center gap-3">
-                <x-aura::button variant="primary">Primary</x-aura::button>
-                <x-aura::button variant="secondary">Secondary</x-aura::button>
-                <x-aura::button variant="filled">Filled</x-aura::button>
-                <x-aura::button variant="subtle">Subtle</x-aura::button>
-                <x-aura::button variant="outline">Outline</x-aura::button>
-                <x-aura::button variant="ghost">Ghost</x-aura::button>
-                <x-aura::button variant="danger">Danger</x-aura::button>
-                <x-aura::button variant="link" href="#">Link</x-aura::button>
-            </div>
+
+            <x-aura::flex align="center" gap="3" class="flex-wrap">
+
+                <x-aura::button variant="primary">
+                    Primary
+                </x-aura::button>
+
+                <x-aura::button variant="secondary">
+                    Secondary
+                </x-aura::button>
+
+                <x-aura::button variant="filled">
+                    Filled
+                </x-aura::button>
+
+                <x-aura::button variant="subtle">
+                    Subtle
+                </x-aura::button>
+
+                <x-aura::button variant="outline">
+                    Outline
+                </x-aura::button>
+
+                <x-aura::button variant="ghost">
+                    Ghost
+                </x-aura::button>
+
+                <x-aura::button variant="danger">
+                    Danger
+                </x-aura::button>
+
+                <x-aura::button variant="link" href="#">
+                    Link
+                </x-aura::button>
+
+            </x-aura::flex>
+
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::button variant="primary">Primary</x-aura::button>
-<x-aura::button variant="secondary">Secondary</x-aura::button>
-<x-aura::button variant="filled">Filled</x-aura::button>
-<x-aura::button variant="subtle">Subtle</x-aura::button>
-<x-aura::button variant="outline">Outline</x-aura::button>
-<x-aura::button variant="ghost">Ghost</x-aura::button>
-<x-aura::button variant="danger">Danger</x-aura::button>
-<x-aura::button variant="link" href="#">Link</x-aura::button>@endverbatim</x-slot:codeSlot>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::button variant="primary">
+                    Primary
+                </x-aura::button>
+
+                <x-aura::button variant="secondary">
+                    Secondary
+                </x-aura::button>
+
+                <x-aura::button variant="filled">
+                    Filled
+                </x-aura::button>
+
+                <x-aura::button variant="subtle">
+                    Subtle
+                </x-aura::button>
+
+                <x-aura::button variant="outline">
+                    Outline
+                </x-aura::button>
+
+                <x-aura::button variant="ghost">
+                    Ghost
+                </x-aura::button>
+
+                <x-aura::button variant="danger">
+                    Danger
+                </x-aura::button>
+
+                <x-aura::button variant="link" href="#">
+                    Link
+                </x-aura::button>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
     </x-aura::code>
 
     <!-- 2. Sizes -->
-    <x-aura::code title="2. Button Sizes (xs, sm, md, lg)">
+    <x-aura::code title="2. Button Sizes">
+
         <x-slot:preview>
-            <div class="flex flex-wrap items-center gap-3">
-                <x-aura::button variant="primary" size="xs">Extra Small (xs)</x-aura::button>
-                <x-aura::button variant="primary" size="sm">Small (sm)</x-aura::button>
-                <x-aura::button variant="primary" size="md">Medium (md)</x-aura::button>
-                <x-aura::button variant="primary" size="lg">Large (lg)</x-aura::button>
-            </div>
+
+            <x-aura::flex align="center" gap="3" class="flex-wrap">
+
+                <x-aura::button variant="primary" size="xs">
+                    Create
+                </x-aura::button>
+
+                <x-aura::button variant="primary" size="sm">
+                    Create
+                </x-aura::button>
+
+                <x-aura::button variant="primary" size="md">
+                    Create
+                </x-aura::button>
+
+                <x-aura::button variant="primary" size="lg">
+                    Create
+                </x-aura::button>
+
+            </x-aura::flex>
+
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::button variant="primary" size="xs">Extra Small (xs)</x-aura::button>
-<x-aura::button variant="primary" size="sm">Small (sm)</x-aura::button>
-<x-aura::button variant="primary" size="md">Medium (md)</x-aura::button>
-<x-aura::button variant="primary" size="lg">Large (lg)</x-aura::button>@endverbatim</x-slot:codeSlot>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::button variant="primary" size="xs">
+                    Create
+                </x-aura::button>
+
+                <x-aura::button variant="primary" size="sm">
+                    Create
+                </x-aura::button>
+
+                <x-aura::button variant="primary" size="md">
+                    Create
+                </x-aura::button>
+
+                <x-aura::button variant="primary" size="lg">
+                    Create
+                </x-aura::button>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
     </x-aura::code>
 
-    <!-- 3. Leading & Trailing Icons -->
+    <!-- 3. Leading and Trailing Icons -->
     <x-aura::code title="3. Buttons with Icons">
+
         <x-slot:preview>
-            <div class="flex flex-wrap items-center gap-3">
+
+            <x-aura::flex align="center" gap="3" class="flex-wrap">
+
                 <x-aura::button variant="primary" icon="plus">
                     Create
                 </x-aura::button>
 
                 <x-aura::button variant="secondary" icon-trailing="download">
-                    Download Report
+                    Export
                 </x-aura::button>
 
                 <x-aura::button variant="outline" icon="pencil">
-                    Edit Document
+                    Edit
                 </x-aura::button>
 
                 <x-aura::button variant="danger" icon="trash-2">
-                    Delete File
+                    Delete
                 </x-aura::button>
-            </div>
+
+            </x-aura::flex>
+
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::button variant="primary" icon="plus">
-    Create
-</x-aura::button>
 
-<x-aura::button variant="secondary" icon-trailing="download">
-    Download Report
-</x-aura::button>
+        <x-slot:codeSlot>
 
-<x-aura::button variant="outline" icon="pencil">
-    Edit Document
-</x-aura::button>
+            @verbatim
+                <x-aura::button variant="primary" icon="plus">
+                    Create
+                </x-aura::button>
 
-<x-aura::button variant="danger" icon="trash-2">
-    Delete File
-</x-aura::button>@endverbatim</x-slot:codeSlot>
+                <x-aura::button variant="secondary" icon-trailing="download">
+                    Export
+                </x-aura::button>
+
+                <x-aura::button variant="outline" icon="pencil">
+                    Edit
+                </x-aura::button>
+
+                <x-aura::button variant="danger" icon="trash-2">
+                    Delete
+                </x-aura::button>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
     </x-aura::code>
 
-    <!-- 4. Pill & Circular Buttons -->
-    <x-aura::code title="4. Pill & Circular Buttons">
+    <!-- 4. Pill Buttons -->
+    <x-aura::code title="4. Pill Shape Buttons">
+
         <x-slot:preview>
-            <div class="flex flex-wrap items-center gap-3">
-                <x-aura::button variant="primary" pill>Pill Primary</x-aura::button>
-                <x-aura::button variant="secondary" pill icon="sparkles">Pill with Icon</x-aura::button>
-                <x-aura::button variant="outline" pill icon-trailing="arrow-right">Explore</x-aura::button>
-                <x-aura::button variant="primary" square pill icon="plus" />
-                <x-aura::button variant="secondary" square pill icon="heart" />
-                <x-aura::icon-button variant="primary" shape="circle" icon="bell" />
-                <x-aura::icon-button variant="subtle" shape="circle" icon="user" />
-            </div>
+
+            <x-aura::flex align="center" gap="3" class="flex-wrap">
+
+                <x-aura::button variant="primary" pill>
+                    Create
+                </x-aura::button>
+
+                <x-aura::button variant="secondary" pill icon="sparkles">
+                    Explore
+                </x-aura::button>
+
+                <x-aura::button variant="outline" pill icon-trailing="arrow-right">
+                    Continue
+                </x-aura::button>
+
+            </x-aura::flex>
+
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::button variant="primary" pill>Pill Primary</x-aura::button>
-<x-aura::button variant="secondary" pill icon="sparkles">Pill with Icon</x-aura::button>
-<x-aura::button variant="outline" pill icon-trailing="arrow-right">Explore</x-aura::button>
-<x-aura::button variant="primary" square pill icon="plus" />
-<x-aura::button variant="secondary" square pill icon="heart" />
-<x-aura::icon-button variant="primary" shape="circle" icon="bell" />
-<x-aura::icon-button variant="subtle" shape="circle" icon="user" />@endverbatim</x-slot:codeSlot>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::button variant="primary" pill>
+                    Create
+                </x-aura::button>
+
+                <x-aura::button variant="secondary" pill icon="sparkles">
+                    Explore
+                </x-aura::button>
+
+                <x-aura::button variant="outline" pill icon-trailing="arrow-right">
+                    Continue
+                </x-aura::button>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
     </x-aura::code>
 
-    <!-- 5. Square Icon Buttons -->
-    <x-aura::code title="5. Square Icon Buttons">
+    <!-- 5. Disabled and Loading States -->
+    <x-aura::code title="5. Disabled and Loading States">
+
         <x-slot:preview>
-            <div class="flex flex-wrap items-center gap-3">
-                <x-aura::button variant="primary" square size="xs" icon="pencil" />
-                <x-aura::button variant="secondary" square size="sm" icon="eye" />
-                <x-aura::button variant="outline" square size="md" icon="pencil" />
-                <x-aura::button variant="danger" square size="lg" icon="trash-2" />
-            </div>
+
+            <x-aura::flex align="center" gap="3" class="flex-wrap">
+
+                <x-aura::button variant="primary" disabled>
+                    Save
+                </x-aura::button>
+
+                <x-aura::button variant="secondary" disabled>
+                    Cancel
+                </x-aura::button>
+
+                <x-aura::button variant="primary" :loading="true">
+                    Saving
+                </x-aura::button>
+
+                <x-aura::button variant="outline" :loading="true">
+                    Syncing
+                </x-aura::button>
+
+            </x-aura::flex>
+
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::button variant="primary" square size="xs" icon="pencil" />
-<x-aura::button variant="secondary" square size="sm" icon="eye" />
-<x-aura::button variant="outline" square size="md" icon="pencil" />
-<x-aura::button variant="danger" square size="lg" icon="trash-2" />@endverbatim</x-slot:codeSlot>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::button variant="primary" disabled>
+                    Save
+                </x-aura::button>
+
+                <x-aura::button variant="secondary" disabled>
+                    Cancel
+                </x-aura::button>
+
+                <x-aura::button variant="primary" :loading="true">
+                    Saving
+                </x-aura::button>
+
+                <x-aura::button variant="outline" :loading="true">
+                    Syncing
+                </x-aura::button>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
     </x-aura::code>
 
-    <!-- 6. Disabled & Loading States -->
-    <x-aura::code title="6. Disabled & Loading States">
+    <!-- 6. Real World Action Card Pattern -->
+    <x-aura::code title="6. Real World Action Card Pattern">
+
         <x-slot:preview>
-            <div class="flex flex-wrap items-center gap-3">
-                <x-aura::button variant="primary" disabled>Primary Disabled</x-aura::button>
-                <x-aura::button variant="secondary" disabled>Secondary Disabled</x-aura::button>
-                <x-aura::button variant="primary" :loading="true">Processing...</x-aura::button>
-                <x-aura::button variant="outline" :loading="true">Syncing Data</x-aura::button>
-            </div>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex align="center" justify="between" class="w-full">
+
+                    <x-aura::flex direction="col" align="start" gap="1">
+
+                        <x-aura::heading level="3" size="sm">
+                            Unsaved Changes
+                        </x-aura::heading>
+
+                        <x-aura::text size="sm" variant="subtle">
+                            You have pending configuration updates waiting to be applied.
+                        </x-aura::text>
+
+                    </x-aura::flex>
+
+                    <x-aura::flex align="center" gap="2">
+
+                        <x-aura::button variant="secondary" size="sm">
+                            Cancel
+                        </x-aura::button>
+
+                        <x-aura::button variant="primary" size="sm">
+                            Save
+                        </x-aura::button>
+
+                    </x-aura::flex>
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::button variant="primary" disabled>Primary Disabled</x-aura::button>
-<x-aura::button variant="secondary" disabled>Secondary Disabled</x-aura::button>
-<x-aura::button variant="primary" :loading="true">Processing...</x-aura::button>
-<x-aura::button variant="outline" :loading="true">Syncing Data</x-aura::button>@endverbatim</x-slot:codeSlot>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::card size="2xl" gap="4">
+
+                    <x-aura::flex align="center" justify="between" class="w-full">
+
+                        <x-aura::flex direction="col" align="start" gap="1">
+
+                            <x-aura::heading level="3" size="sm">
+                                Unsaved Changes
+                            </x-aura::heading>
+
+                            <x-aura::text size="sm" variant="subtle">
+                                You have pending configuration updates waiting to be applied.
+                            </x-aura::text>
+
+                        </x-aura::flex>
+
+                        <x-aura::flex align="center" gap="2">
+
+                            <x-aura::button variant="secondary" size="sm">
+                                Cancel
+                            </x-aura::button>
+
+                            <x-aura::button variant="primary" size="sm">
+                                Save
+                            </x-aura::button>
+
+                        </x-aura::flex>
+
+                    </x-aura::flex>
+
+                </x-aura::card>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
     </x-aura::code>
 
-    <!-- 7. Real World Action Card Patterns -->
-    <x-aura::code title="7. Real World Action Card Patterns">
-        <x-slot:preview>
-            <div class="w-full space-y-4">
-                <!-- Save / Cancel Toolbar -->
-                <div class="p-4 bg-zinc-50/80 dark:bg-zinc-900/60 rounded-2xl border border-zinc-200 dark:border-zinc-800">
-                    <x-aura::card>
-                        <div class="flex items-center justify-between gap-4">
-                            <div>
-                                <p class="text-sm font-semibold text-zinc-900 dark:text-white">Unsaved Changes</p>
-                                <p class="text-xs text-zinc-500">You have unsaved form modifications.</p>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <x-aura::button variant="secondary" size="sm">Cancel</x-aura::button>
-                                <x-aura::button variant="primary" size="sm">Save Changes</x-aura::button>
-                            </div>
-                        </div>
-                    </x-aura::card>
-                </div>
-
-                <!-- Destructive Confirm Action Bar -->
-                <div class="p-4 rounded-xl border border-red-200 dark:border-red-900/50 bg-red-50/50 dark:bg-red-950/20 flex items-center justify-between gap-4">
-                    <div class="flex items-center gap-3">
-                        <span class="p-2 rounded-lg bg-red-100 dark:bg-red-900/50 text-red-600 dark:text-red-400">
-                            <x-aura::icon name="trash-2" size="sm" />
-                        </span>
-                        <div>
-                            <p class="text-sm font-semibold text-red-900 dark:text-red-200">Delete Organization</p>
-                            <p class="text-xs text-red-700 dark:text-red-400">This operation cannot be undone.</p>
-                        </div>
-                    </div>
-                    <x-aura::button variant="danger" size="sm">Permanently Delete</x-aura::button>
-                </div>
-            </div>
-        </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<!-- Save / Cancel Toolbar -->
-<div class="p-4 bg-zinc-50/80 dark:bg-zinc-900/60 rounded-2xl border border-zinc-200 dark:border-zinc-800">
-    <x-aura::card>
-        <div class="flex items-center justify-between gap-4">
-            <div>
-                <p class="text-sm font-semibold text-zinc-900 dark:text-white">Unsaved Changes</p>
-                <p class="text-xs text-zinc-500">You have unsaved form modifications.</p>
-            </div>
-            <div class="flex items-center gap-2">
-                <x-aura::button variant="secondary" size="sm">Cancel</x-aura::button>
-                <x-aura::button variant="primary" size="sm">Save Changes</x-aura::button>
-            </div>
-        </div>
-    </x-aura::card>
-</div>
-
-<!-- Destructive Confirm Action Bar -->
-<div class="p-4 rounded-xl border border-red-200 dark:border-red-900/50 bg-red-50/50 dark:bg-red-950/20 flex items-center justify-between gap-4">
-    <div class="flex items-center gap-3">
-        <span class="p-2 rounded-lg bg-red-100 dark:bg-red-900/50 text-red-600 dark:text-red-400">
-            <x-aura::icon name="trash-2" size="sm" />
-        </span>
-        <div>
-            <p class="text-sm font-semibold text-red-900 dark:text-red-200">Delete Organization</p>
-            <p class="text-xs text-red-700 dark:text-red-400">This operation cannot be undone.</p>
-        </div>
-    </div>
-    <x-aura::button variant="danger" size="sm">Permanently Delete</x-aura::button>
-</div>@endverbatim</x-slot:codeSlot>
-    </x-aura::code>
-</x-aura::flex>
+</x-aura::container>

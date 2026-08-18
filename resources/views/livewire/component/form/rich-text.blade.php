@@ -6,88 +6,78 @@ use Livewire\Attributes\Title;
 
 new 
 #[Layout('livewire.layout.component')] 
-#[Title('Rich Text - Aura Wire')] 
+#[Title('Rich Text — Aura Wire')] 
 class extends Component {
-    public string $content = '<h3>Welcome to Aura Wire Rich Text</h3><p>This is a <strong>rich text editor</strong> built directly into the component package. It supports <em>formatting</em>, lists, headings, blockquotes, and links with <code>wire:model</code> reactivity!</p><ul><li>Zero external dependencies</li><li>Full dark mode support</li><li>Seamless Livewire &amp; Alpine.js integration</li></ul>';
-    public string $compactContent = '<p>Quick feedback or comment here...</p>';
+    public string $content = '<h3>Welcome to Aura Wire</h3><p>This is a <strong>rich text editor</strong> built directly into the component package.</p>';
 };
 
 ?>
 
-<x-aura::flex direction="col" gap="10" class="w-full max-w-4xl mx-auto py-2">
+<x-aura::container gap="8" :padding="false">
+
     <!-- Header -->
-    <x-aura::card>
-        <x-aura::flex direction="col" gap="2" class="max-w-2xl">
-            <x-aura::flex align="center" gap="2.5">
-                <x-aura::kicker>Form Controls</x-aura::kicker>
-                <x-aura::badge variant="subtle" size="sm">Component</x-aura::badge>
-            </x-aura::flex>
-            <x-aura::heading level="1" size="xl">Rich Text Editor</x-aura::heading>
-            <x-aura::subheading size="md">
-                WYSIWYG rich text editor component with interactive formatting toolbar, live HTML output, Livewire entangle reactivity, and word counter.
-            </x-aura::subheading>
+    <x-aura::card size="full" gap="2">
+
+        <x-aura::flex align="center" gap="2.5">
+
+            <x-aura::kicker>
+                Form
+            </x-aura::kicker>
+
+            <x-aura::badge variant="subtle" size="sm">
+                Component
+            </x-aura::badge>
+
         </x-aura::flex>
+
+        <x-aura::heading level="1" size="xl">
+            Rich Text Editor
+        </x-aura::heading>
+
+        <x-aura::subheading size="md">
+            WYSIWYG rich text editor component with interactive formatting toolbar, live HTML output, and Livewire reactivity.
+        </x-aura::subheading>
+
     </x-aura::card>
 
     <!-- Component Syntax -->
-    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code" >
-        <x-slot:codeSlot>@verbatim<x-aura::rich-text wire:model="content" label="Article Body" placeholder="Write content..." />@endverbatim</x-slot:codeSlot>
+    <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code">
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::rich-text wire:model="content" placeholder="Write content..." />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
     </x-aura::code>
 
     <!-- 1. Interactive Livewire Bindings -->
-    <x-aura::code  title="1. Interactive Livewire Model Binding">
+    <x-aura::code title="1. Rich Text Editor">
+
         <x-slot:preview>
-            <div class="w-full space-y-4">
-                <x-aura::field label="Article Body" hint="Format article content using the rich text toolbar">
-                    <x-aura::rich-text wire:model="content" placeholder="Start typing article..." :showCount="true" minHeight="200px" />
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::field label="Article Body" hint="Format article content using the toolbar">
+                    <x-aura::rich-text wire:model="content" placeholder="Start typing..." :showCount="true" minHeight="200px" />
                 </x-aura::field>
 
-                <!-- HTML Output Preview -->
-                <div class="p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900/60 space-y-2">
-                    <div class="flex items-center justify-between">
-                        <span class="text-xs font-semibold text-zinc-500 uppercase tracking-wider">Live Bound HTML Output</span>
-                        <x-aura::badge variant="neutral" size="sm">Reactive Output</x-aura::badge>
-                    </div>
-                    <div class="p-3 rounded-lg bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 text-xs font-mono text-zinc-700 dark:text-zinc-300 overflow-x-auto max-h-40">
-                        {{ $content }}
-                    </div>
-                </div>
-            </div>
+            </x-aura::card>
+
         </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::field label="Article Body">
-    <x-aura::rich-text wire:model="content" placeholder="Start typing..." :showCount="true" minHeight="200px" />
-</x-aura::field>@endverbatim</x-slot:codeSlot>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::field label="Article Body" hint="Format article content using the toolbar">
+                    <x-aura::rich-text wire:model="content" placeholder="Start typing..." :showCount="true" minHeight="200px" />
+                </x-aura::field>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
     </x-aura::code>
 
-    <!-- 2. Toolbar Variants & Compact Mode -->
-    <x-aura::code  title="2. Compact Toolbar Mode">
-        <x-slot:preview>
-            <div class="w-full space-y-4">
-                <x-aura::field label="Quick Comment" hint="Simplified toolbar for comments and quick notes">
-                    <x-aura::rich-text wire:model="compactContent" toolbar="compact" minHeight="120px" placeholder="Write a comment..." />
-                </x-aura::field>
-            </div>
-        </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<x-aura::rich-text wire:model="comment" toolbar="compact" minHeight="120px" placeholder="Write a comment..." />@endverbatim</x-slot:codeSlot>
-    </x-aura::code>
-
-    <!-- 3. Validation Error & Disabled States -->
-    <x-aura::code  title="3. Validation Error & Disabled States">
-        <x-slot:preview>
-            <div class="w-full space-y-6">
-                <x-aura::field label="Description with Validation Error" error="The description field is required.">
-                    <x-aura::rich-text value="" :invalid="true" placeholder="Field with validation error state..." />
-                </x-aura::field>
-
-                <x-aura::field label="Read only / Disabled Editor">
-                    <x-aura::rich-text value="<p>This editor content is <strong>disabled</strong> and locked from user editing.</p>" :disabled="true" minHeight="100px" />
-                </x-aura::field>
-            </div>
-        </x-slot:preview>
-        <x-slot:codeSlot>@verbatim<!-- Invalid state -->
-<x-aura::rich-text :invalid="true" />
-
-<!-- Disabled state -->
-<x-aura::rich-text :disabled="true" />@endverbatim</x-slot:codeSlot>
-    </x-aura::code>
-</x-aura::flex>
+</x-aura::container>
