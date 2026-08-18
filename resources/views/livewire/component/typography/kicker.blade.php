@@ -184,7 +184,7 @@ class extends Component {};
 
         <x-slot:preview>
 
-            <div class="space-y-4 w-full">
+            <x-aura::stack gap="4">
 
                 <x-aura::flex align="center" gap="3">
 
@@ -234,9 +234,10 @@ class extends Component {};
 
                 </x-aura::flex>
 
-            </div>
+            </x-aura::stack>
 
         </x-slot:preview>
+
 
         <x-slot:codeSlot>
 
@@ -267,106 +268,54 @@ class extends Component {};
 
         <x-slot:preview>
 
-            <div class="space-y-6 w-full">
+            <x-aura::card size="2xl" gap="3">
 
-                <!-- Hero Section Header Card -->
-                <x-aura::card gap="4">
+                <x-aura::kicker variant="default" icon="sparkles">
+                    ENTERPRISE PLATFORM
+                </x-aura::kicker>
 
-                    <div class="space-y-2 max-w-2xl">
+                <x-aura::heading level="2" size="xl">
+                    Scale your infrastructure without friction
+                </x-aura::heading>
 
-                        <x-aura::kicker variant="default" icon="sparkles">
-                            ENTERPRISE PLATFORM
-                        </x-aura::kicker>
+                <x-aura::subheading size="md">
+                    Global multi region cloud servers with automated load balancing, zero downtime rollouts, and SOC 2 verified security.
+                </x-aura::subheading>
 
-                        <x-aura::heading level="2" size="display-lg">
-                            Scale your infrastructure without friction
-                        </x-aura::heading>
+                <x-aura::flex align="center" gap="3">
 
-                        <x-aura::subheading size="md">
-                            Global multi region cloud servers with automated load balancing, zero downtime rollouts, and SOC 2 verified security.
-                        </x-aura::subheading>
+                    <x-aura::button variant="primary" iconTrailing="arrow-right">
+                        Explore
+                    </x-aura::button>
 
-                    </div>
+                    <x-aura::button variant="ghost">
+                        Docs
+                    </x-aura::button>
 
-                    <x-aura::flex align="center" gap="3">
+                </x-aura::flex>
 
-                        <x-aura::button variant="primary" iconTrailing="arrow-right">
-                            Explore
-                        </x-aura::button>
-
-                        <x-aura::button variant="ghost">
-                            Docs
-                        </x-aura::button>
-
-                    </x-aura::flex>
-
-                </x-aura::card>
-
-                <!-- Navigation Sidebar Group -->
-                <x-aura::card gap="3">
-
-                    <x-aura::kicker variant="default" icon="layers">
-                        MAIN NAVIGATION
-                    </x-aura::kicker>
-
-                    <div class="space-y-1">
-
-                        <x-aura::flex align="center" justify="between" class="px-3 py-2 rounded-lg bg-zinc-100 dark:bg-zinc-800">
-
-                            <x-aura::flex align="center" gap="2">
-
-                                <x-aura::icon name="home" size="sm" />
-
-                                <x-aura::text size="sm" weight="semibold">
-                                    Dashboard
-                                </x-aura::text>
-
-                            </x-aura::flex>
-
-                            <x-aura::badge variant="neutral" size="sm">
-                                Active
-                            </x-aura::badge>
-
-                        </x-aura::flex>
-
-                        <x-aura::flex align="center" gap="2" class="px-3 py-2 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800/60">
-
-                            <x-aura::icon name="chart-bar" size="sm" />
-
-                            <x-aura::text size="sm">
-                                Analytics
-                            </x-aura::text>
-
-                        </x-aura::flex>
-
-                    </div>
-
-                </x-aura::card>
-
-            </div>
+            </x-aura::card>
 
         </x-slot:preview>
+
+
 
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::card gap="4">
+                <x-aura::card size="2xl" gap="3">
 
-                    <div class="space-y-2 max-w-2xl">
+                    <x-aura::kicker variant="default" icon="sparkles">
+                        ENTERPRISE PLATFORM
+                    </x-aura::kicker>
 
-                        <x-aura::kicker variant="default" icon="sparkles">
-                            ENTERPRISE PLATFORM
-                        </x-aura::kicker>
+                    <x-aura::heading level="2" size="xl">
+                        Scale your infrastructure without friction
+                    </x-aura::heading>
 
-                        <x-aura::heading level="2" size="display-lg">
-                            Scale your infrastructure without friction
-                        </x-aura::heading>
-
-                        <x-aura::subheading size="md">
-                            Global multi region cloud servers with automated load balancing, zero downtime rollouts, and SOC 2 verified security.
-                        </x-aura::subheading>
-
-                    </div>
+                    <x-aura::subheading size="md">
+                        Global multi region cloud servers with automated load balancing, zero downtime rollouts, and SOC 2 verified security.
+                    </x-aura::subheading>
 
                     <x-aura::flex align="center" gap="3">
 
