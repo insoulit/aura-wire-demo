@@ -6,12 +6,7 @@ new class extends Component {};
 
 ?>
 
-<x-aura::stack as="nav" gap="0.5">
-
-    <!-- Start Section -->
-    <x-aura::sidebar.heading>
-        Start
-    </x-aura::sidebar.heading>
+<x-aura::flex direction="col" align="stretch" as="nav" gap="0.5">
 
     <x-aura::sidebar.item href="/components" icon="layers" :active="request()->is('components')">
         Overview
@@ -340,4 +335,4 @@ new class extends Component {};
 
     </x-aura::sidebar.dropdown>
 
-</x-aura::stack>
+</x-aura::flex>

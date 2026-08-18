@@ -11,7 +11,7 @@ class extends Component {};
 
 ?>
 
-<x-aura::container gap="8">
+<x-aura::container  gap="8" :padding="false">
 
     <!-- Header -->
     <x-aura::card size="full" gap="2">
