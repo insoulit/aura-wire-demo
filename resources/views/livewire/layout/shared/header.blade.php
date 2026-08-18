@@ -12,23 +12,19 @@ new class extends Component {};
 
         <x-aura::link href="/" underline="none">
 
-            <x-aura::flex align="center" gap="sm">
+            <x-aura::flex align="center" gap="2.5">
 
-                <x-aura::icon name="sparkles" size="md" variant="dark" />
+                <x-aura::icon name="sparkles" size="md" variant="dark" shape="sm" />
 
-                <x-aura::flex direction="col" gap="none">
+                <x-aura::flex direction="col" align="start" gap="0">
 
-                    <x-aura::heading level="2" size="xs" weight="extrabold">
+                    <x-aura::heading level="2" size="sm" weight="extrabold">
                         Aura Wire
                     </x-aura::heading>
 
-                    <div class="hidden sm:block">
-
-                        <x-aura::text size="sm" variant="muted" weight="medium" truncate>
-                            Livewire UI Kit
-                        </x-aura::text>
-
-                    </div>
+                    <x-aura::text size="xs" variant="subtle" weight="medium" tracking="wide">
+                        Livewire UI Kit
+                    </x-aura::text>
 
                 </x-aura::flex>
 

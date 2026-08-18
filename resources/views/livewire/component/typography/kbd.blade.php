@@ -6,201 +6,256 @@ use Livewire\Attributes\Title;
 
 new 
 #[Layout('livewire.layout.component')] 
-#[Title('Keyboard — Aura Wire')] 
+#[Title('Keyboard (Kbd) — Aura Wire')] 
 class extends Component {};
 
 ?>
 
-<x-aura::flex direction="col" gap="10" class="w-full max-w-4xl mx-auto py-2">
+<x-aura::container gap="8" :padding="false">
 
     <!-- Header -->
-    <x-aura::card>
+    <x-aura::card size="full" gap="2">
 
-        <x-aura::flex direction="col" gap="2" class="max-w-2xl">
+        <x-aura::flex align="center" gap="2.5">
 
-            <x-aura::flex align="center" gap="2.5">
+            <x-aura::kicker>
+                Typography
+            </x-aura::kicker>
 
-                <x-aura::kicker>Typography</x-aura::kicker>
-
-                <x-aura::badge variant="subtle" size="md">Component</x-aura::badge>
-
-            </x-aura::flex>
-
-            <x-aura::heading level="1" size="xl">Keyboard</x-aura::heading>
-
-            <x-aura::subheading size="md">
-                Keyboard keycap component designed to display single shortcuts, key sequences, and command combinations with 3D tactile elevation.
-            </x-aura::subheading>
+            <x-aura::badge variant="subtle" size="sm">
+                Component
+            </x-aura::badge>
 
         </x-aura::flex>
+
+        <x-aura::heading level="1" size="xl">
+            Keyboard (Kbd)
+        </x-aura::heading>
+
+        <x-aura::subheading size="md">
+            Keyboard keycap component designed to display single shortcuts, key sequences, and command combinations with 3D tactile elevation.
+        </x-aura::subheading>
 
     </x-aura::card>
 
     <!-- Component Syntax -->
     <x-aura::code variant="dark" title="Component Syntax" :showTabs="false" active="code">
 
-        <x-slot:codeSlot>@verbatim<x-aura::kbd>⌘K</x-aura::kbd>@endverbatim</x-slot:codeSlot>
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::kbd>
+                    ⌘K
+                </x-aura::kbd>
+            @endverbatim
+
+        </x-slot:codeSlot>
 
     </x-aura::code>
 
-    <!-- 1. Common Keyboard Shortcut Combinations -->
+    <!-- 1. Common Shortcut Combinations -->
     <x-aura::code title="1. Common Shortcut Combinations">
 
         <x-slot:preview>
 
-            <div class="space-y-4 max-w-md w-full">
+            <x-aura::flex direction="col" align="start" class="w-full" gap="4">
 
-                <div class="flex items-center justify-between p-3 rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
+                <x-aura::card size="md" gap="2">
 
-                    <x-aura::text size="sm" weight="medium">Open Command Palette</x-aura::text>
+                    <x-aura::flex align="center" justify="between" class="w-full">
 
-                    <div class="flex items-center gap-1">
+                        <x-aura::text size="sm" weight="medium">
+                            Open Command Palette
+                        </x-aura::text>
 
-                        <x-aura::kbd>⌘</x-aura::kbd>
+                        <x-aura::flex align="center" gap="1">
 
-                        <x-aura::kbd>K</x-aura::kbd>
+                            <x-aura::kbd>
+                                ⌘
+                            </x-aura::kbd>
 
-                    </div>
+                            <x-aura::kbd>
+                                K
+                            </x-aura::kbd>
 
-                </div>
+                        </x-aura::flex>
 
-                <div class="flex items-center justify-between p-3 rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
+                    </x-aura::flex>
 
-                    <x-aura::text size="sm" weight="medium">Quick Save File</x-aura::text>
+                </x-aura::card>
 
-                    <div class="flex items-center gap-1">
+                <x-aura::card size="md" gap="2">
 
-                        <x-aura::kbd>Ctrl</x-aura::kbd>
+                    <x-aura::flex align="center" justify="between" class="w-full">
 
-                        <x-aura::kbd>S</x-aura::kbd>
+                        <x-aura::text size="sm" weight="medium">
+                            Quick Save File
+                        </x-aura::text>
 
-                    </div>
+                        <x-aura::flex align="center" gap="1">
 
-                </div>
+                            <x-aura::kbd>
+                                Ctrl
+                            </x-aura::kbd>
 
-                <div class="flex items-center justify-between p-3 rounded-xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
+                            <x-aura::kbd>
+                                S
+                            </x-aura::kbd>
 
-                    <x-aura::text size="sm" weight="medium">Close Active Modal</x-aura::text>
+                        </x-aura::flex>
 
-                    <x-aura::kbd>Esc</x-aura::kbd>
+                    </x-aura::flex>
 
-                </div>
+                </x-aura::card>
 
-            </div>
+                <x-aura::card size="md" gap="2">
+
+                    <x-aura::flex align="center" justify="between" class="w-full">
+
+                        <x-aura::text size="sm" weight="medium">
+                            Close Active Modal
+                        </x-aura::text>
+
+                        <x-aura::kbd>
+                            Esc
+                        </x-aura::kbd>
+
+                    </x-aura::flex>
+
+                </x-aura::card>
+
+            </x-aura::flex>
 
         </x-slot:preview>
 
-        <x-slot:codeSlot>@verbatim{{-- Command Palette Shortcut --}}
-<div class="flex items-center gap-1">
-    <x-aura::kbd>⌘</x-aura::kbd>
-    <x-aura::kbd>K</x-aura::kbd>
-</div>
+        <x-slot:codeSlot>
 
-{{-- Save File Shortcut --}}
-<div class="flex items-center gap-1">
-    <x-aura::kbd>Ctrl</x-aura::kbd>
-    <x-aura::kbd>S</x-aura::kbd>
-</div>
+            @verbatim
+                <x-aura::flex align="center" gap="1">
 
-{{-- Escape Key --}}
-<x-aura::kbd>Esc</x-aura::kbd>@endverbatim</x-slot:codeSlot>
+                    <x-aura::kbd>
+                        ⌘
+                    </x-aura::kbd>
+
+                    <x-aura::kbd>
+                        K
+                    </x-aura::kbd>
+
+                </x-aura::flex>
+
+                <x-aura::flex align="center" gap="1">
+
+                    <x-aura::kbd>
+                        Ctrl
+                    </x-aura::kbd>
+
+                    <x-aura::kbd>
+                        S
+                    </x-aura::kbd>
+
+                </x-aura::flex>
+
+                <x-aura::kbd>
+                    Esc
+                </x-aura::kbd>
+            @endverbatim
+
+        </x-slot:codeSlot>
 
     </x-aura::code>
 
     <!-- 2. Style Variants -->
-    <x-aura::code title="2. Style Variants (default, outline, solid)">
+    <x-aura::code title="2. Style Variants">
 
         <x-slot:preview>
 
-            <div class="flex flex-wrap items-center gap-6">
+            <x-aura::flex align="center" gap="6" class="flex-wrap">
 
-                <div class="flex items-center gap-2">
+                <x-aura::kbd variant="default">
+                    ⌘K
+                </x-aura::kbd>
 
-                    <x-aura::badge variant="neutral" size="sm">default</x-aura::badge>
+                <x-aura::kbd variant="outline">
+                    ⌘K
+                </x-aura::kbd>
 
-                    <x-aura::kbd variant="default">⌘K</x-aura::kbd>
+                <x-aura::kbd variant="solid">
+                    ⌘K
+                </x-aura::kbd>
 
-                </div>
-
-                <div class="flex items-center gap-2">
-
-                    <x-aura::badge variant="subtle" size="sm">outline</x-aura::badge>
-
-                    <x-aura::kbd variant="outline">⌘K</x-aura::kbd>
-
-                </div>
-
-                <div class="flex items-center gap-2">
-
-                    <x-aura::badge variant="neutral" size="sm">solid</x-aura::badge>
-
-                    <x-aura::kbd variant="solid">⌘K</x-aura::kbd>
-
-                </div>
-
-            </div>
+            </x-aura::flex>
 
         </x-slot:preview>
 
-        <x-slot:codeSlot>@verbatim<x-aura::kbd variant="default">⌘K</x-aura::kbd>
+        <x-slot:codeSlot>
 
-<x-aura::kbd variant="outline">⌘K</x-aura::kbd>
+            @verbatim
+                <x-aura::kbd variant="default">
+                    ⌘K
+                </x-aura::kbd>
 
-<x-aura::kbd variant="solid">⌘K</x-aura::kbd>@endverbatim</x-slot:codeSlot>
+                <x-aura::kbd variant="outline">
+                    ⌘K
+                </x-aura::kbd>
+
+                <x-aura::kbd variant="solid">
+                    ⌘K
+                </x-aura::kbd>
+            @endverbatim
+
+        </x-slot:codeSlot>
 
     </x-aura::code>
 
-    <!-- 3. Size Scales (xs, sm, md, lg) -->
-    <x-aura::code title="3. Size Scales (xs, sm, md, lg)">
+    <!-- 3. Size Scales -->
+    <x-aura::code title="3. Size Scales">
 
         <x-slot:preview>
 
-            <div class="flex flex-wrap items-center gap-6">
+            <x-aura::flex align="center" gap="6" class="flex-wrap">
 
-                <div class="flex items-center gap-2">
+                <x-aura::kbd size="lg">
+                    Shift
+                </x-aura::kbd>
 
-                    <x-aura::badge variant="subtle" size="md">size="lg"</x-aura::badge>
+                <x-aura::kbd size="md">
+                    Shift
+                </x-aura::kbd>
 
-                    <x-aura::kbd size="lg">Shift</x-aura::kbd>
+                <x-aura::kbd size="sm">
+                    Shift
+                </x-aura::kbd>
 
-                </div>
+                <x-aura::kbd size="xs">
+                    Shift
+                </x-aura::kbd>
 
-                <div class="flex items-center gap-2">
-
-                    <x-aura::badge variant="subtle" size="md">size="md"</x-aura::badge>
-
-                    <x-aura::kbd size="md">Shift</x-aura::kbd>
-
-                </div>
-
-                <div class="flex items-center gap-2">
-
-                    <x-aura::badge variant="subtle" size="md">size="sm" (Default)</x-aura::badge>
-
-                    <x-aura::kbd size="sm">Shift</x-aura::kbd>
-
-                </div>
-
-                <div class="flex items-center gap-2">
-
-                    <x-aura::badge variant="subtle" size="md">size="xs"</x-aura::badge>
-
-                    <x-aura::kbd size="xs">Shift</x-aura::kbd>
-
-                </div>
-
-            </div>
+            </x-aura::flex>
 
         </x-slot:preview>
 
-        <x-slot:codeSlot>@verbatim<x-aura::kbd size="lg">Shift</x-aura::kbd>
+        <x-slot:codeSlot>
 
-<x-aura::kbd size="md">Shift</x-aura::kbd>
+            @verbatim
+                <x-aura::kbd size="lg">
+                    Shift
+                </x-aura::kbd>
 
-<x-aura::kbd size="sm">Shift</x-aura::kbd>
+                <x-aura::kbd size="md">
+                    Shift
+                </x-aura::kbd>
 
-<x-aura::kbd size="xs">Shift</x-aura::kbd>@endverbatim</x-slot:codeSlot>
+                <x-aura::kbd size="sm">
+                    Shift
+                </x-aura::kbd>
+
+                <x-aura::kbd size="xs">
+                    Shift
+                </x-aura::kbd>
+            @endverbatim
+
+        </x-slot:codeSlot>
 
     </x-aura::code>
 
-</x-aura::flex>
+</x-aura::container>

@@ -53,8 +53,8 @@ class extends Component {};
 
     </x-aura::code>
 
-    <!-- 1. Color and Intent Variants -->
-    <x-aura::code title="1. Color and Intent Variants">
+    <!-- 1. Tone and Contrast Variants -->
+    <x-aura::code title="1. Tone and Contrast Variants">
 
         <x-slot:preview>
 
@@ -70,22 +70,6 @@ class extends Component {};
 
                 <x-aura::kicker variant="subtle">
                     SUBTLE LABEL
-                </x-aura::kicker>
-
-                <x-aura::kicker variant="primary">
-                    PRIMARY FEATURE
-                </x-aura::kicker>
-
-                <x-aura::kicker variant="positive">
-                    SYSTEM ONLINE
-                </x-aura::kicker>
-
-                <x-aura::kicker variant="warning">
-                    ACTION REQUIRED
-                </x-aura::kicker>
-
-                <x-aura::kicker variant="danger">
-                    CRITICAL ALERT
                 </x-aura::kicker>
 
             </x-aura::flex>
@@ -105,22 +89,6 @@ class extends Component {};
 
                 <x-aura::kicker variant="subtle">
                     SUBTLE LABEL
-                </x-aura::kicker>
-
-                <x-aura::kicker variant="primary">
-                    PRIMARY FEATURE
-                </x-aura::kicker>
-
-                <x-aura::kicker variant="positive">
-                    SYSTEM ONLINE
-                </x-aura::kicker>
-
-                <x-aura::kicker variant="warning">
-                    ACTION REQUIRED
-                </x-aura::kicker>
-
-                <x-aura::kicker variant="danger">
-                    CRITICAL ALERT
                 </x-aura::kicker>
             @endverbatim
 
