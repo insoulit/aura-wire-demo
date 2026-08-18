@@ -6,38 +6,65 @@ use Livewire\Attributes\Title;
 
 new 
 #[Layout('livewire.layout.component')] 
-#[Title('Component Directory - Aura Wire')] 
+#[Title('Component Directory — Aura Wire')] 
 class extends Component {};
 
 ?>
 
-<x-aura::flex direction="col" gap="12" class="w-full">
+<x-aura::container gap="8" :padding="false">
+
     <!-- Header Banner -->
-    <x-aura::card>
-        <x-aura::flex direction="col" gap="2" class="max-w-2xl">
-            <x-aura::flex align="center" gap="2.5">
-                <x-aura::kicker>Component Directory</x-aura::kicker>
-                <x-aura::badge variant="subtle" size="sm">Documentation</x-aura::badge>
-            </x-aura::flex>
-            <x-aura::heading level="1" size="xl">Component Suite</x-aura::heading>
-            <x-aura::subheading size="md">
-                Browse through individual standalone documentation pages for every component registered by Aura Wire, organized by category.
-            </x-aura::subheading>
+    <x-aura::card size="full" gap="2">
+
+        <x-aura::flex align="center" gap="2.5">
+
+            <x-aura::kicker>
+                Component Directory
+            </x-aura::kicker>
+
+            <x-aura::badge variant="subtle" size="sm">
+                Documentation
+            </x-aura::badge>
+
         </x-aura::flex>
+
+        <x-aura::heading level="1" size="xl">
+            Component Suite
+        </x-aura::heading>
+
+        <x-aura::subheading size="md">
+            Browse through individual standalone documentation pages for every component registered by Aura Wire, organized by category.
+        </x-aura::subheading>
+
     </x-aura::card>
 
     <!-- Category 1: Typography -->
     <x-aura::flex direction="col" gap="4">
+
         <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
+
             <x-aura::flex align="center" justify="between" gap="2">
+
                 <x-aura::flex align="center" gap="2">
+
                     <x-aura::icon name="type" size="sm" />
-                    <x-aura::heading level="2" size="md">Typography</x-aura::heading>
+
+                    <x-aura::heading level="2" size="md">
+                        Typography
+                    </x-aura::heading>
+
                 </x-aura::flex>
-                <x-aura::badge variant="neutral" size="sm">9 Components</x-aura::badge>
+
+                <x-aura::badge variant="neutral" size="sm">
+                    9 Components
+                </x-aura::badge>
+
             </x-aura::flex>
+
         </div>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
             <x-aura::card href="/components/kicker">
                 <x-aura::heading level="3" size="sm">Kicker</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::kicker&gt;</x-aura::text>
@@ -82,21 +109,38 @@ class extends Component {};
                 <x-aura::heading level="3" size="sm">Keyboard</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::kbd&gt;</x-aura::text>
             </x-aura::card>
+
         </div>
+
     </x-aura::flex>
 
     <!-- Category 2: Action -->
     <x-aura::flex direction="col" gap="4">
+
         <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
+
             <x-aura::flex align="center" justify="between" gap="2">
+
                 <x-aura::flex align="center" gap="2">
+
                     <x-aura::icon name="mouse-pointer" size="sm" />
-                    <x-aura::heading level="2" size="md">Action</x-aura::heading>
+
+                    <x-aura::heading level="2" size="md">
+                        Action
+                    </x-aura::heading>
+
                 </x-aura::flex>
-                <x-aura::badge variant="neutral" size="sm">5 Components</x-aura::badge>
+
+                <x-aura::badge variant="neutral" size="sm">
+                    4 Components
+                </x-aura::badge>
+
             </x-aura::flex>
+
         </div>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
             <x-aura::card href="/components/button">
                 <x-aura::heading level="3" size="sm">Button</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::button&gt;</x-aura::text>
@@ -117,25 +161,37 @@ class extends Component {};
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::link&gt;</x-aura::text>
             </x-aura::card>
 
-            <x-aura::card href="/components/dropdown">
-                <x-aura::heading level="3" size="sm">Dropdown</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::dropdown&gt;</x-aura::text>
-            </x-aura::card>
         </div>
+
     </x-aura::flex>
 
     <!-- Category 3: Form -->
     <x-aura::flex direction="col" gap="4">
+
         <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
+
             <x-aura::flex align="center" justify="between" gap="2">
+
                 <x-aura::flex align="center" gap="2">
+
                     <x-aura::icon name="edit-3" size="sm" />
-                    <x-aura::heading level="2" size="md">Form</x-aura::heading>
+
+                    <x-aura::heading level="2" size="md">
+                        Form
+                    </x-aura::heading>
+
                 </x-aura::flex>
-                <x-aura::badge variant="neutral" size="sm">15 Components</x-aura::badge>
+
+                <x-aura::badge variant="neutral" size="sm">
+                    15 Components
+                </x-aura::badge>
+
             </x-aura::flex>
+
         </div>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
             <x-aura::card href="/components/field">
                 <x-aura::heading level="3" size="sm">Field</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::field&gt;</x-aura::text>
@@ -210,28 +266,45 @@ class extends Component {};
                 <x-aura::heading level="3" size="sm">File Upload</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::file-upload&gt;</x-aura::text>
             </x-aura::card>
+
         </div>
+
     </x-aura::flex>
 
     <!-- Category 4: Display -->
     <x-aura::flex direction="col" gap="4">
+
         <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
+
             <x-aura::flex align="center" justify="between" gap="2">
+
                 <x-aura::flex align="center" gap="2">
+
                     <x-aura::icon name="monitor" size="sm" />
-                    <x-aura::heading level="2" size="md">Display</x-aura::heading>
+
+                    <x-aura::heading level="2" size="md">
+                        Display
+                    </x-aura::heading>
+
                 </x-aura::flex>
-                <x-aura::badge variant="neutral" size="sm">11 Components</x-aura::badge>
+
+                <x-aura::badge variant="neutral" size="sm">
+                    11 Components
+                </x-aura::badge>
+
             </x-aura::flex>
+
         </div>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
             <x-aura::card href="/components/card">
                 <x-aura::heading level="3" size="sm">Card</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::card&gt;</x-aura::text>
             </x-aura::card>
 
-            <x-aura::card href="/components/tabs">
-                <x-aura::heading level="3" size="sm">Tabs</x-aura::heading>
+            <x-aura::card href="/components/tab">
+                <x-aura::heading level="3" size="sm">Tab</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::tab&gt;</x-aura::text>
             </x-aura::card>
 
@@ -279,21 +352,38 @@ class extends Component {};
                 <x-aura::heading level="3" size="sm">Empty State</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::empty-state&gt;</x-aura::text>
             </x-aura::card>
+
         </div>
+
     </x-aura::flex>
 
     <!-- Category 5: Data -->
     <x-aura::flex direction="col" gap="4">
+
         <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
+
             <x-aura::flex align="center" justify="between" gap="2">
+
                 <x-aura::flex align="center" gap="2">
+
                     <x-aura::icon name="database" size="sm" />
-                    <x-aura::heading level="2" size="md">Data</x-aura::heading>
+
+                    <x-aura::heading level="2" size="md">
+                        Data
+                    </x-aura::heading>
+
                 </x-aura::flex>
-                <x-aura::badge variant="neutral" size="sm">6 Components</x-aura::badge>
+
+                <x-aura::badge variant="neutral" size="sm">
+                    6 Components
+                </x-aura::badge>
+
             </x-aura::flex>
+
         </div>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
             <x-aura::card href="/components/table">
                 <x-aura::heading level="3" size="sm">Table</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::table&gt;</x-aura::text>
@@ -323,34 +413,51 @@ class extends Component {};
                 <x-aura::heading level="3" size="sm">Numbered List</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::numbered-list&gt;</x-aura::text>
             </x-aura::card>
+
         </div>
+
     </x-aura::flex>
 
     <!-- Category 6: Feedback -->
     <x-aura::flex direction="col" gap="4">
+
         <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
+
             <x-aura::flex align="center" justify="between" gap="2">
+
                 <x-aura::flex align="center" gap="2">
+
                     <x-aura::icon name="bell" size="sm" />
-                    <x-aura::heading level="2" size="md">Feedback</x-aura::heading>
+
+                    <x-aura::heading level="2" size="md">
+                        Feedback
+                    </x-aura::heading>
+
                 </x-aura::flex>
-                <x-aura::badge variant="neutral" size="sm">9 Components</x-aura::badge>
+
+                <x-aura::badge variant="neutral" size="sm">
+                    9 Components
+                </x-aura::badge>
+
             </x-aura::flex>
+
         </div>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
             <x-aura::card href="/components/alert">
                 <x-aura::heading level="3" size="sm">Alert</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::alert&gt;</x-aura::text>
             </x-aura::card>
 
-            <x-aura::card href="/components/banner">
-                <x-aura::heading level="3" size="sm">Banner</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::banner&gt;</x-aura::text>
-            </x-aura::card>
-
             <x-aura::card href="/components/toast">
                 <x-aura::heading level="3" size="sm">Toast</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::toast&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/dropdown">
+                <x-aura::heading level="3" size="sm">Dropdown</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::dropdown&gt;</x-aura::text>
             </x-aura::card>
 
             <x-aura::card href="/components/modal">
@@ -359,12 +466,12 @@ class extends Component {};
             </x-aura::card>
 
             <x-aura::card href="/components/sheet">
-                <x-aura::heading level="3" size="sm">Sheet Drawer</x-aura::heading>
+                <x-aura::heading level="3" size="sm">Sheet</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::sheet&gt;</x-aura::text>
             </x-aura::card>
 
             <x-aura::card href="/components/command">
-                <x-aura::heading level="3" size="sm">Command Palette</x-aura::heading>
+                <x-aura::heading level="3" size="sm">Command</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::command&gt;</x-aura::text>
             </x-aura::card>
 
@@ -382,21 +489,38 @@ class extends Component {};
                 <x-aura::heading level="3" size="sm">Spinner</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::spinner&gt;</x-aura::text>
             </x-aura::card>
+
         </div>
+
     </x-aura::flex>
 
     <!-- Category 7: Navigation -->
     <x-aura::flex direction="col" gap="4">
+
         <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
+
             <x-aura::flex align="center" justify="between" gap="2">
+
                 <x-aura::flex align="center" gap="2">
+
                     <x-aura::icon name="navigation" size="sm" />
-                    <x-aura::heading level="2" size="md">Navigation</x-aura::heading>
+
+                    <x-aura::heading level="2" size="md">
+                        Navigation
+                    </x-aura::heading>
+
                 </x-aura::flex>
-                <x-aura::badge variant="neutral" size="sm">3 Components</x-aura::badge>
+
+                <x-aura::badge variant="neutral" size="sm">
+                    3 Components
+                </x-aura::badge>
+
             </x-aura::flex>
+
         </div>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
             <x-aura::card href="/components/breadcrumb">
                 <x-aura::heading level="3" size="sm">Breadcrumb</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::breadcrumb&gt;</x-aura::text>
@@ -411,29 +535,56 @@ class extends Component {};
                 <x-aura::heading level="3" size="sm">Pagination</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::pagination&gt;</x-aura::text>
             </x-aura::card>
+
         </div>
+
     </x-aura::flex>
 
     <!-- Category 8: Layout -->
     <x-aura::flex direction="col" gap="4">
+
         <div class="border-b border-zinc-200/60 dark:border-zinc-800/60 pb-2">
+
             <x-aura::flex align="center" justify="between" gap="2">
+
                 <x-aura::flex align="center" gap="2">
+
                     <x-aura::icon name="layout" size="sm" />
-                    <x-aura::heading level="2" size="md">Layout</x-aura::heading>
+
+                    <x-aura::heading level="2" size="md">
+                        Layout
+                    </x-aura::heading>
+
                 </x-aura::flex>
-                <x-aura::badge variant="neutral" size="sm">7 Components</x-aura::badge>
+
+                <x-aura::badge variant="neutral" size="sm">
+                    9 Components
+                </x-aura::badge>
+
             </x-aura::flex>
+
         </div>
+
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
             <x-aura::card href="/components/body">
                 <x-aura::heading level="3" size="sm">Body</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::body&gt;</x-aura::text>
             </x-aura::card>
 
+            <x-aura::card href="/components/center">
+                <x-aura::heading level="3" size="sm">Center</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::center&gt;</x-aura::text>
+            </x-aura::card>
+
             <x-aura::card href="/components/container">
                 <x-aura::heading level="3" size="sm">Container</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::container&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/flex">
+                <x-aura::heading level="3" size="sm">Flex</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::flex&gt;</x-aura::text>
             </x-aura::card>
 
             <x-aura::card href="/components/header">
@@ -460,6 +611,9 @@ class extends Component {};
                 <x-aura::heading level="3" size="sm">Footer</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::footer&gt;</x-aura::text>
             </x-aura::card>
+
         </div>
+
     </x-aura::flex>
-</x-aura::flex>
+
+</x-aura::container>

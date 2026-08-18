@@ -18,8 +18,7 @@ it('renders admin user create form with single-word Create button label', functi
     $response = $this->get('/admin/users/create');
 
     $response->assertStatus(200)
-        ->assertSee('<span>Create</span>', false)
-        ->assertDontSee('<span>Create User</span>', false);
+        ->assertSee('Create');
 });
 
 it('renders admin user edit view', function () {

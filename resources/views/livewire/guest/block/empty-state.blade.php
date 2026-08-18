@@ -12,51 +12,79 @@ class extends Component {};
 ?>
 
 <x-aura::flex direction="col" gap="6" class="w-full max-w-4xl mx-auto py-6">
+
     <!-- Top Header -->
     <div class="px-1">
+
         <x-aura::flex align="center" justify="between" gap="4">
+
             <div>
-                <x-aura::kicker>Design Blocks</x-aura::kicker>
-                <x-aura::heading level="1" size="lg">Empty State</x-aura::heading>
+
+                <x-aura::kicker>
+                    Design Blocks
+                </x-aura::kicker>
+
+                <x-aura::heading level="1" size="lg">
+                    Empty State
+                </x-aura::heading>
+
             </div>
-            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" >
-                <x-aura::icon name="arrow-left"  size="xs" />
-                <span>Back</span>
+
+            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" icon="arrow-left">
+                Back
             </x-aura::button>
+
         </x-aura::flex>
+
     </div>
 
     <!-- Empty State Block Preview -->
-    <x-aura::code  title="First-Time Onboarding Empty State Block">
+    <x-aura::code title="First Time Onboarding Empty State Block">
+
         <x-slot:preview>
-            <x-aura::card >
-                <div class="w-14 h-14 rounded-2xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-600 dark:text-zinc-300 shadow-2xs">
-                    <x-aura::icon name="folder-open"  />
-                </div>
-                <div class="space-y-1.5 max-w-md">
-                    <x-aura::heading level="2" size="md">No Projects Created Yet</x-aura::heading>
-                    <x-aura::text variant="subtle" size="sm">
-                        Get started by creating your very first project or importing an existing repository.
-                    </x-aura::text>
-                </div>
-                <div class="pt-2">
-                    <x-aura::button variant="primary" size="md" icon="plus">
-                        <span>Create</span>
-                    </x-aura::button>
-                </div>
+
+            <x-aura::card>
+
+                <x-aura::empty-state 
+                    icon="folder-open" 
+                    title="No Projects Created Yet" 
+                    description="Get started by creating your very first project or importing an existing repository."
+                >
+
+                    <x-slot:actions>
+
+                        <x-aura::button variant="primary" size="md" icon="plus">
+                            Create
+                        </x-aura::button>
+
+                    </x-slot:actions>
+
+                </x-aura::empty-state>
+
             </x-aura::card>
+
         </x-slot:preview>
-        <x-slot name="codeSlot">&lt;x-aura::card class="w-full p-6 sm:p-12 text-center flex flex-col items-center justify-center space-y-4"&gt;
-    &lt;div class="w-14 h-14 rounded-2xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-zinc-600"&gt;
-        &lt;x-aura::icon name="folder-open" class="w-7 h-7" /&gt;
-    &lt;/div&gt;
-    &lt;div class="space-y-1.5 max-w-md"&gt;
-        &lt;x-aura::heading level="2" size="md"&gt;No Projects Created Yet&lt;/x-aura::heading&gt;
-        &lt;x-aura::text variant="subtle" size="sm"&gt;Get started by creating your very first project.&lt;/x-aura::text&gt;
-    &lt;/div&gt;
-    &lt;x-aura::button variant="primary" size="md" icon="plus"&gt;
-        &lt;span&gt;Create&lt;/span&gt;
-    &lt;/x-aura::button&gt;
-&lt;/x-aura::card&gt;</x-slot>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::card>
+                    <x-aura::empty-state 
+                        icon="folder-open" 
+                        title="No Projects Created Yet" 
+                        description="Get started by creating your very first project or importing an existing repository."
+                    >
+                        <x-slot:actions>
+                            <x-aura::button variant="primary" size="md" icon="plus">
+                                Create
+                            </x-aura::button>
+                        </x-slot:actions>
+                    </x-aura::empty-state>
+                </x-aura::card>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
     </x-aura::code>
+
 </x-aura::flex>

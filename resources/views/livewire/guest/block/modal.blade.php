@@ -20,9 +20,13 @@ class extends Component {};
 
             <div>
 
-                <x-aura::kicker>Design Blocks</x-aura::kicker>
+                <x-aura::kicker>
+                    Design Blocks
+                </x-aura::kicker>
 
-                <x-aura::heading level="1" size="lg">Modal</x-aura::heading>
+                <x-aura::heading level="1" size="lg">
+                    Modal
+                </x-aura::heading>
 
             </div>
 
@@ -43,9 +47,13 @@ class extends Component {};
 
                 <div class="space-y-1 max-w-md">
 
-                    <x-aura::heading level="3" size="sm">Test Interactive Modal Dialogs</x-aura::heading>
+                    <x-aura::heading level="3" size="sm">
+                        Test Interactive Modal Dialogs
+                    </x-aura::heading>
 
-                    <x-aura::text variant="subtle" size="sm">Click the buttons below to open accessible, teleported modal overlays with backdrop blur.</x-aura::text>
+                    <x-aura::text variant="subtle" size="sm">
+                        Click the buttons below to open accessible, teleported modal overlays with backdrop blur.
+                    </x-aura::text>
 
                 </div>
 
@@ -69,19 +77,15 @@ class extends Component {};
                     <div class="space-y-4 py-2">
 
                         <x-aura::field label="Token Name">
-
                             <x-aura::input placeholder="e.g. Staging Webhook Worker" />
-
                         </x-aura::field>
 
                         <x-aura::field label="Expiration Scope">
-
                             <x-aura::select>
                                 <option>90 Days (Recommended)</option>
                                 <option>30 Days</option>
                                 <option>Never Expire</option>
                             </x-aura::select>
-
                         </x-aura::field>
 
                     </div>
@@ -103,7 +107,7 @@ class extends Component {};
                 <!-- Destructive Danger Modal Overlay Component -->
                 <x-aura::modal name="delete-project-demo-modal" variant="centered" title="Delete Deployment Environment?" description="This action will permanently purge all server instances and backups." maxWidth="md">
 
-                    <div class="p-3 rounded-lg bg-red-50 dark:bg-red-950/40 border border-red-200/80 dark:border-red-800/40 text-xs text-red-700 dark:text-red-300 font-mono text-center">
+                    <div class="p-3 rounded-lg bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-xs text-zinc-900 dark:text-zinc-100 font-mono text-center">
                         Target: production-us-east-1
                     </div>
 
@@ -125,23 +129,35 @@ class extends Component {};
 
         </x-slot:preview>
 
-        <x-slot name="codeSlot">@verbatim<!-- Modal Trigger Button -->
-<x-aura::button variant="primary" x-on:click="$dispatch('open-modal', 'create-key-modal')">
-    Create
-</x-aura::button>
+        <x-slot:codeSlot>
 
-<!-- Modal Overlay Component -->
-<x-aura::modal name="create-key-modal" title="Generate API Access Key" description="Create a secret access key for authentication.">
-    <div class="space-y-4">
-        <x-aura::field label="Token Name">
-            <x-aura::input placeholder="e.g. Production Worker" />
-        </x-aura::field>
-    </div>
-    <x-slot:footer>
-        <x-aura::button variant="subtle" size="sm" x-on:click="open = false">Cancel</x-aura::button>
-        <x-aura::button variant="primary" size="sm">Create</x-aura::button>
-    </x-slot:footer>
-</x-aura::modal>@endverbatim</x-slot>
+            @verbatim
+                <!-- Modal Trigger Button -->
+                <x-aura::button variant="primary" x-on:click="$dispatch('open-modal', 'create-key-modal')">
+                    Create
+                </x-aura::button>
+
+                <!-- Modal Overlay Component -->
+                <x-aura::modal name="create-key-modal" title="Generate API Access Key" description="Create a secret access key for authentication.">
+                    <div class="space-y-4">
+                        <x-aura::field label="Token Name">
+                            <x-aura::input placeholder="e.g. Production Worker" />
+                        </x-aura::field>
+                    </div>
+
+                    <x-slot:footer>
+                        <x-aura::button variant="subtle" size="sm" x-on:click="open = false">
+                            Cancel
+                        </x-aura::button>
+
+                        <x-aura::button variant="primary" size="sm">
+                            Create
+                        </x-aura::button>
+                    </x-slot:footer>
+                </x-aura::modal>
+            @endverbatim
+
+        </x-slot:codeSlot>
 
     </x-aura::code>
 
@@ -159,17 +175,17 @@ class extends Component {};
                         <div class="flex items-center gap-3">
 
                             <div class="h-10 w-10 rounded-xl bg-zinc-100 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 flex items-center justify-center text-zinc-900 dark:text-white shrink-0">
-
                                 <x-aura::icon name="key" size="sm" />
-
                             </div>
 
                             <div>
+                                <x-aura::heading level="3" size="sm">
+                                    Create Access Token
+                                </x-aura::heading>
 
-                                <x-aura::heading level="3" size="sm">Create Access Token</x-aura::heading>
-
-                                <x-aura::text variant="subtle" size="xs">Configure API permissions for external services.</x-aura::text>
-
+                                <x-aura::text variant="subtle" size="xs">
+                                    Configure API permissions for external services.
+                                </x-aura::text>
                             </div>
 
                         </div>
@@ -179,9 +195,7 @@ class extends Component {};
                     <div class="space-y-4 pt-4">
 
                         <x-aura::field label="Token Name">
-
                             <x-aura::input placeholder="e.g. Analytics Pipeline" />
-
                         </x-aura::field>
 
                     </div>
@@ -204,28 +218,47 @@ class extends Component {};
 
         </x-slot:preview>
 
-        <x-slot name="codeSlot">@verbatim<x-aura::card>
-    <div class="flex items-start justify-between border-b border-zinc-100 dark:border-zinc-800 pb-4">
-        <div class="flex items-center gap-3">
-            <div class="h-10 w-10 rounded-xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center">
-                <x-aura::icon name="key" size="sm" />
-            </div>
-            <div>
-                <x-aura::heading level="3" size="sm">Create Access Token</x-aura::heading>
-                <x-aura::text variant="subtle" size="xs">Configure API permissions.</x-aura::text>
-            </div>
-        </div>
-    </div>
-    <div class="space-y-4 pt-4">
-        <x-aura::field label="Token Name">
-            <x-aura::input placeholder="e.g. Analytics Pipeline" />
-        </x-aura::field>
-    </div>
-    <div class="flex items-center justify-end gap-2 pt-3 border-t border-zinc-100 dark:border-zinc-800">
-        <x-aura::button variant="subtle" size="sm">Cancel</x-aura::button>
-        <x-aura::button variant="primary" size="sm">Create</x-aura::button>
-    </div>
-</x-aura::card>@endverbatim</x-slot>
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::card>
+                    <div class="flex items-start justify-between border-b border-zinc-100 dark:border-zinc-800 pb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="h-10 w-10 rounded-xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center">
+                                <x-aura::icon name="key" size="sm" />
+                            </div>
+
+                            <div>
+                                <x-aura::heading level="3" size="sm">
+                                    Create Access Token
+                                </x-aura::heading>
+
+                                <x-aura::text variant="subtle" size="xs">
+                                    Configure API permissions.
+                                </x-aura::text>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 pt-4">
+                        <x-aura::field label="Token Name">
+                            <x-aura::input placeholder="e.g. Analytics Pipeline" />
+                        </x-aura::field>
+                    </div>
+
+                    <div class="flex items-center justify-end gap-2 pt-3 border-t border-zinc-100 dark:border-zinc-800">
+                        <x-aura::button variant="subtle" size="sm">
+                            Cancel
+                        </x-aura::button>
+
+                        <x-aura::button variant="primary" size="sm">
+                            Create
+                        </x-aura::button>
+                    </div>
+                </x-aura::card>
+            @endverbatim
+
+        </x-slot:codeSlot>
 
     </x-aura::code>
 

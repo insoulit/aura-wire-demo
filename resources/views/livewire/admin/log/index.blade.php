@@ -166,55 +166,84 @@ class extends Component {
 
     <!-- Top Header -->
     <div class="px-1">
+
         <x-aura::flex align="center" justify="between" gap="4">
+
             <div>
-                <x-aura::kicker>Administration</x-aura::kicker>
-                <x-aura::heading level="1" size="lg">System Logs</x-aura::heading>
+
+                <x-aura::kicker>
+                    Administration
+                </x-aura::kicker>
+
+                <x-aura::heading level="1" size="lg">
+                    System Logs
+                </x-aura::heading>
+
             </div>
+
             <x-aura::flex align="center" gap="2">
-                <x-aura::button variant="secondary" size="sm">
-                    <x-aura::icon name="download" size="xs" />
-                    <span>Export</span>
+
+                <x-aura::button variant="secondary" size="sm" icon="download">
+                    Export
                 </x-aura::button>
-                <x-aura::button variant="danger" size="sm" x-on:click="$dispatch('open-modal', 'clear-logs-modal')">
-                    <x-aura::icon name="trash" size="xs" />
-                    <span>Clear</span>
+
+                <x-aura::button variant="danger" size="sm" icon="trash" x-on:click="$dispatch('open-modal', 'clear-logs-modal')">
+                    Clear
                 </x-aura::button>
+
             </x-aura::flex>
+
         </x-aura::flex>
+
     </div>
 
     <!-- Unified Logs Datatable Card -->
     <x-aura::card :divided="false">
+
         <x-slot:header>
+
             @if (count($selected) > 0)
+
                 <x-aura::flex align="center" justify="between" gap="3" class="w-full bg-zinc-100/90 dark:bg-zinc-800/90 px-4 py-2 rounded-xl border border-zinc-200/80 dark:border-zinc-700/80">
+
                     <x-aura::flex align="center" gap="2.5">
+
                         <x-aura::badge variant="neutral" size="sm">
                             {{ count($selected) }} Selected
                         </x-aura::badge>
-                        <x-aura::text variant="subtle" size="sm">of {{ $totalCount }} total</x-aura::text>
+
+                        <x-aura::text variant="subtle" size="sm">
+                            of {{ $totalCount }} total
+                        </x-aura::text>
+
                     </x-aura::flex>
 
                     <x-aura::flex align="center" gap="2">
-                        <x-aura::button wire:click="exportSelected" variant="secondary" size="sm">
-                            <x-aura::icon name="download" size="xs" />
-                            <span>Export</span>
+
+                        <x-aura::button wire:click="exportSelected" variant="secondary" size="sm" icon="download">
+                            Export
                         </x-aura::button>
-                        <x-aura::button x-on:click="$dispatch('open-modal', 'bulk-delete-modal')" variant="danger" size="sm">
-                            <x-aura::icon name="trash" size="xs" />
-                            <span>Delete</span>
+
+                        <x-aura::button x-on:click="$dispatch('open-modal', 'bulk-delete-modal')" variant="danger" size="sm" icon="trash">
+                            Delete
                         </x-aura::button>
+
                         <x-aura::button wire:click="resetSelection" variant="ghost" size="sm">
-                            <span>Deselect</span>
+                            Deselect
                         </x-aura::button>
+
                     </x-aura::flex>
+
                 </x-aura::flex>
+
             @else
+
                 <x-aura::flex align="center" justify="between" gap="3" :wrap="true" class="w-full">
+
                     <x-aura::flex align="center" gap="2.5" :wrap="true" class="w-full sm:w-auto">
+
                         <div class="w-full sm:w-72">
-                            <x-aura::input wire:model.live.debounce.250ms="search" placeholder="Search logs or trace details..." icon="search" size="sm" />
+                            <x-aura::input wire:model.live.debounce.250ms="search" placeholder="Search logs..." icon="search" size="sm" />
                         </div>
 
                         <div class="w-full sm:w-40">
@@ -229,101 +258,178 @@ class extends Component {
                         </div>
 
                         @if ($search !== '' || $level !== 'all')
-                            <x-aura::button wire:click="resetFilters" variant="subtle" size="sm">
-                                <x-aura::icon name="x" size="xs" />
-                                <span>Reset</span>
+
+                            <x-aura::button wire:click="resetFilters" variant="subtle" size="sm" icon="x">
+                                Reset
                             </x-aura::button>
+
                         @endif
+
                     </x-aura::flex>
 
                     <div wire:ignore.self class="w-full sm:w-auto flex justify-center sm:justify-end">
+
                         <x-aura::dropdown align="right" width="48">
+
                             <x-slot:trigger>
-                                <x-aura::button type="button" variant="secondary" size="sm">
-                                    <x-aura::icon name="columns" size="xs" />
-                                    <span>Columns</span>
+
+                                <x-aura::button type="button" variant="secondary" size="sm" icon="columns">
+                                    Columns
                                 </x-aura::button>
+
                             </x-slot:trigger>
 
-                            <x-aura::dropdown.header>Columns</x-aura::dropdown.header>
+                            <x-aura::dropdown.header>
+                                Columns
+                            </x-aura::dropdown.header>
+
                             <x-aura::dropdown.checkbox size="xs" wire:model.live="visibleColumns.level" label="Level" />
+
                             <x-aura::dropdown.checkbox size="xs" wire:model.live="visibleColumns.env" label="Environment" />
+
                             <x-aura::dropdown.checkbox size="xs" wire:model.live="visibleColumns.message" label="Message" />
+
                         </x-aura::dropdown>
+
                     </div>
+
                 </x-aura::flex>
+
             @endif
+
         </x-slot:header>
 
         <x-aura::table borderless="true">
+
             <x-aura::table.header>
+
                 <x-aura::table.row>
+
                     <x-aura::table.column class="w-10">
                         <x-aura::checkbox size="xs" wire:model.live="selectAll" aria-label="Select All" />
                     </x-aura::table.column>
-                    <x-aura::table.column nowrap="true" sortable wire:click="sortBy('time')" :sorted="$sortField === 'time' ? $sortDirection : null">Timestamp</x-aura::table.column>
+
+                    <x-aura::table.column nowrap="true" sortable wire:click="sortBy('time')" :sorted="$sortField === 'time' ? $sortDirection : null">
+                        Timestamp
+                    </x-aura::table.column>
+
                     @if ($visibleColumns['level'] ?? true)
-                        <x-aura::table.column nowrap="true" sortable wire:click="sortBy('level')" :sorted="$sortField === 'level' ? $sortDirection : null">Level</x-aura::table.column>
+
+                        <x-aura::table.column nowrap="true" sortable wire:click="sortBy('level')" :sorted="$sortField === 'level' ? $sortDirection : null">
+                            Level
+                        </x-aura::table.column>
+
                     @endif
+
                     @if ($visibleColumns['env'] ?? true)
-                        <x-aura::table.column nowrap="true" sortable wire:click="sortBy('env')" :sorted="$sortField === 'env' ? $sortDirection : null">Environment</x-aura::table.column>
+
+                        <x-aura::table.column nowrap="true" sortable wire:click="sortBy('env')" :sorted="$sortField === 'env' ? $sortDirection : null">
+                            Environment
+                        </x-aura::table.column>
+
                     @endif
+
                     @if ($visibleColumns['message'] ?? true)
-                        <x-aura::table.column sortable wire:click="sortBy('message')" :sorted="$sortField === 'message' ? $sortDirection : null">Message</x-aura::table.column>
+
+                        <x-aura::table.column sortable wire:click="sortBy('message')" :sorted="$sortField === 'message' ? $sortDirection : null">
+                            Message
+                        </x-aura::table.column>
+
                     @endif
-                    <x-aura::table.column nowrap="true" align="right">Actions</x-aura::table.column>
+
+                    <x-aura::table.column nowrap="true" align="right">
+                        Action
+                    </x-aura::table.column>
+
                 </x-aura::table.row>
+
             </x-aura::table.header>
+
             <x-aura::table.body>
+
                 @forelse ($logs as $log)
+
                     <x-aura::table.row :class="in_array((string)$log['id'], $selected) ? 'bg-zinc-100/60 dark:bg-zinc-800/40' : ''">
+
                         <x-aura::table.cell class="w-10">
                             <x-aura::checkbox size="xs" wire:model.live="selected" value="{{ (string)$log['id'] }}" aria-label="Select row" />
                         </x-aura::table.cell>
+
                         <x-aura::table.cell nowrap="true">
-                            <x-aura::text variant="mono" size="sm">{{ $log['time'] }}</x-aura::text>
+                            <x-aura::text variant="mono" size="sm">
+                                {{ $log['time'] }}
+                            </x-aura::text>
                         </x-aura::table.cell>
+
                         @if ($visibleColumns['level'] ?? true)
+
                             <x-aura::table.cell nowrap="true">
-                                <x-aura::badge :variant="$log['variant']" size="sm">{{ $log['level'] }}</x-aura::badge>
+                                <x-aura::badge :variant="$log['variant']" size="sm">
+                                    {{ $log['level'] }}
+                                </x-aura::badge>
                             </x-aura::table.cell>
+
                         @endif
+
                         @if ($visibleColumns['env'] ?? true)
+
                             <x-aura::table.cell nowrap="true">
-                                <x-aura::text size="sm">{{ $log['env'] }}</x-aura::text>
+                                <x-aura::text size="sm">
+                                    {{ $log['env'] }}
+                                </x-aura::text>
                             </x-aura::table.cell>
+
                         @endif
+
                         @if ($visibleColumns['message'] ?? true)
+
                             <x-aura::table.cell truncate="true">
-                                <x-aura::text size="sm" truncate="true">{{ $log['message'] }}</x-aura::text>
+                                <x-aura::text size="sm" truncate="true">
+                                    {{ $log['message'] }}
+                                </x-aura::text>
                             </x-aura::table.cell>
+
                         @endif
+
                         <x-aura::table.cell nowrap="true" align="right">
                             <x-aura::icon-button icon="show" variant="subtle" size="sm" shape="circle" label="View" href="/admin/logs/show" wire:navigate />
                         </x-aura::table.cell>
+
                     </x-aura::table.row>
+
                 @empty
+
                     <x-aura::table.row>
+
                         <x-aura::table.cell :colspan="3 + count(array_filter($visibleColumns))">
+
                             <x-aura::empty-state 
                                 icon="document-text" 
                                 title="No logs found" 
                                 description="No log events match your search or filter criteria." 
                             />
+
                         </x-aura::table.cell>
+
                     </x-aura::table.row>
+
                 @endforelse
+
             </x-aura::table.body>
+
         </x-aura::table>
 
         <x-slot:footer>
+
             <x-aura::pagination 
                 :page="$currentPage" 
                 :totalPages="$totalPages" 
                 :total="$totalCount" 
                 :perPage="$perPage" 
             />
+
         </x-slot:footer>
+
     </x-aura::card>
 
     <!-- Clear Logs Modal -->
@@ -336,16 +442,23 @@ class extends Component {
         description="This will clear all cached event stream logs and exception records from active memory. Archived files on disk will not be affected."
         maxWidth="sm"
     >
+
         <x-slot:footer>
+
             <div class="grid grid-cols-2 gap-3 w-full">
+
                 <x-aura::button variant="secondary" size="sm" block="true" x-on:click="$dispatch('close-modal', 'clear-logs-modal')">
                     Cancel
                 </x-aura::button>
+
                 <x-aura::button variant="danger" size="sm" block="true" x-on:click="$dispatch('close-modal', 'clear-logs-modal')">
                     Clear
                 </x-aura::button>
+
             </div>
+
         </x-slot:footer>
+
     </x-aura::modal>
 
     <!-- Bulk Delete Confirmation Modal -->
@@ -358,16 +471,23 @@ class extends Component {
         description="This action will permanently delete all selected log events. This cannot be undone."
         maxWidth="sm"
     >
+
         <x-slot:footer>
+
             <div class="grid grid-cols-2 gap-3 w-full">
+
                 <x-aura::button variant="secondary" size="sm" block="true" x-on:click="$dispatch('close-modal', 'bulk-delete-modal')">
                     Cancel
                 </x-aura::button>
+
                 <x-aura::button variant="danger" size="sm" block="true" wire:click="deleteSelected" x-on:click="$dispatch('close-modal', 'bulk-delete-modal')">
                     Delete
                 </x-aura::button>
+
             </div>
+
         </x-slot:footer>
+
     </x-aura::modal>
 
 </x-aura::flex>

@@ -47,31 +47,47 @@ class extends Component {
 
     <!-- Header with Back Button -->
     <x-aura::flex align="center" justify="between" gap="4" class="px-1">
+
         <div>
-            <x-aura::kicker>Administration</x-aura::kicker>
-            <x-aura::heading level="1" size="lg">Create User</x-aura::heading>
+
+            <x-aura::kicker>
+                Administration
+            </x-aura::kicker>
+
+            <x-aura::heading level="1" size="lg">
+                Create User
+            </x-aura::heading>
+
         </div>
+
         <x-aura::flex align="center" gap="2">
-            <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm">
-                <x-aura::icon name="arrow-left" size="xs" />
-                <span>Back</span>
+
+            <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm" icon="arrow-left">
+                Back
             </x-aura::button>
+
         </x-aura::flex>
+
     </x-aura::flex>
 
     @if ($saved)
+
         <div class="fixed bottom-5 right-5 z-50">
             <x-aura::toast variant="neutral" title="User Created" description="User account created successfully." />
         </div>
+
     @endif
 
     <!-- Create User Card Form -->
     <form wire:submit.prevent="save">
+
         <x-aura::card title="Account Details" description="Fill out the profile and security details to register a new user account.">
+
             <x-aura::flex direction="col" gap="5" class="pt-2">
 
                 <!-- Full Name & Email -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
                     <x-aura::field label="Full Name" required error="{{ $errors->first('name') }}">
                         <x-aura::input wire:model="name" placeholder="e.g. Marcus Vance" size="sm" />
                     </x-aura::field>
@@ -79,10 +95,12 @@ class extends Component {
                     <x-aura::field label="Email Address" required error="{{ $errors->first('email') }}">
                         <x-aura::input wire:model="email" type="email" placeholder="e.g. marcus@company.com" size="sm" />
                     </x-aura::field>
+
                 </div>
 
                 <!-- Role & Status -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
                     <x-aura::field label="Account Role" required error="{{ $errors->first('role') }}">
                         <x-aura::select wire:model="role" size="sm">
                             <option value="member">Member</option>
@@ -98,12 +116,14 @@ class extends Component {
                             <option value="Inactive">Inactive</option>
                         </x-aura::select>
                     </x-aura::field>
+
                 </div>
 
                 <x-aura::separator />
 
                 <!-- Security Credentials -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
                     <x-aura::field label="Password" required error="{{ $errors->first('password') }}">
                         <x-aura::input wire:model="password" type="password" placeholder="Minimum 8 characters" size="sm" />
                     </x-aura::field>
@@ -111,23 +131,29 @@ class extends Component {
                     <x-aura::field label="Confirm Password" required>
                         <x-aura::input wire:model="password_confirmation" type="password" placeholder="Re-enter password" size="sm" />
                     </x-aura::field>
+
                 </div>
 
             </x-aura::flex>
 
             <x-slot:footer>
+
                 <x-aura::flex align="center" justify="between" class="w-full">
+
                     <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm">
-                        <span>Cancel</span>
+                        Cancel
                     </x-aura::button>
 
-                    <x-aura::button type="submit" variant="primary" size="sm">
-                        <x-aura::icon name="plus" size="xs" />
-                        <span>Create</span>
+                    <x-aura::button type="submit" variant="primary" size="sm" icon="plus">
+                        Create
                     </x-aura::button>
+
                 </x-aura::flex>
+
             </x-slot:footer>
+
         </x-aura::card>
+
     </form>
 
 </x-aura::flex>

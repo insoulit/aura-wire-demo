@@ -20,9 +20,13 @@ class extends Component {};
 
             <div>
 
-                <x-aura::kicker>Design Blocks</x-aura::kicker>
+                <x-aura::kicker>
+                    Design Blocks
+                </x-aura::kicker>
 
-                <x-aura::heading level="1" size="lg">Hero Header</x-aura::heading>
+                <x-aura::heading level="1" size="lg">
+                    Hero Header
+                </x-aura::heading>
 
             </div>
 
@@ -41,11 +45,13 @@ class extends Component {};
 
             <div class="w-full py-8 text-center space-y-4 flex flex-col items-center justify-center">
 
-                <x-aura::kicker>Next Gen Component Library</x-aura::kicker>
+                <x-aura::kicker>
+                    Next Gen Component Library
+                </x-aura::kicker>
 
-                <x-aura::heading level="1" size="xl">
+                <x-aura::display size="sm">
                     Build Stunning Web Interfaces in Seconds
-                </x-aura::heading>
+                </x-aura::display>
 
                 <x-aura::subheading size="md">
                     Production ready, ultra accessible Blade and Livewire components crafted for modern Laravel applications.
@@ -67,19 +73,35 @@ class extends Component {};
 
         </x-slot:preview>
 
-        <x-slot name="codeSlot">@verbatim<div class="w-full py-8 text-center space-y-4 flex flex-col items-center justify-center">
-    <x-aura::kicker>Next Gen Component Library</x-aura::kicker>
-    <x-aura::heading level="1" size="xl">
-        Build Stunning Web Interfaces in Seconds
-    </x-aura::heading>
-    <x-aura::subheading size="md">
-        Production ready components for modern Laravel applications.
-    </x-aura::subheading>
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2 w-full sm:w-auto">
-        <x-aura::button variant="primary" size="md">Start</x-aura::button>
-        <x-aura::button variant="outline" size="md">Explore</x-aura::button>
-    </div>
-</div>@endverbatim</x-slot>
+        <x-slot:codeSlot>
+
+            @verbatim
+                <div class="w-full py-8 text-center space-y-4 flex flex-col items-center justify-center">
+                    <x-aura::kicker>
+                        Next Gen Component Library
+                    </x-aura::kicker>
+
+                    <x-aura::display size="sm">
+                        Build Stunning Web Interfaces in Seconds
+                    </x-aura::display>
+
+                    <x-aura::subheading size="md">
+                        Production ready components for modern Laravel applications.
+                    </x-aura::subheading>
+
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2 w-full sm:w-auto">
+                        <x-aura::button variant="primary" size="md">
+                            Start
+                        </x-aura::button>
+
+                        <x-aura::button variant="outline" size="md">
+                            Explore
+                        </x-aura::button>
+                    </div>
+                </div>
+            @endverbatim
+
+        </x-slot:codeSlot>
 
     </x-aura::code>
 

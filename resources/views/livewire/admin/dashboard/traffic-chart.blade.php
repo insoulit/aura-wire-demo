@@ -43,38 +43,67 @@ new class extends Component {
 ?>
 
 <x-aura::card>
+
     <x-aura::flex direction="col" gap="4">
+
         <!-- Header with Period Toggles -->
         <x-aura::flex align="center" justify="between" gap="3" wrap="true">
+
             <div>
+
                 <x-aura::flex align="center" gap="2">
-                    <x-aura::heading level="2" size="sm">System Traffic</x-aura::heading>
-                    <x-aura::badge variant="neutral" size="sm">Live</x-aura::badge>
+
+                    <x-aura::heading level="2" size="sm">
+                        System Traffic
+                    </x-aura::heading>
+
+                    <x-aura::badge variant="neutral" size="sm">
+                        Live
+                    </x-aura::badge>
+
                 </x-aura::flex>
+
                 <x-aura::flex align="baseline" gap="2">
-                    <x-aura::heading level="3" size="lg">{{ $chartData[$timeframe]['total'] }}</x-aura::heading>
-                    <x-aura::badge variant="neutral" size="sm">{{ $chartData[$timeframe]['trend'] }}</x-aura::badge>
-                    <x-aura::text variant="subtle" size="sm">requests</x-aura::text>
+
+                    <x-aura::heading level="3" size="lg">
+                        {{ $chartData[$timeframe]['total'] }}
+                    </x-aura::heading>
+
+                    <x-aura::badge variant="neutral" size="sm">
+                        {{ $chartData[$timeframe]['trend'] }}
+                    </x-aura::badge>
+
+                    <x-aura::text variant="subtle" size="sm">
+                        requests
+                    </x-aura::text>
+
                 </x-aura::flex>
+
             </div>
 
             <!-- Period Filter Tabs -->
             <x-aura::flex align="center" gap="1">
+
                 @foreach (['Day', 'Week', 'Month'] as $period)
+
                     <x-aura::button 
                         type="button" 
                         wire:click="setTimeframe('{{ $period }}')" 
                         variant="{{ $timeframe === $period ? 'primary' : 'ghost' }}"
                         size="xs"
                     >
-                        <span>{{ $period }}</span>
+                        {{ $period }}
                     </x-aura::button>
+
                 @endforeach
+
             </x-aura::flex>
+
         </x-aura::flex>
 
         <!-- Monochromatic SVG Area Line Chart -->
         <div class="relative w-full h-44 pt-2">
+
             <svg viewBox="0 0 500 150" preserveAspectRatio="none" class="w-full h-full overflow-visible">
                 <defs>
                     <linearGradient id="trafficGradient" x1="0" y1="0" x2="0" y2="1">
@@ -94,16 +123,28 @@ new class extends Component {
                 <!-- Monochrome Stroke Line -->
                 <path d="{{ $chartData[$timeframe]['points'] }}" fill="none" stroke="currentColor" class="text-zinc-900 dark:text-white transition-all duration-300" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
+
         </div>
 
         <!-- X Axis Labels -->
         <div>
+
             <x-aura::separator />
+
             <x-aura::flex align="center" justify="between" class="pt-1">
+
                 @foreach ($chartData[$timeframe]['labels'] as $label)
-                    <x-aura::text variant="mono" size="sm" variant="subtle">{{ $label }}</x-aura::text>
+
+                    <x-aura::text variant="mono" size="sm">
+                        {{ $label }}
+                    </x-aura::text>
+
                 @endforeach
+
             </x-aura::flex>
+
         </div>
+
     </x-aura::flex>
+
 </x-aura::card>

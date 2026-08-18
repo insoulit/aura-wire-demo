@@ -20,9 +20,13 @@ class extends Component {};
 
             <div>
 
-                <x-aura::kicker>Design Blocks</x-aura::kicker>
+                <x-aura::kicker>
+                    Design Blocks
+                </x-aura::kicker>
 
-                <x-aura::heading level="1" size="lg">Slide Overs</x-aura::heading>
+                <x-aura::heading level="1" size="lg">
+                    Slide Overs
+                </x-aura::heading>
 
             </div>
 
@@ -34,7 +38,7 @@ class extends Component {};
 
     </div>
 
-    <!-- 1. Live Interactive Slide-Over Panel -->
+    <!-- 1. Live Interactive Slide Over Panel -->
     <x-aura::code title="1. Live Interactive Side Sheet Drawers">
 
         <x-slot:preview>
@@ -43,9 +47,13 @@ class extends Component {};
 
                 <div class="space-y-1 max-w-md">
 
-                    <x-aura::heading level="3" size="sm">Test Interactive Slide Over Drawers</x-aura::heading>
+                    <x-aura::heading level="3" size="sm">
+                        Test Interactive Slide Over Drawers
+                    </x-aura::heading>
 
-                    <x-aura::text variant="subtle" size="sm">Click below to open right or left sliding drawer panels with smooth Alpine animations.</x-aura::text>
+                    <x-aura::text variant="subtle" size="sm">
+                        Click below to open right or left sliding drawer panels with smooth Alpine animations.
+                    </x-aura::text>
 
                 </div>
 
@@ -67,20 +75,16 @@ class extends Component {};
                     <div class="space-y-4 py-2">
 
                         <x-aura::field label="Status Filter">
-
                             <x-aura::select>
                                 <option>All Statuses</option>
                                 <option>Active</option>
                                 <option>Pending</option>
                                 <option>Archived</option>
                             </x-aura::select>
-
                         </x-aura::field>
 
                         <x-aura::field label="Search Query">
-
                             <x-aura::input placeholder="Search names or emails..." icon="search" />
-
                         </x-aura::field>
 
                     </div>
@@ -120,26 +124,38 @@ class extends Component {};
 
         </x-slot:preview>
 
-        <x-slot:codeSlot>@verbatim<!-- Slide Over Trigger -->
-<x-aura::button variant="primary" x-on:click="$dispatch('open-sheet', 'filter-drawer')">
-    Filters
-</x-aura::button>
+        <x-slot:codeSlot>
 
-<!-- Slide Over Side Sheet Component -->
-<x-aura::sheet name="filter-drawer" side="right" title="Filter Records" description="Narrow down dataset results.">
-    <div class="space-y-4">
-        <x-aura::field label="Status Filter">
-            <x-aura::select>
-                <option>All Statuses</option>
-                <option>Active</option>
-            </x-aura::select>
-        </x-aura::field>
-    </div>
-    <x-slot:footer>
-        <x-aura::button variant="subtle" size="sm" x-on:click="open = false">Cancel</x-aura::button>
-        <x-aura::button variant="primary" size="md">Apply</x-aura::button>
-    </x-slot:footer>
-</x-aura::sheet>@endverbatim</x-slot:codeSlot>
+            @verbatim
+                <!-- Slide Over Trigger -->
+                <x-aura::button variant="primary" x-on:click="$dispatch('open-sheet', 'filter-drawer')">
+                    Filters
+                </x-aura::button>
+
+                <!-- Slide Over Side Sheet Component -->
+                <x-aura::sheet name="filter-drawer" side="right" title="Filter Records" description="Narrow down dataset results.">
+                    <div class="space-y-4">
+                        <x-aura::field label="Status Filter">
+                            <x-aura::select>
+                                <option>All Statuses</option>
+                                <option>Active</option>
+                            </x-aura::select>
+                        </x-aura::field>
+                    </div>
+
+                    <x-slot:footer>
+                        <x-aura::button variant="subtle" size="sm" x-on:click="open = false">
+                            Cancel
+                        </x-aura::button>
+
+                        <x-aura::button variant="primary" size="md">
+                            Apply
+                        </x-aura::button>
+                    </x-slot:footer>
+                </x-aura::sheet>
+            @endverbatim
+
+        </x-slot:codeSlot>
 
     </x-aura::code>
 

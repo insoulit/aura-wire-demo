@@ -28,43 +28,73 @@ class extends Component {
 
     <!-- Top Header -->
     <x-aura::flex direction="col" gap="1">
+
         <x-aura::flex align="center" justify="between" gap="4">
-            <x-aura::heading level="1" size="lg">Account &amp; Workspace Settings</x-aura::heading>
+
+            <x-aura::heading level="1" size="lg">
+                Account &amp; Workspace Settings
+            </x-aura::heading>
+
             <div class="shrink-0">
-                <x-aura::button variant="secondary" size="sm" href="/user" wire:navigate>
-                    <x-aura::icon name="arrow-left" size="xs" />
-                    <span>Back</span>
+
+                <x-aura::button variant="secondary" size="sm" href="/user" wire:navigate icon="arrow-left">
+                    Back
                 </x-aura::button>
+
             </div>
+
         </x-aura::flex>
+
         <x-aura::subheading size="sm">
             Manage your personal profile, 2FA security, notification preferences, and team defaults.
         </x-aura::subheading>
+
     </x-aura::flex>
 
-    @if($saved)
+    @if ($saved)
+
         <x-aura::banner variant="dark" dismissible="true">
             Account &amp; workspace settings updated successfully!
         </x-aura::banner>
+
     @endif
 
     <!-- Main Settings Form Card -->
     <x-aura::card>
+
         <x-aura::flex align="center" justify="between" class="mb-6">
+
             <x-aura::flex align="center" gap="4">
+
                 <x-aura::avatar initials="AK" size="lg" />
+
                 <div>
-                    <x-aura::heading level="2" size="sm">Alex Kovacs</x-aura::heading>
-                    <x-aura::text variant="subtle" size="sm">alex.kovacs@example.com</x-aura::text>
+
+                    <x-aura::heading level="2" size="sm">
+                        Alex Kovacs
+                    </x-aura::heading>
+
+                    <x-aura::text variant="subtle" size="sm">
+                        alex.kovacs@example.com
+                    </x-aura::text>
+
                 </div>
+
             </x-aura::flex>
-            <x-aura::badge variant="positive" size="sm">Active Account</x-aura::badge>
+
+            <x-aura::badge variant="positive" size="sm">
+                Active Account
+            </x-aura::badge>
+
         </x-aura::flex>
 
         <form wire:submit="save">
+
             <x-aura::flex direction="col" gap="6">
+
                 <!-- Inputs Grid -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
                     <x-aura::field label="First Name" required>
                         <x-aura::input wire:model="firstName" placeholder="Enter first name" size="sm" required />
                     </x-aura::field>
@@ -84,6 +114,7 @@ class extends Component {
                             <option value="CET">CET (Central European Time)</option>
                         </x-aura::select>
                     </x-aura::field>
+
                 </div>
 
                 <!-- Bio Textarea -->
@@ -98,22 +129,31 @@ class extends Component {
 
                 <!-- Notifications Checkboxes -->
                 <x-aura::flex direction="col" gap="3" class="pt-2">
-                    <x-aura::heading level="2" size="xs">Notification Preferences</x-aura::heading>
+
+                    <x-aura::heading level="2" size="xs">
+                        Notification Preferences
+                    </x-aura::heading>
+
                     <x-aura::flex direction="col" gap="3">
                         <x-aura::checkbox label="Project Activity Summaries" description="Receive a weekly digest of project progress and team updates." size="sm" checked />
                         <x-aura::checkbox label="Security &amp; Sign in Alerts" description="Get immediate email notifications when new devices log into your account." size="sm" checked />
                     </x-aura::flex>
+
                 </x-aura::flex>
 
                 <!-- Submit Button -->
                 <x-aura::flex align="center" justify="end" class="pt-2">
-                    <x-aura::button variant="primary" size="sm" type="submit">
-                        <x-aura::icon name="check" size="xs" />
-                        <span>Save</span>
+
+                    <x-aura::button variant="primary" size="sm" type="submit" icon="check">
+                        Save
                     </x-aura::button>
+
                 </x-aura::flex>
+
             </x-aura::flex>
+
         </form>
+
     </x-aura::card>
 
 </x-aura::flex>

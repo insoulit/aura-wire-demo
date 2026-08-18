@@ -35,121 +35,216 @@ class extends Component {
 
     <!-- Top Header -->
     <x-aura::flex align="center" justify="between" gap="4" class="px-1">
+
         <div>
-            <x-aura::kicker>Administration</x-aura::kicker>
-            <x-aura::heading level="1" size="lg">User Profile</x-aura::heading>
+
+            <x-aura::kicker>
+                Administration
+            </x-aura::kicker>
+
+            <x-aura::heading level="1" size="lg">
+                User Profile
+            </x-aura::heading>
+
         </div>
+
         <x-aura::flex align="center" gap="2">
-            <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm">
-                <x-aura::icon name="arrow-left" size="xs" />
-                <span>Back</span>
+
+            <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm" icon="arrow-left">
+                Back
             </x-aura::button>
+
         </x-aura::flex>
+
     </x-aura::flex>
 
     <!-- Unified Profile Card -->
     <x-aura::card>
+
         <!-- Profile Header Banner -->
         <x-aura::flex align="center" justify="between" gap="4" class="pb-6 border-b border-zinc-100 dark:border-zinc-800 flex-col sm:flex-row">
+
             <x-aura::flex align="center" gap="4">
+
                 <x-aura::avatar :initials="$user['initials']" size="lg" />
+
                 <x-aura::flex direction="col" gap="1">
+
                     <x-aura::flex align="center" gap="2" :wrap="true">
-                        <x-aura::heading level="2" size="sm">{{ $user['name'] }}</x-aura::heading>
+
+                        <x-aura::heading level="2" size="sm">
+                            {{ $user['name'] }}
+                        </x-aura::heading>
+
                         <x-aura::badge :variant="$user['role'] === 'admin' ? 'neutral' : 'subtle'" size="sm">
                             {{ $user['role_label'] }}
                         </x-aura::badge>
+
                     </x-aura::flex>
-                    <x-aura::text variant="subtle" size="sm">{{ $user['email'] }}</x-aura::text>
+
+                    <x-aura::text variant="subtle" size="sm">
+                        {{ $user['email'] }}
+                    </x-aura::text>
+
                 </x-aura::flex>
+
             </x-aura::flex>
+
             <x-aura::badge :variant="$user['status'] === 'Active' ? 'neutral' : 'subtle'" size="sm">
                 {{ $user['status'] }}
             </x-aura::badge>
+
         </x-aura::flex>
 
         <!-- Specifications & Details -->
         <x-aura::table borderless="true">
+
             <x-aura::table.body>
+
                 <x-aura::table.row>
+
                     <x-aura::table.cell>
-                        <x-aura::text variant="subtle" size="sm">User Identifier</x-aura::text>
+                        <x-aura::text variant="subtle" size="sm">
+                            User Identifier
+                        </x-aura::text>
                     </x-aura::table.cell>
+
                     <x-aura::table.cell align="right">
-                        <x-aura::text variant="mono" size="sm">USR-{{ str_pad($user['id'], 4, '0', STR_PAD_LEFT) }}</x-aura::text>
+                        <x-aura::text variant="mono" size="sm">
+                            USR-{{ str_pad($user['id'], 4, '0', STR_PAD_LEFT) }}
+                        </x-aura::text>
                     </x-aura::table.cell>
+
                 </x-aura::table.row>
+
                 <x-aura::table.row>
+
                     <x-aura::table.cell>
-                        <x-aura::text variant="subtle" size="sm">Full Name</x-aura::text>
+                        <x-aura::text variant="subtle" size="sm">
+                            Full Name
+                        </x-aura::text>
                     </x-aura::table.cell>
+
                     <x-aura::table.cell align="right">
-                        <x-aura::text size="sm" weight="semibold">{{ $user['name'] }}</x-aura::text>
+                        <x-aura::text size="sm" weight="semibold">
+                            {{ $user['name'] }}
+                        </x-aura::text>
                     </x-aura::table.cell>
+
                 </x-aura::table.row>
+
                 <x-aura::table.row>
+
                     <x-aura::table.cell>
-                        <x-aura::text variant="subtle" size="sm">Email Address</x-aura::text>
+                        <x-aura::text variant="subtle" size="sm">
+                            Email Address
+                        </x-aura::text>
                     </x-aura::table.cell>
+
                     <x-aura::table.cell align="right">
-                        <x-aura::text size="sm">{{ $user['email'] }}</x-aura::text>
+                        <x-aura::text size="sm">
+                            {{ $user['email'] }}
+                        </x-aura::text>
                     </x-aura::table.cell>
+
                 </x-aura::table.row>
+
                 <x-aura::table.row>
+
                     <x-aura::table.cell>
-                        <x-aura::text variant="subtle" size="sm">Access Level</x-aura::text>
+                        <x-aura::text variant="subtle" size="sm">
+                            Access Level
+                        </x-aura::text>
                     </x-aura::table.cell>
+
                     <x-aura::table.cell align="right">
                         <x-aura::badge :variant="$user['role'] === 'admin' ? 'neutral' : 'subtle'" size="sm">
                             {{ $user['role_label'] }}
                         </x-aura::badge>
                     </x-aura::table.cell>
+
                 </x-aura::table.row>
+
                 <x-aura::table.row>
+
                     <x-aura::table.cell>
-                        <x-aura::text variant="subtle" size="sm">Account Status</x-aura::text>
+                        <x-aura::text variant="subtle" size="sm">
+                            Account Status
+                        </x-aura::text>
                     </x-aura::table.cell>
+
                     <x-aura::table.cell align="right">
                         <x-aura::badge :variant="$user['status'] === 'Active' ? 'neutral' : 'subtle'" size="sm">
                             {{ $user['status'] }}
                         </x-aura::badge>
                     </x-aura::table.cell>
+
                 </x-aura::table.row>
+
                 <x-aura::table.row>
+
                     <x-aura::table.cell>
-                        <x-aura::text variant="subtle" size="sm">Two Factor Authentication</x-aura::text>
+                        <x-aura::text variant="subtle" size="sm">
+                            Two Factor Authentication
+                        </x-aura::text>
                     </x-aura::table.cell>
+
                     <x-aura::table.cell align="right">
-                        <x-aura::text size="sm">{{ $user['two_factor'] }} (TOTP Authenticator)</x-aura::text>
+                        <x-aura::text size="sm">
+                            {{ $user['two_factor'] }} (TOTP Authenticator)
+                        </x-aura::text>
                     </x-aura::table.cell>
+
                 </x-aura::table.row>
+
                 <x-aura::table.row>
+
                     <x-aura::table.cell>
-                        <x-aura::text variant="subtle" size="sm">Last Login</x-aura::text>
+                        <x-aura::text variant="subtle" size="sm">
+                            Last Login
+                        </x-aura::text>
                     </x-aura::table.cell>
+
                     <x-aura::table.cell align="right">
-                        <x-aura::text size="sm">{{ $user['last_login'] }}</x-aura::text>
+                        <x-aura::text size="sm">
+                            {{ $user['last_login'] }}
+                        </x-aura::text>
                     </x-aura::table.cell>
+
                 </x-aura::table.row>
+
                 <x-aura::table.row>
+
                     <x-aura::table.cell>
-                        <x-aura::text variant="subtle" size="sm">Date Registered</x-aura::text>
+                        <x-aura::text variant="subtle" size="sm">
+                            Date Registered
+                        </x-aura::text>
                     </x-aura::table.cell>
+
                     <x-aura::table.cell align="right">
-                        <x-aura::text size="sm">{{ $user['joined'] }}</x-aura::text>
+                        <x-aura::text size="sm">
+                            {{ $user['joined'] }}
+                        </x-aura::text>
                     </x-aura::table.cell>
+
                 </x-aura::table.row>
+
             </x-aura::table.body>
+
         </x-aura::table>
 
         <x-slot:footer>
+
             <x-aura::center class="w-full">
-                <x-aura::button href="/admin/users/edit?id={{ $user['id'] }}" wire:navigate variant="primary" size="sm">
-                    <x-aura::icon name="pencil" size="xs" />
-                    <span>Edit</span>
+
+                <x-aura::button href="/admin/users/edit?id={{ $user['id'] }}" wire:navigate variant="primary" size="sm" icon="pencil">
+                    Edit
                 </x-aura::button>
+
             </x-aura::center>
+
         </x-slot:footer>
+
     </x-aura::card>
 
 </x-aura::flex>
