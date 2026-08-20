@@ -59,7 +59,11 @@ class extends Component {};
                     Scroll Down
                 </x-aura::text>
 
-                <x-aura::icon name="arrow-down" size="sm" animate="bounce" />
+                <x-aura::animate type="bounce">
+
+                    <x-aura::icon name="arrow-down" size="sm" />
+
+                </x-aura::animate>
 
             </x-aura::flex>
 

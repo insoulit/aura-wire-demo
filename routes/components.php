@@ -50,6 +50,7 @@ Volt::route('/components/accordion', 'component.display.accordion')->name('compo
 Volt::route('/components/avatar', 'component.display.avatar')->name('component.avatar');
 Volt::route('/components/badge', 'component.display.badge')->name('component.badge');
 Volt::route('/components/icon', 'component.display.icon')->name('component.icon');
+Volt::route('/components/animate', 'component.display.animate')->name('component.animate');
 Volt::route('/components/tag', 'component.display.tag')->name('component.tag');
 Volt::route('/components/separator', 'component.display.separator')->name('component.separator');
 Volt::route('/components/progress-bar', 'component.display.progress-bar')->name('component.progress-bar');

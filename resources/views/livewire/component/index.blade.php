@@ -328,6 +328,11 @@ class extends Component {};
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::icon&gt;</x-aura::text>
             </x-aura::card>
 
+            <x-aura::card href="/components/animate">
+                <x-aura::heading level="3" size="sm">Animate</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::animate&gt;</x-aura::text>
+            </x-aura::card>
+
             <x-aura::card href="/components/tag">
                 <x-aura::heading level="3" size="sm">Tag</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::tag&gt;</x-aura::text>

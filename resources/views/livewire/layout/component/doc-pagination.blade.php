@@ -55,6 +55,7 @@ new class extends Component {
             ['title' => 'Avatar', 'url' => '/components/avatar'],
             ['title' => 'Badge', 'url' => '/components/badge'],
             ['title' => 'Icon', 'url' => '/components/icon'],
+            ['title' => 'Animate', 'url' => '/components/animate'],
             ['title' => 'Tag', 'url' => '/components/tag'],
             ['title' => 'Separator', 'url' => '/components/separator'],
             ['title' => 'Progress', 'url' => '/components/progress-bar'],

@@ -155,7 +155,7 @@ new class extends Component {};
     </x-aura::sidebar.dropdown>
 
     <!-- 4. Display Dropdown -->
-    <x-aura::sidebar.dropdown label="Display" icon="layout" :active="request()->is('components/card', 'components/tabs', 'components/accordion', 'components/avatar', 'components/badge', 'components/icon', 'components/tag', 'components/separator', 'components/progress-bar', 'components/skeleton', 'components/empty-state')">
+    <x-aura::sidebar.dropdown label="Display" icon="layout" :active="request()->is('components/card', 'components/tabs', 'components/accordion', 'components/avatar', 'components/badge', 'components/icon', 'components/animate', 'components/tag', 'components/separator', 'components/progress-bar', 'components/skeleton', 'components/empty-state')">
 
         <x-aura::sidebar.item href="/components/card" :active="request()->is('components/card')">
             Card
@@ -179,6 +179,10 @@ new class extends Component {};
 
         <x-aura::sidebar.item href="/components/icon" :active="request()->is('components/icon')">
             Icon
+        </x-aura::sidebar.item>
+
+        <x-aura::sidebar.item href="/components/animate" :active="request()->is('components/animate')">
+            Animate
         </x-aura::sidebar.item>
 
         <x-aura::sidebar.item href="/components/tag" :active="request()->is('components/tag')">
