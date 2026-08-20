@@ -33,7 +33,7 @@ class extends Component {};
         </x-aura::heading>
 
         <x-aura::subheading size="md">
-            Wrap any Aura Wire component, icon, badge, card, button, or text in over 40+ rich CSS micro-animations, continuous motion loops, hover interactions, and directional transforms.
+            Zero configuration motion and interaction wrapper. Add continuous loops, smooth hover micro-interactions, press feedback, and directional transforms to any component out of the box.
         </x-aura::subheading>
 
     </x-aura::card>
@@ -54,11 +54,11 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 1. Continuous Motion Loops -->
-    <x-aura::code title="1. Continuous Motion Loops (Ambient & Indicators)">
+    <x-aura::code title="1. Continuous Motion Loops (Zero-Config Core)">
 
         <x-slot:preview>
 
-            <x-aura::grid cols="2" sm="3" lg="6" gap="4" class="w-full py-4">
+            <x-aura::grid cols="2" sm="4" gap="4" class="w-full py-4">
 
                 <!-- Bounce -->
                 <x-aura::flex direction="col" align="center" gap="2">
@@ -69,19 +69,6 @@ class extends Component {};
 
                     <x-aura::text size="xs" variant="subtle">
                         bounce
-                    </x-aura::text>
-
-                </x-aura::flex>
-
-                <!-- Float -->
-                <x-aura::flex direction="col" align="center" gap="2">
-
-                    <x-aura::animate type="float">
-                        <x-aura::icon name="cloud" size="md" :container="true" />
-                    </x-aura::animate>
-
-                    <x-aura::text size="xs" variant="subtle">
-                        float
                     </x-aura::text>
 
                 </x-aura::flex>
@@ -125,97 +112,6 @@ class extends Component {};
 
                 </x-aura::flex>
 
-                <!-- Wiggle -->
-                <x-aura::flex direction="col" align="center" gap="2">
-
-                    <x-aura::animate type="wiggle">
-                        <x-aura::icon name="sparkles" size="md" :container="true" />
-                    </x-aura::animate>
-
-                    <x-aura::text size="xs" variant="subtle">
-                        wiggle
-                    </x-aura::text>
-
-                </x-aura::flex>
-
-                <!-- Heartbeat -->
-                <x-aura::flex direction="col" align="center" gap="2">
-
-                    <x-aura::animate type="heartbeat">
-                        <x-aura::icon name="heart" size="md" :container="true" />
-                    </x-aura::animate>
-
-                    <x-aura::text size="xs" variant="subtle">
-                        heartbeat
-                    </x-aura::text>
-
-                </x-aura::flex>
-
-                <!-- Throb -->
-                <x-aura::flex direction="col" align="center" gap="2">
-
-                    <x-aura::animate type="throb">
-                        <x-aura::icon name="zap" size="md" :container="true" />
-                    </x-aura::animate>
-
-                    <x-aura::text size="xs" variant="subtle">
-                        throb
-                    </x-aura::text>
-
-                </x-aura::flex>
-
-                <!-- Jiggle -->
-                <x-aura::flex direction="col" align="center" gap="2">
-
-                    <x-aura::animate type="jiggle">
-                        <x-aura::icon name="music" size="md" :container="true" />
-                    </x-aura::animate>
-
-                    <x-aura::text size="xs" variant="subtle">
-                        jiggle
-                    </x-aura::text>
-
-                </x-aura::flex>
-
-                <!-- Spin Reverse -->
-                <x-aura::flex direction="col" align="center" gap="2">
-
-                    <x-aura::animate type="spin-reverse">
-                        <x-aura::icon name="refresh-ccw" size="md" :container="true" />
-                    </x-aura::animate>
-
-                    <x-aura::text size="xs" variant="subtle">
-                        spin-reverse
-                    </x-aura::text>
-
-                </x-aura::flex>
-
-                <!-- Bounce Fast -->
-                <x-aura::flex direction="col" align="center" gap="2">
-
-                    <x-aura::animate type="bounce-fast">
-                        <x-aura::icon name="chevrons-down" size="md" :container="true" />
-                    </x-aura::animate>
-
-                    <x-aura::text size="xs" variant="subtle">
-                        bounce-fast
-                    </x-aura::text>
-
-                </x-aura::flex>
-
-                <!-- Pulse Fast -->
-                <x-aura::flex direction="col" align="center" gap="2">
-
-                    <x-aura::animate type="pulse-fast">
-                        <x-aura::icon name="radio" size="md" :container="true" />
-                    </x-aura::animate>
-
-                    <x-aura::text size="xs" variant="subtle">
-                        pulse-fast
-                    </x-aura::text>
-
-                </x-aura::flex>
-
             </x-aura::grid>
 
         </x-slot:preview>
@@ -223,22 +119,17 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
-                <!-- Standard Vertical Bounce -->
+                <!-- Vertical Bounce -->
                 <x-aura::animate type="bounce">
                     <x-aura::icon name="arrow-down" size="md" :container="true" />
                 </x-aura::animate>
 
-                <!-- Gentle Floating Wave -->
-                <x-aura::animate type="float">
-                    <x-aura::icon name="cloud" size="md" :container="true" />
-                </x-aura::animate>
-
-                <!-- 360 Rotation Spinner -->
+                <!-- 360 Spin Loader -->
                 <x-aura::animate type="spin">
                     <x-aura::icon name="loader-2" size="md" :container="true" />
                 </x-aura::animate>
 
-                <!-- Breathing Opacity Pulse -->
+                <!-- Opacity Pulse -->
                 <x-aura::animate type="pulse">
                     <x-aura::icon name="activity" size="md" :container="true" />
                 </x-aura::animate>
@@ -247,155 +138,14 @@ class extends Component {};
                 <x-aura::animate type="ping">
                     <x-aura::icon name="bell" size="md" :container="true" />
                 </x-aura::animate>
-
-                <!-- Playful Rotational Wiggle -->
-                <x-aura::animate type="wiggle">
-                    <x-aura::icon name="sparkles" size="md" :container="true" />
-                </x-aura::animate>
-
-                <!-- Double Beat Pulse -->
-                <x-aura::animate type="heartbeat">
-                    <x-aura::icon name="heart" size="md" :container="true" />
-                </x-aura::animate>
-
-                <!-- Scale and Rotation Jiggle -->
-                <x-aura::animate type="jiggle">
-                    <x-aura::icon name="music" size="md" :container="true" />
-                </x-aura::animate>
-
-                <!-- Counter Clockwise Rotation -->
-                <x-aura::animate type="spin-reverse">
-                    <x-aura::icon name="refresh-ccw" size="md" :container="true" />
-                </x-aura::animate>
             @endverbatim
 
         </x-slot:codeSlot>
 
     </x-aura::code>
 
-    <!-- 2. Slow Ambient Variations -->
-    <x-aura::code title="2. Relaxed Ambient Loops (Slow Motion)">
-
-        <x-slot:preview>
-
-            <x-aura::grid cols="2" sm="3" lg="5" gap="4" class="w-full py-4">
-
-                <!-- Bounce Slow -->
-                <x-aura::flex direction="col" align="center" gap="2">
-
-                    <x-aura::animate type="bounce-slow">
-                        <x-aura::badge variant="neutral" size="md">
-                            2.5s Bounce
-                        </x-aura::badge>
-                    </x-aura::animate>
-
-                    <x-aura::text size="xs" variant="subtle">
-                        bounce-slow
-                    </x-aura::text>
-
-                </x-aura::flex>
-
-                <!-- Float Slow -->
-                <x-aura::flex direction="col" align="center" gap="2">
-
-                    <x-aura::animate type="float-slow">
-                        <x-aura::badge variant="subtle" size="md">
-                            5s Float
-                        </x-aura::badge>
-                    </x-aura::animate>
-
-                    <x-aura::text size="xs" variant="subtle">
-                        float-slow
-                    </x-aura::text>
-
-                </x-aura::flex>
-
-                <!-- Spin Slow -->
-                <x-aura::flex direction="col" align="center" gap="2">
-
-                    <x-aura::animate type="spin-slow">
-                        <x-aura::icon name="settings" size="md" :container="true" />
-                    </x-aura::animate>
-
-                    <x-aura::text size="xs" variant="subtle">
-                        spin-slow (3s)
-                    </x-aura::text>
-
-                </x-aura::flex>
-
-                <!-- Spin Reverse Slow -->
-                <x-aura::flex direction="col" align="center" gap="2">
-
-                    <x-aura::animate type="spin-reverse-slow">
-                        <x-aura::icon name="compass" size="md" :container="true" />
-                    </x-aura::animate>
-
-                    <x-aura::text size="xs" variant="subtle">
-                        spin-reverse-slow
-                    </x-aura::text>
-
-                </x-aura::flex>
-
-                <!-- Pulse Slow -->
-                <x-aura::flex direction="col" align="center" gap="2">
-
-                    <x-aura::animate type="pulse-slow">
-                        <x-aura::badge variant="positive" size="md">
-                            Live Status
-                        </x-aura::badge>
-                    </x-aura::animate>
-
-                    <x-aura::text size="xs" variant="subtle">
-                        pulse-slow (3.5s)
-                    </x-aura::text>
-
-                </x-aura::flex>
-
-            </x-aura::grid>
-
-        </x-slot:preview>
-
-        <x-slot:codeSlot>
-
-            @verbatim
-                <!-- Soft 2.5s Bounce -->
-                <x-aura::animate type="bounce-slow">
-                    <x-aura::badge variant="neutral" size="md">
-                        2.5s Bounce
-                    </x-aura::badge>
-                </x-aura::animate>
-
-                <!-- Calm 5s Floating Motion -->
-                <x-aura::animate type="float-slow">
-                    <x-aura::badge variant="subtle" size="md">
-                        5s Float
-                    </x-aura::badge>
-                </x-aura::animate>
-
-                <!-- Ambient 3s Gear Rotation -->
-                <x-aura::animate type="spin-slow">
-                    <x-aura::icon name="settings" size="md" :container="true" />
-                </x-aura::animate>
-
-                <!-- Slow Reverse Compass Rotation -->
-                <x-aura::animate type="spin-reverse-slow">
-                    <x-aura::icon name="compass" size="md" :container="true" />
-                </x-aura::animate>
-
-                <!-- Slow Ambient Pulse -->
-                <x-aura::animate type="pulse-slow">
-                    <x-aura::badge variant="positive" size="md">
-                        Live Status
-                    </x-aura::badge>
-                </x-aura::animate>
-            @endverbatim
-
-        </x-slot:codeSlot>
-
-    </x-aura::code>
-
-    <!-- 3. Interactive Hover Micro-Interactions -->
-    <x-aura::code title="3. Interactive Hover Micro-Interactions (Hover to Trigger)">
+    <!-- 2. Interactive Hover Micro-Interactions -->
+    <x-aura::code title="2. Interactive Hover Micro-Interactions (Hover to Trigger)">
 
         <x-slot:preview>
 
@@ -474,19 +224,6 @@ class extends Component {};
 
                 </x-aura::flex>
 
-                <!-- Hover Spin Full -->
-                <x-aura::flex direction="col" align="center" gap="2">
-
-                    <x-aura::animate type="hover-spin-full">
-                        <x-aura::icon name="sun" size="md" :container="true" />
-                    </x-aura::animate>
-
-                    <x-aura::text size="xs" variant="subtle">
-                        hover-spin-full (360°)
-                    </x-aura::text>
-
-                </x-aura::flex>
-
                 <!-- Hover Wiggle -->
                 <x-aura::flex direction="col" align="center" gap="2">
 
@@ -513,6 +250,19 @@ class extends Component {};
 
                 </x-aura::flex>
 
+                <!-- Hover Glow -->
+                <x-aura::flex direction="col" align="center" gap="2">
+
+                    <x-aura::animate type="hover-glow">
+                        <x-aura::icon name="star" size="md" :container="true" />
+                    </x-aura::animate>
+
+                    <x-aura::text size="xs" variant="subtle">
+                        hover-glow
+                    </x-aura::text>
+
+                </x-aura::flex>
+
             </x-aura::grid>
 
         </x-slot:preview>
@@ -527,31 +277,26 @@ class extends Component {};
                     </x-aura::button>
                 </x-aura::animate>
 
-                <!-- Subtle Scale -->
+                <!-- Subtle Scale (105%) -->
                 <x-aura::animate type="hover-scale-sm">
                     <x-aura::button variant="secondary" size="sm">
-                        Scale Sm (105%)
+                        Scale Sm
                     </x-aura::button>
                 </x-aura::animate>
 
-                <!-- Elevate and Shadow on Hover -->
+                <!-- Elevate and Drop Shadow on Hover -->
                 <x-aura::animate type="hover-lift">
                     <x-aura::button variant="secondary" size="sm">
                         Hover Lift
                     </x-aura::button>
                 </x-aura::animate>
 
-                <!-- 180 Rotation on Hover -->
+                <!-- 180° Spin on Hover -->
                 <x-aura::animate type="hover-spin">
                     <x-aura::icon name="refresh-cw" size="md" :container="true" />
                 </x-aura::animate>
 
-                <!-- 360 Full Spin on Hover -->
-                <x-aura::animate type="hover-spin-full">
-                    <x-aura::icon name="sun" size="md" :container="true" />
-                </x-aura::animate>
-
-                <!-- Wobble Tilt on Mouseover -->
+                <!-- Tilt Wiggle on Hover -->
                 <x-aura::animate type="hover-wiggle">
                     <x-aura::icon name="bell" size="md" :container="true" />
                 </x-aura::animate>
@@ -561,86 +306,8 @@ class extends Component {};
 
     </x-aura::code>
 
-    <!-- 4. Active & Click Press States -->
-    <x-aura::code title="4. Active & Press States (Click to Trigger)">
-
-        <x-slot:preview>
-
-            <x-aura::flex align="center" justify="around" :wrap="true" gap="6" class="w-full py-4">
-
-                <!-- Active Press -->
-                <x-aura::flex direction="col" align="center" gap="2">
-
-                    <x-aura::animate type="active-press">
-                        <x-aura::button variant="primary" size="sm">
-                            Press Scale
-                        </x-aura::button>
-                    </x-aura::animate>
-
-                    <x-aura::text size="xs" variant="subtle">
-                        active-press
-                    </x-aura::text>
-
-                </x-aura::flex>
-
-                <!-- Active Sink -->
-                <x-aura::flex direction="col" align="center" gap="2">
-
-                    <x-aura::animate type="active-sink">
-                        <x-aura::button variant="secondary" size="sm">
-                            Press Sink
-                        </x-aura::button>
-                    </x-aura::animate>
-
-                    <x-aura::text size="xs" variant="subtle">
-                        active-sink
-                    </x-aura::text>
-
-                </x-aura::flex>
-
-                <!-- Active Bounce -->
-                <x-aura::flex direction="col" align="center" gap="2">
-
-                    <x-aura::animate type="active-bounce">
-                        <x-aura::button variant="secondary" size="sm">
-                            Deep Click
-                        </x-aura::button>
-                    </x-aura::animate>
-
-                    <x-aura::text size="xs" variant="subtle">
-                        active-bounce
-                    </x-aura::text>
-
-                </x-aura::flex>
-
-            </x-aura::flex>
-
-        </x-slot:preview>
-
-        <x-slot:codeSlot>
-
-            @verbatim
-                <!-- Press Scale Down -->
-                <x-aura::animate type="active-press">
-                    <x-aura::button variant="primary" size="sm">
-                        Press Scale
-                    </x-aura::button>
-                </x-aura::animate>
-
-                <!-- Sink Downward on Click -->
-                <x-aura::animate type="active-sink">
-                    <x-aura::button variant="secondary" size="sm">
-                        Press Sink
-                    </x-aura::button>
-                </x-aura::animate>
-            @endverbatim
-
-        </x-slot:codeSlot>
-
-    </x-aura::code>
-
-    <!-- 5. Hover Rotations and Flips -->
-    <x-aura::code title="5. Hover Rotations & Directional Flips (Hover to Trigger)">
+    <!-- 3. Hover Rotations & Flips -->
+    <x-aura::code title="3. Hover Rotations & Directional Flips (Hover to Trigger)">
 
         <x-slot:preview>
 
@@ -759,6 +426,188 @@ class extends Component {};
                 <!-- 270° Rotation on Hover -->
                 <x-aura::animate type="hover-rotate-270">
                     <x-aura::icon name="compass" size="md" :container="true" />
+                </x-aura::animate>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 4. Active & Click Press States -->
+    <x-aura::code title="4. Active & Press States (Click to Trigger)">
+
+        <x-slot:preview>
+
+            <x-aura::flex align="center" justify="around" :wrap="true" gap="6" class="w-full py-4">
+
+                <!-- Active Press -->
+                <x-aura::flex direction="col" align="center" gap="2">
+
+                    <x-aura::animate type="active-press">
+                        <x-aura::button variant="primary" size="sm">
+                            Press Scale
+                        </x-aura::button>
+                    </x-aura::animate>
+
+                    <x-aura::text size="xs" variant="subtle">
+                        active-press
+                    </x-aura::text>
+
+                </x-aura::flex>
+
+                <!-- Active Sink -->
+                <x-aura::flex direction="col" align="center" gap="2">
+
+                    <x-aura::animate type="active-sink">
+                        <x-aura::button variant="secondary" size="sm">
+                            Press Sink
+                        </x-aura::button>
+                    </x-aura::animate>
+
+                    <x-aura::text size="xs" variant="subtle">
+                        active-sink
+                    </x-aura::text>
+
+                </x-aura::flex>
+
+                <!-- Active Bounce -->
+                <x-aura::flex direction="col" align="center" gap="2">
+
+                    <x-aura::animate type="active-bounce">
+                        <x-aura::button variant="secondary" size="sm">
+                            Deep Click
+                        </x-aura::button>
+                    </x-aura::animate>
+
+                    <x-aura::text size="xs" variant="subtle">
+                        active-bounce
+                    </x-aura::text>
+
+                </x-aura::flex>
+
+            </x-aura::flex>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <!-- Press Scale Down -->
+                <x-aura::animate type="active-press">
+                    <x-aura::button variant="primary" size="sm">
+                        Press Scale
+                    </x-aura::button>
+                </x-aura::animate>
+
+                <!-- Sink Downward on Click -->
+                <x-aura::animate type="active-sink">
+                    <x-aura::button variant="secondary" size="sm">
+                        Press Sink
+                    </x-aura::button>
+                </x-aura::animate>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 5. Static Orientations and Flips -->
+    <x-aura::code title="5. Static Orientations & Transformations">
+
+        <x-slot:preview>
+
+            <x-aura::grid cols="2" sm="3" lg="5" gap="4" class="w-full py-4">
+
+                <!-- Flip X -->
+                <x-aura::flex direction="col" align="center" gap="2">
+
+                    <x-aura::animate type="flip-x">
+                        <x-aura::icon name="arrow-right" size="md" :container="true" />
+                    </x-aura::animate>
+
+                    <x-aura::text size="xs" variant="subtle">
+                        flip-x
+                    </x-aura::text>
+
+                </x-aura::flex>
+
+                <!-- Flip Y -->
+                <x-aura::flex direction="col" align="center" gap="2">
+
+                    <x-aura::animate type="flip-y">
+                        <x-aura::icon name="arrow-down" size="md" :container="true" />
+                    </x-aura::animate>
+
+                    <x-aura::text size="xs" variant="subtle">
+                        flip-y
+                    </x-aura::text>
+
+                </x-aura::flex>
+
+                <!-- Rotate 45 -->
+                <x-aura::flex direction="col" align="center" gap="2">
+
+                    <x-aura::animate type="rotate-45">
+                        <x-aura::icon name="plus" size="md" :container="true" />
+                    </x-aura::animate>
+
+                    <x-aura::text size="xs" variant="subtle">
+                        rotate-45
+                    </x-aura::text>
+
+                </x-aura::flex>
+
+                <!-- Rotate 90 -->
+                <x-aura::flex direction="col" align="center" gap="2">
+
+                    <x-aura::animate type="rotate-90">
+                        <x-aura::icon name="arrow-right" size="md" :container="true" />
+                    </x-aura::animate>
+
+                    <x-aura::text size="xs" variant="subtle">
+                        rotate-90
+                    </x-aura::text>
+
+                </x-aura::flex>
+
+                <!-- Rotate 180 -->
+                <x-aura::flex direction="col" align="center" gap="2">
+
+                    <x-aura::animate type="rotate-180">
+                        <x-aura::icon name="arrow-up" size="md" :container="true" />
+                    </x-aura::animate>
+
+                    <x-aura::text size="xs" variant="subtle">
+                        rotate-180
+                    </x-aura::text>
+
+                </x-aura::flex>
+
+            </x-aura::grid>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <!-- Horizontal Mirror Flip -->
+                <x-aura::animate type="flip-x">
+                    <x-aura::icon name="arrow-right" size="md" :container="true" />
+                </x-aura::animate>
+
+                <!-- Vertical Mirror Flip -->
+                <x-aura::animate type="flip-y">
+                    <x-aura::icon name="arrow-down" size="md" :container="true" />
+                </x-aura::animate>
+
+                <!-- 45° Angle -->
+                <x-aura::animate type="rotate-45">
+                    <x-aura::icon name="plus" size="md" :container="true" />
+                </x-aura::animate>
+
+                <!-- 90° Right Angle -->
+                <x-aura::animate type="rotate-90">
+                    <x-aura::icon name="arrow-right" size="md" :container="true" />
                 </x-aura::animate>
             @endverbatim
 
@@ -905,31 +754,7 @@ class extends Component {};
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
-                            bounce-slow
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            bounce-fast
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            float
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            float-slow
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
                             spin
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            spin-slow
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            spin-reverse
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
@@ -937,31 +762,7 @@ class extends Component {};
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
-                            pulse-slow
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            pulse-fast
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
                             ping
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            wiggle
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            heartbeat
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            throb
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            jiggle
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
@@ -981,11 +782,27 @@ class extends Component {};
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
-                            hover-spin-full
+                            hover-wiggle
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
-                            hover-wiggle
+                            hover-rotate-45
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            hover-rotate-90
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            hover-rotate-180
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            hover-flip-x
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            hover-flip-y
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
