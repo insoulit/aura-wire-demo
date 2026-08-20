@@ -28,7 +28,7 @@ new class extends Component {
         <!-- Header with Clear Visual Legends -->
         <x-aura::flex align="center" justify="between" gap="3" wrap="true">
 
-            <div>
+            <x-aura::flex direction="col" gap="0.5" width="auto">
 
                 <x-aura::heading level="2" size="sm">
                     Event Volume
@@ -46,10 +46,10 @@ new class extends Component {
 
                 </x-aura::flex>
 
-            </div>
+            </x-aura::flex>
 
             <!-- Clear High Contrast Monochrome Legends -->
-            <x-aura::flex align="center" gap="3">
+            <x-aura::flex align="center" gap="3" width="auto">
 
                 <x-aura::flex align="center" gap="1.5">
 
@@ -111,7 +111,7 @@ new class extends Component {
         </div>
 
         <!-- Footer Summary Info -->
-        <div>
+        <x-aura::flex direction="col" gap="1.5">
 
             <x-aura::separator />
 
@@ -127,7 +127,7 @@ new class extends Component {
 
             </x-aura::flex>
 
-        </div>
+        </x-aura::flex>
 
     </x-aura::flex>
 

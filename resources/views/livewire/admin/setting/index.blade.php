@@ -16,7 +16,7 @@ class extends Component {};
     <!-- Top Header -->
     <x-aura::flex direction="col" gap="2">
 
-        <x-aura::flex align="end" justify="between" gap="4">
+        <x-aura::flex justify="between" gap="4">
 
             <x-aura::flex direction="col" gap="none">
 

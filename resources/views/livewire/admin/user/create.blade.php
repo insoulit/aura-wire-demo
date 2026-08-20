@@ -46,9 +46,9 @@ class extends Component {
 <x-aura::container size="3xl" gap="3">
 
     <!-- Header with Back Button -->
-    <x-aura::flex align="end" justify="between" gap="4">
+    <x-aura::flex justify="between" gap="4">
 
-        <x-aura::flex direction="col" gap="none" width="auto">
+        <x-aura::flex direction="col" gap="none">
 
             <x-aura::kicker>
                 Administration
@@ -60,7 +60,7 @@ class extends Component {
 
         </x-aura::flex>
 
-        <x-aura::flex align="center" justify="end" gap="2" width="auto">
+        <x-aura::flex justify="end" gap="2">
 
             <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm" icon="arrow-left">
                 Back

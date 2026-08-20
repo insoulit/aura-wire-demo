@@ -49,7 +49,7 @@ new class extends Component {
         <!-- Header with Period Toggles -->
         <x-aura::flex align="center" justify="between" gap="3" wrap="true">
 
-            <div>
+            <x-aura::flex direction="col" gap="1" width="auto">
 
                 <x-aura::flex align="center" gap="2">
 
@@ -79,10 +79,10 @@ new class extends Component {
 
                 </x-aura::flex>
 
-            </div>
+            </x-aura::flex>
 
             <!-- Period Filter Tabs -->
-            <x-aura::flex align="center" gap="1">
+            <x-aura::flex align="center" gap="1" width="auto">
 
                 @foreach (['Day', 'Week', 'Month'] as $period)
 
@@ -127,7 +127,7 @@ new class extends Component {
         </div>
 
         <!-- X Axis Labels -->
-        <div>
+        <x-aura::flex direction="col" gap="1.5">
 
             <x-aura::separator />
 
@@ -143,7 +143,7 @@ new class extends Component {
 
             </x-aura::flex>
 
-        </div>
+        </x-aura::flex>
 
     </x-aura::flex>
 

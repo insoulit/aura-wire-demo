@@ -192,9 +192,9 @@ class extends Component {
 <x-aura::container size="6xl" gap="3">
 
     <!-- Top Header -->
-    <x-aura::flex align="end" justify="between" gap="4">
+    <x-aura::flex justify="between" gap="4">
 
-        <x-aura::flex direction="col" gap="none" width="auto">
+        <x-aura::flex direction="col" gap="none">
 
             <x-aura::kicker>
                 Administration
@@ -206,7 +206,7 @@ class extends Component {
 
         </x-aura::flex>
 
-        <x-aura::flex align="center" justify="end" gap="2" width="auto">
+        <x-aura::flex justify="end" gap="2">
 
             <x-aura::button variant="secondary" size="sm" icon="download">
                 Export
@@ -391,7 +391,7 @@ class extends Component {
 
                                 <x-aura::avatar :initials="$user['initials']" size="sm" />
 
-                                <div>
+                                <x-aura::flex direction="col" gap="none">
 
                                     <x-aura::heading level="3" size="xs">
                                         {{ $user['name'] }}
@@ -401,7 +401,7 @@ class extends Component {
                                         {{ $user['email'] }}
                                     </x-aura::text>
 
-                                </div>
+                                </x-aura::flex>
 
                             </x-aura::flex>
 

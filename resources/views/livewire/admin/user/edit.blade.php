@@ -56,9 +56,9 @@ class extends Component {
 <x-aura::container size="3xl" gap="3">
 
     <!-- Header with Back Button -->
-    <x-aura::flex align="end" justify="between" gap="4">
+    <x-aura::flex justify="between" gap="4">
 
-        <x-aura::flex direction="col" gap="none" width="auto">
+        <x-aura::flex direction="col" gap="none">
 
             <x-aura::kicker>
                 Administration
@@ -70,7 +70,7 @@ class extends Component {
 
         </x-aura::flex>
 
-        <x-aura::flex align="center" justify="end" gap="2" width="auto">
+        <x-aura::flex justify="end" gap="2">
 
             <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm" icon="arrow-left">
                 Back
@@ -100,7 +100,7 @@ class extends Component {
 
                     <x-aura::avatar :initials="$initials" size="md" />
 
-                    <div>
+                    <x-aura::flex direction="col" gap="none">
 
                         <x-aura::text weight="bold" size="sm">
                             {{ $name }}
@@ -110,7 +110,7 @@ class extends Component {
                             {{ $email }}
                         </x-aura::text>
 
-                    </div>
+                    </x-aura::flex>
 
                 </x-aura::flex>
 
@@ -183,7 +183,7 @@ class extends Component {
 
         <x-aura::flex align="center" justify="between" gap="4" class="py-1">
 
-            <div>
+            <x-aura::flex direction="col" gap="none">
 
                 <x-aura::text weight="semibold" size="sm" class="text-red-600 dark:text-red-400">
                     Delete Account
@@ -193,7 +193,7 @@ class extends Component {
                     Permanently remove this user account and active access.
                 </x-aura::text>
 
-            </div>
+            </x-aura::flex>
 
             <x-aura::button variant="danger" size="sm" type="button" x-on:click="$dispatch('open-modal', 'delete-user-modal')">
                 Delete
