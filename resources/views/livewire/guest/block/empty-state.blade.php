@@ -11,32 +11,32 @@ class extends Component {};
 
 ?>
 
-<x-aura::flex direction="col" gap="6" class="w-full max-w-4xl mx-auto py-6">
+<x-aura::container size="4xl" gap="6" class="py-6">
 
     <!-- Top Header -->
-    <div class="px-1">
+    <x-aura::flex justify="between" gap="4">
 
-        <x-aura::flex align="center" justify="between" gap="4">
+        <x-aura::flex direction="col" gap="none">
 
-            <div>
+            <x-aura::kicker>
+                Design Blocks
+            </x-aura::kicker>
 
-                <x-aura::kicker>
-                    Design Blocks
-                </x-aura::kicker>
+            <x-aura::heading level="1" size="lg">
+                Empty State
+            </x-aura::heading>
 
-                <x-aura::heading level="1" size="lg">
-                    Empty State
-                </x-aura::heading>
+        </x-aura::flex>
 
-            </div>
+        <x-aura::flex justify="end" gap="2">
 
-            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" icon="arrow-left">
+            <x-aura::button href="/guest#design-block" wire:navigate variant="secondary" size="sm" icon="arrow-left">
                 Back
             </x-aura::button>
 
         </x-aura::flex>
 
-    </div>
+    </x-aura::flex>
 
     <!-- Empty State Block Preview -->
     <x-aura::code title="First Time Onboarding Empty State Block">
@@ -87,4 +87,4 @@ class extends Component {};
 
     </x-aura::code>
 
-</x-aura::flex>
+</x-aura::container>

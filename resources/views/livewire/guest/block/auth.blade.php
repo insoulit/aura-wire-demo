@@ -6,40 +6,40 @@ use Livewire\Attributes\Title;
 
 new 
 #[Layout('livewire.layout.app')] 
-#[Title('Auth & Security — Guest Portal | Aura Wire')] 
+#[Title('Auth and Security — Guest Portal | Aura Wire')] 
 class extends Component {};
 
 ?>
 
-<x-aura::flex direction="col" gap="4" class="w-full max-w-4xl mx-auto py-6">
+<x-aura::container size="4xl" gap="6" class="py-6">
 
     <!-- Top Header -->
-    <div class="px-1">
+    <x-aura::flex justify="between" gap="4">
 
-        <x-aura::flex align="center" justify="between" gap="4">
+        <x-aura::flex direction="col" gap="none">
 
-            <div>
+            <x-aura::kicker>
+                Design Blocks
+            </x-aura::kicker>
 
-                <x-aura::kicker>
-                    Design Blocks
-                </x-aura::kicker>
+            <x-aura::heading level="1" size="lg">
+                Auth and Security
+            </x-aura::heading>
 
-                <x-aura::heading level="1" size="lg">
-                    Auth &amp; Security
-                </x-aura::heading>
+        </x-aura::flex>
 
-            </div>
+        <x-aura::flex justify="end" gap="2">
 
-            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" icon="arrow-left">
+            <x-aura::button href="/guest#design-block" wire:navigate variant="secondary" size="sm" icon="arrow-left">
                 Back
             </x-aura::button>
 
         </x-aura::flex>
 
-    </div>
+    </x-aura::flex>
 
     <!-- Login Block Preview -->
-    <x-aura::code title="Sign In &amp; Security Authentication Block">
+    <x-aura::code title="Sign In and Security Authentication Block">
 
         <x-slot:preview>
 
@@ -49,9 +49,7 @@ class extends Component {};
 
                     <x-aura::flex direction="col" gap="2" align="center" class="text-center">
 
-                        <div class="w-12 h-12 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white mx-auto flex items-center justify-center font-bold text-xl border border-zinc-200 dark:border-zinc-700">
-                            A
-                        </div>
+                        <x-aura::icon name="lock" size="lg" :container="true" />
 
                         <x-aura::heading level="3" size="md">
                             Welcome Back
@@ -66,11 +64,15 @@ class extends Component {};
                     <form class="space-y-4 pt-2" onsubmit="event.preventDefault()">
 
                         <x-aura::field label="Work Email">
+
                             <x-aura::input type="email" placeholder="alex@company.com" value="alex@company.com" icon="mail" />
+
                         </x-aura::field>
 
                         <x-aura::field label="Password">
+
                             <x-aura::input type="password" value="secret123" placeholder="••••••••" icon="lock" />
+
                         </x-aura::field>
 
                         <x-aura::flex align="center" justify="between">
@@ -100,6 +102,8 @@ class extends Component {};
             @verbatim
                 <x-aura::card>
                     <x-aura::flex direction="col" gap="2" align="center" class="text-center">
+                        <x-aura::icon name="lock" size="lg" :container="true" />
+
                         <x-aura::heading level="3" size="md">
                             Welcome Back
                         </x-aura::heading>
@@ -137,4 +141,4 @@ class extends Component {};
 
     </x-aura::code>
 
-</x-aura::flex>
+</x-aura::container>

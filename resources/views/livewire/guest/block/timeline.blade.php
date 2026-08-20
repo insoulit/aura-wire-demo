@@ -11,41 +11,41 @@ class extends Component {};
 
 ?>
 
-<x-aura::flex direction="col" gap="6" class="w-full max-w-4xl mx-auto py-6">
+<x-aura::container size="4xl" gap="6" class="py-6">
 
     <!-- Top Header -->
-    <div class="px-1">
+    <x-aura::flex justify="between" gap="4">
 
-        <x-aura::flex align="center" justify="between" gap="4">
+        <x-aura::flex direction="col" gap="none">
 
-            <div>
+            <x-aura::kicker>
+                Design Blocks
+            </x-aura::kicker>
 
-                <x-aura::kicker>
-                    Design Blocks
-                </x-aura::kicker>
+            <x-aura::heading level="1" size="lg">
+                Timeline
+            </x-aura::heading>
 
-                <x-aura::heading level="1" size="lg">
-                    Timeline
-                </x-aura::heading>
+        </x-aura::flex>
 
-            </div>
+        <x-aura::flex justify="end" gap="2">
 
-            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" icon="arrow-left">
+            <x-aura::button href="/guest#design-block" wire:navigate variant="secondary" size="sm" icon="arrow-left">
                 Back
             </x-aura::button>
 
         </x-aura::flex>
 
-    </div>
+    </x-aura::flex>
 
     <!-- Timeline Block Preview -->
-    <x-aura::code title="Deployment &amp; Activity Log Stream Block">
+    <x-aura::code title="Deployment and Activity Log Stream Block">
 
         <x-slot:preview>
 
-            <x-aura::card>
+            <x-aura::card gap="4">
 
-                <div class="flex items-center justify-between">
+                <x-aura::flex align="center" justify="between">
 
                     <x-aura::kicker>
                         System Activity Stream
@@ -55,8 +55,8 @@ class extends Component {};
                         Live Feed
                     </x-aura::tag>
 
-                </div>
-                
+                </x-aura::flex>
+
                 <div class="space-y-6 relative ml-3 pl-6 border-l border-zinc-200 dark:border-zinc-800">
 
                     <!-- Entry 1 -->
@@ -64,19 +64,19 @@ class extends Component {};
 
                         <span class="absolute -left-[30px] top-1 h-2.5 w-2.5 rounded-full bg-zinc-900 dark:bg-white ring-4 ring-white dark:ring-zinc-900"></span>
 
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                        <x-aura::flex direction="col" sm="row" align="start" smAlign="center" justify="between" gap="1">
 
                             <x-aura::heading level="3" size="sm">
                                 v2.4.0 Deployed to Production
                             </x-aura::heading>
 
-                            <x-aura::text variant="subtle" size="xs">
+                            <x-aura::text variant="subtle" size="sm">
                                 12 min ago
                             </x-aura::text>
 
-                        </div>
+                        </x-aura::flex>
 
-                        <x-aura::text variant="subtle" size="xs">
+                        <x-aura::text variant="subtle" size="sm">
                             Triggered by Alex Morgan via GitHub Webhook deployment pipeline.
                         </x-aura::text>
 
@@ -87,20 +87,20 @@ class extends Component {};
 
                         <span class="absolute -left-[30px] top-1 h-2.5 w-2.5 rounded-full bg-zinc-400 dark:bg-zinc-600 ring-4 ring-white dark:ring-zinc-900"></span>
 
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                        <x-aura::flex direction="col" sm="row" align="start" smAlign="center" justify="between" gap="1">
 
                             <x-aura::heading level="3" size="sm">
-                                SSL Certificate Auto-Renewed
+                                SSL Certificate Auto Renewed
                             </x-aura::heading>
 
-                            <x-aura::text variant="subtle" size="xs">
+                            <x-aura::text variant="subtle" size="sm">
                                 2 hours ago
                             </x-aura::text>
 
-                        </div>
+                        </x-aura::flex>
 
-                        <x-aura::text variant="subtle" size="xs">
-                            Let's Encrypt automated verification completed for domain *.aurawire.dev.
+                        <x-aura::text variant="subtle" size="sm">
+                            Let's Encrypt automated TLS certificate renewed for api.aurawire.io.
                         </x-aura::text>
 
                     </div>
@@ -108,22 +108,22 @@ class extends Component {};
                     <!-- Entry 3 -->
                     <div class="relative space-y-1">
 
-                        <span class="absolute -left-[30px] top-1 h-2.5 w-2.5 rounded-full bg-zinc-400 dark:bg-zinc-600 ring-4 ring-white dark:ring-zinc-900"></span>
+                        <span class="absolute -left-[30px] top-1 h-2.5 w-2.5 rounded-full bg-zinc-300 dark:bg-zinc-700 ring-4 ring-white dark:ring-zinc-900"></span>
 
-                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                        <x-aura::flex direction="col" sm="row" align="start" smAlign="center" justify="between" gap="1">
 
                             <x-aura::heading level="3" size="sm">
-                                Database Snapshot Backup
+                                PostgreSQL Database Backup Snapshot
                             </x-aura::heading>
 
-                            <x-aura::text variant="subtle" size="xs">
-                                Yesterday at 04:00 AM
+                            <x-aura::text variant="subtle" size="sm">
+                                6 hours ago
                             </x-aura::text>
 
-                        </div>
+                        </x-aura::flex>
 
-                        <x-aura::text variant="subtle" size="xs">
-                            Automated backup snapshot archived to primary S3 storage bucket (4.2 GB).
+                        <x-aura::text variant="subtle" size="sm">
+                            Daily automated cluster snapshot saved to encrypted S3 glacier vault.
                         </x-aura::text>
 
                     </div>
@@ -137,31 +137,27 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::card>
-                    <div class="flex items-center justify-between">
+                <x-aura::card gap="4">
+                    <x-aura::flex align="center" justify="between">
                         <x-aura::kicker>
                             System Activity Stream
                         </x-aura::kicker>
-
                         <x-aura::tag variant="neutral" size="sm">
                             Live Feed
                         </x-aura::tag>
-                    </div>
+                    </x-aura::flex>
 
                     <div class="space-y-6 relative ml-3 pl-6 border-l border-zinc-200 dark:border-zinc-800">
                         <div class="relative space-y-1">
-                            <span class="absolute -left-[30px] top-1 h-2.5 w-2.5 rounded-full bg-zinc-900 dark:bg-white ring-4 ring-white dark:ring-zinc-900"></span>
-                            <div class="flex justify-between text-xs">
+                            <span class="absolute -left-[30px] top-1 h-2.5 w-2.5 rounded-full bg-zinc-900 dark:bg-white"></span>
+                            <div class="flex justify-between">
                                 <x-aura::heading level="3" size="sm">
-                                    v2.4.0 Deployed to Production
+                                    v2.4.0 Deployed
                                 </x-aura::heading>
-                                <x-aura::text variant="subtle" size="xs" class="font-mono">
+                                <x-aura::text variant="subtle" size="sm">
                                     12 min ago
                                 </x-aura::text>
                             </div>
-                            <x-aura::text variant="subtle" size="xs">
-                                Triggered by Alex Morgan via GitHub Webhook.
-                            </x-aura::text>
                         </div>
                     </div>
                 </x-aura::card>
@@ -171,4 +167,4 @@ class extends Component {};
 
     </x-aura::code>
 
-</x-aura::flex>
+</x-aura::container>

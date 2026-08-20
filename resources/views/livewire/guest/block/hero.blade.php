@@ -11,39 +11,39 @@ class extends Component {};
 
 ?>
 
-<x-aura::flex direction="col" gap="6" class="w-full max-w-4xl mx-auto py-6">
+<x-aura::container size="4xl" gap="6" class="py-6">
 
     <!-- Top Header -->
-    <div class="px-1">
+    <x-aura::flex justify="between" gap="4">
 
-        <x-aura::flex align="center" justify="between" gap="4">
+        <x-aura::flex direction="col" gap="none">
 
-            <div>
+            <x-aura::kicker>
+                Design Blocks
+            </x-aura::kicker>
 
-                <x-aura::kicker>
-                    Design Blocks
-                </x-aura::kicker>
+            <x-aura::heading level="1" size="lg">
+                Hero Header
+            </x-aura::heading>
 
-                <x-aura::heading level="1" size="lg">
-                    Hero Header
-                </x-aura::heading>
+        </x-aura::flex>
 
-            </div>
+        <x-aura::flex justify="end" gap="2">
 
-            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" icon="arrow-left">
+            <x-aura::button href="/guest#design-block" wire:navigate variant="secondary" size="sm" icon="arrow-left">
                 Back
             </x-aura::button>
 
         </x-aura::flex>
 
-    </div>
+    </x-aura::flex>
 
     <!-- Hero Header Block Preview -->
     <x-aura::code title="Landing Page Hero Header Block">
 
         <x-slot:preview>
 
-            <div class="w-full py-8 text-center space-y-4 flex flex-col items-center justify-center">
+            <x-aura::flex direction="col" align="center" justify="center" gap="4" class="w-full py-8 text-center">
 
                 <x-aura::kicker>
                     Next Gen Component Library
@@ -57,7 +57,7 @@ class extends Component {};
                     Production ready, ultra accessible Blade and Livewire components crafted for modern Laravel applications.
                 </x-aura::subheading>
 
-                <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 pt-2 w-full sm:w-auto max-w-xs sm:max-w-none">
+                <x-aura::flex align="center" justify="center" gap="3" wrap="true" class="pt-2">
 
                     <x-aura::button variant="primary" size="md">
                         Start
@@ -67,16 +67,16 @@ class extends Component {};
                         Explore
                     </x-aura::button>
 
-                </div>
+                </x-aura::flex>
 
-            </div>
+            </x-aura::flex>
 
         </x-slot:preview>
 
         <x-slot:codeSlot>
 
             @verbatim
-                <div class="w-full py-8 text-center space-y-4 flex flex-col items-center justify-center">
+                <x-aura::flex direction="col" align="center" justify="center" gap="4" class="w-full py-8 text-center">
                     <x-aura::kicker>
                         Next Gen Component Library
                     </x-aura::kicker>
@@ -89,7 +89,7 @@ class extends Component {};
                         Production ready components for modern Laravel applications.
                     </x-aura::subheading>
 
-                    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2 w-full sm:w-auto">
+                    <x-aura::flex align="center" justify="center" gap="3" wrap="true" class="pt-2">
                         <x-aura::button variant="primary" size="md">
                             Start
                         </x-aura::button>
@@ -97,12 +97,12 @@ class extends Component {};
                         <x-aura::button variant="outline" size="md">
                             Explore
                         </x-aura::button>
-                    </div>
-                </div>
+                    </x-aura::flex>
+                </x-aura::flex>
             @endverbatim
 
         </x-slot:codeSlot>
 
     </x-aura::code>
 
-</x-aura::flex>
+</x-aura::container>

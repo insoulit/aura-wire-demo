@@ -6,20 +6,20 @@ use Livewire\Attributes\Title;
 
 new 
 #[Layout('livewire.layout.app')] 
-#[Title('Guest Portal — Design Blocks & Templates | Aura Wire')] 
+#[Title('Guest Portal — Design Blocks and Templates | Aura Wire')] 
 class extends Component {};
 
 ?>
 
-<x-aura::flex direction="col" gap="16" class="w-full max-w-6xl py-2">
+<x-aura::container size="6xl" gap="16" class="py-2">
 
     <!-- Hero Header Section -->
-    <section class="min-h-[calc(100vh-8rem)] flex flex-col justify-center items-center py-6 text-center max-w-4xl mx-auto w-full space-y-8">
-        
-        <!-- Hero Main Content -->
-        <div class="space-y-6 max-w-3xl mx-auto flex flex-col items-center">
+    <x-aura::flex direction="col" align="center" justify="center" gap="8" class="min-h-[calc(100vh-8rem)] py-6 text-center max-w-4xl mx-auto w-full">
 
-            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200/80 dark:border-zinc-700/60 shadow-2xs">
+        <!-- Hero Main Content -->
+        <x-aura::flex direction="col" align="center" gap="6" class="max-w-3xl mx-auto">
+
+            <x-aura::flex align="center" gap="2" :inline="true" class="px-3.5 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200/80 dark:border-zinc-700/60 shadow-2xs">
 
                 <x-aura::badge variant="neutral" size="sm">
                     Showcase
@@ -29,26 +29,22 @@ class extends Component {};
                     Guest Portal
                 </x-aura::text>
 
-            </div>
+            </x-aura::flex>
 
-            <div class="space-y-2 text-center max-w-xl mx-auto">
+            <x-aura::flex direction="col" align="center" gap="2" class="max-w-xl mx-auto">
 
                 <x-aura::display size="md">
-                    Blocks &amp; Templates
+                    Blocks and Templates
                 </x-aura::display>
 
-                <div class="max-w-lg mx-auto">
+                <x-aura::subheading size="md" class="max-w-lg mx-auto">
+                    Copy paste composite design blocks with live previews, or explore complete end to end full page application templates.
+                </x-aura::subheading>
 
-                    <x-aura::subheading size="md">
-                        Copy paste composite design blocks with live previews, or explore complete end to end full page application templates.
-                    </x-aura::subheading>
-
-                </div>
-
-            </div>
+            </x-aura::flex>
 
             <!-- Quick Jump Section Buttons -->
-            <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
+            <x-aura::flex align="center" justify="center" gap="3" wrap="true" class="pt-2">
 
                 <x-aura::button variant="primary" size="lg" href="#design-block" icon="layers">
                     Blocks
@@ -58,12 +54,12 @@ class extends Component {};
                     Templates
                 </x-aura::button>
 
-            </div>
+            </x-aura::flex>
 
-        </div>
+        </x-aura::flex>
 
         <!-- Mouse Scroll Down Icon Indicator -->
-        <a href="#design-block" class="pt-6 flex flex-col items-center gap-2 text-zinc-400 hover:text-zinc-900 dark:text-zinc-500 dark:hover:text-white transition-colors cursor-pointer group select-none">
+        <x-aura::link href="#design-block" variant="subtle" class="pt-6 flex flex-col items-center gap-2 group select-none">
 
             <div class="w-6 h-10 rounded-full border-2 border-zinc-300 dark:border-zinc-700 flex justify-center p-1.5 group-hover:border-zinc-900 dark:group-hover:border-white transition-colors shadow-2xs">
                 <div class="w-1.5 h-2.5 bg-zinc-400 dark:bg-zinc-500 rounded-full group-hover:bg-zinc-900 dark:group-hover:bg-white transition-all animate-bounce"></div>
@@ -73,908 +69,826 @@ class extends Component {};
                 Scroll Down
             </x-aura::text>
 
-        </a>
+        </x-aura::link>
 
-    </section>
+    </x-aura::flex>
 
     <!-- SECTION 1: DESIGN BLOCK -->
-    <div id="design-block" class="space-y-8 scroll-mt-24 pt-4">
+    <x-aura::flex direction="col" gap="8" id="design-block" class="scroll-mt-24 pt-4">
 
         <!-- Section 1 Header -->
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <x-aura::flex justify="between" gap="4">
 
-            <div class="space-y-1">
+            <x-aura::flex direction="col" gap="none">
+
+                <x-aura::kicker>
+                    Showcase
+                </x-aura::kicker>
 
                 <x-aura::heading level="2" size="lg">
-                    Design Block
+                    Design Blocks
                 </x-aura::heading>
 
                 <x-aura::subheading>
                     Composite UI pattern blocks with live preview controls and copyable Blade markup.
                 </x-aura::subheading>
 
-            </div>
+            </x-aura::flex>
 
-            <div class="flex items-center gap-3">
+            <x-aura::flex align="center" justify="end" gap="3">
 
                 <x-aura::badge variant="subtle" size="sm">
                     15 Blocks
                 </x-aura::badge>
 
-            </div>
+            </x-aura::flex>
 
-        </div>
+        </x-aura::flex>
 
         <!-- Section 1 Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <x-aura::grid cols="1" sm="2" lg="3" gap="6">
 
             <!-- BLOCK 1: Product Card -->
-            <x-aura::card>
+            <x-aura::card href="/guest/block/product-card" wire:navigate gap="4">
 
-                <div class="h-full flex flex-col justify-between space-y-6">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <div class="space-y-4">
+                    <x-aura::icon name="shopping-bag" size="lg" :container="true" />
 
-                        <div class="flex items-center justify-between">
+                    <x-aura::badge variant="subtle" size="sm">
+                        E Commerce
+                    </x-aura::badge>
 
-                            <x-aura::icon name="shopping-bag" variant="subtle" size="lg" />
+                </x-aura::flex>
 
-                            <x-aura::badge variant="subtle" size="sm">
-                                E Commerce
-                            </x-aura::badge>
+                <x-aura::flex direction="col" gap="1">
 
-                        </div>
+                    <x-aura::heading level="3" size="sm">
+                        Product Card
+                    </x-aura::heading>
 
-                        <div class="space-y-2">
+                    <x-aura::text variant="subtle" size="sm">
+                        Product showcase cards with discount badges, color swatches, stock tags, and add to cart actions.
+                    </x-aura::text>
 
-                            <x-aura::heading level="3" size="sm">
-                                Product Card
-                            </x-aura::heading>
+                </x-aura::flex>
 
-                            <x-aura::text variant="subtle" size="sm">
-                                Product showcase cards with discount badges, color swatches, stock tags, and add-to-cart actions.
-                            </x-aura::text>
+                <x-slot:footer>
 
-                        </div>
+                    <x-aura::text size="sm" weight="semibold">
+                        Explore
+                    </x-aura::text>
 
-                    </div>
+                    <x-aura::icon name="arrow-right" size="xs" />
 
-                    <div>
-
-                        <x-aura::button variant="primary" size="md" href="/guest/block/product-card" icon="arrow-right" iconPlacement="right">
-                            Explore
-                        </x-aura::button>
-
-                    </div>
-
-                </div>
+                </x-slot:footer>
 
             </x-aura::card>
 
             <!-- BLOCK 2: Pricing Tier Cards -->
-            <x-aura::card>
+            <x-aura::card href="/guest/block/pricing" wire:navigate gap="4">
 
-                <div class="h-full flex flex-col justify-between space-y-6">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <div class="space-y-4">
+                    <x-aura::icon name="sparkles" size="lg" :container="true" />
 
-                        <div class="flex items-center justify-between">
+                    <x-aura::badge variant="subtle" size="sm">
+                        SaaS
+                    </x-aura::badge>
 
-                            <x-aura::icon name="sparkles" variant="subtle" size="lg" />
+                </x-aura::flex>
 
-                            <x-aura::badge variant="subtle" size="sm">
-                                SaaS
-                            </x-aura::badge>
+                <x-aura::flex direction="col" gap="1">
 
-                        </div>
+                    <x-aura::heading level="3" size="sm">
+                        Pricing Tier Cards
+                    </x-aura::heading>
 
-                        <div class="space-y-2">
+                    <x-aura::text variant="subtle" size="sm">
+                        3 tier SaaS subscription pricing matrix with feature checklists and highlighted popular tier.
+                    </x-aura::text>
 
-                            <x-aura::heading level="3" size="sm">
-                                Pricing Tier Cards
-                            </x-aura::heading>
+                </x-aura::flex>
 
-                            <x-aura::text variant="subtle" size="sm">
-                                3-tier SaaS subscription pricing matrix with feature checklists and highlighted popular tier.
-                            </x-aura::text>
+                <x-slot:footer>
 
-                        </div>
+                    <x-aura::text size="sm" weight="semibold">
+                        Explore
+                    </x-aura::text>
 
-                    </div>
+                    <x-aura::icon name="arrow-right" size="xs" />
 
-                    <div>
-
-                        <x-aura::button variant="primary" size="md" href="/guest/block/pricing" icon="arrow-right" iconPlacement="right">
-                            Explore
-                        </x-aura::button>
-
-                    </div>
-
-                </div>
+                </x-slot:footer>
 
             </x-aura::card>
 
             <!-- BLOCK 3: Dashboard Widgets -->
-            <x-aura::card>
+            <x-aura::card href="/guest/block/dashboard" wire:navigate gap="4">
 
-                <div class="h-full flex flex-col justify-between space-y-6">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <div class="space-y-4">
+                    <x-aura::icon name="bar-chart-3" size="lg" :container="true" />
 
-                        <div class="flex items-center justify-between">
+                    <x-aura::badge variant="subtle" size="sm">
+                        Analytics
+                    </x-aura::badge>
 
-                            <x-aura::icon name="bar-chart-3" variant="subtle" size="lg" />
+                </x-aura::flex>
 
-                            <x-aura::badge variant="subtle" size="sm">
-                                Analytics
-                            </x-aura::badge>
+                <x-aura::flex direction="col" gap="1">
 
-                        </div>
+                    <x-aura::heading level="3" size="sm">
+                        Dashboard Widgets
+                    </x-aura::heading>
 
-                        <div class="space-y-2">
+                    <x-aura::text variant="subtle" size="sm">
+                        Real time KPI metric stat tiles, trend sparklines, and compact activity stream list.
+                    </x-aura::text>
 
-                            <x-aura::heading level="3" size="sm">
-                                Dashboard Widgets
-                            </x-aura::heading>
+                </x-aura::flex>
 
-                            <x-aura::text variant="subtle" size="sm">
-                                Sales KPI summary cards, team activity avatar stacks, and cluster memory capacity progress gauges.
-                            </x-aura::text>
+                <x-slot:footer>
 
-                        </div>
+                    <x-aura::text size="sm" weight="semibold">
+                        Explore
+                    </x-aura::text>
 
-                    </div>
+                    <x-aura::icon name="arrow-right" size="xs" />
 
-                    <div>
-
-                        <x-aura::button variant="primary" size="md" href="/guest/block/dashboard" icon="arrow-right" iconPlacement="right">
-                            Explore
-                        </x-aura::button>
-
-                    </div>
-
-                </div>
+                </x-slot:footer>
 
             </x-aura::card>
 
-            <!-- BLOCK 4: Auth & Security -->
-            <x-aura::card>
+            <!-- BLOCK 4: Slide-Over Panel -->
+            <x-aura::card href="/guest/block/slide-over" wire:navigate gap="4">
 
-                <div class="h-full flex flex-col justify-between space-y-6">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <div class="space-y-4">
+                    <x-aura::icon name="panel-right" size="lg" :container="true" />
 
-                        <div class="flex items-center justify-between">
+                    <x-aura::badge variant="subtle" size="sm">
+                        Overlay
+                    </x-aura::badge>
 
-                            <x-aura::icon name="shield-check" variant="subtle" size="lg" />
+                </x-aura::flex>
 
-                            <x-aura::badge variant="subtle" size="sm">
-                                Security
-                            </x-aura::badge>
+                <x-aura::flex direction="col" gap="1">
 
-                        </div>
+                    <x-aura::heading level="3" size="sm">
+                        Slide Over Panel
+                    </x-aura::heading>
 
-                        <div class="space-y-2">
+                    <x-aura::text variant="subtle" size="sm">
+                        Side drawer slide over panel with header, scrollable body content, and action buttons.
+                    </x-aura::text>
 
-                            <x-aura::heading level="3" size="sm">
-                                Auth &amp; Security
-                            </x-aura::heading>
+                </x-aura::flex>
 
-                            <x-aura::text variant="subtle" size="sm">
-                                High-security sign in card with email icon prefix, password field, remember me checkbox, and submit action.
-                            </x-aura::text>
+                <x-slot:footer>
 
-                        </div>
+                    <x-aura::text size="sm" weight="semibold">
+                        Explore
+                    </x-aura::text>
 
-                    </div>
+                    <x-aura::icon name="arrow-right" size="xs" />
 
-                    <div>
-
-                        <x-aura::button variant="primary" size="md" href="/guest/block/auth" icon="arrow-right" iconPlacement="right">
-                            Explore
-                        </x-aura::button>
-
-                    </div>
-
-                </div>
+                </x-slot:footer>
 
             </x-aura::card>
 
-            <!-- BLOCK 5: User Profile -->
-            <x-aura::card>
+            <!-- BLOCK 5: Modal Dialogs -->
+            <x-aura::card href="/guest/block/modal" wire:navigate gap="4">
 
-                <div class="h-full flex flex-col justify-between space-y-6">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <div class="space-y-4">
+                    <x-aura::icon name="copy" size="lg" :container="true" />
 
-                        <div class="flex items-center justify-between">
+                    <x-aura::badge variant="subtle" size="sm">
+                        Overlay
+                    </x-aura::badge>
 
-                            <x-aura::icon name="user" variant="subtle" size="lg" />
+                </x-aura::flex>
 
-                            <x-aura::badge variant="subtle" size="sm">
-                                Account
-                            </x-aura::badge>
+                <x-aura::flex direction="col" gap="1">
 
-                        </div>
+                    <x-aura::heading level="3" size="sm">
+                        Modal Dialogs
+                    </x-aura::heading>
 
-                        <div class="space-y-2">
+                    <x-aura::text variant="subtle" size="sm">
+                        Confirmation dialog, form modal, and destruct action modal with accessible backdrops.
+                    </x-aura::text>
 
-                            <x-aura::heading level="3" size="sm">
-                                User Profile
-                            </x-aura::heading>
+                </x-aura::flex>
 
-                            <x-aura::text variant="subtle" size="sm">
-                                Account settings card with avatar photo uploader, verified email tag, name input fields, and save actions.
-                            </x-aura::text>
+                <x-slot:footer>
 
-                        </div>
+                    <x-aura::text size="sm" weight="semibold">
+                        Explore
+                    </x-aura::text>
 
-                    </div>
+                    <x-aura::icon name="arrow-right" size="xs" />
 
-                    <div>
-
-                        <x-aura::button variant="primary" size="md" href="/guest/block/profile" icon="arrow-right" iconPlacement="right">
-                            Explore
-                        </x-aura::button>
-
-                    </div>
-
-                </div>
+                </x-slot:footer>
 
             </x-aura::card>
 
-            <!-- BLOCK 6: Hero Header -->
-            <x-aura::card>
+            <!-- BLOCK 6: Call to Action -->
+            <x-aura::card href="/guest/block/cta" wire:navigate gap="4">
 
-                <div class="h-full flex flex-col justify-between space-y-6">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <div class="space-y-4">
+                    <x-aura::icon name="megaphone" size="lg" :container="true" />
 
-                        <div class="flex items-center justify-between">
+                    <x-aura::badge variant="subtle" size="sm">
+                        Marketing
+                    </x-aura::badge>
 
-                            <x-aura::icon name="layout" variant="subtle" size="lg" />
+                </x-aura::flex>
 
-                            <x-aura::badge variant="subtle" size="sm">
-                                Landing
-                            </x-aura::badge>
+                <x-aura::flex direction="col" gap="1">
 
-                        </div>
+                    <x-aura::heading level="3" size="sm">
+                        Call to Action
+                    </x-aura::heading>
 
-                        <div class="space-y-2">
+                    <x-aura::text variant="subtle" size="sm">
+                        High conversion banner sections with email capture inputs, badges, and action triggers.
+                    </x-aura::text>
 
-                            <x-aura::heading level="3" size="sm">
-                                Hero Header
-                            </x-aura::heading>
+                </x-aura::flex>
 
-                            <x-aura::text variant="subtle" size="sm">
-                                High-impact landing page hero section with kicker, main title, subheading, and CTA action buttons.
-                            </x-aura::text>
+                <x-slot:footer>
 
-                        </div>
+                    <x-aura::text size="sm" weight="semibold">
+                        Explore
+                    </x-aura::text>
 
-                    </div>
+                    <x-aura::icon name="arrow-right" size="xs" />
 
-                    <div>
-
-                        <x-aura::button variant="primary" size="md" href="/guest/block/hero" icon="arrow-right" iconPlacement="right">
-                            Explore
-                        </x-aura::button>
-
-                    </div>
-
-                </div>
+                </x-slot:footer>
 
             </x-aura::card>
 
-            <!-- BLOCK 7: Feature Grid -->
-            <x-aura::card>
+            <!-- BLOCK 7: Feature Matrix -->
+            <x-aura::card href="/guest/block/feature" wire:navigate gap="4">
 
-                <div class="h-full flex flex-col justify-between space-y-6">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <div class="space-y-4">
+                    <x-aura::icon name="grid" size="lg" :container="true" />
 
-                        <div class="flex items-center justify-between">
+                    <x-aura::badge variant="subtle" size="sm">
+                        Marketing
+                    </x-aura::badge>
 
-                            <x-aura::icon name="grid" variant="subtle" size="lg" />
+                </x-aura::flex>
 
-                            <x-aura::badge variant="subtle" size="sm">
-                                Features
-                            </x-aura::badge>
+                <x-aura::flex direction="col" gap="1">
 
-                        </div>
+                    <x-aura::heading level="3" size="sm">
+                        Feature Matrix
+                    </x-aura::heading>
 
-                        <div class="space-y-2">
+                    <x-aura::text variant="subtle" size="sm">
+                        Multi column feature grid layouts with icon badges, step flows, and feature comparison.
+                    </x-aura::text>
 
-                            <x-aura::heading level="3" size="sm">
-                                Feature Grid
-                            </x-aura::heading>
+                </x-aura::flex>
 
-                            <x-aura::text variant="subtle" size="sm">
-                                3-column feature highlights with icon tags, headings, and description cards.
-                            </x-aura::text>
+                <x-slot:footer>
 
-                        </div>
+                    <x-aura::text size="sm" weight="semibold">
+                        Explore
+                    </x-aura::text>
 
-                    </div>
+                    <x-aura::icon name="arrow-right" size="xs" />
 
-                    <div>
-
-                        <x-aura::button variant="primary" size="md" href="/guest/block/feature" icon="arrow-right" iconPlacement="right">
-                            Explore
-                        </x-aura::button>
-
-                    </div>
-
-                </div>
+                </x-slot:footer>
 
             </x-aura::card>
 
-            <!-- BLOCK 8: CTA Banner -->
-            <x-aura::card>
+            <!-- BLOCK 8: Testimonial Cards -->
+            <x-aura::card href="/guest/block/testimonial" wire:navigate gap="4">
 
-                <div class="h-full flex flex-col justify-between space-y-6">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <div class="space-y-4">
+                    <x-aura::icon name="message-square" size="lg" :container="true" />
 
-                        <div class="flex items-center justify-between">
+                    <x-aura::badge variant="subtle" size="sm">
+                        Social Proof
+                    </x-aura::badge>
 
-                            <x-aura::icon name="zap" variant="subtle" size="lg" />
+                </x-aura::flex>
 
-                            <x-aura::badge variant="subtle" size="sm">
-                                Conversion
-                            </x-aura::badge>
+                <x-aura::flex direction="col" gap="1">
 
-                        </div>
+                    <x-aura::heading level="3" size="sm">
+                        Testimonial Cards
+                    </x-aura::heading>
 
-                        <div class="space-y-2">
+                    <x-aura::text variant="subtle" size="sm">
+                        Customer review cards with avatar pictures, star ratings, and company role badges.
+                    </x-aura::text>
 
-                            <x-aura::heading level="3" size="sm">
-                                CTA Banner
-                            </x-aura::heading>
+                </x-aura::flex>
 
-                            <x-aura::text variant="subtle" size="sm">
-                                High-converting banner card with special offer badge, title, and action button.
-                            </x-aura::text>
+                <x-slot:footer>
 
-                        </div>
+                    <x-aura::text size="sm" weight="semibold">
+                        Explore
+                    </x-aura::text>
 
-                    </div>
+                    <x-aura::icon name="arrow-right" size="xs" />
 
-                    <div>
-
-                        <x-aura::button variant="primary" size="md" href="/guest/block/cta" icon="arrow-right" iconPlacement="right">
-                            Explore
-                        </x-aura::button>
-
-                    </div>
-
-                </div>
+                </x-slot:footer>
 
             </x-aura::card>
 
-            <!-- BLOCK 9: Testimonial -->
-            <x-aura::card>
+            <!-- BLOCK 9: Navigation Header -->
+            <x-aura::card href="/guest/block/navigation" wire:navigate gap="4">
 
-                <div class="h-full flex flex-col justify-between space-y-6">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <div class="space-y-4">
+                    <x-aura::icon name="menu" size="lg" :container="true" />
 
-                        <div class="flex items-center justify-between">
+                    <x-aura::badge variant="subtle" size="sm">
+                        Structure
+                    </x-aura::badge>
 
-                            <x-aura::icon name="heart" variant="subtle" size="lg" />
+                </x-aura::flex>
 
-                            <x-aura::badge variant="subtle" size="sm">
-                                Reviews
-                            </x-aura::badge>
+                <x-aura::flex direction="col" gap="1">
 
-                        </div>
+                    <x-aura::heading level="3" size="sm">
+                        Navigation Header
+                    </x-aura::heading>
 
-                        <div class="space-y-2">
+                    <x-aura::text variant="subtle" size="sm">
+                        Responsive top app navigation bar with brand logo, nav links, and user menu.
+                    </x-aura::text>
 
-                            <x-aura::heading level="3" size="sm">
-                                Testimonial
-                            </x-aura::heading>
+                </x-aura::flex>
 
-                            <x-aura::text variant="subtle" size="sm">
-                                Customer review card with star ratings, quotes, avatar initials, and company titles.
-                            </x-aura::text>
+                <x-slot:footer>
 
-                        </div>
+                    <x-aura::text size="sm" weight="semibold">
+                        Explore
+                    </x-aura::text>
 
-                    </div>
+                    <x-aura::icon name="arrow-right" size="xs" />
 
-                    <div>
-
-                        <x-aura::button variant="primary" size="md" href="/guest/block/testimonial" icon="arrow-right" iconPlacement="right">
-                            Explore
-                        </x-aura::button>
-
-                    </div>
-
-                </div>
+                </x-slot:footer>
 
             </x-aura::card>
 
-            <!-- BLOCK 10: Modal -->
-            <x-aura::card>
+            <!-- BLOCK 10: Auth Forms -->
+            <x-aura::card href="/guest/block/auth" wire:navigate gap="4">
 
-                <div class="h-full flex flex-col justify-between space-y-6">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <div class="space-y-4">
+                    <x-aura::icon name="lock" size="lg" :container="true" />
 
-                        <div class="flex items-center justify-between">
+                    <x-aura::badge variant="subtle" size="sm">
+                        Security
+                    </x-aura::badge>
 
-                            <x-aura::icon name="layers" variant="subtle" size="lg" />
+                </x-aura::flex>
 
-                            <x-aura::badge variant="subtle" size="sm">
-                                Overlay
-                            </x-aura::badge>
+                <x-aura::flex direction="col" gap="1">
 
-                        </div>
+                    <x-aura::heading level="3" size="sm">
+                        Auth Forms
+                    </x-aura::heading>
 
-                        <div class="space-y-2">
+                    <x-aura::text variant="subtle" size="sm">
+                        Login, registration, and password recovery cards with form fields and social providers.
+                    </x-aura::text>
 
-                            <x-aura::heading level="3" size="sm">
-                                Modal
-                            </x-aura::heading>
+                </x-aura::flex>
 
-                            <x-aura::text variant="subtle" size="sm">
-                                Interactive dialog modal overlay popups with backdrop blur, form fields, and action buttons.
-                            </x-aura::text>
+                <x-slot:footer>
 
-                        </div>
+                    <x-aura::text size="sm" weight="semibold">
+                        Explore
+                    </x-aura::text>
 
-                    </div>
+                    <x-aura::icon name="arrow-right" size="xs" />
 
-                    <div>
-
-                        <x-aura::button variant="primary" size="md" href="/guest/block/modal" icon="arrow-right" iconPlacement="right">
-                            Explore
-                        </x-aura::button>
-
-                    </div>
-
-                </div>
+                </x-slot:footer>
 
             </x-aura::card>
 
-            <!-- BLOCK 11: Slide Over -->
-            <x-aura::card>
+            <!-- BLOCK 11: User Profile Cards -->
+            <x-aura::card href="/guest/block/profile" wire:navigate gap="4">
 
-                <div class="h-full flex flex-col justify-between space-y-6">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <div class="space-y-4">
+                    <x-aura::icon name="user" size="lg" :container="true" />
 
-                        <div class="flex items-center justify-between">
+                    <x-aura::badge variant="neutral" size="sm">
+                        Account
+                    </x-aura::badge>
 
-                            <x-aura::icon name="sidebar" variant="subtle" size="lg" />
+                </x-aura::flex>
 
-                            <x-aura::badge variant="subtle" size="sm">
-                                Drawer
-                            </x-aura::badge>
+                <x-aura::flex direction="col" gap="1">
 
-                        </div>
+                    <x-aura::heading level="3" size="sm">
+                        User Profile Cards
+                    </x-aura::heading>
 
-                        <div class="space-y-2">
+                    <x-aura::text variant="subtle" size="sm">
+                        Profile header banner with avatar upload, edit info form, and account status tags.
+                    </x-aura::text>
 
-                            <x-aura::heading level="3" size="sm">
-                                Slide Over
-                            </x-aura::heading>
+                </x-aura::flex>
 
-                            <x-aura::text variant="subtle" size="sm">
-                                Sliding side drawer panels for filter panels, detail views, and mobile menus.
-                            </x-aura::text>
+                <x-slot:footer>
 
-                        </div>
+                    <x-aura::text size="sm" weight="semibold">
+                        Explore
+                    </x-aura::text>
 
-                    </div>
+                    <x-aura::icon name="arrow-right" size="xs" />
 
-                    <div>
-
-                        <x-aura::button variant="primary" size="md" href="/guest/block/slide-over" icon="arrow-right" iconPlacement="right">
-                            Explore
-                        </x-aura::button>
-
-                    </div>
-
-                </div>
+                </x-slot:footer>
 
             </x-aura::card>
 
             <!-- BLOCK 12: Timeline -->
-            <x-aura::card>
+            <x-aura::card href="/guest/block/timeline" wire:navigate gap="4">
 
-                <div class="h-full flex flex-col justify-between space-y-6">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <div class="space-y-4">
+                    <x-aura::icon name="git-commit" size="lg" :container="true" />
 
-                        <div class="flex items-center justify-between">
+                    <x-aura::badge variant="subtle" size="sm">
+                        Activity
+                    </x-aura::badge>
 
-                            <x-aura::icon name="clock" variant="subtle" size="lg" />
+                </x-aura::flex>
 
-                            <x-aura::badge variant="subtle" size="sm">
-                                Activity
-                            </x-aura::badge>
+                <x-aura::flex direction="col" gap="1">
 
-                        </div>
+                    <x-aura::heading level="3" size="sm">
+                        Timeline
+                    </x-aura::heading>
 
-                        <div class="space-y-2">
+                    <x-aura::text variant="subtle" size="sm">
+                        System deployment and audit log timeline stream with status dots and timestamps.
+                    </x-aura::text>
 
-                            <x-aura::heading level="3" size="sm">
-                                Timeline
-                            </x-aura::heading>
+                </x-aura::flex>
 
-                            <x-aura::text variant="subtle" size="sm">
-                                System deployment and audit log timeline stream with status dots and timestamps.
-                            </x-aura::text>
+                <x-slot:footer>
 
-                        </div>
+                    <x-aura::text size="sm" weight="semibold">
+                        Explore
+                    </x-aura::text>
 
-                    </div>
+                    <x-aura::icon name="arrow-right" size="xs" />
 
-                    <div>
-
-                        <x-aura::button variant="primary" size="md" href="/guest/block/timeline" icon="arrow-right" iconPlacement="right">
-                            Explore
-                        </x-aura::button>
-
-                    </div>
-
-                </div>
+                </x-slot:footer>
 
             </x-aura::card>
 
             <!-- BLOCK 13: Empty State -->
-            <x-aura::card>
+            <x-aura::card href="/guest/block/empty-state" wire:navigate gap="4">
 
-                <div class="h-full flex flex-col justify-between space-y-6">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <div class="space-y-4">
+                    <x-aura::icon name="folder-open" size="lg" :container="true" />
 
-                        <div class="flex items-center justify-between">
+                    <x-aura::badge variant="subtle" size="sm">
+                        States
+                    </x-aura::badge>
 
-                            <x-aura::icon name="folder-open" variant="subtle" size="lg" />
+                </x-aura::flex>
 
-                            <x-aura::badge variant="subtle" size="sm">
-                                States
-                            </x-aura::badge>
+                <x-aura::flex direction="col" gap="1">
 
-                        </div>
+                    <x-aura::heading level="3" size="sm">
+                        Empty State
+                    </x-aura::heading>
 
-                        <div class="space-y-2">
+                    <x-aura::text variant="subtle" size="sm">
+                        First time onboarding empty state card with folder icon, description, and create button.
+                    </x-aura::text>
 
-                            <x-aura::heading level="3" size="sm">
-                                Empty State
-                            </x-aura::heading>
+                </x-aura::flex>
 
-                            <x-aura::text variant="subtle" size="sm">
-                                First-time onboarding empty state card with folder icon, description, and create button.
-                            </x-aura::text>
+                <x-slot:footer>
 
-                        </div>
+                    <x-aura::text size="sm" weight="semibold">
+                        Explore
+                    </x-aura::text>
 
-                    </div>
+                    <x-aura::icon name="arrow-right" size="xs" />
 
-                    <div>
-
-                        <x-aura::button variant="primary" size="md" href="/guest/block/empty-state" icon="arrow-right" iconPlacement="right">
-                            Explore
-                        </x-aura::button>
-
-                    </div>
-
-                </div>
+                </x-slot:footer>
 
             </x-aura::card>
 
             <!-- BLOCK 14: FAQ Accordion -->
-            <x-aura::card>
+            <x-aura::card href="/guest/block/faq" wire:navigate gap="4">
 
-                <div class="h-full flex flex-col justify-between space-y-6">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <div class="space-y-4">
+                    <x-aura::icon name="help-circle" size="lg" :container="true" />
 
-                        <div class="flex items-center justify-between">
+                    <x-aura::badge variant="subtle" size="sm">
+                        Support
+                    </x-aura::badge>
 
-                            <x-aura::icon name="help-circle" variant="subtle" size="lg" />
+                </x-aura::flex>
 
-                            <x-aura::badge variant="subtle" size="sm">
-                                Support
-                            </x-aura::badge>
+                <x-aura::flex direction="col" gap="1">
 
-                        </div>
+                    <x-aura::heading level="3" size="sm">
+                        FAQ Accordion
+                    </x-aura::heading>
 
-                        <div class="space-y-2">
+                    <x-aura::text variant="subtle" size="sm">
+                        Expandable FAQ card accordion for help centers and common product questions.
+                    </x-aura::text>
 
-                            <x-aura::heading level="3" size="sm">
-                                FAQ Accordion
-                            </x-aura::heading>
+                </x-aura::flex>
 
-                            <x-aura::text variant="subtle" size="sm">
-                                Expandable FAQ card accordion for help centers and common product questions.
-                            </x-aura::text>
+                <x-slot:footer>
 
-                        </div>
+                    <x-aura::text size="sm" weight="semibold">
+                        Explore
+                    </x-aura::text>
 
-                    </div>
+                    <x-aura::icon name="arrow-right" size="xs" />
 
-                    <div>
-
-                        <x-aura::button variant="primary" size="md" href="/guest/block/faq" icon="arrow-right" iconPlacement="right">
-                            Explore
-                        </x-aura::button>
-
-                    </div>
-
-                </div>
+                </x-slot:footer>
 
             </x-aura::card>
 
-            <!-- BLOCK 15: Footer -->
-            <x-aura::card>
+            <!-- BLOCK 15: Hero Header -->
+            <x-aura::card href="/guest/block/hero" wire:navigate gap="4">
 
-                <div class="h-full flex flex-col justify-between space-y-6">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <div class="space-y-4">
+                    <x-aura::icon name="layout" size="lg" :container="true" />
 
-                        <div class="flex items-center justify-between">
+                    <x-aura::badge variant="subtle" size="sm">
+                        Marketing
+                    </x-aura::badge>
 
-                            <x-aura::icon name="compass" variant="subtle" size="lg" />
+                </x-aura::flex>
 
-                            <x-aura::badge variant="subtle" size="sm">
-                                Structure
-                            </x-aura::badge>
+                <x-aura::flex direction="col" gap="1">
 
-                        </div>
+                    <x-aura::heading level="3" size="sm">
+                        Hero Header
+                    </x-aura::heading>
 
-                        <div class="space-y-2">
+                    <x-aura::text variant="subtle" size="sm">
+                        Full width landing hero with pill badges, headline typography, and action triggers.
+                    </x-aura::text>
 
-                            <x-aura::heading level="3" size="sm">
-                                Footer
-                            </x-aura::heading>
+                </x-aura::flex>
 
-                            <x-aura::text variant="subtle" size="sm">
-                                Multi-column application footer with brand info, link lists, and copyright bar.
-                            </x-aura::text>
+                <x-slot:footer>
 
-                        </div>
+                    <x-aura::text size="sm" weight="semibold">
+                        Explore
+                    </x-aura::text>
 
-                    </div>
+                    <x-aura::icon name="arrow-right" size="xs" />
 
-                    <div>
-
-                        <x-aura::button variant="primary" size="md" href="/guest/block/navigation" icon="arrow-right" iconPlacement="right">
-                            Explore
-                        </x-aura::button>
-
-                    </div>
-
-                </div>
+                </x-slot:footer>
 
             </x-aura::card>
 
-        </div>
+        </x-aura::grid>
 
-    </div>
+    </x-aura::flex>
 
-    <!-- SECTION 2: FULL TEMPLATE -->
-    <div id="full-template" class="space-y-8 scroll-mt-24 pt-8 sm:pt-12">
+    <!-- SECTION 2: FULL TEMPLATES -->
+    <x-aura::flex direction="col" gap="8" id="full-template" class="scroll-mt-24 pt-8 sm:pt-12">
 
         <!-- Section 2 Header -->
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <x-aura::flex justify="between" gap="4">
 
-            <div class="space-y-1">
+            <x-aura::flex direction="col" gap="none">
+
+                <x-aura::kicker>
+                    Showcase
+                </x-aura::kicker>
 
                 <x-aura::heading level="2" size="lg">
-                    Full Template
+                    Full Templates
                 </x-aura::heading>
 
                 <x-aura::subheading>
                     Explore complete end to end page layout templates built with Aura Wire components.
                 </x-aura::subheading>
 
-            </div>
+            </x-aura::flex>
 
-            <div class="flex items-center gap-3">
+            <x-aura::flex align="center" justify="end" gap="3">
 
                 <x-aura::badge variant="subtle" size="sm">
                     5 Templates
                 </x-aura::badge>
 
-            </div>
+            </x-aura::flex>
 
-        </div>
+        </x-aura::flex>
 
         <!-- Section 2 Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <x-aura::grid cols="1" sm="2" lg="3" gap="6">
 
             <!-- TEMPLATE 1: E Commerce Storefront -->
-            <x-aura::card>
+            <x-aura::card href="/guest/template/ecommerce" wire:navigate gap="4">
 
-                <div class="h-full flex flex-col justify-between space-y-6">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <div class="space-y-4">
+                    <x-aura::icon name="shopping-bag" size="lg" :container="true" />
 
-                        <div class="flex items-center justify-between">
-                            <x-aura::icon name="shopping-bag" variant="subtle" size="lg" />
-                        </div>
+                    <x-aura::badge variant="neutral" size="sm">
+                        E Commerce
+                    </x-aura::badge>
 
-                        <div class="space-y-2">
+                </x-aura::flex>
 
-                            <x-aura::heading level="3" size="sm">
-                                E Commerce Storefront
-                            </x-aura::heading>
+                <x-aura::flex direction="col" gap="1">
 
-                            <x-aura::text variant="subtle" size="sm">
-                                Product catalogs, filtering sidebars, shopping cart drawers, and checkout flow pages.
-                            </x-aura::text>
+                    <x-aura::heading level="3" size="sm">
+                        E Commerce Storefront
+                    </x-aura::heading>
 
-                        </div>
+                    <x-aura::text variant="subtle" size="sm">
+                        Product catalogs, filtering sidebars, shopping cart drawers, and checkout flow pages.
+                    </x-aura::text>
 
-                    </div>
+                </x-aura::flex>
 
-                    <div>
+                <x-slot:footer>
 
-                        <x-aura::button variant="primary" size="md" href="/guest/template/ecommerce" icon="arrow-right" iconPlacement="right">
-                            Explore
-                        </x-aura::button>
+                    <x-aura::text size="sm" weight="semibold">
+                        Explore
+                    </x-aura::text>
 
-                    </div>
+                    <x-aura::icon name="arrow-right" size="xs" />
 
-                </div>
+                </x-slot:footer>
 
             </x-aura::card>
 
             <!-- TEMPLATE 2: Personal Portfolio -->
-            <x-aura::card>
+            <x-aura::card href="/guest/template/portfolio" wire:navigate gap="4">
 
-                <div class="h-full flex flex-col justify-between space-y-6">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <div class="space-y-4">
+                    <x-aura::icon name="palette" size="lg" :container="true" />
 
-                        <div class="flex items-center justify-between">
-                            <x-aura::icon name="palette" variant="subtle" size="lg" />
-                        </div>
+                    <x-aura::badge variant="neutral" size="sm">
+                        Portfolio
+                    </x-aura::badge>
 
-                        <div class="space-y-2">
+                </x-aura::flex>
 
-                            <x-aura::heading level="3" size="sm">
-                                Personal Portfolio
-                            </x-aura::heading>
+                <x-aura::flex direction="col" gap="1">
 
-                            <x-aura::text variant="subtle" size="sm">
-                                Work showcases, interactive case studies, bio highlights, skill chips, and contact forms.
-                            </x-aura::text>
+                    <x-aura::heading level="3" size="sm">
+                        Personal Portfolio
+                    </x-aura::heading>
 
-                        </div>
+                    <x-aura::text variant="subtle" size="sm">
+                        Work showcases, interactive case studies, bio highlights, skill chips, and contact forms.
+                    </x-aura::text>
 
-                    </div>
+                </x-aura::flex>
 
-                    <div>
+                <x-slot:footer>
 
-                        <x-aura::button variant="primary" size="md" href="/guest/template/portfolio" icon="arrow-right" iconPlacement="right">
-                            Explore
-                        </x-aura::button>
+                    <x-aura::text size="sm" weight="semibold">
+                        Explore
+                    </x-aura::text>
 
-                    </div>
+                    <x-aura::icon name="arrow-right" size="xs" />
 
-                </div>
+                </x-slot:footer>
 
             </x-aura::card>
 
-            <!-- TEMPLATE 3: Restaurant & Dining -->
-            <x-aura::card>
+            <!-- TEMPLATE 3: Restaurant and Dining -->
+            <x-aura::card href="/guest/template/restaurant" wire:navigate gap="4">
 
-                <div class="h-full flex flex-col justify-between space-y-6">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <div class="space-y-4">
+                    <x-aura::icon name="utensils" size="lg" :container="true" />
 
-                        <div class="flex items-center justify-between">
-                            <x-aura::icon name="utensils" variant="subtle" size="lg" />
-                        </div>
+                    <x-aura::badge variant="neutral" size="sm">
+                        Hospitality
+                    </x-aura::badge>
 
-                        <div class="space-y-2">
+                </x-aura::flex>
 
-                            <x-aura::heading level="3" size="sm">
-                                Restaurant &amp; Dining
-                            </x-aura::heading>
+                <x-aura::flex direction="col" gap="1">
 
-                            <x-aura::text variant="subtle" size="sm">
-                                Digital menu tabbed sections, table reservation pickers, chef specials, and dining reviews.
-                            </x-aura::text>
+                    <x-aura::heading level="3" size="sm">
+                        Restaurant and Dining
+                    </x-aura::heading>
 
-                        </div>
+                    <x-aura::text variant="subtle" size="sm">
+                        Digital menu tabbed sections, table reservation pickers, chef specials, and dining reviews.
+                    </x-aura::text>
 
-                    </div>
+                </x-aura::flex>
 
-                    <div>
+                <x-slot:footer>
 
-                        <x-aura::button variant="primary" size="md" href="/guest/template/restaurant" icon="arrow-right" iconPlacement="right">
-                            Explore
-                        </x-aura::button>
+                    <x-aura::text size="sm" weight="semibold">
+                        Explore
+                    </x-aura::text>
 
-                    </div>
+                    <x-aura::icon name="arrow-right" size="xs" />
 
-                </div>
+                </x-slot:footer>
 
             </x-aura::card>
 
             <!-- TEMPLATE 4: SaaS Application -->
-            <x-aura::card>
+            <x-aura::card href="/guest/template/saas" wire:navigate gap="4">
 
-                <div class="h-full flex flex-col justify-between space-y-6">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <div class="space-y-4">
+                    <x-aura::icon name="rocket" size="lg" :container="true" />
 
-                        <div class="flex items-center justify-between">
-                            <x-aura::icon name="rocket" variant="subtle" size="lg" />
-                        </div>
+                    <x-aura::badge variant="neutral" size="sm">
+                        SaaS
+                    </x-aura::badge>
 
-                        <div class="space-y-2">
+                </x-aura::flex>
 
-                            <x-aura::heading level="3" size="sm">
-                                SaaS Application
-                            </x-aura::heading>
+                <x-aura::flex direction="col" gap="1">
 
-                            <x-aura::text variant="subtle" size="sm">
-                                High-converting landing page, pricing comparison tables, feature grids, and signup flows.
-                            </x-aura::text>
+                    <x-aura::heading level="3" size="sm">
+                        SaaS Application
+                    </x-aura::heading>
 
-                        </div>
+                    <x-aura::text variant="subtle" size="sm">
+                        High converting landing page, pricing comparison tables, feature grids, and signup flows.
+                    </x-aura::text>
 
-                    </div>
+                </x-aura::flex>
 
-                    <div>
+                <x-slot:footer>
 
-                        <x-aura::button variant="primary" size="md" href="/guest/template/saas" icon="arrow-right" iconPlacement="right">
-                            Explore
-                        </x-aura::button>
+                    <x-aura::text size="sm" weight="semibold">
+                        Explore
+                    </x-aura::text>
 
-                    </div>
+                    <x-aura::icon name="arrow-right" size="xs" />
 
-                </div>
+                </x-slot:footer>
 
             </x-aura::card>
 
             <!-- TEMPLATE 5: Creative Agency -->
-            <x-aura::card>
+            <x-aura::card href="/guest/template/agency" wire:navigate gap="4">
 
-                <div class="h-full flex flex-col justify-between space-y-6">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <div class="space-y-4">
+                    <x-aura::icon name="zap" size="lg" :container="true" />
 
-                        <div class="flex items-center justify-between">
-                            <x-aura::icon name="zap" variant="subtle" size="lg" />
-                        </div>
+                    <x-aura::badge variant="neutral" size="sm">
+                        Agency
+                    </x-aura::badge>
 
-                        <div class="space-y-2">
+                </x-aura::flex>
 
-                            <x-aura::heading level="3" size="sm">
-                                Creative Agency
-                            </x-aura::heading>
+                <x-aura::flex direction="col" gap="1">
 
-                            <x-aura::text variant="subtle" size="sm">
-                                Bold agency presentation, service cards, client logos, team profiles, and proposal requests.
-                            </x-aura::text>
+                    <x-aura::heading level="3" size="sm">
+                        Creative Agency
+                    </x-aura::heading>
 
-                        </div>
+                    <x-aura::text variant="subtle" size="sm">
+                        Bold agency presentation, service cards, client logos, team profiles, and proposal requests.
+                    </x-aura::text>
 
-                    </div>
+                </x-aura::flex>
 
-                    <div>
+                <x-slot:footer>
 
-                        <x-aura::button variant="primary" size="md" href="/guest/template/agency" icon="arrow-right" iconPlacement="right">
-                            Explore
-                        </x-aura::button>
+                    <x-aura::text size="sm" weight="semibold">
+                        Explore
+                    </x-aura::text>
 
-                    </div>
+                    <x-aura::icon name="arrow-right" size="xs" />
 
-                </div>
+                </x-slot:footer>
 
             </x-aura::card>
 
-        </div>
+        </x-aura::grid>
 
-    </div>
+    </x-aura::flex>
 
-</x-aura::flex>
+</x-aura::container>

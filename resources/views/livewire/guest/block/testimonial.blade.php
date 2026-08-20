@@ -11,41 +11,41 @@ class extends Component {};
 
 ?>
 
-<x-aura::flex direction="col" gap="6" class="w-full max-w-4xl mx-auto py-6">
+<x-aura::container size="4xl" gap="6" class="py-6">
 
     <!-- Top Header -->
-    <div class="px-1">
+    <x-aura::flex justify="between" gap="4">
 
-        <x-aura::flex align="center" justify="between" gap="4">
+        <x-aura::flex direction="col" gap="none">
 
-            <div>
+            <x-aura::kicker>
+                Design Blocks
+            </x-aura::kicker>
 
-                <x-aura::kicker>
-                    Design Blocks
-                </x-aura::kicker>
+            <x-aura::heading level="1" size="lg">
+                Testimonials
+            </x-aura::heading>
 
-                <x-aura::heading level="1" size="lg">
-                    Testimonial
-                </x-aura::heading>
+        </x-aura::flex>
 
-            </div>
+        <x-aura::flex justify="end" gap="2">
 
-            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" icon="arrow-left">
+            <x-aura::button href="/guest#design-block" wire:navigate variant="secondary" size="sm" icon="arrow-left">
                 Back
             </x-aura::button>
 
         </x-aura::flex>
 
-    </div>
+    </x-aura::flex>
 
     <!-- Testimonial Block Preview -->
-    <x-aura::code title="Customer Review &amp; Social Proof Block">
+    <x-aura::code title="Customer Review and Social Proof Block">
 
         <x-slot:preview>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+            <x-aura::grid cols="1" sm="2" gap="6" class="w-full">
 
-                <x-aura::card>
+                <x-aura::card gap="3">
 
                     <div class="flex items-center gap-1 text-zinc-900 dark:text-white text-sm select-none">
                         ★★★★★
@@ -55,27 +55,27 @@ class extends Component {};
                         "Aura Wire has cut our UI development time in half. The components are extremely well crafted and responsive across all device breakpoints."
                     </x-aura::text>
 
-                    <div class="flex items-center gap-3 pt-2">
+                    <x-aura::flex align="center" gap="3" class="pt-2 mt-auto">
 
                         <x-aura::avatar initials="JD" status="online" size="sm" />
 
-                        <div>
+                        <x-aura::flex direction="col" gap="none">
 
                             <x-aura::heading level="4" size="xs">
                                 Jane Doe
                             </x-aura::heading>
 
-                            <x-aura::text variant="subtle" size="xs">
+                            <x-aura::text variant="subtle" size="sm">
                                 CTO at TechCorp
                             </x-aura::text>
 
-                        </div>
+                        </x-aura::flex>
 
-                    </div>
+                    </x-aura::flex>
 
                 </x-aura::card>
 
-                <x-aura::card>
+                <x-aura::card gap="3">
 
                     <div class="flex items-center gap-1 text-zinc-900 dark:text-white text-sm select-none">
                         ★★★★★
@@ -85,62 +85,56 @@ class extends Component {};
                         "The cleanest Blade component library available for TALL stack developers. Worth every single penny for production applications."
                     </x-aura::text>
 
-                    <div class="flex items-center gap-3 pt-2">
+                    <x-aura::flex align="center" gap="3" class="pt-2 mt-auto">
 
                         <x-aura::avatar initials="MS" status="online" size="sm" />
 
-                        <div>
+                        <x-aura::flex direction="col" gap="none">
 
                             <x-aura::heading level="4" size="xs">
                                 Marcus Smith
                             </x-aura::heading>
 
-                            <x-aura::text variant="subtle" size="xs">
+                            <x-aura::text variant="subtle" size="sm">
                                 Lead Engineer at SaaSify
                             </x-aura::text>
 
-                        </div>
+                        </x-aura::flex>
 
-                    </div>
+                    </x-aura::flex>
 
                 </x-aura::card>
 
-            </div>
+            </x-aura::grid>
 
         </x-slot:preview>
 
         <x-slot:codeSlot>
 
             @verbatim
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
-                    <x-aura::card>
-                        <div class="text-zinc-900 dark:text-white text-sm">
-                            ★★★★★
-                        </div>
-
-                        <x-aura::text variant="subtle" size="sm" class="italic">
-                            "Aura Wire has cut our UI development time in half. Highly recommended!"
+                <x-aura::grid cols="1" sm="2" gap="6" class="w-full">
+                    <x-aura::card gap="3">
+                        <div class="text-sm">★★★★★</div>
+                        <x-aura::text variant="subtle" size="sm">
+                            "Aura Wire has cut our UI development time in half."
                         </x-aura::text>
-
-                        <div class="flex items-center gap-3 pt-2">
+                        <x-aura::flex align="center" gap="3" class="pt-2 mt-auto">
                             <x-aura::avatar initials="JD" status="online" size="sm" />
-
-                            <div>
+                            <x-aura::flex direction="col" gap="none">
                                 <x-aura::heading level="4" size="xs">
                                     Jane Doe
                                 </x-aura::heading>
-
-                                <x-aura::text variant="subtle" size="xs">
+                                <x-aura::text variant="subtle" size="sm">
                                     CTO at TechCorp
                                 </x-aura::text>
-                            </div>
-                        </div>
+                            </x-aura::flex>
+                        </x-aura::flex>
                     </x-aura::card>
-                </div>
+                </x-aura::grid>
             @endverbatim
 
         </x-slot:codeSlot>
 
     </x-aura::code>
 
-</x-aura::flex>
+</x-aura::container>

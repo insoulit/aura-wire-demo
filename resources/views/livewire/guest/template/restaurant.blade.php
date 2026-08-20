@@ -6,7 +6,7 @@ use Livewire\Attributes\Title;
 
 new 
 #[Layout('livewire.layout.app')] 
-#[Title('Restaurant & Bistro UI Kit — Guest Portal | Aura Wire')] 
+#[Title('Restaurant and Bistro UI Kit — Guest Portal | Aura Wire')] 
 class extends Component {
     public string $activeTab = 'starters';
     public string $guests = '2';
@@ -16,14 +16,14 @@ class extends Component {
 
 ?>
 
-<x-aura::flex direction="col" gap="12" class="w-full max-w-5xl py-6">
+<x-aura::container size="5xl" gap="12" class="py-6">
 
     <!-- Top Bar -->
-    <div class="flex items-center justify-between border-b border-zinc-200 dark:border-zinc-800 pb-4">
+    <x-aura::flex align="center" justify="between" class="border-b border-zinc-200 dark:border-zinc-800 pb-4">
 
-        <div class="flex items-center gap-3">
+        <x-aura::flex align="center" gap="3">
 
-            <x-aura::button href="/guest#full-template" variant="subtle" size="sm" icon="arrow-left">
+            <x-aura::button href="/guest#full-template" wire:navigate variant="secondary" size="sm" icon="arrow-left">
                 Back
             </x-aura::button>
 
@@ -33,61 +33,61 @@ class extends Component {
                 Restaurant UI Kit
             </x-aura::badge>
 
-        </div>
+        </x-aura::flex>
 
         <x-aura::badge variant="neutral" size="sm">
             Open Today 12:00 PM – 11:00 PM
         </x-aura::badge>
 
-    </div>
+    </x-aura::flex>
 
     <!-- Dining Hero -->
     <div class="rounded-3xl bg-zinc-100/90 dark:bg-zinc-900 text-zinc-900 dark:text-white p-8 md:p-12 relative overflow-hidden border border-zinc-200/80 dark:border-zinc-800 shadow-xs">
 
-        <div class="max-w-2xl space-y-4">
+        <x-aura::flex direction="col" gap="4" class="max-w-2xl">
 
-            <div class="inline-flex items-center gap-2">
+            <x-aura::flex align="center" gap="2">
 
                 <x-aura::kicker>
-                    L'AURA BISTRO &amp; GRILL
+                    L'AURA BISTRO AND GRILL
                 </x-aura::kicker>
 
                 <x-aura::badge variant="neutral" size="sm">
                     Michelin Recommended
                 </x-aura::badge>
 
-            </div>
+            </x-aura::flex>
 
             <x-aura::display size="md">
-                Artisanal Culinary Craft &amp; Fine Dining
+                Artisanal Culinary Craft and Fine Dining
             </x-aura::display>
 
             <x-aura::subheading>
                 Fresh seasonal ingredients, wood-fired specialties, and curated organic wine pairings served in a cozy modern atmosphere.
             </x-aura::subheading>
 
-            <div class="pt-2 flex flex-wrap gap-3">
+            <x-aura::flex align="center" gap="3" wrap="true" class="pt-2">
 
                 <x-aura::button variant="primary" size="md" icon="arrow-right" iconPlacement="right">
                     Reserve
                 </x-aura::button>
 
-                <x-aura::button variant="outline" size="md">
+                <x-aura::button variant="secondary" size="md">
                     Menu
                 </x-aura::button>
 
-            </div>
+            </x-aura::flex>
 
-        </div>
+        </x-aura::flex>
 
     </div>
 
     <!-- Digital Menu Section with Tabs -->
-    <div class="space-y-6">
+    <x-aura::flex direction="col" gap="6">
 
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-zinc-200 dark:border-zinc-800 pb-4">
+        <x-aura::flex direction="col" sm="row" align="start" smAlign="center" justify="between" gap="4" class="border-b border-zinc-200 dark:border-zinc-800 pb-4">
 
-            <div>
+            <x-aura::flex direction="col" gap="none">
 
                 <x-aura::heading level="2" size="lg">
                     Chef's Signature Menu
@@ -97,52 +97,48 @@ class extends Component {
                     Explore our daily prepared dishes and seasonal specialties
                 </x-aura::subheading>
 
-            </div>
+            </x-aura::flex>
 
             <!-- Menu Category Category Tabs -->
             <x-aura::group>
 
-                <x-aura::button variant="{{ $activeTab === 'starters' ? 'primary' : 'subtle' }}" size="sm" wire:click="$set('activeTab', 'starters')">
+                <x-aura::button variant="{{ $activeTab === 'starters' ? 'primary' : 'ghost' }}" size="sm" wire:click="$set('activeTab', 'starters')">
                     Starters
                 </x-aura::button>
 
-                <x-aura::button variant="{{ $activeTab === 'mains' ? 'primary' : 'subtle' }}" size="sm" wire:click="$set('activeTab', 'mains')">
+                <x-aura::button variant="{{ $activeTab === 'mains' ? 'primary' : 'ghost' }}" size="sm" wire:click="$set('activeTab', 'mains')">
                     Mains
                 </x-aura::button>
 
-                <x-aura::button variant="{{ $activeTab === 'desserts' ? 'primary' : 'subtle' }}" size="sm" wire:click="$set('activeTab', 'desserts')">
+                <x-aura::button variant="{{ $activeTab === 'desserts' ? 'primary' : 'ghost' }}" size="sm" wire:click="$set('activeTab', 'desserts')">
                     Desserts
                 </x-aura::button>
 
             </x-aura::group>
 
-        </div>
+        </x-aura::flex>
 
         <!-- Menu Item Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <x-aura::grid cols="1" md="2" gap="6">
 
             <!-- Item 1 -->
-            <x-aura::card>
+            <x-aura::card gap="3">
 
-                <div class="space-y-3">
+                <x-aura::flex align="center" justify="between">
 
-                    <div class="flex items-center justify-between">
+                    <x-aura::heading level="3" size="sm">
+                        Truffle Wild Mushroom Arancini
+                    </x-aura::heading>
 
-                        <x-aura::heading level="3" size="sm">
-                            Truffle Wild Mushroom Arancini
-                        </x-aura::heading>
+                    <div class="font-bold text-zinc-900 dark:text-white font-mono">$18.50</div>
 
-                        <div class="font-bold text-zinc-900 dark:text-white">$18.50</div>
+                </x-aura::flex>
 
-                    </div>
+                <x-aura::text variant="subtle" size="sm">
+                    Crispy risotto balls infused with black truffle emulsion and aged parmesan dip.
+                </x-aura::text>
 
-                    <x-aura::text variant="subtle" size="xs">
-                        Crispy risotto balls infused with black truffle emulsion and aged parmesan dip.
-                    </x-aura::text>
-
-                </div>
-
-                <div class="pt-4 flex items-center gap-2 border-t border-zinc-100 dark:border-zinc-800">
+                <x-slot:footer>
 
                     <x-aura::badge variant="neutral" size="sm">
                         Vegetarian
@@ -152,32 +148,28 @@ class extends Component {
                         Chef Favorite
                     </x-aura::badge>
 
-                </div>
+                </x-slot:footer>
 
             </x-aura::card>
 
             <!-- Item 2 -->
-            <x-aura::card>
+            <x-aura::card gap="3">
 
-                <div class="space-y-3">
+                <x-aura::flex align="center" justify="between">
 
-                    <div class="flex items-center justify-between">
+                    <x-aura::heading level="3" size="sm">
+                        Wood Fired Ribeye Steak
+                    </x-aura::heading>
 
-                        <x-aura::heading level="3" size="sm">
-                            Wood Fired Ribeye Steak
-                        </x-aura::heading>
+                    <div class="font-bold text-zinc-900 dark:text-white font-mono">$42.00</div>
 
-                        <div class="font-bold text-zinc-900 dark:text-white">$42.00</div>
+                </x-aura::flex>
 
-                    </div>
+                <x-aura::text variant="subtle" size="sm">
+                    Prime dry aged Angus ribeye served with roasted bone marrow butter and herb jus.
+                </x-aura::text>
 
-                    <x-aura::text variant="subtle" size="xs">
-                        Prime dry aged Angus ribeye served with roasted bone marrow butter and herb jus.
-                    </x-aura::text>
-
-                </div>
-
-                <div class="pt-4 flex items-center gap-2 border-t border-zinc-100 dark:border-zinc-800">
+                <x-slot:footer>
 
                     <x-aura::badge variant="neutral" size="sm">
                         Gluten Free
@@ -187,18 +179,18 @@ class extends Component {
                         Signature Dish
                     </x-aura::badge>
 
-                </div>
+                </x-slot:footer>
 
             </x-aura::card>
 
-        </div>
+        </x-aura::grid>
 
-    </div>
+    </x-aura::flex>
 
     <!-- Table Reservation Form Card -->
-    <x-aura::card title="Reserve Your Table Online">
+    <x-aura::card title="Reserve Your Table Online" gap="6">
 
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <x-aura::grid cols="1" sm="3" gap="4">
 
             <x-aura::field label="Number of Guests">
                 <x-aura::select wire:model="guests">
@@ -220,24 +212,20 @@ class extends Component {
                 </x-aura::select>
             </x-aura::field>
 
-        </div>
+        </x-aura::grid>
 
         <x-slot:footer>
 
-            <div class="flex items-center justify-between w-full">
+            <x-aura::badge variant="neutral" size="sm">
+                Instant Confirmation
+            </x-aura::badge>
 
-                <x-aura::badge variant="neutral" size="sm">
-                    Instant Confirmation
-                </x-aura::badge>
-
-                <x-aura::button variant="primary" size="sm" icon="arrow-right" iconPlacement="right">
-                    Confirm
-                </x-aura::button>
-
-            </div>
+            <x-aura::button variant="primary" size="sm" icon="arrow-right" iconPlacement="right">
+                Confirm
+            </x-aura::button>
 
         </x-slot:footer>
 
     </x-aura::card>
 
-</x-aura::flex>
+</x-aura::container>

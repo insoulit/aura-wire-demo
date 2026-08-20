@@ -11,32 +11,32 @@ class extends Component {};
 
 ?>
 
-<x-aura::flex direction="col" gap="4" class="w-full max-w-4xl mx-auto py-6">
+<x-aura::container size="4xl" gap="6" class="py-6">
 
     <!-- Top Header -->
-    <div class="px-1">
+    <x-aura::flex justify="between" gap="4">
 
-        <x-aura::flex align="center" justify="between" gap="4">
+        <x-aura::flex direction="col" gap="none">
 
-            <div>
+            <x-aura::kicker>
+                Design Blocks
+            </x-aura::kicker>
 
-                <x-aura::kicker>
-                    Design Blocks
-                </x-aura::kicker>
+            <x-aura::heading level="1" size="lg">
+                Product Card
+            </x-aura::heading>
 
-                <x-aura::heading level="1" size="lg">
-                    Product Card
-                </x-aura::heading>
+        </x-aura::flex>
 
-            </div>
+        <x-aura::flex justify="end" gap="2">
 
-            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" icon="arrow-left">
+            <x-aura::button href="/guest#design-block" wire:navigate variant="secondary" size="sm" icon="arrow-left">
                 Back
             </x-aura::button>
 
         </x-aura::flex>
 
-    </div>
+    </x-aura::flex>
 
     <!-- 1. E Commerce Masterpiece Product Block -->
     <x-aura::code title="1. Premium E Commerce Product Card Block">
@@ -45,15 +45,15 @@ class extends Component {};
 
             <div class="w-full max-w-md mx-auto">
 
-                <x-aura::card>
+                <x-aura::card padding="none">
 
                     <!-- Image Showcase Area -->
-                    <div class="relative w-full h-56 bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-950 flex items-center justify-center p-6 group rounded-t-xl">
+                    <div class="relative w-full h-56 bg-zinc-900 dark:bg-zinc-950 flex items-center justify-center p-6 group rounded-t-2xl">
 
                         <div class="absolute top-3 left-3">
 
                             <x-aura::badge variant="neutral" size="sm">
-                                Save $50 (15% OFF)
+                                Save $50
                             </x-aura::badge>
 
                         </div>
@@ -73,22 +73,29 @@ class extends Component {};
                     </div>
 
                     <!-- Card Body Details -->
-                    <div class="p-6 space-y-4">
+                    <x-aura::flex direction="col" gap="4" class="p-6">
 
-                        <div class="space-y-1">
+                        <x-aura::flex direction="col" gap="1">
 
-                            <div class="flex items-center justify-between">
+                            <x-aura::flex align="center" justify="between">
 
                                 <x-aura::kicker>
-                                    Audio &amp; Electronics
+                                    Audio and Electronics
                                 </x-aura::kicker>
 
-                                <div class="flex items-center gap-1 text-xs font-bold text-zinc-900 dark:text-white">
-                                    <span>★ 4.9</span>
-                                    <span class="text-zinc-400 font-normal">(128)</span>
-                                </div>
+                                <x-aura::flex align="center" gap="1">
 
-                            </div>
+                                    <x-aura::text size="sm" weight="semibold">
+                                        ★ 4.9
+                                    </x-aura::text>
+
+                                    <x-aura::text size="sm" variant="subtle">
+                                        (128)
+                                    </x-aura::text>
+
+                                </x-aura::flex>
+
+                            </x-aura::flex>
 
                             <x-aura::heading level="3" size="sm">
                                 Aura SoundPro Wireless ANC
@@ -98,14 +105,16 @@ class extends Component {};
                                 Active noise cancelling studio headphones with 40h playback and custom acoustic drivers.
                             </x-aura::text>
 
-                        </div>
+                        </x-aura::flex>
 
                         <!-- Options & Color Selector -->
-                        <div class="flex items-center justify-between pt-1 border-t border-zinc-100 dark:border-zinc-800">
+                        <x-aura::flex align="center" justify="between" class="pt-2 border-t border-zinc-100 dark:border-zinc-800">
 
-                            <div class="flex items-center gap-2">
+                            <x-aura::flex align="center" gap="2">
 
-                                <span class="text-xs font-semibold text-zinc-500">Colors:</span>
+                                <x-aura::text size="sm" variant="subtle" weight="medium">
+                                    Colors:
+                                </x-aura::text>
 
                                 <div class="flex items-center gap-1.5">
                                     <span class="w-3.5 h-3.5 rounded-full bg-zinc-900 ring-2 ring-zinc-500 ring-offset-1 cursor-pointer"></span>
@@ -113,32 +122,32 @@ class extends Component {};
                                     <span class="w-3.5 h-3.5 rounded-full bg-zinc-600 hover:ring-2 hover:ring-zinc-400 cursor-pointer"></span>
                                 </div>
 
-                            </div>
+                            </x-aura::flex>
 
                             <x-aura::badge variant="neutral" size="sm">
                                 In Stock
                             </x-aura::badge>
 
-                        </div>
+                        </x-aura::flex>
 
                         <!-- Price & Action CTA -->
-                        <div class="pt-2 flex items-center justify-between">
+                        <x-aura::flex align="center" justify="between" class="pt-2">
 
-                            <div>
+                            <x-aura::flex align="baseline" gap="1.5">
 
                                 <span class="text-2xl font-bold font-mono tracking-tight text-zinc-900 dark:text-white">$299.00</span>
 
-                                <span class="text-xs line-through text-zinc-400 font-mono ml-1.5">$349.00</span>
+                                <span class="text-sm line-through text-zinc-400 font-mono">$349.00</span>
 
-                            </div>
+                            </x-aura::flex>
 
                             <x-aura::button variant="primary" size="md">
                                 Add
                             </x-aura::button>
 
-                        </div>
+                        </x-aura::flex>
 
-                    </div>
+                    </x-aura::flex>
 
                 </x-aura::card>
 
@@ -149,36 +158,28 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::card>
-                    <!-- Image Showcase Area -->
-                    <div class="relative w-full h-56 bg-zinc-900 flex items-center justify-center p-6">
+                <x-aura::card padding="none">
+                    <div class="relative w-full h-56 bg-zinc-900 flex items-center justify-center p-6 rounded-t-2xl">
                         <x-aura::badge variant="neutral" size="sm">
-                            Save $50 (15% OFF)
+                            Save $50
                         </x-aura::badge>
                     </div>
 
-                    <!-- Card Body Details -->
-                    <div class="p-6 space-y-4">
-                        <div class="space-y-1">
-                            <x-aura::kicker>
-                                Audio &amp; Electronics
-                            </x-aura::kicker>
-                            <x-aura::heading level="3" size="sm">
-                                Aura SoundPro Wireless ANC
-                            </x-aura::heading>
-                            <x-aura::text size="sm" variant="subtle">
-                                Active noise cancelling studio headphones.
-                            </x-aura::text>
-                        </div>
+                    <x-aura::flex direction="col" gap="4" class="p-6">
+                        <x-aura::kicker>
+                            Audio and Electronics
+                        </x-aura::kicker>
+                        <x-aura::heading level="3" size="sm">
+                            Aura SoundPro Wireless ANC
+                        </x-aura::heading>
 
-                        <!-- Price & Action CTA -->
-                        <div class="pt-2 flex items-center justify-between">
+                        <x-aura::flex align="center" justify="between" class="pt-2">
                             <span class="text-2xl font-bold font-mono">$299.00</span>
                             <x-aura::button variant="primary" size="md">
                                 Add
                             </x-aura::button>
-                        </div>
-                    </div>
+                        </x-aura::flex>
+                    </x-aura::flex>
                 </x-aura::card>
             @endverbatim
 
@@ -191,11 +192,11 @@ class extends Component {};
 
         <x-slot:preview>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-3xl">
+            <x-aura::grid cols="1" sm="2" gap="6" class="w-full max-w-3xl">
 
-                <x-aura::card>
+                <x-aura::card gap="3">
 
-                    <div class="flex items-center justify-between">
+                    <x-aura::flex align="center" justify="between">
 
                         <x-aura::badge variant="neutral" size="sm">
                             Workspace
@@ -205,9 +206,9 @@ class extends Component {};
                             Popular
                         </x-aura::badge>
 
-                    </div>
+                    </x-aura::flex>
 
-                    <div class="space-y-1">
+                    <x-aura::flex direction="col" gap="1">
 
                         <x-aura::heading level="4" size="xs">
                             Minimalist Ergonomic Studio Desk
@@ -217,9 +218,9 @@ class extends Component {};
                             Solid oak desk with motorized height memory controls.
                         </x-aura::text>
 
-                    </div>
+                    </x-aura::flex>
 
-                    <div class="flex items-center justify-between pt-2 border-t border-zinc-100 dark:border-zinc-800">
+                    <x-slot:footer>
 
                         <span class="text-xl font-bold font-mono text-zinc-900 dark:text-white">$649.00</span>
 
@@ -227,13 +228,13 @@ class extends Component {};
                             View
                         </x-aura::button>
 
-                    </div>
+                    </x-slot:footer>
 
                 </x-aura::card>
 
-                <x-aura::card>
+                <x-aura::card gap="3">
 
-                    <div class="flex items-center justify-between">
+                    <x-aura::flex align="center" justify="between">
 
                         <x-aura::badge variant="neutral" size="sm">
                             Office
@@ -243,9 +244,9 @@ class extends Component {};
                             Low Stock
                         </x-aura::badge>
 
-                    </div>
+                    </x-aura::flex>
 
-                    <div class="space-y-1">
+                    <x-aura::flex direction="col" gap="1">
 
                         <x-aura::heading level="4" size="xs">
                             Adaptive Breathable Mesh Chair
@@ -255,9 +256,9 @@ class extends Component {};
                             3D lumbar support with 4D dynamic armrests.
                         </x-aura::text>
 
-                    </div>
+                    </x-aura::flex>
 
-                    <div class="flex items-center justify-between pt-2 border-t border-zinc-100 dark:border-zinc-800">
+                    <x-slot:footer>
 
                         <span class="text-xl font-bold font-mono text-zinc-900 dark:text-white">$389.00</span>
 
@@ -265,62 +266,44 @@ class extends Component {};
                             Buy
                         </x-aura::button>
 
-                    </div>
+                    </x-slot:footer>
 
                 </x-aura::card>
 
-            </div>
+            </x-aura::grid>
 
         </x-slot:preview>
 
         <x-slot:codeSlot>
 
             @verbatim
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <x-aura::card>
-                        <div class="flex items-center justify-between">
+                <x-aura::grid cols="1" sm="2" gap="6">
+                    <x-aura::card gap="3">
+                        <x-aura::flex align="center" justify="between">
                             <x-aura::badge variant="neutral" size="sm">
                                 Workspace
                             </x-aura::badge>
                             <x-aura::badge variant="subtle" size="sm">
                                 Popular
                             </x-aura::badge>
-                        </div>
+                        </x-aura::flex>
+
                         <x-aura::heading level="4" size="xs">
                             Minimalist Ergonomic Studio Desk
                         </x-aura::heading>
-                        <div class="flex items-center justify-between pt-2 border-t border-zinc-100 dark:border-zinc-800">
+
+                        <x-slot:footer>
                             <span class="text-xl font-bold font-mono">$649.00</span>
                             <x-aura::button variant="secondary" size="sm">
                                 View
                             </x-aura::button>
-                        </div>
+                        </x-slot:footer>
                     </x-aura::card>
-
-                    <x-aura::card>
-                        <div class="flex items-center justify-between">
-                            <x-aura::badge variant="neutral" size="sm">
-                                Office
-                            </x-aura::badge>
-                            <x-aura::badge variant="subtle" size="sm">
-                                Low Stock
-                            </x-aura::badge>
-                        </div>
-                        <x-aura::heading level="4" size="xs">
-                            Adaptive Breathable Mesh Chair
-                        </x-aura::heading>
-                        <div class="flex items-center justify-between pt-2 border-t border-zinc-100 dark:border-zinc-800">
-                            <span class="text-xl font-bold font-mono">$389.00</span>
-                            <x-aura::button variant="primary" size="sm">
-                                Buy
-                            </x-aura::button>
-                        </div>
-                    </x-aura::card>
-                </div>
+                </x-aura::grid>
             @endverbatim
 
         </x-slot:codeSlot>
 
     </x-aura::code>
 
-</x-aura::flex>
+</x-aura::container>

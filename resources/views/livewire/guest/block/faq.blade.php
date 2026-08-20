@@ -11,39 +11,39 @@ class extends Component {};
 
 ?>
 
-<x-aura::flex direction="col" gap="6" class="w-full max-w-4xl mx-auto py-6">
+<x-aura::container size="4xl" gap="6" class="py-6">
 
     <!-- Top Header -->
-    <div class="px-1">
+    <x-aura::flex justify="between" gap="4">
 
-        <x-aura::flex align="center" justify="between" gap="4">
+        <x-aura::flex direction="col" gap="none">
 
-            <div>
+            <x-aura::kicker>
+                Design Blocks
+            </x-aura::kicker>
 
-                <x-aura::kicker>
-                    Design Blocks
-                </x-aura::kicker>
+            <x-aura::heading level="1" size="lg">
+                FAQ Accordion
+            </x-aura::heading>
 
-                <x-aura::heading level="1" size="lg">
-                    FAQ Accordion
-                </x-aura::heading>
+        </x-aura::flex>
 
-            </div>
+        <x-aura::flex justify="end" gap="2">
 
-            <x-aura::button href="/guest#design-block" variant="subtle" size="sm" icon="arrow-left">
+            <x-aura::button href="/guest#design-block" wire:navigate variant="secondary" size="sm" icon="arrow-left">
                 Back
             </x-aura::button>
 
         </x-aura::flex>
 
-    </div>
+    </x-aura::flex>
 
     <!-- FAQ Accordion Block Preview -->
     <x-aura::code title="Interactive FAQ Accordion Block">
 
         <x-slot:preview>
 
-            <div class="space-y-3 w-full max-w-2xl mx-auto" x-data="{ open: 1 }">
+            <x-aura::flex direction="col" gap="3" class="w-full max-w-2xl mx-auto" x-data="{ open: 1 }">
 
                 <!-- FAQ Item 1 -->
                 <x-aura::card>
@@ -98,7 +98,7 @@ class extends Component {};
                         <div class="pt-3 border-t border-zinc-100 dark:border-zinc-800/80 mt-3">
 
                             <x-aura::text variant="subtle" size="sm">
-                                Yes! All components leverage native Tailwind CSS utility classes and design tokens. You can extend or override colors, spacing, rounded corners, and typography in your application's Tailwind configuration.
+                                Yes! All components leverage native Tailwind CSS utility classes and design tokens. You can extend or override colors, spacing, rounded corners, and typography in your application Tailwind configuration.
                             </x-aura::text>
 
                         </div>
@@ -129,7 +129,7 @@ class extends Component {};
                         <div class="pt-3 border-t border-zinc-100 dark:border-zinc-800/80 mt-3">
 
                             <x-aura::text variant="subtle" size="sm">
-                                Alpine.js comes bundled with Livewire v3 out of the box. Interactive components like Modals, Slide Overs, Accordions, and Dropdowns utilize lightweight Alpine directives for zero-latency client-side state.
+                                Alpine.js comes bundled with Livewire v3 out of the box. Interactive components like Modals, Slide Overs, Accordions, and Dropdowns utilize lightweight Alpine directives for zero latency client side state.
                             </x-aura::text>
 
                         </div>
@@ -138,14 +138,14 @@ class extends Component {};
 
                 </x-aura::card>
 
-            </div>
+            </x-aura::flex>
 
         </x-slot:preview>
 
         <x-slot:codeSlot>
 
             @verbatim
-                <div class="space-y-3 w-full max-w-2xl mx-auto" x-data="{ open: 1 }">
+                <x-aura::flex direction="col" gap="3" class="w-full max-w-2xl mx-auto" x-data="{ open: 1 }">
                     <x-aura::card>
                         <button type="button" x-on:click="open = (open === 1 ? null : 1)" class="w-full flex items-center justify-between text-left gap-4">
                             <x-aura::heading level="3" size="sm">
@@ -161,11 +161,11 @@ class extends Component {};
                             </div>
                         </div>
                     </x-aura::card>
-                </div>
+                </x-aura::flex>
             @endverbatim
 
         </x-slot:codeSlot>
 
     </x-aura::code>
 
-</x-aura::flex>
+</x-aura::container>
