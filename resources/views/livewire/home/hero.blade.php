@@ -24,7 +24,7 @@ new class extends Component {};
     <!-- Display Headline & Subtitle -->
     <x-aura::flex direction="col" gap="1.5" class="text-center">
 
-        <x-aura::display size="lg">
+        <x-aura::display size="md">
             Aura Wire
         </x-aura::display>
 
@@ -37,11 +37,11 @@ new class extends Component {};
     <!-- Action CTAs -->
     <x-aura::flex align="center" justify="center" gap="3" :wrap="true" class="pt-1">
 
-        <x-aura::button variant="primary" size="lg" icon="layers" href="/components">
+        <x-aura::button variant="primary" size="md" icon="layers" href="/components">
             Components
         </x-aura::button>
 
-        <x-aura::button variant="outline" size="lg" icon="github" href="https://github.com/insoulit/aura-wire" target="_blank" rel="noopener noreferrer">
+        <x-aura::button variant="outline" size="md" icon="github" href="https://github.com/insoulit/aura-wire" target="_blank" rel="noopener noreferrer">
             GitHub
         </x-aura::button>
 

@@ -17,7 +17,7 @@ new class extends Component {};
 </x-aura::card>';
 @endphp
 
-<div class="w-full max-w-2xl text-left">
+<x-aura::container size="2xl" :padding="false">
 
     <x-aura::code
         title="resources/views/welcome.blade.php"
@@ -28,15 +28,19 @@ new class extends Component {};
         :highlighted="true"
     >
 
-        <x-slot:codeSlot><span class="text-amber-200">&lt;x-aura::card</span> <span class="text-zinc-400">title</span>=<span class="text-zinc-300">"Welcome"</span><span class="text-amber-200">&gt;</span>
-    <span class="text-amber-200">&lt;x-aura::field</span> <span class="text-zinc-400">label</span>=<span class="text-zinc-300">"Email Address"</span><span class="text-amber-200">&gt;</span>
-        <span class="text-amber-200">&lt;x-aura::input</span> <span class="text-zinc-400">placeholder</span>=<span class="text-zinc-300">"alex@example.com"</span> <span class="text-amber-200">/&gt;</span>
-    <span class="text-amber-200">&lt;/x-aura::field&gt;</span>
-    <span class="text-amber-200">&lt;x-aura::button</span> <span class="text-zinc-400">variant</span>=<span class="text-zinc-300">"primary"</span><span class="text-amber-200">&gt;</span>
-        <span class="text-zinc-300">Create</span>
-    <span class="text-amber-200">&lt;/x-aura::button&gt;</span>
-<span class="text-amber-200">&lt;/x-aura::card&gt;</x-slot:codeSlot>
+        <x-slot:codeSlot>
+
+            <span class="text-amber-200">&lt;x-aura::card</span> <span class="text-zinc-400">title</span>=<span class="text-zinc-300">"Welcome"</span><span class="text-amber-200">&gt;</span>
+                <span class="text-amber-200">&lt;x-aura::field</span> <span class="text-zinc-400">label</span>=<span class="text-zinc-300">"Email Address"</span><span class="text-amber-200">&gt;</span>
+                    <span class="text-amber-200">&lt;x-aura::input</span> <span class="text-zinc-400">placeholder</span>=<span class="text-zinc-300">"alex@example.com"</span> <span class="text-amber-200">/&gt;</span>
+                <span class="text-amber-200">&lt;/x-aura::field&gt;</span>
+                <span class="text-amber-200">&lt;x-aura::button</span> <span class="text-zinc-400">variant</span>=<span class="text-zinc-300">"primary"</span><span class="text-amber-200">&gt;</span>
+                    <span class="text-zinc-300">Create</span>
+                <span class="text-amber-200">&lt;/x-aura::button&gt;</span>
+            <span class="text-amber-200">&lt;/x-aura::card&gt;</span>
+
+        </x-slot:codeSlot>
 
     </x-aura::code>
 
-</div>
+</x-aura::container>
