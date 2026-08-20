@@ -11,7 +11,7 @@ class extends Component {};
 
 ?>
 
-<x-aura::flex direction="col" gap="4" class="w-full max-w-6xl mx-auto">
+<x-aura::container size="6xl" gap="4">
 
     <!-- Top Header -->
     <div class="px-1">
@@ -50,12 +50,12 @@ class extends Component {};
     <livewire:admin.dashboard.stats />
 
     <!-- Demo Charts Section Grid -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+    <x-aura::grid cols="1" lg="2" gap="4">
 
         <livewire:admin.dashboard.traffic-chart />
 
         <livewire:admin.dashboard.volume-chart />
 
-    </div>
+    </x-aura::grid>
 
-</x-aura::flex>
+</x-aura::container>

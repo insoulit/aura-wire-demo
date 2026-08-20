@@ -53,7 +53,7 @@ class extends Component {
 
 ?>
 
-<x-aura::flex direction="col" gap="3" class="w-full max-w-3xl mx-auto">
+<x-aura::container size="3xl" gap="3">
 
     <!-- Header with Back Button -->
     <x-aura::flex align="center" justify="between" gap="4" class="px-1">
@@ -115,7 +115,7 @@ class extends Component {
                 </x-aura::flex>
 
                 <!-- Full Name & Email -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <x-aura::grid cols="1" sm="2" gap="4">
 
                     <x-aura::field label="Full Name" required error="{{ $errors->first('name') }}">
                         <x-aura::input wire:model="name" size="sm" />
@@ -125,10 +125,10 @@ class extends Component {
                         <x-aura::input wire:model="email" type="email" size="sm" />
                     </x-aura::field>
 
-                </div>
+                </x-aura::grid>
 
                 <!-- Role & Status -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <x-aura::grid cols="1" sm="2" gap="4">
 
                     <x-aura::field label="Account Role" required error="{{ $errors->first('role') }}">
                         <x-aura::select wire:model="role" size="sm">
@@ -146,7 +146,7 @@ class extends Component {
                         </x-aura::select>
                     </x-aura::field>
 
-                </div>
+                </x-aura::grid>
 
             </x-aura::flex>
 
@@ -216,7 +216,7 @@ class extends Component {
 
         <x-slot:footer>
 
-            <div class="grid grid-cols-2 gap-3 w-full">
+            <x-aura::grid cols="2" gap="3" class="w-full">
 
                 <x-aura::button variant="secondary" size="sm" x-on:click="$dispatch('close-modal', 'delete-user-modal')">
                     Cancel
@@ -226,10 +226,10 @@ class extends Component {
                     Delete
                 </x-aura::button>
 
-            </div>
+            </x-aura::grid>
 
         </x-slot:footer>
 
     </x-aura::modal>
 
-</x-aura::flex>
+</x-aura::container>

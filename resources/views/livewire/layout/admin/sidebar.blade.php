@@ -76,7 +76,7 @@ new class extends Component {};
         User
     </x-aura::sidebar.item>
 
-    <x-aura::sidebar.item href="/admin" icon="shield-check" :active="false">
+    <x-aura::sidebar.item href="/admin" icon="shield-check" :active="request()->is('admin*')">
         Admin
     </x-aura::sidebar.item>
 
@@ -102,7 +102,7 @@ new class extends Component {};
                     DDEV Local
                 </x-aura::text>
 
-                <x-aura::badge variant="negative">
+                <x-aura::badge variant="neutral">
                     Admin
                 </x-aura::badge>
 

@@ -6,7 +6,7 @@ new class extends Component {};
 
 ?>
 
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+<x-aura::grid cols="1" sm="2" lg="4" gap="3">
 
     <x-aura::stat label="Total Users" value="30" trend="+14% month" trendDirection="neutral" icon="users" />
 
@@ -16,4 +16,4 @@ new class extends Component {};
 
     <x-aura::stat label="Components" value="48" trend="Production ready" trendDirection="neutral" icon="box" />
 
-</div>
+</x-aura::grid>

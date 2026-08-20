@@ -11,7 +11,7 @@ class extends Component {};
 
 ?>
 
-<x-aura::flex direction="col" gap="4" class="w-full max-w-3xl mx-auto py-2">
+<x-aura::container size="3xl" gap="4">
 
     <!-- Top Header -->
     <div>
@@ -52,4 +52,4 @@ class extends Component {};
     <!-- 2. System & Automation Controls -->
     <livewire:admin.setting.system />
 
-</x-aura::flex>
+</x-aura::container>

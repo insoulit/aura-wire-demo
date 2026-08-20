@@ -23,7 +23,7 @@ class extends Component {
 
 ?>
 
-<x-aura::flex direction="col" gap="3" class="w-full max-w-3xl mx-auto">
+<x-aura::container size="3xl" gap="3">
 
     <!-- Top Header -->
     <x-aura::flex align="center" justify="between" gap="4" class="px-1">
@@ -223,4 +223,4 @@ class extends Component {
 
     </x-aura::card>
 
-</x-aura::flex>
+</x-aura::container>

@@ -189,7 +189,7 @@ class extends Component {
 
 ?>
 
-<x-aura::flex direction="col" gap="3" class="w-full max-w-6xl mx-auto">
+<x-aura::container size="6xl" gap="3">
 
     <!-- Top Header -->
     <div class="px-1">
@@ -511,7 +511,7 @@ class extends Component {
 
         <x-slot:footer>
 
-            <div class="grid grid-cols-2 gap-3 w-full">
+            <x-aura::grid cols="2" gap="3" class="w-full">
 
                 <x-aura::button variant="secondary" size="sm" block="true" x-on:click="$dispatch('close-modal', 'delete-user-modal')">
                     Cancel
@@ -521,7 +521,7 @@ class extends Component {
                     Delete
                 </x-aura::button>
 
-            </div>
+            </x-aura::grid>
 
         </x-slot:footer>
 
@@ -540,7 +540,7 @@ class extends Component {
 
         <x-slot:footer>
 
-            <div class="grid grid-cols-2 gap-3 w-full">
+            <x-aura::grid cols="2" gap="3" class="w-full">
 
                 <x-aura::button variant="secondary" size="sm" block="true" x-on:click="$dispatch('close-modal', 'bulk-delete-modal')">
                     Cancel
@@ -550,10 +550,10 @@ class extends Component {
                     Delete
                 </x-aura::button>
 
-            </div>
+            </x-aura::grid>
 
         </x-slot:footer>
 
     </x-aura::modal>
 
-</x-aura::flex>
+</x-aura::container>

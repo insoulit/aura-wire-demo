@@ -38,7 +38,7 @@ new class extends Component {
 
             @endif
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <x-aura::grid cols="1" sm="2" gap="4">
 
                 <x-aura::field label="Application Title" required hint="Portal title displayed in headers and browser tabs." error="{{ $errors->first('siteName') }}">
                     <x-aura::input wire:model="siteName" placeholder="Aura Wire Portal" size="sm" />
@@ -48,9 +48,9 @@ new class extends Component {
                     <x-aura::input wire:model="adminEmail" type="email" placeholder="admin@example.com" size="sm" />
                 </x-aura::field>
 
-            </div>
+            </x-aura::grid>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <x-aura::grid cols="1" sm="2" gap="4">
 
                 <x-aura::field label="Dark Mode Strategy" required hint="Theme detection strategy across components." error="{{ $errors->first('darkMode') }}">
                     <x-aura::select wire:model="darkMode" size="sm">
@@ -68,7 +68,7 @@ new class extends Component {
                     </x-aura::select>
                 </x-aura::field>
 
-            </div>
+            </x-aura::grid>
 
         </x-aura::flex>
 

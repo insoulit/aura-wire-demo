@@ -43,7 +43,7 @@ class extends Component {
 
 ?>
 
-<x-aura::flex direction="col" gap="3" class="w-full max-w-3xl mx-auto">
+<x-aura::container size="3xl" gap="3">
 
     <!-- Header with Back Button -->
     <x-aura::flex align="center" justify="between" gap="4" class="px-1">
@@ -86,7 +86,7 @@ class extends Component {
             <x-aura::flex direction="col" gap="5" class="pt-2">
 
                 <!-- Full Name & Email -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <x-aura::grid cols="1" sm="2" gap="4">
 
                     <x-aura::field label="Full Name" required error="{{ $errors->first('name') }}">
                         <x-aura::input wire:model="name" placeholder="e.g. Marcus Vance" size="sm" />
@@ -96,10 +96,10 @@ class extends Component {
                         <x-aura::input wire:model="email" type="email" placeholder="e.g. marcus@company.com" size="sm" />
                     </x-aura::field>
 
-                </div>
+                </x-aura::grid>
 
                 <!-- Role & Status -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <x-aura::grid cols="1" sm="2" gap="4">
 
                     <x-aura::field label="Account Role" required error="{{ $errors->first('role') }}">
                         <x-aura::select wire:model="role" size="sm">
@@ -117,12 +117,12 @@ class extends Component {
                         </x-aura::select>
                     </x-aura::field>
 
-                </div>
+                </x-aura::grid>
 
                 <x-aura::separator />
 
                 <!-- Security Credentials -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <x-aura::grid cols="1" sm="2" gap="4">
 
                     <x-aura::field label="Password" required error="{{ $errors->first('password') }}">
                         <x-aura::input wire:model="password" type="password" placeholder="Minimum 8 characters" size="sm" />
@@ -132,7 +132,7 @@ class extends Component {
                         <x-aura::input wire:model="password_confirmation" type="password" placeholder="Re-enter password" size="sm" />
                     </x-aura::field>
 
-                </div>
+                </x-aura::grid>
 
             </x-aura::flex>
 
@@ -156,4 +156,4 @@ class extends Component {
 
     </form>
 
-</x-aura::flex>
+</x-aura::container>
