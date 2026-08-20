@@ -13,7 +13,7 @@ class extends Component {
 
 ?>
 
-<x-aura::container size="6xl" gap="16" class="py-6">
+<x-aura::flex direction="col" gap="16">
 
     <!-- Top Navigation Bar -->
     <x-aura::flex align="center" justify="between" class="border-b border-zinc-200 dark:border-zinc-800 pb-4">
@@ -417,4 +417,4 @@ class extends Component {
 
     </x-aura::flex>
 
-</x-aura::container>
+</x-aura::flex>

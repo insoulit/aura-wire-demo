@@ -11,46 +11,38 @@ class extends Component {};
 
 ?>
 
-<x-aura::container size="6xl" gap="16" class="py-2">
+<x-aura::flex direction="col" gap="16">
 
     <!-- Hero Header Section -->
-    <x-aura::flex direction="col" align="center" justify="center" gap="8" class="min-h-[calc(100vh-8rem)] py-6 text-center max-w-4xl mx-auto w-full">
+    <x-aura::container as="section" size="4xl" gap="8" :center="true" screen="hero" :padding="false">
 
         <!-- Hero Main Content -->
-        <x-aura::flex direction="col" align="center" gap="6" class="max-w-3xl mx-auto">
+        <x-aura::flex direction="col" align="center" gap="6">
 
-            <x-aura::flex align="center" gap="2" :inline="true" class="px-3.5 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200/80 dark:border-zinc-700/60 shadow-2xs">
+            <x-aura::badge variant="neutral" size="sm">
+                Guest Portal
+            </x-aura::badge>
 
-                <x-aura::badge variant="neutral" size="sm">
-                    Showcase
-                </x-aura::badge>
+            <x-aura::flex direction="col" align="center" gap="2">
 
-                <x-aura::text size="sm" variant="subtle" weight="medium">
-                    Guest Portal
-                </x-aura::text>
-
-            </x-aura::flex>
-
-            <x-aura::flex direction="col" align="center" gap="2" class="max-w-xl mx-auto">
-
-                <x-aura::display size="md">
+                <x-aura::display size="md" align="center">
                     Blocks and Templates
                 </x-aura::display>
 
-                <x-aura::subheading size="md" class="max-w-lg mx-auto">
+                <x-aura::subheading size="md" align="center">
                     Copy paste composite design blocks with live previews, or explore complete end to end full page application templates.
                 </x-aura::subheading>
 
             </x-aura::flex>
 
             <!-- Quick Jump Section Buttons -->
-            <x-aura::flex align="center" justify="center" gap="3" wrap="true" class="pt-2">
+            <x-aura::flex align="center" justify="center" gap="3" :wrap="true">
 
-                <x-aura::button variant="primary" size="lg" href="#design-block" icon="layers">
+                <x-aura::button variant="primary" size="md" href="#design-block" icon="layers">
                     Blocks
                 </x-aura::button>
 
-                <x-aura::button variant="secondary" size="lg" href="#full-template" icon="globe">
+                <x-aura::button variant="secondary" size="md" href="#full-template" icon="globe">
                     Templates
                 </x-aura::button>
 
@@ -58,23 +50,21 @@ class extends Component {};
 
         </x-aura::flex>
 
-        <!-- Mouse Scroll Down Icon Indicator -->
-        <x-aura::link href="#design-block" variant="subtle" class="pt-6 flex flex-col items-center gap-2 group select-none">
-
-            <div class="w-6 h-10 rounded-full border-2 border-zinc-300 dark:border-zinc-700 flex justify-center p-1.5 group-hover:border-zinc-900 dark:group-hover:border-white transition-colors shadow-2xs">
-                <div class="w-1.5 h-2.5 bg-zinc-400 dark:bg-zinc-500 rounded-full group-hover:bg-zinc-900 dark:group-hover:bg-white transition-all animate-bounce"></div>
-            </div>
+        <!-- Scroll Down Icon Indicator -->
+        <x-aura::flex direction="col" align="center" gap="1.5">
 
             <x-aura::text size="sm" variant="subtle">
                 Scroll Down
             </x-aura::text>
 
-        </x-aura::link>
+            <x-aura::icon name="arrow-down" size="sm" />
 
-    </x-aura::flex>
+        </x-aura::flex>
+
+    </x-aura::container>
 
     <!-- SECTION 1: DESIGN BLOCK -->
-    <x-aura::flex direction="col" gap="8" id="design-block" class="scroll-mt-24 pt-4">
+    <x-aura::flex direction="col" gap="8" id="design-block">
 
         <!-- Section 1 Header -->
         <x-aura::flex justify="between" gap="4">
@@ -668,7 +658,7 @@ class extends Component {};
     </x-aura::flex>
 
     <!-- SECTION 2: FULL TEMPLATES -->
-    <x-aura::flex direction="col" gap="8" id="full-template" class="scroll-mt-24 pt-8 sm:pt-12">
+    <x-aura::flex direction="col" gap="8" id="full-template">
 
         <!-- Section 2 Header -->
         <x-aura::flex justify="between" gap="4">
@@ -891,4 +881,4 @@ class extends Component {};
 
     </x-aura::flex>
 
-</x-aura::container>
+</x-aura::flex>
