@@ -22,7 +22,7 @@ class extends Component {};
                 Feedback
             </x-aura::kicker>
 
-            <x-aura::badge variant="subtle" size="sm">
+            <x-aura::badge variant="subtle" size="md">
                 Component
             </x-aura::badge>
 
@@ -68,7 +68,7 @@ class extends Component {};
 
                     <x-aura::sheet name="filter-sheet" side="right" maxWidth="md" title="Filter Products" description="Refine catalog results.">
 
-                        <x-aura::flex direction="col" align="stretch" class="w-full" gap="4">
+                        <x-aura::flex direction="col" align="stretch" gap="4">
 
                             <x-aura::field label="Category">
                                 <x-aura::select :options="['All Categories', 'Audio', 'Keyboards']" />
@@ -109,7 +109,7 @@ class extends Component {};
 
                 <x-aura::sheet name="filter-sheet" side="right" maxWidth="md" title="Filter Products" description="Refine catalog results.">
 
-                    <x-aura::flex direction="col" align="stretch" class="w-full" gap="4">
+                    <x-aura::flex direction="col" align="stretch" gap="4">
 
                         <x-aura::field label="Category">
                             <x-aura::select :options="['All Categories', 'Audio', 'Keyboards']" />
@@ -139,5 +139,304 @@ class extends Component {};
         </x-slot:codeSlot>
 
     </x-aura::code>
+
+    <!-- Component Props -->
+    <x-aura::card size="full" gap="4">
+
+        <x-aura::flex direction="col" gap="1">
+
+            <x-aura::heading level="2" size="md">
+                Component Props
+            </x-aura::heading>
+
+            <x-aura::text variant="subtle" size="sm">
+                Available properties and configurations for the sheet slide-over component.
+            </x-aura::text>
+
+        </x-aura::flex>
+
+        <x-aura::table>
+
+            <x-slot:header>
+
+                <x-aura::table.column>
+                    Prop
+                </x-aura::table.column>
+
+                <x-aura::table.column>
+                    Default
+                </x-aura::table.column>
+
+                <x-aura::table.column>
+                    Available Values
+                </x-aura::table.column>
+
+            </x-slot:header>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            name
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Unique sheet drawer name for event dispatch targeting" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="neutral" size="md">
+                        sheet
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::text size="sm" variant="subtle">
+                        Unique identifier string
+                    </x-aura::text>
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            side
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Slide in edge boundary orientation" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="neutral" size="md">
+                        right
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :wrap="true">
+
+                        <x-aura::badge variant="subtle" size="md">
+                            right
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            left
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            top
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            bottom
+                        </x-aura::badge>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            maxWidth
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Maximum drawer width scale dimension" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="neutral" size="md">
+                        sm
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :wrap="true">
+
+                        <x-aura::badge variant="subtle" size="md">
+                            xs
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            sm
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            md
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            lg
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            xl
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            2xl
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            full
+                        </x-aura::badge>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            title
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Sheet header title text" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="subtle" size="md">
+                        null
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::text size="sm" variant="subtle">
+                        Title string
+                    </x-aura::text>
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            description
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Sheet subtitle or helper description" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="subtle" size="md">
+                        null
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::text size="sm" variant="subtle">
+                        Description string
+                    </x-aura::text>
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            closeable
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Allow closing by clicking backdrop or pressing Escape key" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="neutral" size="md">
+                        true
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :wrap="true">
+
+                        <x-aura::badge variant="subtle" size="md">
+                            true
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            false
+                        </x-aura::badge>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+        </x-aura::table>
+
+    </x-aura::card>
 
 </x-aura::container>

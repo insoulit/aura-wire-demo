@@ -22,7 +22,7 @@ class extends Component {};
                 Typography
             </x-aura::kicker>
 
-            <x-aura::badge variant="subtle" size="sm">
+            <x-aura::badge variant="subtle" size="md">
                 Component
             </x-aura::badge>
 
@@ -58,11 +58,11 @@ class extends Component {};
 
         <x-slot:preview>
 
-            <x-aura::flex direction="col" align="start" class="w-full" gap="4">
+            <x-aura::flex direction="col" align="start" gap="4">
 
                 <x-aura::card size="md" gap="2">
 
-                    <x-aura::flex align="center" justify="between" class="w-full">
+                    <x-aura::flex align="center" justify="between">
 
                         <x-aura::text size="sm" weight="medium">
                             Open Command Palette
@@ -86,7 +86,7 @@ class extends Component {};
 
                 <x-aura::card size="md" gap="2">
 
-                    <x-aura::flex align="center" justify="between" class="w-full">
+                    <x-aura::flex align="center" justify="between">
 
                         <x-aura::text size="sm" weight="medium">
                             Quick Save File
@@ -110,7 +110,7 @@ class extends Component {};
 
                 <x-aura::card size="md" gap="2">
 
-                    <x-aura::flex align="center" justify="between" class="w-full">
+                    <x-aura::flex align="center" justify="between">
 
                         <x-aura::text size="sm" weight="medium">
                             Close Active Modal
@@ -169,7 +169,7 @@ class extends Component {};
 
         <x-slot:preview>
 
-            <x-aura::flex align="center" gap="6" class="flex-wrap">
+            <x-aura::flex align="center" gap="6" :wrap="true">
 
                 <x-aura::kbd variant="default">
                     ⌘K
@@ -212,7 +212,7 @@ class extends Component {};
 
         <x-slot:preview>
 
-            <x-aura::flex align="center" gap="6" class="flex-wrap">
+            <x-aura::flex align="center" gap="6" :wrap="true">
 
                 <x-aura::kbd size="lg">
                     Shift
@@ -257,5 +257,142 @@ class extends Component {};
         </x-slot:codeSlot>
 
     </x-aura::code>
+
+    <!-- Component Props -->
+    <x-aura::card size="full" gap="4">
+
+        <x-aura::flex direction="col" gap="1">
+
+            <x-aura::heading level="2" size="md">
+                Component Props
+            </x-aura::heading>
+
+            <x-aura::text variant="subtle" size="sm">
+                Available properties and configurations for the keyboard keycap component.
+            </x-aura::text>
+
+        </x-aura::flex>
+
+        <x-aura::table>
+
+            <x-slot:header>
+
+                <x-aura::table.column>
+                    Prop
+                </x-aura::table.column>
+
+                <x-aura::table.column>
+                    Default
+                </x-aura::table.column>
+
+                <x-aura::table.column>
+                    Available Values
+                </x-aura::table.column>
+
+            </x-slot:header>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            size
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Keycap scale and dimensional padding" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="neutral" size="md">
+                        sm
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :wrap="true">
+
+                        <x-aura::badge variant="subtle" size="md">
+                            xs
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            sm
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            md
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            lg
+                        </x-aura::badge>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            variant
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Tactile appearance and border depth mode" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="neutral" size="md">
+                        default
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :wrap="true">
+
+                        <x-aura::badge variant="subtle" size="md">
+                            default
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            outline
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            solid
+                        </x-aura::badge>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+        </x-aura::table>
+
+    </x-aura::card>
 
 </x-aura::container>

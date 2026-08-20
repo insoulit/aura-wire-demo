@@ -22,7 +22,7 @@ class extends Component {};
                 Feedback
             </x-aura::kicker>
 
-            <x-aura::badge variant="subtle" size="sm">
+            <x-aura::badge variant="subtle" size="md">
                 Component
             </x-aura::badge>
 
@@ -44,7 +44,7 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::spinner variant="ring" size="md" />
+                <x-aura::spinner type="ring" size="md" />
             @endverbatim
 
         </x-slot:codeSlot>
@@ -58,7 +58,7 @@ class extends Component {};
 
             <x-aura::card size="2xl" gap="4">
 
-                <x-aura::flex align="center" justify="around" class="w-full py-4">
+                <x-aura::flex align="center" justify="around" class="py-4">
 
                     <x-aura::flex direction="col" align="center" gap="2">
 
@@ -129,7 +129,7 @@ class extends Component {};
 
             <x-aura::card size="2xl" gap="4">
 
-                <x-aura::flex align="center" justify="around" class="w-full py-4">
+                <x-aura::flex align="center" justify="around" class="py-4">
 
                     <x-aura::flex direction="col" align="center" gap="2">
 
@@ -204,5 +204,210 @@ class extends Component {};
         </x-slot:codeSlot>
 
     </x-aura::code>
+
+    <!-- Component Props -->
+    <x-aura::card size="full" gap="4">
+
+        <x-aura::flex direction="col" gap="1">
+
+            <x-aura::heading level="2" size="md">
+                Component Props
+            </x-aura::heading>
+
+            <x-aura::text variant="subtle" size="sm">
+                Available properties and configurations for the spinner loading indicator component.
+            </x-aura::text>
+
+        </x-aura::flex>
+
+        <x-aura::table>
+
+            <x-slot:header>
+
+                <x-aura::table.column>
+                    Prop
+                </x-aura::table.column>
+
+                <x-aura::table.column>
+                    Default
+                </x-aura::table.column>
+
+                <x-aura::table.column>
+                    Available Values
+                </x-aura::table.column>
+
+            </x-slot:header>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            type
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Animation and indicator visual motion style" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="neutral" size="md">
+                        ring
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :wrap="true">
+
+                        <x-aura::badge variant="subtle" size="md">
+                            ring
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            dots
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            bars
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            ping
+                        </x-aura::badge>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            size
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Indicator diameter and dimensional scale" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="neutral" size="md">
+                        md
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :wrap="true">
+
+                        <x-aura::badge variant="subtle" size="md">
+                            xs
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            sm
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            md
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            lg
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            xl
+                        </x-aura::badge>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            variant
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Color scheme and intent styling" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="neutral" size="md">
+                        default
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :wrap="true">
+
+                        <x-aura::badge variant="subtle" size="md">
+                            default
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            primary
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="positive" size="md">
+                            success
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="warning" size="md">
+                            warning
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="danger" size="md">
+                            danger
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            white
+                        </x-aura::badge>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+        </x-aura::table>
+
+    </x-aura::card>
 
 </x-aura::container>

@@ -22,7 +22,7 @@ class extends Component {};
                 Feedback
             </x-aura::kicker>
 
-            <x-aura::badge variant="subtle" size="sm">
+            <x-aura::badge variant="subtle" size="md">
                 Component
             </x-aura::badge>
 
@@ -62,7 +62,7 @@ class extends Component {};
 
             <x-aura::card size="2xl" gap="4">
 
-                <x-aura::flex align="center" justify="center" gap="6" class="w-full py-6 flex-wrap">
+                <x-aura::flex align="center" justify="center" gap="6" :wrap="true" class="py-6">
 
                     <x-aura::tooltip text="Tooltip on Top" position="top">
 
@@ -141,5 +141,128 @@ class extends Component {};
         </x-slot:codeSlot>
 
     </x-aura::code>
+
+    <!-- Component Props -->
+    <x-aura::card size="full" gap="4">
+
+        <x-aura::flex direction="col" gap="1">
+
+            <x-aura::heading level="2" size="md">
+                Component Props
+            </x-aura::heading>
+
+            <x-aura::text variant="subtle" size="sm">
+                Available properties and configurations for the tooltip component.
+            </x-aura::text>
+
+        </x-aura::flex>
+
+        <x-aura::table>
+
+            <x-slot:header>
+
+                <x-aura::table.column>
+                    Prop
+                </x-aura::table.column>
+
+                <x-aura::table.column>
+                    Default
+                </x-aura::table.column>
+
+                <x-aura::table.column>
+                    Available Values
+                </x-aura::table.column>
+
+            </x-slot:header>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            text
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Hover tooltip text message content" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="subtle" size="md">
+                        null
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::text size="sm" variant="subtle">
+                        Tooltip string
+                    </x-aura::text>
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            position
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Directional placement orientation relative to target anchor" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="neutral" size="md">
+                        top
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :wrap="true">
+
+                        <x-aura::badge variant="subtle" size="md">
+                            top
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            bottom
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            left
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            right
+                        </x-aura::badge>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+        </x-aura::table>
+
+    </x-aura::card>
 
 </x-aura::container>

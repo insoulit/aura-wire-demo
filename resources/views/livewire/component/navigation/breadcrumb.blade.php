@@ -33,7 +33,7 @@ class extends Component {
                 Navigation
             </x-aura::kicker>
 
-            <x-aura::badge variant="subtle" size="sm">
+            <x-aura::badge variant="subtle" size="md">
                 Component
             </x-aura::badge>
 
@@ -69,7 +69,7 @@ class extends Component {
 
             <x-aura::card size="2xl" gap="4">
 
-                <x-aura::flex direction="col" align="start" class="w-full" gap="4">
+                <x-aura::flex direction="col" align="start" gap="4">
 
                     <x-aura::breadcrumb :items="$simpleItems" separator="chevron" />
 
@@ -100,5 +100,224 @@ class extends Component {
         </x-slot:codeSlot>
 
     </x-aura::code>
+
+    <!-- Component Props -->
+    <x-aura::card size="full" gap="4">
+
+        <x-aura::flex direction="col" gap="1">
+
+            <x-aura::heading level="2" size="md">
+                Component Props
+            </x-aura::heading>
+
+            <x-aura::text variant="subtle" size="sm">
+                Available properties and configurations for the breadcrumb component.
+            </x-aura::text>
+
+        </x-aura::flex>
+
+        <x-aura::table>
+
+            <x-slot:header>
+
+                <x-aura::table.column>
+                    Prop
+                </x-aura::table.column>
+
+                <x-aura::table.column>
+                    Default
+                </x-aura::table.column>
+
+                <x-aura::table.column>
+                    Available Values
+                </x-aura::table.column>
+
+            </x-slot:header>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            items
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Ordered array of trail links and label objects" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="neutral" size="md">
+                        []
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::text size="sm" variant="subtle">
+                        Array of breadcrumb items (label, href, icon)
+                    </x-aura::text>
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            separator
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Visual divider delimiter icon style between items" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="neutral" size="md">
+                        chevron
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :wrap="true">
+
+                        <x-aura::badge variant="subtle" size="md">
+                            chevron
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            slash
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            dot
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            arrow
+                        </x-aura::badge>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            variant
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Container wrapper border and backdrop treatment" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="neutral" size="md">
+                        plain
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :wrap="true">
+
+                        <x-aura::badge variant="subtle" size="md">
+                            plain
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            rectangle
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            bar
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            pills
+                        </x-aura::badge>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            homeIcon
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Prepend home house icon on the root breadcrumb link" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="neutral" size="md">
+                        false
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :wrap="true">
+
+                        <x-aura::badge variant="subtle" size="md">
+                            true
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            false
+                        </x-aura::badge>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+        </x-aura::table>
+
+    </x-aura::card>
 
 </x-aura::container>

@@ -22,7 +22,7 @@ class extends Component {};
                 Action
             </x-aura::kicker>
 
-            <x-aura::badge variant="subtle" size="sm">
+            <x-aura::badge variant="subtle" size="md">
                 Component
             </x-aura::badge>
 
@@ -66,7 +66,7 @@ class extends Component {};
 
         <x-slot:preview>
 
-            <x-aura::flex direction="col" align="start" class="w-full" gap="4">
+            <x-aura::flex direction="col" align="start" gap="4">
 
                 <x-aura::action.group>
 
@@ -157,7 +157,7 @@ class extends Component {};
 
         <x-slot:preview>
 
-            <x-aura::flex align="center" gap="4" class="flex-wrap">
+            <x-aura::flex align="center" gap="4" :wrap="true">
 
                 <x-aura::action.group shape="compact">
 
@@ -200,7 +200,7 @@ class extends Component {};
 
         <x-slot:preview>
 
-            <x-aura::flex align="start" class="w-full">
+            <x-aura::flex align="start">
 
                 <x-aura::action.group vertical shape="compact">
 
@@ -245,5 +245,138 @@ class extends Component {};
         </x-slot:codeSlot>
 
     </x-aura::code>
+
+    <!-- Component Props -->
+    <x-aura::card size="full" gap="4">
+
+        <x-aura::flex direction="col" gap="1">
+
+            <x-aura::heading level="2" size="md">
+                Component Props
+            </x-aura::heading>
+
+            <x-aura::text variant="subtle" size="sm">
+                Available properties and configurations for the button group component.
+            </x-aura::text>
+
+        </x-aura::flex>
+
+        <x-aura::table>
+
+            <x-slot:header>
+
+                <x-aura::table.column>
+                    Prop
+                </x-aura::table.column>
+
+                <x-aura::table.column>
+                    Default
+                </x-aura::table.column>
+
+                <x-aura::table.column>
+                    Available Values
+                </x-aura::table.column>
+
+            </x-slot:header>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            vertical
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Stack buttons vertically instead of horizontal row" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="neutral" size="md">
+                        false
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :wrap="true">
+
+                        <x-aura::badge variant="subtle" size="md">
+                            true
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            false
+                        </x-aura::badge>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            shape
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Outer corner border radius and joint boundary styling" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="neutral" size="md">
+                        default
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :wrap="true">
+
+                        <x-aura::badge variant="subtle" size="md">
+                            default
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            compact
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            square
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            pill
+                        </x-aura::badge>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+        </x-aura::table>
+
+    </x-aura::card>
 
 </x-aura::container>

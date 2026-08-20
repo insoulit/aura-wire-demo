@@ -22,7 +22,7 @@ class extends Component {};
                 Display
             </x-aura::kicker>
 
-            <x-aura::badge variant="subtle" size="sm">
+            <x-aura::badge variant="subtle" size="md">
                 Component
             </x-aura::badge>
 
@@ -44,7 +44,7 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::progress-bar percent="75" size="md" />
+                <x-aura::progress-bar :percent="75" size="md" />
             @endverbatim
 
         </x-slot:codeSlot>
@@ -58,11 +58,11 @@ class extends Component {};
 
             <x-aura::card size="2xl" gap="4">
 
-                <x-aura::flex direction="col" align="stretch" class="w-full" gap="4">
+                <x-aura::flex direction="col" align="stretch" gap="4">
 
                     <x-aura::flex direction="col" align="stretch" gap="1">
 
-                        <x-aura::flex align="center" justify="between" class="w-full">
+                        <x-aura::flex align="center" justify="between">
 
                             <x-aura::text size="sm" weight="medium">
                                 Profile Completion
@@ -74,13 +74,13 @@ class extends Component {};
 
                         </x-aura::flex>
 
-                        <x-aura::progress-bar percent="75" size="md" />
+                        <x-aura::progress-bar :percent="75" size="md" />
 
                     </x-aura::flex>
 
                     <x-aura::flex direction="col" align="stretch" gap="1">
 
-                        <x-aura::flex align="center" justify="between" class="w-full">
+                        <x-aura::flex align="center" justify="between">
 
                             <x-aura::text size="sm" weight="medium">
                                 Storage Quota
@@ -92,7 +92,7 @@ class extends Component {};
 
                         </x-aura::flex>
 
-                        <x-aura::progress-bar percent="40" size="md" />
+                        <x-aura::progress-bar :percent="40" size="md" />
 
                     </x-aura::flex>
 
@@ -107,7 +107,7 @@ class extends Component {};
             @verbatim
                 <x-aura::flex direction="col" align="stretch" gap="1">
 
-                    <x-aura::flex align="center" justify="between" class="w-full">
+                    <x-aura::flex align="center" justify="between">
 
                         <x-aura::text size="sm" weight="medium">
                             Profile Completion
@@ -119,7 +119,7 @@ class extends Component {};
 
                     </x-aura::flex>
 
-                    <x-aura::progress-bar percent="75" size="md" />
+                    <x-aura::progress-bar :percent="75" size="md" />
 
                 </x-aura::flex>
             @endverbatim
@@ -127,5 +127,180 @@ class extends Component {};
         </x-slot:codeSlot>
 
     </x-aura::code>
+
+    <!-- Component Props -->
+    <x-aura::card size="full" gap="4">
+
+        <x-aura::flex direction="col" gap="1">
+
+            <x-aura::heading level="2" size="md">
+                Component Props
+            </x-aura::heading>
+
+            <x-aura::text variant="subtle" size="sm">
+                Available properties and configurations for the progress bar component.
+            </x-aura::text>
+
+        </x-aura::flex>
+
+        <x-aura::table>
+
+            <x-slot:header>
+
+                <x-aura::table.column>
+                    Prop
+                </x-aura::table.column>
+
+                <x-aura::table.column>
+                    Default
+                </x-aura::table.column>
+
+                <x-aura::table.column>
+                    Available Values
+                </x-aura::table.column>
+
+            </x-slot:header>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            percent
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Current numeric completion percentage (0-100)" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="neutral" size="md">
+                        0
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::text size="sm" variant="subtle">
+                        Numeric value between 0 and 100
+                    </x-aura::text>
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            size
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Bar thickness height scale" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="neutral" size="md">
+                        md
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :wrap="true">
+
+                        <x-aura::badge variant="subtle" size="md">
+                            sm
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            md
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            lg
+                        </x-aura::badge>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            variant
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Progress fill color intent" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="neutral" size="md">
+                        default
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :wrap="true">
+
+                        <x-aura::badge variant="subtle" size="md">
+                            default
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            subtle
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="positive" size="md">
+                            positive
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="warning" size="md">
+                            warning
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="danger" size="md">
+                            danger
+                        </x-aura::badge>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+        </x-aura::table>
+
+    </x-aura::card>
 
 </x-aura::container>
