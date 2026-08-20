@@ -66,57 +66,49 @@ class extends Component {};
 
         <x-slot:preview>
 
-            <x-aura::card size="2xl" gap="4">
+            <x-aura::popover align="left" width="72">
 
-                <x-aura::flex align="center" justify="center" class="py-8">
+                <x-slot:trigger>
 
-                    <x-aura::popover align="left" width="72">
+                    <x-aura::button variant="secondary" size="sm" icon="sliders-horizontal">
+                        Filter
+                    </x-aura::button>
 
-                        <x-slot:trigger>
+                </x-slot:trigger>
 
-                            <x-aura::button variant="secondary" size="sm" icon="sliders-horizontal">
-                                Filter
-                            </x-aura::button>
+                <x-aura::flex direction="col" align="stretch" gap="3">
 
-                        </x-slot:trigger>
+                    <x-aura::flex align="center" justify="between" class="border-b border-zinc-100 dark:border-zinc-800 pb-2">
 
-                        <x-aura::flex direction="col" align="stretch" gap="3">
+                        <x-aura::text size="xs" weight="bold">
+                            CRITERIA
+                        </x-aura::text>
 
-                            <x-aura::flex align="center" justify="between" class="border-b border-zinc-100 dark:border-zinc-800 pb-2">
+                        <x-aura::badge variant="subtle" size="sm">
+                            Active
+                        </x-aura::badge>
 
-                                <x-aura::text size="xs" weight="bold">
-                                    CRITERIA
-                                </x-aura::text>
+                    </x-aura::flex>
 
-                                <x-aura::badge variant="subtle" size="sm">
-                                    Active
-                                </x-aura::badge>
+                    <x-aura::flex direction="col" align="start" gap="2">
 
-                            </x-aura::flex>
+                        <x-aura::checkbox label="In Stock Only" :checked="true" />
 
-                            <x-aura::flex direction="col" align="start" gap="2">
+                        <x-aura::checkbox label="On Sale" :checked="true" />
 
-                                <x-aura::checkbox label="In Stock Only" :checked="true" />
+                    </x-aura::flex>
 
-                                <x-aura::checkbox label="On Sale" :checked="true" />
+                    <x-aura::flex align="center" justify="end" gap="2" class="pt-2 border-t border-zinc-100 dark:border-zinc-800">
 
-                            </x-aura::flex>
+                        <x-aura::button variant="primary" size="xs">
+                            Apply
+                        </x-aura::button>
 
-                            <x-aura::flex align="center" justify="end" gap="2" class="pt-2 border-t border-zinc-100 dark:border-zinc-800">
-
-                                <x-aura::button variant="primary" size="xs">
-                                    Apply
-                                </x-aura::button>
-
-                            </x-aura::flex>
-
-                        </x-aura::flex>
-
-                    </x-aura::popover>
+                    </x-aura::flex>
 
                 </x-aura::flex>
 
-            </x-aura::card>
+            </x-aura::popover>
 
         </x-slot:preview>
 

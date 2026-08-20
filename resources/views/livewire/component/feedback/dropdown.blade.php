@@ -66,43 +66,35 @@ class extends Component {};
 
         <x-slot:preview>
 
-            <x-aura::card size="2xl" gap="4">
+            <x-aura::dropdown align="right" width="56">
 
-                <x-aura::flex align="center" justify="center" class="py-12">
+                <x-slot:trigger>
 
-                    <x-aura::dropdown align="right" width="56">
+                    <x-aura::button variant="secondary" iconTrailing="chevron-down">
+                        Actions
+                    </x-aura::button>
 
-                        <x-slot:trigger>
+                </x-slot:trigger>
 
-                            <x-aura::button variant="secondary" iconTrailing="chevron-down">
-                                Actions
-                            </x-aura::button>
+                <x-aura::dropdown.header>
+                    Manage
+                </x-aura::dropdown.header>
 
-                        </x-slot:trigger>
+                <x-aura::dropdown.item href="#" icon="pencil">
+                    Edit
+                </x-aura::dropdown.item>
 
-                        <x-aura::dropdown.header>
-                            Manage
-                        </x-aura::dropdown.header>
+                <x-aura::dropdown.item href="#" icon="copy" badge="⌘C">
+                    Duplicate
+                </x-aura::dropdown.item>
 
-                        <x-aura::dropdown.item href="#" icon="pencil">
-                            Edit
-                        </x-aura::dropdown.item>
+                <x-aura::dropdown.separator />
 
-                        <x-aura::dropdown.item href="#" icon="copy" badge="⌘C">
-                            Duplicate
-                        </x-aura::dropdown.item>
+                <x-aura::dropdown.item href="#" icon="trash-2" variant="danger">
+                    Delete
+                </x-aura::dropdown.item>
 
-                        <x-aura::dropdown.separator />
-
-                        <x-aura::dropdown.item href="#" icon="trash-2" variant="danger">
-                            Delete
-                        </x-aura::dropdown.item>
-
-                    </x-aura::dropdown>
-
-                </x-aura::flex>
-
-            </x-aura::card>
+            </x-aura::dropdown>
 
         </x-slot:preview>
 
