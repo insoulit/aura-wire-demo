@@ -639,87 +639,87 @@ class extends Component {};
 
     </x-aura::code>
 
-    <!-- 5. Transformations and Orientations -->
-    <x-aura::code title="5. Transformations and Orientations">
+    <!-- 5. Hover Rotations and Flips -->
+    <x-aura::code title="5. Hover Rotations & Directional Flips (Hover to Trigger)">
 
         <x-slot:preview>
 
             <x-aura::grid cols="2" sm="3" lg="6" gap="4" class="w-full py-4">
 
-                <!-- Flip X -->
+                <!-- Hover Flip X -->
                 <x-aura::flex direction="col" align="center" gap="2">
 
-                    <x-aura::animate type="flip-x">
+                    <x-aura::animate type="hover-flip-x">
                         <x-aura::icon name="arrow-right" size="md" :container="true" />
                     </x-aura::animate>
 
                     <x-aura::text size="xs" variant="subtle">
-                        flip-x
+                        hover-flip-x
                     </x-aura::text>
 
                 </x-aura::flex>
 
-                <!-- Flip Y -->
+                <!-- Hover Flip Y -->
                 <x-aura::flex direction="col" align="center" gap="2">
 
-                    <x-aura::animate type="flip-y">
+                    <x-aura::animate type="hover-flip-y">
                         <x-aura::icon name="arrow-down" size="md" :container="true" />
                     </x-aura::animate>
 
                     <x-aura::text size="xs" variant="subtle">
-                        flip-y
+                        hover-flip-y
                     </x-aura::text>
 
                 </x-aura::flex>
 
-                <!-- Rotate 45 -->
+                <!-- Hover Rotate 45 -->
                 <x-aura::flex direction="col" align="center" gap="2">
 
-                    <x-aura::animate type="rotate-45">
+                    <x-aura::animate type="hover-rotate-45">
                         <x-aura::icon name="plus" size="md" :container="true" />
                     </x-aura::animate>
 
                     <x-aura::text size="xs" variant="subtle">
-                        rotate-45
+                        hover-rotate-45
                     </x-aura::text>
 
                 </x-aura::flex>
 
-                <!-- Rotate 90 -->
+                <!-- Hover Rotate 90 -->
                 <x-aura::flex direction="col" align="center" gap="2">
 
-                    <x-aura::animate type="rotate-90">
+                    <x-aura::animate type="hover-rotate-90">
                         <x-aura::icon name="arrow-right" size="md" :container="true" />
                     </x-aura::animate>
 
                     <x-aura::text size="xs" variant="subtle">
-                        rotate-90
+                        hover-rotate-90
                     </x-aura::text>
 
                 </x-aura::flex>
 
-                <!-- Rotate 180 -->
+                <!-- Hover Rotate 180 -->
                 <x-aura::flex direction="col" align="center" gap="2">
 
-                    <x-aura::animate type="rotate-180">
+                    <x-aura::animate type="hover-rotate-180">
                         <x-aura::icon name="arrow-up" size="md" :container="true" />
                     </x-aura::animate>
 
                     <x-aura::text size="xs" variant="subtle">
-                        rotate-180
+                        hover-rotate-180
                     </x-aura::text>
 
                 </x-aura::flex>
 
-                <!-- Rotate 270 -->
+                <!-- Hover Rotate 270 -->
                 <x-aura::flex direction="col" align="center" gap="2">
 
-                    <x-aura::animate type="rotate-270">
-                        <x-aura::icon name="arrow-up" size="md" :container="true" />
+                    <x-aura::animate type="hover-rotate-270">
+                        <x-aura::icon name="compass" size="md" :container="true" />
                     </x-aura::animate>
 
                     <x-aura::text size="xs" variant="subtle">
-                        rotate-270
+                        hover-rotate-270
                     </x-aura::text>
 
                 </x-aura::flex>
@@ -731,29 +731,34 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
-                <!-- Horizontal Mirror Flip -->
-                <x-aura::animate type="flip-x">
-                    <x-aura::icon name="arrow-right" size="md" />
+                <!-- Horizontal Mirror Flip on Hover -->
+                <x-aura::animate type="hover-flip-x">
+                    <x-aura::icon name="arrow-right" size="md" :container="true" />
                 </x-aura::animate>
 
-                <!-- Vertical Mirror Flip -->
-                <x-aura::animate type="flip-y">
-                    <x-aura::icon name="arrow-down" size="md" />
+                <!-- Vertical Mirror Flip on Hover -->
+                <x-aura::animate type="hover-flip-y">
+                    <x-aura::icon name="arrow-down" size="md" :container="true" />
                 </x-aura::animate>
 
-                <!-- 45 Degree Diagonal -->
-                <x-aura::animate type="rotate-45">
-                    <x-aura::icon name="plus" size="md" />
+                <!-- 45° Smooth Rotation on Hover -->
+                <x-aura::animate type="hover-rotate-45">
+                    <x-aura::icon name="plus" size="md" :container="true" />
                 </x-aura::animate>
 
-                <!-- 90 Degree Rotation -->
-                <x-aura::animate type="rotate-90">
-                    <x-aura::icon name="arrow-right" size="md" />
+                <!-- 90° Smooth Rotation on Hover -->
+                <x-aura::animate type="hover-rotate-90">
+                    <x-aura::icon name="arrow-right" size="md" :container="true" />
                 </x-aura::animate>
 
-                <!-- 180 Inversion -->
-                <x-aura::animate type="rotate-180">
-                    <x-aura::icon name="arrow-up" size="md" />
+                <!-- 180° Inversion Rotation on Hover -->
+                <x-aura::animate type="hover-rotate-180">
+                    <x-aura::icon name="arrow-up" size="md" :container="true" />
+                </x-aura::animate>
+
+                <!-- 270° Rotation on Hover -->
+                <x-aura::animate type="hover-rotate-270">
+                    <x-aura::icon name="compass" size="md" :container="true" />
                 </x-aura::animate>
             @endverbatim
 
