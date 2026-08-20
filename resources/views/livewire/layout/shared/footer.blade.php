@@ -44,17 +44,13 @@ new class extends Component {};
 
     <x-slot:bottom>
 
-        <x-aura::text size="sm" variant="muted">
+        <x-aura::text size="sm" variant="subtle">
             &copy; {{ date('Y') }} Aura Wire. Built with Laravel &amp; Livewire Volt.
         </x-aura::text>
 
-        <x-aura::flex align="center" gap="sm">
-
-            <x-aura::text size="sm">
-                Laravel &amp; Livewire
-            </x-aura::text>
-
-        </x-aura::flex>
+        <x-aura::text size="sm" variant="subtle">
+            Laravel &amp; Livewire
+        </x-aura::text>
 
     </x-slot:bottom>
 
