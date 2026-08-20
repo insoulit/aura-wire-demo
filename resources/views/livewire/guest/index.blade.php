@@ -51,15 +51,19 @@ class extends Component {};
         </x-aura::flex>
 
         <!-- Scroll Down Icon Indicator -->
-        <x-aura::flex direction="col" align="center" gap="1.5">
+        <x-aura::link href="#design-block" variant="subtle" underline="none">
 
-            <x-aura::text size="sm" variant="subtle">
-                Scroll Down
-            </x-aura::text>
+            <x-aura::flex direction="col" align="center" gap="1.5">
 
-            <x-aura::icon name="arrow-down" size="sm" />
+                <x-aura::text size="sm" variant="subtle">
+                    Scroll Down
+                </x-aura::text>
 
-        </x-aura::flex>
+                <x-aura::icon name="arrow-down" size="sm" animate="bounce" />
+
+            </x-aura::flex>
+
+        </x-aura::link>
 
     </x-aura::container>
 
