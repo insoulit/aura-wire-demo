@@ -71,219 +71,189 @@ class extends Component {};
         <x-aura::grid cols="1" sm="2" lg="3" gap="4">
 
             <!-- 1. Profile Info -->
-            <x-aura::card href="/user/profile" wire:navigate>
+            <x-aura::card href="/user/profile" wire:navigate gap="4">
 
-                <x-aura::flex direction="col" justify="between" gap="4" class="h-full">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <x-aura::flex align="start" justify="between" gap="3">
+                    <x-aura::icon name="user" size="lg" :container="true" />
 
-                        <div class="w-11 h-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white flex items-center justify-center border border-zinc-200/80 dark:border-zinc-700/60 shrink-0">
-                            <x-aura::icon name="user" size="sm" />
-                        </div>
-
-                        <x-aura::badge variant="neutral" size="sm">
-                            Account
-                        </x-aura::badge>
-
-                    </x-aura::flex>
-
-                    <x-aura::flex direction="col" gap="1" class="flex-1">
-
-                        <x-aura::heading level="3" size="sm">
-                            Profile Info
-                        </x-aura::heading>
-
-                        <x-aura::text variant="subtle" size="sm">
-                            Update your display name, bio description, and mobile contact number.
-                        </x-aura::text>
-
-                    </x-aura::flex>
-
-                    <x-aura::flex align="center" justify="between" class="pt-2 border-t border-zinc-100 dark:border-zinc-800/60">
-
-                        <x-aura::text size="sm" weight="semibold">
-                            Edit details
-                        </x-aura::text>
-
-                        <x-aura::icon name="arrow-right" size="xs" />
-
-                    </x-aura::flex>
+                    <x-aura::badge variant="neutral" size="sm">
+                        Account
+                    </x-aura::badge>
 
                 </x-aura::flex>
+
+                <x-aura::flex direction="col" gap="1">
+
+                    <x-aura::heading level="3" size="sm">
+                        Profile Info
+                    </x-aura::heading>
+
+                    <x-aura::text variant="subtle" size="sm">
+                        Update your display name, bio description, and mobile contact number.
+                    </x-aura::text>
+
+                </x-aura::flex>
+
+                <x-slot:footer>
+
+                    <x-aura::text size="sm" weight="semibold">
+                        Edit details
+                    </x-aura::text>
+
+                    <x-aura::icon name="arrow-right" size="xs" />
+
+                </x-slot:footer>
 
             </x-aura::card>
 
             <!-- 2. Profile Picture -->
-            <x-aura::card href="/user/avatar" wire:navigate>
+            <x-aura::card href="/user/avatar" wire:navigate gap="4">
 
-                <x-aura::flex direction="col" justify="between" gap="4" class="h-full">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <x-aura::flex align="start" justify="between" gap="3">
+                    <x-aura::icon name="camera" size="lg" :container="true" />
 
-                        <div class="w-11 h-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white flex items-center justify-center border border-zinc-200/80 dark:border-zinc-700/60 shrink-0">
-                            <x-aura::icon name="camera" size="sm" />
-                        </div>
-
-                        <x-aura::badge variant="neutral" size="sm">
-                            Media
-                        </x-aura::badge>
-
-                    </x-aura::flex>
-
-                    <x-aura::flex direction="col" gap="1" class="flex-1">
-
-                        <x-aura::heading level="3" size="sm">
-                            Change Profile Picture
-                        </x-aura::heading>
-
-                        <x-aura::text variant="subtle" size="sm">
-                            Upload a new profile avatar image file and crop preview.
-                        </x-aura::text>
-
-                    </x-aura::flex>
-
-                    <x-aura::flex align="center" justify="between" class="pt-2 border-t border-zinc-100 dark:border-zinc-800/60">
-
-                        <x-aura::text size="sm" weight="semibold">
-                            Upload photo
-                        </x-aura::text>
-
-                        <x-aura::icon name="arrow-right" size="xs" />
-
-                    </x-aura::flex>
+                    <x-aura::badge variant="neutral" size="sm">
+                        Media
+                    </x-aura::badge>
 
                 </x-aura::flex>
+
+                <x-aura::flex direction="col" gap="1">
+
+                    <x-aura::heading level="3" size="sm">
+                        Change Profile Picture
+                    </x-aura::heading>
+
+                    <x-aura::text variant="subtle" size="sm">
+                        Upload a new profile avatar image file and crop preview.
+                    </x-aura::text>
+
+                </x-aura::flex>
+
+                <x-slot:footer>
+
+                    <x-aura::text size="sm" weight="semibold">
+                        Upload photo
+                    </x-aura::text>
+
+                    <x-aura::icon name="arrow-right" size="xs" />
+
+                </x-slot:footer>
 
             </x-aura::card>
 
             <!-- 3. Change Email -->
-            <x-aura::card href="/user/email" wire:navigate>
+            <x-aura::card href="/user/email" wire:navigate gap="4">
 
-                <x-aura::flex direction="col" justify="between" gap="4" class="h-full">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <x-aura::flex align="start" justify="between" gap="3">
+                    <x-aura::icon name="mail" size="lg" :container="true" />
 
-                        <div class="w-11 h-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white flex items-center justify-center border border-zinc-200/80 dark:border-zinc-700/60 shrink-0">
-                            <x-aura::icon name="mail" size="sm" />
-                        </div>
-
-                        <x-aura::badge variant="subtle" size="sm">
-                            Verification
-                        </x-aura::badge>
-
-                    </x-aura::flex>
-
-                    <x-aura::flex direction="col" gap="1" class="flex-1">
-
-                        <x-aura::heading level="3" size="sm">
-                            Change Email Address
-                        </x-aura::heading>
-
-                        <x-aura::text variant="subtle" size="sm">
-                            Update primary login email address and dispatch confirmation code.
-                        </x-aura::text>
-
-                    </x-aura::flex>
-
-                    <x-aura::flex align="center" justify="between" class="pt-2 border-t border-zinc-100 dark:border-zinc-800/60">
-
-                        <x-aura::text size="sm" weight="semibold">
-                            Verify address
-                        </x-aura::text>
-
-                        <x-aura::icon name="arrow-right" size="xs" />
-
-                    </x-aura::flex>
+                    <x-aura::badge variant="subtle" size="sm">
+                        Verification
+                    </x-aura::badge>
 
                 </x-aura::flex>
+
+                <x-aura::flex direction="col" gap="1">
+
+                    <x-aura::heading level="3" size="sm">
+                        Change Email Address
+                    </x-aura::heading>
+
+                    <x-aura::text variant="subtle" size="sm">
+                        Update primary login email address and dispatch confirmation code.
+                    </x-aura::text>
+
+                </x-aura::flex>
+
+                <x-slot:footer>
+
+                    <x-aura::text size="sm" weight="semibold">
+                        Verify address
+                    </x-aura::text>
+
+                    <x-aura::icon name="arrow-right" size="xs" />
+
+                </x-slot:footer>
 
             </x-aura::card>
 
             <!-- 4. Change Password & Security -->
-            <x-aura::card href="/user/password" wire:navigate>
+            <x-aura::card href="/user/password" wire:navigate gap="4">
 
-                <x-aura::flex direction="col" justify="between" gap="4" class="h-full">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <x-aura::flex align="start" justify="between" gap="3">
+                    <x-aura::icon name="shield-check" size="lg" :container="true" />
 
-                        <div class="w-11 h-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white flex items-center justify-center border border-zinc-200/80 dark:border-zinc-700/60 shrink-0">
-                            <x-aura::icon name="shield-check" size="sm" />
-                        </div>
-
-                        <x-aura::badge variant="neutral" size="sm">
-                            Security
-                        </x-aura::badge>
-
-                    </x-aura::flex>
-
-                    <x-aura::flex direction="col" gap="1" class="flex-1">
-
-                        <x-aura::heading level="3" size="sm">
-                            Change Password and Security PIN
-                        </x-aura::heading>
-
-                        <x-aura::text variant="subtle" size="sm">
-                            Update login password credentials and configure 4 digit PIN code.
-                        </x-aura::text>
-
-                    </x-aura::flex>
-
-                    <x-aura::flex align="center" justify="between" class="pt-2 border-t border-zinc-100 dark:border-zinc-800/60">
-
-                        <x-aura::text size="sm" weight="semibold">
-                            Manage security
-                        </x-aura::text>
-
-                        <x-aura::icon name="arrow-right" size="xs" />
-
-                    </x-aura::flex>
+                    <x-aura::badge variant="neutral" size="sm">
+                        Security
+                    </x-aura::badge>
 
                 </x-aura::flex>
+
+                <x-aura::flex direction="col" gap="1">
+
+                    <x-aura::heading level="3" size="sm">
+                        Change Password and Security PIN
+                    </x-aura::heading>
+
+                    <x-aura::text variant="subtle" size="sm">
+                        Update login password credentials and configure 4 digit PIN code.
+                    </x-aura::text>
+
+                </x-aura::flex>
+
+                <x-slot:footer>
+
+                    <x-aura::text size="sm" weight="semibold">
+                        Manage security
+                    </x-aura::text>
+
+                    <x-aura::icon name="arrow-right" size="xs" />
+
+                </x-slot:footer>
 
             </x-aura::card>
 
             <!-- 5. Workspace Settings -->
             <div class="sm:col-span-2 lg:col-span-2 h-full">
 
-                <x-aura::card href="/user/setting" wire:navigate>
+                <x-aura::card href="/user/setting" wire:navigate gap="4">
 
-                    <x-aura::flex direction="col" justify="between" gap="4" class="h-full">
+                    <x-aura::flex align="start" justify="between" gap="3">
 
-                        <x-aura::flex align="start" justify="between" gap="3">
+                        <x-aura::icon name="sliders" size="lg" :container="true" />
 
-                            <div class="w-11 h-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white flex items-center justify-center border border-zinc-200/80 dark:border-zinc-700/60 shrink-0">
-                                <x-aura::icon name="sliders" size="sm" />
-                            </div>
-
-                            <x-aura::badge variant="subtle" size="sm">
-                                Preferences
-                            </x-aura::badge>
-
-                        </x-aura::flex>
-
-                        <x-aura::flex direction="col" gap="1" class="flex-1">
-
-                            <x-aura::heading level="3" size="sm">
-                                Account and Workspace Settings
-                            </x-aura::heading>
-
-                            <x-aura::text variant="subtle" size="sm">
-                                Configure system preferences, notification alerts, and theme preferences.
-                            </x-aura::text>
-
-                        </x-aura::flex>
-
-                        <x-aura::flex align="center" justify="between" class="pt-2 border-t border-zinc-100 dark:border-zinc-800/60">
-
-                            <x-aura::text size="sm" weight="semibold">
-                                Configure
-                            </x-aura::text>
-
-                            <x-aura::icon name="arrow-right" size="xs" />
-
-                        </x-aura::flex>
+                        <x-aura::badge variant="subtle" size="sm">
+                            Preferences
+                        </x-aura::badge>
 
                     </x-aura::flex>
+
+                    <x-aura::flex direction="col" gap="1">
+
+                        <x-aura::heading level="3" size="sm">
+                            Account and Workspace Settings
+                        </x-aura::heading>
+
+                        <x-aura::text variant="subtle" size="sm">
+                            Configure system preferences, notification alerts, and theme preferences.
+                        </x-aura::text>
+
+                    </x-aura::flex>
+
+                    <x-slot:footer>
+
+                        <x-aura::text size="sm" weight="semibold">
+                            Configure
+                        </x-aura::text>
+
+                        <x-aura::icon name="arrow-right" size="xs" />
+
+                    </x-slot:footer>
 
                 </x-aura::card>
 
@@ -303,131 +273,113 @@ class extends Component {};
         <x-aura::grid cols="1" sm="3" gap="4">
 
             <!-- Component Directory -->
-            <x-aura::card href="/components" wire:navigate>
+            <x-aura::card href="/components" wire:navigate gap="4">
 
-                <x-aura::flex direction="col" justify="between" gap="4" class="h-full">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <x-aura::flex align="start" justify="between" gap="3">
+                    <x-aura::icon name="layers" size="lg" variant="dark" />
 
-                        <div class="w-11 h-11 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center shrink-0">
-                            <x-aura::icon name="layers" size="sm" />
-                        </div>
-
-                        <x-aura::badge variant="subtle" size="sm">
-                            30+ Ready
-                        </x-aura::badge>
-
-                    </x-aura::flex>
-
-                    <x-aura::flex direction="col" gap="1" class="flex-1">
-
-                        <x-aura::heading level="3" size="sm">
-                            Component Directory
-                        </x-aura::heading>
-
-                        <x-aura::text variant="subtle" size="sm">
-                            Explore and test all interactive Blade and Livewire UI components.
-                        </x-aura::text>
-
-                    </x-aura::flex>
-
-                    <x-aura::flex align="center" justify="between" class="pt-2 border-t border-zinc-100 dark:border-zinc-800/60">
-
-                        <x-aura::text size="sm" weight="semibold">
-                            Browse docs
-                        </x-aura::text>
-
-                        <x-aura::icon name="arrow-right" size="xs" />
-
-                    </x-aura::flex>
+                    <x-aura::badge variant="subtle" size="sm">
+                        30+ Ready
+                    </x-aura::badge>
 
                 </x-aura::flex>
+
+                <x-aura::flex direction="col" gap="1">
+
+                    <x-aura::heading level="3" size="sm">
+                        Component Directory
+                    </x-aura::heading>
+
+                    <x-aura::text variant="subtle" size="sm">
+                        Explore and test all interactive Blade and Livewire UI components.
+                    </x-aura::text>
+
+                </x-aura::flex>
+
+                <x-slot:footer>
+
+                    <x-aura::text size="sm" weight="semibold">
+                        Browse docs
+                    </x-aura::text>
+
+                    <x-aura::icon name="arrow-right" size="xs" />
+
+                </x-slot:footer>
 
             </x-aura::card>
 
             <!-- Guest Marketing Portal -->
-            <x-aura::card href="/guest" wire:navigate>
+            <x-aura::card href="/guest" wire:navigate gap="4">
 
-                <x-aura::flex direction="col" justify="between" gap="4" class="h-full">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <x-aura::flex align="start" justify="between" gap="3">
+                    <x-aura::icon name="globe" size="lg" variant="dark" />
 
-                        <div class="w-11 h-11 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center shrink-0">
-                            <x-aura::icon name="globe" size="sm" />
-                        </div>
-
-                        <x-aura::badge variant="neutral" size="sm">
-                            Public
-                        </x-aura::badge>
-
-                    </x-aura::flex>
-
-                    <x-aura::flex direction="col" gap="1" class="flex-1">
-
-                        <x-aura::heading level="3" size="sm">
-                            Guest Marketing Portal
-                        </x-aura::heading>
-
-                        <x-aura::text variant="subtle" size="sm">
-                            Preview public landing page layout, feature showcase, and hero section.
-                        </x-aura::text>
-
-                    </x-aura::flex>
-
-                    <x-aura::flex align="center" justify="between" class="pt-2 border-t border-zinc-100 dark:border-zinc-800/60">
-
-                        <x-aura::text size="sm" weight="semibold">
-                            Explore portal
-                        </x-aura::text>
-
-                        <x-aura::icon name="arrow-right" size="xs" />
-
-                    </x-aura::flex>
+                    <x-aura::badge variant="neutral" size="sm">
+                        Public
+                    </x-aura::badge>
 
                 </x-aura::flex>
+
+                <x-aura::flex direction="col" gap="1">
+
+                    <x-aura::heading level="3" size="sm">
+                        Guest Marketing Portal
+                    </x-aura::heading>
+
+                    <x-aura::text variant="subtle" size="sm">
+                        Preview public landing page layout, feature showcase, and hero section.
+                    </x-aura::text>
+
+                </x-aura::flex>
+
+                <x-slot:footer>
+
+                    <x-aura::text size="sm" weight="semibold">
+                        Explore portal
+                    </x-aura::text>
+
+                    <x-aura::icon name="arrow-right" size="xs" />
+
+                </x-slot:footer>
 
             </x-aura::card>
 
             <!-- Admin Control Console -->
-            <x-aura::card href="/admin" wire:navigate>
+            <x-aura::card href="/admin" wire:navigate gap="4">
 
-                <x-aura::flex direction="col" justify="between" gap="4" class="h-full">
+                <x-aura::flex align="start" justify="between" gap="3">
 
-                    <x-aura::flex align="start" justify="between" gap="3">
+                    <x-aura::icon name="layout-dashboard" size="lg" variant="dark" />
 
-                        <div class="w-11 h-11 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center shrink-0">
-                            <x-aura::icon name="layout-dashboard" size="sm" />
-                        </div>
-
-                        <x-aura::badge variant="neutral" size="sm">
-                            Admin
-                        </x-aura::badge>
-
-                    </x-aura::flex>
-
-                    <x-aura::flex direction="col" gap="1" class="flex-1">
-
-                        <x-aura::heading level="3" size="sm">
-                            Admin Control Console
-                        </x-aura::heading>
-
-                        <x-aura::text variant="subtle" size="sm">
-                            Access administrative management, system statistics, and user directory table.
-                        </x-aura::text>
-
-                    </x-aura::flex>
-
-                    <x-aura::flex align="center" justify="between" class="pt-2 border-t border-zinc-100 dark:border-zinc-800/60">
-
-                        <x-aura::text size="sm" weight="semibold">
-                            Launch console
-                        </x-aura::text>
-
-                        <x-aura::icon name="arrow-right" size="xs" />
-
-                    </x-aura::flex>
+                    <x-aura::badge variant="neutral" size="sm">
+                        Admin
+                    </x-aura::badge>
 
                 </x-aura::flex>
+
+                <x-aura::flex direction="col" gap="1">
+
+                    <x-aura::heading level="3" size="sm">
+                        Admin Control Console
+                    </x-aura::heading>
+
+                    <x-aura::text variant="subtle" size="sm">
+                        Access administrative management, system statistics, and user directory table.
+                    </x-aura::text>
+
+                </x-aura::flex>
+
+                <x-slot:footer>
+
+                    <x-aura::text size="sm" weight="semibold">
+                        Launch console
+                    </x-aura::text>
+
+                    <x-aura::icon name="arrow-right" size="xs" />
+
+                </x-slot:footer>
 
             </x-aura::card>
 
