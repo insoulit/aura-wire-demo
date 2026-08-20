@@ -558,7 +558,7 @@ class extends Component {};
                 </x-aura::flex>
 
                 <x-aura::badge variant="neutral" size="sm">
-                    9 Components
+                    10 Components
                 </x-aura::badge>
 
             </x-aura::flex>
@@ -567,24 +567,24 @@ class extends Component {};
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 
-            <x-aura::card href="/components/body">
-                <x-aura::heading level="3" size="sm">Body</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::body&gt;</x-aura::text>
-            </x-aura::card>
-
-            <x-aura::card href="/components/center">
-                <x-aura::heading level="3" size="sm">Center</x-aura::heading>
-                <x-aura::text variant="mono" size="sm">&lt;x-aura::center&gt;</x-aura::text>
-            </x-aura::card>
-
             <x-aura::card href="/components/container">
                 <x-aura::heading level="3" size="sm">Container</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::container&gt;</x-aura::text>
             </x-aura::card>
 
+            <x-aura::card href="/components/grid">
+                <x-aura::heading level="3" size="sm">Grid</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::grid&gt;</x-aura::text>
+            </x-aura::card>
+
             <x-aura::card href="/components/flex">
                 <x-aura::heading level="3" size="sm">Flex</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::flex&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/center">
+                <x-aura::heading level="3" size="sm">Center</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::center&gt;</x-aura::text>
             </x-aura::card>
 
             <x-aura::card href="/components/header">
@@ -610,6 +610,11 @@ class extends Component {};
             <x-aura::card href="/components/footer">
                 <x-aura::heading level="3" size="sm">Footer</x-aura::heading>
                 <x-aura::text variant="mono" size="sm">&lt;x-aura::footer&gt;</x-aura::text>
+            </x-aura::card>
+
+            <x-aura::card href="/components/body">
+                <x-aura::heading level="3" size="sm">Body</x-aura::heading>
+                <x-aura::text variant="mono" size="sm">&lt;x-aura::body&gt;</x-aura::text>
             </x-aura::card>
 
         </div>

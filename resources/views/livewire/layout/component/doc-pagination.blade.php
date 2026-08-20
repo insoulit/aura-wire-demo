@@ -3,7 +3,10 @@
 use Livewire\Volt\Component;
 
 new class extends Component {
-    public function with(): array
+    public ?array $prevPage = null;
+    public ?array $nextPage = null;
+
+    public function mount(): void
     {
         $docsPages = [
             ['title' => 'Overview', 'url' => '/components'],
@@ -19,12 +22,12 @@ new class extends Component {
             ['title' => 'Text', 'url' => '/components/text'],
             ['title' => 'Blockquote', 'url' => '/components/blockquote'],
             ['title' => 'Inline Code', 'url' => '/components/inline-code'],
-            ['title' => 'Keyboard', 'url' => '/components/kbd'],
+            ['title' => 'Keyboard (Kbd)', 'url' => '/components/kbd'],
 
             // 2. Action
             ['title' => 'Button', 'url' => '/components/button'],
             ['title' => 'Icon Button', 'url' => '/components/icon-button'],
-            ['title' => 'Button Group', 'url' => '/components/button-group'],
+            ['title' => 'Group', 'url' => '/components/button-group'],
             ['title' => 'Link', 'url' => '/components/link'],
             ['title' => 'Dropdown', 'url' => '/components/dropdown'],
 
@@ -43,7 +46,7 @@ new class extends Component {
             ['title' => 'Radio', 'url' => '/components/radio'],
             ['title' => 'Switch', 'url' => '/components/switch'],
             ['title' => 'Rating', 'url' => '/components/rating'],
-            ['title' => 'File Upload', 'url' => '/components/file-upload'],
+            ['title' => 'Upload', 'url' => '/components/file-upload'],
 
             // 4. Display
             ['title' => 'Card', 'url' => '/components/card'],
@@ -54,9 +57,9 @@ new class extends Component {
             ['title' => 'Icon', 'url' => '/components/icon'],
             ['title' => 'Tag', 'url' => '/components/tag'],
             ['title' => 'Separator', 'url' => '/components/separator'],
-            ['title' => 'Progress Bar', 'url' => '/components/progress-bar'],
+            ['title' => 'Progress', 'url' => '/components/progress-bar'],
             ['title' => 'Skeleton', 'url' => '/components/skeleton'],
-            ['title' => 'Empty State', 'url' => '/components/empty-state'],
+            ['title' => 'Empty', 'url' => '/components/empty-state'],
 
             // 5. Data
             ['title' => 'Table', 'url' => '/components/table'],
@@ -83,18 +86,30 @@ new class extends Component {
             ['title' => 'Pagination', 'url' => '/components/pagination'],
 
             // 8. Layout
-            ['title' => 'Body', 'url' => '/components/body'],
             ['title' => 'Container', 'url' => '/components/container'],
+            ['title' => 'Grid', 'url' => '/components/grid'],
+            ['title' => 'Flex', 'url' => '/components/flex'],
+            ['title' => 'Center', 'url' => '/components/center'],
             ['title' => 'Header', 'url' => '/components/header'],
             ['title' => 'Navbar', 'url' => '/components/navbar'],
             ['title' => 'Sidebar', 'url' => '/components/sidebar'],
             ['title' => 'Main', 'url' => '/components/main'],
             ['title' => 'Footer', 'url' => '/components/footer'],
+            ['title' => 'Body', 'url' => '/components/body'],
         ];
 
         $currentPath = rtrim(request()->getPathInfo(), '/');
         if ($currentPath === '') {
             $currentPath = '/components';
+        }
+
+        $aliases = [
+            '/components/icons' => '/components/icon-library',
+            '/components/button-icon' => '/components/icon-button',
+        ];
+
+        if (isset($aliases[$currentPath])) {
+            $currentPath = $aliases[$currentPath];
         }
 
         $currentIndex = null;
@@ -105,32 +120,30 @@ new class extends Component {
             }
         }
 
-        return [
-            'prevPage' => ($currentIndex !== null && $currentIndex > 0) ? $docsPages[$currentIndex - 1] : null,
-            'nextPage' => ($currentIndex !== null && $currentIndex < count($docsPages) - 1) ? $docsPages[$currentIndex + 1] : null,
-        ];
+        $this->prevPage = ($currentIndex !== null && $currentIndex > 0) ? $docsPages[$currentIndex - 1] : null;
+        $this->nextPage = ($currentIndex !== null && $currentIndex < count($docsPages) - 1) ? $docsPages[$currentIndex + 1] : null;
     }
 };
 
 ?>
 
-<div class="w-full max-w-4xl mx-auto pt-10">
+<x-aura::container size="full" padding="top">
 
     @if ($prevPage || $nextPage)
 
-        <x-aura::flex justify="between" align="stretch" gap="md">
+        <x-aura::grid cols="1" sm="2" gap="3">
 
-            <div class="flex-1">
+            <div>
 
                 @if ($prevPage)
 
-                    <x-aura::card href="{{ $prevPage['url'] }}" wire:navigate>
+                    <x-aura::card href="{{ $prevPage['url'] }}" padding="sm" wire:navigate>
 
-                        <x-aura::flex direction="col" gap="1">
+                        <x-aura::flex direction="col" gap="0.5" align="start">
 
-                            <x-aura::flex align="center" gap="1.5">
+                            <x-aura::flex align="center" gap="1.5" :inline="true">
 
-                                <x-aura::icon name="arrow-left" size="sm" />
+                                <x-aura::icon name="arrow-left" size="xs" />
 
                                 <x-aura::text size="sm" variant="subtle">
                                     Previous
@@ -150,21 +163,21 @@ new class extends Component {
 
             </div>
 
-            <div class="flex-1">
+            <div>
 
                 @if ($nextPage)
 
-                    <x-aura::card href="{{ $nextPage['url'] }}" wire:navigate>
+                    <x-aura::card href="{{ $nextPage['url'] }}" padding="sm" wire:navigate>
 
-                        <x-aura::flex direction="col" gap="1" align="end">
+                        <x-aura::flex direction="col" gap="0.5" align="end">
 
-                            <x-aura::flex align="center" gap="1.5">
+                            <x-aura::flex align="center" gap="1.5" :inline="true">
 
                                 <x-aura::text size="sm" variant="subtle">
                                     Next
                                 </x-aura::text>
 
-                                <x-aura::icon name="arrow-right" size="sm" />
+                                <x-aura::icon name="arrow-right" size="xs" />
 
                             </x-aura::flex>
 
@@ -180,8 +193,8 @@ new class extends Component {
 
             </div>
 
-        </x-aura::flex>
+        </x-aura::grid>
 
     @endif
 
-</div>
+</x-aura::container>

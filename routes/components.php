@@ -83,12 +83,13 @@ Volt::route('/components/stepper', 'component.navigation.stepper')->name('compon
 
 // 8. Layout Group
 Volt::route('/components/container', 'component.layout.container')->name('component.container');
+Volt::route('/components/grid', 'component.layout.grid')->name('component.grid');
 Volt::route('/components/flex', 'component.layout.flex')->name('component.flex');
 Volt::route('/components/center', 'component.layout.center')->name('component.center');
-Volt::route('/components/body', 'component.layout.body')->name('component.body');
 Volt::route('/components/header', 'component.layout.header')->name('component.header');
+Volt::route('/components/navbar', 'component.layout.navbar')->name('component.navbar');
 Volt::route('/components/sidebar', 'component.layout.sidebar')->name('component.sidebar');
 Volt::route('/components/main', 'component.layout.main')->name('component.main');
-Volt::route('/components/navbar', 'component.layout.navbar')->name('component.navbar');
 Volt::route('/components/footer', 'component.layout.footer')->name('component.footer');
+Volt::route('/components/body', 'component.layout.body')->name('component.body');
 

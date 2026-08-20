@@ -291,10 +291,14 @@ new class extends Component {};
     </x-aura::sidebar.dropdown>
 
     <!-- 8. Layout Dropdown -->
-    <x-aura::sidebar.dropdown label="Layout" icon="sidebar" :active="request()->is('components/body', 'components/container', 'components/flex', 'components/center', 'components/stack', 'components/header', 'components/navbar', 'components/sidebar', 'components/main', 'components/footer')">
+    <x-aura::sidebar.dropdown label="Layout" icon="sidebar" :active="request()->is('components/container', 'components/grid', 'components/flex', 'components/center', 'components/header', 'components/navbar', 'components/sidebar', 'components/main', 'components/footer', 'components/body')">
 
         <x-aura::sidebar.item href="/components/container" :active="request()->is('components/container')">
             Container
+        </x-aura::sidebar.item>
+
+        <x-aura::sidebar.item href="/components/grid" :active="request()->is('components/grid')">
+            Grid
         </x-aura::sidebar.item>
 
         <x-aura::sidebar.item href="/components/flex" :active="request()->is('components/flex')">
@@ -303,10 +307,6 @@ new class extends Component {};
 
         <x-aura::sidebar.item href="/components/center" :active="request()->is('components/center')">
             Center
-        </x-aura::sidebar.item>
-
-        <x-aura::sidebar.item href="/components/body" :active="request()->is('components/body')">
-            Body
         </x-aura::sidebar.item>
 
         <x-aura::sidebar.item href="/components/header" :active="request()->is('components/header')">
@@ -327,6 +327,10 @@ new class extends Component {};
 
         <x-aura::sidebar.item href="/components/footer" :active="request()->is('components/footer')">
             Footer
+        </x-aura::sidebar.item>
+
+        <x-aura::sidebar.item href="/components/body" :active="request()->is('components/body')">
+            Body
         </x-aura::sidebar.item>
 
     </x-aura::sidebar.dropdown>
