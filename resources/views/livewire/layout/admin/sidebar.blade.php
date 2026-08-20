@@ -58,27 +58,31 @@ new class extends Component {};
         Settings
     </x-aura::sidebar.item>
 
-    <x-aura::separator />
+    <x-aura::flex direction="col" gap="1" class="mt-auto">
 
-    <x-aura::sidebar.heading>
-        Portals
-    </x-aura::sidebar.heading>
+        <x-aura::separator />
 
-    <x-aura::sidebar.item href="/components" icon="layers" :active="request()->is('components*')" badge="Docs">
-        Components
-    </x-aura::sidebar.item>
+        <x-aura::sidebar.heading>
+            Portals
+        </x-aura::sidebar.heading>
 
-    <x-aura::sidebar.item href="/guest" icon="globe" :active="request()->is('guest*')">
-        Guest
-    </x-aura::sidebar.item>
+        <x-aura::sidebar.item href="/components" icon="layers" :active="request()->is('components*')" badge="Docs">
+            Components
+        </x-aura::sidebar.item>
 
-    <x-aura::sidebar.item href="/user" icon="user" :active="request()->is('user*')">
-        User
-    </x-aura::sidebar.item>
+        <x-aura::sidebar.item href="/guest" icon="globe" :active="request()->is('guest*')">
+            Guest
+        </x-aura::sidebar.item>
 
-    <x-aura::sidebar.item href="/admin" icon="shield-check" :active="request()->is('admin*')">
-        Admin
-    </x-aura::sidebar.item>
+        <x-aura::sidebar.item href="/user" icon="user" :active="request()->is('user*')">
+            User
+        </x-aura::sidebar.item>
+
+        <x-aura::sidebar.item href="/admin" icon="shield-check">
+            Admin
+        </x-aura::sidebar.item>
+
+    </x-aura::flex>
 
     <x-slot:footer>
 
