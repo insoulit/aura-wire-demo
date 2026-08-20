@@ -63,7 +63,7 @@ new class extends Component {
 
                 </x-aura::flex>
 
-                <x-aura::flex align="baseline" gap="2">
+                <x-aura::flex align="center" gap="2">
 
                     <x-aura::heading level="3" size="lg">
                         {{ $chartData[$timeframe]['total'] }}

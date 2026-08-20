@@ -34,7 +34,7 @@ new class extends Component {
                     Event Volume
                 </x-aura::heading>
 
-                <x-aura::flex align="baseline" gap="2">
+                <x-aura::flex align="center" gap="2">
 
                     <x-aura::heading level="3" size="lg">
                         1,052
