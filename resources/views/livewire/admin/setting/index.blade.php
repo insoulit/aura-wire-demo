@@ -14,11 +14,11 @@ class extends Component {};
 <x-aura::container size="3xl" gap="4">
 
     <!-- Top Header -->
-    <div>
+    <x-aura::flex direction="col" gap="2">
 
-        <x-aura::flex align="center" justify="between" gap="4">
+        <x-aura::flex align="end" justify="between" gap="4">
 
-            <div>
+            <x-aura::flex direction="col" gap="none">
 
                 <x-aura::kicker>
                     Administration
@@ -28,15 +28,11 @@ class extends Component {};
                     Admin Settings
                 </x-aura::heading>
 
-            </div>
+            </x-aura::flex>
 
-            <div class="shrink-0">
-
-                <x-aura::button variant="secondary" size="sm" href="/admin" wire:navigate icon="arrow-left">
-                    Back
-                </x-aura::button>
-
-            </div>
+            <x-aura::button variant="secondary" size="sm" href="/admin" wire:navigate icon="arrow-left">
+                Back
+            </x-aura::button>
 
         </x-aura::flex>
 
@@ -44,7 +40,7 @@ class extends Component {};
             Manage global portal identity, theme preferences, and automation controls.
         </x-aura::subheading>
 
-    </div>
+    </x-aura::flex>
 
     <!-- 1. General Configuration -->
     <livewire:admin.setting.general />

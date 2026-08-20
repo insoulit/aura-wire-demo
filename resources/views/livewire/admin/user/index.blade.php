@@ -192,37 +192,33 @@ class extends Component {
 <x-aura::container size="6xl" gap="3">
 
     <!-- Top Header -->
-    <div class="px-1">
+    <x-aura::flex align="end" justify="between" gap="4">
 
-        <x-aura::flex align="center" justify="between" gap="4">
+        <x-aura::flex direction="col" gap="none" width="auto">
 
-            <div>
+            <x-aura::kicker>
+                Administration
+            </x-aura::kicker>
 
-                <x-aura::kicker>
-                    Administration
-                </x-aura::kicker>
-
-                <x-aura::heading level="1" size="lg">
-                    Users
-                </x-aura::heading>
-
-            </div>
-
-            <x-aura::flex align="center" gap="2">
-
-                <x-aura::button variant="secondary" size="sm" icon="download">
-                    Export
-                </x-aura::button>
-
-                <x-aura::button href="/admin/users/create" wire:navigate variant="primary" size="sm" icon="plus">
-                    Create
-                </x-aura::button>
-
-            </x-aura::flex>
+            <x-aura::heading level="1" size="lg">
+                Users
+            </x-aura::heading>
 
         </x-aura::flex>
 
-    </div>
+        <x-aura::flex align="center" justify="end" gap="2" width="auto">
+
+            <x-aura::button variant="secondary" size="sm" icon="download">
+                Export
+            </x-aura::button>
+
+            <x-aura::button href="/admin/users/create" wire:navigate variant="primary" size="sm" icon="plus">
+                Create
+            </x-aura::button>
+
+        </x-aura::flex>
+
+    </x-aura::flex>
 
     <!-- Ultra Clean Unified Table Card -->
     <x-aura::card :divided="false">

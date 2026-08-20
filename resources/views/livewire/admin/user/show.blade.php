@@ -34,9 +34,9 @@ class extends Component {
 <x-aura::container size="3xl" gap="3">
 
     <!-- Top Header -->
-    <x-aura::flex align="center" justify="between" gap="4" class="px-1">
+    <x-aura::flex align="end" justify="between" gap="4">
 
-        <div>
+        <x-aura::flex direction="col" gap="none" width="auto">
 
             <x-aura::kicker>
                 Administration
@@ -46,9 +46,9 @@ class extends Component {
                 User Profile
             </x-aura::heading>
 
-        </div>
+        </x-aura::flex>
 
-        <x-aura::flex align="center" gap="2">
+        <x-aura::flex align="center" justify="end" gap="2" width="auto">
 
             <x-aura::button href="/admin/users" wire:navigate variant="secondary" size="sm" icon="arrow-left">
                 Back
