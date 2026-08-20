@@ -22,24 +22,32 @@ class extends Component {
 
 ?>
 
-<x-aura::flex direction="col" gap="6" class="max-w-2xl mx-auto py-4">
+<x-aura::container size="2xl" gap="6" class="py-4">
 
     <!-- Top Header -->
-    <x-aura::flex direction="col" gap="1">
+    <x-aura::flex direction="col" gap="2">
 
-        <x-aura::flex align="center" justify="between" gap="4">
+        <x-aura::flex justify="between" gap="4">
 
-            <x-aura::heading level="1" size="lg">
-                Change Password &amp; PIN
-            </x-aura::heading>
+            <x-aura::flex direction="col" gap="none">
 
-            <div class="shrink-0">
+                <x-aura::kicker>
+                    User Account
+                </x-aura::kicker>
+
+                <x-aura::heading level="1" size="lg">
+                    Change Password and PIN
+                </x-aura::heading>
+
+            </x-aura::flex>
+
+            <x-aura::flex justify="end" gap="2">
 
                 <x-aura::button variant="secondary" size="sm" href="/user" wire:navigate icon="arrow-left">
                     Back
                 </x-aura::button>
 
-            </div>
+            </x-aura::flex>
 
         </x-aura::flex>
 
@@ -66,7 +74,7 @@ class extends Component {
 
                 <x-aura::avatar initials="AK" size="lg" />
 
-                <div>
+                <x-aura::flex direction="col" gap="none">
 
                     <x-aura::heading level="2" size="sm">
                         Alex Kovacs
@@ -76,11 +84,11 @@ class extends Component {
                         alex.kovacs@example.com
                     </x-aura::text>
 
-                </div>
+                </x-aura::flex>
 
             </x-aura::flex>
 
-            <x-aura::badge variant="positive" size="sm">
+            <x-aura::badge variant="neutral" size="sm">
                 2FA Security Active
             </x-aura::badge>
 
@@ -128,4 +136,4 @@ class extends Component {
 
     </x-aura::card>
 
-</x-aura::flex>
+</x-aura::container>

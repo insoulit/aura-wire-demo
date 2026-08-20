@@ -24,24 +24,32 @@ class extends Component {
 
 ?>
 
-<x-aura::flex direction="col" gap="6" class="max-w-2xl mx-auto py-4">
+<x-aura::container size="2xl" gap="6" class="py-4">
 
     <!-- Top Header -->
-    <x-aura::flex direction="col" gap="1">
+    <x-aura::flex direction="col" gap="2">
 
-        <x-aura::flex align="center" justify="between" gap="4">
+        <x-aura::flex justify="between" gap="4">
 
-            <x-aura::heading level="1" size="lg">
-                Account &amp; Workspace Settings
-            </x-aura::heading>
+            <x-aura::flex direction="col" gap="none">
 
-            <div class="shrink-0">
+                <x-aura::kicker>
+                    User Account
+                </x-aura::kicker>
+
+                <x-aura::heading level="1" size="lg">
+                    Account and Workspace Settings
+                </x-aura::heading>
+
+            </x-aura::flex>
+
+            <x-aura::flex justify="end" gap="2">
 
                 <x-aura::button variant="secondary" size="sm" href="/user" wire:navigate icon="arrow-left">
                     Back
                 </x-aura::button>
 
-            </div>
+            </x-aura::flex>
 
         </x-aura::flex>
 
@@ -54,7 +62,7 @@ class extends Component {
     @if ($saved)
 
         <x-aura::banner variant="dark" dismissible="true">
-            Account &amp; workspace settings updated successfully!
+            Account and workspace settings updated successfully!
         </x-aura::banner>
 
     @endif
@@ -68,7 +76,7 @@ class extends Component {
 
                 <x-aura::avatar initials="AK" size="lg" />
 
-                <div>
+                <x-aura::flex direction="col" gap="none">
 
                     <x-aura::heading level="2" size="sm">
                         Alex Kovacs
@@ -78,11 +86,11 @@ class extends Component {
                         alex.kovacs@example.com
                     </x-aura::text>
 
-                </div>
+                </x-aura::flex>
 
             </x-aura::flex>
 
-            <x-aura::badge variant="positive" size="sm">
+            <x-aura::badge variant="neutral" size="sm">
                 Active Account
             </x-aura::badge>
 
@@ -93,7 +101,7 @@ class extends Component {
             <x-aura::flex direction="col" gap="6">
 
                 <!-- Inputs Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <x-aura::grid cols="1" sm="2" gap="5">
 
                     <x-aura::field label="First Name" required>
                         <x-aura::input wire:model="firstName" placeholder="Enter first name" size="sm" required />
@@ -103,11 +111,11 @@ class extends Component {
                         <x-aura::input wire:model="lastName" placeholder="Enter last name" size="sm" required />
                     </x-aura::field>
 
-                    <x-aura::field label="Email Address" required hint="Used for login &amp; security alerts">
+                    <x-aura::field label="Email Address" required hint="Used for login and security alerts">
                         <x-aura::input type="email" wire:model="email" placeholder="email@example.com" size="sm" required />
                     </x-aura::field>
 
-                    <x-aura::field label="Timezone &amp; Region">
+                    <x-aura::field label="Timezone and Region">
                         <x-aura::select wire:model="timezone" size="sm">
                             <option value="UTC">UTC (Coordinated Universal Time)</option>
                             <option value="EST">EST (Eastern Standard Time)</option>
@@ -115,10 +123,10 @@ class extends Component {
                         </x-aura::select>
                     </x-aura::field>
 
-                </div>
+                </x-aura::grid>
 
                 <!-- Bio Textarea -->
-                <x-aura::field label="Bio &amp; Summary" hint="Brief summary shown on team project lead cards">
+                <x-aura::field label="Bio and Summary" hint="Brief summary shown on team project lead cards">
                     <x-aura::textarea wire:model="bio" rows="3" placeholder="Tell us about your role and expertise..." />
                 </x-aura::field>
 
@@ -136,7 +144,7 @@ class extends Component {
 
                     <x-aura::flex direction="col" gap="3">
                         <x-aura::checkbox label="Project Activity Summaries" description="Receive a weekly digest of project progress and team updates." size="sm" checked />
-                        <x-aura::checkbox label="Security &amp; Sign in Alerts" description="Get immediate email notifications when new devices log into your account." size="sm" checked />
+                        <x-aura::checkbox label="Security and Sign in Alerts" description="Get immediate email notifications when new devices log into your account." size="sm" checked />
                     </x-aura::flex>
 
                 </x-aura::flex>
@@ -156,4 +164,4 @@ class extends Component {
 
     </x-aura::card>
 
-</x-aura::flex>
+</x-aura::container>

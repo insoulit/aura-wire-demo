@@ -11,14 +11,14 @@ class extends Component {};
 
 ?>
 
-<x-aura::flex direction="col" gap="8" class="max-w-5xl mx-auto pb-16">
+<x-aura::container size="5xl" gap="8" class="pb-16">
 
     <!-- 1. Hero Banner Card -->
     <x-aura::card>
 
-        <div class="flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-6">
+        <x-aura::flex align="center" gap="6" class="flex-col sm:flex-row">
 
-            <div class="relative shrink-0">
+            <x-aura::flex width="auto" class="shrink-0">
 
                 <x-aura::avatar 
                     src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=160&auto=format&fit=crop&q=80" 
@@ -27,7 +27,7 @@ class extends Component {};
                     status="online" 
                 />
 
-            </div>
+            </x-aura::flex>
 
             <x-aura::flex direction="col" gap="1" class="min-w-0">
 
@@ -41,7 +41,7 @@ class extends Component {};
                         User Account
                     </x-aura::badge>
 
-                    <x-aura::badge variant="positive" size="sm">
+                    <x-aura::badge variant="neutral" size="sm">
                         Active
                     </x-aura::badge>
 
@@ -57,29 +57,27 @@ class extends Component {};
 
             </x-aura::flex>
 
-        </div>
+        </x-aura::flex>
 
     </x-aura::card>
 
     <!-- 2. Account & Security Module Cards Grid -->
     <x-aura::flex direction="col" gap="3.5">
 
-        <div>
-            <x-aura::heading level="2" size="sm">
-                Account &amp; Security
-            </x-aura::heading>
-        </div>
+        <x-aura::heading level="2" size="sm">
+            Account and Security
+        </x-aura::heading>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-stretch">
+        <x-aura::grid cols="1" sm="2" lg="3" gap="4">
 
             <!-- 1. Profile Info -->
             <x-aura::card href="/user/profile" wire:navigate>
 
-                <div class="flex-1 flex flex-col justify-between gap-4">
+                <x-aura::flex direction="col" justify="between" gap="4" class="h-full">
 
                     <x-aura::flex align="start" justify="between" gap="3">
 
-                        <div class="w-11 h-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white flex items-center justify-center border border-zinc-200/80 dark:border-zinc-700/60 group-hover:bg-white group-hover:text-zinc-900 dark:group-hover:bg-zinc-900 dark:group-hover:text-white group-hover:border-white dark:group-hover:border-zinc-900 shrink-0 group-hover:scale-105 transition-all duration-200">
+                        <div class="w-11 h-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white flex items-center justify-center border border-zinc-200/80 dark:border-zinc-700/60 shrink-0">
                             <x-aura::icon name="user" size="sm" />
                         </div>
 
@@ -101,25 +99,28 @@ class extends Component {};
 
                     </x-aura::flex>
 
-                    <div class="pt-2 flex items-center justify-between text-xs font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-white dark:group-hover:text-zinc-900 border-t border-zinc-100 dark:border-zinc-800/60 group-hover:border-white/20 dark:group-hover:border-zinc-900/20 transition-colors duration-200">
-                        <span>Edit details</span>
-                        <div class="w-6 h-6 rounded-full bg-zinc-50 dark:bg-zinc-800/80 group-hover:bg-white dark:group-hover:bg-zinc-900 group-hover:text-zinc-900 dark:group-hover:text-white flex items-center justify-center text-zinc-400 group-hover:translate-x-0.5 transition-all duration-200">
-                            <x-aura::icon name="arrow-right" size="xs" />
-                        </div>
-                    </div>
+                    <x-aura::flex align="center" justify="between" class="pt-2 border-t border-zinc-100 dark:border-zinc-800/60">
 
-                </div>
+                        <x-aura::text size="sm" weight="semibold">
+                            Edit details
+                        </x-aura::text>
+
+                        <x-aura::icon name="arrow-right" size="xs" />
+
+                    </x-aura::flex>
+
+                </x-aura::flex>
 
             </x-aura::card>
 
             <!-- 2. Profile Picture -->
             <x-aura::card href="/user/avatar" wire:navigate>
 
-                <div class="flex-1 flex flex-col justify-between gap-4">
+                <x-aura::flex direction="col" justify="between" gap="4" class="h-full">
 
                     <x-aura::flex align="start" justify="between" gap="3">
 
-                        <div class="w-11 h-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white flex items-center justify-center border border-zinc-200/80 dark:border-zinc-700/60 group-hover:bg-white group-hover:text-zinc-900 dark:group-hover:bg-zinc-900 dark:group-hover:text-white group-hover:border-white dark:group-hover:border-zinc-900 shrink-0 group-hover:scale-105 transition-all duration-200">
+                        <div class="w-11 h-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white flex items-center justify-center border border-zinc-200/80 dark:border-zinc-700/60 shrink-0">
                             <x-aura::icon name="camera" size="sm" />
                         </div>
 
@@ -141,25 +142,28 @@ class extends Component {};
 
                     </x-aura::flex>
 
-                    <div class="pt-2 flex items-center justify-between text-xs font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-white dark:group-hover:text-zinc-900 border-t border-zinc-100 dark:border-zinc-800/60 group-hover:border-white/20 dark:group-hover:border-zinc-900/20 transition-colors duration-200">
-                        <span>Upload photo</span>
-                        <div class="w-6 h-6 rounded-full bg-zinc-50 dark:bg-zinc-800/80 group-hover:bg-white dark:group-hover:bg-zinc-900 group-hover:text-zinc-900 dark:group-hover:text-white flex items-center justify-center text-zinc-400 group-hover:translate-x-0.5 transition-all duration-200">
-                            <x-aura::icon name="arrow-right" size="xs" />
-                        </div>
-                    </div>
+                    <x-aura::flex align="center" justify="between" class="pt-2 border-t border-zinc-100 dark:border-zinc-800/60">
 
-                </div>
+                        <x-aura::text size="sm" weight="semibold">
+                            Upload photo
+                        </x-aura::text>
+
+                        <x-aura::icon name="arrow-right" size="xs" />
+
+                    </x-aura::flex>
+
+                </x-aura::flex>
 
             </x-aura::card>
 
             <!-- 3. Change Email -->
             <x-aura::card href="/user/email" wire:navigate>
 
-                <div class="flex-1 flex flex-col justify-between gap-4">
+                <x-aura::flex direction="col" justify="between" gap="4" class="h-full">
 
                     <x-aura::flex align="start" justify="between" gap="3">
 
-                        <div class="w-11 h-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white flex items-center justify-center border border-zinc-200/80 dark:border-zinc-700/60 group-hover:bg-white group-hover:text-zinc-900 dark:group-hover:bg-zinc-900 dark:group-hover:text-white group-hover:border-white dark:group-hover:border-zinc-900 shrink-0 group-hover:scale-105 transition-all duration-200">
+                        <div class="w-11 h-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white flex items-center justify-center border border-zinc-200/80 dark:border-zinc-700/60 shrink-0">
                             <x-aura::icon name="mail" size="sm" />
                         </div>
 
@@ -181,25 +185,28 @@ class extends Component {};
 
                     </x-aura::flex>
 
-                    <div class="pt-2 flex items-center justify-between text-xs font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-white dark:group-hover:text-zinc-900 border-t border-zinc-100 dark:border-zinc-800/60 group-hover:border-white/20 dark:group-hover:border-zinc-900/20 transition-colors duration-200">
-                        <span>Verify address</span>
-                        <div class="w-6 h-6 rounded-full bg-zinc-50 dark:bg-zinc-800/80 group-hover:bg-white dark:group-hover:bg-zinc-900 group-hover:text-zinc-900 dark:group-hover:text-white flex items-center justify-center text-zinc-400 group-hover:translate-x-0.5 transition-all duration-200">
-                            <x-aura::icon name="arrow-right" size="xs" />
-                        </div>
-                    </div>
+                    <x-aura::flex align="center" justify="between" class="pt-2 border-t border-zinc-100 dark:border-zinc-800/60">
 
-                </div>
+                        <x-aura::text size="sm" weight="semibold">
+                            Verify address
+                        </x-aura::text>
+
+                        <x-aura::icon name="arrow-right" size="xs" />
+
+                    </x-aura::flex>
+
+                </x-aura::flex>
 
             </x-aura::card>
 
             <!-- 4. Change Password & Security -->
             <x-aura::card href="/user/password" wire:navigate>
 
-                <div class="flex-1 flex flex-col justify-between gap-4">
+                <x-aura::flex direction="col" justify="between" gap="4" class="h-full">
 
                     <x-aura::flex align="start" justify="between" gap="3">
 
-                        <div class="w-11 h-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white flex items-center justify-center border border-zinc-200/80 dark:border-zinc-700/60 group-hover:bg-white group-hover:text-zinc-900 dark:group-hover:bg-zinc-900 dark:group-hover:text-white group-hover:border-white dark:group-hover:border-zinc-900 shrink-0 group-hover:scale-105 transition-all duration-200">
+                        <div class="w-11 h-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white flex items-center justify-center border border-zinc-200/80 dark:border-zinc-700/60 shrink-0">
                             <x-aura::icon name="shield-check" size="sm" />
                         </div>
 
@@ -212,7 +219,7 @@ class extends Component {};
                     <x-aura::flex direction="col" gap="1" class="flex-1">
 
                         <x-aura::heading level="3" size="sm">
-                            Change Password &amp; Security PIN
+                            Change Password and Security PIN
                         </x-aura::heading>
 
                         <x-aura::text variant="subtle" size="sm">
@@ -221,14 +228,17 @@ class extends Component {};
 
                     </x-aura::flex>
 
-                    <div class="pt-2 flex items-center justify-between text-xs font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-white dark:group-hover:text-zinc-900 border-t border-zinc-100 dark:border-zinc-800/60 group-hover:border-white/20 dark:group-hover:border-zinc-900/20 transition-colors duration-200">
-                        <span>Manage security</span>
-                        <div class="w-6 h-6 rounded-full bg-zinc-50 dark:bg-zinc-800/80 group-hover:bg-white dark:group-hover:bg-zinc-900 group-hover:text-zinc-900 dark:group-hover:text-white flex items-center justify-center text-zinc-400 group-hover:translate-x-0.5 transition-all duration-200">
-                            <x-aura::icon name="arrow-right" size="xs" />
-                        </div>
-                    </div>
+                    <x-aura::flex align="center" justify="between" class="pt-2 border-t border-zinc-100 dark:border-zinc-800/60">
 
-                </div>
+                        <x-aura::text size="sm" weight="semibold">
+                            Manage security
+                        </x-aura::text>
+
+                        <x-aura::icon name="arrow-right" size="xs" />
+
+                    </x-aura::flex>
+
+                </x-aura::flex>
 
             </x-aura::card>
 
@@ -237,11 +247,11 @@ class extends Component {};
 
                 <x-aura::card href="/user/setting" wire:navigate>
 
-                    <div class="flex-1 flex flex-col justify-between gap-4">
+                    <x-aura::flex direction="col" justify="between" gap="4" class="h-full">
 
                         <x-aura::flex align="start" justify="between" gap="3">
 
-                            <div class="w-11 h-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white flex items-center justify-center border border-zinc-200/80 dark:border-zinc-700/60 group-hover:bg-white group-hover:text-zinc-900 dark:group-hover:bg-zinc-900 dark:group-hover:text-white group-hover:border-white dark:group-hover:border-zinc-900 shrink-0 group-hover:scale-105 transition-all duration-200">
+                            <div class="w-11 h-11 rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-white flex items-center justify-center border border-zinc-200/80 dark:border-zinc-700/60 shrink-0">
                                 <x-aura::icon name="sliders" size="sm" />
                             </div>
 
@@ -254,7 +264,7 @@ class extends Component {};
                         <x-aura::flex direction="col" gap="1" class="flex-1">
 
                             <x-aura::heading level="3" size="sm">
-                                Account &amp; Workspace Settings
+                                Account and Workspace Settings
                             </x-aura::heading>
 
                             <x-aura::text variant="subtle" size="sm">
@@ -263,42 +273,43 @@ class extends Component {};
 
                         </x-aura::flex>
 
-                        <div class="pt-2 flex items-center justify-between text-xs font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-white dark:group-hover:text-zinc-900 border-t border-zinc-100 dark:border-zinc-800/60 group-hover:border-white/20 dark:group-hover:border-zinc-900/20 transition-colors duration-200">
-                            <span>Configure</span>
-                            <div class="w-6 h-6 rounded-full bg-zinc-50 dark:bg-zinc-800/80 group-hover:bg-white dark:group-hover:bg-zinc-900 group-hover:text-zinc-900 dark:group-hover:text-white flex items-center justify-center text-zinc-400 group-hover:translate-x-0.5 transition-all duration-200">
-                                <x-aura::icon name="arrow-right" size="xs" />
-                            </div>
-                        </div>
+                        <x-aura::flex align="center" justify="between" class="pt-2 border-t border-zinc-100 dark:border-zinc-800/60">
 
-                    </div>
+                            <x-aura::text size="sm" weight="semibold">
+                                Configure
+                            </x-aura::text>
+
+                            <x-aura::icon name="arrow-right" size="xs" />
+
+                        </x-aura::flex>
+
+                    </x-aura::flex>
 
                 </x-aura::card>
 
             </div>
 
-        </div>
+        </x-aura::grid>
 
     </x-aura::flex>
 
     <!-- 3. System Portals Module Cards -->
     <x-aura::flex direction="col" gap="3.5" class="pt-2">
 
-        <div>
-            <x-aura::heading level="2" size="sm">
-                System Portals
-            </x-aura::heading>
-        </div>
+        <x-aura::heading level="2" size="sm">
+            System Portals
+        </x-aura::heading>
 
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 items-stretch">
+        <x-aura::grid cols="1" sm="3" gap="4">
 
             <!-- Component Directory -->
             <x-aura::card href="/components" wire:navigate>
 
-                <div class="flex-1 flex flex-col justify-between gap-4">
+                <x-aura::flex direction="col" justify="between" gap="4" class="h-full">
 
                     <x-aura::flex align="start" justify="between" gap="3">
 
-                        <div class="w-11 h-11 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 group-hover:bg-white group-hover:text-zinc-900 dark:group-hover:bg-zinc-900 dark:group-hover:text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-all duration-200">
+                        <div class="w-11 h-11 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center shrink-0">
                             <x-aura::icon name="layers" size="sm" />
                         </div>
 
@@ -315,30 +326,33 @@ class extends Component {};
                         </x-aura::heading>
 
                         <x-aura::text variant="subtle" size="sm">
-                            Explore and test all interactive Blade &amp; Livewire UI components.
+                            Explore and test all interactive Blade and Livewire UI components.
                         </x-aura::text>
 
                     </x-aura::flex>
 
-                    <div class="pt-2 flex items-center justify-between text-xs font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-white dark:group-hover:text-zinc-900 border-t border-zinc-100 dark:border-zinc-800/60 group-hover:border-white/20 dark:group-hover:border-zinc-900/20 transition-colors duration-200">
-                        <span>Browse docs</span>
-                        <div class="w-6 h-6 rounded-full bg-zinc-50 dark:bg-zinc-800/80 group-hover:bg-white dark:group-hover:bg-zinc-900 group-hover:text-zinc-900 dark:group-hover:text-white flex items-center justify-center text-zinc-400 group-hover:translate-x-0.5 transition-all duration-200">
-                            <x-aura::icon name="arrow-right" size="xs" />
-                        </div>
-                    </div>
+                    <x-aura::flex align="center" justify="between" class="pt-2 border-t border-zinc-100 dark:border-zinc-800/60">
 
-                </div>
+                        <x-aura::text size="sm" weight="semibold">
+                            Browse docs
+                        </x-aura::text>
+
+                        <x-aura::icon name="arrow-right" size="xs" />
+
+                    </x-aura::flex>
+
+                </x-aura::flex>
 
             </x-aura::card>
 
             <!-- Guest Marketing Portal -->
             <x-aura::card href="/guest" wire:navigate>
 
-                <div class="flex-1 flex flex-col justify-between gap-4">
+                <x-aura::flex direction="col" justify="between" gap="4" class="h-full">
 
                     <x-aura::flex align="start" justify="between" gap="3">
 
-                        <div class="w-11 h-11 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 group-hover:bg-white group-hover:text-zinc-900 dark:group-hover:bg-zinc-900 dark:group-hover:text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-all duration-200">
+                        <div class="w-11 h-11 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center shrink-0">
                             <x-aura::icon name="globe" size="sm" />
                         </div>
 
@@ -360,25 +374,28 @@ class extends Component {};
 
                     </x-aura::flex>
 
-                    <div class="pt-2 flex items-center justify-between text-xs font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-white dark:group-hover:text-zinc-900 border-t border-zinc-100 dark:border-zinc-800/60 group-hover:border-white/20 dark:group-hover:border-zinc-900/20 transition-colors duration-200">
-                        <span>Explore portal</span>
-                        <div class="w-6 h-6 rounded-full bg-zinc-50 dark:bg-zinc-800/80 group-hover:bg-white dark:group-hover:bg-zinc-900 group-hover:text-zinc-900 dark:group-hover:text-white flex items-center justify-center text-zinc-400 group-hover:translate-x-0.5 transition-all duration-200">
-                            <x-aura::icon name="arrow-right" size="xs" />
-                        </div>
-                    </div>
+                    <x-aura::flex align="center" justify="between" class="pt-2 border-t border-zinc-100 dark:border-zinc-800/60">
 
-                </div>
+                        <x-aura::text size="sm" weight="semibold">
+                            Explore portal
+                        </x-aura::text>
+
+                        <x-aura::icon name="arrow-right" size="xs" />
+
+                    </x-aura::flex>
+
+                </x-aura::flex>
 
             </x-aura::card>
 
             <!-- Admin Control Console -->
             <x-aura::card href="/admin" wire:navigate>
 
-                <div class="flex-1 flex flex-col justify-between gap-4">
+                <x-aura::flex direction="col" justify="between" gap="4" class="h-full">
 
                     <x-aura::flex align="start" justify="between" gap="3">
 
-                        <div class="w-11 h-11 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 group-hover:bg-white group-hover:text-zinc-900 dark:group-hover:bg-zinc-900 dark:group-hover:text-white flex items-center justify-center shrink-0 group-hover:scale-105 transition-all duration-200">
+                        <div class="w-11 h-11 rounded-xl bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 flex items-center justify-center shrink-0">
                             <x-aura::icon name="layout-dashboard" size="sm" />
                         </div>
 
@@ -400,19 +417,22 @@ class extends Component {};
 
                     </x-aura::flex>
 
-                    <div class="pt-2 flex items-center justify-between text-xs font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-white dark:group-hover:text-zinc-900 border-t border-zinc-100 dark:border-zinc-800/60 group-hover:border-white/20 dark:group-hover:border-zinc-900/20 transition-colors duration-200">
-                        <span>Launch console</span>
-                        <div class="w-6 h-6 rounded-full bg-zinc-50 dark:bg-zinc-800/80 group-hover:bg-white dark:group-hover:bg-zinc-900 group-hover:text-zinc-900 dark:group-hover:text-white flex items-center justify-center text-zinc-400 group-hover:translate-x-0.5 transition-all duration-200">
-                            <x-aura::icon name="arrow-right" size="xs" />
-                        </div>
-                    </div>
+                    <x-aura::flex align="center" justify="between" class="pt-2 border-t border-zinc-100 dark:border-zinc-800/60">
 
-                </div>
+                        <x-aura::text size="sm" weight="semibold">
+                            Launch console
+                        </x-aura::text>
+
+                        <x-aura::icon name="arrow-right" size="xs" />
+
+                    </x-aura::flex>
+
+                </x-aura::flex>
 
             </x-aura::card>
 
-        </div>
+        </x-aura::grid>
 
     </x-aura::flex>
 
-</x-aura::flex>
+</x-aura::container>
