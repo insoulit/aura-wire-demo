@@ -9,17 +9,17 @@ new class extends Component {};
 <x-aura::flex direction="col" align="center" gap="6">
 
     <!-- Top Version Pill -->
-    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800/80 border border-zinc-200/80 dark:border-zinc-700/60 shadow-2xs">
+    <x-aura::flex align="center" gap="2" :inline="true">
 
-        <x-aura::badge variant="positive" size="sm">
-            v1.5.0
+        <x-aura::badge variant="neutral" size="sm">
+            v1.6.0
         </x-aura::badge>
 
         <x-aura::text size="sm" variant="subtle" weight="medium">
             Laravel &amp; Livewire
         </x-aura::text>
 
-    </div>
+    </x-aura::flex>
 
     <!-- Display Headline & Subtitle -->
     <x-aura::flex direction="col" align="center" gap="1.5">
