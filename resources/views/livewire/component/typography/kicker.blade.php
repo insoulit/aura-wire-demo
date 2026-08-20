@@ -324,7 +324,7 @@ class extends Component {};
 
                 <x-aura::table.cell>
                     <x-aura::badge variant="neutral" size="md">
-                        div
+                        p
                     </x-aura::badge>
                 </x-aura::table.cell>
 
@@ -333,7 +333,7 @@ class extends Component {};
                     <x-aura::flex align="center" gap="1.5" :wrap="true">
 
                         <x-aura::badge variant="subtle" size="md">
-                            div
+                            p
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
@@ -341,11 +341,11 @@ class extends Component {};
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
-                            p
+                            h4
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
-                            h4
+                            h6
                         </x-aura::badge>
 
                     </x-aura::flex>

@@ -337,11 +337,11 @@ class extends Component {};
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
-                            div
+                            span
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
-                            span
+                            h2
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">

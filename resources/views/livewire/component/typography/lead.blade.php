@@ -258,10 +258,6 @@ class extends Component {};
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
-                            div
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
                             span
                         </x-aura::badge>
 
