@@ -13,7 +13,7 @@
         <!-- Main Content Area -->
         <x-aura::flex direction="col" gap="none" class="flex-1 min-w-0">
 
-            <x-aura::main class="min-h-screen">
+            <x-aura::main class="min-h-screen" alignX="center" alignY="center">
                 {{ $slot }}
             </x-aura::main>
 
