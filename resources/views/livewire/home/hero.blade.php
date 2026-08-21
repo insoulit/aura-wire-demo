@@ -12,7 +12,7 @@ new class extends Component {};
     <x-aura::flex align="center" gap="2" :inline="true">
 
         <x-aura::badge variant="neutral" size="sm">
-            v1.6.0
+            v1.6.1
         </x-aura::badge>
 
         <x-aura::text size="sm" variant="subtle" weight="medium">

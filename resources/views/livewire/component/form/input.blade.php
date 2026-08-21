@@ -120,6 +120,45 @@ class extends Component {
 
     </x-aura::code>
 
+    <!-- 3. Width Options -->
+    <x-aura::code title="3. Width Presets">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex direction="col" align="start" gap="3">
+
+                    <x-aura::input width="xs" placeholder="Width Extra Small (xs)" />
+
+                    <x-aura::input width="sm" placeholder="Width Small (sm)" />
+
+                    <x-aura::input width="md" placeholder="Width Medium (md)" />
+
+                    <x-aura::input width="lg" placeholder="Width Large (lg)" />
+
+                    <x-aura::input width="full" placeholder="Width Full (full)" />
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::input width="xs" placeholder="Width xs" />
+                <x-aura::input width="sm" placeholder="Width sm" />
+                <x-aura::input width="md" placeholder="Width md" />
+                <x-aura::input width="lg" placeholder="Width lg" />
+                <x-aura::input width="full" placeholder="Width full" />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
     <!-- Component Props -->
     <x-aura::card size="full" gap="4">
 
@@ -583,6 +622,70 @@ class extends Component {
 
                         <x-aura::badge variant="subtle" size="md">
                             false
+                        </x-aura::badge>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            width
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Set explicit width preset or full container width" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="neutral" size="md">
+                        full
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :wrap="true">
+
+                        <x-aura::badge variant="subtle" size="md">
+                            auto
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            xs
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            sm
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            md
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            lg
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            xl
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            full
                         </x-aura::badge>
 
                     </x-aura::flex>
