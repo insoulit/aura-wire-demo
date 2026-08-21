@@ -91,13 +91,13 @@ new class extends Component {
 
                         <x-aura::separator />
 
-                        <x-aura::flex direction="col" sm="row" align="stretch" smAlign="center" justify="between" gap="4">
+                        <x-aura::flex align="center" justify="between" gap="4">
 
                             <x-aura::badge variant="subtle" size="sm">
                                 Direct response within 24 hours
                             </x-aura::badge>
 
-                            <x-aura::button type="submit" variant="primary" size="lg">
+                            <x-aura::button type="submit" variant="primary" size="md">
                                 Send
                             </x-aura::button>
 

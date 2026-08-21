@@ -110,7 +110,7 @@ new class extends Component {
 
                         <x-aura::separator />
 
-                        <x-aura::flex direction="col" sm="row" align="stretch" smAlign="center" justify="between" gap="4">
+                        <x-aura::flex align="center" justify="between" gap="4">
 
                             <x-aura::flex align="center" width="auto" gap="2">
 
@@ -122,7 +122,7 @@ new class extends Component {
 
                             </x-aura::flex>
 
-                            <x-aura::button type="submit" variant="primary" size="lg">
+                            <x-aura::button type="submit" variant="primary" size="md">
                                 Confirm
                             </x-aura::button>
 

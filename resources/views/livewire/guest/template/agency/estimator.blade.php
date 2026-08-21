@@ -118,13 +118,13 @@ new class extends Component {
 
                         <x-aura::separator />
 
-                        <x-aura::flex direction="col" sm="row" align="stretch" smAlign="center" justify="between" gap="4">
+                        <x-aura::flex align="center" justify="between" gap="4">
 
                             <x-aura::text variant="subtle" size="sm">
                                 Typical delivery timeframe: <strong>3 to 6 weeks</strong> from kickoff.
                             </x-aura::text>
 
-                            <x-aura::button type="submit" variant="primary" size="lg">
+                            <x-aura::button type="submit" variant="primary" size="md">
                                 Submit
                             </x-aura::button>
 
