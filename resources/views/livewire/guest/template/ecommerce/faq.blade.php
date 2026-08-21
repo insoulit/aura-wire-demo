@@ -49,7 +49,7 @@ new class extends Component {
 
             @foreach ($this->faqs() as $faq)
 
-                <x-aura::accordion.item :title="$faq['question']">
+                <x-aura::accordion.item size="md" :title="$faq['question']">
 
                     <x-aura::text size="sm" variant="subtle">
                         {{ $faq['answer'] }}

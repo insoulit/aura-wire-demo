@@ -11,20 +11,26 @@ class extends Component {};
 
 ?>
 
-<x-aura::flex direction="col" gap="20">
+<x-aura::flex direction="col" gap="10">
 
-    <livewire:guest.template.ecommerce.hero />
+    <livewire:guest.template.ecommerce.navigation />
 
-    <livewire:guest.template.ecommerce.catalog />
+    <x-aura::flex direction="col" gap="32">
 
-    <livewire:guest.template.ecommerce.bundle />
+        <livewire:guest.template.ecommerce.hero />
 
-    <livewire:guest.template.ecommerce.checkout />
+        <livewire:guest.template.ecommerce.catalog />
 
-    <livewire:guest.template.ecommerce.reviews />
+        <livewire:guest.template.ecommerce.bundle />
 
-    <livewire:guest.template.ecommerce.faq />
+        <livewire:guest.template.ecommerce.checkout />
 
-    <livewire:guest.template.ecommerce.newsletter />
+        <livewire:guest.template.ecommerce.reviews />
+
+        <livewire:guest.template.ecommerce.faq />
+
+        <livewire:guest.template.ecommerce.newsletter />
+
+    </x-aura::flex>
 
 </x-aura::flex>

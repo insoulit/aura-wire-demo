@@ -145,19 +145,24 @@ new class extends Component {
 
 ?>
 
-<!-- Compact Live Cart & Order Summary Section -->
+<!-- 2-Column Split Live Order Summary and Checkout Section -->
 <div id="checkout">
 
     <x-aura::flex direction="col" gap="8">
 
+        <!-- Section Title & Subheading -->
         <x-aura::flex direction="col" align="center" justify="center" gap="2">
 
-            <x-aura::heading level="2" size="xl" align="center">
+            <x-aura::kicker>
+                EXPRESS CHECKOUT
+            </x-aura::kicker>
+
+            <x-aura::heading level="2" size="2xl" align="center">
                 Live Order Summary and Checkout
             </x-aura::heading>
 
             <x-aura::subheading size="md" align="center">
-                Review your items and complete express purchase
+                Review your items, dispatch details, and complete express purchase
             </x-aura::subheading>
 
         </x-aura::flex>
@@ -188,123 +193,233 @@ new class extends Component {
 
             </x-aura::card>
 
-        @else
+        @elseif (count($cart) > 0)
 
-            <x-aura::card padding="lg" gap="6">
+            <!-- 2-Column Split: Cart Items on Left, Order Summary Card on Right -->
+            <x-aura::grid cols="1" lg="12" gap="8">
 
-                @if (count($cart) > 0)
+                <!-- Left: Selected Cart Items List (7 Columns) -->
+                <div class="lg:col-span-7 flex flex-col gap-4">
 
-                    <!-- Compact Cart Items List -->
-                    <x-aura::flex direction="col" gap="3">
+                    @foreach ($cart as $item)
 
-                        @foreach ($cart as $item)
+                        <div class="p-5 rounded-2xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800">
 
-                            <x-aura::card padding="sm" divided="false">
+                            <x-aura::flex align="center" justify="between" gap="4">
 
-                                <x-aura::flex align="center" justify="between" gap="4">
+                                <x-aura::flex align="center" gap="4">
 
-                                    <x-aura::flex align="center" width="auto" gap="4">
+                                    <div class="w-14 h-14 shrink-0 flex items-center justify-center rounded-xl bg-white dark:bg-zinc-800/80 border border-zinc-200/70 dark:border-zinc-700/60 shadow-2xs">
 
-                                        <x-aura::icon :name="$item['icon']" size="lg" container="true" />
+                                        <x-aura::icon :name="$item['icon']" size="md" />
 
-                                        <x-aura::flex direction="col" gap="none">
+                                    </div>
 
-                                            <x-aura::text size="sm" weight="semibold">
-                                                {{ $item['name'] }}
-                                            </x-aura::text>
+                                    <x-aura::flex direction="col" gap="none">
 
-                                            <x-aura::text size="sm" variant="subtle">
-                                                ${{ $item['price'] }}.00 each
-                                            </x-aura::text>
+                                        <x-aura::kicker>
+                                            {{ $item['category'] }}
+                                        </x-aura::kicker>
 
-                                        </x-aura::flex>
-
-                                    </x-aura::flex>
-
-                                    <x-aura::flex align="center" width="auto" gap="4">
-
-                                        <!-- Quantity Stepper -->
-                                        <x-aura::group>
-
-                                            <x-aura::button wire:click="updateQuantity({{ $item['id'] }}, -1)" variant="secondary" size="xs">
-                                                -
-                                            </x-aura::button>
-
-                                            <x-aura::button variant="ghost" size="xs">
-                                                {{ $item['quantity'] }}
-                                            </x-aura::button>
-
-                                            <x-aura::button wire:click="updateQuantity({{ $item['id'] }}, 1)" variant="secondary" size="xs">
-                                                +
-                                            </x-aura::button>
-
-                                        </x-aura::group>
-
-                                        <x-aura::heading level="4" size="md">
-                                            ${{ $item['price'] * $item['quantity'] }}.00
+                                        <x-aura::heading level="3" size="md">
+                                            {{ $item['name'] }}
                                         </x-aura::heading>
 
-                                        <x-aura::icon-button wire:click="removeFromCart({{ $item['id'] }})" variant="ghost" size="xs" icon="trash" ariaLabel="Remove" />
+                                        <x-aura::text size="sm" variant="subtle">
+                                            ${{ $item['price'] }}.00 each
+                                        </x-aura::text>
 
                                     </x-aura::flex>
 
                                 </x-aura::flex>
 
-                            </x-aura::card>
+                                <x-aura::flex align="center" width="auto" gap="4">
 
-                        @endforeach
+                                    <!-- Quantity Stepper -->
+                                    <x-aura::group>
 
-                    </x-aura::flex>
+                                        <x-aura::button wire:click="updateQuantity({{ $item['id'] }}, -1)" variant="secondary" size="xs">
+                                            -
+                                        </x-aura::button>
 
+                                        <x-aura::button variant="ghost" size="xs">
+                                            {{ $item['quantity'] }}
+                                        </x-aura::button>
 
-                    <!-- Checkout Action Row (Shipping Left, Stacked Total on Top & Checkout on Bottom on Right) -->
-                    <x-aura::flex direction="col" sm="row" align="stretch" smAlign="center" justify="between" gap="4">
+                                        <x-aura::button wire:click="updateQuantity({{ $item['id'] }}, 1)" variant="secondary" size="xs">
+                                            +
+                                        </x-aura::button>
 
-                        <!-- Shipping Guarantee on Left -->
-                        <x-aura::flex align="center" width="auto" gap="2">
+                                    </x-aura::group>
 
-                            <x-aura::icon name="truck" size="sm" />
+                                    <x-aura::heading level="4" size="md">
+                                        ${{ $item['price'] * $item['quantity'] }}.00
+                                    </x-aura::heading>
 
-                            <x-aura::text size="sm" variant="subtle">
-                                Complimentary expedited dispatch included
-                            </x-aura::text>
+                                    <x-aura::icon-button wire:click="removeFromCart({{ $item['id'] }})" variant="ghost" size="xs" icon="trash" ariaLabel="Remove" />
 
-                        </x-aura::flex>
-
-                        <!-- Stacked Total on Top & Checkout Button on Bottom -->
-                        <x-aura::flex direction="col" align="end" width="auto" gap="3">
-
-                            <x-aura::flex align="baseline" width="auto" gap="3">
-
-                                <x-aura::text size="sm" variant="subtle">
-                                    Total
-                                </x-aura::text>
-
-                                <x-aura::heading level="3" size="xl">
-                                    ${{ number_format($this->total, 2) }}
-                                </x-aura::heading>
+                                </x-aura::flex>
 
                             </x-aura::flex>
 
-                            <x-aura::button wire:click="checkout" variant="primary" size="lg">
-                                Checkout
-                            </x-aura::button>
+                        </div>
+
+                    @endforeach
+
+                    <!-- Complimentary Dispatch Callout -->
+                    <div class="p-4 rounded-2xl bg-zinc-100/70 dark:bg-zinc-900/30 border border-dashed border-zinc-300 dark:border-zinc-700">
+
+                        <x-aura::flex align="center" justify="between" gap="3">
+
+                            <x-aura::flex align="center" gap="3">
+
+                                <x-aura::icon name="truck" size="sm" />
+
+                                <x-aura::text size="sm">
+                                    Complimentary express carbon neutral dispatch on this order
+                                </x-aura::text>
+
+                            </x-aura::flex>
+
+                            <x-aura::badge variant="neutral" size="xs">
+                                Free
+                            </x-aura::badge>
 
                         </x-aura::flex>
 
-                    </x-aura::flex>
+                    </div>
 
-                @else
+                </div>
 
-                    <x-aura::empty-state icon="shopping-bag" title="Your shopping bag is empty" description="Browse our curated hardware catalogue above to discover premium studio tools.">
+                <!-- Right: Dedicated Order Summary & Action Card (5 Columns) -->
+                <div class="lg:col-span-5 flex flex-col">
 
-                        <x-aura::button href="#catalog" variant="primary" size="sm" icon="shopping-bag">
-                            Shop
+                    <x-aura::card padding="lg" gap="6">
+
+                        <x-aura::flex align="center" justify="between">
+
+                            <x-aura::kicker>
+                                ORDER VALUATION
+                            </x-aura::kicker>
+
+                            <x-aura::badge variant="neutral" size="sm">
+                                Instant Checkout
+                            </x-aura::badge>
+
+                        </x-aura::flex>
+
+                        <x-aura::flex direction="col" gap="3">
+
+                            <x-aura::flex align="center" justify="between">
+
+                                <x-aura::text size="sm" variant="subtle">
+                                    Subtotal
+                                </x-aura::text>
+
+                                <x-aura::text size="sm" weight="semibold">
+                                    ${{ number_format($this->total, 2) }}
+                                </x-aura::text>
+
+                            </x-aura::flex>
+
+                            <x-aura::flex align="center" justify="between">
+
+                                <x-aura::text size="sm" variant="subtle">
+                                    Express Dispatch
+                                </x-aura::text>
+
+                                <x-aura::badge variant="neutral" size="xs">
+                                    Free
+                                </x-aura::badge>
+
+                            </x-aura::flex>
+
+                            <x-aura::flex align="center" justify="between">
+
+                                <x-aura::text size="sm" variant="subtle">
+                                    Taxes & Surcharges
+                                </x-aura::text>
+
+                                <x-aura::text size="sm" variant="subtle">
+                                    Included
+                                </x-aura::text>
+
+                            </x-aura::flex>
+
+                        </x-aura::flex>
+
+                        <x-aura::separator />
+
+                        <x-aura::flex align="center" justify="between">
+
+                            <x-aura::heading level="3" size="md">
+                                Total
+                            </x-aura::heading>
+
+                            <x-aura::heading level="3" size="2xl">
+                                ${{ number_format($this->total, 2) }}
+                            </x-aura::heading>
+
+                        </x-aura::flex>
+
+                        <x-aura::button wire:click="checkout" variant="primary" size="lg" block="true">
+                            Checkout
                         </x-aura::button>
 
-                    </x-aura::empty-state>
+                        <x-aura::separator />
 
-                @endif
+                        <!-- Security Trust Bullet Points -->
+                        <x-aura::flex direction="col" gap="2.5">
+
+                            <x-aura::flex align="center" gap="2.5">
+
+                                <x-aura::icon name="check" size="sm" />
+
+                                <x-aura::text size="sm" variant="subtle">
+                                    256 bit encrypted express checkout
+                                </x-aura::text>
+
+                            </x-aura::flex>
+
+                            <x-aura::flex align="center" gap="2.5">
+
+                                <x-aura::icon name="check" size="sm" />
+
+                                <x-aura::text size="sm" variant="subtle">
+                                    30 day risk free studio trial
+                                </x-aura::text>
+
+                            </x-aura::flex>
+
+                            <x-aura::flex align="center" gap="2.5">
+
+                                <x-aura::icon name="check" size="sm" />
+
+                                <x-aura::text size="sm" variant="subtle">
+                                    Complimentary tracked returns
+                                </x-aura::text>
+
+                            </x-aura::flex>
+
+                        </x-aura::flex>
+
+                    </x-aura::card>
+
+                </div>
+
+            </x-aura::grid>
+
+        @else
+
+            <x-aura::card padding="xl" gap="6">
+
+                <x-aura::empty-state icon="shopping-bag" title="Your shopping bag is empty" description="Browse our curated hardware catalogue above to discover premium studio tools.">
+
+                    <x-aura::button href="#catalog" variant="primary" size="sm" icon="shopping-bag">
+                        Shop
+                    </x-aura::button>
+
+                </x-aura::empty-state>
 
             </x-aura::card>
 
