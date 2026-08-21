@@ -25,21 +25,13 @@ new class extends Component {
             INSIDER DISPATCH
         </x-aura::kicker>
 
-        <div class="text-center max-w-xl">
+        <x-aura::heading level="3" size="2xl" align="center">
+            Join the Aura Hardware Collective
+        </x-aura::heading>
 
-            <x-aura::heading level="3" size="2xl">
-                Join the Aura Hardware Collective
-            </x-aura::heading>
-
-        </div>
-
-        <div class="text-center max-w-lg">
-
-            <x-aura::text size="sm" variant="subtle">
-                Receive early access to limited production batches, architectural guides, and engineering updates.
-            </x-aura::text>
-
-        </div>
+        <x-aura::text size="sm" variant="subtle" align="center">
+            Receive early access to limited production batches, architectural guides, and engineering updates.
+        </x-aura::text>
 
         @if ($subscribed)
 
@@ -51,7 +43,7 @@ new class extends Component {
 
             <x-aura::flex align="center" justify="center" gap="3" wrap="true">
 
-                <x-aura::input wire:model="newsletterEmail" placeholder="Enter your work email" size="md" icon="mail" />
+                <x-aura::input wire:model="newsletterEmail" placeholder="Enter your work email" size="md" width="md" icon="mail" />
 
                 <x-aura::button wire:click="subscribeNewsletter" variant="primary" size="md">
                     Subscribe

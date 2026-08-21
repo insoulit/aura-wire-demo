@@ -33,21 +33,13 @@ new class extends Component {
     <!-- Frequently Asked Questions (FAQ) Section -->
     <x-aura::flex direction="col" align="center" justify="center" gap="2">
 
-        <div class="text-center">
+        <x-aura::heading level="2" size="xl" align="center">
+            Frequently Asked Inquiries
+        </x-aura::heading>
 
-            <x-aura::heading level="2" size="xl">
-                Frequently Asked Inquiries
-            </x-aura::heading>
-
-        </div>
-
-        <div class="text-center max-w-xl">
-
-            <x-aura::subheading size="md">
-                Answers to common questions regarding logistics, guarantees, and hardware maintenance
-            </x-aura::subheading>
-
-        </div>
+        <x-aura::subheading size="md" align="center">
+            Answers to common questions regarding logistics, guarantees, and hardware maintenance
+        </x-aura::subheading>
 
     </x-aura::flex>
 

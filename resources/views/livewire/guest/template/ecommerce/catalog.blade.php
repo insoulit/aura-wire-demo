@@ -152,63 +152,56 @@ new class extends Component {
 
 <x-aura::flex direction="col" gap="8">
 
-    <!-- Catalog Header & Dynamic Filtering -->
+    <!-- Catalog Header & Filter Navigation -->
     <div id="catalog">
 
         <x-aura::flex direction="col" gap="6">
 
+            <!-- Section Title & Subheading -->
             <x-aura::flex direction="col" align="center" justify="center" gap="2">
 
-                <div class="text-center">
+                <x-aura::kicker>
+                    CURATED STUDIO HARDWARE
+                </x-aura::kicker>
 
-                    <x-aura::heading level="2" size="xl">
-                        Featured Studio Hardware
-                    </x-aura::heading>
+                <x-aura::heading level="2" size="2xl" align="center">
+                    Featured Studio Hardware
+                </x-aura::heading>
 
-                </div>
-
-                <div class="text-center max-w-xl">
-
-                    <x-aura::subheading size="md">
-                        Curated collection of acoustic monitors, tactile keyboards, and precision desk accessories
-                    </x-aura::subheading>
-
-                </div>
+                <x-aura::subheading size="md" align="center">
+                    Acoustic monitors, tactile keyboards, and precision desk accessories engineered for professional creators
+                </x-aura::subheading>
 
             </x-aura::flex>
 
-            <!-- Search, Filter Pills & Sort Toolbar -->
-            <x-aura::card padding="sm" gap="4">
+            <!-- Category Filter Buttons & Search Input Grouped Together -->
+            <x-aura::flex align="center" justify="center" gap="3" wrap="true">
 
-                <x-aura::flex direction="col" lg="row" align="stretch" lgAlign="center" justify="between" gap="4">
+                <!-- Category Segmented Buttons -->
+                <x-aura::group>
 
-                    <!-- Category Filter Group -->
-                    <x-aura::group>
+                    @foreach ($this->categories() as $cat)
 
-                        @foreach ($this->categories() as $cat)
-
-                            <x-aura::button wire:click="$set('category', '{{ $cat['id'] }}')" variant="{{ $category === $cat['id'] ? 'primary' : 'ghost' }}" size="sm">
-                                {{ $cat['label'] }}
-                            </x-aura::button>
-
-                        @endforeach
-
-                    </x-aura::group>
-
-                    <!-- Search Input & Quick Controls -->
-                    <x-aura::flex align="center" gap="3" wrap="true">
-
-                        <x-aura::input wire:model.live.debounce.250ms="search" placeholder="Search gear by name..." size="sm" icon="search" />
-
-                        <x-aura::button wire:click="resetFilters" variant="secondary" size="sm" icon="rotate-ccw">
-                            Reset
+                        <x-aura::button wire:click="$set('category', '{{ $cat['id'] }}')" variant="{{ $category === $cat['id'] ? 'primary' : 'secondary' }}" size="sm">
+                            {{ $cat['label'] }}
                         </x-aura::button>
 
-                    </x-aura::flex>
+                    @endforeach
 
-                </x-aura::flex>
+                </x-aura::group>
 
-            </x-aura::card>
+                <!-- Search Input with Native width Prop -->
+                <x-aura::input wire:model.live.debounce.250ms="search" placeholder="Search..." size="sm" width="md" icon="search" />
+
+                @if ($search || $category !== 'all')
+
+                    <x-aura::button wire:click="resetFilters" variant="ghost" size="sm" icon="rotate-ccw">
+                        Reset
+                    </x-aura::button>
+
+                @endif
+
+            </x-aura::flex>
 
         </x-aura::flex>
 
@@ -221,61 +214,55 @@ new class extends Component {
 
             @foreach ($this->products() as $product)
 
-                <x-aura::card padding="md" gap="4">
+                <x-aura::card padding="lg" gap="4">
 
-                    <!-- Product Mockup Image Container -->
-                    <x-aura::card padding="lg" divided="false" gap="4">
+                    <!-- Top Card Bar: Badge + Wishlist Action -->
+                    <x-aura::flex align="center" justify="between">
 
-                        <x-aura::flex direction="col" align="center" justify="center" gap="4">
+                        @if ($product['badge'])
 
-                            <x-aura::flex align="center" justify="between">
-
-                                @if ($product['badge'])
-
-                                    <x-aura::badge variant="{{ $product['badgeVariant'] }}" size="sm">
-                                        {{ $product['badge'] }}
-                                    </x-aura::badge>
-
-                                @else
-
-                                    <div></div>
-
-                                @endif
-
-                                <x-aura::icon-button wire:click="toggleWishlist({{ $product['id'] }})" variant="{{ in_array($product['id'], $wishlist) ? 'primary' : 'ghost' }}" size="sm" icon="heart" ariaLabel="Wishlist" />
-
-                            </x-aura::flex>
-
-                            <x-aura::icon :name="$product['icon']" size="xl" />
-
-                            <x-aura::badge variant="subtle" size="xs">
-                                In Stock
+                            <x-aura::badge variant="{{ $product['badgeVariant'] }}" size="sm">
+                                {{ $product['badge'] }}
                             </x-aura::badge>
 
+                        @else
+
+                            <div></div>
+
+                        @endif
+
+                        <x-aura::icon-button wire:click="toggleWishlist({{ $product['id'] }})" variant="{{ in_array($product['id'], $wishlist) ? 'primary' : 'ghost' }}" size="sm" icon="heart" ariaLabel="Wishlist" />
+
+                    </x-aura::flex>
+
+                    <!-- Product Mockup Visual Stage -->
+                    <div class="h-44 flex items-center justify-center rounded-2xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-100 dark:border-zinc-800/80 transition-colors">
+
+                        <x-aura::icon :name="$product['icon']" size="xl" />
+
+                    </div>
+
+                    <!-- Category & Review Rating Row -->
+                    <x-aura::flex align="center" justify="between">
+
+                        <x-aura::kicker>
+                            {{ $product['categoryLabel'] }}
+                        </x-aura::kicker>
+
+                        <x-aura::flex align="center" gap="1">
+
+                            <x-aura::rating rating="{{ $product['rating'] }}" size="xs" readonly="true" />
+
+                            <x-aura::text size="sm" variant="subtle">
+                                ({{ $product['reviews'] }})
+                            </x-aura::text>
+
                         </x-aura::flex>
 
-                    </x-aura::card>
+                    </x-aura::flex>
 
-                    <!-- Product Details -->
-                    <x-aura::flex direction="col" gap="2">
-
-                        <x-aura::flex align="center" justify="between">
-
-                            <x-aura::kicker>
-                                {{ $product['categoryLabel'] }}
-                            </x-aura::kicker>
-
-                            <x-aura::flex align="center" gap="1">
-
-                                <x-aura::rating rating="{{ $product['rating'] }}" size="sm" readonly="true" />
-
-                                <x-aura::text size="sm" variant="subtle">
-                                    ({{ $product['reviews'] }})
-                                </x-aura::text>
-
-                            </x-aura::flex>
-
-                        </x-aura::flex>
+                    <!-- Product Title & Summary -->
+                    <x-aura::flex direction="col" gap="1">
 
                         <x-aura::heading level="3" size="md">
                             {{ $product['name'] }}
@@ -287,6 +274,7 @@ new class extends Component {
 
                     </x-aura::flex>
 
+                    <!-- Footer: Valuation & Add to Cart -->
                     <x-slot:footer>
 
                         <x-aura::flex align="center" justify="between">
@@ -307,7 +295,7 @@ new class extends Component {
 
                             </x-aura::flex>
 
-                            <x-aura::button wire:click="addToCart({{ $product['id'] }})" variant="primary" size="sm" icon="shopping-bag">
+                            <x-aura::button wire:click="addToCart({{ $product['id'] }})" variant="primary" size="md" icon="shopping-bag">
                                 Add
                             </x-aura::button>
 

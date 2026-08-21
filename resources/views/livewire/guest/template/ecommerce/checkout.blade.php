@@ -4,9 +4,6 @@ use Livewire\Volt\Component;
 use Livewire\Attributes\On;
 
 new class extends Component {
-    public string $promoCode = '';
-    public int $discountPercent = 0;
-    public string $promoMessage = '';
     public bool $checkoutSuccess = false;
     public string $orderNumber = '';
     public array $cart = [
@@ -88,17 +85,6 @@ new class extends Component {
         $this->notifyCartUpdated();
     }
 
-    public function applyPromo(): void
-    {
-        if (strtoupper(trim($this->promoCode)) === 'AURA2026') {
-            $this->discountPercent = 15;
-            $this->promoMessage = '15% Discount Applied';
-        } else {
-            $this->discountPercent = 0;
-            $this->promoMessage = 'Invalid Code';
-        }
-    }
-
     public function checkout(): void
     {
         if (count($this->cart) > 0) {
@@ -138,23 +124,13 @@ new class extends Component {
         $this->dispatch('cart-updated', count: $this->cartCount);
     }
 
-    public function getSubtotalProperty(): float
-    {
-        $subtotal = 0;
-        foreach ($this->cart as $item) {
-            $subtotal += $item['price'] * $item['quantity'];
-        }
-        return (float) $subtotal;
-    }
-
-    public function getDiscountAmountProperty(): float
-    {
-        return $this->subtotal * ($this->discountPercent / 100);
-    }
-
     public function getTotalProperty(): float
     {
-        return max(0, $this->subtotal - $this->discountAmount);
+        $total = 0;
+        foreach ($this->cart as $item) {
+            $total += $item['price'] * $item['quantity'];
+        }
+        return (float) $total;
     }
 
     public function getCartCountProperty(): int
@@ -176,21 +152,13 @@ new class extends Component {
 
         <x-aura::flex direction="col" align="center" justify="center" gap="2">
 
-            <div class="text-center">
+            <x-aura::heading level="2" size="xl" align="center">
+                Live Order Summary and Checkout
+            </x-aura::heading>
 
-                <x-aura::heading level="2" size="xl">
-                    Live Order Summary and Checkout
-                </x-aura::heading>
-
-            </div>
-
-            <div class="text-center max-w-xl">
-
-                <x-aura::subheading size="md">
-                    Review your items, apply promotional discounts, and complete express purchase
-                </x-aura::subheading>
-
-            </div>
+            <x-aura::subheading size="md" align="center">
+                Review your items and complete express purchase
+            </x-aura::subheading>
 
         </x-aura::flex>
 
@@ -204,11 +172,11 @@ new class extends Component {
                         ORDER CONFIRMED
                     </x-aura::badge>
 
-                    <x-aura::heading level="3" size="lg">
+                    <x-aura::heading level="3" size="lg" align="center">
                         Thank You for Your Order
                     </x-aura::heading>
 
-                    <x-aura::text size="sm" variant="subtle">
+                    <x-aura::text size="sm" variant="subtle" align="center">
                         Your order reference is <strong class="text-zinc-900 dark:text-white">{{ $orderNumber }}</strong>.
                     </x-aura::text>
 
@@ -231,17 +199,13 @@ new class extends Component {
 
                         @foreach ($cart as $item)
 
-                            <div class="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/50">
+                            <x-aura::card padding="sm" divided="false">
 
                                 <x-aura::flex align="center" justify="between" gap="4">
 
-                                    <x-aura::flex align="center" gap="4">
+                                    <x-aura::flex align="center" width="auto" gap="4">
 
-                                        <x-aura::card padding="xs" divided="false">
-
-                                            <x-aura::icon :name="$item['icon']" size="md" />
-
-                                        </x-aura::card>
+                                        <x-aura::icon :name="$item['icon']" size="lg" container="true" />
 
                                         <x-aura::flex direction="col" gap="none">
 
@@ -257,7 +221,7 @@ new class extends Component {
 
                                     </x-aura::flex>
 
-                                    <x-aura::flex align="center" gap="4">
+                                    <x-aura::flex align="center" width="auto" gap="4">
 
                                         <!-- Quantity Stepper -->
                                         <x-aura::group>
@@ -280,68 +244,49 @@ new class extends Component {
                                             ${{ $item['price'] * $item['quantity'] }}.00
                                         </x-aura::heading>
 
-                                        <x-aura::button wire:click="removeFromCart({{ $item['id'] }})" variant="ghost" size="xs" icon="trash">
-                                            Remove
-                                        </x-aura::button>
+                                        <x-aura::icon-button wire:click="removeFromCart({{ $item['id'] }})" variant="ghost" size="xs" icon="trash" ariaLabel="Remove" />
 
                                     </x-aura::flex>
 
                                 </x-aura::flex>
 
-                            </div>
+                            </x-aura::card>
 
                         @endforeach
 
                     </x-aura::flex>
 
-                    <x-aura::separator />
 
-                    <!-- Compact Promo & Checkout Row -->
-                    <x-aura::flex direction="col" sm="row" align="stretch" smAlign="center" justify="between" gap="6">
+                    <!-- Checkout Action Row (Shipping Left, Stacked Total on Top & Checkout on Bottom on Right) -->
+                    <x-aura::flex direction="col" sm="row" align="stretch" smAlign="center" justify="between" gap="4">
 
-                        <!-- Promo Code Form -->
-                        <x-aura::flex align="center" gap="3">
+                        <!-- Shipping Guarantee on Left -->
+                        <x-aura::flex align="center" width="auto" gap="2">
 
-                            <x-aura::input wire:model="promoCode" placeholder="Promo code" size="sm" icon="tag" />
+                            <x-aura::icon name="truck" size="sm" />
 
-                            <x-aura::button wire:click="applyPromo" variant="secondary" size="sm">
-                                Apply
-                            </x-aura::button>
-
-                            @if ($promoMessage)
-
-                                <x-aura::badge variant="subtle" size="sm">
-                                    {{ $promoMessage }}
-                                </x-aura::badge>
-
-                            @endif
+                            <x-aura::text size="sm" variant="subtle">
+                                Complimentary expedited dispatch included
+                            </x-aura::text>
 
                         </x-aura::flex>
 
-                        <!-- Totals & Checkout Button -->
-                        <x-aura::flex align="center" justify="between" smJustify="end" gap="6">
+                        <!-- Stacked Total on Top & Checkout Button on Bottom -->
+                        <x-aura::flex direction="col" align="end" width="auto" gap="3">
 
-                            <x-aura::flex align="baseline" gap="3">
+                            <x-aura::flex align="baseline" width="auto" gap="3">
 
                                 <x-aura::text size="sm" variant="subtle">
                                     Total
                                 </x-aura::text>
 
-                                <x-aura::heading level="4" size="xl">
+                                <x-aura::heading level="3" size="xl">
                                     ${{ number_format($this->total, 2) }}
                                 </x-aura::heading>
 
-                                @if ($discountPercent > 0)
-
-                                    <x-aura::badge variant="neutral" size="xs">
-                                        -{{ $discountPercent }}%
-                                    </x-aura::badge>
-
-                                @endif
-
                             </x-aura::flex>
 
-                            <x-aura::button wire:click="checkout" variant="primary" size="lg" icon="arrow-right" iconTrailing="arrow-right">
+                            <x-aura::button wire:click="checkout" variant="primary" size="lg">
                                 Checkout
                             </x-aura::button>
 
@@ -353,7 +298,7 @@ new class extends Component {
 
                     <x-aura::empty-state icon="shopping-bag" title="Your shopping bag is empty" description="Browse our curated hardware catalogue above to discover premium studio tools.">
 
-                        <x-aura::button href="#catalog" variant="primary" size="sm">
+                        <x-aura::button href="#catalog" variant="primary" size="sm" icon="shopping-bag">
                             Shop
                         </x-aura::button>
 

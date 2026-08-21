@@ -35,21 +35,13 @@ new class extends Component {
 
             </x-aura::flex>
 
-            <div class="text-center max-w-3xl">
+            <x-aura::display size="xl" align="center">
+                Studio Grade Audio and Minimalist Workspace Gear
+            </x-aura::display>
 
-                <x-aura::display size="xl">
-                    Studio Grade Audio and Minimalist Workspace Gear
-                </x-aura::display>
-
-            </div>
-
-            <div class="text-center max-w-2xl">
-
-                <x-aura::subheading size="lg">
-                    Engineered for creators, developers, and architects who demand high fidelity acoustics and timeless tactile craftsmanship.
-                </x-aura::subheading>
-
-            </div>
+            <x-aura::subheading size="lg" align="center">
+                Engineered for creators, developers, and architects who demand high fidelity acoustics and timeless tactile craftsmanship.
+            </x-aura::subheading>
 
             <x-aura::flex align="center" justify="center" gap="4" wrap="true" class="pt-2">
 
