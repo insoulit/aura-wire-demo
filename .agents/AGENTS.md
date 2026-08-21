@@ -25,3 +25,5 @@
 - **No Hyphens in Text & Headings**: Avoid using hyphens between words in UI copy, titles, headings, and descriptions (e.g. prefer `End to End Security` over `End-to-End Security`, `Real time` over `Real-time`).
 - **Text Sizing**: Prefer text size `sm` (`size="sm"`, `text-sm`) over `xs` (`size="xs"`, `text-xs`) for secondary text, emails, subtitles, metadata, list specifications, and descriptions.
 - **Monochrome UI Color Palette**: The UI design focuses strictly on black and white / neutral tones (zinc, white, black, dark). Avoid using bright colors (indigo, blue, red, green, etc.) unless explicitly demonstrating a specific component variant or status intent.
+- **Never Use `@include` — Use Livewire Components**: Never use Blade `@include(...)` directives to compose sub-views or template sections. Always create and embed standalone Livewire Volt components (e.g. `<livewire:guest.template.ecommerce.hero />`) instead of Blade partial includes.
+- **No Browser Tool Usage Unless Explicitly Requested**: Do not invoke the browser subagent or open browser pages unless the user explicitly asks for browser interaction/testing.

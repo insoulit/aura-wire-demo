@@ -53,14 +53,14 @@ Volt::route('/guest/block/user', 'guest.block.profile')->name('guest.block.user'
 
 // Guest Templates Group
 Route::redirect('/guest/template', '/guest#full-template')->name('guest.template.index');
-Volt::route('/guest/template/ecommerce', 'guest.template.ecommerce')->name('guest.template.ecommerce');
+Volt::route('/guest/template/ecommerce', 'guest.template.ecommerce.index')->name('guest.template.ecommerce');
 Volt::route('/guest/template/portfolio', 'guest.template.portfolio')->name('guest.template.portfolio');
 Volt::route('/guest/template/restaurant', 'guest.template.restaurant')->name('guest.template.restaurant');
 Volt::route('/guest/template/saas', 'guest.template.saas')->name('guest.template.saas');
 Volt::route('/guest/template/agency', 'guest.template.agency')->name('guest.template.agency');
 
 // Direct /guest/* Template Aliases
-Volt::route('/guest/ecommerce', 'guest.template.ecommerce')->name('guest.ecommerce');
+Volt::route('/guest/ecommerce', 'guest.template.ecommerce.index')->name('guest.ecommerce');
 Volt::route('/guest/portfolio', 'guest.template.portfolio')->name('guest.portfolio');
 Volt::route('/guest/restaurant', 'guest.template.restaurant')->name('guest.restaurant');
 Volt::route('/guest/saas', 'guest.template.saas')->name('guest.saas');
