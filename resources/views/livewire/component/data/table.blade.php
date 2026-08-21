@@ -290,6 +290,8 @@ class extends Component {
 
         </x-slot:codeSlot>
 
+    </x-aura::code>
+
     <!-- Component Props -->
     <x-aura::card size="full" gap="4">
 

@@ -5,7 +5,7 @@ it('renders guest showcase portal landing page', function () {
 
     $response->assertStatus(200)
         ->assertSee('Guest Portal', false)
-        ->assertSee('Blocks &amp; Templates', false);
+        ->assertSee('Blocks and Templates', false);
 });
 
 it('renders guest design blocks', function (string $blockUrl) {
