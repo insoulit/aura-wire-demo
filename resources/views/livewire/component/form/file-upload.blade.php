@@ -33,7 +33,7 @@ class extends Component {};
         </x-aura::heading>
 
         <x-aura::subheading size="md">
-            Drag and drop file upload zones supporting preview lists, size restrictions, and multiple files.
+            Drag and drop file upload zones supporting preview hints, size restrictions, and multiple files.
         </x-aura::subheading>
 
     </x-aura::card>
@@ -44,7 +44,7 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::file-upload label="Click or drag and drop" hint="PNG, JPG, PDF (max 10MB)" />
+                <x-aura::file-upload label="Click to upload or drag and drop" hint="PNG, JPG, PDF (max 10MB)" />
             @endverbatim
 
         </x-slot:codeSlot>
@@ -52,13 +52,16 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 1. Default Dropzone -->
-    <x-aura::code title="1. File Upload Dropzone">
+    <x-aura::code title="1. Media Asset Dropzone">
 
         <x-slot:preview>
 
             <x-aura::card size="2xl" gap="4">
 
-                <x-aura::file-upload label="Click to upload or drag and drop" hint="SVG, PNG, JPG, GIF or PDF (max 10MB)" />
+                <x-aura::file-upload
+                    label="Click to upload or drag and drop"
+                    hint="SVG, PNG, JPG, GIF or PDF (max 10MB)"
+                />
 
             </x-aura::card>
 
@@ -70,6 +73,66 @@ class extends Component {};
                 <x-aura::file-upload
                     label="Click to upload or drag and drop"
                     hint="SVG, PNG, JPG, GIF or PDF (max 10MB)"
+                />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 2. Audio and Video Upload -->
+    <x-aura::code title="2. Firmware & Audio Assets Dropzone">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::file-upload
+                    label="Upload lossless audio files or firmware bundles"
+                    hint="WAV, FLAC, BIN, ZIP archives (up to 50MB)"
+                />
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::file-upload
+                    label="Upload lossless audio files or firmware bundles"
+                    hint="WAV, FLAC, BIN, ZIP archives (up to 50MB)"
+                />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 3. Disabled State -->
+    <x-aura::code title="3. Disabled State">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::file-upload
+                    label="Uploads restricted for guest role"
+                    hint="Please upgrade your account to enable direct asset uploads"
+                    :disabled="true"
+                />
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::file-upload
+                    label="Uploads restricted for guest role"
+                    hint="Please upgrade your account to enable uploads"
+                    :disabled="true"
                 />
             @endverbatim
 
@@ -138,7 +201,7 @@ class extends Component {};
 
                 <x-aura::table.cell>
                     <x-aura::text size="sm" variant="subtle">
-                        Label string
+                        Instruction string
                     </x-aura::text>
                 </x-aura::table.cell>
 
@@ -154,7 +217,7 @@ class extends Component {};
                             hint
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Supported formats and max file size guidance notes" position="top">
+                        <x-aura::tooltip text="Secondary supported file extensions and size limit notice" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -172,7 +235,7 @@ class extends Component {};
 
                 <x-aura::table.cell>
                     <x-aura::text size="sm" variant="subtle">
-                        Hint string
+                        File format hints string
                     </x-aura::text>
                 </x-aura::table.cell>
 
@@ -188,7 +251,7 @@ class extends Component {};
                             disabled
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Disable upload zone and prevent drag interaction" position="top">
+                        <x-aura::tooltip text="Disable drop interaction and file input clicks" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 

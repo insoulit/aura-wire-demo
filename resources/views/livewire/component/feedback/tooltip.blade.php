@@ -62,7 +62,7 @@ class extends Component {};
 
             <x-aura::card size="2xl" gap="4">
 
-                <x-aura::flex align="center" justify="center" gap="6" :wrap="true" class="py-6">
+                <x-aura::flex align="center" justify="center" gap="6" :wrap="true">
 
                     <x-aura::tooltip text="Tooltip on Top" position="top">
 
@@ -106,36 +106,112 @@ class extends Component {};
 
             @verbatim
                 <x-aura::tooltip text="Tooltip on Top" position="top">
-
-                    <x-aura::button variant="secondary" size="sm">
-                        Top
-                    </x-aura::button>
-
+                    <x-aura::button variant="secondary" size="sm">Top</x-aura::button>
                 </x-aura::tooltip>
 
                 <x-aura::tooltip text="Tooltip on Bottom" position="bottom">
-
-                    <x-aura::button variant="secondary" size="sm">
-                        Bottom
-                    </x-aura::button>
-
+                    <x-aura::button variant="secondary" size="sm">Bottom</x-aura::button>
                 </x-aura::tooltip>
 
                 <x-aura::tooltip text="Tooltip on Left" position="left">
-
-                    <x-aura::button variant="secondary" size="sm">
-                        Left
-                    </x-aura::button>
-
+                    <x-aura::button variant="secondary" size="sm">Left</x-aura::button>
                 </x-aura::tooltip>
 
                 <x-aura::tooltip text="Tooltip on Right" position="right">
-
-                    <x-aura::button variant="secondary" size="sm">
-                        Right
-                    </x-aura::button>
-
+                    <x-aura::button variant="secondary" size="sm">Right</x-aura::button>
                 </x-aura::tooltip>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 2. Action Toolbar Icon Tooltips -->
+    <x-aura::code title="2. Icon Toolbar Tooltips">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex align="center" justify="center" gap="3">
+
+                    <x-aura::tooltip text="Create new document" position="top">
+                        <x-aura::icon-button icon="file-plus" variant="outline" size="sm" />
+                    </x-aura::tooltip>
+
+                    <x-aura::tooltip text="Share via link" position="top">
+                        <x-aura::icon-button icon="share-2" variant="outline" size="sm" />
+                    </x-aura::tooltip>
+
+                    <x-aura::tooltip text="Archive item" position="top">
+                        <x-aura::icon-button icon="archive" variant="outline" size="sm" />
+                    </x-aura::tooltip>
+
+                    <x-aura::tooltip text="Delete item permanently" position="top">
+                        <x-aura::icon-button icon="trash-2" variant="danger" size="sm" />
+                    </x-aura::tooltip>
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::tooltip text="Create new document" position="top">
+                    <x-aura::icon-button icon="file-plus" variant="outline" size="sm" />
+                </x-aura::tooltip>
+
+                <x-aura::tooltip text="Share via link" position="top">
+                    <x-aura::icon-button icon="share-2" variant="outline" size="sm" />
+                </x-aura::tooltip>
+
+                <x-aura::tooltip text="Delete item permanently" position="top">
+                    <x-aura::icon-button icon="trash-2" variant="danger" size="sm" />
+                </x-aura::tooltip>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 3. Inline Help Tooltips -->
+    <x-aura::code title="3. Inline Metadata Help Tooltips">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex align="center" gap="2">
+
+                    <x-aura::text size="sm" weight="semibold">
+                        API Rate Limit Policy
+                    </x-aura::text>
+
+                    <x-aura::tooltip text="1,000 requests per minute per token" position="right">
+                        <x-aura::icon name="info" size="xs" />
+                    </x-aura::tooltip>
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::flex align="center" gap="2">
+                    <x-aura::text size="sm" weight="semibold">
+                        API Rate Limit Policy
+                    </x-aura::text>
+
+                    <x-aura::tooltip text="1,000 requests per minute per token" position="right">
+                        <x-aura::icon name="info" size="xs" />
+                    </x-aura::tooltip>
+                </x-aura::flex>
             @endverbatim
 
         </x-slot:codeSlot>
@@ -185,7 +261,7 @@ class extends Component {};
                             text
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Hover tooltip text message content" position="top">
+                        <x-aura::tooltip text="Tooltip text content string" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -197,13 +273,13 @@ class extends Component {};
 
                 <x-aura::table.cell>
                     <x-aura::badge variant="subtle" size="md">
-                        null
+                        empty
                     </x-aura::badge>
                 </x-aura::table.cell>
 
                 <x-aura::table.cell>
                     <x-aura::text size="sm" variant="subtle">
-                        Tooltip string
+                        Text string
                     </x-aura::text>
                 </x-aura::table.cell>
 
@@ -219,7 +295,7 @@ class extends Component {};
                             position
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Directional placement orientation relative to target anchor" position="top">
+                        <x-aura::tooltip text="Placement alignment relative to child trigger" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 

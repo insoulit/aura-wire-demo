@@ -33,7 +33,7 @@ class extends Component {};
         </x-aura::heading>
 
         <x-aura::subheading size="md">
-            User profile images and fallback initial badges with online status indicators.
+            User profile images and fallback initial badges with online status indicators and rounded or square shapes.
         </x-aura::subheading>
 
     </x-aura::card>
@@ -44,46 +44,157 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::avatar initials="JD" size="md" status="online" />
+                <x-aura::avatar src="https://..." initials="JD" size="md" status="online" />
             @endverbatim
 
         </x-slot:codeSlot>
 
     </x-aura::code>
 
-    <!-- 1. Avatar Sizes and Statuses -->
-    <x-aura::code title="1. User Avatars">
+    <!-- 1. Image Avatars and Sizes -->
+    <x-aura::code title="1. Photo Avatar Sizes">
 
         <x-slot:preview>
 
-            <x-aura::flex align="center" gap="4" :wrap="true">
+            <x-aura::card size="2xl" gap="4">
 
-                <x-aura::avatar initials="AW" size="xs" status="online" />
+                <x-aura::flex align="center" gap="4" :wrap="true">
 
-                <x-aura::avatar initials="JD" size="sm" status="online" />
+                    <x-aura::avatar src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" size="xs" />
 
-                <x-aura::avatar initials="US" size="md" status="busy" />
+                    <x-aura::avatar src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" size="sm" />
 
-                <x-aura::avatar initials="AD" size="lg" status="away" />
+                    <x-aura::avatar src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" size="md" />
 
-                <x-aura::avatar initials="SQ" size="xl" :square="true" status="offline" />
+                    <x-aura::avatar src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" size="lg" />
 
-            </x-aura::flex>
+                    <x-aura::avatar src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" size="xl" />
+
+                </x-aura::flex>
+
+            </x-aura::card>
 
         </x-slot:preview>
 
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::avatar initials="AW" size="xs" status="online" />
+                <x-aura::avatar src="https://..." size="xs" />
+                <x-aura::avatar src="https://..." size="sm" />
+                <x-aura::avatar src="https://..." size="md" />
+                <x-aura::avatar src="https://..." size="lg" />
+                <x-aura::avatar src="https://..." size="xl" />
+            @endverbatim
 
-                <x-aura::avatar initials="JD" size="sm" status="online" />
+        </x-slot:codeSlot>
 
-                <x-aura::avatar initials="US" size="md" status="busy" />
+    </x-aura::code>
 
-                <x-aura::avatar initials="AD" size="lg" status="away" />
+    <!-- 2. Monochrome Initials Fallbacks -->
+    <x-aura::code title="2. Initials Fallback Badges">
 
-                <x-aura::avatar initials="SQ" size="xl" :square="true" status="offline" />
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex align="center" gap="4" :wrap="true">
+
+                    <x-aura::avatar initials="AW" size="xs" />
+
+                    <x-aura::avatar initials="JD" size="sm" />
+
+                    <x-aura::avatar initials="SC" size="md" />
+
+                    <x-aura::avatar initials="MV" size="lg" />
+
+                    <x-aura::avatar initials="UN" size="xl" />
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::avatar initials="AW" size="xs" />
+                <x-aura::avatar initials="JD" size="sm" />
+                <x-aura::avatar initials="SC" size="md" />
+                <x-aura::avatar initials="MV" size="lg" />
+                <x-aura::avatar initials="UN" size="xl" />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 3. Square Shaped Avatars -->
+    <x-aura::code title="3. Square Shaped Avatars">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex align="center" gap="4" :wrap="true">
+
+                    <x-aura::avatar initials="SQ" size="sm" :square="true" />
+
+                    <x-aura::avatar initials="AP" size="md" :square="true" />
+
+                    <x-aura::avatar src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" size="lg" :square="true" />
+
+                    <x-aura::avatar src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80" size="xl" :square="true" />
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::avatar initials="SQ" size="sm" :square="true" />
+                <x-aura::avatar initials="AP" size="md" :square="true" />
+                <x-aura::avatar src="https://..." size="lg" :square="true" />
+                <x-aura::avatar src="https://..." size="xl" :square="true" />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 4. Presence Status Indicators -->
+    <x-aura::code title="4. Presence Status Indicators">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex align="center" gap="4" :wrap="true">
+
+                    <x-aura::avatar initials="ON" size="md" status="online" />
+
+                    <x-aura::avatar initials="BY" size="md" status="busy" />
+
+                    <x-aura::avatar initials="AW" size="md" status="away" />
+
+                    <x-aura::avatar initials="OF" size="md" status="offline" />
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::avatar initials="ON" size="md" status="online" />
+                <x-aura::avatar initials="BY" size="md" status="busy" />
+                <x-aura::avatar initials="AW" size="md" status="away" />
+                <x-aura::avatar initials="OF" size="md" status="offline" />
             @endverbatim
 
         </x-slot:codeSlot>
@@ -167,7 +278,7 @@ class extends Component {};
                             initials
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Fallback monogram initials when no image is supplied" position="top">
+                        <x-aura::tooltip text="Fallback 2-character initials string" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -185,7 +296,7 @@ class extends Component {};
 
                 <x-aura::table.cell>
                     <x-aura::text size="sm" variant="subtle">
-                        Initials string
+                        Initials string (e.g. JD, AW)
                     </x-aura::text>
                 </x-aura::table.cell>
 
@@ -201,7 +312,7 @@ class extends Component {};
                             size
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Avatar dimensions and typography scale" position="top">
+                        <x-aura::tooltip text="Dimension scale of avatar circle or square" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -257,7 +368,7 @@ class extends Component {};
                             square
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Render with rounded square corners instead of circular shape" position="top">
+                        <x-aura::tooltip text="Render as rounded square instead of circle" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -301,7 +412,7 @@ class extends Component {};
                             status
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Presence indicator dot color status" position="top">
+                        <x-aura::tooltip text="Presence status indicator dot badge" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -326,10 +437,6 @@ class extends Component {};
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
-                            offline
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
                             busy
                         </x-aura::badge>
 
@@ -337,42 +444,12 @@ class extends Component {};
                             away
                         </x-aura::badge>
 
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            alt
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Image alternate accessibility text" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
+                        <x-aura::badge variant="subtle" size="md">
+                            offline
+                        </x-aura::badge>
 
                     </x-aura::flex>
 
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="neutral" size="md">
-                        ""
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Alt text string
-                    </x-aura::text>
                 </x-aura::table.cell>
 
             </x-aura::table.row>

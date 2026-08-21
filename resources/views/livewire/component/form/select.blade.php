@@ -9,6 +9,7 @@ new
 #[Title('Select — Aura Wire')] 
 class extends Component {
     public string $selected = 'us';
+    public string $tier = 'pro';
 };
 
 ?>
@@ -35,7 +36,7 @@ class extends Component {
         </x-aura::heading>
 
         <x-aura::subheading size="md">
-            Native option selection dropdowns supporting option arrays, key value maps, and field validation.
+            Native option selection dropdowns supporting option arrays, key value maps, custom slots, and field validation.
         </x-aura::subheading>
 
     </x-aura::card>
@@ -53,17 +54,93 @@ class extends Component {
 
     </x-aura::code>
 
-    <!-- 1. Select Input -->
-    <x-aura::code title="1. Select Input">
+    <!-- 1. Array Options Map -->
+    <x-aura::code title="1. Key Value Array Options">
 
         <x-slot:preview>
 
             <x-aura::card size="2xl" gap="4">
 
-                <x-aura::select wire:model="selected" label="Country">
-                    <option value="us">United States</option>
-                    <option value="ca">Canada</option>
-                    <option value="uk">United Kingdom</option>
+                <x-aura::select
+                    wire:model="selected"
+                    label="Primary Region"
+                    hint="Select the data center closest to your main user base."
+                    :options="[
+                        'us-east' => 'US East (N. Virginia)',
+                        'us-west' => 'US West (Oregon)',
+                        'eu-central' => 'EU Central (Frankfurt)',
+                        'ap-southeast' => 'Asia Pacific (Singapore)',
+                    ]"
+                />
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::select
+                    wire:model="selected"
+                    label="Primary Region"
+                    hint="Select the data center closest to your main user base."
+                    :options="[
+                        'us-east' => 'US East (N. Virginia)',
+                        'us-west' => 'US West (Oregon)',
+                        'eu-central' => 'EU Central (Frankfurt)',
+                        'ap-southeast' => 'Asia Pacific (Singapore)',
+                    ]"
+                />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 2. Select Sizes -->
+    <x-aura::code title="2. Size Variations">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex direction="col" gap="4">
+
+                    <x-aura::select size="sm" :options="['sm' => 'Small Select (sm)', 'opt2' => 'Option 2']" />
+
+                    <x-aura::select size="md" :options="['md' => 'Medium Select (md)', 'opt2' => 'Option 2']" />
+
+                    <x-aura::select size="lg" :options="['lg' => 'Large Select (lg)', 'opt2' => 'Option 2']" />
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::select size="sm" :options="['sm' => 'Small (sm)']" />
+                <x-aura::select size="md" :options="['md' => 'Medium (md)']" />
+                <x-aura::select size="lg" :options="['lg' => 'Large (lg)']" />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 3. Custom Option Slot Children -->
+    <x-aura::code title="3. Custom Slot Options and Placeholder">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::select placeholder="Choose a membership tier...">
+                    <option value="starter">Starter Plan ($19/mo)</option>
+                    <option value="pro">Professional Plan ($49/mo)</option>
+                    <option value="enterprise">Enterprise Plan ($199/mo)</option>
                 </x-aura::select>
 
             </x-aura::card>
@@ -73,11 +150,44 @@ class extends Component {
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::select wire:model="selected" label="Country">
-                    <option value="us">United States</option>
-                    <option value="ca">Canada</option>
-                    <option value="uk">United Kingdom</option>
+                <x-aura::select placeholder="Choose a membership tier...">
+                    <option value="starter">Starter Plan ($19/mo)</option>
+                    <option value="pro">Professional Plan ($49/mo)</option>
+                    <option value="enterprise">Enterprise Plan ($199/mo)</option>
                 </x-aura::select>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 4. Required Field with Validation State -->
+    <x-aura::code title="4. Required Field State">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::select
+                    label="Account Currency"
+                    :required="true"
+                    hint="Currency cannot be changed once transactions have occurred."
+                    :options="['USD' => 'USD ($)', 'EUR' => 'EUR (€)', 'GBP' => 'GBP (£)']"
+                />
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::select
+                    label="Account Currency"
+                    :required="true"
+                    hint="Currency cannot be changed once transactions have occurred."
+                    :options="['USD' => 'USD ($)', 'EUR' => 'EUR (€)', 'GBP' => 'GBP (£)']"
+                />
             @endverbatim
 
         </x-slot:codeSlot>
@@ -138,48 +248,14 @@ class extends Component {
                 </x-aura::table.cell>
 
                 <x-aura::table.cell>
-                    <x-aura::badge variant="neutral" size="md">
+                    <x-aura::badge variant="subtle" size="md">
                         []
                     </x-aura::badge>
                 </x-aura::table.cell>
 
                 <x-aura::table.cell>
                     <x-aura::text size="sm" variant="subtle">
-                        Array or key-value map
-                    </x-aura::text>
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            placeholder
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Default disabled placeholder option text" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Placeholder string
+                        Associative array or flat list
                     </x-aura::text>
                 </x-aura::table.cell>
 
@@ -195,7 +271,7 @@ class extends Component {
                             size
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Select control height and font size scale" position="top">
+                        <x-aura::tooltip text="Vertical padding and font scale preset" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -243,7 +319,7 @@ class extends Component {
                             label
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Field label text displayed above select dropdown" position="top">
+                        <x-aura::tooltip text="Header label string for the input field" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -277,7 +353,7 @@ class extends Component {
                             required
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Display mandatory asterisk indicator" position="top">
+                        <x-aura::tooltip text="Show required asterisk badge" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -307,152 +383,6 @@ class extends Component {
 
                     </x-aura::flex>
 
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            hint
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Secondary helper explanation text beneath field input" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Hint string
-                    </x-aura::text>
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            error
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Explicit validation error message override" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Error string
-                    </x-aura::text>
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            invalid
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Apply error border highlight styling" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="neutral" size="md">
-                        false
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :wrap="true">
-
-                        <x-aura::badge variant="subtle" size="md">
-                            true
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            false
-                        </x-aura::badge>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            name
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="HTML form input name attribute" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Field name string
-                    </x-aura::text>
                 </x-aura::table.cell>
 
             </x-aura::table.row>

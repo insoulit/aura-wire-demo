@@ -162,6 +162,195 @@ class extends Component {};
 
     </x-aura::code>
 
+    <!-- 2. Interactive Clickable Card -->
+    <x-aura::code title="2. Interactive Clickable Card">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" href="#" padding="lg" gap="3">
+
+                <x-aura::flex align="center" justify="between">
+
+                    <x-aura::heading level="3" size="md">
+                        Explore Component Library
+                    </x-aura::heading>
+
+                    <x-aura::icon name="arrow-right" size="sm" />
+
+                </x-aura::flex>
+
+                <x-aura::text variant="subtle" size="sm">
+                    Interactive card container with automated hover background and smooth transition styling.
+                </x-aura::text>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::card href="/components" padding="lg" gap="3">
+                    <x-aura::flex align="center" justify="between">
+                        <x-aura::heading level="3" size="md">
+                            Explore Component Library
+                        </x-aura::heading>
+
+                        <x-aura::icon name="arrow-right" size="sm" />
+                    </x-aura::flex>
+
+                    <x-aura::text variant="subtle" size="sm">
+                        Interactive card container with automated hover background.
+                    </x-aura::text>
+                </x-aura::card>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 3. Undivided Card with Custom Padding -->
+    <x-aura::code title="3. Undivided Card with Custom Padding">
+
+        <x-slot:preview>
+
+            <x-aura::grid cols="1" sm="2" gap="4">
+
+                <x-aura::card padding="md" :divided="false" gap="2">
+
+                    <x-aura::heading level="4" size="md">
+                        Compact Padding (md)
+                    </x-aura::heading>
+
+                    <x-aura::text size="sm" variant="subtle">
+                        Clean border without slot divider lines.
+                    </x-aura::text>
+
+                </x-aura::card>
+
+                <x-aura::card padding="xl" :divided="false" gap="2">
+
+                    <x-aura::heading level="4" size="md">
+                        Spacious Padding (xl)
+                    </x-aura::heading>
+
+                    <x-aura::text size="sm" variant="subtle">
+                        Generous breathing room with large rounded corners.
+                    </x-aura::text>
+
+                </x-aura::card>
+
+            </x-aura::grid>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::card padding="md" :divided="false" gap="2">
+                    <x-aura::heading level="4" size="md">
+                        Compact Padding (md)
+                    </x-aura::heading>
+
+                    <x-aura::text size="sm" variant="subtle">
+                        Clean border without slot divider lines.
+                    </x-aura::text>
+                </x-aura::card>
+
+                <x-aura::card padding="xl" :divided="false" gap="2">
+                    <x-aura::heading level="4" size="md">
+                        Spacious Padding (xl)
+                    </x-aura::heading>
+
+                    <x-aura::text size="sm" variant="subtle">
+                        Generous breathing room with large rounded corners.
+                    </x-aura::text>
+                </x-aura::card>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 4. Real World Profile Card -->
+    <x-aura::code title="4. Real World User Card Pattern">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" padding="xl" gap="6">
+
+                <x-aura::flex align="center" gap="4">
+
+                    <x-aura::avatar src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" size="lg" status="online" />
+
+                    <x-aura::flex direction="col" align="start" gap="0.5">
+
+                        <x-aura::heading level="3" size="md">
+                            Alex Morgan
+                        </x-aura::heading>
+
+                        <x-aura::text size="sm" variant="subtle">
+                            alex.morgan@example.com
+                        </x-aura::text>
+
+                    </x-aura::flex>
+
+                </x-aura::flex>
+
+                <x-aura::separator />
+
+                <x-aura::flex align="center" justify="between">
+
+                    <x-aura::tag variant="neutral" size="sm">
+                        Team Lead
+                    </x-aura::tag>
+
+                    <x-aura::button variant="outline" size="sm">
+                        Settings
+                    </x-aura::button>
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::card size="2xl" padding="xl" gap="6">
+                    <x-aura::flex align="center" gap="4">
+                        <x-aura::avatar src="https://..." size="lg" status="online" />
+
+                        <x-aura::flex direction="col" align="start" gap="0.5">
+                            <x-aura::heading level="3" size="md">
+                                Alex Morgan
+                            </x-aura::heading>
+
+                            <x-aura::text size="sm" variant="subtle">
+                                alex.morgan@example.com
+                            </x-aura::text>
+                        </x-aura::flex>
+                    </x-aura::flex>
+
+                    <x-aura::separator />
+
+                    <x-aura::flex align="center" justify="between">
+                        <x-aura::tag variant="neutral" size="sm">
+                            Team Lead
+                        </x-aura::tag>
+
+                        <x-aura::button variant="outline" size="sm">
+                            Settings
+                        </x-aura::button>
+                    </x-aura::flex>
+                </x-aura::card>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
     <!-- Component Props -->
     <x-aura::card size="full" gap="4">
 

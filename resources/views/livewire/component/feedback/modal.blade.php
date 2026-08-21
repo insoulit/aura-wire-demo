@@ -44,8 +44,14 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::modal name="create-user" title="Create User">
-                    <p>Modal body content...</p>
+                <x-aura::button variant="primary" x-on:click="$dispatch('open-modal', 'demo-modal')">
+                    Launch
+                </x-aura::button>
+
+                <x-aura::modal name="demo-modal" title="Modal Title">
+                    <x-aura::text size="sm">
+                        Modal body content.
+                    </x-aura::text>
                 </x-aura::modal>
             @endverbatim
 
@@ -54,7 +60,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 1. Standard Confirmation Modal -->
-    <x-aura::code title="1. Confirmation Modal">
+    <x-aura::code title="1. Confirmation Dialog">
 
         <x-slot:preview>
 
@@ -62,24 +68,24 @@ class extends Component {};
 
                 <x-aura::flex align="center" gap="3">
 
-                    <x-aura::button variant="primary" x-on:click="$dispatch('open-modal', 'demo-modal')">
-                        Launch
+                    <x-aura::button variant="primary" x-on:click="$dispatch('open-modal', 'deploy-modal')">
+                        Deploy
                     </x-aura::button>
 
-                    <x-aura::modal name="demo-modal" title="Confirm Deployment" description="Deploying to production environment.">
+                    <x-aura::modal name="deploy-modal" title="Confirm Deployment" description="Deploying updates to production environment.">
 
                         <x-aura::text size="sm">
-                            This action will release version v2.4.0 to all live users.
+                            This action will release version v1.6.1 to all active tenant nodes.
                         </x-aura::text>
 
                         <x-slot:footer>
 
-                            <x-aura::button variant="ghost" size="sm" x-on:click="$dispatch('close-modal', 'demo-modal')">
+                            <x-aura::button variant="ghost" size="sm" x-on:click="$dispatch('close-modal', 'deploy-modal')">
                                 Cancel
                             </x-aura::button>
 
-                            <x-aura::button variant="primary" size="sm" x-on:click="$dispatch('close-modal', 'demo-modal')">
-                                Deploy
+                            <x-aura::button variant="primary" size="sm" x-on:click="$dispatch('close-modal', 'deploy-modal')">
+                                Confirm
                             </x-aura::button>
 
                         </x-slot:footer>
@@ -95,28 +101,173 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::button variant="primary" x-on:click="$dispatch('open-modal', 'demo-modal')">
-                    Launch
+                <x-aura::button variant="primary" x-on:click="$dispatch('open-modal', 'deploy-modal')">
+                    Deploy
                 </x-aura::button>
 
-                <x-aura::modal name="demo-modal" title="Confirm Deployment" description="Deploying to production environment.">
-
+                <x-aura::modal name="deploy-modal" title="Confirm Deployment" description="Deploying updates to production.">
                     <x-aura::text size="sm">
-                        This action will release version v2.4.0 to all live users.
+                        This action will release version v1.6.1 to all active tenant nodes.
                     </x-aura::text>
 
                     <x-slot:footer>
-
-                        <x-aura::button variant="ghost" size="sm" x-on:click="$dispatch('close-modal', 'demo-modal')">
+                        <x-aura::button variant="ghost" size="sm" x-on:click="$dispatch('close-modal', 'deploy-modal')">
                             Cancel
                         </x-aura::button>
 
-                        <x-aura::button variant="primary" size="sm" x-on:click="$dispatch('close-modal', 'demo-modal')">
-                            Deploy
+                        <x-aura::button variant="primary" size="sm" x-on:click="$dispatch('close-modal', 'deploy-modal')">
+                            Confirm
+                        </x-aura::button>
+                    </x-slot:footer>
+                </x-aura::modal>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 2. Form Input Dialog -->
+    <x-aura::code title="2. Form Input Dialog (maxWidth=lg)">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex align="center" gap="3">
+
+                    <x-aura::button variant="outline" x-on:click="$dispatch('open-modal', 'create-user-modal')">
+                        Invite
+                    </x-aura::button>
+
+                    <x-aura::modal name="create-user-modal" title="Invite Team Member" description="Send an onboarding invitation to a new collaborator." maxWidth="lg">
+
+                        <x-aura::flex direction="col" gap="4">
+
+                            <x-aura::field label="Email Address">
+                                <x-aura::input placeholder="sarah@company.com" icon="mail" />
+                            </x-aura::field>
+
+                            <x-aura::field label="Access Role">
+
+                                <x-aura::select>
+                                    <option>Collaborator (Read & Write)</option>
+                                    <option>Administrator (Full Access)</option>
+                                    <option>Viewer (Read Only)</option>
+                                </x-aura::select>
+
+                            </x-aura::field>
+
+                        </x-aura::flex>
+
+                        <x-slot:footer>
+
+                            <x-aura::button variant="ghost" size="sm" x-on:click="$dispatch('close-modal', 'create-user-modal')">
+                                Cancel
+                            </x-aura::button>
+
+                            <x-aura::button variant="primary" size="sm" x-on:click="$dispatch('close-modal', 'create-user-modal')">
+                                Send
+                            </x-aura::button>
+
+                        </x-slot:footer>
+
+                    </x-aura::modal>
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::button variant="outline" x-on:click="$dispatch('open-modal', 'create-user-modal')">
+                    Invite
+                </x-aura::button>
+
+                <x-aura::modal name="create-user-modal" title="Invite Team Member" maxWidth="lg">
+                    <x-aura::flex direction="col" gap="4">
+                        <x-aura::field label="Email Address">
+                            <x-aura::input placeholder="sarah@company.com" icon="mail" />
+                        </x-aura::field>
+
+                        <x-aura::field label="Access Role">
+                            <x-aura::select>
+                                <option>Collaborator (Read & Write)</option>
+                                <option>Administrator (Full Access)</option>
+                            </x-aura::select>
+                        </x-aura::field>
+                    </x-aura::flex>
+
+                    <x-slot:footer>
+                        <x-aura::button variant="ghost" size="sm" x-on:click="$dispatch('close-modal', 'create-user-modal')">
+                            Cancel
                         </x-aura::button>
 
+                        <x-aura::button variant="primary" size="sm" x-on:click="$dispatch('close-modal', 'create-user-modal')">
+                            Send
+                        </x-aura::button>
                     </x-slot:footer>
+                </x-aura::modal>
+            @endverbatim
 
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 3. Destructive Alert Dialog -->
+    <x-aura::code title="3. Destructive Alert Dialog">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex align="center" gap="3">
+
+                    <x-aura::button variant="danger" x-on:click="$dispatch('open-modal', 'delete-project-modal')">
+                        Delete
+                    </x-aura::button>
+
+                    <x-aura::modal name="delete-project-modal" variant="danger" title="Delete Project Repository" description="Are you sure you want to permanently delete this project? This operation cannot be undone.">
+
+                        <x-slot:footer>
+
+                            <x-aura::button variant="ghost" size="sm" x-on:click="$dispatch('close-modal', 'delete-project-modal')">
+                                Cancel
+                            </x-aura::button>
+
+                            <x-aura::button variant="danger" size="sm" x-on:click="$dispatch('close-modal', 'delete-project-modal')">
+                                Delete
+                            </x-aura::button>
+
+                        </x-slot:footer>
+
+                    </x-aura::modal>
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::button variant="danger" x-on:click="$dispatch('open-modal', 'delete-project-modal')">
+                    Delete
+                </x-aura::button>
+
+                <x-aura::modal name="delete-project-modal" variant="danger" title="Delete Project Repository" description="This operation cannot be undone.">
+                    <x-slot:footer>
+                        <x-aura::button variant="ghost" size="sm" x-on:click="$dispatch('close-modal', 'delete-project-modal')">
+                            Cancel
+                        </x-aura::button>
+
+                        <x-aura::button variant="danger" size="sm" x-on:click="$dispatch('close-modal', 'delete-project-modal')">
+                            Delete
+                        </x-aura::button>
+                    </x-slot:footer>
                 </x-aura::modal>
             @endverbatim
 
@@ -167,7 +318,7 @@ class extends Component {};
                             name
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Unique modal dialog name for event dispatch targeting" position="top">
+                        <x-aura::tooltip text="Unique window identifier for dispatching open and close events" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -185,75 +336,7 @@ class extends Component {};
 
                 <x-aura::table.cell>
                     <x-aura::text size="sm" variant="subtle">
-                        Unique identifier string
-                    </x-aura::text>
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            title
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Modal header headline title" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Title string
-                    </x-aura::text>
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            description
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Modal subtitle or helper context description" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Description string
+                        Name identifier string
                     </x-aura::text>
                 </x-aura::table.cell>
 
@@ -269,7 +352,7 @@ class extends Component {};
                             maxWidth
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Maximum dialog width constraint preset scale" position="top">
+                        <x-aura::tooltip text="Maximum horizontal width constraint preset" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -310,18 +393,6 @@ class extends Component {};
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
-                            3xl
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            4xl
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            5xl
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
                             full
                         </x-aura::badge>
 
@@ -341,7 +412,7 @@ class extends Component {};
                             variant
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Dialog layout orientation and header icon intent style" position="top">
+                        <x-aura::tooltip text="Visual style and alignment layout" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -369,60 +440,12 @@ class extends Component {};
                             centered
                         </x-aura::badge>
 
-                        <x-aura::badge variant="danger" size="md">
+                        <x-aura::badge variant="subtle" size="md">
                             danger
                         </x-aura::badge>
 
-                        <x-aura::badge variant="positive" size="md">
+                        <x-aura::badge variant="subtle" size="md">
                             success
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            full
-                        </x-aura::badge>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            closeable
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Allow closing by clicking backdrop or pressing Escape key" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="neutral" size="md">
-                        true
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :wrap="true">
-
-                        <x-aura::badge variant="subtle" size="md">
-                            true
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            false
                         </x-aura::badge>
 
                     </x-aura::flex>

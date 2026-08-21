@@ -8,7 +8,9 @@ new
 #[Layout('livewire.layout.component')] 
 #[Title('Switch — Aura Wire')] 
 class extends Component {
-    public bool $enabled = false;
+    public bool $emailNotifs = true;
+    public bool $smsAlerts = false;
+    public bool $twoFactor = true;
 };
 
 ?>
@@ -46,21 +48,21 @@ class extends Component {
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::switch wire:model="enabled" label="Enable Notifications" />
+                <x-aura::switch wire:model="emailNotifs" label="Email Notifications" description="Receive daily digest." />
             @endverbatim
 
         </x-slot:codeSlot>
 
     </x-aura::code>
 
-    <!-- 1. Toggle Switch -->
-    <x-aura::code title="1. Toggle Switch">
+    <!-- 1. Standard Toggle Switch -->
+    <x-aura::code title="1. Basic Toggle Switch">
 
         <x-slot:preview>
 
             <x-aura::card size="2xl" gap="4">
 
-                <x-aura::switch wire:model.live="enabled" label="Enable Notifications" />
+                <x-aura::switch wire:model.live="emailNotifs" label="Enable Notifications" />
 
             </x-aura::card>
 
@@ -69,7 +71,133 @@ class extends Component {
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::switch wire:model="enabled" label="Enable Notifications" />
+                <x-aura::switch wire:model="emailNotifs" label="Enable Notifications" />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 2. Switch with Description -->
+    <x-aura::code title="2. Switch with Description Subtitle">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::switch
+                    wire:model.live="twoFactor"
+                    label="Two Factor Authentication"
+                    description="Require a hardware key or authenticator code during login."
+                />
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::switch
+                    wire:model="twoFactor"
+                    label="Two Factor Authentication"
+                    description="Require a hardware key or authenticator code during login."
+                />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 3. Switch Sizes -->
+    <x-aura::code title="3. Switch Sizing Scale">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex direction="col" gap="4">
+
+                    <x-aura::switch size="sm" label="Small Switch (size=sm)" :checked="true" />
+
+                    <x-aura::switch size="md" label="Medium Switch (size=md)" :checked="true" />
+
+                    <x-aura::switch size="lg" label="Large Switch (size=lg)" :checked="true" />
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::switch size="sm" label="Small (sm)" :checked="true" />
+                <x-aura::switch size="md" label="Medium (md)" :checked="true" />
+                <x-aura::switch size="lg" label="Large (lg)" :checked="true" />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 4. Real World Settings Card -->
+    <x-aura::code title="4. Real World Preferences Card">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" padding="xl" gap="6">
+
+                <x-aura::heading level="3" size="md">
+                    Notification Preferences
+                </x-aura::heading>
+
+                <x-aura::flex direction="col" gap="4">
+
+                    <x-aura::switch
+                        wire:model.live="emailNotifs"
+                        label="Product Updates"
+                        description="Receive release notes and feature announcements."
+                    />
+
+                    <x-aura::separator />
+
+                    <x-aura::switch
+                        wire:model.live="smsAlerts"
+                        label="SMS Security Alerts"
+                        description="Instant SMS text upon suspicious login attempts."
+                    />
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::card size="2xl" padding="xl" gap="6">
+                    <x-aura::heading level="3" size="md">
+                        Notification Preferences
+                    </x-aura::heading>
+
+                    <x-aura::flex direction="col" gap="4">
+                        <x-aura::switch
+                            label="Product Updates"
+                            description="Receive release notes and feature announcements."
+                            :checked="true"
+                        />
+
+                        <x-aura::separator />
+
+                        <x-aura::switch
+                            label="SMS Security Alerts"
+                            description="Instant SMS text upon suspicious login attempts."
+                        />
+                    </x-aura::flex>
+                </x-aura::card>
             @endverbatim
 
         </x-slot:codeSlot>
@@ -153,7 +281,7 @@ class extends Component {
                             description
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Secondary helper explanation text beneath label" position="top">
+                        <x-aura::tooltip text="Secondary description text below label" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -171,7 +299,7 @@ class extends Component {
 
                 <x-aura::table.cell>
                     <x-aura::text size="sm" variant="subtle">
-                        Description text string
+                        Description string
                     </x-aura::text>
                 </x-aura::table.cell>
 
@@ -187,7 +315,7 @@ class extends Component {
                             size
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Switch track and thumb dimensional scale" position="top">
+                        <x-aura::tooltip text="Track and thumb size scale" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 

@@ -94,7 +94,6 @@ class extends Component {};
 
             @verbatim
                 <x-aura::tab active="overview">
-
                     <x-aura::tab.tab name="overview">
                         Overview
                     </x-aura::tab.tab>
@@ -110,8 +109,158 @@ class extends Component {};
                     <x-aura::tab.tab name="settings">
                         Settings
                     </x-aura::tab.tab>
+                </x-aura::tab>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 2. Tabs with Icons -->
+    <x-aura::code title="2. Tabs with Icons">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::tab active="general">
+
+                    <x-aura::tab.tab name="general">
+
+                        <x-slot:icon>
+                            <x-aura::icon name="settings" size="xs" />
+                        </x-slot:icon>
+
+                        General
+
+                    </x-aura::tab.tab>
+
+                    <x-aura::tab.tab name="security">
+
+                        <x-slot:icon>
+                            <x-aura::icon name="shield" size="xs" />
+                        </x-slot:icon>
+
+                        Security
+
+                    </x-aura::tab.tab>
+
+                    <x-aura::tab.tab name="billing">
+
+                        <x-slot:icon>
+                            <x-aura::icon name="credit-card" size="xs" />
+                        </x-slot:icon>
+
+                        Billing
+
+                    </x-aura::tab.tab>
 
                 </x-aura::tab>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::tab active="general">
+                    <x-aura::tab.tab name="general">
+                        <x-slot:icon>
+                            <x-aura::icon name="settings" size="xs" />
+                        </x-slot:icon>
+                        General
+                    </x-aura::tab.tab>
+
+                    <x-aura::tab.tab name="security">
+                        <x-slot:icon>
+                            <x-aura::icon name="shield" size="xs" />
+                        </x-slot:icon>
+                        Security
+                    </x-aura::tab.tab>
+
+                    <x-aura::tab.tab name="billing">
+                        <x-slot:icon>
+                            <x-aura::icon name="credit-card" size="xs" />
+                        </x-slot:icon>
+                        Billing
+                    </x-aura::tab.tab>
+                </x-aura::tab>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 3. Real World Settings Panel with Content -->
+    <x-aura::code title="3. Real World Settings Card">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" padding="xl" gap="6">
+
+                <x-aura::heading level="2" size="lg">
+                    Project Workspace Settings
+                </x-aura::heading>
+
+                <div x-data="{ activeTab: 'general' }">
+
+                    <x-aura::tab active="general">
+
+                        <x-aura::tab.tab name="general">
+                            General
+                        </x-aura::tab.tab>
+
+                        <x-aura::tab.tab name="collaborators">
+                            Collaborators
+                        </x-aura::tab.tab>
+
+                        <x-aura::tab.tab name="integrations">
+                            Integrations
+                        </x-aura::tab.tab>
+
+                    </x-aura::tab>
+
+                    <div x-show="activeTab === 'general'" class="pt-4 space-y-4">
+
+                        <x-aura::field label="Workspace Name">
+                            <x-aura::input value="Insoulit Production" />
+                        </x-aura::field>
+
+                        <x-aura::field label="Custom Domain">
+                            <x-aura::input placeholder="app.example.com" />
+                        </x-aura::field>
+
+                    </div>
+
+                </div>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::card size="2xl" padding="xl" gap="6">
+                    <x-aura::heading level="2" size="lg">
+                        Project Workspace Settings
+                    </x-aura::heading>
+
+                    <x-aura::tab active="general">
+                        <x-aura::tab.tab name="general">
+                            General
+                        </x-aura::tab.tab>
+
+                        <x-aura::tab.tab name="collaborators">
+                            Collaborators
+                        </x-aura::tab.tab>
+
+                        <x-aura::tab.tab name="integrations">
+                            Integrations
+                        </x-aura::tab.tab>
+                    </x-aura::tab>
+                </x-aura::card>
             @endverbatim
 
         </x-slot:codeSlot>
@@ -161,7 +310,7 @@ class extends Component {};
                             active
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Initial active tab identifier name" position="top">
+                        <x-aura::tooltip text="Identifier of the initially selected tab item" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -179,7 +328,41 @@ class extends Component {};
 
                 <x-aura::table.cell>
                     <x-aura::text size="sm" variant="subtle">
-                        Tab identifier string (e.g. overview, analytics)
+                        Name identifier string
+                    </x-aura::text>
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            name (tab)
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Unique identifier name for individual tab item" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="subtle" size="md">
+                        empty
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::text size="sm" variant="subtle">
+                        Name string
                     </x-aura::text>
                 </x-aura::table.cell>
 

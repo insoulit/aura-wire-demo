@@ -16,6 +16,12 @@ class extends Component {
                 ['label' => 'Components', 'href' => '#'],
                 ['label' => 'Breadcrumb'],
             ],
+            'deepItems' => [
+                ['label' => 'Workspace', 'href' => '#'],
+                ['label' => 'Settings', 'href' => '#'],
+                ['label' => 'Security', 'href' => '#'],
+                ['label' => 'Audit Logs'],
+            ],
         ];
     }
 };
@@ -55,7 +61,7 @@ class extends Component {
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::breadcrumb :items="$items" />
+                <x-aura::breadcrumb :items="$items" separator="chevron" variant="plain" />
             @endverbatim
 
         </x-slot:codeSlot>
@@ -77,6 +83,8 @@ class extends Component {
 
                     <x-aura::breadcrumb :items="$simpleItems" separator="dot" />
 
+                    <x-aura::breadcrumb :items="$simpleItems" separator="arrow" />
+
                 </x-aura::flex>
 
             </x-aura::card>
@@ -86,15 +94,79 @@ class extends Component {
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::breadcrumb :items="[
-                    ['label' => 'Home', 'href' => '#'],
-                    ['label' => 'Components', 'href' => '#'],
-                    ['label' => 'Breadcrumb'],
-                ]" separator="chevron" />
-
+                <x-aura::breadcrumb :items="$items" separator="chevron" />
                 <x-aura::breadcrumb :items="$items" separator="slash" />
-
                 <x-aura::breadcrumb :items="$items" separator="dot" />
+                <x-aura::breadcrumb :items="$items" separator="arrow" />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 2. Enclosed Bar Container -->
+    <x-aura::code title="2. Enclosed Panel Bar (variant=rectangle)">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::breadcrumb :items="$deepItems" variant="rectangle" separator="chevron" />
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::breadcrumb :items="$deepItems" variant="rectangle" separator="chevron" />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 3. Pill Badge Group -->
+    <x-aura::code title="3. Pill Navigation Badge Group (variant=pills)">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::breadcrumb :items="$simpleItems" variant="pills" />
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::breadcrumb :items="$simpleItems" variant="pills" />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 4. Home Icon Navigation -->
+    <x-aura::code title="4. Home Icon and Root Trail (:homeIcon=true)">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::breadcrumb :items="$deepItems" :homeIcon="true" separator="chevron" />
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::breadcrumb :items="$deepItems" :homeIcon="true" separator="chevron" />
             @endverbatim
 
         </x-slot:codeSlot>
@@ -144,7 +216,7 @@ class extends Component {
                             items
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Ordered array of trail links and label objects" position="top">
+                        <x-aura::tooltip text="Array of breadcrumb items with label and optional href" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -155,14 +227,14 @@ class extends Component {
                 </x-aura::table.cell>
 
                 <x-aura::table.cell>
-                    <x-aura::badge variant="neutral" size="md">
+                    <x-aura::badge variant="subtle" size="md">
                         []
                     </x-aura::badge>
                 </x-aura::table.cell>
 
                 <x-aura::table.cell>
                     <x-aura::text size="sm" variant="subtle">
-                        Array of breadcrumb items (label, href, icon)
+                        Array of associative items
                     </x-aura::text>
                 </x-aura::table.cell>
 
@@ -178,7 +250,7 @@ class extends Component {
                             separator
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Visual divider delimiter icon style between items" position="top">
+                        <x-aura::tooltip text="Visual divider glyph placed between route crumbs" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -230,7 +302,7 @@ class extends Component {
                             variant
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Container wrapper border and backdrop treatment" position="top">
+                        <x-aura::tooltip text="Outer container boundary presentation format" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -259,55 +331,7 @@ class extends Component {
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
-                            bar
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
                             pills
-                        </x-aura::badge>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            homeIcon
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Prepend home house icon on the root breadcrumb link" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="neutral" size="md">
-                        false
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :wrap="true">
-
-                        <x-aura::badge variant="subtle" size="md">
-                            true
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            false
                         </x-aura::badge>
 
                     </x-aura::flex>

@@ -7,7 +7,10 @@ use Livewire\Attributes\Title;
 new 
 #[Layout('livewire.layout.component')] 
 #[Title('Combobox — Aura Wire')] 
-class extends Component {};
+class extends Component {
+    public string $country = 'us';
+    public string $framework = 'laravel';
+};
 
 ?>
 
@@ -44,7 +47,7 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::combobox wire:model="framework" label="Framework" :options="$options" />
+                <x-aura::combobox wire:model="framework" label="Framework" :options="['laravel' => 'Laravel', 'vue' => 'Vue.js']" />
             @endverbatim
 
         </x-slot:codeSlot>
@@ -98,6 +101,95 @@ class extends Component {};
 
     </x-aura::code>
 
+    <!-- 2. Technology Stack Selector -->
+    <x-aura::code title="2. Tech Stack Selector with Livewire Model">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::combobox
+                    wire:model.live="framework"
+                    label="Primary Framework"
+                    placeholder="Search frameworks..."
+                    :options="[
+                        'laravel' => 'Laravel (PHP)',
+                        'livewire' => 'Livewire (Full Stack)',
+                        'alpine' => 'Alpine.js (Micro JS)',
+                        'tailwind' => 'Tailwind CSS (Styling)',
+                        'react' => 'React (Frontend)',
+                        'nextjs' => 'Next.js (React Framework)',
+                    ]"
+                />
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::combobox
+                    wire:model="framework"
+                    label="Primary Framework"
+                    placeholder="Search frameworks..."
+                    :options="[
+                        'laravel' => 'Laravel (PHP)',
+                        'livewire' => 'Livewire (Full Stack)',
+                        'alpine' => 'Alpine.js (Micro JS)',
+                        'tailwind' => 'Tailwind CSS (Styling)',
+                    ]"
+                />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 3. Timezone Selector -->
+    <x-aura::code title="3. Timezone Selector">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::combobox
+                    label="Account Timezone"
+                    value="utc"
+                    placeholder="Search timezones..."
+                    :options="[
+                        'utc' => 'UTC (Coordinated Universal Time)',
+                        'est' => 'EST (America/New York)',
+                        'cst' => 'CST (America/Chicago)',
+                        'pst' => 'PST (America/Los Angeles)',
+                        'gmt' => 'GMT (Europe/London)',
+                        'cet' => 'CET (Europe/Berlin)',
+                    ]"
+                />
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::combobox
+                    label="Account Timezone"
+                    value="utc"
+                    placeholder="Search timezones..."
+                    :options="[
+                        'utc' => 'UTC (Coordinated Universal Time)',
+                        'est' => 'EST (America/New York)',
+                        'pst' => 'PST (America/Los Angeles)',
+                    ]"
+                />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
     <!-- Component Props -->
     <x-aura::card size="full" gap="4">
 
@@ -141,7 +233,7 @@ class extends Component {};
                             options
                         </x-aura::text>
 
-                        <x-aura::tooltip text="List of selectable options with label and value keys" position="top">
+                        <x-aura::tooltip text="Array of options map or flat key value pair objects" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -152,48 +244,14 @@ class extends Component {};
                 </x-aura::table.cell>
 
                 <x-aura::table.cell>
-                    <x-aura::badge variant="neutral" size="md">
+                    <x-aura::badge variant="subtle" size="md">
                         []
                     </x-aura::badge>
                 </x-aura::table.cell>
 
                 <x-aura::table.cell>
                     <x-aura::text size="sm" variant="subtle">
-                        Array of associative items or key-value pairs
-                    </x-aura::text>
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            placeholder
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Placeholder text when no option is chosen" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="neutral" size="md">
-                        Select option...
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Placeholder string
+                        Associative array or items array
                     </x-aura::text>
                 </x-aura::table.cell>
 
@@ -209,7 +267,7 @@ class extends Component {};
                             label
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Field label text" position="top">
+                        <x-aura::tooltip text="Header label string for the combobox" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -240,10 +298,10 @@ class extends Component {};
                     <x-aura::flex align="center" gap="1.5" :inline="true">
 
                         <x-aura::text variant="mono" size="sm" weight="semibold">
-                            name
+                            placeholder
                         </x-aura::text>
 
-                        <x-aura::tooltip text="HTML input name attribute" position="top">
+                        <x-aura::tooltip text="Placeholder text before option selection" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -254,48 +312,14 @@ class extends Component {};
                 </x-aura::table.cell>
 
                 <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
+                    <x-aura::badge variant="neutral" size="md">
+                        Select option...
                     </x-aura::badge>
                 </x-aura::table.cell>
 
                 <x-aura::table.cell>
                     <x-aura::text size="sm" variant="subtle">
-                        Field name string
-                    </x-aura::text>
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            value
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Preselected option value for uncontrolled state" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Selected option value
+                        Placeholder string
                     </x-aura::text>
                 </x-aura::table.cell>
 

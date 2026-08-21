@@ -8,7 +8,8 @@ new
 #[Layout('livewire.layout.component')] 
 #[Title('Textarea — Aura Wire')] 
 class extends Component {
-    public string $bio = '';
+    public string $bio = 'Staff Engineer building high contrast accessible component primitives for modern web applications.';
+    public string $notes = '';
 };
 
 ?>
@@ -53,14 +54,20 @@ class extends Component {
 
     </x-aura::code>
 
-    <!-- 1. Textarea Control -->
-    <x-aura::code title="1. Textarea Control">
+    <!-- 1. Textarea Control with Label & Hint -->
+    <x-aura::code title="1. Textarea with Label and Hint">
 
         <x-slot:preview>
 
             <x-aura::card size="2xl" gap="4">
 
-                <x-aura::textarea wire:model="bio" :rows="4" label="Biography" placeholder="Tell us about yourself..." />
+                <x-aura::textarea
+                    wire:model="bio"
+                    :rows="4"
+                    label="Public Biography"
+                    hint="Brief description for your team profile card. Max 300 characters."
+                    placeholder="Tell us about yourself..."
+                />
 
             </x-aura::card>
 
@@ -69,7 +76,101 @@ class extends Component {
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::textarea wire:model="bio" :rows="4" label="Biography" placeholder="Tell us about yourself..." />
+                <x-aura::textarea
+                    wire:model="bio"
+                    :rows="4"
+                    label="Public Biography"
+                    hint="Brief description for your team profile card. Max 300 characters."
+                    placeholder="Tell us about yourself..."
+                />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 2. Row Height Variations -->
+    <x-aura::code title="2. Row Height Variations">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex direction="col" gap="4">
+
+                    <x-aura::textarea
+                        :rows="2"
+                        label="Quick Comment (rows=2)"
+                        placeholder="Leave a short note..."
+                    />
+
+                    <x-aura::textarea
+                        :rows="6"
+                        label="Release Notes Markdown (rows=6)"
+                        placeholder="Paste detailed changelog items..."
+                    />
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::textarea :rows="2" label="Quick Comment (rows=2)" placeholder="Leave a short note..." />
+                <x-aura::textarea :rows="6" label="Release Notes (rows=6)" placeholder="Paste detailed changelog..." />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 3. Required State & Error Styling -->
+    <x-aura::code title="3. Required and Error Validation States">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex direction="col" gap="4">
+
+                    <x-aura::textarea
+                        :required="true"
+                        label="Incident Summary"
+                        hint="Mandatory post mortem analysis documentation."
+                        placeholder="Describe root cause and resolution..."
+                    />
+
+                    <x-aura::textarea
+                        label="Special Instructions"
+                        :invalid="true"
+                        error="This field cannot exceed 500 characters."
+                        placeholder="Enter instructions..."
+                    />
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::textarea
+                    :required="true"
+                    label="Incident Summary"
+                    hint="Mandatory post mortem documentation."
+                    placeholder="Describe root cause..."
+                />
+
+                <x-aura::textarea
+                    label="Special Instructions"
+                    :invalid="true"
+                    error="This field cannot exceed 500 characters."
+                />
             @endverbatim
 
         </x-slot:codeSlot>
@@ -136,64 +237,8 @@ class extends Component {
                 </x-aura::table.cell>
 
                 <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :wrap="true">
-
-                        <x-aura::badge variant="subtle" size="md">
-                            2
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            3
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            4
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            6
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            8
-                        </x-aura::badge>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            placeholder
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Placeholder guidance text" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
                     <x-aura::text size="sm" variant="subtle">
-                        Placeholder string
+                        Positive integer (e.g. 2, 4, 6)
                     </x-aura::text>
                 </x-aura::table.cell>
 
@@ -209,7 +254,7 @@ class extends Component {
                             label
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Field label text displayed above textarea" position="top">
+                        <x-aura::tooltip text="Header label string for the textarea" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -243,7 +288,7 @@ class extends Component {
                             required
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Display mandatory asterisk indicator" position="top">
+                        <x-aura::tooltip text="Show required asterisk on label" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -273,152 +318,6 @@ class extends Component {
 
                     </x-aura::flex>
 
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            hint
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Secondary helper explanation text beneath textarea" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Hint string
-                    </x-aura::text>
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            error
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Explicit validation error message override" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Error string
-                    </x-aura::text>
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            invalid
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Apply error border highlight styling" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="neutral" size="md">
-                        false
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :wrap="true">
-
-                        <x-aura::badge variant="subtle" size="md">
-                            true
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            false
-                        </x-aura::badge>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            name
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="HTML form input name attribute" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Field name string
-                    </x-aura::text>
                 </x-aura::table.cell>
 
             </x-aura::table.row>

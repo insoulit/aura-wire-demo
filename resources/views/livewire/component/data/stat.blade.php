@@ -57,42 +57,13 @@ class extends Component {};
 
     </x-aura::code>
 
-    <!-- 1. Dashboard Metric Grid -->
-    <x-aura::code title="1. Metric KPI Cards">
+    <!-- 1. Metric KPI Cards with Trends -->
+    <x-aura::code title="1. Metric KPI Cards with Trends">
 
         <x-slot:preview>
 
-            <x-aura::card size="2xl" gap="4">
+            <x-aura::grid cols="1" sm="2" gap="4">
 
-                <x-aura::flex align="center" gap="4" :wrap="true">
-
-                    <x-aura::stat
-                        label="Total Revenue"
-                        value="$48,290.00"
-                        trend="+14.2%"
-                        trendDirection="up"
-                        description="vs last month"
-                        icon="trending-up"
-                    />
-
-                    <x-aura::stat
-                        label="Active Subscriptions"
-                        value="2,840"
-                        trend="+8.1%"
-                        trendDirection="up"
-                        description="+212 this week"
-                        icon="users"
-                    />
-
-                </x-aura::flex>
-
-            </x-aura::card>
-
-        </x-slot:preview>
-
-        <x-slot:codeSlot>
-
-            @verbatim
                 <x-aura::stat
                     label="Total Revenue"
                     value="$48,290.00"
@@ -110,6 +81,276 @@ class extends Component {};
                     description="+212 this week"
                     icon="users"
                 />
+
+            </x-aura::grid>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::grid cols="1" sm="2" gap="4">
+                    <x-aura::stat
+                        label="Total Revenue"
+                        value="$48,290.00"
+                        trend="+14.2%"
+                        trendDirection="up"
+                        description="vs last month"
+                        icon="trending-up"
+                    />
+
+                    <x-aura::stat
+                        label="Active Subscriptions"
+                        value="2,840"
+                        trend="+8.1%"
+                        trendDirection="up"
+                        description="+212 this week"
+                        icon="users"
+                    />
+                </x-aura::grid>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 2. Downward and Neutral Trends -->
+    <x-aura::code title="2. Downward and Neutral Trends">
+
+        <x-slot:preview>
+
+            <x-aura::grid cols="1" sm="2" gap="4">
+
+                <x-aura::stat
+                    label="Server Latency"
+                    value="142ms"
+                    trend="-18.4%"
+                    trendDirection="down"
+                    description="faster response time"
+                    icon="activity"
+                />
+
+                <x-aura::stat
+                    label="Storage Quota"
+                    value="78.2 GB"
+                    trend="0.0%"
+                    trendDirection="neutral"
+                    description="unchanged today"
+                    icon="database"
+                />
+
+            </x-aura::grid>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::grid cols="1" sm="2" gap="4">
+                    <x-aura::stat
+                        label="Server Latency"
+                        value="142ms"
+                        trend="-18.4%"
+                        trendDirection="down"
+                        description="faster response time"
+                        icon="activity"
+                    />
+
+                    <x-aura::stat
+                        label="Storage Quota"
+                        value="78.2 GB"
+                        trend="0.0%"
+                        trendDirection="neutral"
+                        description="unchanged today"
+                        icon="database"
+                    />
+                </x-aura::grid>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 3. Minimal Metrics Without Trends -->
+    <x-aura::code title="3. Minimal Metric Cards">
+
+        <x-slot:preview>
+
+            <x-aura::grid cols="1" sm="3" gap="4">
+
+                <x-aura::stat
+                    label="Cluster Nodes"
+                    value="16 Online"
+                    icon="server"
+                />
+
+                <x-aura::stat
+                    label="API Uptime"
+                    value="99.99%"
+                    icon="shield-check"
+                />
+
+                <x-aura::stat
+                    label="Open Tickets"
+                    value="4"
+                    icon="message-square"
+                />
+
+            </x-aura::grid>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::grid cols="1" sm="3" gap="4">
+                    <x-aura::stat
+                        label="Cluster Nodes"
+                        value="16 Online"
+                        icon="server"
+                    />
+
+                    <x-aura::stat
+                        label="API Uptime"
+                        value="99.99%"
+                        icon="shield-check"
+                    />
+
+                    <x-aura::stat
+                        label="Open Tickets"
+                        value="4"
+                        icon="message-square"
+                    />
+                </x-aura::grid>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 4. Real World Analytics Overview Strip -->
+    <x-aura::code title="4. Real World Analytics Overview Strip">
+
+        <x-slot:preview>
+
+            <x-aura::card padding="xl" gap="6">
+
+                <x-aura::flex align="center" justify="between">
+
+                    <x-aura::flex direction="col" gap="none">
+
+                        <x-aura::kicker>
+                            Quarterly Overview
+                        </x-aura::kicker>
+
+                        <x-aura::heading level="2" size="lg">
+                            Financial Health
+                        </x-aura::heading>
+
+                    </x-aura::flex>
+
+                    <x-aura::badge variant="neutral" size="sm">
+                        Q3 Live Metrics
+                    </x-aura::badge>
+
+                </x-aura::flex>
+
+                <x-aura::grid cols="1" sm="2" lg="4" gap="4">
+
+                    <x-aura::stat
+                        label="Gross Revenue"
+                        value="$124,500"
+                        trend="+22.4%"
+                        trendDirection="up"
+                        description="vs Q2 target"
+                        icon="dollar-sign"
+                    />
+
+                    <x-aura::stat
+                        label="Orders Processed"
+                        value="1,842"
+                        trend="+12.0%"
+                        trendDirection="up"
+                        description="+140 this week"
+                        icon="shopping-bag"
+                    />
+
+                    <x-aura::stat
+                        label="Refund Rate"
+                        value="0.84%"
+                        trend="-0.2%"
+                        trendDirection="down"
+                        description="below threshold"
+                        icon="rotate-ccw"
+                    />
+
+                    <x-aura::stat
+                        label="Avg Order Value"
+                        value="$67.58"
+                        trend="+4.3%"
+                        trendDirection="up"
+                        description="steady growth"
+                        icon="trending-up"
+                    />
+
+                </x-aura::grid>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::card padding="xl" gap="6">
+                    <x-aura::flex align="center" justify="between">
+                        <x-aura::heading level="2" size="lg">
+                            Financial Health
+                        </x-aura::heading>
+
+                        <x-aura::badge variant="neutral" size="sm">
+                            Q3 Live Metrics
+                        </x-aura::badge>
+                    </x-aura::flex>
+
+                    <x-aura::grid cols="1" sm="2" lg="4" gap="4">
+                        <x-aura::stat
+                            label="Gross Revenue"
+                            value="$124,500"
+                            trend="+22.4%"
+                            trendDirection="up"
+                            description="vs Q2 target"
+                            icon="dollar-sign"
+                        />
+
+                        <x-aura::stat
+                            label="Orders Processed"
+                            value="1,842"
+                            trend="+12.0%"
+                            trendDirection="up"
+                            description="+140 this week"
+                            icon="shopping-bag"
+                        />
+
+                        <x-aura::stat
+                            label="Refund Rate"
+                            value="0.84%"
+                            trend="-0.2%"
+                            trendDirection="down"
+                            description="below threshold"
+                            icon="rotate-ccw"
+                        />
+
+                        <x-aura::stat
+                            label="Avg Order Value"
+                            value="$67.58"
+                            trend="+4.3%"
+                            trendDirection="up"
+                            description="steady growth"
+                            icon="trending-up"
+                        />
+                    </x-aura::grid>
+                </x-aura::card>
             @endverbatim
 
         </x-slot:codeSlot>

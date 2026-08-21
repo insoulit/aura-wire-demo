@@ -16,17 +16,16 @@ class extends Component {
                 ['title' => 'Publish Assets', 'subtitle' => 'php artisan aura-wire:install'],
                 ['title' => 'Build Features', 'subtitle' => 'Use component tags in views'],
             ],
-            'mediaItems' => [
-                [
-                    'title' => 'Aura Headphones Pro',
-                    'subtitle' => 'Wireless Noise Canceling',
-                    'badge' => 'Top Seller',
-                ],
-                [
-                    'title' => 'Minimalist Keyboard',
-                    'subtitle' => 'Hot Swappable Switches',
-                    'badge' => 'New',
-                ],
+            'rankingItems' => [
+                ['title' => 'Design System Tokens', 'subtitle' => 'Monochrome high contrast aesthetic', 'badge' => 'Rank 1'],
+                ['title' => 'Volt Blade Primitives', 'subtitle' => 'Zero runtime overhead layout components', 'badge' => 'Rank 2'],
+                ['title' => 'Interactive Overlay Suite', 'subtitle' => 'Portaled modal and popovers', 'badge' => 'Rank 3'],
+                ['title' => 'Accessibility Standard', 'subtitle' => 'WAI ARIA compliant keyboard navigation', 'badge' => 'Rank 4'],
+            ],
+            'checklistItems' => [
+                ['title' => 'Verify environment configurations', 'subtitle' => 'Check .env and database connection'],
+                ['title' => 'Run test suite validation', 'subtitle' => 'Execute pest and feature tests'],
+                ['title' => 'Deploy production release', 'subtitle' => 'Tag release and trigger CI pipeline'],
             ],
         ];
     }
@@ -67,15 +66,15 @@ class extends Component {
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::numbered-list :items="$items" />
+                <x-aura::numbered-list :items="$items" variant="compact" />
             @endverbatim
 
         </x-slot:codeSlot>
 
     </x-aura::code>
 
-    <!-- 1. Step List -->
-    <x-aura::code title="1. Onboarding Steps">
+    <!-- 1. Compact Row List -->
+    <x-aura::code title="1. Compact Row List">
 
         <x-slot:preview>
 
@@ -95,6 +94,88 @@ class extends Component {
                     ['title' => 'Publish Assets', 'subtitle' => 'php artisan aura-wire:install'],
                     ['title' => 'Build Features', 'subtitle' => 'Use component tags in views'],
                 ]" variant="compact" />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 2. Step Progress Bar -->
+    <x-aura::code title="2. Process Step Bar">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::numbered-list :items="$stepItems" variant="steps" />
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::numbered-list :items="[
+                    ['title' => 'Install Package', 'subtitle' => 'composer require insoulit/aura-wire'],
+                    ['title' => 'Publish Assets', 'subtitle' => 'php artisan aura-wire:install'],
+                    ['title' => 'Build Features', 'subtitle' => 'Use component tags in views'],
+                ]" variant="steps" />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 3. Grid Ranking Cards -->
+    <x-aura::code title="3. Grid Ranking Cards">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::numbered-list :items="$rankingItems" variant="grid" />
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::numbered-list :items="[
+                    ['title' => 'Design System Tokens', 'subtitle' => 'Monochrome high contrast aesthetic', 'badge' => 'Rank 1'],
+                    ['title' => 'Volt Blade Primitives', 'subtitle' => 'Zero runtime overhead layout components', 'badge' => 'Rank 2'],
+                    ['title' => 'Interactive Overlay Suite', 'subtitle' => 'Portaled modal and popovers', 'badge' => 'Rank 3'],
+                    ['title' => 'Accessibility Standard', 'subtitle' => 'WAI ARIA compliant keyboard navigation', 'badge' => 'Rank 4'],
+                ]" variant="grid" />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 4. Simple Text List -->
+    <x-aura::code title="4. Simple Text Counter List">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::numbered-list :items="$checklistItems" variant="simple" />
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::numbered-list :items="[
+                    ['title' => 'Verify environment configurations', 'subtitle' => 'Check .env and database connection'],
+                    ['title' => 'Run test suite validation', 'subtitle' => 'Execute pest and feature tests'],
+                    ['title' => 'Deploy production release', 'subtitle' => 'Tag release and trigger CI pipeline'],
+                ]" variant="simple" />
             @endverbatim
 
         </x-slot:codeSlot>
@@ -144,7 +225,7 @@ class extends Component {
                             items
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Data collection or array of item records to render" position="top">
+                        <x-aura::tooltip text="Array or collection of list items" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -155,14 +236,14 @@ class extends Component {
                 </x-aura::table.cell>
 
                 <x-aura::table.cell>
-                    <x-aura::badge variant="neutral" size="md">
+                    <x-aura::badge variant="subtle" size="md">
                         []
                     </x-aura::badge>
                 </x-aura::table.cell>
 
                 <x-aura::table.cell>
                     <x-aura::text size="sm" variant="subtle">
-                        Array of item arrays or objects
+                        Array of associative items or strings
                     </x-aura::text>
                 </x-aura::table.cell>
 
@@ -178,7 +259,7 @@ class extends Component {
                             variant
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Visual layout format pattern for items" position="top">
+                        <x-aura::tooltip text="Visual layout display presentation style" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -199,7 +280,11 @@ class extends Component {
                     <x-aura::flex align="center" gap="1.5" :wrap="true">
 
                         <x-aura::badge variant="subtle" size="md">
-                            card
+                            compact
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            steps
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
@@ -207,15 +292,19 @@ class extends Component {
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
+                            simple
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
                             media
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
-                            compact
+                            timeline
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
-                            simple
+                            card
                         </x-aura::badge>
 
                     </x-aura::flex>
@@ -234,7 +323,7 @@ class extends Component {
                             numbered
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Display numerical index indicators" position="top">
+                        <x-aura::tooltip text="Display leading index numbers" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -264,176 +353,6 @@ class extends Component {
 
                     </x-aura::flex>
 
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            titleKey
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Key name mapping for item primary title" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="neutral" size="md">
-                        title
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Field key name string
-                    </x-aura::text>
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            subtitleKey
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Key name mapping for item subtitle or description" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="neutral" size="md">
-                        subtitle
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Field key name string
-                    </x-aura::text>
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            imageKey
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Key name mapping for leading thumbnail image URL" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="neutral" size="md">
-                        image
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Field key name string
-                    </x-aura::text>
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            badgeKey
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Key name mapping for trailing status badge text" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="neutral" size="md">
-                        badge
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Field key name string
-                    </x-aura::text>
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            iconKey
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Key name mapping for leading Lucide icon" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="neutral" size="md">
-                        icon
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Field key name string
-                    </x-aura::text>
                 </x-aura::table.cell>
 
             </x-aura::table.row>

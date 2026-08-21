@@ -12,7 +12,7 @@ class extends Component {
 
     public function nextStep(): void
     {
-        if ($this->currentStep < 4) {
+        if ($this->currentStep < 3) {
             $this->currentStep++;
         }
     }
@@ -70,24 +70,24 @@ class extends Component {
 
     </x-aura::code>
 
-    <!-- 1. Interactive Stepper -->
-    <x-aura::code title="1. Interactive Wizard">
+    <!-- 1. Interactive Stepper Wizard -->
+    <x-aura::code title="1. Interactive Setup Wizard">
 
         <x-slot:preview>
 
-            <x-aura::card size="2xl" gap="4">
+            <x-aura::card size="2xl" gap="6">
 
                 <x-aura::stepper :active="$currentStep">
 
-                    <x-aura::stepper.step :step="1" title="Account Setup" description="Enter email" :status="$currentStep > 1 ? 'completed' : ($currentStep === 1 ? 'active' : 'pending')" />
+                    <x-aura::stepper.step :step="1" title="Account Setup" description="Enter email credentials" :status="$currentStep > 1 ? 'completed' : ($currentStep === 1 ? 'active' : 'pending')" />
 
-                    <x-aura::stepper.step :step="2" title="Workspace Setup" description="Configure team" :status="$currentStep > 2 ? 'completed' : ($currentStep === 2 ? 'active' : 'pending')" />
+                    <x-aura::stepper.step :step="2" title="Workspace Configuration" description="Set team namespace" :status="$currentStep > 2 ? 'completed' : ($currentStep === 2 ? 'active' : 'pending')" />
 
-                    <x-aura::stepper.step :step="3" title="Team Members" description="Invite users" :status="$currentStep > 3 ? 'completed' : ($currentStep === 3 ? 'active' : 'pending')" />
+                    <x-aura::stepper.step :step="3" title="Collaborators" description="Invite core members" :status="$currentStep > 3 ? 'completed' : ($currentStep === 3 ? 'active' : 'pending')" />
 
                 </x-aura::stepper>
 
-                <x-aura::flex align="center" justify="between" class="pt-4">
+                <x-aura::flex align="center" justify="between" class="pt-4 border-t border-zinc-100 dark:border-zinc-800">
 
                     <x-aura::button variant="secondary" size="sm" wire:click="previousStep" :disabled="$currentStep === 1">
                         Previous
@@ -107,17 +107,12 @@ class extends Component {
 
             @verbatim
                 <x-aura::stepper :active="$currentStep">
-
                     <x-aura::stepper.step :step="1" title="Account Setup" description="Enter email" :status="$currentStep > 1 ? 'completed' : ($currentStep === 1 ? 'active' : 'pending')" />
-
-                    <x-aura::stepper.step :step="2" title="Workspace Setup" description="Configure team" :status="$currentStep > 2 ? 'completed' : ($currentStep === 2 ? 'active' : 'pending')" />
-
-                    <x-aura::stepper.step :step="3" title="Team Members" description="Invite users" :status="$currentStep > 3 ? 'completed' : ($currentStep === 3 ? 'active' : 'pending')" />
-
+                    <x-aura::stepper.step :step="2" title="Workspace" description="Configure team" :status="$currentStep > 2 ? 'completed' : ($currentStep === 2 ? 'active' : 'pending')" />
+                    <x-aura::stepper.step :step="3" title="Collaborators" description="Invite members" :status="$currentStep > 3 ? 'completed' : ($currentStep === 3 ? 'active' : 'pending')" />
                 </x-aura::stepper>
 
-                <x-aura::flex align="center" justify="between" class="pt-4">
-
+                <x-aura::flex align="center" justify="between" class="pt-4 border-t border-zinc-100 dark:border-zinc-800">
                     <x-aura::button variant="secondary" size="sm" wire:click="previousStep" :disabled="$currentStep === 1">
                         Previous
                     </x-aura::button>
@@ -125,8 +120,45 @@ class extends Component {
                     <x-aura::button variant="primary" size="sm" wire:click="nextStep" :disabled="$currentStep === 3">
                         Next
                     </x-aura::button>
-
                 </x-aura::flex>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 2. Completed Checkout Pipeline -->
+    <x-aura::code title="2. Checkout Pipeline">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::stepper :active="3">
+
+                    <x-aura::stepper.step :step="1" title="Cart" description="2 items" status="completed" />
+
+                    <x-aura::stepper.step :step="2" title="Shipping" description="Standard delivery" status="completed" />
+
+                    <x-aura::stepper.step :step="3" title="Payment" description="Credit card" status="active" />
+
+                    <x-aura::stepper.step :step="4" title="Confirm" description="Review order" status="pending" />
+
+                </x-aura::stepper>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::stepper :active="3">
+                    <x-aura::stepper.step :step="1" title="Cart" description="2 items" status="completed" />
+                    <x-aura::stepper.step :step="2" title="Shipping" description="Standard delivery" status="completed" />
+                    <x-aura::stepper.step :step="3" title="Payment" description="Credit card" status="active" />
+                    <x-aura::stepper.step :step="4" title="Confirm" description="Review order" status="pending" />
+                </x-aura::stepper>
             @endverbatim
 
         </x-slot:codeSlot>
@@ -173,10 +205,10 @@ class extends Component {
                     <x-aura::flex align="center" gap="1.5" :inline="true">
 
                         <x-aura::text variant="mono" size="sm" weight="semibold">
-                            step
+                            active (stepper)
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Ordinal numerical index for the step indicator" position="top">
+                        <x-aura::tooltip text="Numeric index of currently active step" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -194,7 +226,7 @@ class extends Component {
 
                 <x-aura::table.cell>
                     <x-aura::text size="sm" variant="subtle">
-                        Step index integer
+                        Positive integer
                     </x-aura::text>
                 </x-aura::table.cell>
 
@@ -207,10 +239,10 @@ class extends Component {
                     <x-aura::flex align="center" gap="1.5" :inline="true">
 
                         <x-aura::text variant="mono" size="sm" weight="semibold">
-                            status
+                            status (step)
                         </x-aura::text>
 
-                        <x-aura::tooltip text="State status of the step node" position="top">
+                        <x-aura::tooltip text="Execution status of the specific step stage" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -230,8 +262,8 @@ class extends Component {
 
                     <x-aura::flex align="center" gap="1.5" :wrap="true">
 
-                        <x-aura::badge variant="positive" size="md">
-                            completed
+                        <x-aura::badge variant="subtle" size="md">
+                            pending
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
@@ -239,79 +271,11 @@ class extends Component {
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
-                            pending
+                            completed
                         </x-aura::badge>
 
                     </x-aura::flex>
 
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            title
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Primary step label title" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Title string
-                    </x-aura::text>
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            description
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Secondary step description helper text" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Description string
-                    </x-aura::text>
                 </x-aura::table.cell>
 
             </x-aura::table.row>

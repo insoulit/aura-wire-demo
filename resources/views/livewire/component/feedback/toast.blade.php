@@ -60,13 +60,13 @@ class extends Component {};
 
                 <x-aura::flex direction="col" align="stretch" gap="3">
 
-                    <x-aura::toast variant="success" title="Project Published" description="Your project has been deployed." />
+                    <x-aura::toast variant="neutral" title="Task Completed" description="All background queued jobs finished." />
 
-                    <x-aura::toast variant="info" title="Update Available" description="Aura Wire v2.4.0 is ready for installation." />
+                    <x-aura::toast variant="success" title="Project Published" description="Your project has been deployed to production." />
 
-                    <x-aura::toast variant="warning" title="Rate Limit Warning" description="You have consumed 85% of your quota." />
+                    <x-aura::toast variant="warning" title="Rate Limit Warning" description="You have consumed 85% of your API quota." />
 
-                    <x-aura::toast variant="danger" title="Connection Failed" description="Could not connect to database cluster." />
+                    <x-aura::toast variant="danger" title="Connection Failed" description="Could not establish database connection." />
 
                 </x-aura::flex>
 
@@ -77,13 +77,80 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
+                <x-aura::toast variant="neutral" title="Task Completed" description="All background queued jobs finished." />
                 <x-aura::toast variant="success" title="Project Published" description="Your project has been deployed." />
-
-                <x-aura::toast variant="info" title="Update Available" description="Aura Wire v2.4.0 is ready for installation." />
-
                 <x-aura::toast variant="warning" title="Rate Limit Warning" description="You have consumed 85% of your quota." />
+                <x-aura::toast variant="danger" title="Connection Failed" description="Could not establish database connection." />
+            @endverbatim
 
-                <x-aura::toast variant="danger" title="Connection Failed" description="Could not connect to database cluster." />
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 2. Subtle Surface Variant -->
+    <x-aura::code title="2. Subtle Surface Toast (variant=subtle)">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex direction="col" align="stretch" gap="3">
+
+                    <x-aura::toast variant="subtle" icon="inbox" title="New Message Received" description="Alex sent you an invitation to review pull request #14." />
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::toast variant="subtle" icon="inbox" title="New Message Received" description="Alex sent you an invitation to review PR #14." />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 3. Toast with Interactive Action -->
+    <x-aura::code title="3. Toast with Interactive Action">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex direction="col" align="stretch" gap="3">
+
+                    <x-aura::toast variant="neutral" title="File Deleted" description="Document moved to trash archive.">
+
+                        <x-slot:action>
+
+                            <x-aura::button variant="secondary" size="xs">
+                                Undo
+                            </x-aura::button>
+
+                        </x-slot:action>
+
+                    </x-aura::toast>
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::toast variant="neutral" title="File Deleted" description="Document moved to trash.">
+                    <x-slot:action>
+                        <x-aura::button variant="secondary" size="xs">
+                            Undo
+                        </x-aura::button>
+                    </x-slot:action>
+                </x-aura::toast>
             @endverbatim
 
         </x-slot:codeSlot>
@@ -157,96 +224,24 @@ class extends Component {};
                             neutral
                         </x-aura::badge>
 
-                        <x-aura::badge variant="positive" size="md">
-                            success
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="warning" size="md">
-                            warning
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="danger" size="md">
-                            danger
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            info
-                        </x-aura::badge>
-
                         <x-aura::badge variant="subtle" size="md">
                             subtle
                         </x-aura::badge>
 
-                    </x-aura::flex>
+                        <x-aura::badge variant="subtle" size="md">
+                            success
+                        </x-aura::badge>
 
-                </x-aura::table.cell>
+                        <x-aura::badge variant="subtle" size="md">
+                            warning
+                        </x-aura::badge>
 
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            title
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Primary notification headline title" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
+                        <x-aura::badge variant="subtle" size="md">
+                            danger
+                        </x-aura::badge>
 
                     </x-aura::flex>
 
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Title string
-                    </x-aura::text>
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            description
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Secondary notification message body" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Description string
-                    </x-aura::text>
                 </x-aura::table.cell>
 
             </x-aura::table.row>
@@ -261,7 +256,7 @@ class extends Component {};
                             dismissible
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Display close button to dismiss toast notification" position="top">
+                        <x-aura::tooltip text="Show close button on the toast" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -291,40 +286,6 @@ class extends Component {};
 
                     </x-aura::flex>
 
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            icon
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Leading notification status icon override" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Icon name string
-                    </x-aura::text>
                 </x-aura::table.cell>
 
             </x-aura::table.row>

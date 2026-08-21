@@ -44,16 +44,16 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::popover>
+                <x-aura::popover align="left" width="72">
                     <x-slot:trigger>
-                        <x-aura::button>
-                            Open
+                        <x-aura::button variant="secondary" size="sm">
+                            Filter
                         </x-aura::button>
                     </x-slot:trigger>
 
-                    <div>
-                        Content
-                    </div>
+                    <x-aura::text size="sm">
+                        Popover content.
+                    </x-aura::text>
                 </x-aura::popover>
             @endverbatim
 
@@ -62,59 +62,12 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 1. Filter Popover -->
-    <x-aura::code title="1. Filter Popover">
+    <x-aura::code title="1. Filter Popover (align=left)">
 
         <x-slot:preview>
 
-            <x-aura::popover align="left" width="72">
+            <x-aura::card size="2xl" gap="4">
 
-                <x-slot:trigger>
-
-                    <x-aura::button variant="secondary" size="sm" icon="sliders-horizontal">
-                        Filter
-                    </x-aura::button>
-
-                </x-slot:trigger>
-
-                <x-aura::flex direction="col" align="stretch" gap="3">
-
-                    <x-aura::flex align="center" justify="between" class="border-b border-zinc-100 dark:border-zinc-800 pb-2">
-
-                        <x-aura::text size="xs" weight="bold">
-                            CRITERIA
-                        </x-aura::text>
-
-                        <x-aura::badge variant="subtle" size="sm">
-                            Active
-                        </x-aura::badge>
-
-                    </x-aura::flex>
-
-                    <x-aura::flex direction="col" align="start" gap="2">
-
-                        <x-aura::checkbox label="In Stock Only" :checked="true" />
-
-                        <x-aura::checkbox label="On Sale" :checked="true" />
-
-                    </x-aura::flex>
-
-                    <x-aura::flex align="center" justify="end" gap="2" class="pt-2 border-t border-zinc-100 dark:border-zinc-800">
-
-                        <x-aura::button variant="primary" size="xs">
-                            Apply
-                        </x-aura::button>
-
-                    </x-aura::flex>
-
-                </x-aura::flex>
-
-            </x-aura::popover>
-
-        </x-slot:preview>
-
-        <x-slot:codeSlot>
-
-            @verbatim
                 <x-aura::popover align="left" width="72">
 
                     <x-slot:trigger>
@@ -127,7 +80,7 @@ class extends Component {};
 
                     <x-aura::flex direction="col" align="stretch" gap="3">
 
-                        <x-aura::flex align="center" justify="between" class="border-b border-zinc-100 dark:border-zinc-800 pb-2">
+                        <x-aura::flex align="center" justify="between">
 
                             <x-aura::text size="xs" weight="bold">
                                 CRITERIA
@@ -147,7 +100,7 @@ class extends Component {};
 
                         </x-aura::flex>
 
-                        <x-aura::flex align="center" justify="end" gap="2" class="pt-2 border-t border-zinc-100 dark:border-zinc-800">
+                        <x-aura::flex align="center" justify="end" gap="2">
 
                             <x-aura::button variant="primary" size="xs">
                                 Apply
@@ -157,6 +110,110 @@ class extends Component {};
 
                     </x-aura::flex>
 
+                </x-aura::popover>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::popover align="left" width="72">
+                    <x-slot:trigger>
+                        <x-aura::button variant="secondary" size="sm" icon="sliders-horizontal">
+                            Filter
+                        </x-aura::button>
+                    </x-slot:trigger>
+
+                    <x-aura::flex direction="col" align="stretch" gap="3">
+                        <x-aura::checkbox label="In Stock Only" :checked="true" />
+                        <x-aura::checkbox label="On Sale" :checked="true" />
+
+                        <x-aura::button variant="primary" size="xs">
+                            Apply
+                        </x-aura::button>
+                    </x-aura::flex>
+                </x-aura::popover>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 2. User Info Popover -->
+    <x-aura::code title="2. User Hover Card (align=center)">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::popover align="center" width="80">
+
+                    <x-slot:trigger>
+
+                        <x-aura::button variant="outline" size="sm" icon="user">
+                            Alex
+                        </x-aura::button>
+
+                    </x-slot:trigger>
+
+                    <x-aura::flex direction="col" gap="3">
+
+                        <x-aura::flex align="center" gap="3">
+
+                            <x-aura::avatar src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" size="md" status="online" />
+
+                            <x-aura::flex direction="col" align="start" gap="0.5">
+
+                                <x-aura::text size="sm" weight="semibold">
+                                    Alex Morgan
+                                </x-aura::text>
+
+                                <x-aura::text size="xs" variant="subtle">
+                                    Lead Design Engineer
+                                </x-aura::text>
+
+                            </x-aura::flex>
+
+                        </x-aura::flex>
+
+                        <x-aura::separator />
+
+                        <x-aura::button variant="primary" size="xs">
+                            View Profile
+                        </x-aura::button>
+
+                    </x-aura::flex>
+
+                </x-aura::popover>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::popover align="center" width="80">
+                    <x-slot:trigger>
+                        <x-aura::button variant="outline" size="sm" icon="user">
+                            Alex
+                        </x-aura::button>
+                    </x-slot:trigger>
+
+                    <x-aura::flex direction="col" gap="3">
+                        <x-aura::flex align="center" gap="3">
+                            <x-aura::avatar src="https://..." size="md" status="online" />
+                            <x-aura::text size="sm" weight="semibold">Alex Morgan</x-aura::text>
+                        </x-aura::flex>
+
+                        <x-aura::separator />
+
+                        <x-aura::button variant="primary" size="xs">
+                            View Profile
+                        </x-aura::button>
+                    </x-aura::flex>
                 </x-aura::popover>
             @endverbatim
 
@@ -207,7 +264,7 @@ class extends Component {};
                             align
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Popover panel horizontal alignment anchor relative to trigger" position="top">
+                        <x-aura::tooltip text="Horizontal anchor alignment relative to the trigger element" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -232,11 +289,11 @@ class extends Component {};
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
-                            right
+                            center
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
-                            center
+                            right
                         </x-aura::badge>
 
                     </x-aura::flex>
@@ -255,7 +312,7 @@ class extends Component {};
                             width
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Fixed Tailwind width utility constraint scale" position="top">
+                        <x-aura::tooltip text="Width dimension of the popup panel" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 

@@ -7,7 +7,10 @@ use Livewire\Attributes\Title;
 new 
 #[Layout('livewire.layout.component')] 
 #[Title('Date Picker — Aura Wire')] 
-class extends Component {};
+class extends Component {
+    public string $startDate = '2026-06-15';
+    public string $endDate = '2026-06-20';
+};
 
 ?>
 
@@ -44,7 +47,7 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::date-picker wire:model="publishDate" label="Publish Date" />
+                <x-aura::date-picker wire:model="publishDate" label="Publish Date" format="MMMM D, YYYY" />
             @endverbatim
 
         </x-slot:codeSlot>
@@ -52,13 +55,13 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 1. Default Formatted Date -->
-    <x-aura::code title="1. Date Picker">
+    <x-aura::code title="1. Standard Date Picker">
 
         <x-slot:preview>
 
             <x-aura::card size="2xl" gap="4">
 
-                <x-aura::date-picker label="Select Target Date" value="2026-05-04" name="target_date" />
+                <x-aura::date-picker label="Scheduled Launch Date" value="2026-05-04" name="launch_date" />
 
             </x-aura::card>
 
@@ -67,7 +70,100 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::date-picker label="Select Target Date" value="2026-05-04" name="target_date" />
+                <x-aura::date-picker label="Scheduled Launch Date" value="2026-05-04" name="launch_date" />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 2. Date Formatting Formats -->
+    <x-aura::code title="2. Display Formatting Variants">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex direction="col" gap="4">
+
+                    <x-aura::date-picker
+                        label="ISO Standard Format"
+                        value="2026-05-04"
+                        format="YYYY-MM-DD"
+                    />
+
+                    <x-aura::date-picker
+                        label="European Slash Format"
+                        value="2026-05-04"
+                        format="DD/MM/YYYY"
+                    />
+
+                    <x-aura::date-picker
+                        label="Abbreviated Month Format"
+                        value="2026-05-04"
+                        format="MMM D, YYYY"
+                    />
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::date-picker label="ISO Standard" value="2026-05-04" format="YYYY-MM-DD" />
+                <x-aura::date-picker label="European Slash" value="2026-05-04" format="DD/MM/YYYY" />
+                <x-aura::date-picker label="Abbreviated Month" value="2026-05-04" format="MMM D, YYYY" />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 3. Real World Date Range Form -->
+    <x-aura::code title="3. Event Schedule Range Form">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" padding="xl" gap="6">
+
+                <x-aura::heading level="3" size="md">
+                    Conference Schedule Window
+                </x-aura::heading>
+
+                <x-aura::grid cols="2" gap="4">
+
+                    <x-aura::date-picker
+                        wire:model="startDate"
+                        label="Start Date"
+                    />
+
+                    <x-aura::date-picker
+                        wire:model="endDate"
+                        label="End Date"
+                    />
+
+                </x-aura::grid>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::card size="2xl" padding="xl" gap="6">
+                    <x-aura::heading level="3" size="md">
+                        Conference Schedule Window
+                    </x-aura::heading>
+
+                    <x-aura::grid cols="2" gap="4">
+                        <x-aura::date-picker wire:model="startDate" label="Start Date" />
+                        <x-aura::date-picker wire:model="endDate" label="End Date" />
+                    </x-aura::grid>
+                </x-aura::card>
             @endverbatim
 
         </x-slot:codeSlot>
@@ -142,57 +238,15 @@ class extends Component {};
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
-                            MMM D, YYYY
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            DD-MM-YYYY
+                            YYYY-MM-DD
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
                             DD/MM/YYYY
                         </x-aura::badge>
 
-                        <x-aura::badge variant="subtle" size="md">
-                            YYYY-MM-DD
-                        </x-aura::badge>
-
                     </x-aura::flex>
 
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            placeholder
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Placeholder text when date is unselected" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="neutral" size="md">
-                        Select date...
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Placeholder string
-                    </x-aura::text>
                 </x-aura::table.cell>
 
             </x-aura::table.row>
@@ -207,7 +261,7 @@ class extends Component {};
                             label
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Field label text" position="top">
+                        <x-aura::tooltip text="Header label string for the input" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -226,74 +280,6 @@ class extends Component {};
                 <x-aura::table.cell>
                     <x-aura::text size="sm" variant="subtle">
                         Label string
-                    </x-aura::text>
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            name
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="HTML form input name attribute" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Field name string
-                    </x-aura::text>
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            value
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Initial ISO date string value" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        ISO date string (e.g. 2026-05-04)
                     </x-aura::text>
                 </x-aura::table.cell>
 

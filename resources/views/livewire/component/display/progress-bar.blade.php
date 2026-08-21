@@ -44,7 +44,7 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::progress-bar :percent="75" size="md" />
+                <x-aura::progress-bar :percent="75" size="md" variant="default" />
             @endverbatim
 
         </x-slot:codeSlot>
@@ -106,9 +106,7 @@ class extends Component {};
 
             @verbatim
                 <x-aura::flex direction="col" align="stretch" gap="1">
-
                     <x-aura::flex align="center" justify="between">
-
                         <x-aura::text size="sm" weight="medium">
                             Profile Completion
                         </x-aura::text>
@@ -116,12 +114,167 @@ class extends Component {};
                         <x-aura::text size="sm" variant="mono" weight="bold">
                             75%
                         </x-aura::text>
-
                     </x-aura::flex>
 
                     <x-aura::progress-bar :percent="75" size="md" />
+                </x-aura::flex>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 2. Sizes -->
+    <x-aura::code title="2. Size Variations">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex direction="col" align="stretch" gap="4">
+
+                    <x-aura::flex direction="col" align="stretch" gap="1">
+
+                        <x-aura::text size="xs" variant="subtle">
+                            Small (sm - 6px)
+                        </x-aura::text>
+
+                        <x-aura::progress-bar :percent="60" size="sm" />
+
+                    </x-aura::flex>
+
+                    <x-aura::flex direction="col" align="stretch" gap="1">
+
+                        <x-aura::text size="xs" variant="subtle">
+                            Medium (md - 10px)
+                        </x-aura::text>
+
+                        <x-aura::progress-bar :percent="60" size="md" />
+
+                    </x-aura::flex>
+
+                    <x-aura::flex direction="col" align="stretch" gap="1">
+
+                        <x-aura::text size="xs" variant="subtle">
+                            Large (lg - 16px)
+                        </x-aura::text>
+
+                        <x-aura::progress-bar :percent="60" size="lg" />
+
+                    </x-aura::flex>
 
                 </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::progress-bar :percent="60" size="sm" />
+                <x-aura::progress-bar :percent="60" size="md" />
+                <x-aura::progress-bar :percent="60" size="lg" />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 3. Intent Variants -->
+    <x-aura::code title="3. Status and Intent Colors">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex direction="col" align="stretch" gap="4">
+
+                    <x-aura::flex direction="col" align="stretch" gap="1">
+
+                        <x-aura::flex align="center" justify="between">
+
+                            <x-aura::text size="sm">
+                                Standard Neutral
+                            </x-aura::text>
+
+                            <x-aura::text size="xs" variant="mono">
+                                90%
+                            </x-aura::text>
+
+                        </x-aura::flex>
+
+                        <x-aura::progress-bar :percent="90" variant="default" size="md" />
+
+                    </x-aura::flex>
+
+                    <x-aura::flex direction="col" align="stretch" gap="1">
+
+                        <x-aura::flex align="center" justify="between">
+
+                            <x-aura::text size="sm">
+                                System Health (Positive)
+                            </x-aura::text>
+
+                            <x-aura::text size="xs" variant="mono">
+                                98%
+                            </x-aura::text>
+
+                        </x-aura::flex>
+
+                        <x-aura::progress-bar :percent="98" variant="positive" size="md" />
+
+                    </x-aura::flex>
+
+                    <x-aura::flex direction="col" align="stretch" gap="1">
+
+                        <x-aura::flex align="center" justify="between">
+
+                            <x-aura::text size="sm">
+                                Memory Warning
+                            </x-aura::text>
+
+                            <x-aura::text size="xs" variant="mono">
+                                82%
+                            </x-aura::text>
+
+                        </x-aura::flex>
+
+                        <x-aura::progress-bar :percent="82" variant="warning" size="md" />
+
+                    </x-aura::flex>
+
+                    <x-aura::flex direction="col" align="stretch" gap="1">
+
+                        <x-aura::flex align="center" justify="between">
+
+                            <x-aura::text size="sm">
+                                Storage Critical (Danger)
+                            </x-aura::text>
+
+                            <x-aura::text size="xs" variant="mono">
+                                95%
+                            </x-aura::text>
+
+                        </x-aura::flex>
+
+                        <x-aura::progress-bar :percent="95" variant="danger" size="md" />
+
+                    </x-aura::flex>
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::progress-bar :percent="90" variant="default" size="md" />
+                <x-aura::progress-bar :percent="98" variant="positive" size="md" />
+                <x-aura::progress-bar :percent="82" variant="warning" size="md" />
+                <x-aura::progress-bar :percent="95" variant="danger" size="md" />
             @endverbatim
 
         </x-slot:codeSlot>
@@ -171,7 +324,7 @@ class extends Component {};
                             percent
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Current numeric completion percentage (0-100)" position="top">
+                        <x-aura::tooltip text="Percentage value to fill the progress track (0-100)" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -189,7 +342,7 @@ class extends Component {};
 
                 <x-aura::table.cell>
                     <x-aura::text size="sm" variant="subtle">
-                        Numeric value between 0 and 100
+                        Numeric percentage from 0 to 100
                     </x-aura::text>
                 </x-aura::table.cell>
 
@@ -205,7 +358,7 @@ class extends Component {};
                             size
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Bar thickness height scale" position="top">
+                        <x-aura::tooltip text="Height thickness of the progress bar track" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -253,7 +406,7 @@ class extends Component {};
                             variant
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Progress fill color intent" position="top">
+                        <x-aura::tooltip text="Color tone fill for the progress bar indicator" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -281,15 +434,15 @@ class extends Component {};
                             subtle
                         </x-aura::badge>
 
-                        <x-aura::badge variant="positive" size="md">
+                        <x-aura::badge variant="subtle" size="md">
                             positive
                         </x-aura::badge>
 
-                        <x-aura::badge variant="warning" size="md">
+                        <x-aura::badge variant="subtle" size="md">
                             warning
                         </x-aura::badge>
 
-                        <x-aura::badge variant="danger" size="md">
+                        <x-aura::badge variant="subtle" size="md">
                             danger
                         </x-aura::badge>
 

@@ -9,6 +9,7 @@ new
 #[Title('Radio — Aura Wire')] 
 class extends Component {
     public string $plan = 'pro';
+    public string $billing = 'annual';
 };
 
 ?>
@@ -46,7 +47,7 @@ class extends Component {
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::radio wire:model="plan" value="pro" label="Pro Tier" />
+                <x-aura::radio wire:model="plan" value="pro" label="Pro Tier" description="$49 per month." />
             @endverbatim
 
         </x-slot:codeSlot>
@@ -54,7 +55,7 @@ class extends Component {
     </x-aura::code>
 
     <!-- 1. Basic Radio Group -->
-    <x-aura::code title="1. Radio Group">
+    <x-aura::code title="1. Basic Radio Group">
 
         <x-slot:preview>
 
@@ -66,7 +67,7 @@ class extends Component {
 
                     <x-aura::radio wire:model.live="plan" value="pro" label="Pro Tier" />
 
-                    <x-aura::radio wire:model.live="plan" value="enterprise" label="Enterprise" />
+                    <x-aura::radio wire:model.live="plan" value="enterprise" label="Enterprise Tier" />
 
                 </x-aura::flex>
 
@@ -78,14 +79,161 @@ class extends Component {
 
             @verbatim
                 <x-aura::flex direction="col" align="start" gap="2.5">
-
                     <x-aura::radio wire:model="plan" value="free" label="Free Tier" />
-
                     <x-aura::radio wire:model="plan" value="pro" label="Pro Tier" />
+                    <x-aura::radio wire:model="plan" value="enterprise" label="Enterprise Tier" />
+                </x-aura::flex>
+            @endverbatim
 
-                    <x-aura::radio wire:model="plan" value="enterprise" label="Enterprise" />
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 2. Radio with Description -->
+    <x-aura::code title="2. Radio with Description Subtitles">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex direction="col" gap="4">
+
+                    <x-aura::radio
+                        wire:model.live="plan"
+                        value="free"
+                        label="Starter Developer"
+                        description="Single user sandbox with 5k API requests monthly."
+                    />
+
+                    <x-aura::radio
+                        wire:model.live="plan"
+                        value="pro"
+                        label="Professional Team"
+                        description="Up to 10 team seats with unlimited requests and SLA."
+                    />
 
                 </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::radio
+                    wire:model="plan"
+                    value="free"
+                    label="Starter Developer"
+                    description="Single user sandbox with 5k API requests monthly."
+                />
+
+                <x-aura::radio
+                    wire:model="plan"
+                    value="pro"
+                    label="Professional Team"
+                    description="Up to 10 team seats with unlimited requests and SLA."
+                />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 3. Size Variations -->
+    <x-aura::code title="3. Size Variations">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex direction="col" gap="3">
+
+                    <x-aura::radio size="xs" label="Extra Small (size=xs)" :checked="true" name="size_demo_1" />
+
+                    <x-aura::radio size="sm" label="Standard Small (size=sm)" :checked="true" name="size_demo_2" />
+
+                    <x-aura::radio size="lg" label="Large (size=lg)" :checked="true" name="size_demo_3" />
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::radio size="xs" label="Extra Small (size=xs)" :checked="true" />
+                <x-aura::radio size="sm" label="Standard Small (size=sm)" :checked="true" />
+                <x-aura::radio size="lg" label="Large (size=lg)" :checked="true" />
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 4. Real World Billing Cycle Selection -->
+    <x-aura::code title="4. Billing Frequency Selector Card">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" padding="xl" gap="6">
+
+                <x-aura::heading level="3" size="md">
+                    Choose Billing Schedule
+                </x-aura::heading>
+
+                <x-aura::flex direction="col" gap="4">
+
+                    <x-aura::radio
+                        wire:model.live="billing"
+                        value="monthly"
+                        label="Monthly Billing"
+                        description="Billed on the 1st of each calendar month. Cancel anytime."
+                    />
+
+                    <x-aura::separator />
+
+                    <x-aura::radio
+                        wire:model.live="billing"
+                        value="annual"
+                        label="Annual Billing (Save 20%)"
+                        description="Billed upfront once per year. Includes 2 months free."
+                    />
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::card size="2xl" padding="xl" gap="6">
+                    <x-aura::heading level="3" size="md">
+                        Choose Billing Schedule
+                    </x-aura::heading>
+
+                    <x-aura::flex direction="col" gap="4">
+                        <x-aura::radio
+                            wire:model="billing"
+                            value="monthly"
+                            label="Monthly Billing"
+                            description="Billed on the 1st of each month."
+                        />
+
+                        <x-aura::separator />
+
+                        <x-aura::radio
+                            wire:model="billing"
+                            value="annual"
+                            label="Annual Billing (Save 20%)"
+                            description="Billed upfront once per year."
+                        />
+                    </x-aura::flex>
+                </x-aura::card>
             @endverbatim
 
         </x-slot:codeSlot>
@@ -153,7 +301,7 @@ class extends Component {
 
                 <x-aura::table.cell>
                     <x-aura::text size="sm" variant="subtle">
-                        Value string
+                        Value string or numeric
                     </x-aura::text>
                 </x-aura::table.cell>
 
@@ -169,7 +317,7 @@ class extends Component {
                             label
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Primary radio button label text" position="top">
+                        <x-aura::tooltip text="Primary label string for the option" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -187,7 +335,7 @@ class extends Component {
 
                 <x-aura::table.cell>
                     <x-aura::text size="sm" variant="subtle">
-                        Label text string
+                        Label string
                     </x-aura::text>
                 </x-aura::table.cell>
 
@@ -203,7 +351,7 @@ class extends Component {
                             description
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Secondary helper explanation text beneath label" position="top">
+                        <x-aura::tooltip text="Secondary explanatory text below the option label" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -221,7 +369,7 @@ class extends Component {
 
                 <x-aura::table.cell>
                     <x-aura::text size="sm" variant="subtle">
-                        Description text string
+                        Description string
                     </x-aura::text>
                 </x-aura::table.cell>
 
@@ -237,7 +385,7 @@ class extends Component {
                             size
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Radio button circle size scale" position="top">
+                        <x-aura::tooltip text="Radio circle bounding size preset" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -271,128 +419,6 @@ class extends Component {
 
                     </x-aura::flex>
 
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            checked
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Initial selected state boolean" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="neutral" size="md">
-                        false
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :wrap="true">
-
-                        <x-aura::badge variant="subtle" size="md">
-                            true
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            false
-                        </x-aura::badge>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            disabled
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Disable user interaction and lower opacity" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="neutral" size="md">
-                        false
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :wrap="true">
-
-                        <x-aura::badge variant="subtle" size="md">
-                            true
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            false
-                        </x-aura::badge>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            name
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="HTML form input name attribute" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Field name string
-                    </x-aura::text>
                 </x-aura::table.cell>
 
             </x-aura::table.row>

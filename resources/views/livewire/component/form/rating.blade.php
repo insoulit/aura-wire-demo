@@ -7,7 +7,9 @@ use Livewire\Attributes\Title;
 new 
 #[Layout('livewire.layout.component')] 
 #[Title('Rating — Aura Wire')] 
-class extends Component {};
+class extends Component {
+    public int $score = 4;
+};
 
 ?>
 
@@ -61,7 +63,7 @@ class extends Component {};
                 <x-aura::flex direction="col" align="start" gap="2">
 
                     <x-aura::label>
-                        Leave Your Rating
+                        Customer Satisfaction Score
                     </x-aura::label>
 
                     <x-aura::rating :rating="4" :max="5" name="user_feedback" size="lg" />
@@ -76,14 +78,105 @@ class extends Component {};
 
             @verbatim
                 <x-aura::flex direction="col" align="start" gap="2">
-
                     <x-aura::label>
-                        Leave Your Rating
+                        Customer Satisfaction Score
                     </x-aura::label>
 
                     <x-aura::rating :rating="4" :max="5" name="user_feedback" size="lg" />
+                </x-aura::flex>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 2. Read Only Product Review Score -->
+    <x-aura::code title="2. Read Only Review Score with Half Star">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex align="center" gap="3">
+
+                    <x-aura::rating :rating="4.5" :max="5" :readonly="true" size="md" />
+
+                    <x-aura::text size="sm" weight="bold">
+                        4.5
+                    </x-aura::text>
+
+                    <x-aura::text size="xs" variant="subtle">
+                        (284 verified reviews)
+                    </x-aura::text>
 
                 </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::flex align="center" gap="3">
+                    <x-aura::rating :rating="4.5" :max="5" :readonly="true" size="md" />
+
+                    <x-aura::text size="sm" weight="bold">
+                        4.5
+                    </x-aura::text>
+
+                    <x-aura::text size="xs" variant="subtle">
+                        (284 verified reviews)
+                    </x-aura::text>
+                </x-aura::flex>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 3. Size Variations -->
+    <x-aura::code title="3. Size Variations">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex direction="col" gap="4">
+
+                    <x-aura::flex align="center" gap="4">
+                        <x-aura::text size="xs" variant="subtle" class="w-20">Small (sm):</x-aura::text>
+                        <x-aura::rating :rating="5" :readonly="true" size="sm" />
+                    </x-aura::flex>
+
+                    <x-aura::flex align="center" gap="4">
+                        <x-aura::text size="xs" variant="subtle" class="w-20">Medium (md):</x-aura::text>
+                        <x-aura::rating :rating="5" :readonly="true" size="md" />
+                    </x-aura::flex>
+
+                    <x-aura::flex align="center" gap="4">
+                        <x-aura::text size="xs" variant="subtle" class="w-20">Large (lg):</x-aura::text>
+                        <x-aura::rating :rating="5" :readonly="true" size="lg" />
+                    </x-aura::flex>
+
+                    <x-aura::flex align="center" gap="4">
+                        <x-aura::text size="xs" variant="subtle" class="w-20">Extra (xl):</x-aura::text>
+                        <x-aura::rating :rating="5" :readonly="true" size="xl" />
+                    </x-aura::flex>
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::rating :rating="5" :readonly="true" size="sm" />
+                <x-aura::rating :rating="5" :readonly="true" size="md" />
+                <x-aura::rating :rating="5" :readonly="true" size="lg" />
+                <x-aura::rating :rating="5" :readonly="true" size="xl" />
             @endverbatim
 
         </x-slot:codeSlot>
@@ -150,35 +243,9 @@ class extends Component {};
                 </x-aura::table.cell>
 
                 <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :wrap="true">
-
-                        <x-aura::badge variant="subtle" size="md">
-                            0
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            1
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            2
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            3
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            4
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            5
-                        </x-aura::badge>
-
-                    </x-aura::flex>
-
+                    <x-aura::text size="sm" variant="subtle">
+                        Numeric value (0 to max)
+                    </x-aura::text>
                 </x-aura::table.cell>
 
             </x-aura::table.row>
@@ -193,7 +260,7 @@ class extends Component {};
                             max
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Total number of rating stars" position="top">
+                        <x-aura::tooltip text="Maximum star count" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -210,71 +277,9 @@ class extends Component {};
                 </x-aura::table.cell>
 
                 <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :wrap="true">
-
-                        <x-aura::badge variant="subtle" size="md">
-                            5
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            10
-                        </x-aura::badge>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            size
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Star icon scale and dimensional sizing" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="neutral" size="md">
-                        md
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :wrap="true">
-
-                        <x-aura::badge variant="subtle" size="md">
-                            sm
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            md
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            lg
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            xl
-                        </x-aura::badge>
-
-                    </x-aura::flex>
-
+                    <x-aura::text size="sm" variant="subtle">
+                        Positive integer
+                    </x-aura::text>
                 </x-aura::table.cell>
 
             </x-aura::table.row>
@@ -289,7 +294,7 @@ class extends Component {};
                             readonly
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Render as static display indicator without click interaction" position="top">
+                        <x-aura::tooltip text="Disable hover effects and click selection" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -330,10 +335,10 @@ class extends Component {};
                     <x-aura::flex align="center" gap="1.5" :inline="true">
 
                         <x-aura::text variant="mono" size="sm" weight="semibold">
-                            name
+                            size
                         </x-aura::text>
 
-                        <x-aura::tooltip text="HTML form input name attribute" position="top">
+                        <x-aura::tooltip text="Star icon bounding dimensions" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -344,15 +349,33 @@ class extends Component {};
                 </x-aura::table.cell>
 
                 <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
+                    <x-aura::badge variant="neutral" size="md">
+                        md
                     </x-aura::badge>
                 </x-aura::table.cell>
 
                 <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Field name string
-                    </x-aura::text>
+
+                    <x-aura::flex align="center" gap="1.5" :wrap="true">
+
+                        <x-aura::badge variant="subtle" size="md">
+                            sm
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            md
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            lg
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            xl
+                        </x-aura::badge>
+
+                    </x-aura::flex>
+
                 </x-aura::table.cell>
 
             </x-aura::table.row>

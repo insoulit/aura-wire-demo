@@ -57,7 +57,7 @@ class extends Component {};
     </x-aura::code>
 
     <!-- 1. Centered Content Example -->
-    <x-aura::code title="1. Centered Content Box">
+    <x-aura::code title="1. Centered Status Notice">
 
         <x-slot:preview>
 
@@ -65,10 +65,10 @@ class extends Component {};
 
                 <x-aura::center gap="2">
 
-                    <x-aura::icon name="check" size="sm" />
+                    <x-aura::icon name="check-circle-2" size="sm" />
 
                     <x-aura::text size="sm" weight="medium">
-                        All changes synchronized
+                        All cloud changes synchronized
                     </x-aura::text>
 
                 </x-aura::center>
@@ -81,13 +81,97 @@ class extends Component {};
 
             @verbatim
                 <x-aura::center gap="2">
-
-                    <x-aura::icon name="check" size="sm" />
-
+                    <x-aura::icon name="check-circle-2" size="sm" />
                     <x-aura::text size="sm" weight="medium">
-                        All changes synchronized
+                        All cloud changes synchronized
+                    </x-aura::text>
+                </x-aura::center>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 2. Inline Centered Badge -->
+    <x-aura::code title="2. Inline Centered Badge Element">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::flex align="center" gap="3">
+
+                    <x-aura::text size="sm">
+                        System status:
                     </x-aura::text>
 
+                    <x-aura::center :inline="true" gap="1.5">
+
+                        <x-aura::badge variant="neutral" size="sm">
+                            Online
+                        </x-aura::badge>
+
+                    </x-aura::center>
+
+                </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::center :inline="true" gap="1.5">
+                    <x-aura::badge variant="neutral" size="sm">
+                        Online
+                    </x-aura::badge>
+                </x-aura::center>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 3. Vertical Stack Center -->
+    <x-aura::code title="3. Vertical Centered Action Box">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" padding="xl" gap="4">
+
+                <x-aura::center gap="4">
+
+                    <x-aura::flex direction="col" align="center" gap="2" class="text-center">
+
+                        <x-aura::heading level="3" size="md">
+                            Ready to deploy?
+                        </x-aura::heading>
+
+                        <x-aura::text size="sm" variant="subtle">
+                            Instant zero downtime deployments with rollback support.
+                        </x-aura::text>
+
+                        <x-aura::button variant="primary" size="sm">
+                            Deploy
+                        </x-aura::button>
+
+                    </x-aura::flex>
+
+                </x-aura::center>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::center gap="4">
+                    <x-aura::flex direction="col" align="center" gap="2" class="text-center">
+                        <x-aura::heading level="3" size="md">Ready to deploy?</x-aura::heading>
+                        <x-aura::button variant="primary" size="sm">Deploy</x-aura::button>
+                    </x-aura::flex>
                 </x-aura::center>
             @endverbatim
 
@@ -138,7 +222,7 @@ class extends Component {};
                             inline
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Render with inline-flex display instead of full-width flex" position="top">
+                        <x-aura::tooltip text="Render as inline flex instead of block flex" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -179,174 +263,10 @@ class extends Component {};
                     <x-aura::flex align="center" gap="1.5" :inline="true">
 
                         <x-aura::text variant="mono" size="sm" weight="semibold">
-                            direction
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Flex axis orientation for nested children" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="neutral" size="md">
-                        row
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :wrap="true">
-
-                        <x-aura::badge variant="subtle" size="md">
-                            row
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            col
-                        </x-aura::badge>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
                             gap
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Spacing gap between centered children elements" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :wrap="true">
-
-                        <x-aura::badge variant="subtle" size="md">
-                            1
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            2
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            3
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            4
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            6
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            8
-                        </x-aura::badge>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            size
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Container max-width boundary constrain preset" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :wrap="true">
-
-                        <x-aura::badge variant="subtle" size="md">
-                            sm
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            md
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            lg
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            xl
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            2xl
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            full
-                        </x-aura::badge>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
-                            as
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="HTML markup element tag to render" position="top">
+                        <x-aura::tooltip text="Spacing between child items" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -358,32 +278,14 @@ class extends Component {};
 
                 <x-aura::table.cell>
                     <x-aura::badge variant="neutral" size="md">
-                        div
+                        0
                     </x-aura::badge>
                 </x-aura::table.cell>
 
                 <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :wrap="true">
-
-                        <x-aura::badge variant="subtle" size="md">
-                            div
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            section
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            article
-                        </x-aura::badge>
-
-                        <x-aura::badge variant="subtle" size="md">
-                            main
-                        </x-aura::badge>
-
-                    </x-aura::flex>
-
+                    <x-aura::text size="sm" variant="subtle">
+                        Spacing scale (0, 1, 2, 3, 4, 6, 8)
+                    </x-aura::text>
                 </x-aura::table.cell>
 
             </x-aura::table.row>

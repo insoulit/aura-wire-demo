@@ -44,15 +44,19 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::empty-state icon="folder-open" title="No Projects Found" description="Get started by creating a new project." />
+                <x-aura::empty-state icon="folder-open" title="No Projects Found" description="Get started by creating a new project.">
+                    <x-aura::button variant="primary" size="sm">
+                        Create
+                    </x-aura::button>
+                </x-aura::empty-state>
             @endverbatim
 
         </x-slot:codeSlot>
 
     </x-aura::code>
 
-    <!-- 1. Standard Empty State -->
-    <x-aura::code title="1. Standard Zero State">
+    <!-- 1. Standard Empty State with Actions -->
+    <x-aura::code title="1. Project Creation Zero State">
 
         <x-slot:preview>
 
@@ -61,7 +65,7 @@ class extends Component {};
                 <x-aura::empty-state 
                     icon="folder-open"
                     title="No Projects Found" 
-                    description="You haven't created any workspace projects yet. Get started by creating your first project."
+                    description="You have not created any workspace projects yet. Get started by creating your first project."
                 >
 
                     <x-aura::flex align="center" gap="2.5">
@@ -88,11 +92,9 @@ class extends Component {};
                 <x-aura::empty-state 
                     icon="folder-open"
                     title="No Projects Found" 
-                    description="You haven't created any workspace projects yet. Get started by creating your first project."
+                    description="You have not created any workspace projects yet. Get started by creating your first project."
                 >
-
                     <x-aura::flex align="center" gap="2.5">
-
                         <x-aura::button variant="secondary" size="sm">
                             Templates
                         </x-aura::button>
@@ -100,10 +102,80 @@ class extends Component {};
                         <x-aura::button variant="primary" size="sm" icon="plus">
                             Create
                         </x-aura::button>
-
                     </x-aura::flex>
+                </x-aura::empty-state>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 2. Search Filter Empty State -->
+    <x-aura::code title="2. Search Filter No Results">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::empty-state 
+                    icon="search"
+                    title="No Matches Found" 
+                    description="We could not find any records matching your search criteria. Try adjusting keywords or clearing active filters."
+                >
+
+                    <x-aura::button variant="outline" size="sm" icon="rotate-ccw">
+                        Reset
+                    </x-aura::button>
 
                 </x-aura::empty-state>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::empty-state 
+                    icon="search"
+                    title="No Matches Found" 
+                    description="We could not find any records matching your search criteria. Try adjusting keywords or clearing active filters."
+                >
+                    <x-aura::button variant="outline" size="sm" icon="rotate-ccw">
+                        Reset
+                    </x-aura::button>
+                </x-aura::empty-state>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- 3. Minimal Informational State -->
+    <x-aura::code title="3. Minimal Placeholder">
+
+        <x-slot:preview>
+
+            <x-aura::card size="2xl" gap="4">
+
+                <x-aura::empty-state 
+                    icon="inbox"
+                    title="All Caught Up" 
+                    description="You have zero unread notifications in your personal queue."
+                />
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::empty-state 
+                    icon="inbox"
+                    title="All Caught Up" 
+                    description="You have zero unread notifications in your personal queue."
+                />
             @endverbatim
 
         </x-slot:codeSlot>
@@ -150,44 +222,10 @@ class extends Component {};
                     <x-aura::flex align="center" gap="1.5" :inline="true">
 
                         <x-aura::text variant="mono" size="sm" weight="semibold">
-                            icon
-                        </x-aura::text>
-
-                        <x-aura::tooltip text="Centered illustration icon name from icon suite" position="top">
-
-                            <x-aura::icon name="info" size="xs" />
-
-                        </x-aura::tooltip>
-
-                    </x-aura::flex>
-
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::badge variant="subtle" size="md">
-                        null
-                    </x-aura::badge>
-                </x-aura::table.cell>
-
-                <x-aura::table.cell>
-                    <x-aura::text size="sm" variant="subtle">
-                        Icon name string
-                    </x-aura::text>
-                </x-aura::table.cell>
-
-            </x-aura::table.row>
-
-            <x-aura::table.row>
-
-                <x-aura::table.cell>
-
-                    <x-aura::flex align="center" gap="1.5" :inline="true">
-
-                        <x-aura::text variant="mono" size="sm" weight="semibold">
                             title
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Primary empty state header title" position="top">
+                        <x-aura::tooltip text="Headline message text for the empty state" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -221,7 +259,7 @@ class extends Component {};
                             description
                         </x-aura::text>
 
-                        <x-aura::tooltip text="Secondary explanatory message paragraph" position="top">
+                        <x-aura::tooltip text="Explanatory body subtitle text" position="top">
 
                             <x-aura::icon name="info" size="xs" />
 
@@ -240,6 +278,40 @@ class extends Component {};
                 <x-aura::table.cell>
                     <x-aura::text size="sm" variant="subtle">
                         Description string
+                    </x-aura::text>
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            icon
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Lucide icon name string or custom icon slot" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="subtle" size="md">
+                        null
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::text size="sm" variant="subtle">
+                        Icon name string or HTML slot
                     </x-aura::text>
                 </x-aura::table.cell>
 
