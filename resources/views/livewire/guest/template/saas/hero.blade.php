@@ -49,7 +49,7 @@ new class extends Component {};
             <!-- Social Proof & Team Avatars -->
             <x-aura::flex align="center" justify="center" gap="3">
 
-                <div class="flex -space-x-2 overflow-hidden">
+                <x-aura::flex align="center" gap="1">
 
                     <x-aura::avatar initials="JD" size="sm" />
 
@@ -59,7 +59,7 @@ new class extends Component {};
 
                     <x-aura::avatar initials="SL" size="sm" />
 
-                </div>
+                </x-aura::flex>
 
                 <x-aura::text size="sm" variant="subtle">
                     Trusted by over 12,000+ engineering teams worldwide
@@ -77,19 +77,9 @@ new class extends Component {};
 
                 <x-aura::flex align="center" width="auto" gap="3">
 
-                    <div class="flex gap-1.5">
-
-                        <span class="w-3 h-3 rounded-full bg-zinc-300 dark:bg-zinc-700 inline-block"></span>
-
-                        <span class="w-3 h-3 rounded-full bg-zinc-300 dark:bg-zinc-700 inline-block"></span>
-
-                        <span class="w-3 h-3 rounded-full bg-zinc-300 dark:bg-zinc-700 inline-block"></span>
-
-                    </div>
-
-                    <span class="text-xs font-mono text-zinc-500 dark:text-zinc-400">
-                        live-cluster-production-us-east.aura
-                    </span>
+                    <x-aura::tag variant="neutral" size="sm">
+                        Cluster Production US East
+                    </x-aura::tag>
 
                 </x-aura::flex>
 

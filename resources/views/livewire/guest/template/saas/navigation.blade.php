@@ -17,7 +17,9 @@ new class extends Component {};
                 Back
             </x-aura::button>
 
-            <span class="text-zinc-300 dark:text-zinc-700">/</span>
+            <x-aura::text variant="subtle">
+                /
+            </x-aura::text>
 
             <x-aura::badge variant="neutral" size="sm">
                 SaaS Platform UI Kit

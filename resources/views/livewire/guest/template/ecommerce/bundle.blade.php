@@ -61,24 +61,20 @@ new class extends Component {
         </x-aura::flex>
 
         <!-- 2-Column Split: Items List on Left, Valuation Card on Right -->
-        <x-aura::grid cols="1" lg="12" gap="8">
+        <x-aura::grid cols="1" lg="2" gap="8">
 
-            <!-- Left: Included Hardware Items (7 Columns) -->
-            <div class="lg:col-span-7 flex flex-col gap-4">
+            <!-- Left: Included Hardware Items -->
+            <x-aura::flex direction="col" gap="4">
 
                 @foreach ($this->items() as $index => $item)
 
-                    <div class="p-5 rounded-2xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200/80 dark:border-zinc-800 transition-colors">
+                    <x-aura::card padding="md" divided="false">
 
                         <x-aura::flex align="center" justify="between" gap="4">
 
                             <x-aura::flex align="center" gap="4">
 
-                                <div class="w-14 h-14 shrink-0 flex items-center justify-center rounded-xl bg-white dark:bg-zinc-800/80 border border-zinc-200/70 dark:border-zinc-700/60 shadow-2xs">
-
-                                    <x-aura::icon :name="$item['icon']" size="md" />
-
-                                </div>
+                                <x-aura::icon :name="$item['icon']" size="lg" :container="true" />
 
                                 <x-aura::flex direction="col" gap="none">
 
@@ -108,12 +104,12 @@ new class extends Component {
 
                         </x-aura::flex>
 
-                    </div>
+                    </x-aura::card>
 
                 @endforeach
 
                 <!-- Free Gift Bonus Callout -->
-                <div class="p-4 rounded-2xl bg-zinc-100/70 dark:bg-zinc-900/30 border border-dashed border-zinc-300 dark:border-zinc-700">
+                <x-aura::card padding="sm" divided="false">
 
                     <x-aura::flex align="center" justify="between" gap="3">
 
@@ -133,91 +129,87 @@ new class extends Component {
 
                     </x-aura::flex>
 
-                </div>
+                </x-aura::card>
 
-            </div>
+            </x-aura::flex>
 
-            <!-- Right: Valuation & Bundle Action Card (5 Columns) -->
-            <div class="lg:col-span-5 flex flex-col">
+            <!-- Right: Valuation & Bundle Action Card -->
+            <x-aura::card padding="lg" gap="6">
 
-                <x-aura::card padding="lg" gap="6">
+                <x-aura::flex align="center" justify="between">
 
-                    <x-aura::flex align="center" justify="between">
+                    <x-aura::kicker>
+                        BUNDLE VALUATION
+                    </x-aura::kicker>
 
-                        <x-aura::kicker>
-                            BUNDLE VALUATION
-                        </x-aura::kicker>
+                    <x-aura::badge variant="neutral" size="sm">
+                        Save $140
+                    </x-aura::badge>
 
-                        <x-aura::badge variant="neutral" size="sm">
-                            Save $140
-                        </x-aura::badge>
+                </x-aura::flex>
 
-                    </x-aura::flex>
+                <x-aura::flex direction="col" gap="1">
 
-                    <x-aura::flex direction="col" gap="1">
+                    <x-aura::flex align="baseline" gap="3">
 
-                        <x-aura::flex align="baseline" gap="3">
+                        <x-aura::heading level="3" size="2xl">
+                            $477.00
+                        </x-aura::heading>
 
-                            <x-aura::heading level="3" size="2xl">
-                                $477.00
-                            </x-aura::heading>
-
-                            <x-aura::text size="lg" variant="subtle">
-                                <del>$617.00</del>
-                            </x-aura::text>
-
-                        </x-aura::flex>
-
-                        <x-aura::text size="sm" variant="subtle">
-                            Complete studio setup with direct savings applied
+                        <x-aura::text size="lg" variant="subtle">
+                            <del>$617.00</del>
                         </x-aura::text>
 
                     </x-aura::flex>
 
-                    <x-aura::separator />
+                    <x-aura::text size="sm" variant="subtle">
+                        Complete studio setup with direct savings applied
+                    </x-aura::text>
 
-                    <!-- Guarantees List -->
-                    <x-aura::flex direction="col" gap="3">
+                </x-aura::flex>
 
-                        <x-aura::flex align="center" gap="2.5">
+                <x-aura::separator />
 
-                            <x-aura::icon name="check" size="sm" />
+                <!-- Guarantees List -->
+                <x-aura::flex direction="col" gap="3">
 
-                            <x-aura::text size="sm">
-                                Lifetime hardware coverage
-                            </x-aura::text>
+                    <x-aura::flex align="center" gap="2.5">
 
-                        </x-aura::flex>
+                        <x-aura::icon name="check" size="sm" />
 
-                        <x-aura::flex align="center" gap="2.5">
-
-                            <x-aura::icon name="check" size="sm" />
-
-                            <x-aura::text size="sm">
-                                30 day risk free studio test
-                            </x-aura::text>
-
-                        </x-aura::flex>
-
-                        <x-aura::flex align="center" gap="2.5">
-
-                            <x-aura::icon name="check" size="sm" />
-
-                            <x-aura::text size="sm">
-                                Carbon neutral global shipping
-                            </x-aura::text>
-
-                        </x-aura::flex>
+                        <x-aura::text size="sm">
+                            Lifetime hardware coverage
+                        </x-aura::text>
 
                     </x-aura::flex>
 
-                    <x-aura::button wire:click="addBundle" variant="primary" size="lg" block="true" icon="sparkles">
-                        Bundle
-                    </x-aura::button>
+                    <x-aura::flex align="center" gap="2.5">
 
-                </x-aura::card>
+                        <x-aura::icon name="check" size="sm" />
 
-            </div>
+                        <x-aura::text size="sm">
+                            30 day risk free studio test
+                        </x-aura::text>
+
+                    </x-aura::flex>
+
+                    <x-aura::flex align="center" gap="2.5">
+
+                        <x-aura::icon name="check" size="sm" />
+
+                        <x-aura::text size="sm">
+                            Carbon neutral global shipping
+                        </x-aura::text>
+
+                    </x-aura::flex>
+
+                </x-aura::flex>
+
+                <x-aura::button wire:click="addBundle" variant="primary" size="lg" block="true" icon="sparkles">
+                    Bundle
+                </x-aura::button>
+
+            </x-aura::card>
 
         </x-aura::grid>
 

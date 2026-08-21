@@ -134,9 +134,9 @@ new class extends Component {
                             {{ $dish['name'] }}
                         </x-aura::heading>
 
-                        <div class="font-bold text-zinc-900 dark:text-white font-mono text-lg shrink-0">
+                        <x-aura::heading level="4" size="lg">
                             {{ $dish['price'] }}
-                        </div>
+                        </x-aura::heading>
 
                     </x-aura::flex>
 

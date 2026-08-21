@@ -11,7 +11,7 @@ class extends Component {};
 
 ?>
 
-<x-aura::container size="4xl" gap="6" class="py-6">
+<x-aura::container size="4xl" gap="6">
 
     <!-- Top Header -->
     <x-aura::flex justify="between" gap="4">
@@ -43,7 +43,7 @@ class extends Component {};
 
         <x-slot:preview>
 
-            <x-aura::flex direction="col" gap="6" class="w-full">
+            <x-aura::flex direction="col" gap="6">
 
                 <!-- 3 Metric Summary Cards -->
                 <x-aura::grid cols="1" sm="3" gap="4">
@@ -54,11 +54,11 @@ class extends Component {};
                             Gross Monthly Sales
                         </x-aura::kicker>
 
-                        <x-aura::heading level="3" size="lg" class="font-mono">
+                        <x-aura::heading level="3" size="lg">
                             $84,120.00
                         </x-aura::heading>
 
-                        <x-aura::flex align="center" gap="1" class="pt-1">
+                        <x-aura::flex align="center" gap="1">
 
                             <x-aura::tag variant="neutral" size="sm">
                                 +18.4%
@@ -74,11 +74,11 @@ class extends Component {};
                             Active Team Members
                         </x-aura::kicker>
 
-                        <x-aura::heading level="3" size="lg" class="font-mono">
+                        <x-aura::heading level="3" size="lg">
                             42 Active
                         </x-aura::heading>
 
-                        <x-aura::flex align="center" gap="1.5" class="pt-1">
+                        <x-aura::flex align="center" gap="1.5">
 
                             <x-aura::avatar initials="AM" status="online" size="xs" />
 
@@ -96,11 +96,11 @@ class extends Component {};
                             Cluster Infrastructure
                         </x-aura::kicker>
 
-                        <x-aura::heading level="3" size="lg" class="font-mono">
+                        <x-aura::heading level="3" size="lg">
                             99.98% SLA
                         </x-aura::heading>
 
-                        <x-aura::flex align="center" gap="1" class="pt-1">
+                        <x-aura::flex align="center" gap="1">
 
                             <x-aura::tag variant="neutral" size="sm">
                                 Operational
@@ -115,7 +115,7 @@ class extends Component {};
                 <!-- Server Resource Gauge Card -->
                 <x-aura::card title="Infrastructure Load and Capacity">
 
-                    <x-aura::flex direction="col" gap="4" class="pt-1">
+                    <x-aura::flex direction="col" gap="4">
 
                         <x-aura::flex direction="col" gap="1.5">
 
@@ -125,7 +125,7 @@ class extends Component {};
                                     CPU Cluster Utilization
                                 </x-aura::text>
 
-                                <x-aura::text size="sm" variant="subtle" class="font-mono">
+                                <x-aura::text size="sm" variant="subtle">
                                     38%
                                 </x-aura::text>
 
@@ -143,7 +143,7 @@ class extends Component {};
                                     Memory Quota
                                 </x-aura::text>
 
-                                <x-aura::text size="sm" variant="subtle" class="font-mono">
+                                <x-aura::text size="sm" variant="subtle">
                                     72%
                                 </x-aura::text>
 
@@ -176,14 +176,14 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::flex direction="col" gap="6" class="w-full">
+                <x-aura::flex direction="col" gap="6">
                     <!-- 3 Metric Summary Cards -->
                     <x-aura::grid cols="1" sm="3" gap="4">
                         <x-aura::card gap="2">
                             <x-aura::kicker>
                                 Gross Monthly Sales
                             </x-aura::kicker>
-                            <x-aura::heading level="3" size="lg" class="font-mono">
+                            <x-aura::heading level="3" size="lg">
                                 $84,120.00
                             </x-aura::heading>
                             <x-aura::tag variant="neutral" size="sm">
@@ -195,7 +195,7 @@ class extends Component {};
                             <x-aura::kicker>
                                 Active Team Members
                             </x-aura::kicker>
-                            <x-aura::heading level="3" size="lg" class="font-mono">
+                            <x-aura::heading level="3" size="lg">
                                 42 Active
                             </x-aura::heading>
                             <x-aura::flex align="center" gap="1.5">
@@ -208,7 +208,7 @@ class extends Component {};
                             <x-aura::kicker>
                                 Cluster Infrastructure
                             </x-aura::kicker>
-                            <x-aura::heading level="3" size="lg" class="font-mono">
+                            <x-aura::heading level="3" size="lg">
                                 99.98% SLA
                             </x-aura::heading>
                             <x-aura::tag variant="neutral" size="sm">
@@ -225,7 +225,7 @@ class extends Component {};
                                     <x-aura::text size="sm" weight="semibold">
                                         CPU Cluster Utilization
                                     </x-aura::text>
-                                    <x-aura::text size="sm" variant="subtle" class="font-mono">
+                                    <x-aura::text size="sm" variant="subtle">
                                         38%
                                     </x-aura::text>
                                 </x-aura::flex>
@@ -237,7 +237,7 @@ class extends Component {};
                                     <x-aura::text size="sm" weight="semibold">
                                         Memory Quota
                                     </x-aura::text>
-                                    <x-aura::text size="sm" variant="subtle" class="font-mono">
+                                    <x-aura::text size="sm" variant="subtle">
                                         72%
                                     </x-aura::text>
                                 </x-aura::flex>

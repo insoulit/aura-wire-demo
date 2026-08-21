@@ -236,11 +236,15 @@ new class extends Component {
                     </x-aura::flex>
 
                     <!-- Product Mockup Visual Stage -->
-                    <div class="h-44 flex items-center justify-center rounded-2xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-100 dark:border-zinc-800/80 transition-colors">
+                    <x-aura::card padding="xl" divided="false">
 
-                        <x-aura::icon :name="$product['icon']" size="xl" />
+                        <x-aura::center>
 
-                    </div>
+                            <x-aura::icon :name="$product['icon']" size="2xl" :container="true" />
+
+                        </x-aura::center>
+
+                    </x-aura::card>
 
                     <!-- Category & Review Rating Row -->
                     <x-aura::flex align="center" justify="between">

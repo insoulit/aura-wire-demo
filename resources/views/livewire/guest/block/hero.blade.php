@@ -11,7 +11,7 @@ class extends Component {};
 
 ?>
 
-<x-aura::container size="4xl" gap="6" class="py-6">
+<x-aura::container size="4xl" gap="6">
 
     <!-- Top Header -->
     <x-aura::flex justify="between" gap="4">
@@ -43,53 +43,24 @@ class extends Component {};
 
         <x-slot:preview>
 
-            <x-aura::flex direction="col" align="center" justify="center" gap="4" class="w-full py-8 text-center">
+            <x-aura::card padding="xl" gap="6">
 
-                <x-aura::kicker>
-                    Next Gen Component Library
-                </x-aura::kicker>
+                <x-aura::flex direction="col" align="center" justify="center" gap="4">
 
-                <x-aura::display size="sm">
-                    Build Stunning Web Interfaces in Seconds
-                </x-aura::display>
-
-                <x-aura::subheading size="md">
-                    Production ready, ultra accessible Blade and Livewire components crafted for modern Laravel applications.
-                </x-aura::subheading>
-
-                <x-aura::flex align="center" justify="center" gap="3" wrap="true" class="pt-2">
-
-                    <x-aura::button variant="primary" size="md">
-                        Start
-                    </x-aura::button>
-
-                    <x-aura::button variant="outline" size="md">
-                        Explore
-                    </x-aura::button>
-
-                </x-aura::flex>
-
-            </x-aura::flex>
-
-        </x-slot:preview>
-
-        <x-slot:codeSlot>
-
-            @verbatim
-                <x-aura::flex direction="col" align="center" justify="center" gap="4" class="w-full py-8 text-center">
                     <x-aura::kicker>
                         Next Gen Component Library
                     </x-aura::kicker>
 
-                    <x-aura::display size="sm">
+                    <x-aura::display size="sm" align="center">
                         Build Stunning Web Interfaces in Seconds
                     </x-aura::display>
 
-                    <x-aura::subheading size="md">
-                        Production ready components for modern Laravel applications.
+                    <x-aura::subheading size="md" align="center">
+                        Production ready, ultra accessible Blade and Livewire components crafted for modern Laravel applications.
                     </x-aura::subheading>
 
-                    <x-aura::flex align="center" justify="center" gap="3" wrap="true" class="pt-2">
+                    <x-aura::flex align="center" justify="center" gap="3" wrap="true">
+
                         <x-aura::button variant="primary" size="md">
                             Start
                         </x-aura::button>
@@ -97,8 +68,43 @@ class extends Component {};
                         <x-aura::button variant="outline" size="md">
                             Explore
                         </x-aura::button>
+
                     </x-aura::flex>
+
                 </x-aura::flex>
+
+            </x-aura::card>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::card padding="xl" gap="6">
+                    <x-aura::flex direction="col" align="center" justify="center" gap="4">
+                        <x-aura::kicker>
+                            Next Gen Component Library
+                        </x-aura::kicker>
+
+                        <x-aura::display size="sm" align="center">
+                            Build Stunning Web Interfaces in Seconds
+                        </x-aura::display>
+
+                        <x-aura::subheading size="md" align="center">
+                            Production ready components for modern Laravel applications.
+                        </x-aura::subheading>
+
+                        <x-aura::flex align="center" justify="center" gap="3" wrap="true">
+                            <x-aura::button variant="primary" size="md">
+                                Start
+                            </x-aura::button>
+
+                            <x-aura::button variant="outline" size="md">
+                                Explore
+                            </x-aura::button>
+                        </x-aura::flex>
+                    </x-aura::flex>
+                </x-aura::card>
             @endverbatim
 
         </x-slot:codeSlot>

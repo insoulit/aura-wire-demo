@@ -11,7 +11,7 @@ class extends Component {};
 
 ?>
 
-<x-aura::container size="4xl" gap="6" class="py-6">
+<x-aura::container size="4xl" gap="6">
 
     <!-- Top Header -->
     <x-aura::flex justify="between" gap="4">
@@ -43,18 +43,16 @@ class extends Component {};
 
         <x-slot:preview>
 
-            <x-aura::card>
+            <x-aura::card padding="md">
 
                 <x-aura::flex align="center" justify="between" gap="4">
 
                     <!-- Brand & Desktop Navigation -->
-                    <x-aura::flex align="center" gap="6" class="min-w-0">
+                    <x-aura::flex align="center" width="auto" gap="6">
 
-                        <x-aura::flex align="center" gap="2.5" class="shrink-0">
+                        <x-aura::flex align="center" width="auto" gap="2.5">
 
-                            <div class="h-8 w-8 rounded-lg bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 flex items-center justify-center font-bold font-mono text-xs shadow-2xs shrink-0">
-                                AW
-                            </div>
+                            <x-aura::avatar initials="AW" size="sm" />
 
                             <x-aura::heading level="3" size="sm">
                                 Aura Wire
@@ -62,21 +60,30 @@ class extends Component {};
 
                         </x-aura::flex>
 
-                        <nav class="hidden lg:flex items-center gap-5 text-sm font-medium text-zinc-500 dark:text-zinc-400 shrink-0">
-                            <a href="/guest#design-block" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Components</a>
-                            <a href="/guest#design-block" class="text-zinc-900 dark:text-white font-semibold">Design Blocks</a>
-                            <a href="/guest#full-template" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Templates</a>
-                            <a href="/components/installation" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Docs</a>
-                        </nav>
+                        <x-aura::flex align="center" width="auto" gap="4">
+
+                            <x-aura::link href="/guest#design-block" size="sm" variant="subtle">
+                                Components
+                            </x-aura::link>
+
+                            <x-aura::link href="/guest#design-block" size="sm">
+                                Blocks
+                            </x-aura::link>
+
+                            <x-aura::link href="/guest#full-template" size="sm" variant="subtle">
+                                Templates
+                            </x-aura::link>
+
+                            <x-aura::link href="/components/installation" size="sm" variant="subtle">
+                                Documentation
+                            </x-aura::link>
+
+                        </x-aura::flex>
 
                     </x-aura::flex>
 
                     <!-- Right Controls & Actions -->
-                    <x-aura::flex align="center" justify="end" gap="2.5" class="shrink-0 whitespace-nowrap">
-
-                        <div class="hidden xl:block w-36 shrink-0">
-                            <x-aura::input placeholder="Search..." icon="search" size="sm" />
-                        </div>
+                    <x-aura::flex align="center" width="auto" gap="2.5">
 
                         <x-aura::button variant="secondary" size="sm">
                             Login
@@ -86,7 +93,7 @@ class extends Component {};
                             Start
                         </x-aura::button>
 
-                        <x-aura::icon-button icon="menu" variant="ghost" size="sm" label="Toggle navigation menu" />
+                        <x-aura::icon-button icon="menu" variant="ghost" size="sm" label="Menu" />
 
                     </x-aura::flex>
 
@@ -99,24 +106,24 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::card>
+                <x-aura::card padding="md">
                     <x-aura::flex align="center" justify="between" gap="4">
-                        <x-aura::flex align="center" gap="6">
-                            <div class="flex items-center gap-2.5">
-                                <div class="h-8 w-8 rounded-lg bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 flex items-center justify-center font-bold font-mono text-xs">
-                                    AW
-                                </div>
-                                <x-aura::heading level="3" size="sm">
-                                    Aura Wire
-                                </x-aura::heading>
-                            </div>
-                            <nav class="hidden lg:flex items-center gap-5 text-sm text-zinc-500">
-                                <a href="#">Components</a>
-                                <a href="#">Design Blocks</a>
-                                <a href="#">Docs</a>
-                            </nav>
+                        <x-aura::flex align="center" width="auto" gap="6">
+                            <x-aura::avatar initials="AW" size="sm" />
+                            <x-aura::heading level="3" size="sm">
+                                Aura Wire
+                            </x-aura::heading>
+                            <x-aura::flex align="center" width="auto" gap="4">
+                                <x-aura::link href="/guest#design-block" size="sm">
+                                    Components
+                                </x-aura::link>
+                                <x-aura::link href="/guest#full-template" size="sm">
+                                    Templates
+                                </x-aura::link>
+                            </x-aura::flex>
                         </x-aura::flex>
-                        <x-aura::flex align="center" gap="2">
+
+                        <x-aura::flex align="center" width="auto" gap="2.5">
                             <x-aura::button variant="secondary" size="sm">
                                 Login
                             </x-aura::button>
@@ -137,7 +144,7 @@ class extends Component {};
 
         <x-slot:preview>
 
-            <x-aura::card>
+            <x-aura::card padding="xl" gap="8">
 
                 <x-aura::grid cols="1" md="4" gap="8">
 
@@ -146,9 +153,7 @@ class extends Component {};
 
                         <x-aura::flex align="center" gap="2">
 
-                            <div class="h-8 w-8 rounded-lg bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 flex items-center justify-center font-bold font-mono text-xs shadow-2xs">
-                                AW
-                            </div>
+                            <x-aura::avatar initials="AW" size="sm" />
 
                             <x-aura::heading level="3" size="sm">
                                 Aura Wire
@@ -160,64 +165,76 @@ class extends Component {};
                             Crafting production ready UI components for the modern Laravel Livewire ecosystem.
                         </x-aura::text>
 
-                        <div class="pt-1">
-
-                            <x-aura::tag variant="neutral" size="sm">
-                                Systems Operational
-                            </x-aura::tag>
-
-                        </div>
+                        <x-aura::tag variant="neutral" size="sm">
+                            Systems Operational
+                        </x-aura::tag>
 
                     </x-aura::flex>
 
                     <!-- Column 2: Product -->
                     <x-aura::flex direction="col" gap="2.5">
 
-                        <x-aura::heading level="4" size="2xs">
+                        <x-aura::kicker>
                             PRODUCT
-                        </x-aura::heading>
+                        </x-aura::kicker>
 
-                        <ul class="space-y-2 text-sm text-zinc-500 dark:text-zinc-400">
-                            <li><a href="/guest#design-block" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Component Catalog</a></li>
-                            <li><a href="/guest#design-block" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Design Blocks</a></li>
-                            <li><a href="/guest#full-template" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Starter Kits</a></li>
-                            <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Figma UI Kit</a></li>
-                        </ul>
+                        <x-aura::flex direction="col" gap="2">
+
+                            <x-aura::link href="/guest#design-block" size="sm" variant="subtle">
+                                Component Catalog
+                            </x-aura::link>
+
+                            <x-aura::link href="/guest#design-block" size="sm" variant="subtle">
+                                Design Blocks
+                            </x-aura::link>
+
+                            <x-aura::link href="/guest#full-template" size="sm" variant="subtle">
+                                Starter Kits
+                            </x-aura::link>
+
+                        </x-aura::flex>
 
                     </x-aura::flex>
 
                     <!-- Column 3: Resources -->
                     <x-aura::flex direction="col" gap="2.5">
 
-                        <x-aura::heading level="4" size="2xs">
+                        <x-aura::kicker>
                             RESOURCES
-                        </x-aura::heading>
+                        </x-aura::kicker>
 
-                        <ul class="space-y-2 text-sm text-zinc-500 dark:text-zinc-400">
-                            <li><a href="/components/installation" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Documentation</a></li>
-                            <li><a href="https://github.com" target="_blank" class="hover:text-zinc-900 dark:hover:text-white transition-colors">GitHub Repository</a></li>
-                            <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Release Notes</a></li>
-                            <li><a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Roadmap</a></li>
-                        </ul>
+                        <x-aura::flex direction="col" gap="2">
+
+                            <x-aura::link href="/components/installation" size="sm" variant="subtle">
+                                Documentation
+                            </x-aura::link>
+
+                            <x-aura::link href="https://github.com" target="_blank" size="sm" variant="subtle">
+                                GitHub Repository
+                            </x-aura::link>
+
+                            <x-aura::link href="#" size="sm" variant="subtle">
+                                Release Notes
+                            </x-aura::link>
+
+                        </x-aura::flex>
 
                     </x-aura::flex>
 
-                    <!-- Column 4: Legal & Newsletter -->
+                    <!-- Column 4: Updates -->
                     <x-aura::flex direction="col" gap="2.5">
 
-                        <x-aura::heading level="4" size="2xs">
+                        <x-aura::kicker>
                             UPDATES
-                        </x-aura::heading>
+                        </x-aura::kicker>
 
                         <x-aura::text variant="subtle" size="sm">
                             Subscribe for early component releases and updates.
                         </x-aura::text>
 
-                        <x-aura::flex align="center" gap="2" class="pt-1">
+                        <x-aura::flex align="center" gap="2">
 
-                            <div class="flex-1">
-                                <x-aura::input placeholder="Email address..." size="sm" />
-                            </div>
+                            <x-aura::input placeholder="Email address..." size="sm" />
 
                             <x-aura::button variant="primary" size="sm">
                                 Join
@@ -229,20 +246,28 @@ class extends Component {};
 
                 </x-aura::grid>
 
+                <x-aura::separator />
+
                 <!-- Footer Copyright Bottom Strip -->
-                <x-aura::flex direction="col" sm="row" align="center" justify="between" gap="3" class="pt-4 border-t border-zinc-100 dark:border-zinc-800/80 mt-6 text-sm text-zinc-500 dark:text-zinc-400">
+                <x-aura::flex direction="col" sm="row" align="center" justify="between" gap="3">
 
                     <x-aura::text variant="subtle" size="sm">
                         &copy; {{ date('Y') }} Aura Wire UI. All rights reserved.
                     </x-aura::text>
 
-                    <x-aura::flex align="center" gap="4">
+                    <x-aura::flex align="center" width="auto" gap="4">
 
-                        <a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Privacy Policy</a>
+                        <x-aura::link href="#" size="sm" variant="subtle">
+                            Privacy Policy
+                        </x-aura::link>
 
-                        <a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Terms of Service</a>
+                        <x-aura::link href="#" size="sm" variant="subtle">
+                            Terms of Service
+                        </x-aura::link>
 
-                        <a href="#" class="hover:text-zinc-900 dark:hover:text-white transition-colors">Security</a>
+                        <x-aura::link href="#" size="sm" variant="subtle">
+                            Security
+                        </x-aura::link>
 
                     </x-aura::flex>
 
@@ -255,7 +280,7 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::card>
+                <x-aura::card padding="xl" gap="8">
                     <x-aura::grid cols="1" md="4" gap="8">
                         <x-aura::flex direction="col" gap="3">
                             <x-aura::heading level="3" size="sm">

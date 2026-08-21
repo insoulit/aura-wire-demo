@@ -11,7 +11,7 @@ class extends Component {};
 
 ?>
 
-<x-aura::container size="4xl" gap="6" class="py-6">
+<x-aura::container size="4xl" gap="6">
 
     <!-- Top Header -->
     <x-aura::flex justify="between" gap="4">
@@ -43,40 +43,44 @@ class extends Component {};
 
         <x-slot:preview>
 
-            <div class="w-full max-w-xl mx-auto">
+            <x-aura::center>
 
-                <x-aura::card title="Public Profile Information" description="Update your account details and public avatar." gap="4">
+                <x-aura::card size="xl" title="Public Profile Information" description="Update your account details and public avatar." gap="4">
 
-                    <!-- Avatar Uploader Row -->
-                    <x-aura::flex align="center" gap="4" class="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900/60 border border-zinc-200 dark:border-zinc-800">
+                    <!-- Avatar Row -->
+                    <x-aura::card padding="md" divided="false">
 
-                        <x-aura::avatar initials="AM" status="online" size="lg" />
+                        <x-aura::flex align="center" gap="4">
 
-                        <x-aura::flex direction="col" gap="1" class="flex-1">
+                            <x-aura::avatar initials="AM" status="online" size="lg" />
 
-                            <x-aura::heading level="4" size="xs">
-                                Alex Morgan
-                            </x-aura::heading>
+                            <x-aura::flex direction="col" gap="1">
 
-                            <x-aura::text size="sm" variant="subtle">
-                                Lead Systems Architect
-                            </x-aura::text>
+                                <x-aura::heading level="4" size="xs">
+                                    Alex Morgan
+                                </x-aura::heading>
 
-                            <x-aura::flex align="center" gap="2" class="pt-1">
+                                <x-aura::text size="sm" variant="subtle">
+                                    Lead Systems Architect
+                                </x-aura::text>
 
-                                <x-aura::button variant="secondary" size="xs">
-                                    Change
-                                </x-aura::button>
+                                <x-aura::flex align="center" gap="2">
 
-                                <x-aura::button variant="ghost" size="xs">
-                                    Remove
-                                </x-aura::button>
+                                    <x-aura::button variant="secondary" size="xs">
+                                        Change
+                                    </x-aura::button>
+
+                                    <x-aura::button variant="ghost" size="xs">
+                                        Remove
+                                    </x-aura::button>
+
+                                </x-aura::flex>
 
                             </x-aura::flex>
 
                         </x-aura::flex>
 
-                    </x-aura::flex>
+                    </x-aura::card>
 
                     <!-- Form Grid -->
                     <x-aura::grid cols="1" sm="2" gap="4">
@@ -111,7 +115,7 @@ class extends Component {};
 
                 </x-aura::card>
 
-            </div>
+            </x-aura::center>
 
         </x-slot:preview>
 
@@ -119,18 +123,20 @@ class extends Component {};
 
             @verbatim
                 <x-aura::card title="Public Profile Information" description="Update your account details and public avatar." gap="4">
-                    <!-- Avatar Uploader Row -->
-                    <x-aura::flex align="center" gap="4" class="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800">
-                        <x-aura::avatar initials="AM" status="online" size="lg" />
-                        <x-aura::flex direction="col" gap="1" class="flex-1">
-                            <x-aura::heading level="4" size="xs">
-                                Alex Morgan
-                            </x-aura::heading>
-                            <x-aura::text size="sm" variant="subtle">
-                                Lead Systems Architect
-                            </x-aura::text>
+                    <!-- Avatar Row -->
+                    <x-aura::card padding="md" divided="false">
+                        <x-aura::flex align="center" gap="4">
+                            <x-aura::avatar initials="AM" status="online" size="lg" />
+                            <x-aura::flex direction="col" gap="1">
+                                <x-aura::heading level="4" size="xs">
+                                    Alex Morgan
+                                </x-aura::heading>
+                                <x-aura::text size="sm" variant="subtle">
+                                    Lead Systems Architect
+                                </x-aura::text>
+                            </x-aura::flex>
                         </x-aura::flex>
-                    </x-aura::flex>
+                    </x-aura::card>
 
                     <!-- Form Grid -->
                     <x-aura::grid cols="1" sm="2" gap="4">

@@ -43,7 +43,7 @@ new class extends Component {
                 Engineered for creators, developers, and architects who demand high fidelity acoustics and timeless tactile craftsmanship.
             </x-aura::subheading>
 
-            <x-aura::flex align="center" justify="center" gap="4" wrap="true" class="pt-2">
+            <x-aura::flex align="center" justify="center" gap="4" wrap="true">
 
                 <x-aura::button href="#catalog" variant="primary" size="lg" icon="shopping-bag">
                     Shop

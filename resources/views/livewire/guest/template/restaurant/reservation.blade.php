@@ -54,9 +54,17 @@ new class extends Component {
                         Reservation Confirmed
                     </x-aura::heading>
 
-                    <x-aura::text size="sm" variant="subtle" align="center">
-                        Your table reservation reference is <strong class="text-zinc-900 dark:text-white">{{ $bookingCode }}</strong> for {{ $guests }} guests on {{ $date }} at {{ $time }}.
-                    </x-aura::text>
+                    <x-aura::flex align="center" gap="1.5">
+
+                        <x-aura::text size="sm" variant="subtle">
+                            Your reservation code is
+                        </x-aura::text>
+
+                        <x-aura::tag variant="neutral" size="sm">
+                            {{ $bookingCode }}
+                        </x-aura::tag>
+
+                    </x-aura::flex>
 
                     <x-aura::button wire:click="$set('confirmed', false)" variant="secondary" size="md">
                         Reset

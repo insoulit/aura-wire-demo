@@ -11,7 +11,7 @@ class extends Component {};
 
 ?>
 
-<x-aura::container size="4xl" gap="6" class="py-6">
+<x-aura::container size="4xl" gap="6">
 
     <!-- Top Header -->
     <x-aura::flex justify="between" gap="4">
@@ -43,26 +43,28 @@ class extends Component {};
 
         <x-slot:preview>
 
-            <x-aura::flex direction="col" align="center" justify="center" gap="4" class="p-8 w-full border border-zinc-200 dark:border-zinc-800 rounded-xl bg-zinc-50/50 dark:bg-zinc-900/40 text-center">
+            <x-aura::card padding="xl" gap="6">
 
-                <x-aura::flex direction="col" align="center" gap="1" class="max-w-md">
+                <x-aura::flex direction="col" align="center" justify="center" gap="1">
 
-                    <x-aura::heading level="3" size="sm">
+                    <x-aura::heading level="3" size="md" align="center">
                         Test Interactive Slide Over Drawers
                     </x-aura::heading>
 
-                    <x-aura::text variant="subtle" size="sm">
-                        Click below to open right or left sliding drawer panels with smooth Alpine animations.
+                    <x-aura::text variant="subtle" size="sm" align="center">
+                        Click below to open right or left sliding drawer panels with smooth animations.
                     </x-aura::text>
 
                 </x-aura::flex>
 
-                <x-aura::flex align="center" justify="center" gap="3" wrap="true" class="pt-2">
+                <x-aura::flex align="center" justify="center" gap="3" wrap="true">
 
+                    <!-- Form Modal Trigger -->
                     <x-aura::button variant="primary" size="md" x-data x-on:click="$dispatch('open-sheet', 'right-drawer-demo')">
                         Filters
                     </x-aura::button>
 
+                    <!-- Destructive Modal Trigger -->
                     <x-aura::button variant="secondary" size="md" x-data x-on:click="$dispatch('open-sheet', 'left-drawer-demo')">
                         Menu
                     </x-aura::button>
@@ -72,7 +74,7 @@ class extends Component {};
                 <!-- Right Drawer Sheet -->
                 <x-aura::sheet name="right-drawer-demo" side="right" title="Filter Records" description="Narrow down dataset results by date and status." maxWidth="md">
 
-                    <x-aura::flex direction="col" gap="4" class="py-2">
+                    <x-aura::flex direction="col" gap="4">
 
                         <x-aura::field label="Status Filter">
 
@@ -110,7 +112,7 @@ class extends Component {};
                 <!-- Left Drawer Sheet -->
                 <x-aura::sheet name="left-drawer-demo" side="left" title="Navigation Drawer" description="Quick access menu for mobile navigation." maxWidth="sm">
 
-                    <x-aura::flex direction="col" align="start" gap="2" class="py-2 w-full">
+                    <x-aura::flex direction="col" align="start" gap="2">
 
                         <x-aura::button variant="secondary" size="sm" href="/guest#design-block" icon="home">
                             Home
@@ -124,7 +126,7 @@ class extends Component {};
 
                 </x-aura::sheet>
 
-            </x-aura::flex>
+            </x-aura::card>
 
         </x-slot:preview>
 

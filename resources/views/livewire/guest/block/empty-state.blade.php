@@ -11,7 +11,7 @@ class extends Component {};
 
 ?>
 
-<x-aura::container size="4xl" gap="6" class="py-6">
+<x-aura::container size="4xl" gap="6">
 
     <!-- Top Header -->
     <x-aura::flex justify="between" gap="4">
@@ -39,11 +39,11 @@ class extends Component {};
     </x-aura::flex>
 
     <!-- Empty State Block Preview -->
-    <x-aura::code title="First Time Onboarding Empty State Block">
+    <x-aura::code title="No Projects Found Placeholder Block">
 
         <x-slot:preview>
 
-            <x-aura::card>
+            <x-aura::card padding="xl">
 
                 <x-aura::empty-state 
                     icon="folder-open" 
@@ -68,7 +68,7 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::card>
+                <x-aura::card padding="xl">
                     <x-aura::empty-state 
                         icon="folder-open" 
                         title="No Projects Created Yet" 

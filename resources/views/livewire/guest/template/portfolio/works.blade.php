@@ -32,7 +32,7 @@ new class extends Component {};
             <!-- Project 1 -->
             <x-aura::card padding="lg" gap="4">
 
-                <div class="aspect-16/9 rounded-2xl bg-zinc-900 p-8 flex flex-col justify-between text-white border border-zinc-800">
+                <x-aura::card padding="xl" gap="6" divided="false">
 
                     <x-aura::flex align="center" justify="between">
 
@@ -46,11 +46,11 @@ new class extends Component {};
 
                     </x-aura::flex>
 
-                    <div class="text-4xl font-extrabold tracking-tight">
+                    <x-aura::heading level="2" size="2xl">
                         Aura Wire
-                    </div>
+                    </x-aura::heading>
 
-                </div>
+                </x-aura::card>
 
                 <x-aura::flex direction="col" gap="1">
 
@@ -81,7 +81,7 @@ new class extends Component {};
             <!-- Project 2 -->
             <x-aura::card padding="lg" gap="4">
 
-                <div class="aspect-16/9 rounded-2xl bg-zinc-900 p-8 flex flex-col justify-between text-white border border-zinc-800">
+                <x-aura::card padding="xl" gap="6" divided="false">
 
                     <x-aura::flex align="center" justify="between">
 
@@ -95,11 +95,11 @@ new class extends Component {};
 
                     </x-aura::flex>
 
-                    <div class="text-4xl font-extrabold tracking-tight">
+                    <x-aura::heading level="2" size="2xl">
                         Pulse Metrics
-                    </div>
+                    </x-aura::heading>
 
-                </div>
+                </x-aura::card>
 
                 <x-aura::flex direction="col" gap="1">
 

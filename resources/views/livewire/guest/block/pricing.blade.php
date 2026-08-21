@@ -11,7 +11,7 @@ class extends Component {};
 
 ?>
 
-<x-aura::container size="4xl" gap="6" class="py-6">
+<x-aura::container size="4xl" gap="6">
 
     <!-- Top Header -->
     <x-aura::flex justify="between" gap="4">
@@ -43,10 +43,10 @@ class extends Component {};
 
         <x-slot:preview>
 
-            <x-aura::grid cols="1" md="3" gap="6" class="w-full items-stretch">
+            <x-aura::grid cols="1" md="3" gap="6">
 
                 <!-- Tier 1: Starter -->
-                <x-aura::card gap="4">
+                <x-aura::card padding="lg" gap="4">
 
                     <x-aura::flex direction="col" gap="1">
 
@@ -54,7 +54,7 @@ class extends Component {};
                             For Individuals
                         </x-aura::kicker>
 
-                        <x-aura::heading level="3" size="sm">
+                        <x-aura::heading level="3" size="md">
                             Starter
                         </x-aura::heading>
 
@@ -66,7 +66,9 @@ class extends Component {};
 
                     <x-aura::flex align="baseline" gap="1">
 
-                        <span class="text-3xl font-bold font-mono tracking-tight text-zinc-900 dark:text-white">$19</span>
+                        <x-aura::heading level="4" size="2xl">
+                            $19
+                        </x-aura::heading>
 
                         <x-aura::text size="sm" variant="subtle">
                             / month
@@ -76,28 +78,43 @@ class extends Component {};
 
                     <x-aura::separator />
 
-                    <ul class="space-y-2.5 text-sm text-zinc-600 dark:text-zinc-300">
+                    <x-aura::flex direction="col" gap="2.5">
 
-                        <li class="flex items-center gap-2">
-                            <span class="font-bold text-zinc-900 dark:text-white">✓</span>
-                            Up to 5 Active Projects
-                        </li>
+                        <x-aura::flex align="center" gap="2">
 
-                        <li class="flex items-center gap-2">
-                            <span class="font-bold text-zinc-900 dark:text-white">✓</span>
-                            10 GB Cloud Storage
-                        </li>
+                            <x-aura::icon name="check" size="sm" />
 
-                        <li class="flex items-center gap-2">
-                            <span class="font-bold text-zinc-900 dark:text-white">✓</span>
-                            Community Support
-                        </li>
+                            <x-aura::text size="sm">
+                                Up to 5 Active Projects
+                            </x-aura::text>
 
-                    </ul>
+                        </x-aura::flex>
+
+                        <x-aura::flex align="center" gap="2">
+
+                            <x-aura::icon name="check" size="sm" />
+
+                            <x-aura::text size="sm">
+                                10 GB Cloud Storage
+                            </x-aura::text>
+
+                        </x-aura::flex>
+
+                        <x-aura::flex align="center" gap="2">
+
+                            <x-aura::icon name="check" size="sm" />
+
+                            <x-aura::text size="sm">
+                                Community Support
+                            </x-aura::text>
+
+                        </x-aura::flex>
+
+                    </x-aura::flex>
 
                     <x-slot:footer>
 
-                        <x-aura::button variant="secondary" size="md">
+                        <x-aura::button variant="secondary" size="md" block="true">
                             Start
                         </x-aura::button>
 
@@ -106,7 +123,7 @@ class extends Component {};
                 </x-aura::card>
 
                 <!-- Tier 2: Pro (Featured) -->
-                <x-aura::card gap="4">
+                <x-aura::card padding="lg" gap="4">
 
                     <x-aura::flex align="start" justify="between" gap="2">
 
@@ -116,7 +133,7 @@ class extends Component {};
                                 For Growing Teams
                             </x-aura::kicker>
 
-                            <x-aura::heading level="3" size="sm">
+                            <x-aura::heading level="3" size="md">
                                 Pro Plan
                             </x-aura::heading>
 
@@ -134,7 +151,9 @@ class extends Component {};
 
                     <x-aura::flex align="baseline" gap="1">
 
-                        <span class="text-3xl font-bold font-mono tracking-tight text-zinc-900 dark:text-white">$49</span>
+                        <x-aura::heading level="4" size="2xl">
+                            $49
+                        </x-aura::heading>
 
                         <x-aura::text size="sm" variant="subtle">
                             / month
@@ -144,33 +163,53 @@ class extends Component {};
 
                     <x-aura::separator />
 
-                    <ul class="space-y-2.5 text-sm text-zinc-600 dark:text-zinc-300">
+                    <x-aura::flex direction="col" gap="2.5">
 
-                        <li class="flex items-center gap-2 font-medium">
-                            <span class="font-bold text-zinc-900 dark:text-white">✓</span>
-                            Unlimited Active Projects
-                        </li>
+                        <x-aura::flex align="center" gap="2">
 
-                        <li class="flex items-center gap-2 font-medium">
-                            <span class="font-bold text-zinc-900 dark:text-white">✓</span>
-                            500 GB Storage
-                        </li>
+                            <x-aura::icon name="check" size="sm" />
 
-                        <li class="flex items-center gap-2 font-medium">
-                            <span class="font-bold text-zinc-900 dark:text-white">✓</span>
-                            Priority 24/7 Live Chat
-                        </li>
+                            <x-aura::text size="sm" weight="semibold">
+                                Unlimited Active Projects
+                            </x-aura::text>
 
-                        <li class="flex items-center gap-2 font-medium">
-                            <span class="font-bold text-zinc-900 dark:text-white">✓</span>
-                            Custom Domain SSL Setup
-                        </li>
+                        </x-aura::flex>
 
-                    </ul>
+                        <x-aura::flex align="center" gap="2">
+
+                            <x-aura::icon name="check" size="sm" />
+
+                            <x-aura::text size="sm">
+                                500 GB Storage
+                            </x-aura::text>
+
+                        </x-aura::flex>
+
+                        <x-aura::flex align="center" gap="2">
+
+                            <x-aura::icon name="check" size="sm" />
+
+                            <x-aura::text size="sm">
+                                Priority 24/7 Live Chat
+                            </x-aura::text>
+
+                        </x-aura::flex>
+
+                        <x-aura::flex align="center" gap="2">
+
+                            <x-aura::icon name="check" size="sm" />
+
+                            <x-aura::text size="sm">
+                                Custom Domain SSL Setup
+                            </x-aura::text>
+
+                        </x-aura::flex>
+
+                    </x-aura::flex>
 
                     <x-slot:footer>
 
-                        <x-aura::button variant="primary" size="md">
+                        <x-aura::button variant="primary" size="md" block="true">
                             Upgrade
                         </x-aura::button>
 
@@ -179,7 +218,7 @@ class extends Component {};
                 </x-aura::card>
 
                 <!-- Tier 3: Enterprise -->
-                <x-aura::card gap="4">
+                <x-aura::card padding="lg" gap="4">
 
                     <x-aura::flex direction="col" gap="1">
 
@@ -187,7 +226,7 @@ class extends Component {};
                             For Organizations
                         </x-aura::kicker>
 
-                        <x-aura::heading level="3" size="sm">
+                        <x-aura::heading level="3" size="md">
                             Enterprise
                         </x-aura::heading>
 
@@ -199,7 +238,9 @@ class extends Component {};
 
                     <x-aura::flex align="baseline" gap="1">
 
-                        <span class="text-3xl font-bold font-mono tracking-tight text-zinc-900 dark:text-white">$199</span>
+                        <x-aura::heading level="4" size="2xl">
+                            $199
+                        </x-aura::heading>
 
                         <x-aura::text size="sm" variant="subtle">
                             / month
@@ -209,28 +250,43 @@ class extends Component {};
 
                     <x-aura::separator />
 
-                    <ul class="space-y-2.5 text-sm text-zinc-600 dark:text-zinc-300">
+                    <x-aura::flex direction="col" gap="2.5">
 
-                        <li class="flex items-center gap-2">
-                            <span class="font-bold text-zinc-900 dark:text-white">✓</span>
-                            Dedicated Database Cluster
-                        </li>
+                        <x-aura::flex align="center" gap="2">
 
-                        <li class="flex items-center gap-2">
-                            <span class="font-bold text-zinc-900 dark:text-white">✓</span>
-                            Custom SSO and SAML Auth
-                        </li>
+                            <x-aura::icon name="check" size="sm" />
 
-                        <li class="flex items-center gap-2">
-                            <span class="font-bold text-zinc-900 dark:text-white">✓</span>
-                            99.99% Uptime Guarantee
-                        </li>
+                            <x-aura::text size="sm">
+                                Dedicated Database Cluster
+                            </x-aura::text>
 
-                    </ul>
+                        </x-aura::flex>
+
+                        <x-aura::flex align="center" gap="2">
+
+                            <x-aura::icon name="check" size="sm" />
+
+                            <x-aura::text size="sm">
+                                Custom SSO and SAML Auth
+                            </x-aura::text>
+
+                        </x-aura::flex>
+
+                        <x-aura::flex align="center" gap="2">
+
+                            <x-aura::icon name="check" size="sm" />
+
+                            <x-aura::text size="sm">
+                                99.99% Uptime Guarantee
+                            </x-aura::text>
+
+                        </x-aura::flex>
+
+                    </x-aura::flex>
 
                     <x-slot:footer>
 
-                        <x-aura::button variant="secondary" size="md">
+                        <x-aura::button variant="secondary" size="md" block="true">
                             Contact
                         </x-aura::button>
 
@@ -245,20 +301,30 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::grid cols="1" md="3" gap="6" class="w-full">
-                    <x-aura::card gap="4">
+                <x-aura::grid cols="1" md="3" gap="6">
+                    <x-aura::card padding="lg" gap="4">
                         <x-aura::flex direction="col" gap="1">
                             <x-aura::kicker>
                                 For Individuals
                             </x-aura::kicker>
-                            <x-aura::heading level="3" size="sm">
+                            <x-aura::heading level="3" size="md">
                                 Starter
                             </x-aura::heading>
                         </x-aura::flex>
-                        <div class="text-3xl font-bold font-mono">$19 / mo</div>
+
+                        <x-aura::flex align="baseline" gap="1">
+                            <x-aura::heading level="4" size="2xl">
+                                $19
+                            </x-aura::heading>
+                            <x-aura::text size="sm" variant="subtle">
+                                / month
+                            </x-aura::text>
+                        </x-aura::flex>
+
                         <x-aura::separator />
+
                         <x-slot:footer>
-                            <x-aura::button variant="secondary" size="md">
+                            <x-aura::button variant="secondary" size="md" block="true">
                                 Start
                             </x-aura::button>
                         </x-slot:footer>
