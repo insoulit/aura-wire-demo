@@ -159,6 +159,10 @@ class extends Component {};
                     Create
                 </x-aura::button>
 
+                <x-aura::button variant="primary" size="xl">
+                    Create
+                </x-aura::button>
+
             </x-aura::flex>
 
         </x-slot:preview>
@@ -179,6 +183,10 @@ class extends Component {};
                 </x-aura::button>
 
                 <x-aura::button variant="primary" size="lg">
+                    Create
+                </x-aura::button>
+
+                <x-aura::button variant="primary" size="xl">
                     Create
                 </x-aura::button>
             @endverbatim
@@ -513,6 +521,10 @@ class extends Component {};
 
                         <x-aura::badge variant="subtle" size="md">
                             lg
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            xl
                         </x-aura::badge>
 
                     </x-aura::flex>

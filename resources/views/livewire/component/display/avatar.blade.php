@@ -174,13 +174,15 @@ class extends Component {};
 
                 <x-aura::flex align="center" gap="4" :wrap="true">
 
-                    <x-aura::avatar initials="ON" size="md" status="online" />
+                    <x-aura::avatar initials="XS" size="xs" status="online" />
 
-                    <x-aura::avatar initials="BY" size="md" status="busy" />
+                    <x-aura::avatar initials="SM" size="sm" status="busy" />
 
-                    <x-aura::avatar initials="AW" size="md" status="away" />
+                    <x-aura::avatar initials="MD" size="md" status="away" />
 
-                    <x-aura::avatar initials="OF" size="md" status="offline" />
+                    <x-aura::avatar initials="LG" size="lg" status="offline" />
+
+                    <x-aura::avatar initials="XL" size="xl" status="online" />
 
                 </x-aura::flex>
 
@@ -191,10 +193,11 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::avatar initials="ON" size="md" status="online" />
-                <x-aura::avatar initials="BY" size="md" status="busy" />
-                <x-aura::avatar initials="AW" size="md" status="away" />
-                <x-aura::avatar initials="OF" size="md" status="offline" />
+                <x-aura::avatar initials="XS" size="xs" status="online" />
+                <x-aura::avatar initials="SM" size="sm" status="busy" />
+                <x-aura::avatar initials="MD" size="md" status="away" />
+                <x-aura::avatar initials="LG" size="lg" status="offline" />
+                <x-aura::avatar initials="XL" size="xl" status="online" />
             @endverbatim
 
         </x-slot:codeSlot>

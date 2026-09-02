@@ -111,6 +111,10 @@ class extends Component {};
 
             <x-aura::flex align="center" gap="3" :wrap="true">
 
+                <x-aura::tag size="xs" variant="default">
+                    Extra Small
+                </x-aura::tag>
+
                 <x-aura::tag size="sm" variant="default">
                     Small
                 </x-aura::tag>
@@ -121,6 +125,10 @@ class extends Component {};
 
                 <x-aura::tag size="lg" variant="default">
                     Large
+                </x-aura::tag>
+
+                <x-aura::tag size="xl" variant="default">
+                    Extra Large
                 </x-aura::tag>
 
             </x-aura::flex>
@@ -130,6 +138,10 @@ class extends Component {};
         <x-slot:codeSlot>
 
             @verbatim
+                <x-aura::tag size="xs" variant="default">
+                    Extra Small
+                </x-aura::tag>
+
                 <x-aura::tag size="sm" variant="default">
                     Small
                 </x-aura::tag>
@@ -140,6 +152,10 @@ class extends Component {};
 
                 <x-aura::tag size="lg" variant="default">
                     Large
+                </x-aura::tag>
+
+                <x-aura::tag size="xl" variant="default">
+                    Extra Large
                 </x-aura::tag>
             @endverbatim
 
@@ -267,6 +283,10 @@ class extends Component {};
                     <x-aura::flex align="center" gap="1.5" :wrap="true">
 
                         <x-aura::badge variant="subtle" size="md">
+                            xs
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
                             sm
                         </x-aura::badge>
 
@@ -276,6 +296,10 @@ class extends Component {};
 
                         <x-aura::badge variant="subtle" size="md">
                             lg
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            xl
                         </x-aura::badge>
 
                     </x-aura::flex>

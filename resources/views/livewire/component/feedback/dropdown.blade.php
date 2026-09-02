@@ -263,13 +263,79 @@ class extends Component {};
 
     </x-aura::code>
 
-    <!-- Component Props -->
+    <!-- 3. Checkbox Items -->
+    <x-aura::code title="3. Dropdown Checkbox Items">
+
+        <x-slot:preview>
+
+            <x-aura::dropdown align="right" width="56">
+
+                <x-slot:trigger>
+
+                    <x-aura::button variant="secondary" iconTrailing="chevron-down">
+                        View
+                    </x-aura::button>
+
+                </x-slot:trigger>
+
+                <x-aura::dropdown.header>
+                    Display Columns
+                </x-aura::dropdown.header>
+
+                <x-aura::dropdown.checkbox name="col_status" label="Status" :checked="true" size="sm" />
+
+                <x-aura::dropdown.checkbox name="col_priority" label="Priority" :checked="true" size="sm" />
+
+                <x-aura::dropdown.checkbox name="col_date" label="Due Date" :checked="false" size="sm" />
+
+                <x-aura::dropdown.separator />
+
+                <x-aura::dropdown.checkbox name="col_archived" label="Show Archived" :checked="false" size="sm" />
+
+            </x-aura::dropdown>
+
+        </x-slot:preview>
+
+        <x-slot:codeSlot>
+
+            @verbatim
+                <x-aura::dropdown align="right" width="56">
+
+                    <x-slot:trigger>
+
+                        <x-aura::button variant="secondary" iconTrailing="chevron-down">
+                            View
+                        </x-aura::button>
+
+                    </x-slot:trigger>
+
+                    <x-aura::dropdown.header>
+                        Display Columns
+                    </x-aura::dropdown.header>
+
+                    <x-aura::dropdown.checkbox name="col_status" label="Status" :checked="true" />
+
+                    <x-aura::dropdown.checkbox name="col_priority" label="Priority" :checked="true" />
+
+                    <x-aura::dropdown.checkbox name="col_date" label="Due Date" :checked="false" />
+
+                    <x-aura::dropdown.separator />
+
+                    <x-aura::dropdown.checkbox name="col_archived" label="Show Archived" :checked="false" />
+
+                </x-aura::dropdown>
+            @endverbatim
+
+        </x-slot:codeSlot>
+
+    </x-aura::code>
+
+    <!-- Dropdown Props -->
     <x-aura::card size="full" gap="4">
 
         <x-aura::flex direction="col" gap="1">
 
             <x-aura::heading level="2" size="md">
-                Component Props
                 Dropdown Props
             </x-aura::heading>
 
@@ -668,6 +734,285 @@ class extends Component {};
 
                     </x-aura::flex>
 
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+        </x-aura::table>
+
+    </x-aura::card>
+
+    <!-- Dropdown Checkbox Props -->
+    <x-aura::card size="full" gap="4">
+
+        <x-aura::flex direction="col" gap="1">
+
+            <x-aura::heading level="2" size="md">
+                Dropdown Checkbox Props
+            </x-aura::heading>
+
+            <x-aura::text variant="subtle" size="sm">
+                Available properties and configurations for toggleable dropdown checkbox components.
+            </x-aura::text>
+
+        </x-aura::flex>
+
+        <x-aura::table>
+
+            <x-slot:header>
+
+                <x-aura::table.column>
+                    Prop
+                </x-aura::table.column>
+
+                <x-aura::table.column>
+                    Default
+                </x-aura::table.column>
+
+                <x-aura::table.column>
+                    Available Values
+                </x-aura::table.column>
+
+            </x-slot:header>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            size
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Dimensional scale and font size for checkbox item" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="neutral" size="md">
+                        sm
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :wrap="true">
+
+                        <x-aura::badge variant="subtle" size="md">
+                            xs
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            sm
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            md
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            lg
+                        </x-aura::badge>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            label
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Text label for the checkbox item" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="subtle" size="md">
+                        null
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::text variant="mono" size="sm">
+                        string
+                    </x-aura::text>
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            checked
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Initial checked state boolean" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="neutral" size="md">
+                        false
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :wrap="true">
+
+                        <x-aura::badge variant="subtle" size="md">
+                            true
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            false
+                        </x-aura::badge>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            disabled
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="Disable interaction state" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="neutral" size="md">
+                        false
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :wrap="true">
+
+                        <x-aura::badge variant="subtle" size="md">
+                            true
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            false
+                        </x-aura::badge>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            name
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="HTML form field name" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="subtle" size="md">
+                        null
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::text variant="mono" size="sm">
+                        string
+                    </x-aura::text>
+                </x-aura::table.cell>
+
+            </x-aura::table.row>
+
+            <x-aura::table.row>
+
+                <x-aura::table.cell>
+
+                    <x-aura::flex align="center" gap="1.5" :inline="true">
+
+                        <x-aura::text variant="mono" size="sm" weight="semibold">
+                            id
+                        </x-aura::text>
+
+                        <x-aura::tooltip text="HTML element id for input and label association" position="top">
+
+                            <x-aura::icon name="info" size="xs" />
+
+                        </x-aura::tooltip>
+
+                    </x-aura::flex>
+
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::badge variant="subtle" size="md">
+                        null
+                    </x-aura::badge>
+                </x-aura::table.cell>
+
+                <x-aura::table.cell>
+                    <x-aura::text variant="mono" size="sm">
+                        string
+                    </x-aura::text>
                 </x-aura::table.cell>
 
             </x-aura::table.row>

@@ -149,11 +149,13 @@ class extends Component {
 
                 <x-aura::flex direction="col" gap="3">
 
-                    <x-aura::radio size="xs" label="Extra Small (size=xs)" :checked="true" name="size_demo_1" />
+                    <x-aura::radio size="xs" label="Extra Small (xs)" :checked="true" name="size_demo_1" />
 
-                    <x-aura::radio size="sm" label="Standard Small (size=sm)" :checked="true" name="size_demo_2" />
+                    <x-aura::radio size="sm" label="Small (sm)" :checked="true" name="size_demo_2" />
 
-                    <x-aura::radio size="lg" label="Large (size=lg)" :checked="true" name="size_demo_3" />
+                    <x-aura::radio size="md" label="Medium (md)" :checked="true" name="size_demo_3" />
+
+                    <x-aura::radio size="lg" label="Large (lg)" :checked="true" name="size_demo_4" />
 
                 </x-aura::flex>
 
@@ -164,9 +166,10 @@ class extends Component {
         <x-slot:codeSlot>
 
             @verbatim
-                <x-aura::radio size="xs" label="Extra Small (size=xs)" :checked="true" />
-                <x-aura::radio size="sm" label="Standard Small (size=sm)" :checked="true" />
-                <x-aura::radio size="lg" label="Large (size=lg)" :checked="true" />
+                <x-aura::radio size="xs" label="Extra Small (xs)" :checked="true" />
+                <x-aura::radio size="sm" label="Small (sm)" :checked="true" />
+                <x-aura::radio size="md" label="Medium (md)" :checked="true" />
+                <x-aura::radio size="lg" label="Large (lg)" :checked="true" />
             @endverbatim
 
         </x-slot:codeSlot>
@@ -411,6 +414,10 @@ class extends Component {
 
                         <x-aura::badge variant="subtle" size="md">
                             sm
+                        </x-aura::badge>
+
+                        <x-aura::badge variant="subtle" size="md">
+                            md
                         </x-aura::badge>
 
                         <x-aura::badge variant="subtle" size="md">
